@@ -1,3 +1,6 @@
+// Tendermint
+export * from 'protobuf/cosmos/base/tendermint/v1beta1/query_pb'
+
 // x/auth
 export * from 'protobuf/cosmos/auth/v1beta1/auth_pb'
 export * from 'protobuf/cosmos/auth/v1beta1/genesis_pb'
