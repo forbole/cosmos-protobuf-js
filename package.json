@@ -1,7 +1,7 @@
 {
-  "name": "@forbole/cosmos-protobuf",
-  "version": "1.0.1",
-  "description": "Protobuf of Cosmos SDK",
+  "name": "@forbole/cosmos-protobuf-js",
+  "version": "1.0.0",
+  "description": "Cosmos SDK Protobuf of JavaScript",
   "main": "index.js",
   "directories": {
     "lib": "lib"
