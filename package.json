@@ -1,6 +1,6 @@
 {
   "name": "@forbole/cosmos-protobuf-js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Cosmos SDK Protobuf of JavaScript",
   "main": "index.js",
   "directories": {
@@ -10,5 +10,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Forbole",
-  "license": "ISC"
+  "license": "MIT",
+  "dependencies": {
+    "@improbable-eng/grpc-web": "^0.13.0",
+    "google-protobuf": "^3.14.0"
+  }
 }
