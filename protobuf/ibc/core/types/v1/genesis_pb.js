@@ -7,16 +7,14 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-const jspb = require('google-protobuf');
+var jspb = require('google-protobuf');
+var goog = jspb;
+var global = Function('return this')();
 
-const goog = jspb;
-const global = Function('return this')();
-
-const gogoproto_gogo_pb = require('../../../../gogoproto/gogo_pb.js');
-const ibc_core_client_v1_genesis_pb = require('../../client/v1/genesis_pb.js');
-const ibc_core_connection_v1_genesis_pb = require('../../connection/v1/genesis_pb.js');
-const ibc_core_channel_v1_genesis_pb = require('../../channel/v1/genesis_pb.js');
-
+var gogoproto_gogo_pb = require('../../../../gogoproto/gogo_pb.js');
+var ibc_core_client_v1_genesis_pb = require('../../../../ibc/core/client/v1/genesis_pb.js');
+var ibc_core_connection_v1_genesis_pb = require('../../../../ibc/core/connection/v1/genesis_pb.js');
+var ibc_core_channel_v1_genesis_pb = require('../../../../ibc/core/channel/v1/genesis_pb.js');
 goog.exportSymbol('proto.ibc.core.types.v1.GenesisState', null, global);
 
 /**
@@ -29,13 +27,14 @@ goog.exportSymbol('proto.ibc.core.types.v1.GenesisState', null, global);
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.core.types.v1.GenesisState = function (opt_data) {
+proto.ibc.core.types.v1.GenesisState = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.ibc.core.types.v1.GenesisState, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.ibc.core.types.v1.GenesisState.displayName = 'proto.ibc.core.types.v1.GenesisState';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -48,11 +47,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.core.types.v1.GenesisState.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.core.types.v1.GenesisState.toObject(opt_includeInstance, this);
-  };
+proto.ibc.core.types.v1.GenesisState.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.core.types.v1.GenesisState.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -61,31 +61,32 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.core.types.v1.GenesisState.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        clientGenesis: (f = msg.getClientGenesis()) && ibc_core_client_v1_genesis_pb.GenesisState.toObject(includeInstance, f),
-        connectionGenesis: (f = msg.getConnectionGenesis()) && ibc_core_connection_v1_genesis_pb.GenesisState.toObject(includeInstance, f),
-        channelGenesis: (f = msg.getChannelGenesis()) && ibc_core_channel_v1_genesis_pb.GenesisState.toObject(includeInstance, f),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.core.types.v1.GenesisState.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    clientGenesis: (f = msg.getClientGenesis()) && ibc_core_client_v1_genesis_pb.GenesisState.toObject(includeInstance, f),
+    connectionGenesis: (f = msg.getConnectionGenesis()) && ibc_core_connection_v1_genesis_pb.GenesisState.toObject(includeInstance, f),
+    channelGenesis: (f = msg.getChannelGenesis()) && ibc_core_channel_v1_genesis_pb.GenesisState.toObject(includeInstance, f)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.core.types.v1.GenesisState}
  */
-proto.ibc.core.types.v1.GenesisState.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.core.types.v1.GenesisState();
+proto.ibc.core.types.v1.GenesisState.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.core.types.v1.GenesisState;
   return proto.ibc.core.types.v1.GenesisState.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -94,45 +95,47 @@ proto.ibc.core.types.v1.GenesisState.deserializeBinary = function (bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.core.types.v1.GenesisState}
  */
-proto.ibc.core.types.v1.GenesisState.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.core.types.v1.GenesisState.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = new ibc_core_client_v1_genesis_pb.GenesisState();
-        reader.readMessage(value, ibc_core_client_v1_genesis_pb.GenesisState.deserializeBinaryFromReader);
-        msg.setClientGenesis(value);
-        break;
-      case 2:
-        var value = new ibc_core_connection_v1_genesis_pb.GenesisState();
-        reader.readMessage(value, ibc_core_connection_v1_genesis_pb.GenesisState.deserializeBinaryFromReader);
-        msg.setConnectionGenesis(value);
-        break;
-      case 3:
-        var value = new ibc_core_channel_v1_genesis_pb.GenesisState();
-        reader.readMessage(value, ibc_core_channel_v1_genesis_pb.GenesisState.deserializeBinaryFromReader);
-        msg.setChannelGenesis(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = new ibc_core_client_v1_genesis_pb.GenesisState;
+      reader.readMessage(value,ibc_core_client_v1_genesis_pb.GenesisState.deserializeBinaryFromReader);
+      msg.setClientGenesis(value);
+      break;
+    case 2:
+      var value = new ibc_core_connection_v1_genesis_pb.GenesisState;
+      reader.readMessage(value,ibc_core_connection_v1_genesis_pb.GenesisState.deserializeBinaryFromReader);
+      msg.setConnectionGenesis(value);
+      break;
+    case 3:
+      var value = new ibc_core_channel_v1_genesis_pb.GenesisState;
+      reader.readMessage(value,ibc_core_channel_v1_genesis_pb.GenesisState.deserializeBinaryFromReader);
+      msg.setChannelGenesis(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.core.types.v1.GenesisState.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.core.types.v1.GenesisState.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.core.types.v1.GenesisState.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -141,14 +144,14 @@ proto.ibc.core.types.v1.GenesisState.prototype.serializeBinary = function () {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.core.types.v1.GenesisState.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.core.types.v1.GenesisState.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getClientGenesis();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      ibc_core_client_v1_genesis_pb.GenesisState.serializeBinaryToWriter,
+      ibc_core_client_v1_genesis_pb.GenesisState.serializeBinaryToWriter
     );
   }
   f = message.getConnectionGenesis();
@@ -156,7 +159,7 @@ proto.ibc.core.types.v1.GenesisState.serializeBinaryToWriter = function (message
     writer.writeMessage(
       2,
       f,
-      ibc_core_connection_v1_genesis_pb.GenesisState.serializeBinaryToWriter,
+      ibc_core_connection_v1_genesis_pb.GenesisState.serializeBinaryToWriter
     );
   }
   f = message.getChannelGenesis();
@@ -164,87 +167,100 @@ proto.ibc.core.types.v1.GenesisState.serializeBinaryToWriter = function (message
     writer.writeMessage(
       3,
       f,
-      ibc_core_channel_v1_genesis_pb.GenesisState.serializeBinaryToWriter,
+      ibc_core_channel_v1_genesis_pb.GenesisState.serializeBinaryToWriter
     );
   }
 };
+
 
 /**
  * optional ibc.core.client.v1.GenesisState client_genesis = 1;
  * @return {?proto.ibc.core.client.v1.GenesisState}
  */
-proto.ibc.core.types.v1.GenesisState.prototype.getClientGenesis = function () {
+proto.ibc.core.types.v1.GenesisState.prototype.getClientGenesis = function() {
   return /** @type{?proto.ibc.core.client.v1.GenesisState} */ (
     jspb.Message.getWrapperField(this, ibc_core_client_v1_genesis_pb.GenesisState, 1));
 };
 
+
 /** @param {?proto.ibc.core.client.v1.GenesisState|undefined} value */
-proto.ibc.core.types.v1.GenesisState.prototype.setClientGenesis = function (value) {
+proto.ibc.core.types.v1.GenesisState.prototype.setClientGenesis = function(value) {
   jspb.Message.setWrapperField(this, 1, value);
 };
 
-proto.ibc.core.types.v1.GenesisState.prototype.clearClientGenesis = function () {
+
+proto.ibc.core.types.v1.GenesisState.prototype.clearClientGenesis = function() {
   this.setClientGenesis(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.ibc.core.types.v1.GenesisState.prototype.hasClientGenesis = function () {
+proto.ibc.core.types.v1.GenesisState.prototype.hasClientGenesis = function() {
   return jspb.Message.getField(this, 1) != null;
 };
+
 
 /**
  * optional ibc.core.connection.v1.GenesisState connection_genesis = 2;
  * @return {?proto.ibc.core.connection.v1.GenesisState}
  */
-proto.ibc.core.types.v1.GenesisState.prototype.getConnectionGenesis = function () {
+proto.ibc.core.types.v1.GenesisState.prototype.getConnectionGenesis = function() {
   return /** @type{?proto.ibc.core.connection.v1.GenesisState} */ (
     jspb.Message.getWrapperField(this, ibc_core_connection_v1_genesis_pb.GenesisState, 2));
 };
 
+
 /** @param {?proto.ibc.core.connection.v1.GenesisState|undefined} value */
-proto.ibc.core.types.v1.GenesisState.prototype.setConnectionGenesis = function (value) {
+proto.ibc.core.types.v1.GenesisState.prototype.setConnectionGenesis = function(value) {
   jspb.Message.setWrapperField(this, 2, value);
 };
 
-proto.ibc.core.types.v1.GenesisState.prototype.clearConnectionGenesis = function () {
+
+proto.ibc.core.types.v1.GenesisState.prototype.clearConnectionGenesis = function() {
   this.setConnectionGenesis(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.ibc.core.types.v1.GenesisState.prototype.hasConnectionGenesis = function () {
+proto.ibc.core.types.v1.GenesisState.prototype.hasConnectionGenesis = function() {
   return jspb.Message.getField(this, 2) != null;
 };
+
 
 /**
  * optional ibc.core.channel.v1.GenesisState channel_genesis = 3;
  * @return {?proto.ibc.core.channel.v1.GenesisState}
  */
-proto.ibc.core.types.v1.GenesisState.prototype.getChannelGenesis = function () {
+proto.ibc.core.types.v1.GenesisState.prototype.getChannelGenesis = function() {
   return /** @type{?proto.ibc.core.channel.v1.GenesisState} */ (
     jspb.Message.getWrapperField(this, ibc_core_channel_v1_genesis_pb.GenesisState, 3));
 };
 
+
 /** @param {?proto.ibc.core.channel.v1.GenesisState|undefined} value */
-proto.ibc.core.types.v1.GenesisState.prototype.setChannelGenesis = function (value) {
+proto.ibc.core.types.v1.GenesisState.prototype.setChannelGenesis = function(value) {
   jspb.Message.setWrapperField(this, 3, value);
 };
 
-proto.ibc.core.types.v1.GenesisState.prototype.clearChannelGenesis = function () {
+
+proto.ibc.core.types.v1.GenesisState.prototype.clearChannelGenesis = function() {
   this.setChannelGenesis(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.ibc.core.types.v1.GenesisState.prototype.hasChannelGenesis = function () {
+proto.ibc.core.types.v1.GenesisState.prototype.hasChannelGenesis = function() {
   return jspb.Message.getField(this, 3) != null;
 };
+
 
 goog.object.extend(exports, proto.ibc.core.types.v1);

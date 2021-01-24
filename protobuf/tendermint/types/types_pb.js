@@ -7,17 +7,15 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-const jspb = require('google-protobuf');
+var jspb = require('google-protobuf');
+var goog = jspb;
+var global = Function('return this')();
 
-const goog = jspb;
-const global = Function('return this')();
-
-const google_protobuf_timestamp_pb = require('google-protobuf/google/protobuf/timestamp_pb.js');
-const gogoproto_gogo_pb = require('../../gogoproto/gogo_pb.js');
-const tendermint_crypto_proof_pb = require('../crypto/proof_pb.js');
-const tendermint_version_types_pb = require('../version/types_pb.js');
-const tendermint_types_validator_pb = require('./validator_pb.js');
-
+var gogoproto_gogo_pb = require('../../gogoproto/gogo_pb.js');
+var google_protobuf_timestamp_pb = require('google-protobuf/google/protobuf/timestamp_pb.js');
+var tendermint_crypto_proof_pb = require('../../tendermint/crypto/proof_pb.js');
+var tendermint_version_types_pb = require('../../tendermint/version/types_pb.js');
+var tendermint_types_validator_pb = require('../../tendermint/types/validator_pb.js');
 goog.exportSymbol('proto.tendermint.types.BlockID', null, global);
 goog.exportSymbol('proto.tendermint.types.BlockIDFlag', null, global);
 goog.exportSymbol('proto.tendermint.types.BlockMeta', null, global);
@@ -44,13 +42,14 @@ goog.exportSymbol('proto.tendermint.types.Vote', null, global);
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.types.PartSetHeader = function (opt_data) {
+proto.tendermint.types.PartSetHeader = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.tendermint.types.PartSetHeader, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.tendermint.types.PartSetHeader.displayName = 'proto.tendermint.types.PartSetHeader';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -63,11 +62,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.tendermint.types.PartSetHeader.prototype.toObject = function (opt_includeInstance) {
-    return proto.tendermint.types.PartSetHeader.toObject(opt_includeInstance, this);
-  };
+proto.tendermint.types.PartSetHeader.prototype.toObject = function(opt_includeInstance) {
+  return proto.tendermint.types.PartSetHeader.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -76,30 +76,31 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.tendermint.types.PartSetHeader.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        total: jspb.Message.getFieldWithDefault(msg, 1, 0),
-        hash: msg.getHash_asB64(),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.tendermint.types.PartSetHeader.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    total: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    hash: msg.getHash_asB64()
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.types.PartSetHeader}
  */
-proto.tendermint.types.PartSetHeader.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.tendermint.types.PartSetHeader();
+proto.tendermint.types.PartSetHeader.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.tendermint.types.PartSetHeader;
   return proto.tendermint.types.PartSetHeader.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -108,38 +109,40 @@ proto.tendermint.types.PartSetHeader.deserializeBinary = function (bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.types.PartSetHeader}
  */
-proto.tendermint.types.PartSetHeader.deserializeBinaryFromReader = function (msg, reader) {
+proto.tendermint.types.PartSetHeader.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {number} */ (reader.readUint32());
-        msg.setTotal(value);
-        break;
-      case 2:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setHash(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {number} */ (reader.readUint32());
+      msg.setTotal(value);
+      break;
+    case 2:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setHash(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.types.PartSetHeader.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.tendermint.types.PartSetHeader.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.tendermint.types.PartSetHeader.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -148,55 +151,59 @@ proto.tendermint.types.PartSetHeader.prototype.serializeBinary = function () {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.types.PartSetHeader.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.tendermint.types.PartSetHeader.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getTotal();
   if (f !== 0) {
     writer.writeUint32(
       1,
-      f,
+      f
     );
   }
   f = message.getHash_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       2,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * optional uint32 total = 1;
  * @return {number}
  */
-proto.tendermint.types.PartSetHeader.prototype.getTotal = function () {
+proto.tendermint.types.PartSetHeader.prototype.getTotal = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
+
 /** @param {number} value */
-proto.tendermint.types.PartSetHeader.prototype.setTotal = function (value) {
+proto.tendermint.types.PartSetHeader.prototype.setTotal = function(value) {
   jspb.Message.setProto3IntField(this, 1, value);
 };
+
 
 /**
  * optional bytes hash = 2;
  * @return {!(string|Uint8Array)}
  */
-proto.tendermint.types.PartSetHeader.prototype.getHash = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
+proto.tendermint.types.PartSetHeader.prototype.getHash = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
+
 
 /**
  * optional bytes hash = 2;
  * This is a type-conversion wrapper around `getHash()`
  * @return {string}
  */
-proto.tendermint.types.PartSetHeader.prototype.getHash_asB64 = function () {
+proto.tendermint.types.PartSetHeader.prototype.getHash_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getHash(),
-  ));
+      this.getHash()));
 };
+
 
 /**
  * optional bytes hash = 2;
@@ -205,16 +212,18 @@ proto.tendermint.types.PartSetHeader.prototype.getHash_asB64 = function () {
  * This is a type-conversion wrapper around `getHash()`
  * @return {!Uint8Array}
  */
-proto.tendermint.types.PartSetHeader.prototype.getHash_asU8 = function () {
+proto.tendermint.types.PartSetHeader.prototype.getHash_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getHash(),
-  ));
+      this.getHash()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.tendermint.types.PartSetHeader.prototype.setHash = function (value) {
+proto.tendermint.types.PartSetHeader.prototype.setHash = function(value) {
   jspb.Message.setProto3BytesField(this, 2, value);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -226,13 +235,14 @@ proto.tendermint.types.PartSetHeader.prototype.setHash = function (value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.types.Part = function (opt_data) {
+proto.tendermint.types.Part = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.tendermint.types.Part, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.tendermint.types.Part.displayName = 'proto.tendermint.types.Part';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -245,11 +255,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.tendermint.types.Part.prototype.toObject = function (opt_includeInstance) {
-    return proto.tendermint.types.Part.toObject(opt_includeInstance, this);
-  };
+proto.tendermint.types.Part.prototype.toObject = function(opt_includeInstance) {
+  return proto.tendermint.types.Part.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -258,31 +269,32 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.tendermint.types.Part.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        index: jspb.Message.getFieldWithDefault(msg, 1, 0),
-        bytes: msg.getBytes_asB64(),
-        proof: (f = msg.getProof()) && tendermint_crypto_proof_pb.Proof.toObject(includeInstance, f),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.tendermint.types.Part.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    index: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    bytes: msg.getBytes_asB64(),
+    proof: (f = msg.getProof()) && tendermint_crypto_proof_pb.Proof.toObject(includeInstance, f)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.types.Part}
  */
-proto.tendermint.types.Part.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.tendermint.types.Part();
+proto.tendermint.types.Part.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.tendermint.types.Part;
   return proto.tendermint.types.Part.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -291,43 +303,45 @@ proto.tendermint.types.Part.deserializeBinary = function (bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.types.Part}
  */
-proto.tendermint.types.Part.deserializeBinaryFromReader = function (msg, reader) {
+proto.tendermint.types.Part.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {number} */ (reader.readUint32());
-        msg.setIndex(value);
-        break;
-      case 2:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setBytes(value);
-        break;
-      case 3:
-        var value = new tendermint_crypto_proof_pb.Proof();
-        reader.readMessage(value, tendermint_crypto_proof_pb.Proof.deserializeBinaryFromReader);
-        msg.setProof(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {number} */ (reader.readUint32());
+      msg.setIndex(value);
+      break;
+    case 2:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setBytes(value);
+      break;
+    case 3:
+      var value = new tendermint_crypto_proof_pb.Proof;
+      reader.readMessage(value,tendermint_crypto_proof_pb.Proof.deserializeBinaryFromReader);
+      msg.setProof(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.types.Part.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.tendermint.types.Part.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.tendermint.types.Part.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -336,20 +350,20 @@ proto.tendermint.types.Part.prototype.serializeBinary = function () {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.types.Part.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.tendermint.types.Part.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getIndex();
   if (f !== 0) {
     writer.writeUint32(
       1,
-      f,
+      f
     );
   }
   f = message.getBytes_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       2,
-      f,
+      f
     );
   }
   f = message.getProof();
@@ -357,42 +371,46 @@ proto.tendermint.types.Part.serializeBinaryToWriter = function (message, writer)
     writer.writeMessage(
       3,
       f,
-      tendermint_crypto_proof_pb.Proof.serializeBinaryToWriter,
+      tendermint_crypto_proof_pb.Proof.serializeBinaryToWriter
     );
   }
 };
+
 
 /**
  * optional uint32 index = 1;
  * @return {number}
  */
-proto.tendermint.types.Part.prototype.getIndex = function () {
+proto.tendermint.types.Part.prototype.getIndex = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
+
 /** @param {number} value */
-proto.tendermint.types.Part.prototype.setIndex = function (value) {
+proto.tendermint.types.Part.prototype.setIndex = function(value) {
   jspb.Message.setProto3IntField(this, 1, value);
 };
+
 
 /**
  * optional bytes bytes = 2;
  * @return {!(string|Uint8Array)}
  */
-proto.tendermint.types.Part.prototype.getBytes = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
+proto.tendermint.types.Part.prototype.getBytes = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
+
 
 /**
  * optional bytes bytes = 2;
  * This is a type-conversion wrapper around `getBytes()`
  * @return {string}
  */
-proto.tendermint.types.Part.prototype.getBytes_asB64 = function () {
+proto.tendermint.types.Part.prototype.getBytes_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getBytes(),
-  ));
+      this.getBytes()));
 };
+
 
 /**
  * optional bytes bytes = 2;
@@ -401,42 +419,48 @@ proto.tendermint.types.Part.prototype.getBytes_asB64 = function () {
  * This is a type-conversion wrapper around `getBytes()`
  * @return {!Uint8Array}
  */
-proto.tendermint.types.Part.prototype.getBytes_asU8 = function () {
+proto.tendermint.types.Part.prototype.getBytes_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getBytes(),
-  ));
+      this.getBytes()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.tendermint.types.Part.prototype.setBytes = function (value) {
+proto.tendermint.types.Part.prototype.setBytes = function(value) {
   jspb.Message.setProto3BytesField(this, 2, value);
 };
+
 
 /**
  * optional tendermint.crypto.Proof proof = 3;
  * @return {?proto.tendermint.crypto.Proof}
  */
-proto.tendermint.types.Part.prototype.getProof = function () {
+proto.tendermint.types.Part.prototype.getProof = function() {
   return /** @type{?proto.tendermint.crypto.Proof} */ (
     jspb.Message.getWrapperField(this, tendermint_crypto_proof_pb.Proof, 3));
 };
 
+
 /** @param {?proto.tendermint.crypto.Proof|undefined} value */
-proto.tendermint.types.Part.prototype.setProof = function (value) {
+proto.tendermint.types.Part.prototype.setProof = function(value) {
   jspb.Message.setWrapperField(this, 3, value);
 };
 
-proto.tendermint.types.Part.prototype.clearProof = function () {
+
+proto.tendermint.types.Part.prototype.clearProof = function() {
   this.setProof(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.types.Part.prototype.hasProof = function () {
+proto.tendermint.types.Part.prototype.hasProof = function() {
   return jspb.Message.getField(this, 3) != null;
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -448,13 +472,14 @@ proto.tendermint.types.Part.prototype.hasProof = function () {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.types.BlockID = function (opt_data) {
+proto.tendermint.types.BlockID = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.tendermint.types.BlockID, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.tendermint.types.BlockID.displayName = 'proto.tendermint.types.BlockID';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -467,11 +492,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.tendermint.types.BlockID.prototype.toObject = function (opt_includeInstance) {
-    return proto.tendermint.types.BlockID.toObject(opt_includeInstance, this);
-  };
+proto.tendermint.types.BlockID.prototype.toObject = function(opt_includeInstance) {
+  return proto.tendermint.types.BlockID.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -480,30 +506,31 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.tendermint.types.BlockID.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        hash: msg.getHash_asB64(),
-        partSetHeader: (f = msg.getPartSetHeader()) && proto.tendermint.types.PartSetHeader.toObject(includeInstance, f),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.tendermint.types.BlockID.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    hash: msg.getHash_asB64(),
+    partSetHeader: (f = msg.getPartSetHeader()) && proto.tendermint.types.PartSetHeader.toObject(includeInstance, f)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.types.BlockID}
  */
-proto.tendermint.types.BlockID.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.tendermint.types.BlockID();
+proto.tendermint.types.BlockID.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.tendermint.types.BlockID;
   return proto.tendermint.types.BlockID.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -512,39 +539,41 @@ proto.tendermint.types.BlockID.deserializeBinary = function (bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.types.BlockID}
  */
-proto.tendermint.types.BlockID.deserializeBinaryFromReader = function (msg, reader) {
+proto.tendermint.types.BlockID.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setHash(value);
-        break;
-      case 2:
-        var value = new proto.tendermint.types.PartSetHeader();
-        reader.readMessage(value, proto.tendermint.types.PartSetHeader.deserializeBinaryFromReader);
-        msg.setPartSetHeader(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setHash(value);
+      break;
+    case 2:
+      var value = new proto.tendermint.types.PartSetHeader;
+      reader.readMessage(value,proto.tendermint.types.PartSetHeader.deserializeBinaryFromReader);
+      msg.setPartSetHeader(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.types.BlockID.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.tendermint.types.BlockID.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.tendermint.types.BlockID.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -553,13 +582,13 @@ proto.tendermint.types.BlockID.prototype.serializeBinary = function () {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.types.BlockID.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.tendermint.types.BlockID.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getHash_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       1,
-      f,
+      f
     );
   }
   f = message.getPartSetHeader();
@@ -567,29 +596,31 @@ proto.tendermint.types.BlockID.serializeBinaryToWriter = function (message, writ
     writer.writeMessage(
       2,
       f,
-      proto.tendermint.types.PartSetHeader.serializeBinaryToWriter,
+      proto.tendermint.types.PartSetHeader.serializeBinaryToWriter
     );
   }
 };
+
 
 /**
  * optional bytes hash = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.tendermint.types.BlockID.prototype.getHash = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.tendermint.types.BlockID.prototype.getHash = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
+
 
 /**
  * optional bytes hash = 1;
  * This is a type-conversion wrapper around `getHash()`
  * @return {string}
  */
-proto.tendermint.types.BlockID.prototype.getHash_asB64 = function () {
+proto.tendermint.types.BlockID.prototype.getHash_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getHash(),
-  ));
+      this.getHash()));
 };
+
 
 /**
  * optional bytes hash = 1;
@@ -598,42 +629,48 @@ proto.tendermint.types.BlockID.prototype.getHash_asB64 = function () {
  * This is a type-conversion wrapper around `getHash()`
  * @return {!Uint8Array}
  */
-proto.tendermint.types.BlockID.prototype.getHash_asU8 = function () {
+proto.tendermint.types.BlockID.prototype.getHash_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getHash(),
-  ));
+      this.getHash()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.tendermint.types.BlockID.prototype.setHash = function (value) {
+proto.tendermint.types.BlockID.prototype.setHash = function(value) {
   jspb.Message.setProto3BytesField(this, 1, value);
 };
+
 
 /**
  * optional PartSetHeader part_set_header = 2;
  * @return {?proto.tendermint.types.PartSetHeader}
  */
-proto.tendermint.types.BlockID.prototype.getPartSetHeader = function () {
+proto.tendermint.types.BlockID.prototype.getPartSetHeader = function() {
   return /** @type{?proto.tendermint.types.PartSetHeader} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.types.PartSetHeader, 2));
 };
 
+
 /** @param {?proto.tendermint.types.PartSetHeader|undefined} value */
-proto.tendermint.types.BlockID.prototype.setPartSetHeader = function (value) {
+proto.tendermint.types.BlockID.prototype.setPartSetHeader = function(value) {
   jspb.Message.setWrapperField(this, 2, value);
 };
 
-proto.tendermint.types.BlockID.prototype.clearPartSetHeader = function () {
+
+proto.tendermint.types.BlockID.prototype.clearPartSetHeader = function() {
   this.setPartSetHeader(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.types.BlockID.prototype.hasPartSetHeader = function () {
+proto.tendermint.types.BlockID.prototype.hasPartSetHeader = function() {
   return jspb.Message.getField(this, 2) != null;
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -645,13 +682,14 @@ proto.tendermint.types.BlockID.prototype.hasPartSetHeader = function () {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.types.Header = function (opt_data) {
+proto.tendermint.types.Header = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.tendermint.types.Header, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.tendermint.types.Header.displayName = 'proto.tendermint.types.Header';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -664,11 +702,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.tendermint.types.Header.prototype.toObject = function (opt_includeInstance) {
-    return proto.tendermint.types.Header.toObject(opt_includeInstance, this);
-  };
+proto.tendermint.types.Header.prototype.toObject = function(opt_includeInstance) {
+  return proto.tendermint.types.Header.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -677,42 +716,43 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.tendermint.types.Header.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        version: (f = msg.getVersion()) && tendermint_version_types_pb.Consensus.toObject(includeInstance, f),
-        chainId: jspb.Message.getFieldWithDefault(msg, 2, ''),
-        height: jspb.Message.getFieldWithDefault(msg, 3, 0),
-        time: (f = msg.getTime()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
-        lastBlockId: (f = msg.getLastBlockId()) && proto.tendermint.types.BlockID.toObject(includeInstance, f),
-        lastCommitHash: msg.getLastCommitHash_asB64(),
-        dataHash: msg.getDataHash_asB64(),
-        validatorsHash: msg.getValidatorsHash_asB64(),
-        nextValidatorsHash: msg.getNextValidatorsHash_asB64(),
-        consensusHash: msg.getConsensusHash_asB64(),
-        appHash: msg.getAppHash_asB64(),
-        lastResultsHash: msg.getLastResultsHash_asB64(),
-        evidenceHash: msg.getEvidenceHash_asB64(),
-        proposerAddress: msg.getProposerAddress_asB64(),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.tendermint.types.Header.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    version: (f = msg.getVersion()) && tendermint_version_types_pb.Consensus.toObject(includeInstance, f),
+    chainId: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    height: jspb.Message.getFieldWithDefault(msg, 3, 0),
+    time: (f = msg.getTime()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
+    lastBlockId: (f = msg.getLastBlockId()) && proto.tendermint.types.BlockID.toObject(includeInstance, f),
+    lastCommitHash: msg.getLastCommitHash_asB64(),
+    dataHash: msg.getDataHash_asB64(),
+    validatorsHash: msg.getValidatorsHash_asB64(),
+    nextValidatorsHash: msg.getNextValidatorsHash_asB64(),
+    consensusHash: msg.getConsensusHash_asB64(),
+    appHash: msg.getAppHash_asB64(),
+    lastResultsHash: msg.getLastResultsHash_asB64(),
+    evidenceHash: msg.getEvidenceHash_asB64(),
+    proposerAddress: msg.getProposerAddress_asB64()
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.types.Header}
  */
-proto.tendermint.types.Header.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.tendermint.types.Header();
+proto.tendermint.types.Header.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.tendermint.types.Header;
   return proto.tendermint.types.Header.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -721,89 +761,91 @@ proto.tendermint.types.Header.deserializeBinary = function (bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.types.Header}
  */
-proto.tendermint.types.Header.deserializeBinaryFromReader = function (msg, reader) {
+proto.tendermint.types.Header.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = new tendermint_version_types_pb.Consensus();
-        reader.readMessage(value, tendermint_version_types_pb.Consensus.deserializeBinaryFromReader);
-        msg.setVersion(value);
-        break;
-      case 2:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setChainId(value);
-        break;
-      case 3:
-        var value = /** @type {number} */ (reader.readInt64());
-        msg.setHeight(value);
-        break;
-      case 4:
-        var value = new google_protobuf_timestamp_pb.Timestamp();
-        reader.readMessage(value, google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
-        msg.setTime(value);
-        break;
-      case 5:
-        var value = new proto.tendermint.types.BlockID();
-        reader.readMessage(value, proto.tendermint.types.BlockID.deserializeBinaryFromReader);
-        msg.setLastBlockId(value);
-        break;
-      case 6:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setLastCommitHash(value);
-        break;
-      case 7:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setDataHash(value);
-        break;
-      case 8:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setValidatorsHash(value);
-        break;
-      case 9:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setNextValidatorsHash(value);
-        break;
-      case 10:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setConsensusHash(value);
-        break;
-      case 11:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setAppHash(value);
-        break;
-      case 12:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setLastResultsHash(value);
-        break;
-      case 13:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setEvidenceHash(value);
-        break;
-      case 14:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setProposerAddress(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = new tendermint_version_types_pb.Consensus;
+      reader.readMessage(value,tendermint_version_types_pb.Consensus.deserializeBinaryFromReader);
+      msg.setVersion(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setChainId(value);
+      break;
+    case 3:
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setHeight(value);
+      break;
+    case 4:
+      var value = new google_protobuf_timestamp_pb.Timestamp;
+      reader.readMessage(value,google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
+      msg.setTime(value);
+      break;
+    case 5:
+      var value = new proto.tendermint.types.BlockID;
+      reader.readMessage(value,proto.tendermint.types.BlockID.deserializeBinaryFromReader);
+      msg.setLastBlockId(value);
+      break;
+    case 6:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setLastCommitHash(value);
+      break;
+    case 7:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setDataHash(value);
+      break;
+    case 8:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setValidatorsHash(value);
+      break;
+    case 9:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setNextValidatorsHash(value);
+      break;
+    case 10:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setConsensusHash(value);
+      break;
+    case 11:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setAppHash(value);
+      break;
+    case 12:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setLastResultsHash(value);
+      break;
+    case 13:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setEvidenceHash(value);
+      break;
+    case 14:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setProposerAddress(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.types.Header.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.tendermint.types.Header.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.tendermint.types.Header.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -812,28 +854,28 @@ proto.tendermint.types.Header.prototype.serializeBinary = function () {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.types.Header.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.tendermint.types.Header.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getVersion();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      tendermint_version_types_pb.Consensus.serializeBinaryToWriter,
+      tendermint_version_types_pb.Consensus.serializeBinaryToWriter
     );
   }
   f = message.getChainId();
   if (f.length > 0) {
     writer.writeString(
       2,
-      f,
+      f
     );
   }
   f = message.getHeight();
   if (f !== 0) {
     writer.writeInt64(
       3,
-      f,
+      f
     );
   }
   f = message.getTime();
@@ -841,7 +883,7 @@ proto.tendermint.types.Header.serializeBinaryToWriter = function (message, write
     writer.writeMessage(
       4,
       f,
-      google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter,
+      google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter
     );
   }
   f = message.getLastBlockId();
@@ -849,196 +891,214 @@ proto.tendermint.types.Header.serializeBinaryToWriter = function (message, write
     writer.writeMessage(
       5,
       f,
-      proto.tendermint.types.BlockID.serializeBinaryToWriter,
+      proto.tendermint.types.BlockID.serializeBinaryToWriter
     );
   }
   f = message.getLastCommitHash_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       6,
-      f,
+      f
     );
   }
   f = message.getDataHash_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       7,
-      f,
+      f
     );
   }
   f = message.getValidatorsHash_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       8,
-      f,
+      f
     );
   }
   f = message.getNextValidatorsHash_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       9,
-      f,
+      f
     );
   }
   f = message.getConsensusHash_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       10,
-      f,
+      f
     );
   }
   f = message.getAppHash_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       11,
-      f,
+      f
     );
   }
   f = message.getLastResultsHash_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       12,
-      f,
+      f
     );
   }
   f = message.getEvidenceHash_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       13,
-      f,
+      f
     );
   }
   f = message.getProposerAddress_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       14,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * optional tendermint.version.Consensus version = 1;
  * @return {?proto.tendermint.version.Consensus}
  */
-proto.tendermint.types.Header.prototype.getVersion = function () {
+proto.tendermint.types.Header.prototype.getVersion = function() {
   return /** @type{?proto.tendermint.version.Consensus} */ (
     jspb.Message.getWrapperField(this, tendermint_version_types_pb.Consensus, 1));
 };
 
+
 /** @param {?proto.tendermint.version.Consensus|undefined} value */
-proto.tendermint.types.Header.prototype.setVersion = function (value) {
+proto.tendermint.types.Header.prototype.setVersion = function(value) {
   jspb.Message.setWrapperField(this, 1, value);
 };
 
-proto.tendermint.types.Header.prototype.clearVersion = function () {
+
+proto.tendermint.types.Header.prototype.clearVersion = function() {
   this.setVersion(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.types.Header.prototype.hasVersion = function () {
+proto.tendermint.types.Header.prototype.hasVersion = function() {
   return jspb.Message.getField(this, 1) != null;
 };
+
 
 /**
  * optional string chain_id = 2;
  * @return {string}
  */
-proto.tendermint.types.Header.prototype.getChainId = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
+proto.tendermint.types.Header.prototype.getChainId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
+
 /** @param {string} value */
-proto.tendermint.types.Header.prototype.setChainId = function (value) {
+proto.tendermint.types.Header.prototype.setChainId = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
+
 
 /**
  * optional int64 height = 3;
  * @return {number}
  */
-proto.tendermint.types.Header.prototype.getHeight = function () {
+proto.tendermint.types.Header.prototype.getHeight = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
+
 /** @param {number} value */
-proto.tendermint.types.Header.prototype.setHeight = function (value) {
+proto.tendermint.types.Header.prototype.setHeight = function(value) {
   jspb.Message.setProto3IntField(this, 3, value);
 };
+
 
 /**
  * optional google.protobuf.Timestamp time = 4;
  * @return {?proto.google.protobuf.Timestamp}
  */
-proto.tendermint.types.Header.prototype.getTime = function () {
+proto.tendermint.types.Header.prototype.getTime = function() {
   return /** @type{?proto.google.protobuf.Timestamp} */ (
     jspb.Message.getWrapperField(this, google_protobuf_timestamp_pb.Timestamp, 4));
 };
 
+
 /** @param {?proto.google.protobuf.Timestamp|undefined} value */
-proto.tendermint.types.Header.prototype.setTime = function (value) {
+proto.tendermint.types.Header.prototype.setTime = function(value) {
   jspb.Message.setWrapperField(this, 4, value);
 };
 
-proto.tendermint.types.Header.prototype.clearTime = function () {
+
+proto.tendermint.types.Header.prototype.clearTime = function() {
   this.setTime(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.types.Header.prototype.hasTime = function () {
+proto.tendermint.types.Header.prototype.hasTime = function() {
   return jspb.Message.getField(this, 4) != null;
 };
+
 
 /**
  * optional BlockID last_block_id = 5;
  * @return {?proto.tendermint.types.BlockID}
  */
-proto.tendermint.types.Header.prototype.getLastBlockId = function () {
+proto.tendermint.types.Header.prototype.getLastBlockId = function() {
   return /** @type{?proto.tendermint.types.BlockID} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.types.BlockID, 5));
 };
 
+
 /** @param {?proto.tendermint.types.BlockID|undefined} value */
-proto.tendermint.types.Header.prototype.setLastBlockId = function (value) {
+proto.tendermint.types.Header.prototype.setLastBlockId = function(value) {
   jspb.Message.setWrapperField(this, 5, value);
 };
 
-proto.tendermint.types.Header.prototype.clearLastBlockId = function () {
+
+proto.tendermint.types.Header.prototype.clearLastBlockId = function() {
   this.setLastBlockId(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.types.Header.prototype.hasLastBlockId = function () {
+proto.tendermint.types.Header.prototype.hasLastBlockId = function() {
   return jspb.Message.getField(this, 5) != null;
 };
 
+
 /**
  * optional bytes last_commit_hash = 6;
  * @return {!(string|Uint8Array)}
  */
-proto.tendermint.types.Header.prototype.getLastCommitHash = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 6, ''));
+proto.tendermint.types.Header.prototype.getLastCommitHash = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
 };
+
 
 /**
  * optional bytes last_commit_hash = 6;
  * This is a type-conversion wrapper around `getLastCommitHash()`
  * @return {string}
  */
-proto.tendermint.types.Header.prototype.getLastCommitHash_asB64 = function () {
+proto.tendermint.types.Header.prototype.getLastCommitHash_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getLastCommitHash(),
-  ));
+      this.getLastCommitHash()));
 };
+
 
 /**
  * optional bytes last_commit_hash = 6;
@@ -1047,35 +1107,37 @@ proto.tendermint.types.Header.prototype.getLastCommitHash_asB64 = function () {
  * This is a type-conversion wrapper around `getLastCommitHash()`
  * @return {!Uint8Array}
  */
-proto.tendermint.types.Header.prototype.getLastCommitHash_asU8 = function () {
+proto.tendermint.types.Header.prototype.getLastCommitHash_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getLastCommitHash(),
-  ));
+      this.getLastCommitHash()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.tendermint.types.Header.prototype.setLastCommitHash = function (value) {
+proto.tendermint.types.Header.prototype.setLastCommitHash = function(value) {
   jspb.Message.setProto3BytesField(this, 6, value);
 };
 
+
 /**
  * optional bytes data_hash = 7;
  * @return {!(string|Uint8Array)}
  */
-proto.tendermint.types.Header.prototype.getDataHash = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 7, ''));
+proto.tendermint.types.Header.prototype.getDataHash = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 7, ""));
 };
+
 
 /**
  * optional bytes data_hash = 7;
  * This is a type-conversion wrapper around `getDataHash()`
  * @return {string}
  */
-proto.tendermint.types.Header.prototype.getDataHash_asB64 = function () {
+proto.tendermint.types.Header.prototype.getDataHash_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getDataHash(),
-  ));
+      this.getDataHash()));
 };
+
 
 /**
  * optional bytes data_hash = 7;
@@ -1084,35 +1146,37 @@ proto.tendermint.types.Header.prototype.getDataHash_asB64 = function () {
  * This is a type-conversion wrapper around `getDataHash()`
  * @return {!Uint8Array}
  */
-proto.tendermint.types.Header.prototype.getDataHash_asU8 = function () {
+proto.tendermint.types.Header.prototype.getDataHash_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getDataHash(),
-  ));
+      this.getDataHash()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.tendermint.types.Header.prototype.setDataHash = function (value) {
+proto.tendermint.types.Header.prototype.setDataHash = function(value) {
   jspb.Message.setProto3BytesField(this, 7, value);
 };
 
+
 /**
  * optional bytes validators_hash = 8;
  * @return {!(string|Uint8Array)}
  */
-proto.tendermint.types.Header.prototype.getValidatorsHash = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 8, ''));
+proto.tendermint.types.Header.prototype.getValidatorsHash = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 8, ""));
 };
+
 
 /**
  * optional bytes validators_hash = 8;
  * This is a type-conversion wrapper around `getValidatorsHash()`
  * @return {string}
  */
-proto.tendermint.types.Header.prototype.getValidatorsHash_asB64 = function () {
+proto.tendermint.types.Header.prototype.getValidatorsHash_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getValidatorsHash(),
-  ));
+      this.getValidatorsHash()));
 };
+
 
 /**
  * optional bytes validators_hash = 8;
@@ -1121,35 +1185,37 @@ proto.tendermint.types.Header.prototype.getValidatorsHash_asB64 = function () {
  * This is a type-conversion wrapper around `getValidatorsHash()`
  * @return {!Uint8Array}
  */
-proto.tendermint.types.Header.prototype.getValidatorsHash_asU8 = function () {
+proto.tendermint.types.Header.prototype.getValidatorsHash_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getValidatorsHash(),
-  ));
+      this.getValidatorsHash()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.tendermint.types.Header.prototype.setValidatorsHash = function (value) {
+proto.tendermint.types.Header.prototype.setValidatorsHash = function(value) {
   jspb.Message.setProto3BytesField(this, 8, value);
 };
 
+
 /**
  * optional bytes next_validators_hash = 9;
  * @return {!(string|Uint8Array)}
  */
-proto.tendermint.types.Header.prototype.getNextValidatorsHash = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 9, ''));
+proto.tendermint.types.Header.prototype.getNextValidatorsHash = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 9, ""));
 };
+
 
 /**
  * optional bytes next_validators_hash = 9;
  * This is a type-conversion wrapper around `getNextValidatorsHash()`
  * @return {string}
  */
-proto.tendermint.types.Header.prototype.getNextValidatorsHash_asB64 = function () {
+proto.tendermint.types.Header.prototype.getNextValidatorsHash_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getNextValidatorsHash(),
-  ));
+      this.getNextValidatorsHash()));
 };
+
 
 /**
  * optional bytes next_validators_hash = 9;
@@ -1158,35 +1224,37 @@ proto.tendermint.types.Header.prototype.getNextValidatorsHash_asB64 = function (
  * This is a type-conversion wrapper around `getNextValidatorsHash()`
  * @return {!Uint8Array}
  */
-proto.tendermint.types.Header.prototype.getNextValidatorsHash_asU8 = function () {
+proto.tendermint.types.Header.prototype.getNextValidatorsHash_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getNextValidatorsHash(),
-  ));
+      this.getNextValidatorsHash()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.tendermint.types.Header.prototype.setNextValidatorsHash = function (value) {
+proto.tendermint.types.Header.prototype.setNextValidatorsHash = function(value) {
   jspb.Message.setProto3BytesField(this, 9, value);
 };
 
+
 /**
  * optional bytes consensus_hash = 10;
  * @return {!(string|Uint8Array)}
  */
-proto.tendermint.types.Header.prototype.getConsensusHash = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 10, ''));
+proto.tendermint.types.Header.prototype.getConsensusHash = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 10, ""));
 };
+
 
 /**
  * optional bytes consensus_hash = 10;
  * This is a type-conversion wrapper around `getConsensusHash()`
  * @return {string}
  */
-proto.tendermint.types.Header.prototype.getConsensusHash_asB64 = function () {
+proto.tendermint.types.Header.prototype.getConsensusHash_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getConsensusHash(),
-  ));
+      this.getConsensusHash()));
 };
+
 
 /**
  * optional bytes consensus_hash = 10;
@@ -1195,35 +1263,37 @@ proto.tendermint.types.Header.prototype.getConsensusHash_asB64 = function () {
  * This is a type-conversion wrapper around `getConsensusHash()`
  * @return {!Uint8Array}
  */
-proto.tendermint.types.Header.prototype.getConsensusHash_asU8 = function () {
+proto.tendermint.types.Header.prototype.getConsensusHash_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getConsensusHash(),
-  ));
+      this.getConsensusHash()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.tendermint.types.Header.prototype.setConsensusHash = function (value) {
+proto.tendermint.types.Header.prototype.setConsensusHash = function(value) {
   jspb.Message.setProto3BytesField(this, 10, value);
 };
 
+
 /**
  * optional bytes app_hash = 11;
  * @return {!(string|Uint8Array)}
  */
-proto.tendermint.types.Header.prototype.getAppHash = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 11, ''));
+proto.tendermint.types.Header.prototype.getAppHash = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 11, ""));
 };
+
 
 /**
  * optional bytes app_hash = 11;
  * This is a type-conversion wrapper around `getAppHash()`
  * @return {string}
  */
-proto.tendermint.types.Header.prototype.getAppHash_asB64 = function () {
+proto.tendermint.types.Header.prototype.getAppHash_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getAppHash(),
-  ));
+      this.getAppHash()));
 };
+
 
 /**
  * optional bytes app_hash = 11;
@@ -1232,35 +1302,37 @@ proto.tendermint.types.Header.prototype.getAppHash_asB64 = function () {
  * This is a type-conversion wrapper around `getAppHash()`
  * @return {!Uint8Array}
  */
-proto.tendermint.types.Header.prototype.getAppHash_asU8 = function () {
+proto.tendermint.types.Header.prototype.getAppHash_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getAppHash(),
-  ));
+      this.getAppHash()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.tendermint.types.Header.prototype.setAppHash = function (value) {
+proto.tendermint.types.Header.prototype.setAppHash = function(value) {
   jspb.Message.setProto3BytesField(this, 11, value);
 };
 
+
 /**
  * optional bytes last_results_hash = 12;
  * @return {!(string|Uint8Array)}
  */
-proto.tendermint.types.Header.prototype.getLastResultsHash = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 12, ''));
+proto.tendermint.types.Header.prototype.getLastResultsHash = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 12, ""));
 };
+
 
 /**
  * optional bytes last_results_hash = 12;
  * This is a type-conversion wrapper around `getLastResultsHash()`
  * @return {string}
  */
-proto.tendermint.types.Header.prototype.getLastResultsHash_asB64 = function () {
+proto.tendermint.types.Header.prototype.getLastResultsHash_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getLastResultsHash(),
-  ));
+      this.getLastResultsHash()));
 };
+
 
 /**
  * optional bytes last_results_hash = 12;
@@ -1269,35 +1341,37 @@ proto.tendermint.types.Header.prototype.getLastResultsHash_asB64 = function () {
  * This is a type-conversion wrapper around `getLastResultsHash()`
  * @return {!Uint8Array}
  */
-proto.tendermint.types.Header.prototype.getLastResultsHash_asU8 = function () {
+proto.tendermint.types.Header.prototype.getLastResultsHash_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getLastResultsHash(),
-  ));
+      this.getLastResultsHash()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.tendermint.types.Header.prototype.setLastResultsHash = function (value) {
+proto.tendermint.types.Header.prototype.setLastResultsHash = function(value) {
   jspb.Message.setProto3BytesField(this, 12, value);
 };
 
+
 /**
  * optional bytes evidence_hash = 13;
  * @return {!(string|Uint8Array)}
  */
-proto.tendermint.types.Header.prototype.getEvidenceHash = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 13, ''));
+proto.tendermint.types.Header.prototype.getEvidenceHash = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 13, ""));
 };
+
 
 /**
  * optional bytes evidence_hash = 13;
  * This is a type-conversion wrapper around `getEvidenceHash()`
  * @return {string}
  */
-proto.tendermint.types.Header.prototype.getEvidenceHash_asB64 = function () {
+proto.tendermint.types.Header.prototype.getEvidenceHash_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getEvidenceHash(),
-  ));
+      this.getEvidenceHash()));
 };
+
 
 /**
  * optional bytes evidence_hash = 13;
@@ -1306,35 +1380,37 @@ proto.tendermint.types.Header.prototype.getEvidenceHash_asB64 = function () {
  * This is a type-conversion wrapper around `getEvidenceHash()`
  * @return {!Uint8Array}
  */
-proto.tendermint.types.Header.prototype.getEvidenceHash_asU8 = function () {
+proto.tendermint.types.Header.prototype.getEvidenceHash_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getEvidenceHash(),
-  ));
+      this.getEvidenceHash()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.tendermint.types.Header.prototype.setEvidenceHash = function (value) {
+proto.tendermint.types.Header.prototype.setEvidenceHash = function(value) {
   jspb.Message.setProto3BytesField(this, 13, value);
 };
 
+
 /**
  * optional bytes proposer_address = 14;
  * @return {!(string|Uint8Array)}
  */
-proto.tendermint.types.Header.prototype.getProposerAddress = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 14, ''));
+proto.tendermint.types.Header.prototype.getProposerAddress = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 14, ""));
 };
+
 
 /**
  * optional bytes proposer_address = 14;
  * This is a type-conversion wrapper around `getProposerAddress()`
  * @return {string}
  */
-proto.tendermint.types.Header.prototype.getProposerAddress_asB64 = function () {
+proto.tendermint.types.Header.prototype.getProposerAddress_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getProposerAddress(),
-  ));
+      this.getProposerAddress()));
 };
+
 
 /**
  * optional bytes proposer_address = 14;
@@ -1343,16 +1419,18 @@ proto.tendermint.types.Header.prototype.getProposerAddress_asB64 = function () {
  * This is a type-conversion wrapper around `getProposerAddress()`
  * @return {!Uint8Array}
  */
-proto.tendermint.types.Header.prototype.getProposerAddress_asU8 = function () {
+proto.tendermint.types.Header.prototype.getProposerAddress_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getProposerAddress(),
-  ));
+      this.getProposerAddress()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.tendermint.types.Header.prototype.setProposerAddress = function (value) {
+proto.tendermint.types.Header.prototype.setProposerAddress = function(value) {
   jspb.Message.setProto3BytesField(this, 14, value);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -1364,7 +1442,7 @@ proto.tendermint.types.Header.prototype.setProposerAddress = function (value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.types.Data = function (opt_data) {
+proto.tendermint.types.Data = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.tendermint.types.Data.repeatedFields_, null);
 };
 goog.inherits(proto.tendermint.types.Data, jspb.Message);
@@ -1378,6 +1456,8 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.tendermint.types.Data.repeatedFields_ = [1];
 
+
+
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -1389,11 +1469,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.tendermint.types.Data.prototype.toObject = function (opt_includeInstance) {
-    return proto.tendermint.types.Data.toObject(opt_includeInstance, this);
-  };
+proto.tendermint.types.Data.prototype.toObject = function(opt_includeInstance) {
+  return proto.tendermint.types.Data.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -1402,29 +1483,30 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.tendermint.types.Data.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        txsList: msg.getTxsList_asB64(),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.tendermint.types.Data.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    txsList: msg.getTxsList_asB64()
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.types.Data}
  */
-proto.tendermint.types.Data.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.tendermint.types.Data();
+proto.tendermint.types.Data.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.tendermint.types.Data;
   return proto.tendermint.types.Data.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -1433,34 +1515,36 @@ proto.tendermint.types.Data.deserializeBinary = function (bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.types.Data}
  */
-proto.tendermint.types.Data.deserializeBinaryFromReader = function (msg, reader) {
+proto.tendermint.types.Data.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.addTxs(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.addTxs(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.types.Data.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.tendermint.types.Data.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.tendermint.types.Data.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -1469,35 +1553,37 @@ proto.tendermint.types.Data.prototype.serializeBinary = function () {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.types.Data.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.tendermint.types.Data.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getTxsList_asU8();
   if (f.length > 0) {
     writer.writeRepeatedBytes(
       1,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * repeated bytes txs = 1;
  * @return {!(Array<!Uint8Array>|Array<string>)}
  */
-proto.tendermint.types.Data.prototype.getTxsList = function () {
+proto.tendermint.types.Data.prototype.getTxsList = function() {
   return /** @type {!(Array<!Uint8Array>|Array<string>)} */ (jspb.Message.getRepeatedField(this, 1));
 };
+
 
 /**
  * repeated bytes txs = 1;
  * This is a type-conversion wrapper around `getTxsList()`
  * @return {!Array<string>}
  */
-proto.tendermint.types.Data.prototype.getTxsList_asB64 = function () {
+proto.tendermint.types.Data.prototype.getTxsList_asB64 = function() {
   return /** @type {!Array<string>} */ (jspb.Message.bytesListAsB64(
-    this.getTxsList(),
-  ));
+      this.getTxsList()));
 };
+
 
 /**
  * repeated bytes txs = 1;
@@ -1506,28 +1592,32 @@ proto.tendermint.types.Data.prototype.getTxsList_asB64 = function () {
  * This is a type-conversion wrapper around `getTxsList()`
  * @return {!Array<!Uint8Array>}
  */
-proto.tendermint.types.Data.prototype.getTxsList_asU8 = function () {
+proto.tendermint.types.Data.prototype.getTxsList_asU8 = function() {
   return /** @type {!Array<!Uint8Array>} */ (jspb.Message.bytesListAsU8(
-    this.getTxsList(),
-  ));
+      this.getTxsList()));
 };
 
+
 /** @param {!(Array<!Uint8Array>|Array<string>)} value */
-proto.tendermint.types.Data.prototype.setTxsList = function (value) {
+proto.tendermint.types.Data.prototype.setTxsList = function(value) {
   jspb.Message.setField(this, 1, value || []);
 };
+
 
 /**
  * @param {!(string|Uint8Array)} value
  * @param {number=} opt_index
  */
-proto.tendermint.types.Data.prototype.addTxs = function (value, opt_index) {
+proto.tendermint.types.Data.prototype.addTxs = function(value, opt_index) {
   jspb.Message.addToRepeatedField(this, 1, value, opt_index);
 };
 
-proto.tendermint.types.Data.prototype.clearTxsList = function () {
+
+proto.tendermint.types.Data.prototype.clearTxsList = function() {
   this.setTxsList([]);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -1539,13 +1629,14 @@ proto.tendermint.types.Data.prototype.clearTxsList = function () {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.types.Vote = function (opt_data) {
+proto.tendermint.types.Vote = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.tendermint.types.Vote, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.tendermint.types.Vote.displayName = 'proto.tendermint.types.Vote';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -1558,11 +1649,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.tendermint.types.Vote.prototype.toObject = function (opt_includeInstance) {
-    return proto.tendermint.types.Vote.toObject(opt_includeInstance, this);
-  };
+proto.tendermint.types.Vote.prototype.toObject = function(opt_includeInstance) {
+  return proto.tendermint.types.Vote.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -1571,36 +1663,37 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.tendermint.types.Vote.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        type: jspb.Message.getFieldWithDefault(msg, 1, 0),
-        height: jspb.Message.getFieldWithDefault(msg, 2, 0),
-        round: jspb.Message.getFieldWithDefault(msg, 3, 0),
-        blockId: (f = msg.getBlockId()) && proto.tendermint.types.BlockID.toObject(includeInstance, f),
-        timestamp: (f = msg.getTimestamp()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
-        validatorAddress: msg.getValidatorAddress_asB64(),
-        validatorIndex: jspb.Message.getFieldWithDefault(msg, 7, 0),
-        signature: msg.getSignature_asB64(),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.tendermint.types.Vote.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    type: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    height: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    round: jspb.Message.getFieldWithDefault(msg, 3, 0),
+    blockId: (f = msg.getBlockId()) && proto.tendermint.types.BlockID.toObject(includeInstance, f),
+    timestamp: (f = msg.getTimestamp()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
+    validatorAddress: msg.getValidatorAddress_asB64(),
+    validatorIndex: jspb.Message.getFieldWithDefault(msg, 7, 0),
+    signature: msg.getSignature_asB64()
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.types.Vote}
  */
-proto.tendermint.types.Vote.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.tendermint.types.Vote();
+proto.tendermint.types.Vote.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.tendermint.types.Vote;
   return proto.tendermint.types.Vote.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -1609,64 +1702,66 @@ proto.tendermint.types.Vote.deserializeBinary = function (bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.types.Vote}
  */
-proto.tendermint.types.Vote.deserializeBinaryFromReader = function (msg, reader) {
+proto.tendermint.types.Vote.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {!proto.tendermint.types.SignedMsgType} */ (reader.readEnum());
-        msg.setType(value);
-        break;
-      case 2:
-        var value = /** @type {number} */ (reader.readInt64());
-        msg.setHeight(value);
-        break;
-      case 3:
-        var value = /** @type {number} */ (reader.readInt32());
-        msg.setRound(value);
-        break;
-      case 4:
-        var value = new proto.tendermint.types.BlockID();
-        reader.readMessage(value, proto.tendermint.types.BlockID.deserializeBinaryFromReader);
-        msg.setBlockId(value);
-        break;
-      case 5:
-        var value = new google_protobuf_timestamp_pb.Timestamp();
-        reader.readMessage(value, google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
-        msg.setTimestamp(value);
-        break;
-      case 6:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setValidatorAddress(value);
-        break;
-      case 7:
-        var value = /** @type {number} */ (reader.readInt32());
-        msg.setValidatorIndex(value);
-        break;
-      case 8:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setSignature(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {!proto.tendermint.types.SignedMsgType} */ (reader.readEnum());
+      msg.setType(value);
+      break;
+    case 2:
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setHeight(value);
+      break;
+    case 3:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setRound(value);
+      break;
+    case 4:
+      var value = new proto.tendermint.types.BlockID;
+      reader.readMessage(value,proto.tendermint.types.BlockID.deserializeBinaryFromReader);
+      msg.setBlockId(value);
+      break;
+    case 5:
+      var value = new google_protobuf_timestamp_pb.Timestamp;
+      reader.readMessage(value,google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
+      msg.setTimestamp(value);
+      break;
+    case 6:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setValidatorAddress(value);
+      break;
+    case 7:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setValidatorIndex(value);
+      break;
+    case 8:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setSignature(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.types.Vote.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.tendermint.types.Vote.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.tendermint.types.Vote.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -1675,27 +1770,27 @@ proto.tendermint.types.Vote.prototype.serializeBinary = function () {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.types.Vote.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.tendermint.types.Vote.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getType();
   if (f !== 0.0) {
     writer.writeEnum(
       1,
-      f,
+      f
     );
   }
   f = message.getHeight();
   if (f !== 0) {
     writer.writeInt64(
       2,
-      f,
+      f
     );
   }
   f = message.getRound();
   if (f !== 0) {
     writer.writeInt32(
       3,
-      f,
+      f
     );
   }
   f = message.getBlockId();
@@ -1703,7 +1798,7 @@ proto.tendermint.types.Vote.serializeBinaryToWriter = function (message, writer)
     writer.writeMessage(
       4,
       f,
-      proto.tendermint.types.BlockID.serializeBinaryToWriter,
+      proto.tendermint.types.BlockID.serializeBinaryToWriter
     );
   }
   f = message.getTimestamp();
@@ -1711,141 +1806,157 @@ proto.tendermint.types.Vote.serializeBinaryToWriter = function (message, writer)
     writer.writeMessage(
       5,
       f,
-      google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter,
+      google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter
     );
   }
   f = message.getValidatorAddress_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       6,
-      f,
+      f
     );
   }
   f = message.getValidatorIndex();
   if (f !== 0) {
     writer.writeInt32(
       7,
-      f,
+      f
     );
   }
   f = message.getSignature_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       8,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * optional SignedMsgType type = 1;
  * @return {!proto.tendermint.types.SignedMsgType}
  */
-proto.tendermint.types.Vote.prototype.getType = function () {
+proto.tendermint.types.Vote.prototype.getType = function() {
   return /** @type {!proto.tendermint.types.SignedMsgType} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
+
 /** @param {!proto.tendermint.types.SignedMsgType} value */
-proto.tendermint.types.Vote.prototype.setType = function (value) {
+proto.tendermint.types.Vote.prototype.setType = function(value) {
   jspb.Message.setProto3EnumField(this, 1, value);
 };
+
 
 /**
  * optional int64 height = 2;
  * @return {number}
  */
-proto.tendermint.types.Vote.prototype.getHeight = function () {
+proto.tendermint.types.Vote.prototype.getHeight = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
+
 /** @param {number} value */
-proto.tendermint.types.Vote.prototype.setHeight = function (value) {
+proto.tendermint.types.Vote.prototype.setHeight = function(value) {
   jspb.Message.setProto3IntField(this, 2, value);
 };
+
 
 /**
  * optional int32 round = 3;
  * @return {number}
  */
-proto.tendermint.types.Vote.prototype.getRound = function () {
+proto.tendermint.types.Vote.prototype.getRound = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
+
 /** @param {number} value */
-proto.tendermint.types.Vote.prototype.setRound = function (value) {
+proto.tendermint.types.Vote.prototype.setRound = function(value) {
   jspb.Message.setProto3IntField(this, 3, value);
 };
+
 
 /**
  * optional BlockID block_id = 4;
  * @return {?proto.tendermint.types.BlockID}
  */
-proto.tendermint.types.Vote.prototype.getBlockId = function () {
+proto.tendermint.types.Vote.prototype.getBlockId = function() {
   return /** @type{?proto.tendermint.types.BlockID} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.types.BlockID, 4));
 };
 
+
 /** @param {?proto.tendermint.types.BlockID|undefined} value */
-proto.tendermint.types.Vote.prototype.setBlockId = function (value) {
+proto.tendermint.types.Vote.prototype.setBlockId = function(value) {
   jspb.Message.setWrapperField(this, 4, value);
 };
 
-proto.tendermint.types.Vote.prototype.clearBlockId = function () {
+
+proto.tendermint.types.Vote.prototype.clearBlockId = function() {
   this.setBlockId(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.types.Vote.prototype.hasBlockId = function () {
+proto.tendermint.types.Vote.prototype.hasBlockId = function() {
   return jspb.Message.getField(this, 4) != null;
 };
+
 
 /**
  * optional google.protobuf.Timestamp timestamp = 5;
  * @return {?proto.google.protobuf.Timestamp}
  */
-proto.tendermint.types.Vote.prototype.getTimestamp = function () {
+proto.tendermint.types.Vote.prototype.getTimestamp = function() {
   return /** @type{?proto.google.protobuf.Timestamp} */ (
     jspb.Message.getWrapperField(this, google_protobuf_timestamp_pb.Timestamp, 5));
 };
 
+
 /** @param {?proto.google.protobuf.Timestamp|undefined} value */
-proto.tendermint.types.Vote.prototype.setTimestamp = function (value) {
+proto.tendermint.types.Vote.prototype.setTimestamp = function(value) {
   jspb.Message.setWrapperField(this, 5, value);
 };
 
-proto.tendermint.types.Vote.prototype.clearTimestamp = function () {
+
+proto.tendermint.types.Vote.prototype.clearTimestamp = function() {
   this.setTimestamp(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.types.Vote.prototype.hasTimestamp = function () {
+proto.tendermint.types.Vote.prototype.hasTimestamp = function() {
   return jspb.Message.getField(this, 5) != null;
 };
+
 
 /**
  * optional bytes validator_address = 6;
  * @return {!(string|Uint8Array)}
  */
-proto.tendermint.types.Vote.prototype.getValidatorAddress = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 6, ''));
+proto.tendermint.types.Vote.prototype.getValidatorAddress = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
 };
+
 
 /**
  * optional bytes validator_address = 6;
  * This is a type-conversion wrapper around `getValidatorAddress()`
  * @return {string}
  */
-proto.tendermint.types.Vote.prototype.getValidatorAddress_asB64 = function () {
+proto.tendermint.types.Vote.prototype.getValidatorAddress_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getValidatorAddress(),
-  ));
+      this.getValidatorAddress()));
 };
+
 
 /**
  * optional bytes validator_address = 6;
@@ -1854,48 +1965,52 @@ proto.tendermint.types.Vote.prototype.getValidatorAddress_asB64 = function () {
  * This is a type-conversion wrapper around `getValidatorAddress()`
  * @return {!Uint8Array}
  */
-proto.tendermint.types.Vote.prototype.getValidatorAddress_asU8 = function () {
+proto.tendermint.types.Vote.prototype.getValidatorAddress_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getValidatorAddress(),
-  ));
+      this.getValidatorAddress()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.tendermint.types.Vote.prototype.setValidatorAddress = function (value) {
+proto.tendermint.types.Vote.prototype.setValidatorAddress = function(value) {
   jspb.Message.setProto3BytesField(this, 6, value);
 };
+
 
 /**
  * optional int32 validator_index = 7;
  * @return {number}
  */
-proto.tendermint.types.Vote.prototype.getValidatorIndex = function () {
+proto.tendermint.types.Vote.prototype.getValidatorIndex = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 7, 0));
 };
 
+
 /** @param {number} value */
-proto.tendermint.types.Vote.prototype.setValidatorIndex = function (value) {
+proto.tendermint.types.Vote.prototype.setValidatorIndex = function(value) {
   jspb.Message.setProto3IntField(this, 7, value);
 };
+
 
 /**
  * optional bytes signature = 8;
  * @return {!(string|Uint8Array)}
  */
-proto.tendermint.types.Vote.prototype.getSignature = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 8, ''));
+proto.tendermint.types.Vote.prototype.getSignature = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 8, ""));
 };
+
 
 /**
  * optional bytes signature = 8;
  * This is a type-conversion wrapper around `getSignature()`
  * @return {string}
  */
-proto.tendermint.types.Vote.prototype.getSignature_asB64 = function () {
+proto.tendermint.types.Vote.prototype.getSignature_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getSignature(),
-  ));
+      this.getSignature()));
 };
+
 
 /**
  * optional bytes signature = 8;
@@ -1904,16 +2019,18 @@ proto.tendermint.types.Vote.prototype.getSignature_asB64 = function () {
  * This is a type-conversion wrapper around `getSignature()`
  * @return {!Uint8Array}
  */
-proto.tendermint.types.Vote.prototype.getSignature_asU8 = function () {
+proto.tendermint.types.Vote.prototype.getSignature_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getSignature(),
-  ));
+      this.getSignature()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.tendermint.types.Vote.prototype.setSignature = function (value) {
+proto.tendermint.types.Vote.prototype.setSignature = function(value) {
   jspb.Message.setProto3BytesField(this, 8, value);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -1925,7 +2042,7 @@ proto.tendermint.types.Vote.prototype.setSignature = function (value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.types.Commit = function (opt_data) {
+proto.tendermint.types.Commit = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.tendermint.types.Commit.repeatedFields_, null);
 };
 goog.inherits(proto.tendermint.types.Commit, jspb.Message);
@@ -1939,6 +2056,8 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.tendermint.types.Commit.repeatedFields_ = [4];
 
+
+
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -1950,11 +2069,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.tendermint.types.Commit.prototype.toObject = function (opt_includeInstance) {
-    return proto.tendermint.types.Commit.toObject(opt_includeInstance, this);
-  };
+proto.tendermint.types.Commit.prototype.toObject = function(opt_includeInstance) {
+  return proto.tendermint.types.Commit.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -1963,33 +2083,34 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.tendermint.types.Commit.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        height: jspb.Message.getFieldWithDefault(msg, 1, 0),
-        round: jspb.Message.getFieldWithDefault(msg, 2, 0),
-        blockId: (f = msg.getBlockId()) && proto.tendermint.types.BlockID.toObject(includeInstance, f),
-        signaturesList: jspb.Message.toObjectList(msg.getSignaturesList(),
-          proto.tendermint.types.CommitSig.toObject, includeInstance),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.tendermint.types.Commit.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    height: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    round: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    blockId: (f = msg.getBlockId()) && proto.tendermint.types.BlockID.toObject(includeInstance, f),
+    signaturesList: jspb.Message.toObjectList(msg.getSignaturesList(),
+    proto.tendermint.types.CommitSig.toObject, includeInstance)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.types.Commit}
  */
-proto.tendermint.types.Commit.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.tendermint.types.Commit();
+proto.tendermint.types.Commit.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.tendermint.types.Commit;
   return proto.tendermint.types.Commit.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -1998,48 +2119,50 @@ proto.tendermint.types.Commit.deserializeBinary = function (bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.types.Commit}
  */
-proto.tendermint.types.Commit.deserializeBinaryFromReader = function (msg, reader) {
+proto.tendermint.types.Commit.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {number} */ (reader.readInt64());
-        msg.setHeight(value);
-        break;
-      case 2:
-        var value = /** @type {number} */ (reader.readInt32());
-        msg.setRound(value);
-        break;
-      case 3:
-        var value = new proto.tendermint.types.BlockID();
-        reader.readMessage(value, proto.tendermint.types.BlockID.deserializeBinaryFromReader);
-        msg.setBlockId(value);
-        break;
-      case 4:
-        var value = new proto.tendermint.types.CommitSig();
-        reader.readMessage(value, proto.tendermint.types.CommitSig.deserializeBinaryFromReader);
-        msg.addSignatures(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setHeight(value);
+      break;
+    case 2:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setRound(value);
+      break;
+    case 3:
+      var value = new proto.tendermint.types.BlockID;
+      reader.readMessage(value,proto.tendermint.types.BlockID.deserializeBinaryFromReader);
+      msg.setBlockId(value);
+      break;
+    case 4:
+      var value = new proto.tendermint.types.CommitSig;
+      reader.readMessage(value,proto.tendermint.types.CommitSig.deserializeBinaryFromReader);
+      msg.addSignatures(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.types.Commit.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.tendermint.types.Commit.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.tendermint.types.Commit.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -2048,20 +2171,20 @@ proto.tendermint.types.Commit.prototype.serializeBinary = function () {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.types.Commit.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.tendermint.types.Commit.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getHeight();
   if (f !== 0) {
     writer.writeInt64(
       1,
-      f,
+      f
     );
   }
   f = message.getRound();
   if (f !== 0) {
     writer.writeInt32(
       2,
-      f,
+      f
     );
   }
   f = message.getBlockId();
@@ -2069,7 +2192,7 @@ proto.tendermint.types.Commit.serializeBinaryToWriter = function (message, write
     writer.writeMessage(
       3,
       f,
-      proto.tendermint.types.BlockID.serializeBinaryToWriter,
+      proto.tendermint.types.BlockID.serializeBinaryToWriter
     );
   }
   f = message.getSignaturesList();
@@ -2077,89 +2200,103 @@ proto.tendermint.types.Commit.serializeBinaryToWriter = function (message, write
     writer.writeRepeatedMessage(
       4,
       f,
-      proto.tendermint.types.CommitSig.serializeBinaryToWriter,
+      proto.tendermint.types.CommitSig.serializeBinaryToWriter
     );
   }
 };
+
 
 /**
  * optional int64 height = 1;
  * @return {number}
  */
-proto.tendermint.types.Commit.prototype.getHeight = function () {
+proto.tendermint.types.Commit.prototype.getHeight = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
+
 /** @param {number} value */
-proto.tendermint.types.Commit.prototype.setHeight = function (value) {
+proto.tendermint.types.Commit.prototype.setHeight = function(value) {
   jspb.Message.setProto3IntField(this, 1, value);
 };
+
 
 /**
  * optional int32 round = 2;
  * @return {number}
  */
-proto.tendermint.types.Commit.prototype.getRound = function () {
+proto.tendermint.types.Commit.prototype.getRound = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
+
 /** @param {number} value */
-proto.tendermint.types.Commit.prototype.setRound = function (value) {
+proto.tendermint.types.Commit.prototype.setRound = function(value) {
   jspb.Message.setProto3IntField(this, 2, value);
 };
+
 
 /**
  * optional BlockID block_id = 3;
  * @return {?proto.tendermint.types.BlockID}
  */
-proto.tendermint.types.Commit.prototype.getBlockId = function () {
+proto.tendermint.types.Commit.prototype.getBlockId = function() {
   return /** @type{?proto.tendermint.types.BlockID} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.types.BlockID, 3));
 };
 
+
 /** @param {?proto.tendermint.types.BlockID|undefined} value */
-proto.tendermint.types.Commit.prototype.setBlockId = function (value) {
+proto.tendermint.types.Commit.prototype.setBlockId = function(value) {
   jspb.Message.setWrapperField(this, 3, value);
 };
 
-proto.tendermint.types.Commit.prototype.clearBlockId = function () {
+
+proto.tendermint.types.Commit.prototype.clearBlockId = function() {
   this.setBlockId(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.types.Commit.prototype.hasBlockId = function () {
+proto.tendermint.types.Commit.prototype.hasBlockId = function() {
   return jspb.Message.getField(this, 3) != null;
 };
+
 
 /**
  * repeated CommitSig signatures = 4;
  * @return {!Array<!proto.tendermint.types.CommitSig>}
  */
-proto.tendermint.types.Commit.prototype.getSignaturesList = function () {
+proto.tendermint.types.Commit.prototype.getSignaturesList = function() {
   return /** @type{!Array<!proto.tendermint.types.CommitSig>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.tendermint.types.CommitSig, 4));
 };
 
+
 /** @param {!Array<!proto.tendermint.types.CommitSig>} value */
-proto.tendermint.types.Commit.prototype.setSignaturesList = function (value) {
+proto.tendermint.types.Commit.prototype.setSignaturesList = function(value) {
   jspb.Message.setRepeatedWrapperField(this, 4, value);
 };
+
 
 /**
  * @param {!proto.tendermint.types.CommitSig=} opt_value
  * @param {number=} opt_index
  * @return {!proto.tendermint.types.CommitSig}
  */
-proto.tendermint.types.Commit.prototype.addSignatures = function (opt_value, opt_index) {
+proto.tendermint.types.Commit.prototype.addSignatures = function(opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 4, opt_value, proto.tendermint.types.CommitSig, opt_index);
 };
 
-proto.tendermint.types.Commit.prototype.clearSignaturesList = function () {
+
+proto.tendermint.types.Commit.prototype.clearSignaturesList = function() {
   this.setSignaturesList([]);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -2171,13 +2308,14 @@ proto.tendermint.types.Commit.prototype.clearSignaturesList = function () {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.types.CommitSig = function (opt_data) {
+proto.tendermint.types.CommitSig = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.tendermint.types.CommitSig, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.tendermint.types.CommitSig.displayName = 'proto.tendermint.types.CommitSig';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -2190,11 +2328,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.tendermint.types.CommitSig.prototype.toObject = function (opt_includeInstance) {
-    return proto.tendermint.types.CommitSig.toObject(opt_includeInstance, this);
-  };
+proto.tendermint.types.CommitSig.prototype.toObject = function(opt_includeInstance) {
+  return proto.tendermint.types.CommitSig.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -2203,32 +2342,33 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.tendermint.types.CommitSig.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        blockIdFlag: jspb.Message.getFieldWithDefault(msg, 1, 0),
-        validatorAddress: msg.getValidatorAddress_asB64(),
-        timestamp: (f = msg.getTimestamp()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
-        signature: msg.getSignature_asB64(),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.tendermint.types.CommitSig.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    blockIdFlag: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    validatorAddress: msg.getValidatorAddress_asB64(),
+    timestamp: (f = msg.getTimestamp()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
+    signature: msg.getSignature_asB64()
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.types.CommitSig}
  */
-proto.tendermint.types.CommitSig.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.tendermint.types.CommitSig();
+proto.tendermint.types.CommitSig.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.tendermint.types.CommitSig;
   return proto.tendermint.types.CommitSig.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -2237,47 +2377,49 @@ proto.tendermint.types.CommitSig.deserializeBinary = function (bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.types.CommitSig}
  */
-proto.tendermint.types.CommitSig.deserializeBinaryFromReader = function (msg, reader) {
+proto.tendermint.types.CommitSig.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {!proto.tendermint.types.BlockIDFlag} */ (reader.readEnum());
-        msg.setBlockIdFlag(value);
-        break;
-      case 2:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setValidatorAddress(value);
-        break;
-      case 3:
-        var value = new google_protobuf_timestamp_pb.Timestamp();
-        reader.readMessage(value, google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
-        msg.setTimestamp(value);
-        break;
-      case 4:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setSignature(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {!proto.tendermint.types.BlockIDFlag} */ (reader.readEnum());
+      msg.setBlockIdFlag(value);
+      break;
+    case 2:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setValidatorAddress(value);
+      break;
+    case 3:
+      var value = new google_protobuf_timestamp_pb.Timestamp;
+      reader.readMessage(value,google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
+      msg.setTimestamp(value);
+      break;
+    case 4:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setSignature(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.types.CommitSig.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.tendermint.types.CommitSig.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.tendermint.types.CommitSig.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -2286,20 +2428,20 @@ proto.tendermint.types.CommitSig.prototype.serializeBinary = function () {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.types.CommitSig.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.tendermint.types.CommitSig.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getBlockIdFlag();
   if (f !== 0.0) {
     writer.writeEnum(
       1,
-      f,
+      f
     );
   }
   f = message.getValidatorAddress_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       2,
-      f,
+      f
     );
   }
   f = message.getTimestamp();
@@ -2307,49 +2449,53 @@ proto.tendermint.types.CommitSig.serializeBinaryToWriter = function (message, wr
     writer.writeMessage(
       3,
       f,
-      google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter,
+      google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter
     );
   }
   f = message.getSignature_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       4,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * optional BlockIDFlag block_id_flag = 1;
  * @return {!proto.tendermint.types.BlockIDFlag}
  */
-proto.tendermint.types.CommitSig.prototype.getBlockIdFlag = function () {
+proto.tendermint.types.CommitSig.prototype.getBlockIdFlag = function() {
   return /** @type {!proto.tendermint.types.BlockIDFlag} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
+
 /** @param {!proto.tendermint.types.BlockIDFlag} value */
-proto.tendermint.types.CommitSig.prototype.setBlockIdFlag = function (value) {
+proto.tendermint.types.CommitSig.prototype.setBlockIdFlag = function(value) {
   jspb.Message.setProto3EnumField(this, 1, value);
 };
+
 
 /**
  * optional bytes validator_address = 2;
  * @return {!(string|Uint8Array)}
  */
-proto.tendermint.types.CommitSig.prototype.getValidatorAddress = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
+proto.tendermint.types.CommitSig.prototype.getValidatorAddress = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
+
 
 /**
  * optional bytes validator_address = 2;
  * This is a type-conversion wrapper around `getValidatorAddress()`
  * @return {string}
  */
-proto.tendermint.types.CommitSig.prototype.getValidatorAddress_asB64 = function () {
+proto.tendermint.types.CommitSig.prototype.getValidatorAddress_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getValidatorAddress(),
-  ));
+      this.getValidatorAddress()));
 };
+
 
 /**
  * optional bytes validator_address = 2;
@@ -2358,61 +2504,67 @@ proto.tendermint.types.CommitSig.prototype.getValidatorAddress_asB64 = function 
  * This is a type-conversion wrapper around `getValidatorAddress()`
  * @return {!Uint8Array}
  */
-proto.tendermint.types.CommitSig.prototype.getValidatorAddress_asU8 = function () {
+proto.tendermint.types.CommitSig.prototype.getValidatorAddress_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getValidatorAddress(),
-  ));
+      this.getValidatorAddress()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.tendermint.types.CommitSig.prototype.setValidatorAddress = function (value) {
+proto.tendermint.types.CommitSig.prototype.setValidatorAddress = function(value) {
   jspb.Message.setProto3BytesField(this, 2, value);
 };
+
 
 /**
  * optional google.protobuf.Timestamp timestamp = 3;
  * @return {?proto.google.protobuf.Timestamp}
  */
-proto.tendermint.types.CommitSig.prototype.getTimestamp = function () {
+proto.tendermint.types.CommitSig.prototype.getTimestamp = function() {
   return /** @type{?proto.google.protobuf.Timestamp} */ (
     jspb.Message.getWrapperField(this, google_protobuf_timestamp_pb.Timestamp, 3));
 };
 
+
 /** @param {?proto.google.protobuf.Timestamp|undefined} value */
-proto.tendermint.types.CommitSig.prototype.setTimestamp = function (value) {
+proto.tendermint.types.CommitSig.prototype.setTimestamp = function(value) {
   jspb.Message.setWrapperField(this, 3, value);
 };
 
-proto.tendermint.types.CommitSig.prototype.clearTimestamp = function () {
+
+proto.tendermint.types.CommitSig.prototype.clearTimestamp = function() {
   this.setTimestamp(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.types.CommitSig.prototype.hasTimestamp = function () {
+proto.tendermint.types.CommitSig.prototype.hasTimestamp = function() {
   return jspb.Message.getField(this, 3) != null;
 };
+
 
 /**
  * optional bytes signature = 4;
  * @return {!(string|Uint8Array)}
  */
-proto.tendermint.types.CommitSig.prototype.getSignature = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 4, ''));
+proto.tendermint.types.CommitSig.prototype.getSignature = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
 };
+
 
 /**
  * optional bytes signature = 4;
  * This is a type-conversion wrapper around `getSignature()`
  * @return {string}
  */
-proto.tendermint.types.CommitSig.prototype.getSignature_asB64 = function () {
+proto.tendermint.types.CommitSig.prototype.getSignature_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getSignature(),
-  ));
+      this.getSignature()));
 };
+
 
 /**
  * optional bytes signature = 4;
@@ -2421,16 +2573,18 @@ proto.tendermint.types.CommitSig.prototype.getSignature_asB64 = function () {
  * This is a type-conversion wrapper around `getSignature()`
  * @return {!Uint8Array}
  */
-proto.tendermint.types.CommitSig.prototype.getSignature_asU8 = function () {
+proto.tendermint.types.CommitSig.prototype.getSignature_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getSignature(),
-  ));
+      this.getSignature()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.tendermint.types.CommitSig.prototype.setSignature = function (value) {
+proto.tendermint.types.CommitSig.prototype.setSignature = function(value) {
   jspb.Message.setProto3BytesField(this, 4, value);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -2442,13 +2596,14 @@ proto.tendermint.types.CommitSig.prototype.setSignature = function (value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.types.Proposal = function (opt_data) {
+proto.tendermint.types.Proposal = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.tendermint.types.Proposal, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.tendermint.types.Proposal.displayName = 'proto.tendermint.types.Proposal';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -2461,11 +2616,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.tendermint.types.Proposal.prototype.toObject = function (opt_includeInstance) {
-    return proto.tendermint.types.Proposal.toObject(opt_includeInstance, this);
-  };
+proto.tendermint.types.Proposal.prototype.toObject = function(opt_includeInstance) {
+  return proto.tendermint.types.Proposal.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -2474,35 +2630,36 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.tendermint.types.Proposal.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        type: jspb.Message.getFieldWithDefault(msg, 1, 0),
-        height: jspb.Message.getFieldWithDefault(msg, 2, 0),
-        round: jspb.Message.getFieldWithDefault(msg, 3, 0),
-        polRound: jspb.Message.getFieldWithDefault(msg, 4, 0),
-        blockId: (f = msg.getBlockId()) && proto.tendermint.types.BlockID.toObject(includeInstance, f),
-        timestamp: (f = msg.getTimestamp()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
-        signature: msg.getSignature_asB64(),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.tendermint.types.Proposal.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    type: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    height: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    round: jspb.Message.getFieldWithDefault(msg, 3, 0),
+    polRound: jspb.Message.getFieldWithDefault(msg, 4, 0),
+    blockId: (f = msg.getBlockId()) && proto.tendermint.types.BlockID.toObject(includeInstance, f),
+    timestamp: (f = msg.getTimestamp()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
+    signature: msg.getSignature_asB64()
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.types.Proposal}
  */
-proto.tendermint.types.Proposal.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.tendermint.types.Proposal();
+proto.tendermint.types.Proposal.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.tendermint.types.Proposal;
   return proto.tendermint.types.Proposal.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -2511,60 +2668,62 @@ proto.tendermint.types.Proposal.deserializeBinary = function (bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.types.Proposal}
  */
-proto.tendermint.types.Proposal.deserializeBinaryFromReader = function (msg, reader) {
+proto.tendermint.types.Proposal.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {!proto.tendermint.types.SignedMsgType} */ (reader.readEnum());
-        msg.setType(value);
-        break;
-      case 2:
-        var value = /** @type {number} */ (reader.readInt64());
-        msg.setHeight(value);
-        break;
-      case 3:
-        var value = /** @type {number} */ (reader.readInt32());
-        msg.setRound(value);
-        break;
-      case 4:
-        var value = /** @type {number} */ (reader.readInt32());
-        msg.setPolRound(value);
-        break;
-      case 5:
-        var value = new proto.tendermint.types.BlockID();
-        reader.readMessage(value, proto.tendermint.types.BlockID.deserializeBinaryFromReader);
-        msg.setBlockId(value);
-        break;
-      case 6:
-        var value = new google_protobuf_timestamp_pb.Timestamp();
-        reader.readMessage(value, google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
-        msg.setTimestamp(value);
-        break;
-      case 7:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setSignature(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {!proto.tendermint.types.SignedMsgType} */ (reader.readEnum());
+      msg.setType(value);
+      break;
+    case 2:
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setHeight(value);
+      break;
+    case 3:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setRound(value);
+      break;
+    case 4:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setPolRound(value);
+      break;
+    case 5:
+      var value = new proto.tendermint.types.BlockID;
+      reader.readMessage(value,proto.tendermint.types.BlockID.deserializeBinaryFromReader);
+      msg.setBlockId(value);
+      break;
+    case 6:
+      var value = new google_protobuf_timestamp_pb.Timestamp;
+      reader.readMessage(value,google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
+      msg.setTimestamp(value);
+      break;
+    case 7:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setSignature(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.types.Proposal.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.tendermint.types.Proposal.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.tendermint.types.Proposal.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -2573,34 +2732,34 @@ proto.tendermint.types.Proposal.prototype.serializeBinary = function () {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.types.Proposal.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.tendermint.types.Proposal.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getType();
   if (f !== 0.0) {
     writer.writeEnum(
       1,
-      f,
+      f
     );
   }
   f = message.getHeight();
   if (f !== 0) {
     writer.writeInt64(
       2,
-      f,
+      f
     );
   }
   f = message.getRound();
   if (f !== 0) {
     writer.writeInt32(
       3,
-      f,
+      f
     );
   }
   f = message.getPolRound();
   if (f !== 0) {
     writer.writeInt32(
       4,
-      f,
+      f
     );
   }
   f = message.getBlockId();
@@ -2608,7 +2767,7 @@ proto.tendermint.types.Proposal.serializeBinaryToWriter = function (message, wri
     writer.writeMessage(
       5,
       f,
-      proto.tendermint.types.BlockID.serializeBinaryToWriter,
+      proto.tendermint.types.BlockID.serializeBinaryToWriter
     );
   }
   f = message.getTimestamp();
@@ -2616,140 +2775,158 @@ proto.tendermint.types.Proposal.serializeBinaryToWriter = function (message, wri
     writer.writeMessage(
       6,
       f,
-      google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter,
+      google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter
     );
   }
   f = message.getSignature_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       7,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * optional SignedMsgType type = 1;
  * @return {!proto.tendermint.types.SignedMsgType}
  */
-proto.tendermint.types.Proposal.prototype.getType = function () {
+proto.tendermint.types.Proposal.prototype.getType = function() {
   return /** @type {!proto.tendermint.types.SignedMsgType} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
+
 /** @param {!proto.tendermint.types.SignedMsgType} value */
-proto.tendermint.types.Proposal.prototype.setType = function (value) {
+proto.tendermint.types.Proposal.prototype.setType = function(value) {
   jspb.Message.setProto3EnumField(this, 1, value);
 };
+
 
 /**
  * optional int64 height = 2;
  * @return {number}
  */
-proto.tendermint.types.Proposal.prototype.getHeight = function () {
+proto.tendermint.types.Proposal.prototype.getHeight = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
+
 /** @param {number} value */
-proto.tendermint.types.Proposal.prototype.setHeight = function (value) {
+proto.tendermint.types.Proposal.prototype.setHeight = function(value) {
   jspb.Message.setProto3IntField(this, 2, value);
 };
+
 
 /**
  * optional int32 round = 3;
  * @return {number}
  */
-proto.tendermint.types.Proposal.prototype.getRound = function () {
+proto.tendermint.types.Proposal.prototype.getRound = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
+
 /** @param {number} value */
-proto.tendermint.types.Proposal.prototype.setRound = function (value) {
+proto.tendermint.types.Proposal.prototype.setRound = function(value) {
   jspb.Message.setProto3IntField(this, 3, value);
 };
+
 
 /**
  * optional int32 pol_round = 4;
  * @return {number}
  */
-proto.tendermint.types.Proposal.prototype.getPolRound = function () {
+proto.tendermint.types.Proposal.prototype.getPolRound = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
 };
 
+
 /** @param {number} value */
-proto.tendermint.types.Proposal.prototype.setPolRound = function (value) {
+proto.tendermint.types.Proposal.prototype.setPolRound = function(value) {
   jspb.Message.setProto3IntField(this, 4, value);
 };
+
 
 /**
  * optional BlockID block_id = 5;
  * @return {?proto.tendermint.types.BlockID}
  */
-proto.tendermint.types.Proposal.prototype.getBlockId = function () {
+proto.tendermint.types.Proposal.prototype.getBlockId = function() {
   return /** @type{?proto.tendermint.types.BlockID} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.types.BlockID, 5));
 };
 
+
 /** @param {?proto.tendermint.types.BlockID|undefined} value */
-proto.tendermint.types.Proposal.prototype.setBlockId = function (value) {
+proto.tendermint.types.Proposal.prototype.setBlockId = function(value) {
   jspb.Message.setWrapperField(this, 5, value);
 };
 
-proto.tendermint.types.Proposal.prototype.clearBlockId = function () {
+
+proto.tendermint.types.Proposal.prototype.clearBlockId = function() {
   this.setBlockId(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.types.Proposal.prototype.hasBlockId = function () {
+proto.tendermint.types.Proposal.prototype.hasBlockId = function() {
   return jspb.Message.getField(this, 5) != null;
 };
+
 
 /**
  * optional google.protobuf.Timestamp timestamp = 6;
  * @return {?proto.google.protobuf.Timestamp}
  */
-proto.tendermint.types.Proposal.prototype.getTimestamp = function () {
+proto.tendermint.types.Proposal.prototype.getTimestamp = function() {
   return /** @type{?proto.google.protobuf.Timestamp} */ (
     jspb.Message.getWrapperField(this, google_protobuf_timestamp_pb.Timestamp, 6));
 };
 
+
 /** @param {?proto.google.protobuf.Timestamp|undefined} value */
-proto.tendermint.types.Proposal.prototype.setTimestamp = function (value) {
+proto.tendermint.types.Proposal.prototype.setTimestamp = function(value) {
   jspb.Message.setWrapperField(this, 6, value);
 };
 
-proto.tendermint.types.Proposal.prototype.clearTimestamp = function () {
+
+proto.tendermint.types.Proposal.prototype.clearTimestamp = function() {
   this.setTimestamp(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.types.Proposal.prototype.hasTimestamp = function () {
+proto.tendermint.types.Proposal.prototype.hasTimestamp = function() {
   return jspb.Message.getField(this, 6) != null;
 };
+
 
 /**
  * optional bytes signature = 7;
  * @return {!(string|Uint8Array)}
  */
-proto.tendermint.types.Proposal.prototype.getSignature = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 7, ''));
+proto.tendermint.types.Proposal.prototype.getSignature = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 7, ""));
 };
+
 
 /**
  * optional bytes signature = 7;
  * This is a type-conversion wrapper around `getSignature()`
  * @return {string}
  */
-proto.tendermint.types.Proposal.prototype.getSignature_asB64 = function () {
+proto.tendermint.types.Proposal.prototype.getSignature_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getSignature(),
-  ));
+      this.getSignature()));
 };
+
 
 /**
  * optional bytes signature = 7;
@@ -2758,16 +2935,18 @@ proto.tendermint.types.Proposal.prototype.getSignature_asB64 = function () {
  * This is a type-conversion wrapper around `getSignature()`
  * @return {!Uint8Array}
  */
-proto.tendermint.types.Proposal.prototype.getSignature_asU8 = function () {
+proto.tendermint.types.Proposal.prototype.getSignature_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getSignature(),
-  ));
+      this.getSignature()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.tendermint.types.Proposal.prototype.setSignature = function (value) {
+proto.tendermint.types.Proposal.prototype.setSignature = function(value) {
   jspb.Message.setProto3BytesField(this, 7, value);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -2779,13 +2958,14 @@ proto.tendermint.types.Proposal.prototype.setSignature = function (value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.types.SignedHeader = function (opt_data) {
+proto.tendermint.types.SignedHeader = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.tendermint.types.SignedHeader, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.tendermint.types.SignedHeader.displayName = 'proto.tendermint.types.SignedHeader';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -2798,11 +2978,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.tendermint.types.SignedHeader.prototype.toObject = function (opt_includeInstance) {
-    return proto.tendermint.types.SignedHeader.toObject(opt_includeInstance, this);
-  };
+proto.tendermint.types.SignedHeader.prototype.toObject = function(opt_includeInstance) {
+  return proto.tendermint.types.SignedHeader.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -2811,30 +2992,31 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.tendermint.types.SignedHeader.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        header: (f = msg.getHeader()) && proto.tendermint.types.Header.toObject(includeInstance, f),
-        commit: (f = msg.getCommit()) && proto.tendermint.types.Commit.toObject(includeInstance, f),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.tendermint.types.SignedHeader.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    header: (f = msg.getHeader()) && proto.tendermint.types.Header.toObject(includeInstance, f),
+    commit: (f = msg.getCommit()) && proto.tendermint.types.Commit.toObject(includeInstance, f)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.types.SignedHeader}
  */
-proto.tendermint.types.SignedHeader.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.tendermint.types.SignedHeader();
+proto.tendermint.types.SignedHeader.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.tendermint.types.SignedHeader;
   return proto.tendermint.types.SignedHeader.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -2843,40 +3025,42 @@ proto.tendermint.types.SignedHeader.deserializeBinary = function (bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.types.SignedHeader}
  */
-proto.tendermint.types.SignedHeader.deserializeBinaryFromReader = function (msg, reader) {
+proto.tendermint.types.SignedHeader.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = new proto.tendermint.types.Header();
-        reader.readMessage(value, proto.tendermint.types.Header.deserializeBinaryFromReader);
-        msg.setHeader(value);
-        break;
-      case 2:
-        var value = new proto.tendermint.types.Commit();
-        reader.readMessage(value, proto.tendermint.types.Commit.deserializeBinaryFromReader);
-        msg.setCommit(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = new proto.tendermint.types.Header;
+      reader.readMessage(value,proto.tendermint.types.Header.deserializeBinaryFromReader);
+      msg.setHeader(value);
+      break;
+    case 2:
+      var value = new proto.tendermint.types.Commit;
+      reader.readMessage(value,proto.tendermint.types.Commit.deserializeBinaryFromReader);
+      msg.setCommit(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.types.SignedHeader.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.tendermint.types.SignedHeader.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.tendermint.types.SignedHeader.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -2885,14 +3069,14 @@ proto.tendermint.types.SignedHeader.prototype.serializeBinary = function () {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.types.SignedHeader.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.tendermint.types.SignedHeader.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getHeader();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.tendermint.types.Header.serializeBinaryToWriter,
+      proto.tendermint.types.Header.serializeBinaryToWriter
     );
   }
   f = message.getCommit();
@@ -2900,62 +3084,72 @@ proto.tendermint.types.SignedHeader.serializeBinaryToWriter = function (message,
     writer.writeMessage(
       2,
       f,
-      proto.tendermint.types.Commit.serializeBinaryToWriter,
+      proto.tendermint.types.Commit.serializeBinaryToWriter
     );
   }
 };
+
 
 /**
  * optional Header header = 1;
  * @return {?proto.tendermint.types.Header}
  */
-proto.tendermint.types.SignedHeader.prototype.getHeader = function () {
+proto.tendermint.types.SignedHeader.prototype.getHeader = function() {
   return /** @type{?proto.tendermint.types.Header} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.types.Header, 1));
 };
 
+
 /** @param {?proto.tendermint.types.Header|undefined} value */
-proto.tendermint.types.SignedHeader.prototype.setHeader = function (value) {
+proto.tendermint.types.SignedHeader.prototype.setHeader = function(value) {
   jspb.Message.setWrapperField(this, 1, value);
 };
 
-proto.tendermint.types.SignedHeader.prototype.clearHeader = function () {
+
+proto.tendermint.types.SignedHeader.prototype.clearHeader = function() {
   this.setHeader(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.types.SignedHeader.prototype.hasHeader = function () {
+proto.tendermint.types.SignedHeader.prototype.hasHeader = function() {
   return jspb.Message.getField(this, 1) != null;
 };
+
 
 /**
  * optional Commit commit = 2;
  * @return {?proto.tendermint.types.Commit}
  */
-proto.tendermint.types.SignedHeader.prototype.getCommit = function () {
+proto.tendermint.types.SignedHeader.prototype.getCommit = function() {
   return /** @type{?proto.tendermint.types.Commit} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.types.Commit, 2));
 };
 
+
 /** @param {?proto.tendermint.types.Commit|undefined} value */
-proto.tendermint.types.SignedHeader.prototype.setCommit = function (value) {
+proto.tendermint.types.SignedHeader.prototype.setCommit = function(value) {
   jspb.Message.setWrapperField(this, 2, value);
 };
 
-proto.tendermint.types.SignedHeader.prototype.clearCommit = function () {
+
+proto.tendermint.types.SignedHeader.prototype.clearCommit = function() {
   this.setCommit(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.types.SignedHeader.prototype.hasCommit = function () {
+proto.tendermint.types.SignedHeader.prototype.hasCommit = function() {
   return jspb.Message.getField(this, 2) != null;
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -2967,13 +3161,14 @@ proto.tendermint.types.SignedHeader.prototype.hasCommit = function () {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.types.LightBlock = function (opt_data) {
+proto.tendermint.types.LightBlock = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.tendermint.types.LightBlock, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.tendermint.types.LightBlock.displayName = 'proto.tendermint.types.LightBlock';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -2986,11 +3181,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.tendermint.types.LightBlock.prototype.toObject = function (opt_includeInstance) {
-    return proto.tendermint.types.LightBlock.toObject(opt_includeInstance, this);
-  };
+proto.tendermint.types.LightBlock.prototype.toObject = function(opt_includeInstance) {
+  return proto.tendermint.types.LightBlock.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -2999,30 +3195,31 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.tendermint.types.LightBlock.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        signedHeader: (f = msg.getSignedHeader()) && proto.tendermint.types.SignedHeader.toObject(includeInstance, f),
-        validatorSet: (f = msg.getValidatorSet()) && tendermint_types_validator_pb.ValidatorSet.toObject(includeInstance, f),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.tendermint.types.LightBlock.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    signedHeader: (f = msg.getSignedHeader()) && proto.tendermint.types.SignedHeader.toObject(includeInstance, f),
+    validatorSet: (f = msg.getValidatorSet()) && tendermint_types_validator_pb.ValidatorSet.toObject(includeInstance, f)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.types.LightBlock}
  */
-proto.tendermint.types.LightBlock.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.tendermint.types.LightBlock();
+proto.tendermint.types.LightBlock.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.tendermint.types.LightBlock;
   return proto.tendermint.types.LightBlock.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -3031,40 +3228,42 @@ proto.tendermint.types.LightBlock.deserializeBinary = function (bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.types.LightBlock}
  */
-proto.tendermint.types.LightBlock.deserializeBinaryFromReader = function (msg, reader) {
+proto.tendermint.types.LightBlock.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = new proto.tendermint.types.SignedHeader();
-        reader.readMessage(value, proto.tendermint.types.SignedHeader.deserializeBinaryFromReader);
-        msg.setSignedHeader(value);
-        break;
-      case 2:
-        var value = new tendermint_types_validator_pb.ValidatorSet();
-        reader.readMessage(value, tendermint_types_validator_pb.ValidatorSet.deserializeBinaryFromReader);
-        msg.setValidatorSet(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = new proto.tendermint.types.SignedHeader;
+      reader.readMessage(value,proto.tendermint.types.SignedHeader.deserializeBinaryFromReader);
+      msg.setSignedHeader(value);
+      break;
+    case 2:
+      var value = new tendermint_types_validator_pb.ValidatorSet;
+      reader.readMessage(value,tendermint_types_validator_pb.ValidatorSet.deserializeBinaryFromReader);
+      msg.setValidatorSet(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.types.LightBlock.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.tendermint.types.LightBlock.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.tendermint.types.LightBlock.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -3073,14 +3272,14 @@ proto.tendermint.types.LightBlock.prototype.serializeBinary = function () {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.types.LightBlock.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.tendermint.types.LightBlock.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getSignedHeader();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.tendermint.types.SignedHeader.serializeBinaryToWriter,
+      proto.tendermint.types.SignedHeader.serializeBinaryToWriter
     );
   }
   f = message.getValidatorSet();
@@ -3088,62 +3287,72 @@ proto.tendermint.types.LightBlock.serializeBinaryToWriter = function (message, w
     writer.writeMessage(
       2,
       f,
-      tendermint_types_validator_pb.ValidatorSet.serializeBinaryToWriter,
+      tendermint_types_validator_pb.ValidatorSet.serializeBinaryToWriter
     );
   }
 };
+
 
 /**
  * optional SignedHeader signed_header = 1;
  * @return {?proto.tendermint.types.SignedHeader}
  */
-proto.tendermint.types.LightBlock.prototype.getSignedHeader = function () {
+proto.tendermint.types.LightBlock.prototype.getSignedHeader = function() {
   return /** @type{?proto.tendermint.types.SignedHeader} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.types.SignedHeader, 1));
 };
 
+
 /** @param {?proto.tendermint.types.SignedHeader|undefined} value */
-proto.tendermint.types.LightBlock.prototype.setSignedHeader = function (value) {
+proto.tendermint.types.LightBlock.prototype.setSignedHeader = function(value) {
   jspb.Message.setWrapperField(this, 1, value);
 };
 
-proto.tendermint.types.LightBlock.prototype.clearSignedHeader = function () {
+
+proto.tendermint.types.LightBlock.prototype.clearSignedHeader = function() {
   this.setSignedHeader(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.types.LightBlock.prototype.hasSignedHeader = function () {
+proto.tendermint.types.LightBlock.prototype.hasSignedHeader = function() {
   return jspb.Message.getField(this, 1) != null;
 };
+
 
 /**
  * optional ValidatorSet validator_set = 2;
  * @return {?proto.tendermint.types.ValidatorSet}
  */
-proto.tendermint.types.LightBlock.prototype.getValidatorSet = function () {
+proto.tendermint.types.LightBlock.prototype.getValidatorSet = function() {
   return /** @type{?proto.tendermint.types.ValidatorSet} */ (
     jspb.Message.getWrapperField(this, tendermint_types_validator_pb.ValidatorSet, 2));
 };
 
+
 /** @param {?proto.tendermint.types.ValidatorSet|undefined} value */
-proto.tendermint.types.LightBlock.prototype.setValidatorSet = function (value) {
+proto.tendermint.types.LightBlock.prototype.setValidatorSet = function(value) {
   jspb.Message.setWrapperField(this, 2, value);
 };
 
-proto.tendermint.types.LightBlock.prototype.clearValidatorSet = function () {
+
+proto.tendermint.types.LightBlock.prototype.clearValidatorSet = function() {
   this.setValidatorSet(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.types.LightBlock.prototype.hasValidatorSet = function () {
+proto.tendermint.types.LightBlock.prototype.hasValidatorSet = function() {
   return jspb.Message.getField(this, 2) != null;
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -3155,13 +3364,14 @@ proto.tendermint.types.LightBlock.prototype.hasValidatorSet = function () {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.types.BlockMeta = function (opt_data) {
+proto.tendermint.types.BlockMeta = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.tendermint.types.BlockMeta, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.tendermint.types.BlockMeta.displayName = 'proto.tendermint.types.BlockMeta';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -3174,11 +3384,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.tendermint.types.BlockMeta.prototype.toObject = function (opt_includeInstance) {
-    return proto.tendermint.types.BlockMeta.toObject(opt_includeInstance, this);
-  };
+proto.tendermint.types.BlockMeta.prototype.toObject = function(opt_includeInstance) {
+  return proto.tendermint.types.BlockMeta.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -3187,32 +3398,33 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.tendermint.types.BlockMeta.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        blockId: (f = msg.getBlockId()) && proto.tendermint.types.BlockID.toObject(includeInstance, f),
-        blockSize: jspb.Message.getFieldWithDefault(msg, 2, 0),
-        header: (f = msg.getHeader()) && proto.tendermint.types.Header.toObject(includeInstance, f),
-        numTxs: jspb.Message.getFieldWithDefault(msg, 4, 0),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.tendermint.types.BlockMeta.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    blockId: (f = msg.getBlockId()) && proto.tendermint.types.BlockID.toObject(includeInstance, f),
+    blockSize: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    header: (f = msg.getHeader()) && proto.tendermint.types.Header.toObject(includeInstance, f),
+    numTxs: jspb.Message.getFieldWithDefault(msg, 4, 0)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.types.BlockMeta}
  */
-proto.tendermint.types.BlockMeta.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.tendermint.types.BlockMeta();
+proto.tendermint.types.BlockMeta.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.tendermint.types.BlockMeta;
   return proto.tendermint.types.BlockMeta.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -3221,48 +3433,50 @@ proto.tendermint.types.BlockMeta.deserializeBinary = function (bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.types.BlockMeta}
  */
-proto.tendermint.types.BlockMeta.deserializeBinaryFromReader = function (msg, reader) {
+proto.tendermint.types.BlockMeta.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = new proto.tendermint.types.BlockID();
-        reader.readMessage(value, proto.tendermint.types.BlockID.deserializeBinaryFromReader);
-        msg.setBlockId(value);
-        break;
-      case 2:
-        var value = /** @type {number} */ (reader.readInt64());
-        msg.setBlockSize(value);
-        break;
-      case 3:
-        var value = new proto.tendermint.types.Header();
-        reader.readMessage(value, proto.tendermint.types.Header.deserializeBinaryFromReader);
-        msg.setHeader(value);
-        break;
-      case 4:
-        var value = /** @type {number} */ (reader.readInt64());
-        msg.setNumTxs(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = new proto.tendermint.types.BlockID;
+      reader.readMessage(value,proto.tendermint.types.BlockID.deserializeBinaryFromReader);
+      msg.setBlockId(value);
+      break;
+    case 2:
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setBlockSize(value);
+      break;
+    case 3:
+      var value = new proto.tendermint.types.Header;
+      reader.readMessage(value,proto.tendermint.types.Header.deserializeBinaryFromReader);
+      msg.setHeader(value);
+      break;
+    case 4:
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setNumTxs(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.types.BlockMeta.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.tendermint.types.BlockMeta.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.tendermint.types.BlockMeta.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -3271,21 +3485,21 @@ proto.tendermint.types.BlockMeta.prototype.serializeBinary = function () {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.types.BlockMeta.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.tendermint.types.BlockMeta.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getBlockId();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.tendermint.types.BlockID.serializeBinaryToWriter,
+      proto.tendermint.types.BlockID.serializeBinaryToWriter
     );
   }
   f = message.getBlockSize();
   if (f !== 0) {
     writer.writeInt64(
       2,
-      f,
+      f
     );
   }
   f = message.getHeader();
@@ -3293,95 +3507,109 @@ proto.tendermint.types.BlockMeta.serializeBinaryToWriter = function (message, wr
     writer.writeMessage(
       3,
       f,
-      proto.tendermint.types.Header.serializeBinaryToWriter,
+      proto.tendermint.types.Header.serializeBinaryToWriter
     );
   }
   f = message.getNumTxs();
   if (f !== 0) {
     writer.writeInt64(
       4,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * optional BlockID block_id = 1;
  * @return {?proto.tendermint.types.BlockID}
  */
-proto.tendermint.types.BlockMeta.prototype.getBlockId = function () {
+proto.tendermint.types.BlockMeta.prototype.getBlockId = function() {
   return /** @type{?proto.tendermint.types.BlockID} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.types.BlockID, 1));
 };
 
+
 /** @param {?proto.tendermint.types.BlockID|undefined} value */
-proto.tendermint.types.BlockMeta.prototype.setBlockId = function (value) {
+proto.tendermint.types.BlockMeta.prototype.setBlockId = function(value) {
   jspb.Message.setWrapperField(this, 1, value);
 };
 
-proto.tendermint.types.BlockMeta.prototype.clearBlockId = function () {
+
+proto.tendermint.types.BlockMeta.prototype.clearBlockId = function() {
   this.setBlockId(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.types.BlockMeta.prototype.hasBlockId = function () {
+proto.tendermint.types.BlockMeta.prototype.hasBlockId = function() {
   return jspb.Message.getField(this, 1) != null;
 };
+
 
 /**
  * optional int64 block_size = 2;
  * @return {number}
  */
-proto.tendermint.types.BlockMeta.prototype.getBlockSize = function () {
+proto.tendermint.types.BlockMeta.prototype.getBlockSize = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
+
 /** @param {number} value */
-proto.tendermint.types.BlockMeta.prototype.setBlockSize = function (value) {
+proto.tendermint.types.BlockMeta.prototype.setBlockSize = function(value) {
   jspb.Message.setProto3IntField(this, 2, value);
 };
+
 
 /**
  * optional Header header = 3;
  * @return {?proto.tendermint.types.Header}
  */
-proto.tendermint.types.BlockMeta.prototype.getHeader = function () {
+proto.tendermint.types.BlockMeta.prototype.getHeader = function() {
   return /** @type{?proto.tendermint.types.Header} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.types.Header, 3));
 };
 
+
 /** @param {?proto.tendermint.types.Header|undefined} value */
-proto.tendermint.types.BlockMeta.prototype.setHeader = function (value) {
+proto.tendermint.types.BlockMeta.prototype.setHeader = function(value) {
   jspb.Message.setWrapperField(this, 3, value);
 };
 
-proto.tendermint.types.BlockMeta.prototype.clearHeader = function () {
+
+proto.tendermint.types.BlockMeta.prototype.clearHeader = function() {
   this.setHeader(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.types.BlockMeta.prototype.hasHeader = function () {
+proto.tendermint.types.BlockMeta.prototype.hasHeader = function() {
   return jspb.Message.getField(this, 3) != null;
 };
+
 
 /**
  * optional int64 num_txs = 4;
  * @return {number}
  */
-proto.tendermint.types.BlockMeta.prototype.getNumTxs = function () {
+proto.tendermint.types.BlockMeta.prototype.getNumTxs = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
 };
 
+
 /** @param {number} value */
-proto.tendermint.types.BlockMeta.prototype.setNumTxs = function (value) {
+proto.tendermint.types.BlockMeta.prototype.setNumTxs = function(value) {
   jspb.Message.setProto3IntField(this, 4, value);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -3393,13 +3621,14 @@ proto.tendermint.types.BlockMeta.prototype.setNumTxs = function (value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.types.TxProof = function (opt_data) {
+proto.tendermint.types.TxProof = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.tendermint.types.TxProof, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.tendermint.types.TxProof.displayName = 'proto.tendermint.types.TxProof';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -3412,11 +3641,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.tendermint.types.TxProof.prototype.toObject = function (opt_includeInstance) {
-    return proto.tendermint.types.TxProof.toObject(opt_includeInstance, this);
-  };
+proto.tendermint.types.TxProof.prototype.toObject = function(opt_includeInstance) {
+  return proto.tendermint.types.TxProof.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -3425,31 +3655,32 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.tendermint.types.TxProof.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        rootHash: msg.getRootHash_asB64(),
-        data: msg.getData_asB64(),
-        proof: (f = msg.getProof()) && tendermint_crypto_proof_pb.Proof.toObject(includeInstance, f),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.tendermint.types.TxProof.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    rootHash: msg.getRootHash_asB64(),
+    data: msg.getData_asB64(),
+    proof: (f = msg.getProof()) && tendermint_crypto_proof_pb.Proof.toObject(includeInstance, f)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.types.TxProof}
  */
-proto.tendermint.types.TxProof.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.tendermint.types.TxProof();
+proto.tendermint.types.TxProof.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.tendermint.types.TxProof;
   return proto.tendermint.types.TxProof.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -3458,43 +3689,45 @@ proto.tendermint.types.TxProof.deserializeBinary = function (bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.types.TxProof}
  */
-proto.tendermint.types.TxProof.deserializeBinaryFromReader = function (msg, reader) {
+proto.tendermint.types.TxProof.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setRootHash(value);
-        break;
-      case 2:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setData(value);
-        break;
-      case 3:
-        var value = new tendermint_crypto_proof_pb.Proof();
-        reader.readMessage(value, tendermint_crypto_proof_pb.Proof.deserializeBinaryFromReader);
-        msg.setProof(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setRootHash(value);
+      break;
+    case 2:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setData(value);
+      break;
+    case 3:
+      var value = new tendermint_crypto_proof_pb.Proof;
+      reader.readMessage(value,tendermint_crypto_proof_pb.Proof.deserializeBinaryFromReader);
+      msg.setProof(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.types.TxProof.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.tendermint.types.TxProof.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.tendermint.types.TxProof.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -3503,20 +3736,20 @@ proto.tendermint.types.TxProof.prototype.serializeBinary = function () {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.types.TxProof.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.tendermint.types.TxProof.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getRootHash_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       1,
-      f,
+      f
     );
   }
   f = message.getData_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       2,
-      f,
+      f
     );
   }
   f = message.getProof();
@@ -3524,29 +3757,31 @@ proto.tendermint.types.TxProof.serializeBinaryToWriter = function (message, writ
     writer.writeMessage(
       3,
       f,
-      tendermint_crypto_proof_pb.Proof.serializeBinaryToWriter,
+      tendermint_crypto_proof_pb.Proof.serializeBinaryToWriter
     );
   }
 };
 
+
 /**
  * optional bytes root_hash = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.tendermint.types.TxProof.prototype.getRootHash = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.tendermint.types.TxProof.prototype.getRootHash = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
+
 
 /**
  * optional bytes root_hash = 1;
  * This is a type-conversion wrapper around `getRootHash()`
  * @return {string}
  */
-proto.tendermint.types.TxProof.prototype.getRootHash_asB64 = function () {
+proto.tendermint.types.TxProof.prototype.getRootHash_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getRootHash(),
-  ));
+      this.getRootHash()));
 };
+
 
 /**
  * optional bytes root_hash = 1;
@@ -3555,35 +3790,37 @@ proto.tendermint.types.TxProof.prototype.getRootHash_asB64 = function () {
  * This is a type-conversion wrapper around `getRootHash()`
  * @return {!Uint8Array}
  */
-proto.tendermint.types.TxProof.prototype.getRootHash_asU8 = function () {
+proto.tendermint.types.TxProof.prototype.getRootHash_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getRootHash(),
-  ));
+      this.getRootHash()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.tendermint.types.TxProof.prototype.setRootHash = function (value) {
+proto.tendermint.types.TxProof.prototype.setRootHash = function(value) {
   jspb.Message.setProto3BytesField(this, 1, value);
 };
 
+
 /**
  * optional bytes data = 2;
  * @return {!(string|Uint8Array)}
  */
-proto.tendermint.types.TxProof.prototype.getData = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
+proto.tendermint.types.TxProof.prototype.getData = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
+
 
 /**
  * optional bytes data = 2;
  * This is a type-conversion wrapper around `getData()`
  * @return {string}
  */
-proto.tendermint.types.TxProof.prototype.getData_asB64 = function () {
+proto.tendermint.types.TxProof.prototype.getData_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getData(),
-  ));
+      this.getData()));
 };
+
 
 /**
  * optional bytes data = 2;
@@ -3592,42 +3829,47 @@ proto.tendermint.types.TxProof.prototype.getData_asB64 = function () {
  * This is a type-conversion wrapper around `getData()`
  * @return {!Uint8Array}
  */
-proto.tendermint.types.TxProof.prototype.getData_asU8 = function () {
+proto.tendermint.types.TxProof.prototype.getData_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getData(),
-  ));
+      this.getData()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.tendermint.types.TxProof.prototype.setData = function (value) {
+proto.tendermint.types.TxProof.prototype.setData = function(value) {
   jspb.Message.setProto3BytesField(this, 2, value);
 };
+
 
 /**
  * optional tendermint.crypto.Proof proof = 3;
  * @return {?proto.tendermint.crypto.Proof}
  */
-proto.tendermint.types.TxProof.prototype.getProof = function () {
+proto.tendermint.types.TxProof.prototype.getProof = function() {
   return /** @type{?proto.tendermint.crypto.Proof} */ (
     jspb.Message.getWrapperField(this, tendermint_crypto_proof_pb.Proof, 3));
 };
 
+
 /** @param {?proto.tendermint.crypto.Proof|undefined} value */
-proto.tendermint.types.TxProof.prototype.setProof = function (value) {
+proto.tendermint.types.TxProof.prototype.setProof = function(value) {
   jspb.Message.setWrapperField(this, 3, value);
 };
 
-proto.tendermint.types.TxProof.prototype.clearProof = function () {
+
+proto.tendermint.types.TxProof.prototype.clearProof = function() {
   this.setProof(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.types.TxProof.prototype.hasProof = function () {
+proto.tendermint.types.TxProof.prototype.hasProof = function() {
   return jspb.Message.getField(this, 3) != null;
 };
+
 
 /**
  * @enum {number}
@@ -3636,7 +3878,7 @@ proto.tendermint.types.BlockIDFlag = {
   BLOCK_ID_FLAG_UNKNOWN: 0,
   BLOCK_ID_FLAG_ABSENT: 1,
   BLOCK_ID_FLAG_COMMIT: 2,
-  BLOCK_ID_FLAG_NIL: 3,
+  BLOCK_ID_FLAG_NIL: 3
 };
 
 /**
@@ -3646,7 +3888,7 @@ proto.tendermint.types.SignedMsgType = {
   SIGNED_MSG_TYPE_UNKNOWN: 0,
   SIGNED_MSG_TYPE_PREVOTE: 1,
   SIGNED_MSG_TYPE_PRECOMMIT: 2,
-  SIGNED_MSG_TYPE_PROPOSAL: 32,
+  SIGNED_MSG_TYPE_PROPOSAL: 32
 };
 
 goog.object.extend(exports, proto.tendermint.types);

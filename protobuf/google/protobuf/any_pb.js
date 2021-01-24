@@ -7,10 +7,9 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-const jspb = require('google-protobuf');
-
-const goog = jspb;
-const global = Function('return this')();
+var jspb = require('google-protobuf');
+var goog = jspb;
+var global = Function('return this')();
 
 goog.exportSymbol('proto.google.protobuf.Any', null, global);
 
@@ -24,13 +23,14 @@ goog.exportSymbol('proto.google.protobuf.Any', null, global);
  * @extends {jspb.Message}
  * @constructor
  */
-proto.google.protobuf.Any = function (opt_data) {
+proto.google.protobuf.Any = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.google.protobuf.Any, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.google.protobuf.Any.displayName = 'proto.google.protobuf.Any';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -43,11 +43,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.google.protobuf.Any.prototype.toObject = function (opt_includeInstance) {
-    return proto.google.protobuf.Any.toObject(opt_includeInstance, this);
-  };
+proto.google.protobuf.Any.prototype.toObject = function(opt_includeInstance) {
+  return proto.google.protobuf.Any.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -56,30 +57,31 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.google.protobuf.Any.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        typeUrl: jspb.Message.getFieldWithDefault(msg, 1, ''),
-        value: msg.getValue_asB64(),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.google.protobuf.Any.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    typeUrl: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    value: msg.getValue_asB64()
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.google.protobuf.Any}
  */
-proto.google.protobuf.Any.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.google.protobuf.Any();
+proto.google.protobuf.Any.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.google.protobuf.Any;
   return proto.google.protobuf.Any.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -88,38 +90,40 @@ proto.google.protobuf.Any.deserializeBinary = function (bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.google.protobuf.Any}
  */
-proto.google.protobuf.Any.deserializeBinaryFromReader = function (msg, reader) {
+proto.google.protobuf.Any.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setTypeUrl(value);
-        break;
-      case 2:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setValue(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setTypeUrl(value);
+      break;
+    case 2:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setValue(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.google.protobuf.Any.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.google.protobuf.Any.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.google.protobuf.Any.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -128,55 +132,59 @@ proto.google.protobuf.Any.prototype.serializeBinary = function () {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.google.protobuf.Any.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.google.protobuf.Any.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getTypeUrl();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f,
+      f
     );
   }
   f = message.getValue_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       2,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * optional string type_url = 1;
  * @return {string}
  */
-proto.google.protobuf.Any.prototype.getTypeUrl = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.google.protobuf.Any.prototype.getTypeUrl = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
+
 /** @param {string} value */
-proto.google.protobuf.Any.prototype.setTypeUrl = function (value) {
+proto.google.protobuf.Any.prototype.setTypeUrl = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
+
 
 /**
  * optional bytes value = 2;
  * @return {!(string|Uint8Array)}
  */
-proto.google.protobuf.Any.prototype.getValue = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
+proto.google.protobuf.Any.prototype.getValue = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
+
 
 /**
  * optional bytes value = 2;
  * This is a type-conversion wrapper around `getValue()`
  * @return {string}
  */
-proto.google.protobuf.Any.prototype.getValue_asB64 = function () {
+proto.google.protobuf.Any.prototype.getValue_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getValue(),
-  ));
+      this.getValue()));
 };
+
 
 /**
  * optional bytes value = 2;
@@ -185,16 +193,17 @@ proto.google.protobuf.Any.prototype.getValue_asB64 = function () {
  * This is a type-conversion wrapper around `getValue()`
  * @return {!Uint8Array}
  */
-proto.google.protobuf.Any.prototype.getValue_asU8 = function () {
+proto.google.protobuf.Any.prototype.getValue_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getValue(),
-  ));
+      this.getValue()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.google.protobuf.Any.prototype.setValue = function (value) {
+proto.google.protobuf.Any.prototype.setValue = function(value) {
   jspb.Message.setProto3BytesField(this, 2, value);
 };
+
 
 goog.object.extend(exports, proto.google.protobuf);
 /* This code will be inserted into generated code for
@@ -204,9 +213,10 @@ goog.object.extend(exports, proto.google.protobuf);
  * Returns the type name contained in this instance, if any.
  * @return {string|undefined}
  */
-proto.google.protobuf.Any.prototype.getTypeName = function () {
+proto.google.protobuf.Any.prototype.getTypeName = function() {
   return this.getTypeUrl().split('/').pop();
 };
+
 
 /**
  * Packs the given message instance into this Any.
@@ -214,20 +224,21 @@ proto.google.protobuf.Any.prototype.getTypeName = function () {
  * @param {string} name The type name of this message object.
  * @param {string=} opt_typeUrlPrefix the type URL prefix.
  */
-proto.google.protobuf.Any.prototype.pack = function (serialized, name,
-  opt_typeUrlPrefix) {
+proto.google.protobuf.Any.prototype.pack = function(serialized, name,
+                                                    opt_typeUrlPrefix) {
   if (!opt_typeUrlPrefix) {
     opt_typeUrlPrefix = 'type.googleapis.com/';
   }
 
   if (opt_typeUrlPrefix.substr(-1) != '/') {
-    this.setTypeUrl(`${opt_typeUrlPrefix}/${name}`);
+    this.setTypeUrl(opt_typeUrlPrefix + '/' + name);
   } else {
     this.setTypeUrl(opt_typeUrlPrefix + name);
   }
 
   this.setValue(serialized);
 };
+
 
 /**
  * @template T
@@ -238,9 +249,10 @@ proto.google.protobuf.Any.prototype.pack = function (serialized, name,
  * @return {?T} If the name matched the expected name, returns the deserialized
  *     object, otherwise returns null.
  */
-proto.google.protobuf.Any.prototype.unpack = function (deserialize, name) {
+proto.google.protobuf.Any.prototype.unpack = function(deserialize, name) {
   if (this.getTypeName() == name) {
     return deserialize(this.getValue_asU8());
+  } else {
+    return null;
   }
-  return null;
 };

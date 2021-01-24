@@ -2,6 +2,7 @@
 // file: cosmos/genutil/v1beta1/genesis.proto
 
 import * as jspb from "google-protobuf";
+import * as gogoproto_gogo_pb from "../../../gogoproto/gogo_pb";
 
 export class GenesisState extends jspb.Message {
   clearGenTxsList(): void;

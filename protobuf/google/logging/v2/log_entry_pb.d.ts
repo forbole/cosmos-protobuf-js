@@ -2,12 +2,16 @@
 // file: google/logging/v2/log_entry.proto
 
 import * as jspb from "google-protobuf";
+import * as google_api_field_behavior_pb from "../../../google/api/field_behavior_pb";
 import * as google_api_monitored_resource_pb from "../../../google/api/monitored_resource_pb";
+import * as google_api_resource_pb from "../../../google/api/resource_pb";
 import * as google_logging_type_http_request_pb from "../../../google/logging/type/http_request_pb";
 import * as google_logging_type_log_severity_pb from "../../../google/logging/type/log_severity_pb";
 import * as google_protobuf_any_pb from "google-protobuf/google/protobuf/any_pb";
 import * as google_protobuf_struct_pb from "google-protobuf/google/protobuf/struct_pb";
 import * as google_protobuf_timestamp_pb from "google-protobuf/google/protobuf/timestamp_pb";
+import * as google_rpc_status_pb from "../../../google/rpc/status_pb";
+import * as google_api_annotations_pb from "../../../google/api/annotations_pb";
 
 export class LogEntry extends jspb.Message {
   getLogName(): string;

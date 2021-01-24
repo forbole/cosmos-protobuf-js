@@ -7,13 +7,11 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-const jspb = require('google-protobuf');
+var jspb = require('google-protobuf');
+var goog = jspb;
+var global = Function('return this')();
 
-const goog = jspb;
-const global = Function('return this')();
-
-const google_protobuf_any_pb = require('google-protobuf/google/protobuf/any_pb.js');
-
+var google_protobuf_any_pb = require('google-protobuf/google/protobuf/any_pb.js');
 goog.exportSymbol('proto.google.rpc.Status', null, global);
 
 /**
@@ -26,7 +24,7 @@ goog.exportSymbol('proto.google.rpc.Status', null, global);
  * @extends {jspb.Message}
  * @constructor
  */
-proto.google.rpc.Status = function (opt_data) {
+proto.google.rpc.Status = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.google.rpc.Status.repeatedFields_, null);
 };
 goog.inherits(proto.google.rpc.Status, jspb.Message);
@@ -40,6 +38,8 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.google.rpc.Status.repeatedFields_ = [3];
 
+
+
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -51,11 +51,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.google.rpc.Status.prototype.toObject = function (opt_includeInstance) {
-    return proto.google.rpc.Status.toObject(opt_includeInstance, this);
-  };
+proto.google.rpc.Status.prototype.toObject = function(opt_includeInstance) {
+  return proto.google.rpc.Status.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -64,32 +65,33 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.google.rpc.Status.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        code: jspb.Message.getFieldWithDefault(msg, 1, 0),
-        message: jspb.Message.getFieldWithDefault(msg, 2, ''),
-        detailsList: jspb.Message.toObjectList(msg.getDetailsList(),
-          google_protobuf_any_pb.Any.toObject, includeInstance),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.google.rpc.Status.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    code: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    message: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    detailsList: jspb.Message.toObjectList(msg.getDetailsList(),
+    google_protobuf_any_pb.Any.toObject, includeInstance)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.google.rpc.Status}
  */
-proto.google.rpc.Status.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.google.rpc.Status();
+proto.google.rpc.Status.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.google.rpc.Status;
   return proto.google.rpc.Status.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -98,43 +100,45 @@ proto.google.rpc.Status.deserializeBinary = function (bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.google.rpc.Status}
  */
-proto.google.rpc.Status.deserializeBinaryFromReader = function (msg, reader) {
+proto.google.rpc.Status.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {number} */ (reader.readInt32());
-        msg.setCode(value);
-        break;
-      case 2:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setMessage(value);
-        break;
-      case 3:
-        var value = new google_protobuf_any_pb.Any();
-        reader.readMessage(value, google_protobuf_any_pb.Any.deserializeBinaryFromReader);
-        msg.addDetails(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setCode(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setMessage(value);
+      break;
+    case 3:
+      var value = new google_protobuf_any_pb.Any;
+      reader.readMessage(value,google_protobuf_any_pb.Any.deserializeBinaryFromReader);
+      msg.addDetails(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.google.rpc.Status.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.google.rpc.Status.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.google.rpc.Status.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -143,20 +147,20 @@ proto.google.rpc.Status.prototype.serializeBinary = function () {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.google.rpc.Status.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.google.rpc.Status.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getCode();
   if (f !== 0) {
     writer.writeInt32(
       1,
-      f,
+      f
     );
   }
   f = message.getMessage();
   if (f.length > 0) {
     writer.writeString(
       2,
-      f,
+      f
     );
   }
   f = message.getDetailsList();
@@ -164,62 +168,71 @@ proto.google.rpc.Status.serializeBinaryToWriter = function (message, writer) {
     writer.writeRepeatedMessage(
       3,
       f,
-      google_protobuf_any_pb.Any.serializeBinaryToWriter,
+      google_protobuf_any_pb.Any.serializeBinaryToWriter
     );
   }
 };
+
 
 /**
  * optional int32 code = 1;
  * @return {number}
  */
-proto.google.rpc.Status.prototype.getCode = function () {
+proto.google.rpc.Status.prototype.getCode = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
+
 /** @param {number} value */
-proto.google.rpc.Status.prototype.setCode = function (value) {
+proto.google.rpc.Status.prototype.setCode = function(value) {
   jspb.Message.setProto3IntField(this, 1, value);
 };
+
 
 /**
  * optional string message = 2;
  * @return {string}
  */
-proto.google.rpc.Status.prototype.getMessage = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
+proto.google.rpc.Status.prototype.getMessage = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
+
 /** @param {string} value */
-proto.google.rpc.Status.prototype.setMessage = function (value) {
+proto.google.rpc.Status.prototype.setMessage = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
+
 
 /**
  * repeated google.protobuf.Any details = 3;
  * @return {!Array<!proto.google.protobuf.Any>}
  */
-proto.google.rpc.Status.prototype.getDetailsList = function () {
+proto.google.rpc.Status.prototype.getDetailsList = function() {
   return /** @type{!Array<!proto.google.protobuf.Any>} */ (
     jspb.Message.getRepeatedWrapperField(this, google_protobuf_any_pb.Any, 3));
 };
 
+
 /** @param {!Array<!proto.google.protobuf.Any>} value */
-proto.google.rpc.Status.prototype.setDetailsList = function (value) {
+proto.google.rpc.Status.prototype.setDetailsList = function(value) {
   jspb.Message.setRepeatedWrapperField(this, 3, value);
 };
+
 
 /**
  * @param {!proto.google.protobuf.Any=} opt_value
  * @param {number=} opt_index
  * @return {!proto.google.protobuf.Any}
  */
-proto.google.rpc.Status.prototype.addDetails = function (opt_value, opt_index) {
+proto.google.rpc.Status.prototype.addDetails = function(opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 3, opt_value, proto.google.protobuf.Any, opt_index);
 };
 
-proto.google.rpc.Status.prototype.clearDetailsList = function () {
+
+proto.google.rpc.Status.prototype.clearDetailsList = function() {
   this.setDetailsList([]);
 };
+
 
 goog.object.extend(exports, proto.google.rpc);

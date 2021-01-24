@@ -2,6 +2,7 @@
 // file: cosmos/crisis/v1beta1/tx.proto
 
 import * as jspb from "google-protobuf";
+import * as gogoproto_gogo_pb from "../../../gogoproto/gogo_pb";
 
 export class MsgVerifyInvariant extends jspb.Message {
   getSender(): string;

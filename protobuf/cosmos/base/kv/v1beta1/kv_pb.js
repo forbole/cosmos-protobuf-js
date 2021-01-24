@@ -7,12 +7,11 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-const jspb = require('google-protobuf');
+var jspb = require('google-protobuf');
+var goog = jspb;
+var global = Function('return this')();
 
-const goog = jspb;
-const global = Function('return this')();
-
-
+var gogoproto_gogo_pb = require('../../../../gogoproto/gogo_pb.js');
 goog.exportSymbol('proto.cosmos.base.kv.v1beta1.Pair', null, global);
 goog.exportSymbol('proto.cosmos.base.kv.v1beta1.Pairs', null, global);
 
@@ -26,7 +25,7 @@ goog.exportSymbol('proto.cosmos.base.kv.v1beta1.Pairs', null, global);
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.base.kv.v1beta1.Pairs = function (opt_data) {
+proto.cosmos.base.kv.v1beta1.Pairs = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.cosmos.base.kv.v1beta1.Pairs.repeatedFields_, null);
 };
 goog.inherits(proto.cosmos.base.kv.v1beta1.Pairs, jspb.Message);
@@ -40,6 +39,8 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.cosmos.base.kv.v1beta1.Pairs.repeatedFields_ = [1];
 
+
+
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -51,11 +52,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.cosmos.base.kv.v1beta1.Pairs.prototype.toObject = function (opt_includeInstance) {
-    return proto.cosmos.base.kv.v1beta1.Pairs.toObject(opt_includeInstance, this);
-  };
+proto.cosmos.base.kv.v1beta1.Pairs.prototype.toObject = function(opt_includeInstance) {
+  return proto.cosmos.base.kv.v1beta1.Pairs.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -64,30 +66,31 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.cosmos.base.kv.v1beta1.Pairs.toObject = function (includeInstance, msg) {
- const
-      obj = {
-        pairsList: jspb.Message.toObjectList(msg.getPairsList(),
-          proto.cosmos.base.kv.v1beta1.Pair.toObject, includeInstance),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.cosmos.base.kv.v1beta1.Pairs.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    pairsList: jspb.Message.toObjectList(msg.getPairsList(),
+    proto.cosmos.base.kv.v1beta1.Pair.toObject, includeInstance)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.base.kv.v1beta1.Pairs}
  */
-proto.cosmos.base.kv.v1beta1.Pairs.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.cosmos.base.kv.v1beta1.Pairs();
+proto.cosmos.base.kv.v1beta1.Pairs.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.cosmos.base.kv.v1beta1.Pairs;
   return proto.cosmos.base.kv.v1beta1.Pairs.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -96,35 +99,37 @@ proto.cosmos.base.kv.v1beta1.Pairs.deserializeBinary = function (bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.base.kv.v1beta1.Pairs}
  */
-proto.cosmos.base.kv.v1beta1.Pairs.deserializeBinaryFromReader = function (msg, reader) {
+proto.cosmos.base.kv.v1beta1.Pairs.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = new proto.cosmos.base.kv.v1beta1.Pair();
-        reader.readMessage(value, proto.cosmos.base.kv.v1beta1.Pair.deserializeBinaryFromReader);
-        msg.addPairs(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = new proto.cosmos.base.kv.v1beta1.Pair;
+      reader.readMessage(value,proto.cosmos.base.kv.v1beta1.Pair.deserializeBinaryFromReader);
+      msg.addPairs(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.base.kv.v1beta1.Pairs.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.cosmos.base.kv.v1beta1.Pairs.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.cosmos.base.kv.v1beta1.Pairs.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -133,44 +138,50 @@ proto.cosmos.base.kv.v1beta1.Pairs.prototype.serializeBinary = function () {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.kv.v1beta1.Pairs.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.cosmos.base.kv.v1beta1.Pairs.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getPairsList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       1,
       f,
-      proto.cosmos.base.kv.v1beta1.Pair.serializeBinaryToWriter,
+      proto.cosmos.base.kv.v1beta1.Pair.serializeBinaryToWriter
     );
   }
 };
+
 
 /**
  * repeated Pair pairs = 1;
  * @return {!Array<!proto.cosmos.base.kv.v1beta1.Pair>}
  */
-proto.cosmos.base.kv.v1beta1.Pairs.prototype.getPairsList = function () {
+proto.cosmos.base.kv.v1beta1.Pairs.prototype.getPairsList = function() {
   return /** @type{!Array<!proto.cosmos.base.kv.v1beta1.Pair>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.cosmos.base.kv.v1beta1.Pair, 1));
 };
 
+
 /** @param {!Array<!proto.cosmos.base.kv.v1beta1.Pair>} value */
-proto.cosmos.base.kv.v1beta1.Pairs.prototype.setPairsList = function (value) {
+proto.cosmos.base.kv.v1beta1.Pairs.prototype.setPairsList = function(value) {
   jspb.Message.setRepeatedWrapperField(this, 1, value);
 };
+
 
 /**
  * @param {!proto.cosmos.base.kv.v1beta1.Pair=} opt_value
  * @param {number=} opt_index
  * @return {!proto.cosmos.base.kv.v1beta1.Pair}
  */
-proto.cosmos.base.kv.v1beta1.Pairs.prototype.addPairs = function (opt_value, opt_index) {
+proto.cosmos.base.kv.v1beta1.Pairs.prototype.addPairs = function(opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.cosmos.base.kv.v1beta1.Pair, opt_index);
 };
 
-proto.cosmos.base.kv.v1beta1.Pairs.prototype.clearPairsList = function () {
+
+proto.cosmos.base.kv.v1beta1.Pairs.prototype.clearPairsList = function() {
   this.setPairsList([]);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -182,13 +193,14 @@ proto.cosmos.base.kv.v1beta1.Pairs.prototype.clearPairsList = function () {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.base.kv.v1beta1.Pair = function (opt_data) {
+proto.cosmos.base.kv.v1beta1.Pair = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.base.kv.v1beta1.Pair, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.base.kv.v1beta1.Pair.displayName = 'proto.cosmos.base.kv.v1beta1.Pair';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -201,11 +213,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.cosmos.base.kv.v1beta1.Pair.prototype.toObject = function (opt_includeInstance) {
-    return proto.cosmos.base.kv.v1beta1.Pair.toObject(opt_includeInstance, this);
-  };
+proto.cosmos.base.kv.v1beta1.Pair.prototype.toObject = function(opt_includeInstance) {
+  return proto.cosmos.base.kv.v1beta1.Pair.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -214,30 +227,31 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.cosmos.base.kv.v1beta1.Pair.toObject = function (includeInstance, msg) {
- const
-      obj = {
-        key: msg.getKey_asB64(),
-        value: msg.getValue_asB64(),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.cosmos.base.kv.v1beta1.Pair.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    key: msg.getKey_asB64(),
+    value: msg.getValue_asB64()
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.base.kv.v1beta1.Pair}
  */
-proto.cosmos.base.kv.v1beta1.Pair.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.cosmos.base.kv.v1beta1.Pair();
+proto.cosmos.base.kv.v1beta1.Pair.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.cosmos.base.kv.v1beta1.Pair;
   return proto.cosmos.base.kv.v1beta1.Pair.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -246,38 +260,40 @@ proto.cosmos.base.kv.v1beta1.Pair.deserializeBinary = function (bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.base.kv.v1beta1.Pair}
  */
-proto.cosmos.base.kv.v1beta1.Pair.deserializeBinaryFromReader = function (msg, reader) {
+proto.cosmos.base.kv.v1beta1.Pair.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setKey(value);
-        break;
-      case 2:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setValue(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setKey(value);
+      break;
+    case 2:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setValue(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.base.kv.v1beta1.Pair.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.cosmos.base.kv.v1beta1.Pair.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.cosmos.base.kv.v1beta1.Pair.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -286,42 +302,44 @@ proto.cosmos.base.kv.v1beta1.Pair.prototype.serializeBinary = function () {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.kv.v1beta1.Pair.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.cosmos.base.kv.v1beta1.Pair.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getKey_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       1,
-      f,
+      f
     );
   }
   f = message.getValue_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       2,
-      f,
+      f
     );
   }
 };
 
+
 /**
  * optional bytes key = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.cosmos.base.kv.v1beta1.Pair.prototype.getKey = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.cosmos.base.kv.v1beta1.Pair.prototype.getKey = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
+
 
 /**
  * optional bytes key = 1;
  * This is a type-conversion wrapper around `getKey()`
  * @return {string}
  */
-proto.cosmos.base.kv.v1beta1.Pair.prototype.getKey_asB64 = function () {
+proto.cosmos.base.kv.v1beta1.Pair.prototype.getKey_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getKey(),
-  ));
+      this.getKey()));
 };
+
 
 /**
  * optional bytes key = 1;
@@ -330,35 +348,37 @@ proto.cosmos.base.kv.v1beta1.Pair.prototype.getKey_asB64 = function () {
  * This is a type-conversion wrapper around `getKey()`
  * @return {!Uint8Array}
  */
-proto.cosmos.base.kv.v1beta1.Pair.prototype.getKey_asU8 = function () {
+proto.cosmos.base.kv.v1beta1.Pair.prototype.getKey_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getKey(),
-  ));
+      this.getKey()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.cosmos.base.kv.v1beta1.Pair.prototype.setKey = function (value) {
+proto.cosmos.base.kv.v1beta1.Pair.prototype.setKey = function(value) {
   jspb.Message.setProto3BytesField(this, 1, value);
 };
 
+
 /**
  * optional bytes value = 2;
  * @return {!(string|Uint8Array)}
  */
-proto.cosmos.base.kv.v1beta1.Pair.prototype.getValue = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
+proto.cosmos.base.kv.v1beta1.Pair.prototype.getValue = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
+
 
 /**
  * optional bytes value = 2;
  * This is a type-conversion wrapper around `getValue()`
  * @return {string}
  */
-proto.cosmos.base.kv.v1beta1.Pair.prototype.getValue_asB64 = function () {
+proto.cosmos.base.kv.v1beta1.Pair.prototype.getValue_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getValue(),
-  ));
+      this.getValue()));
 };
+
 
 /**
  * optional bytes value = 2;
@@ -367,15 +387,16 @@ proto.cosmos.base.kv.v1beta1.Pair.prototype.getValue_asB64 = function () {
  * This is a type-conversion wrapper around `getValue()`
  * @return {!Uint8Array}
  */
-proto.cosmos.base.kv.v1beta1.Pair.prototype.getValue_asU8 = function () {
+proto.cosmos.base.kv.v1beta1.Pair.prototype.getValue_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getValue(),
-  ));
+      this.getValue()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.cosmos.base.kv.v1beta1.Pair.prototype.setValue = function (value) {
+proto.cosmos.base.kv.v1beta1.Pair.prototype.setValue = function(value) {
   jspb.Message.setProto3BytesField(this, 2, value);
 };
+
 
 goog.object.extend(exports, proto.cosmos.base.kv.v1beta1);

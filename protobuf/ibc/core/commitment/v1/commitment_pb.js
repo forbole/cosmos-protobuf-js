@@ -7,14 +7,12 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-const jspb = require('google-protobuf');
+var jspb = require('google-protobuf');
+var goog = jspb;
+var global = Function('return this')();
 
-const goog = jspb;
-const global = Function('return this')();
-
-const gogoproto_gogo_pb = require('../../../../gogoproto/gogo_pb.js');
-const confio_proofs_pb = require('../../../../confio/proofs_pb.js');
-
+var gogoproto_gogo_pb = require('../../../../gogoproto/gogo_pb.js');
+var confio_proofs_pb = require('../../../../confio/proofs_pb.js');
 goog.exportSymbol('proto.ibc.core.commitment.v1.MerklePath', null, global);
 goog.exportSymbol('proto.ibc.core.commitment.v1.MerklePrefix', null, global);
 goog.exportSymbol('proto.ibc.core.commitment.v1.MerkleProof', null, global);
@@ -30,13 +28,14 @@ goog.exportSymbol('proto.ibc.core.commitment.v1.MerkleRoot', null, global);
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.core.commitment.v1.MerkleRoot = function (opt_data) {
+proto.ibc.core.commitment.v1.MerkleRoot = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.ibc.core.commitment.v1.MerkleRoot, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.ibc.core.commitment.v1.MerkleRoot.displayName = 'proto.ibc.core.commitment.v1.MerkleRoot';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -49,11 +48,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.core.commitment.v1.MerkleRoot.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.core.commitment.v1.MerkleRoot.toObject(opt_includeInstance, this);
-  };
+proto.ibc.core.commitment.v1.MerkleRoot.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.core.commitment.v1.MerkleRoot.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -62,29 +62,30 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.core.commitment.v1.MerkleRoot.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        hash: msg.getHash_asB64(),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.core.commitment.v1.MerkleRoot.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    hash: msg.getHash_asB64()
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.core.commitment.v1.MerkleRoot}
  */
-proto.ibc.core.commitment.v1.MerkleRoot.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.core.commitment.v1.MerkleRoot();
+proto.ibc.core.commitment.v1.MerkleRoot.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.core.commitment.v1.MerkleRoot;
   return proto.ibc.core.commitment.v1.MerkleRoot.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -93,34 +94,36 @@ proto.ibc.core.commitment.v1.MerkleRoot.deserializeBinary = function (bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.core.commitment.v1.MerkleRoot}
  */
-proto.ibc.core.commitment.v1.MerkleRoot.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.core.commitment.v1.MerkleRoot.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setHash(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setHash(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.core.commitment.v1.MerkleRoot.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.core.commitment.v1.MerkleRoot.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.core.commitment.v1.MerkleRoot.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -129,35 +132,37 @@ proto.ibc.core.commitment.v1.MerkleRoot.prototype.serializeBinary = function () 
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.core.commitment.v1.MerkleRoot.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.core.commitment.v1.MerkleRoot.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getHash_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       1,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * optional bytes hash = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.ibc.core.commitment.v1.MerkleRoot.prototype.getHash = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.ibc.core.commitment.v1.MerkleRoot.prototype.getHash = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
+
 
 /**
  * optional bytes hash = 1;
  * This is a type-conversion wrapper around `getHash()`
  * @return {string}
  */
-proto.ibc.core.commitment.v1.MerkleRoot.prototype.getHash_asB64 = function () {
+proto.ibc.core.commitment.v1.MerkleRoot.prototype.getHash_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getHash(),
-  ));
+      this.getHash()));
 };
+
 
 /**
  * optional bytes hash = 1;
@@ -166,16 +171,18 @@ proto.ibc.core.commitment.v1.MerkleRoot.prototype.getHash_asB64 = function () {
  * This is a type-conversion wrapper around `getHash()`
  * @return {!Uint8Array}
  */
-proto.ibc.core.commitment.v1.MerkleRoot.prototype.getHash_asU8 = function () {
+proto.ibc.core.commitment.v1.MerkleRoot.prototype.getHash_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getHash(),
-  ));
+      this.getHash()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.ibc.core.commitment.v1.MerkleRoot.prototype.setHash = function (value) {
+proto.ibc.core.commitment.v1.MerkleRoot.prototype.setHash = function(value) {
   jspb.Message.setProto3BytesField(this, 1, value);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -187,13 +194,14 @@ proto.ibc.core.commitment.v1.MerkleRoot.prototype.setHash = function (value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.core.commitment.v1.MerklePrefix = function (opt_data) {
+proto.ibc.core.commitment.v1.MerklePrefix = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.ibc.core.commitment.v1.MerklePrefix, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.ibc.core.commitment.v1.MerklePrefix.displayName = 'proto.ibc.core.commitment.v1.MerklePrefix';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -206,11 +214,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.core.commitment.v1.MerklePrefix.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.core.commitment.v1.MerklePrefix.toObject(opt_includeInstance, this);
-  };
+proto.ibc.core.commitment.v1.MerklePrefix.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.core.commitment.v1.MerklePrefix.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -219,29 +228,30 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.core.commitment.v1.MerklePrefix.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        keyPrefix: msg.getKeyPrefix_asB64(),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.core.commitment.v1.MerklePrefix.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    keyPrefix: msg.getKeyPrefix_asB64()
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.core.commitment.v1.MerklePrefix}
  */
-proto.ibc.core.commitment.v1.MerklePrefix.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.core.commitment.v1.MerklePrefix();
+proto.ibc.core.commitment.v1.MerklePrefix.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.core.commitment.v1.MerklePrefix;
   return proto.ibc.core.commitment.v1.MerklePrefix.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -250,34 +260,36 @@ proto.ibc.core.commitment.v1.MerklePrefix.deserializeBinary = function (bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.core.commitment.v1.MerklePrefix}
  */
-proto.ibc.core.commitment.v1.MerklePrefix.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.core.commitment.v1.MerklePrefix.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setKeyPrefix(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setKeyPrefix(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.core.commitment.v1.MerklePrefix.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.core.commitment.v1.MerklePrefix.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.core.commitment.v1.MerklePrefix.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -286,35 +298,37 @@ proto.ibc.core.commitment.v1.MerklePrefix.prototype.serializeBinary = function (
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.core.commitment.v1.MerklePrefix.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.core.commitment.v1.MerklePrefix.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getKeyPrefix_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       1,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * optional bytes key_prefix = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.ibc.core.commitment.v1.MerklePrefix.prototype.getKeyPrefix = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.ibc.core.commitment.v1.MerklePrefix.prototype.getKeyPrefix = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
+
 
 /**
  * optional bytes key_prefix = 1;
  * This is a type-conversion wrapper around `getKeyPrefix()`
  * @return {string}
  */
-proto.ibc.core.commitment.v1.MerklePrefix.prototype.getKeyPrefix_asB64 = function () {
+proto.ibc.core.commitment.v1.MerklePrefix.prototype.getKeyPrefix_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getKeyPrefix(),
-  ));
+      this.getKeyPrefix()));
 };
+
 
 /**
  * optional bytes key_prefix = 1;
@@ -323,16 +337,18 @@ proto.ibc.core.commitment.v1.MerklePrefix.prototype.getKeyPrefix_asB64 = functio
  * This is a type-conversion wrapper around `getKeyPrefix()`
  * @return {!Uint8Array}
  */
-proto.ibc.core.commitment.v1.MerklePrefix.prototype.getKeyPrefix_asU8 = function () {
+proto.ibc.core.commitment.v1.MerklePrefix.prototype.getKeyPrefix_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getKeyPrefix(),
-  ));
+      this.getKeyPrefix()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.ibc.core.commitment.v1.MerklePrefix.prototype.setKeyPrefix = function (value) {
+proto.ibc.core.commitment.v1.MerklePrefix.prototype.setKeyPrefix = function(value) {
   jspb.Message.setProto3BytesField(this, 1, value);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -344,7 +360,7 @@ proto.ibc.core.commitment.v1.MerklePrefix.prototype.setKeyPrefix = function (val
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.core.commitment.v1.MerklePath = function (opt_data) {
+proto.ibc.core.commitment.v1.MerklePath = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.ibc.core.commitment.v1.MerklePath.repeatedFields_, null);
 };
 goog.inherits(proto.ibc.core.commitment.v1.MerklePath, jspb.Message);
@@ -358,6 +374,8 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.ibc.core.commitment.v1.MerklePath.repeatedFields_ = [1];
 
+
+
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -369,11 +387,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.core.commitment.v1.MerklePath.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.core.commitment.v1.MerklePath.toObject(opt_includeInstance, this);
-  };
+proto.ibc.core.commitment.v1.MerklePath.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.core.commitment.v1.MerklePath.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -382,29 +401,30 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.core.commitment.v1.MerklePath.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        keyPathList: jspb.Message.getRepeatedField(msg, 1),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.core.commitment.v1.MerklePath.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    keyPathList: jspb.Message.getRepeatedField(msg, 1)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.core.commitment.v1.MerklePath}
  */
-proto.ibc.core.commitment.v1.MerklePath.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.core.commitment.v1.MerklePath();
+proto.ibc.core.commitment.v1.MerklePath.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.core.commitment.v1.MerklePath;
   return proto.ibc.core.commitment.v1.MerklePath.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -413,34 +433,36 @@ proto.ibc.core.commitment.v1.MerklePath.deserializeBinary = function (bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.core.commitment.v1.MerklePath}
  */
-proto.ibc.core.commitment.v1.MerklePath.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.core.commitment.v1.MerklePath.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {string} */ (reader.readString());
-        msg.addKeyPath(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addKeyPath(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.core.commitment.v1.MerklePath.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.core.commitment.v1.MerklePath.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.core.commitment.v1.MerklePath.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -449,41 +471,47 @@ proto.ibc.core.commitment.v1.MerklePath.prototype.serializeBinary = function () 
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.core.commitment.v1.MerklePath.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.core.commitment.v1.MerklePath.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getKeyPathList();
   if (f.length > 0) {
     writer.writeRepeatedString(
       1,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * repeated string key_path = 1;
  * @return {!Array<string>}
  */
-proto.ibc.core.commitment.v1.MerklePath.prototype.getKeyPathList = function () {
+proto.ibc.core.commitment.v1.MerklePath.prototype.getKeyPathList = function() {
   return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 1));
 };
 
+
 /** @param {!Array<string>} value */
-proto.ibc.core.commitment.v1.MerklePath.prototype.setKeyPathList = function (value) {
+proto.ibc.core.commitment.v1.MerklePath.prototype.setKeyPathList = function(value) {
   jspb.Message.setField(this, 1, value || []);
 };
+
 
 /**
  * @param {!string} value
  * @param {number=} opt_index
  */
-proto.ibc.core.commitment.v1.MerklePath.prototype.addKeyPath = function (value, opt_index) {
+proto.ibc.core.commitment.v1.MerklePath.prototype.addKeyPath = function(value, opt_index) {
   jspb.Message.addToRepeatedField(this, 1, value, opt_index);
 };
 
-proto.ibc.core.commitment.v1.MerklePath.prototype.clearKeyPathList = function () {
+
+proto.ibc.core.commitment.v1.MerklePath.prototype.clearKeyPathList = function() {
   this.setKeyPathList([]);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -495,7 +523,7 @@ proto.ibc.core.commitment.v1.MerklePath.prototype.clearKeyPathList = function ()
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.core.commitment.v1.MerkleProof = function (opt_data) {
+proto.ibc.core.commitment.v1.MerkleProof = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.ibc.core.commitment.v1.MerkleProof.repeatedFields_, null);
 };
 goog.inherits(proto.ibc.core.commitment.v1.MerkleProof, jspb.Message);
@@ -509,6 +537,8 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.ibc.core.commitment.v1.MerkleProof.repeatedFields_ = [1];
 
+
+
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -520,11 +550,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.core.commitment.v1.MerkleProof.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.core.commitment.v1.MerkleProof.toObject(opt_includeInstance, this);
-  };
+proto.ibc.core.commitment.v1.MerkleProof.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.core.commitment.v1.MerkleProof.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -533,30 +564,31 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.core.commitment.v1.MerkleProof.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        proofsList: jspb.Message.toObjectList(msg.getProofsList(),
-          confio_proofs_pb.CommitmentProof.toObject, includeInstance),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.core.commitment.v1.MerkleProof.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    proofsList: jspb.Message.toObjectList(msg.getProofsList(),
+    confio_proofs_pb.CommitmentProof.toObject, includeInstance)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.core.commitment.v1.MerkleProof}
  */
-proto.ibc.core.commitment.v1.MerkleProof.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.core.commitment.v1.MerkleProof();
+proto.ibc.core.commitment.v1.MerkleProof.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.core.commitment.v1.MerkleProof;
   return proto.ibc.core.commitment.v1.MerkleProof.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -565,35 +597,37 @@ proto.ibc.core.commitment.v1.MerkleProof.deserializeBinary = function (bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.core.commitment.v1.MerkleProof}
  */
-proto.ibc.core.commitment.v1.MerkleProof.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.core.commitment.v1.MerkleProof.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = new confio_proofs_pb.CommitmentProof();
-        reader.readMessage(value, confio_proofs_pb.CommitmentProof.deserializeBinaryFromReader);
-        msg.addProofs(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = new confio_proofs_pb.CommitmentProof;
+      reader.readMessage(value,confio_proofs_pb.CommitmentProof.deserializeBinaryFromReader);
+      msg.addProofs(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.core.commitment.v1.MerkleProof.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.core.commitment.v1.MerkleProof.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.core.commitment.v1.MerkleProof.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -602,43 +636,48 @@ proto.ibc.core.commitment.v1.MerkleProof.prototype.serializeBinary = function ()
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.core.commitment.v1.MerkleProof.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.core.commitment.v1.MerkleProof.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getProofsList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       1,
       f,
-      confio_proofs_pb.CommitmentProof.serializeBinaryToWriter,
+      confio_proofs_pb.CommitmentProof.serializeBinaryToWriter
     );
   }
 };
+
 
 /**
  * repeated ics23.CommitmentProof proofs = 1;
  * @return {!Array<!proto.ics23.CommitmentProof>}
  */
-proto.ibc.core.commitment.v1.MerkleProof.prototype.getProofsList = function () {
+proto.ibc.core.commitment.v1.MerkleProof.prototype.getProofsList = function() {
   return /** @type{!Array<!proto.ics23.CommitmentProof>} */ (
     jspb.Message.getRepeatedWrapperField(this, confio_proofs_pb.CommitmentProof, 1));
 };
 
+
 /** @param {!Array<!proto.ics23.CommitmentProof>} value */
-proto.ibc.core.commitment.v1.MerkleProof.prototype.setProofsList = function (value) {
+proto.ibc.core.commitment.v1.MerkleProof.prototype.setProofsList = function(value) {
   jspb.Message.setRepeatedWrapperField(this, 1, value);
 };
+
 
 /**
  * @param {!proto.ics23.CommitmentProof=} opt_value
  * @param {number=} opt_index
  * @return {!proto.ics23.CommitmentProof}
  */
-proto.ibc.core.commitment.v1.MerkleProof.prototype.addProofs = function (opt_value, opt_index) {
+proto.ibc.core.commitment.v1.MerkleProof.prototype.addProofs = function(opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.ics23.CommitmentProof, opt_index);
 };
 
-proto.ibc.core.commitment.v1.MerkleProof.prototype.clearProofsList = function () {
+
+proto.ibc.core.commitment.v1.MerkleProof.prototype.clearProofsList = function() {
   this.setProofsList([]);
 };
+
 
 goog.object.extend(exports, proto.ibc.core.commitment.v1);

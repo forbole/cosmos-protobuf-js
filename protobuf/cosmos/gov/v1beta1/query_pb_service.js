@@ -1,85 +1,85 @@
 // package: cosmos.gov.v1beta1
 // file: cosmos/gov/v1beta1/query.proto
 
-const { grpc } = require('@improbable-eng/grpc-web');
-const cosmos_gov_v1beta1_query_pb = require('./query_pb');
+var cosmos_gov_v1beta1_query_pb = require("../../../cosmos/gov/v1beta1/query_pb");
+var grpc = require("@improbable-eng/grpc-web").grpc;
 
-const Query = (function () {
+var Query = (function () {
   function Query() {}
-  Query.serviceName = 'cosmos.gov.v1beta1.Query';
+  Query.serviceName = "cosmos.gov.v1beta1.Query";
   return Query;
 }());
 
 Query.Proposal = {
-  methodName: 'Proposal',
+  methodName: "Proposal",
   service: Query,
   requestStream: false,
   responseStream: false,
   requestType: cosmos_gov_v1beta1_query_pb.QueryProposalRequest,
-  responseType: cosmos_gov_v1beta1_query_pb.QueryProposalResponse,
+  responseType: cosmos_gov_v1beta1_query_pb.QueryProposalResponse
 };
 
 Query.Proposals = {
-  methodName: 'Proposals',
+  methodName: "Proposals",
   service: Query,
   requestStream: false,
   responseStream: false,
   requestType: cosmos_gov_v1beta1_query_pb.QueryProposalsRequest,
-  responseType: cosmos_gov_v1beta1_query_pb.QueryProposalsResponse,
+  responseType: cosmos_gov_v1beta1_query_pb.QueryProposalsResponse
 };
 
 Query.Vote = {
-  methodName: 'Vote',
+  methodName: "Vote",
   service: Query,
   requestStream: false,
   responseStream: false,
   requestType: cosmos_gov_v1beta1_query_pb.QueryVoteRequest,
-  responseType: cosmos_gov_v1beta1_query_pb.QueryVoteResponse,
+  responseType: cosmos_gov_v1beta1_query_pb.QueryVoteResponse
 };
 
 Query.Votes = {
-  methodName: 'Votes',
+  methodName: "Votes",
   service: Query,
   requestStream: false,
   responseStream: false,
   requestType: cosmos_gov_v1beta1_query_pb.QueryVotesRequest,
-  responseType: cosmos_gov_v1beta1_query_pb.QueryVotesResponse,
+  responseType: cosmos_gov_v1beta1_query_pb.QueryVotesResponse
 };
 
 Query.Params = {
-  methodName: 'Params',
+  methodName: "Params",
   service: Query,
   requestStream: false,
   responseStream: false,
   requestType: cosmos_gov_v1beta1_query_pb.QueryParamsRequest,
-  responseType: cosmos_gov_v1beta1_query_pb.QueryParamsResponse,
+  responseType: cosmos_gov_v1beta1_query_pb.QueryParamsResponse
 };
 
 Query.Deposit = {
-  methodName: 'Deposit',
+  methodName: "Deposit",
   service: Query,
   requestStream: false,
   responseStream: false,
   requestType: cosmos_gov_v1beta1_query_pb.QueryDepositRequest,
-  responseType: cosmos_gov_v1beta1_query_pb.QueryDepositResponse,
+  responseType: cosmos_gov_v1beta1_query_pb.QueryDepositResponse
 };
 
 Query.Deposits = {
-  methodName: 'Deposits',
+  methodName: "Deposits",
   service: Query,
   requestStream: false,
   responseStream: false,
   requestType: cosmos_gov_v1beta1_query_pb.QueryDepositsRequest,
-  responseType: cosmos_gov_v1beta1_query_pb.QueryDepositsResponse,
+  responseType: cosmos_gov_v1beta1_query_pb.QueryDepositsResponse
 };
 
 Query.TallyResult = {
-  methodName: 'TallyResult',
+  methodName: "TallyResult",
   service: Query,
   requestStream: false,
   responseStream: false,
   requestType: cosmos_gov_v1beta1_query_pb.QueryTallyResultRequest,
-  responseType: cosmos_gov_v1beta1_query_pb.QueryTallyResultResponse,
+  responseType: cosmos_gov_v1beta1_query_pb.QueryTallyResultResponse
 };
 
 exports.Query = Query;
@@ -93,16 +93,16 @@ QueryClient.prototype.proposal = function proposal(requestMessage, metadata, cal
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  const client = grpc.unary(Query.Proposal, {
+  var client = grpc.unary(Query.Proposal, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata,
+    metadata: metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd(response) {
+    onEnd: function (response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          const err = new Error(response.statusMessage);
+          var err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -110,13 +110,13 @@ QueryClient.prototype.proposal = function proposal(requestMessage, metadata, cal
           callback(null, response.message);
         }
       }
-    },
+    }
   });
   return {
-    cancel() {
+    cancel: function () {
       callback = null;
       client.close();
-    },
+    }
   };
 };
 
@@ -124,16 +124,16 @@ QueryClient.prototype.proposals = function proposals(requestMessage, metadata, c
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  const client = grpc.unary(Query.Proposals, {
+  var client = grpc.unary(Query.Proposals, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata,
+    metadata: metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd(response) {
+    onEnd: function (response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          const err = new Error(response.statusMessage);
+          var err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -141,13 +141,13 @@ QueryClient.prototype.proposals = function proposals(requestMessage, metadata, c
           callback(null, response.message);
         }
       }
-    },
+    }
   });
   return {
-    cancel() {
+    cancel: function () {
       callback = null;
       client.close();
-    },
+    }
   };
 };
 
@@ -155,16 +155,16 @@ QueryClient.prototype.vote = function vote(requestMessage, metadata, callback) {
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  const client = grpc.unary(Query.Vote, {
+  var client = grpc.unary(Query.Vote, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata,
+    metadata: metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd(response) {
+    onEnd: function (response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          const err = new Error(response.statusMessage);
+          var err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -172,13 +172,13 @@ QueryClient.prototype.vote = function vote(requestMessage, metadata, callback) {
           callback(null, response.message);
         }
       }
-    },
+    }
   });
   return {
-    cancel() {
+    cancel: function () {
       callback = null;
       client.close();
-    },
+    }
   };
 };
 
@@ -186,16 +186,16 @@ QueryClient.prototype.votes = function votes(requestMessage, metadata, callback)
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  const client = grpc.unary(Query.Votes, {
+  var client = grpc.unary(Query.Votes, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata,
+    metadata: metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd(response) {
+    onEnd: function (response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          const err = new Error(response.statusMessage);
+          var err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -203,13 +203,13 @@ QueryClient.prototype.votes = function votes(requestMessage, metadata, callback)
           callback(null, response.message);
         }
       }
-    },
+    }
   });
   return {
-    cancel() {
+    cancel: function () {
       callback = null;
       client.close();
-    },
+    }
   };
 };
 
@@ -217,16 +217,16 @@ QueryClient.prototype.params = function params(requestMessage, metadata, callbac
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  const client = grpc.unary(Query.Params, {
+  var client = grpc.unary(Query.Params, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata,
+    metadata: metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd(response) {
+    onEnd: function (response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          const err = new Error(response.statusMessage);
+          var err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -234,13 +234,13 @@ QueryClient.prototype.params = function params(requestMessage, metadata, callbac
           callback(null, response.message);
         }
       }
-    },
+    }
   });
   return {
-    cancel() {
+    cancel: function () {
       callback = null;
       client.close();
-    },
+    }
   };
 };
 
@@ -248,16 +248,16 @@ QueryClient.prototype.deposit = function deposit(requestMessage, metadata, callb
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  const client = grpc.unary(Query.Deposit, {
+  var client = grpc.unary(Query.Deposit, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata,
+    metadata: metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd(response) {
+    onEnd: function (response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          const err = new Error(response.statusMessage);
+          var err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -265,13 +265,13 @@ QueryClient.prototype.deposit = function deposit(requestMessage, metadata, callb
           callback(null, response.message);
         }
       }
-    },
+    }
   });
   return {
-    cancel() {
+    cancel: function () {
       callback = null;
       client.close();
-    },
+    }
   };
 };
 
@@ -279,16 +279,16 @@ QueryClient.prototype.deposits = function deposits(requestMessage, metadata, cal
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  const client = grpc.unary(Query.Deposits, {
+  var client = grpc.unary(Query.Deposits, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata,
+    metadata: metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd(response) {
+    onEnd: function (response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          const err = new Error(response.statusMessage);
+          var err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -296,13 +296,13 @@ QueryClient.prototype.deposits = function deposits(requestMessage, metadata, cal
           callback(null, response.message);
         }
       }
-    },
+    }
   });
   return {
-    cancel() {
+    cancel: function () {
       callback = null;
       client.close();
-    },
+    }
   };
 };
 
@@ -310,16 +310,16 @@ QueryClient.prototype.tallyResult = function tallyResult(requestMessage, metadat
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  const client = grpc.unary(Query.TallyResult, {
+  var client = grpc.unary(Query.TallyResult, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata,
+    metadata: metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd(response) {
+    onEnd: function (response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          const err = new Error(response.statusMessage);
+          var err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -327,14 +327,15 @@ QueryClient.prototype.tallyResult = function tallyResult(requestMessage, metadat
           callback(null, response.message);
         }
       }
-    },
+    }
   });
   return {
-    cancel() {
+    cancel: function () {
       callback = null;
       client.close();
-    },
+    }
   };
 };
 
 exports.QueryClient = QueryClient;
+

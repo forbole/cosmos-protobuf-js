@@ -1,58 +1,58 @@
 // package: cosmos.staking.v1beta1
 // file: cosmos/staking/v1beta1/tx.proto
 
-const { grpc } = require('@improbable-eng/grpc-web');
-const cosmos_staking_v1beta1_tx_pb = require('./tx_pb');
+var cosmos_staking_v1beta1_tx_pb = require("../../../cosmos/staking/v1beta1/tx_pb");
+var grpc = require("@improbable-eng/grpc-web").grpc;
 
-const Msg = (function () {
+var Msg = (function () {
   function Msg() {}
-  Msg.serviceName = 'cosmos.staking.v1beta1.Msg';
+  Msg.serviceName = "cosmos.staking.v1beta1.Msg";
   return Msg;
 }());
 
 Msg.CreateValidator = {
-  methodName: 'CreateValidator',
+  methodName: "CreateValidator",
   service: Msg,
   requestStream: false,
   responseStream: false,
   requestType: cosmos_staking_v1beta1_tx_pb.MsgCreateValidator,
-  responseType: cosmos_staking_v1beta1_tx_pb.MsgCreateValidatorResponse,
+  responseType: cosmos_staking_v1beta1_tx_pb.MsgCreateValidatorResponse
 };
 
 Msg.EditValidator = {
-  methodName: 'EditValidator',
+  methodName: "EditValidator",
   service: Msg,
   requestStream: false,
   responseStream: false,
   requestType: cosmos_staking_v1beta1_tx_pb.MsgEditValidator,
-  responseType: cosmos_staking_v1beta1_tx_pb.MsgEditValidatorResponse,
+  responseType: cosmos_staking_v1beta1_tx_pb.MsgEditValidatorResponse
 };
 
 Msg.Delegate = {
-  methodName: 'Delegate',
+  methodName: "Delegate",
   service: Msg,
   requestStream: false,
   responseStream: false,
   requestType: cosmos_staking_v1beta1_tx_pb.MsgDelegate,
-  responseType: cosmos_staking_v1beta1_tx_pb.MsgDelegateResponse,
+  responseType: cosmos_staking_v1beta1_tx_pb.MsgDelegateResponse
 };
 
 Msg.BeginRedelegate = {
-  methodName: 'BeginRedelegate',
+  methodName: "BeginRedelegate",
   service: Msg,
   requestStream: false,
   responseStream: false,
   requestType: cosmos_staking_v1beta1_tx_pb.MsgBeginRedelegate,
-  responseType: cosmos_staking_v1beta1_tx_pb.MsgBeginRedelegateResponse,
+  responseType: cosmos_staking_v1beta1_tx_pb.MsgBeginRedelegateResponse
 };
 
 Msg.Undelegate = {
-  methodName: 'Undelegate',
+  methodName: "Undelegate",
   service: Msg,
   requestStream: false,
   responseStream: false,
   requestType: cosmos_staking_v1beta1_tx_pb.MsgUndelegate,
-  responseType: cosmos_staking_v1beta1_tx_pb.MsgUndelegateResponse,
+  responseType: cosmos_staking_v1beta1_tx_pb.MsgUndelegateResponse
 };
 
 exports.Msg = Msg;
@@ -66,16 +66,16 @@ MsgClient.prototype.createValidator = function createValidator(requestMessage, m
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  const client = grpc.unary(Msg.CreateValidator, {
+  var client = grpc.unary(Msg.CreateValidator, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata,
+    metadata: metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd(response) {
+    onEnd: function (response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          const err = new Error(response.statusMessage);
+          var err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -83,13 +83,13 @@ MsgClient.prototype.createValidator = function createValidator(requestMessage, m
           callback(null, response.message);
         }
       }
-    },
+    }
   });
   return {
-    cancel() {
+    cancel: function () {
       callback = null;
       client.close();
-    },
+    }
   };
 };
 
@@ -97,16 +97,16 @@ MsgClient.prototype.editValidator = function editValidator(requestMessage, metad
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  const client = grpc.unary(Msg.EditValidator, {
+  var client = grpc.unary(Msg.EditValidator, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata,
+    metadata: metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd(response) {
+    onEnd: function (response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          const err = new Error(response.statusMessage);
+          var err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -114,13 +114,13 @@ MsgClient.prototype.editValidator = function editValidator(requestMessage, metad
           callback(null, response.message);
         }
       }
-    },
+    }
   });
   return {
-    cancel() {
+    cancel: function () {
       callback = null;
       client.close();
-    },
+    }
   };
 };
 
@@ -128,16 +128,16 @@ MsgClient.prototype.delegate = function delegate(requestMessage, metadata, callb
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  const client = grpc.unary(Msg.Delegate, {
+  var client = grpc.unary(Msg.Delegate, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata,
+    metadata: metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd(response) {
+    onEnd: function (response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          const err = new Error(response.statusMessage);
+          var err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -145,13 +145,13 @@ MsgClient.prototype.delegate = function delegate(requestMessage, metadata, callb
           callback(null, response.message);
         }
       }
-    },
+    }
   });
   return {
-    cancel() {
+    cancel: function () {
       callback = null;
       client.close();
-    },
+    }
   };
 };
 
@@ -159,16 +159,16 @@ MsgClient.prototype.beginRedelegate = function beginRedelegate(requestMessage, m
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  const client = grpc.unary(Msg.BeginRedelegate, {
+  var client = grpc.unary(Msg.BeginRedelegate, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata,
+    metadata: metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd(response) {
+    onEnd: function (response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          const err = new Error(response.statusMessage);
+          var err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -176,13 +176,13 @@ MsgClient.prototype.beginRedelegate = function beginRedelegate(requestMessage, m
           callback(null, response.message);
         }
       }
-    },
+    }
   });
   return {
-    cancel() {
+    cancel: function () {
       callback = null;
       client.close();
-    },
+    }
   };
 };
 
@@ -190,16 +190,16 @@ MsgClient.prototype.undelegate = function undelegate(requestMessage, metadata, c
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  const client = grpc.unary(Msg.Undelegate, {
+  var client = grpc.unary(Msg.Undelegate, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata,
+    metadata: metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd(response) {
+    onEnd: function (response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          const err = new Error(response.statusMessage);
+          var err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -207,14 +207,15 @@ MsgClient.prototype.undelegate = function undelegate(requestMessage, metadata, c
           callback(null, response.message);
         }
       }
-    },
+    }
   });
   return {
-    cancel() {
+    cancel: function () {
       callback = null;
       client.close();
-    },
+    }
   };
 };
 
 exports.MsgClient = MsgClient;
+

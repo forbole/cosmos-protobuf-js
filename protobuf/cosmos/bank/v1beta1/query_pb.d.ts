@@ -3,6 +3,8 @@
 
 import * as jspb from "google-protobuf";
 import * as cosmos_base_query_v1beta1_pagination_pb from "../../../cosmos/base/query/v1beta1/pagination_pb";
+import * as gogoproto_gogo_pb from "../../../gogoproto/gogo_pb";
+import * as google_api_annotations_pb from "../../../google/api/annotations_pb";
 import * as cosmos_base_v1beta1_coin_pb from "../../../cosmos/base/v1beta1/coin_pb";
 import * as cosmos_bank_v1beta1_bank_pb from "../../../cosmos/bank/v1beta1/bank_pb";
 

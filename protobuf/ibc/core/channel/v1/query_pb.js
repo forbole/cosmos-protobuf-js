@@ -7,18 +7,16 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-const jspb = require('google-protobuf');
+var jspb = require('google-protobuf');
+var goog = jspb;
+var global = Function('return this')();
 
-const goog = jspb;
-const global = Function('return this')();
-
-const google_protobuf_any_pb = require('google-protobuf/google/protobuf/any_pb.js');
-const ibc_core_client_v1_client_pb = require('../../client/v1/client_pb.js');
-const cosmos_base_query_v1beta1_pagination_pb = require('../../../../cosmos/base/query/v1beta1/pagination_pb.js');
-const ibc_core_channel_v1_channel_pb = require('./channel_pb.js');
-const google_api_annotations_pb = require('../../../../google/api/annotations_pb.js');
-const gogoproto_gogo_pb = require('../../../../gogoproto/gogo_pb.js');
-
+var ibc_core_client_v1_client_pb = require('../../../../ibc/core/client/v1/client_pb.js');
+var cosmos_base_query_v1beta1_pagination_pb = require('../../../../cosmos/base/query/v1beta1/pagination_pb.js');
+var ibc_core_channel_v1_channel_pb = require('../../../../ibc/core/channel/v1/channel_pb.js');
+var google_api_annotations_pb = require('../../../../google/api/annotations_pb.js');
+var google_protobuf_any_pb = require('google-protobuf/google/protobuf/any_pb.js');
+var gogoproto_gogo_pb = require('../../../../gogoproto/gogo_pb.js');
 goog.exportSymbol('proto.ibc.core.channel.v1.QueryChannelClientStateRequest', null, global);
 goog.exportSymbol('proto.ibc.core.channel.v1.QueryChannelClientStateResponse', null, global);
 goog.exportSymbol('proto.ibc.core.channel.v1.QueryChannelConsensusStateRequest', null, global);
@@ -56,13 +54,14 @@ goog.exportSymbol('proto.ibc.core.channel.v1.QueryUnreceivedPacketsResponse', nu
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.core.channel.v1.QueryChannelRequest = function (opt_data) {
+proto.ibc.core.channel.v1.QueryChannelRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.ibc.core.channel.v1.QueryChannelRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.ibc.core.channel.v1.QueryChannelRequest.displayName = 'proto.ibc.core.channel.v1.QueryChannelRequest';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -75,11 +74,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.core.channel.v1.QueryChannelRequest.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.core.channel.v1.QueryChannelRequest.toObject(opt_includeInstance, this);
-  };
+proto.ibc.core.channel.v1.QueryChannelRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.core.channel.v1.QueryChannelRequest.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -88,30 +88,31 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.core.channel.v1.QueryChannelRequest.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        portId: jspb.Message.getFieldWithDefault(msg, 1, ''),
-        channelId: jspb.Message.getFieldWithDefault(msg, 2, ''),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.core.channel.v1.QueryChannelRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    portId: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    channelId: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.core.channel.v1.QueryChannelRequest}
  */
-proto.ibc.core.channel.v1.QueryChannelRequest.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.core.channel.v1.QueryChannelRequest();
+proto.ibc.core.channel.v1.QueryChannelRequest.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.core.channel.v1.QueryChannelRequest;
   return proto.ibc.core.channel.v1.QueryChannelRequest.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -120,38 +121,40 @@ proto.ibc.core.channel.v1.QueryChannelRequest.deserializeBinary = function (byte
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.core.channel.v1.QueryChannelRequest}
  */
-proto.ibc.core.channel.v1.QueryChannelRequest.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.core.channel.v1.QueryChannelRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setPortId(value);
-        break;
-      case 2:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setChannelId(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setPortId(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setChannelId(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.core.channel.v1.QueryChannelRequest.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.core.channel.v1.QueryChannelRequest.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.core.channel.v1.QueryChannelRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -160,49 +163,55 @@ proto.ibc.core.channel.v1.QueryChannelRequest.prototype.serializeBinary = functi
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.core.channel.v1.QueryChannelRequest.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.core.channel.v1.QueryChannelRequest.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getPortId();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f,
+      f
     );
   }
   f = message.getChannelId();
   if (f.length > 0) {
     writer.writeString(
       2,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * optional string port_id = 1;
  * @return {string}
  */
-proto.ibc.core.channel.v1.QueryChannelRequest.prototype.getPortId = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.ibc.core.channel.v1.QueryChannelRequest.prototype.getPortId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
+
 /** @param {string} value */
-proto.ibc.core.channel.v1.QueryChannelRequest.prototype.setPortId = function (value) {
+proto.ibc.core.channel.v1.QueryChannelRequest.prototype.setPortId = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
+
 
 /**
  * optional string channel_id = 2;
  * @return {string}
  */
-proto.ibc.core.channel.v1.QueryChannelRequest.prototype.getChannelId = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
+proto.ibc.core.channel.v1.QueryChannelRequest.prototype.getChannelId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
+
 /** @param {string} value */
-proto.ibc.core.channel.v1.QueryChannelRequest.prototype.setChannelId = function (value) {
+proto.ibc.core.channel.v1.QueryChannelRequest.prototype.setChannelId = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -214,13 +223,14 @@ proto.ibc.core.channel.v1.QueryChannelRequest.prototype.setChannelId = function 
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.core.channel.v1.QueryChannelResponse = function (opt_data) {
+proto.ibc.core.channel.v1.QueryChannelResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.ibc.core.channel.v1.QueryChannelResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.ibc.core.channel.v1.QueryChannelResponse.displayName = 'proto.ibc.core.channel.v1.QueryChannelResponse';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -233,11 +243,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.core.channel.v1.QueryChannelResponse.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.core.channel.v1.QueryChannelResponse.toObject(opt_includeInstance, this);
-  };
+proto.ibc.core.channel.v1.QueryChannelResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.core.channel.v1.QueryChannelResponse.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -246,31 +257,32 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.core.channel.v1.QueryChannelResponse.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        channel: (f = msg.getChannel()) && ibc_core_channel_v1_channel_pb.Channel.toObject(includeInstance, f),
-        proof: msg.getProof_asB64(),
-        proofHeight: (f = msg.getProofHeight()) && ibc_core_client_v1_client_pb.Height.toObject(includeInstance, f),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.core.channel.v1.QueryChannelResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    channel: (f = msg.getChannel()) && ibc_core_channel_v1_channel_pb.Channel.toObject(includeInstance, f),
+    proof: msg.getProof_asB64(),
+    proofHeight: (f = msg.getProofHeight()) && ibc_core_client_v1_client_pb.Height.toObject(includeInstance, f)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.core.channel.v1.QueryChannelResponse}
  */
-proto.ibc.core.channel.v1.QueryChannelResponse.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.core.channel.v1.QueryChannelResponse();
+proto.ibc.core.channel.v1.QueryChannelResponse.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.core.channel.v1.QueryChannelResponse;
   return proto.ibc.core.channel.v1.QueryChannelResponse.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -279,44 +291,46 @@ proto.ibc.core.channel.v1.QueryChannelResponse.deserializeBinary = function (byt
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.core.channel.v1.QueryChannelResponse}
  */
-proto.ibc.core.channel.v1.QueryChannelResponse.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.core.channel.v1.QueryChannelResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = new ibc_core_channel_v1_channel_pb.Channel();
-        reader.readMessage(value, ibc_core_channel_v1_channel_pb.Channel.deserializeBinaryFromReader);
-        msg.setChannel(value);
-        break;
-      case 2:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setProof(value);
-        break;
-      case 3:
-        var value = new ibc_core_client_v1_client_pb.Height();
-        reader.readMessage(value, ibc_core_client_v1_client_pb.Height.deserializeBinaryFromReader);
-        msg.setProofHeight(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = new ibc_core_channel_v1_channel_pb.Channel;
+      reader.readMessage(value,ibc_core_channel_v1_channel_pb.Channel.deserializeBinaryFromReader);
+      msg.setChannel(value);
+      break;
+    case 2:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setProof(value);
+      break;
+    case 3:
+      var value = new ibc_core_client_v1_client_pb.Height;
+      reader.readMessage(value,ibc_core_client_v1_client_pb.Height.deserializeBinaryFromReader);
+      msg.setProofHeight(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.core.channel.v1.QueryChannelResponse.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.core.channel.v1.QueryChannelResponse.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.core.channel.v1.QueryChannelResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -325,21 +339,21 @@ proto.ibc.core.channel.v1.QueryChannelResponse.prototype.serializeBinary = funct
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.core.channel.v1.QueryChannelResponse.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.core.channel.v1.QueryChannelResponse.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getChannel();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      ibc_core_channel_v1_channel_pb.Channel.serializeBinaryToWriter,
+      ibc_core_channel_v1_channel_pb.Channel.serializeBinaryToWriter
     );
   }
   f = message.getProof_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       2,
-      f,
+      f
     );
   }
   f = message.getProofHeight();
@@ -347,55 +361,61 @@ proto.ibc.core.channel.v1.QueryChannelResponse.serializeBinaryToWriter = functio
     writer.writeMessage(
       3,
       f,
-      ibc_core_client_v1_client_pb.Height.serializeBinaryToWriter,
+      ibc_core_client_v1_client_pb.Height.serializeBinaryToWriter
     );
   }
 };
+
 
 /**
  * optional Channel channel = 1;
  * @return {?proto.ibc.core.channel.v1.Channel}
  */
-proto.ibc.core.channel.v1.QueryChannelResponse.prototype.getChannel = function () {
+proto.ibc.core.channel.v1.QueryChannelResponse.prototype.getChannel = function() {
   return /** @type{?proto.ibc.core.channel.v1.Channel} */ (
     jspb.Message.getWrapperField(this, ibc_core_channel_v1_channel_pb.Channel, 1));
 };
 
+
 /** @param {?proto.ibc.core.channel.v1.Channel|undefined} value */
-proto.ibc.core.channel.v1.QueryChannelResponse.prototype.setChannel = function (value) {
+proto.ibc.core.channel.v1.QueryChannelResponse.prototype.setChannel = function(value) {
   jspb.Message.setWrapperField(this, 1, value);
 };
 
-proto.ibc.core.channel.v1.QueryChannelResponse.prototype.clearChannel = function () {
+
+proto.ibc.core.channel.v1.QueryChannelResponse.prototype.clearChannel = function() {
   this.setChannel(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.ibc.core.channel.v1.QueryChannelResponse.prototype.hasChannel = function () {
+proto.ibc.core.channel.v1.QueryChannelResponse.prototype.hasChannel = function() {
   return jspb.Message.getField(this, 1) != null;
 };
+
 
 /**
  * optional bytes proof = 2;
  * @return {!(string|Uint8Array)}
  */
-proto.ibc.core.channel.v1.QueryChannelResponse.prototype.getProof = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
+proto.ibc.core.channel.v1.QueryChannelResponse.prototype.getProof = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
+
 
 /**
  * optional bytes proof = 2;
  * This is a type-conversion wrapper around `getProof()`
  * @return {string}
  */
-proto.ibc.core.channel.v1.QueryChannelResponse.prototype.getProof_asB64 = function () {
+proto.ibc.core.channel.v1.QueryChannelResponse.prototype.getProof_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getProof(),
-  ));
+      this.getProof()));
 };
+
 
 /**
  * optional bytes proof = 2;
@@ -404,42 +424,48 @@ proto.ibc.core.channel.v1.QueryChannelResponse.prototype.getProof_asB64 = functi
  * This is a type-conversion wrapper around `getProof()`
  * @return {!Uint8Array}
  */
-proto.ibc.core.channel.v1.QueryChannelResponse.prototype.getProof_asU8 = function () {
+proto.ibc.core.channel.v1.QueryChannelResponse.prototype.getProof_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getProof(),
-  ));
+      this.getProof()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.ibc.core.channel.v1.QueryChannelResponse.prototype.setProof = function (value) {
+proto.ibc.core.channel.v1.QueryChannelResponse.prototype.setProof = function(value) {
   jspb.Message.setProto3BytesField(this, 2, value);
 };
+
 
 /**
  * optional ibc.core.client.v1.Height proof_height = 3;
  * @return {?proto.ibc.core.client.v1.Height}
  */
-proto.ibc.core.channel.v1.QueryChannelResponse.prototype.getProofHeight = function () {
+proto.ibc.core.channel.v1.QueryChannelResponse.prototype.getProofHeight = function() {
   return /** @type{?proto.ibc.core.client.v1.Height} */ (
     jspb.Message.getWrapperField(this, ibc_core_client_v1_client_pb.Height, 3));
 };
 
+
 /** @param {?proto.ibc.core.client.v1.Height|undefined} value */
-proto.ibc.core.channel.v1.QueryChannelResponse.prototype.setProofHeight = function (value) {
+proto.ibc.core.channel.v1.QueryChannelResponse.prototype.setProofHeight = function(value) {
   jspb.Message.setWrapperField(this, 3, value);
 };
 
-proto.ibc.core.channel.v1.QueryChannelResponse.prototype.clearProofHeight = function () {
+
+proto.ibc.core.channel.v1.QueryChannelResponse.prototype.clearProofHeight = function() {
   this.setProofHeight(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.ibc.core.channel.v1.QueryChannelResponse.prototype.hasProofHeight = function () {
+proto.ibc.core.channel.v1.QueryChannelResponse.prototype.hasProofHeight = function() {
   return jspb.Message.getField(this, 3) != null;
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -451,13 +477,14 @@ proto.ibc.core.channel.v1.QueryChannelResponse.prototype.hasProofHeight = functi
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.core.channel.v1.QueryChannelsRequest = function (opt_data) {
+proto.ibc.core.channel.v1.QueryChannelsRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.ibc.core.channel.v1.QueryChannelsRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.ibc.core.channel.v1.QueryChannelsRequest.displayName = 'proto.ibc.core.channel.v1.QueryChannelsRequest';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -470,11 +497,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.core.channel.v1.QueryChannelsRequest.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.core.channel.v1.QueryChannelsRequest.toObject(opt_includeInstance, this);
-  };
+proto.ibc.core.channel.v1.QueryChannelsRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.core.channel.v1.QueryChannelsRequest.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -483,29 +511,30 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.core.channel.v1.QueryChannelsRequest.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        pagination: (f = msg.getPagination()) && cosmos_base_query_v1beta1_pagination_pb.PageRequest.toObject(includeInstance, f),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.core.channel.v1.QueryChannelsRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    pagination: (f = msg.getPagination()) && cosmos_base_query_v1beta1_pagination_pb.PageRequest.toObject(includeInstance, f)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.core.channel.v1.QueryChannelsRequest}
  */
-proto.ibc.core.channel.v1.QueryChannelsRequest.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.core.channel.v1.QueryChannelsRequest();
+proto.ibc.core.channel.v1.QueryChannelsRequest.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.core.channel.v1.QueryChannelsRequest;
   return proto.ibc.core.channel.v1.QueryChannelsRequest.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -514,35 +543,37 @@ proto.ibc.core.channel.v1.QueryChannelsRequest.deserializeBinary = function (byt
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.core.channel.v1.QueryChannelsRequest}
  */
-proto.ibc.core.channel.v1.QueryChannelsRequest.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.core.channel.v1.QueryChannelsRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = new cosmos_base_query_v1beta1_pagination_pb.PageRequest();
-        reader.readMessage(value, cosmos_base_query_v1beta1_pagination_pb.PageRequest.deserializeBinaryFromReader);
-        msg.setPagination(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = new cosmos_base_query_v1beta1_pagination_pb.PageRequest;
+      reader.readMessage(value,cosmos_base_query_v1beta1_pagination_pb.PageRequest.deserializeBinaryFromReader);
+      msg.setPagination(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.core.channel.v1.QueryChannelsRequest.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.core.channel.v1.QueryChannelsRequest.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.core.channel.v1.QueryChannelsRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -551,43 +582,49 @@ proto.ibc.core.channel.v1.QueryChannelsRequest.prototype.serializeBinary = funct
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.core.channel.v1.QueryChannelsRequest.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.core.channel.v1.QueryChannelsRequest.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getPagination();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      cosmos_base_query_v1beta1_pagination_pb.PageRequest.serializeBinaryToWriter,
+      cosmos_base_query_v1beta1_pagination_pb.PageRequest.serializeBinaryToWriter
     );
   }
 };
+
 
 /**
  * optional cosmos.base.query.v1beta1.PageRequest pagination = 1;
  * @return {?proto.cosmos.base.query.v1beta1.PageRequest}
  */
-proto.ibc.core.channel.v1.QueryChannelsRequest.prototype.getPagination = function () {
+proto.ibc.core.channel.v1.QueryChannelsRequest.prototype.getPagination = function() {
   return /** @type{?proto.cosmos.base.query.v1beta1.PageRequest} */ (
     jspb.Message.getWrapperField(this, cosmos_base_query_v1beta1_pagination_pb.PageRequest, 1));
 };
 
+
 /** @param {?proto.cosmos.base.query.v1beta1.PageRequest|undefined} value */
-proto.ibc.core.channel.v1.QueryChannelsRequest.prototype.setPagination = function (value) {
+proto.ibc.core.channel.v1.QueryChannelsRequest.prototype.setPagination = function(value) {
   jspb.Message.setWrapperField(this, 1, value);
 };
 
-proto.ibc.core.channel.v1.QueryChannelsRequest.prototype.clearPagination = function () {
+
+proto.ibc.core.channel.v1.QueryChannelsRequest.prototype.clearPagination = function() {
   this.setPagination(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.ibc.core.channel.v1.QueryChannelsRequest.prototype.hasPagination = function () {
+proto.ibc.core.channel.v1.QueryChannelsRequest.prototype.hasPagination = function() {
   return jspb.Message.getField(this, 1) != null;
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -599,7 +636,7 @@ proto.ibc.core.channel.v1.QueryChannelsRequest.prototype.hasPagination = functio
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.core.channel.v1.QueryChannelsResponse = function (opt_data) {
+proto.ibc.core.channel.v1.QueryChannelsResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.ibc.core.channel.v1.QueryChannelsResponse.repeatedFields_, null);
 };
 goog.inherits(proto.ibc.core.channel.v1.QueryChannelsResponse, jspb.Message);
@@ -613,6 +650,8 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.ibc.core.channel.v1.QueryChannelsResponse.repeatedFields_ = [1];
 
+
+
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -624,11 +663,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.core.channel.v1.QueryChannelsResponse.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.core.channel.v1.QueryChannelsResponse.toObject(opt_includeInstance, this);
-  };
+proto.ibc.core.channel.v1.QueryChannelsResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.core.channel.v1.QueryChannelsResponse.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -637,32 +677,33 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.core.channel.v1.QueryChannelsResponse.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        channelsList: jspb.Message.toObjectList(msg.getChannelsList(),
-          ibc_core_channel_v1_channel_pb.IdentifiedChannel.toObject, includeInstance),
-        pagination: (f = msg.getPagination()) && cosmos_base_query_v1beta1_pagination_pb.PageResponse.toObject(includeInstance, f),
-        height: (f = msg.getHeight()) && ibc_core_client_v1_client_pb.Height.toObject(includeInstance, f),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.core.channel.v1.QueryChannelsResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    channelsList: jspb.Message.toObjectList(msg.getChannelsList(),
+    ibc_core_channel_v1_channel_pb.IdentifiedChannel.toObject, includeInstance),
+    pagination: (f = msg.getPagination()) && cosmos_base_query_v1beta1_pagination_pb.PageResponse.toObject(includeInstance, f),
+    height: (f = msg.getHeight()) && ibc_core_client_v1_client_pb.Height.toObject(includeInstance, f)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.core.channel.v1.QueryChannelsResponse}
  */
-proto.ibc.core.channel.v1.QueryChannelsResponse.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.core.channel.v1.QueryChannelsResponse();
+proto.ibc.core.channel.v1.QueryChannelsResponse.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.core.channel.v1.QueryChannelsResponse;
   return proto.ibc.core.channel.v1.QueryChannelsResponse.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -671,45 +712,47 @@ proto.ibc.core.channel.v1.QueryChannelsResponse.deserializeBinary = function (by
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.core.channel.v1.QueryChannelsResponse}
  */
-proto.ibc.core.channel.v1.QueryChannelsResponse.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.core.channel.v1.QueryChannelsResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = new ibc_core_channel_v1_channel_pb.IdentifiedChannel();
-        reader.readMessage(value, ibc_core_channel_v1_channel_pb.IdentifiedChannel.deserializeBinaryFromReader);
-        msg.addChannels(value);
-        break;
-      case 2:
-        var value = new cosmos_base_query_v1beta1_pagination_pb.PageResponse();
-        reader.readMessage(value, cosmos_base_query_v1beta1_pagination_pb.PageResponse.deserializeBinaryFromReader);
-        msg.setPagination(value);
-        break;
-      case 3:
-        var value = new ibc_core_client_v1_client_pb.Height();
-        reader.readMessage(value, ibc_core_client_v1_client_pb.Height.deserializeBinaryFromReader);
-        msg.setHeight(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = new ibc_core_channel_v1_channel_pb.IdentifiedChannel;
+      reader.readMessage(value,ibc_core_channel_v1_channel_pb.IdentifiedChannel.deserializeBinaryFromReader);
+      msg.addChannels(value);
+      break;
+    case 2:
+      var value = new cosmos_base_query_v1beta1_pagination_pb.PageResponse;
+      reader.readMessage(value,cosmos_base_query_v1beta1_pagination_pb.PageResponse.deserializeBinaryFromReader);
+      msg.setPagination(value);
+      break;
+    case 3:
+      var value = new ibc_core_client_v1_client_pb.Height;
+      reader.readMessage(value,ibc_core_client_v1_client_pb.Height.deserializeBinaryFromReader);
+      msg.setHeight(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.core.channel.v1.QueryChannelsResponse.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.core.channel.v1.QueryChannelsResponse.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.core.channel.v1.QueryChannelsResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -718,14 +761,14 @@ proto.ibc.core.channel.v1.QueryChannelsResponse.prototype.serializeBinary = func
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.core.channel.v1.QueryChannelsResponse.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.core.channel.v1.QueryChannelsResponse.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getChannelsList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       1,
       f,
-      ibc_core_channel_v1_channel_pb.IdentifiedChannel.serializeBinaryToWriter,
+      ibc_core_channel_v1_channel_pb.IdentifiedChannel.serializeBinaryToWriter
     );
   }
   f = message.getPagination();
@@ -733,7 +776,7 @@ proto.ibc.core.channel.v1.QueryChannelsResponse.serializeBinaryToWriter = functi
     writer.writeMessage(
       2,
       f,
-      cosmos_base_query_v1beta1_pagination_pb.PageResponse.serializeBinaryToWriter,
+      cosmos_base_query_v1beta1_pagination_pb.PageResponse.serializeBinaryToWriter
     );
   }
   f = message.getHeight();
@@ -741,89 +784,103 @@ proto.ibc.core.channel.v1.QueryChannelsResponse.serializeBinaryToWriter = functi
     writer.writeMessage(
       3,
       f,
-      ibc_core_client_v1_client_pb.Height.serializeBinaryToWriter,
+      ibc_core_client_v1_client_pb.Height.serializeBinaryToWriter
     );
   }
 };
+
 
 /**
  * repeated IdentifiedChannel channels = 1;
  * @return {!Array<!proto.ibc.core.channel.v1.IdentifiedChannel>}
  */
-proto.ibc.core.channel.v1.QueryChannelsResponse.prototype.getChannelsList = function () {
+proto.ibc.core.channel.v1.QueryChannelsResponse.prototype.getChannelsList = function() {
   return /** @type{!Array<!proto.ibc.core.channel.v1.IdentifiedChannel>} */ (
     jspb.Message.getRepeatedWrapperField(this, ibc_core_channel_v1_channel_pb.IdentifiedChannel, 1));
 };
 
+
 /** @param {!Array<!proto.ibc.core.channel.v1.IdentifiedChannel>} value */
-proto.ibc.core.channel.v1.QueryChannelsResponse.prototype.setChannelsList = function (value) {
+proto.ibc.core.channel.v1.QueryChannelsResponse.prototype.setChannelsList = function(value) {
   jspb.Message.setRepeatedWrapperField(this, 1, value);
 };
+
 
 /**
  * @param {!proto.ibc.core.channel.v1.IdentifiedChannel=} opt_value
  * @param {number=} opt_index
  * @return {!proto.ibc.core.channel.v1.IdentifiedChannel}
  */
-proto.ibc.core.channel.v1.QueryChannelsResponse.prototype.addChannels = function (opt_value, opt_index) {
+proto.ibc.core.channel.v1.QueryChannelsResponse.prototype.addChannels = function(opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.ibc.core.channel.v1.IdentifiedChannel, opt_index);
 };
 
-proto.ibc.core.channel.v1.QueryChannelsResponse.prototype.clearChannelsList = function () {
+
+proto.ibc.core.channel.v1.QueryChannelsResponse.prototype.clearChannelsList = function() {
   this.setChannelsList([]);
 };
+
 
 /**
  * optional cosmos.base.query.v1beta1.PageResponse pagination = 2;
  * @return {?proto.cosmos.base.query.v1beta1.PageResponse}
  */
-proto.ibc.core.channel.v1.QueryChannelsResponse.prototype.getPagination = function () {
+proto.ibc.core.channel.v1.QueryChannelsResponse.prototype.getPagination = function() {
   return /** @type{?proto.cosmos.base.query.v1beta1.PageResponse} */ (
     jspb.Message.getWrapperField(this, cosmos_base_query_v1beta1_pagination_pb.PageResponse, 2));
 };
 
+
 /** @param {?proto.cosmos.base.query.v1beta1.PageResponse|undefined} value */
-proto.ibc.core.channel.v1.QueryChannelsResponse.prototype.setPagination = function (value) {
+proto.ibc.core.channel.v1.QueryChannelsResponse.prototype.setPagination = function(value) {
   jspb.Message.setWrapperField(this, 2, value);
 };
 
-proto.ibc.core.channel.v1.QueryChannelsResponse.prototype.clearPagination = function () {
+
+proto.ibc.core.channel.v1.QueryChannelsResponse.prototype.clearPagination = function() {
   this.setPagination(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.ibc.core.channel.v1.QueryChannelsResponse.prototype.hasPagination = function () {
+proto.ibc.core.channel.v1.QueryChannelsResponse.prototype.hasPagination = function() {
   return jspb.Message.getField(this, 2) != null;
 };
+
 
 /**
  * optional ibc.core.client.v1.Height height = 3;
  * @return {?proto.ibc.core.client.v1.Height}
  */
-proto.ibc.core.channel.v1.QueryChannelsResponse.prototype.getHeight = function () {
+proto.ibc.core.channel.v1.QueryChannelsResponse.prototype.getHeight = function() {
   return /** @type{?proto.ibc.core.client.v1.Height} */ (
     jspb.Message.getWrapperField(this, ibc_core_client_v1_client_pb.Height, 3));
 };
 
+
 /** @param {?proto.ibc.core.client.v1.Height|undefined} value */
-proto.ibc.core.channel.v1.QueryChannelsResponse.prototype.setHeight = function (value) {
+proto.ibc.core.channel.v1.QueryChannelsResponse.prototype.setHeight = function(value) {
   jspb.Message.setWrapperField(this, 3, value);
 };
 
-proto.ibc.core.channel.v1.QueryChannelsResponse.prototype.clearHeight = function () {
+
+proto.ibc.core.channel.v1.QueryChannelsResponse.prototype.clearHeight = function() {
   this.setHeight(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.ibc.core.channel.v1.QueryChannelsResponse.prototype.hasHeight = function () {
+proto.ibc.core.channel.v1.QueryChannelsResponse.prototype.hasHeight = function() {
   return jspb.Message.getField(this, 3) != null;
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -835,13 +892,14 @@ proto.ibc.core.channel.v1.QueryChannelsResponse.prototype.hasHeight = function (
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.core.channel.v1.QueryConnectionChannelsRequest = function (opt_data) {
+proto.ibc.core.channel.v1.QueryConnectionChannelsRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.ibc.core.channel.v1.QueryConnectionChannelsRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.ibc.core.channel.v1.QueryConnectionChannelsRequest.displayName = 'proto.ibc.core.channel.v1.QueryConnectionChannelsRequest';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -854,11 +912,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.core.channel.v1.QueryConnectionChannelsRequest.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.core.channel.v1.QueryConnectionChannelsRequest.toObject(opt_includeInstance, this);
-  };
+proto.ibc.core.channel.v1.QueryConnectionChannelsRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.core.channel.v1.QueryConnectionChannelsRequest.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -867,30 +926,31 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.core.channel.v1.QueryConnectionChannelsRequest.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        connection: jspb.Message.getFieldWithDefault(msg, 1, ''),
-        pagination: (f = msg.getPagination()) && cosmos_base_query_v1beta1_pagination_pb.PageRequest.toObject(includeInstance, f),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.core.channel.v1.QueryConnectionChannelsRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    connection: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    pagination: (f = msg.getPagination()) && cosmos_base_query_v1beta1_pagination_pb.PageRequest.toObject(includeInstance, f)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.core.channel.v1.QueryConnectionChannelsRequest}
  */
-proto.ibc.core.channel.v1.QueryConnectionChannelsRequest.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.core.channel.v1.QueryConnectionChannelsRequest();
+proto.ibc.core.channel.v1.QueryConnectionChannelsRequest.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.core.channel.v1.QueryConnectionChannelsRequest;
   return proto.ibc.core.channel.v1.QueryConnectionChannelsRequest.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -899,39 +959,41 @@ proto.ibc.core.channel.v1.QueryConnectionChannelsRequest.deserializeBinary = fun
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.core.channel.v1.QueryConnectionChannelsRequest}
  */
-proto.ibc.core.channel.v1.QueryConnectionChannelsRequest.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.core.channel.v1.QueryConnectionChannelsRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setConnection(value);
-        break;
-      case 2:
-        var value = new cosmos_base_query_v1beta1_pagination_pb.PageRequest();
-        reader.readMessage(value, cosmos_base_query_v1beta1_pagination_pb.PageRequest.deserializeBinaryFromReader);
-        msg.setPagination(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setConnection(value);
+      break;
+    case 2:
+      var value = new cosmos_base_query_v1beta1_pagination_pb.PageRequest;
+      reader.readMessage(value,cosmos_base_query_v1beta1_pagination_pb.PageRequest.deserializeBinaryFromReader);
+      msg.setPagination(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.core.channel.v1.QueryConnectionChannelsRequest.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.core.channel.v1.QueryConnectionChannelsRequest.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.core.channel.v1.QueryConnectionChannelsRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -940,13 +1002,13 @@ proto.ibc.core.channel.v1.QueryConnectionChannelsRequest.prototype.serializeBina
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.core.channel.v1.QueryConnectionChannelsRequest.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.core.channel.v1.QueryConnectionChannelsRequest.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getConnection();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f,
+      f
     );
   }
   f = message.getPagination();
@@ -954,49 +1016,57 @@ proto.ibc.core.channel.v1.QueryConnectionChannelsRequest.serializeBinaryToWriter
     writer.writeMessage(
       2,
       f,
-      cosmos_base_query_v1beta1_pagination_pb.PageRequest.serializeBinaryToWriter,
+      cosmos_base_query_v1beta1_pagination_pb.PageRequest.serializeBinaryToWriter
     );
   }
 };
+
 
 /**
  * optional string connection = 1;
  * @return {string}
  */
-proto.ibc.core.channel.v1.QueryConnectionChannelsRequest.prototype.getConnection = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.ibc.core.channel.v1.QueryConnectionChannelsRequest.prototype.getConnection = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
+
 /** @param {string} value */
-proto.ibc.core.channel.v1.QueryConnectionChannelsRequest.prototype.setConnection = function (value) {
+proto.ibc.core.channel.v1.QueryConnectionChannelsRequest.prototype.setConnection = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
+
 
 /**
  * optional cosmos.base.query.v1beta1.PageRequest pagination = 2;
  * @return {?proto.cosmos.base.query.v1beta1.PageRequest}
  */
-proto.ibc.core.channel.v1.QueryConnectionChannelsRequest.prototype.getPagination = function () {
+proto.ibc.core.channel.v1.QueryConnectionChannelsRequest.prototype.getPagination = function() {
   return /** @type{?proto.cosmos.base.query.v1beta1.PageRequest} */ (
     jspb.Message.getWrapperField(this, cosmos_base_query_v1beta1_pagination_pb.PageRequest, 2));
 };
 
+
 /** @param {?proto.cosmos.base.query.v1beta1.PageRequest|undefined} value */
-proto.ibc.core.channel.v1.QueryConnectionChannelsRequest.prototype.setPagination = function (value) {
+proto.ibc.core.channel.v1.QueryConnectionChannelsRequest.prototype.setPagination = function(value) {
   jspb.Message.setWrapperField(this, 2, value);
 };
 
-proto.ibc.core.channel.v1.QueryConnectionChannelsRequest.prototype.clearPagination = function () {
+
+proto.ibc.core.channel.v1.QueryConnectionChannelsRequest.prototype.clearPagination = function() {
   this.setPagination(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.ibc.core.channel.v1.QueryConnectionChannelsRequest.prototype.hasPagination = function () {
+proto.ibc.core.channel.v1.QueryConnectionChannelsRequest.prototype.hasPagination = function() {
   return jspb.Message.getField(this, 2) != null;
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -1008,7 +1078,7 @@ proto.ibc.core.channel.v1.QueryConnectionChannelsRequest.prototype.hasPagination
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.core.channel.v1.QueryConnectionChannelsResponse = function (opt_data) {
+proto.ibc.core.channel.v1.QueryConnectionChannelsResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.ibc.core.channel.v1.QueryConnectionChannelsResponse.repeatedFields_, null);
 };
 goog.inherits(proto.ibc.core.channel.v1.QueryConnectionChannelsResponse, jspb.Message);
@@ -1022,6 +1092,8 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.ibc.core.channel.v1.QueryConnectionChannelsResponse.repeatedFields_ = [1];
 
+
+
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -1033,11 +1105,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.core.channel.v1.QueryConnectionChannelsResponse.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.core.channel.v1.QueryConnectionChannelsResponse.toObject(opt_includeInstance, this);
-  };
+proto.ibc.core.channel.v1.QueryConnectionChannelsResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.core.channel.v1.QueryConnectionChannelsResponse.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -1046,32 +1119,33 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.core.channel.v1.QueryConnectionChannelsResponse.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        channelsList: jspb.Message.toObjectList(msg.getChannelsList(),
-          ibc_core_channel_v1_channel_pb.IdentifiedChannel.toObject, includeInstance),
-        pagination: (f = msg.getPagination()) && cosmos_base_query_v1beta1_pagination_pb.PageResponse.toObject(includeInstance, f),
-        height: (f = msg.getHeight()) && ibc_core_client_v1_client_pb.Height.toObject(includeInstance, f),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.core.channel.v1.QueryConnectionChannelsResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    channelsList: jspb.Message.toObjectList(msg.getChannelsList(),
+    ibc_core_channel_v1_channel_pb.IdentifiedChannel.toObject, includeInstance),
+    pagination: (f = msg.getPagination()) && cosmos_base_query_v1beta1_pagination_pb.PageResponse.toObject(includeInstance, f),
+    height: (f = msg.getHeight()) && ibc_core_client_v1_client_pb.Height.toObject(includeInstance, f)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.core.channel.v1.QueryConnectionChannelsResponse}
  */
-proto.ibc.core.channel.v1.QueryConnectionChannelsResponse.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.core.channel.v1.QueryConnectionChannelsResponse();
+proto.ibc.core.channel.v1.QueryConnectionChannelsResponse.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.core.channel.v1.QueryConnectionChannelsResponse;
   return proto.ibc.core.channel.v1.QueryConnectionChannelsResponse.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -1080,45 +1154,47 @@ proto.ibc.core.channel.v1.QueryConnectionChannelsResponse.deserializeBinary = fu
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.core.channel.v1.QueryConnectionChannelsResponse}
  */
-proto.ibc.core.channel.v1.QueryConnectionChannelsResponse.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.core.channel.v1.QueryConnectionChannelsResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = new ibc_core_channel_v1_channel_pb.IdentifiedChannel();
-        reader.readMessage(value, ibc_core_channel_v1_channel_pb.IdentifiedChannel.deserializeBinaryFromReader);
-        msg.addChannels(value);
-        break;
-      case 2:
-        var value = new cosmos_base_query_v1beta1_pagination_pb.PageResponse();
-        reader.readMessage(value, cosmos_base_query_v1beta1_pagination_pb.PageResponse.deserializeBinaryFromReader);
-        msg.setPagination(value);
-        break;
-      case 3:
-        var value = new ibc_core_client_v1_client_pb.Height();
-        reader.readMessage(value, ibc_core_client_v1_client_pb.Height.deserializeBinaryFromReader);
-        msg.setHeight(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = new ibc_core_channel_v1_channel_pb.IdentifiedChannel;
+      reader.readMessage(value,ibc_core_channel_v1_channel_pb.IdentifiedChannel.deserializeBinaryFromReader);
+      msg.addChannels(value);
+      break;
+    case 2:
+      var value = new cosmos_base_query_v1beta1_pagination_pb.PageResponse;
+      reader.readMessage(value,cosmos_base_query_v1beta1_pagination_pb.PageResponse.deserializeBinaryFromReader);
+      msg.setPagination(value);
+      break;
+    case 3:
+      var value = new ibc_core_client_v1_client_pb.Height;
+      reader.readMessage(value,ibc_core_client_v1_client_pb.Height.deserializeBinaryFromReader);
+      msg.setHeight(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.core.channel.v1.QueryConnectionChannelsResponse.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.core.channel.v1.QueryConnectionChannelsResponse.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.core.channel.v1.QueryConnectionChannelsResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -1127,14 +1203,14 @@ proto.ibc.core.channel.v1.QueryConnectionChannelsResponse.prototype.serializeBin
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.core.channel.v1.QueryConnectionChannelsResponse.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.core.channel.v1.QueryConnectionChannelsResponse.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getChannelsList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       1,
       f,
-      ibc_core_channel_v1_channel_pb.IdentifiedChannel.serializeBinaryToWriter,
+      ibc_core_channel_v1_channel_pb.IdentifiedChannel.serializeBinaryToWriter
     );
   }
   f = message.getPagination();
@@ -1142,7 +1218,7 @@ proto.ibc.core.channel.v1.QueryConnectionChannelsResponse.serializeBinaryToWrite
     writer.writeMessage(
       2,
       f,
-      cosmos_base_query_v1beta1_pagination_pb.PageResponse.serializeBinaryToWriter,
+      cosmos_base_query_v1beta1_pagination_pb.PageResponse.serializeBinaryToWriter
     );
   }
   f = message.getHeight();
@@ -1150,89 +1226,103 @@ proto.ibc.core.channel.v1.QueryConnectionChannelsResponse.serializeBinaryToWrite
     writer.writeMessage(
       3,
       f,
-      ibc_core_client_v1_client_pb.Height.serializeBinaryToWriter,
+      ibc_core_client_v1_client_pb.Height.serializeBinaryToWriter
     );
   }
 };
+
 
 /**
  * repeated IdentifiedChannel channels = 1;
  * @return {!Array<!proto.ibc.core.channel.v1.IdentifiedChannel>}
  */
-proto.ibc.core.channel.v1.QueryConnectionChannelsResponse.prototype.getChannelsList = function () {
+proto.ibc.core.channel.v1.QueryConnectionChannelsResponse.prototype.getChannelsList = function() {
   return /** @type{!Array<!proto.ibc.core.channel.v1.IdentifiedChannel>} */ (
     jspb.Message.getRepeatedWrapperField(this, ibc_core_channel_v1_channel_pb.IdentifiedChannel, 1));
 };
 
+
 /** @param {!Array<!proto.ibc.core.channel.v1.IdentifiedChannel>} value */
-proto.ibc.core.channel.v1.QueryConnectionChannelsResponse.prototype.setChannelsList = function (value) {
+proto.ibc.core.channel.v1.QueryConnectionChannelsResponse.prototype.setChannelsList = function(value) {
   jspb.Message.setRepeatedWrapperField(this, 1, value);
 };
+
 
 /**
  * @param {!proto.ibc.core.channel.v1.IdentifiedChannel=} opt_value
  * @param {number=} opt_index
  * @return {!proto.ibc.core.channel.v1.IdentifiedChannel}
  */
-proto.ibc.core.channel.v1.QueryConnectionChannelsResponse.prototype.addChannels = function (opt_value, opt_index) {
+proto.ibc.core.channel.v1.QueryConnectionChannelsResponse.prototype.addChannels = function(opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.ibc.core.channel.v1.IdentifiedChannel, opt_index);
 };
 
-proto.ibc.core.channel.v1.QueryConnectionChannelsResponse.prototype.clearChannelsList = function () {
+
+proto.ibc.core.channel.v1.QueryConnectionChannelsResponse.prototype.clearChannelsList = function() {
   this.setChannelsList([]);
 };
+
 
 /**
  * optional cosmos.base.query.v1beta1.PageResponse pagination = 2;
  * @return {?proto.cosmos.base.query.v1beta1.PageResponse}
  */
-proto.ibc.core.channel.v1.QueryConnectionChannelsResponse.prototype.getPagination = function () {
+proto.ibc.core.channel.v1.QueryConnectionChannelsResponse.prototype.getPagination = function() {
   return /** @type{?proto.cosmos.base.query.v1beta1.PageResponse} */ (
     jspb.Message.getWrapperField(this, cosmos_base_query_v1beta1_pagination_pb.PageResponse, 2));
 };
 
+
 /** @param {?proto.cosmos.base.query.v1beta1.PageResponse|undefined} value */
-proto.ibc.core.channel.v1.QueryConnectionChannelsResponse.prototype.setPagination = function (value) {
+proto.ibc.core.channel.v1.QueryConnectionChannelsResponse.prototype.setPagination = function(value) {
   jspb.Message.setWrapperField(this, 2, value);
 };
 
-proto.ibc.core.channel.v1.QueryConnectionChannelsResponse.prototype.clearPagination = function () {
+
+proto.ibc.core.channel.v1.QueryConnectionChannelsResponse.prototype.clearPagination = function() {
   this.setPagination(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.ibc.core.channel.v1.QueryConnectionChannelsResponse.prototype.hasPagination = function () {
+proto.ibc.core.channel.v1.QueryConnectionChannelsResponse.prototype.hasPagination = function() {
   return jspb.Message.getField(this, 2) != null;
 };
+
 
 /**
  * optional ibc.core.client.v1.Height height = 3;
  * @return {?proto.ibc.core.client.v1.Height}
  */
-proto.ibc.core.channel.v1.QueryConnectionChannelsResponse.prototype.getHeight = function () {
+proto.ibc.core.channel.v1.QueryConnectionChannelsResponse.prototype.getHeight = function() {
   return /** @type{?proto.ibc.core.client.v1.Height} */ (
     jspb.Message.getWrapperField(this, ibc_core_client_v1_client_pb.Height, 3));
 };
 
+
 /** @param {?proto.ibc.core.client.v1.Height|undefined} value */
-proto.ibc.core.channel.v1.QueryConnectionChannelsResponse.prototype.setHeight = function (value) {
+proto.ibc.core.channel.v1.QueryConnectionChannelsResponse.prototype.setHeight = function(value) {
   jspb.Message.setWrapperField(this, 3, value);
 };
 
-proto.ibc.core.channel.v1.QueryConnectionChannelsResponse.prototype.clearHeight = function () {
+
+proto.ibc.core.channel.v1.QueryConnectionChannelsResponse.prototype.clearHeight = function() {
   this.setHeight(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.ibc.core.channel.v1.QueryConnectionChannelsResponse.prototype.hasHeight = function () {
+proto.ibc.core.channel.v1.QueryConnectionChannelsResponse.prototype.hasHeight = function() {
   return jspb.Message.getField(this, 3) != null;
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -1244,13 +1334,14 @@ proto.ibc.core.channel.v1.QueryConnectionChannelsResponse.prototype.hasHeight = 
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.core.channel.v1.QueryChannelClientStateRequest = function (opt_data) {
+proto.ibc.core.channel.v1.QueryChannelClientStateRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.ibc.core.channel.v1.QueryChannelClientStateRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.ibc.core.channel.v1.QueryChannelClientStateRequest.displayName = 'proto.ibc.core.channel.v1.QueryChannelClientStateRequest';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -1263,11 +1354,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.core.channel.v1.QueryChannelClientStateRequest.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.core.channel.v1.QueryChannelClientStateRequest.toObject(opt_includeInstance, this);
-  };
+proto.ibc.core.channel.v1.QueryChannelClientStateRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.core.channel.v1.QueryChannelClientStateRequest.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -1276,30 +1368,31 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.core.channel.v1.QueryChannelClientStateRequest.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        portId: jspb.Message.getFieldWithDefault(msg, 1, ''),
-        channelId: jspb.Message.getFieldWithDefault(msg, 2, ''),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.core.channel.v1.QueryChannelClientStateRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    portId: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    channelId: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.core.channel.v1.QueryChannelClientStateRequest}
  */
-proto.ibc.core.channel.v1.QueryChannelClientStateRequest.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.core.channel.v1.QueryChannelClientStateRequest();
+proto.ibc.core.channel.v1.QueryChannelClientStateRequest.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.core.channel.v1.QueryChannelClientStateRequest;
   return proto.ibc.core.channel.v1.QueryChannelClientStateRequest.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -1308,38 +1401,40 @@ proto.ibc.core.channel.v1.QueryChannelClientStateRequest.deserializeBinary = fun
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.core.channel.v1.QueryChannelClientStateRequest}
  */
-proto.ibc.core.channel.v1.QueryChannelClientStateRequest.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.core.channel.v1.QueryChannelClientStateRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setPortId(value);
-        break;
-      case 2:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setChannelId(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setPortId(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setChannelId(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.core.channel.v1.QueryChannelClientStateRequest.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.core.channel.v1.QueryChannelClientStateRequest.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.core.channel.v1.QueryChannelClientStateRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -1348,49 +1443,55 @@ proto.ibc.core.channel.v1.QueryChannelClientStateRequest.prototype.serializeBina
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.core.channel.v1.QueryChannelClientStateRequest.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.core.channel.v1.QueryChannelClientStateRequest.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getPortId();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f,
+      f
     );
   }
   f = message.getChannelId();
   if (f.length > 0) {
     writer.writeString(
       2,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * optional string port_id = 1;
  * @return {string}
  */
-proto.ibc.core.channel.v1.QueryChannelClientStateRequest.prototype.getPortId = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.ibc.core.channel.v1.QueryChannelClientStateRequest.prototype.getPortId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
+
 /** @param {string} value */
-proto.ibc.core.channel.v1.QueryChannelClientStateRequest.prototype.setPortId = function (value) {
+proto.ibc.core.channel.v1.QueryChannelClientStateRequest.prototype.setPortId = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
+
 
 /**
  * optional string channel_id = 2;
  * @return {string}
  */
-proto.ibc.core.channel.v1.QueryChannelClientStateRequest.prototype.getChannelId = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
+proto.ibc.core.channel.v1.QueryChannelClientStateRequest.prototype.getChannelId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
+
 /** @param {string} value */
-proto.ibc.core.channel.v1.QueryChannelClientStateRequest.prototype.setChannelId = function (value) {
+proto.ibc.core.channel.v1.QueryChannelClientStateRequest.prototype.setChannelId = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -1402,13 +1503,14 @@ proto.ibc.core.channel.v1.QueryChannelClientStateRequest.prototype.setChannelId 
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.core.channel.v1.QueryChannelClientStateResponse = function (opt_data) {
+proto.ibc.core.channel.v1.QueryChannelClientStateResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.ibc.core.channel.v1.QueryChannelClientStateResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.ibc.core.channel.v1.QueryChannelClientStateResponse.displayName = 'proto.ibc.core.channel.v1.QueryChannelClientStateResponse';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -1421,11 +1523,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.core.channel.v1.QueryChannelClientStateResponse.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.core.channel.v1.QueryChannelClientStateResponse.toObject(opt_includeInstance, this);
-  };
+proto.ibc.core.channel.v1.QueryChannelClientStateResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.core.channel.v1.QueryChannelClientStateResponse.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -1434,31 +1537,32 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.core.channel.v1.QueryChannelClientStateResponse.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        identifiedClientState: (f = msg.getIdentifiedClientState()) && ibc_core_client_v1_client_pb.IdentifiedClientState.toObject(includeInstance, f),
-        proof: msg.getProof_asB64(),
-        proofHeight: (f = msg.getProofHeight()) && ibc_core_client_v1_client_pb.Height.toObject(includeInstance, f),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.core.channel.v1.QueryChannelClientStateResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    identifiedClientState: (f = msg.getIdentifiedClientState()) && ibc_core_client_v1_client_pb.IdentifiedClientState.toObject(includeInstance, f),
+    proof: msg.getProof_asB64(),
+    proofHeight: (f = msg.getProofHeight()) && ibc_core_client_v1_client_pb.Height.toObject(includeInstance, f)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.core.channel.v1.QueryChannelClientStateResponse}
  */
-proto.ibc.core.channel.v1.QueryChannelClientStateResponse.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.core.channel.v1.QueryChannelClientStateResponse();
+proto.ibc.core.channel.v1.QueryChannelClientStateResponse.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.core.channel.v1.QueryChannelClientStateResponse;
   return proto.ibc.core.channel.v1.QueryChannelClientStateResponse.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -1467,44 +1571,46 @@ proto.ibc.core.channel.v1.QueryChannelClientStateResponse.deserializeBinary = fu
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.core.channel.v1.QueryChannelClientStateResponse}
  */
-proto.ibc.core.channel.v1.QueryChannelClientStateResponse.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.core.channel.v1.QueryChannelClientStateResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = new ibc_core_client_v1_client_pb.IdentifiedClientState();
-        reader.readMessage(value, ibc_core_client_v1_client_pb.IdentifiedClientState.deserializeBinaryFromReader);
-        msg.setIdentifiedClientState(value);
-        break;
-      case 2:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setProof(value);
-        break;
-      case 3:
-        var value = new ibc_core_client_v1_client_pb.Height();
-        reader.readMessage(value, ibc_core_client_v1_client_pb.Height.deserializeBinaryFromReader);
-        msg.setProofHeight(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = new ibc_core_client_v1_client_pb.IdentifiedClientState;
+      reader.readMessage(value,ibc_core_client_v1_client_pb.IdentifiedClientState.deserializeBinaryFromReader);
+      msg.setIdentifiedClientState(value);
+      break;
+    case 2:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setProof(value);
+      break;
+    case 3:
+      var value = new ibc_core_client_v1_client_pb.Height;
+      reader.readMessage(value,ibc_core_client_v1_client_pb.Height.deserializeBinaryFromReader);
+      msg.setProofHeight(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.core.channel.v1.QueryChannelClientStateResponse.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.core.channel.v1.QueryChannelClientStateResponse.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.core.channel.v1.QueryChannelClientStateResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -1513,21 +1619,21 @@ proto.ibc.core.channel.v1.QueryChannelClientStateResponse.prototype.serializeBin
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.core.channel.v1.QueryChannelClientStateResponse.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.core.channel.v1.QueryChannelClientStateResponse.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getIdentifiedClientState();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      ibc_core_client_v1_client_pb.IdentifiedClientState.serializeBinaryToWriter,
+      ibc_core_client_v1_client_pb.IdentifiedClientState.serializeBinaryToWriter
     );
   }
   f = message.getProof_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       2,
-      f,
+      f
     );
   }
   f = message.getProofHeight();
@@ -1535,55 +1641,61 @@ proto.ibc.core.channel.v1.QueryChannelClientStateResponse.serializeBinaryToWrite
     writer.writeMessage(
       3,
       f,
-      ibc_core_client_v1_client_pb.Height.serializeBinaryToWriter,
+      ibc_core_client_v1_client_pb.Height.serializeBinaryToWriter
     );
   }
 };
+
 
 /**
  * optional ibc.core.client.v1.IdentifiedClientState identified_client_state = 1;
  * @return {?proto.ibc.core.client.v1.IdentifiedClientState}
  */
-proto.ibc.core.channel.v1.QueryChannelClientStateResponse.prototype.getIdentifiedClientState = function () {
+proto.ibc.core.channel.v1.QueryChannelClientStateResponse.prototype.getIdentifiedClientState = function() {
   return /** @type{?proto.ibc.core.client.v1.IdentifiedClientState} */ (
     jspb.Message.getWrapperField(this, ibc_core_client_v1_client_pb.IdentifiedClientState, 1));
 };
 
+
 /** @param {?proto.ibc.core.client.v1.IdentifiedClientState|undefined} value */
-proto.ibc.core.channel.v1.QueryChannelClientStateResponse.prototype.setIdentifiedClientState = function (value) {
+proto.ibc.core.channel.v1.QueryChannelClientStateResponse.prototype.setIdentifiedClientState = function(value) {
   jspb.Message.setWrapperField(this, 1, value);
 };
 
-proto.ibc.core.channel.v1.QueryChannelClientStateResponse.prototype.clearIdentifiedClientState = function () {
+
+proto.ibc.core.channel.v1.QueryChannelClientStateResponse.prototype.clearIdentifiedClientState = function() {
   this.setIdentifiedClientState(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.ibc.core.channel.v1.QueryChannelClientStateResponse.prototype.hasIdentifiedClientState = function () {
+proto.ibc.core.channel.v1.QueryChannelClientStateResponse.prototype.hasIdentifiedClientState = function() {
   return jspb.Message.getField(this, 1) != null;
 };
+
 
 /**
  * optional bytes proof = 2;
  * @return {!(string|Uint8Array)}
  */
-proto.ibc.core.channel.v1.QueryChannelClientStateResponse.prototype.getProof = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
+proto.ibc.core.channel.v1.QueryChannelClientStateResponse.prototype.getProof = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
+
 
 /**
  * optional bytes proof = 2;
  * This is a type-conversion wrapper around `getProof()`
  * @return {string}
  */
-proto.ibc.core.channel.v1.QueryChannelClientStateResponse.prototype.getProof_asB64 = function () {
+proto.ibc.core.channel.v1.QueryChannelClientStateResponse.prototype.getProof_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getProof(),
-  ));
+      this.getProof()));
 };
+
 
 /**
  * optional bytes proof = 2;
@@ -1592,42 +1704,48 @@ proto.ibc.core.channel.v1.QueryChannelClientStateResponse.prototype.getProof_asB
  * This is a type-conversion wrapper around `getProof()`
  * @return {!Uint8Array}
  */
-proto.ibc.core.channel.v1.QueryChannelClientStateResponse.prototype.getProof_asU8 = function () {
+proto.ibc.core.channel.v1.QueryChannelClientStateResponse.prototype.getProof_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getProof(),
-  ));
+      this.getProof()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.ibc.core.channel.v1.QueryChannelClientStateResponse.prototype.setProof = function (value) {
+proto.ibc.core.channel.v1.QueryChannelClientStateResponse.prototype.setProof = function(value) {
   jspb.Message.setProto3BytesField(this, 2, value);
 };
+
 
 /**
  * optional ibc.core.client.v1.Height proof_height = 3;
  * @return {?proto.ibc.core.client.v1.Height}
  */
-proto.ibc.core.channel.v1.QueryChannelClientStateResponse.prototype.getProofHeight = function () {
+proto.ibc.core.channel.v1.QueryChannelClientStateResponse.prototype.getProofHeight = function() {
   return /** @type{?proto.ibc.core.client.v1.Height} */ (
     jspb.Message.getWrapperField(this, ibc_core_client_v1_client_pb.Height, 3));
 };
 
+
 /** @param {?proto.ibc.core.client.v1.Height|undefined} value */
-proto.ibc.core.channel.v1.QueryChannelClientStateResponse.prototype.setProofHeight = function (value) {
+proto.ibc.core.channel.v1.QueryChannelClientStateResponse.prototype.setProofHeight = function(value) {
   jspb.Message.setWrapperField(this, 3, value);
 };
 
-proto.ibc.core.channel.v1.QueryChannelClientStateResponse.prototype.clearProofHeight = function () {
+
+proto.ibc.core.channel.v1.QueryChannelClientStateResponse.prototype.clearProofHeight = function() {
   this.setProofHeight(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.ibc.core.channel.v1.QueryChannelClientStateResponse.prototype.hasProofHeight = function () {
+proto.ibc.core.channel.v1.QueryChannelClientStateResponse.prototype.hasProofHeight = function() {
   return jspb.Message.getField(this, 3) != null;
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -1639,13 +1757,14 @@ proto.ibc.core.channel.v1.QueryChannelClientStateResponse.prototype.hasProofHeig
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.core.channel.v1.QueryChannelConsensusStateRequest = function (opt_data) {
+proto.ibc.core.channel.v1.QueryChannelConsensusStateRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.ibc.core.channel.v1.QueryChannelConsensusStateRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.ibc.core.channel.v1.QueryChannelConsensusStateRequest.displayName = 'proto.ibc.core.channel.v1.QueryChannelConsensusStateRequest';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -1658,11 +1777,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.core.channel.v1.QueryChannelConsensusStateRequest.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.core.channel.v1.QueryChannelConsensusStateRequest.toObject(opt_includeInstance, this);
-  };
+proto.ibc.core.channel.v1.QueryChannelConsensusStateRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.core.channel.v1.QueryChannelConsensusStateRequest.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -1671,32 +1791,33 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.core.channel.v1.QueryChannelConsensusStateRequest.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        portId: jspb.Message.getFieldWithDefault(msg, 1, ''),
-        channelId: jspb.Message.getFieldWithDefault(msg, 2, ''),
-        revisionNumber: jspb.Message.getFieldWithDefault(msg, 3, 0),
-        revisionHeight: jspb.Message.getFieldWithDefault(msg, 4, 0),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.core.channel.v1.QueryChannelConsensusStateRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    portId: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    channelId: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    revisionNumber: jspb.Message.getFieldWithDefault(msg, 3, 0),
+    revisionHeight: jspb.Message.getFieldWithDefault(msg, 4, 0)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.core.channel.v1.QueryChannelConsensusStateRequest}
  */
-proto.ibc.core.channel.v1.QueryChannelConsensusStateRequest.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.core.channel.v1.QueryChannelConsensusStateRequest();
+proto.ibc.core.channel.v1.QueryChannelConsensusStateRequest.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.core.channel.v1.QueryChannelConsensusStateRequest;
   return proto.ibc.core.channel.v1.QueryChannelConsensusStateRequest.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -1705,46 +1826,48 @@ proto.ibc.core.channel.v1.QueryChannelConsensusStateRequest.deserializeBinary = 
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.core.channel.v1.QueryChannelConsensusStateRequest}
  */
-proto.ibc.core.channel.v1.QueryChannelConsensusStateRequest.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.core.channel.v1.QueryChannelConsensusStateRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setPortId(value);
-        break;
-      case 2:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setChannelId(value);
-        break;
-      case 3:
-        var value = /** @type {number} */ (reader.readUint64());
-        msg.setRevisionNumber(value);
-        break;
-      case 4:
-        var value = /** @type {number} */ (reader.readUint64());
-        msg.setRevisionHeight(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setPortId(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setChannelId(value);
+      break;
+    case 3:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setRevisionNumber(value);
+      break;
+    case 4:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setRevisionHeight(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.core.channel.v1.QueryChannelConsensusStateRequest.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.core.channel.v1.QueryChannelConsensusStateRequest.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.core.channel.v1.QueryChannelConsensusStateRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -1753,89 +1876,99 @@ proto.ibc.core.channel.v1.QueryChannelConsensusStateRequest.prototype.serializeB
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.core.channel.v1.QueryChannelConsensusStateRequest.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.core.channel.v1.QueryChannelConsensusStateRequest.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getPortId();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f,
+      f
     );
   }
   f = message.getChannelId();
   if (f.length > 0) {
     writer.writeString(
       2,
-      f,
+      f
     );
   }
   f = message.getRevisionNumber();
   if (f !== 0) {
     writer.writeUint64(
       3,
-      f,
+      f
     );
   }
   f = message.getRevisionHeight();
   if (f !== 0) {
     writer.writeUint64(
       4,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * optional string port_id = 1;
  * @return {string}
  */
-proto.ibc.core.channel.v1.QueryChannelConsensusStateRequest.prototype.getPortId = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.ibc.core.channel.v1.QueryChannelConsensusStateRequest.prototype.getPortId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
+
 /** @param {string} value */
-proto.ibc.core.channel.v1.QueryChannelConsensusStateRequest.prototype.setPortId = function (value) {
+proto.ibc.core.channel.v1.QueryChannelConsensusStateRequest.prototype.setPortId = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
+
 
 /**
  * optional string channel_id = 2;
  * @return {string}
  */
-proto.ibc.core.channel.v1.QueryChannelConsensusStateRequest.prototype.getChannelId = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
+proto.ibc.core.channel.v1.QueryChannelConsensusStateRequest.prototype.getChannelId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
+
 /** @param {string} value */
-proto.ibc.core.channel.v1.QueryChannelConsensusStateRequest.prototype.setChannelId = function (value) {
+proto.ibc.core.channel.v1.QueryChannelConsensusStateRequest.prototype.setChannelId = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
+
 
 /**
  * optional uint64 revision_number = 3;
  * @return {number}
  */
-proto.ibc.core.channel.v1.QueryChannelConsensusStateRequest.prototype.getRevisionNumber = function () {
+proto.ibc.core.channel.v1.QueryChannelConsensusStateRequest.prototype.getRevisionNumber = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
+
 /** @param {number} value */
-proto.ibc.core.channel.v1.QueryChannelConsensusStateRequest.prototype.setRevisionNumber = function (value) {
+proto.ibc.core.channel.v1.QueryChannelConsensusStateRequest.prototype.setRevisionNumber = function(value) {
   jspb.Message.setProto3IntField(this, 3, value);
 };
+
 
 /**
  * optional uint64 revision_height = 4;
  * @return {number}
  */
-proto.ibc.core.channel.v1.QueryChannelConsensusStateRequest.prototype.getRevisionHeight = function () {
+proto.ibc.core.channel.v1.QueryChannelConsensusStateRequest.prototype.getRevisionHeight = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
 };
 
+
 /** @param {number} value */
-proto.ibc.core.channel.v1.QueryChannelConsensusStateRequest.prototype.setRevisionHeight = function (value) {
+proto.ibc.core.channel.v1.QueryChannelConsensusStateRequest.prototype.setRevisionHeight = function(value) {
   jspb.Message.setProto3IntField(this, 4, value);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -1847,13 +1980,14 @@ proto.ibc.core.channel.v1.QueryChannelConsensusStateRequest.prototype.setRevisio
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse = function (opt_data) {
+proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse.displayName = 'proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -1866,11 +2000,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse.toObject(opt_includeInstance, this);
-  };
+proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -1879,32 +2014,33 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        consensusState: (f = msg.getConsensusState()) && google_protobuf_any_pb.Any.toObject(includeInstance, f),
-        clientId: jspb.Message.getFieldWithDefault(msg, 2, ''),
-        proof: msg.getProof_asB64(),
-        proofHeight: (f = msg.getProofHeight()) && ibc_core_client_v1_client_pb.Height.toObject(includeInstance, f),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    consensusState: (f = msg.getConsensusState()) && google_protobuf_any_pb.Any.toObject(includeInstance, f),
+    clientId: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    proof: msg.getProof_asB64(),
+    proofHeight: (f = msg.getProofHeight()) && ibc_core_client_v1_client_pb.Height.toObject(includeInstance, f)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse}
  */
-proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse();
+proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse;
   return proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -1913,48 +2049,50 @@ proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse.deserializeBinary =
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse}
  */
-proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = new google_protobuf_any_pb.Any();
-        reader.readMessage(value, google_protobuf_any_pb.Any.deserializeBinaryFromReader);
-        msg.setConsensusState(value);
-        break;
-      case 2:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setClientId(value);
-        break;
-      case 3:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setProof(value);
-        break;
-      case 4:
-        var value = new ibc_core_client_v1_client_pb.Height();
-        reader.readMessage(value, ibc_core_client_v1_client_pb.Height.deserializeBinaryFromReader);
-        msg.setProofHeight(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = new google_protobuf_any_pb.Any;
+      reader.readMessage(value,google_protobuf_any_pb.Any.deserializeBinaryFromReader);
+      msg.setConsensusState(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setClientId(value);
+      break;
+    case 3:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setProof(value);
+      break;
+    case 4:
+      var value = new ibc_core_client_v1_client_pb.Height;
+      reader.readMessage(value,ibc_core_client_v1_client_pb.Height.deserializeBinaryFromReader);
+      msg.setProofHeight(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -1963,28 +2101,28 @@ proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse.prototype.serialize
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getConsensusState();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      google_protobuf_any_pb.Any.serializeBinaryToWriter,
+      google_protobuf_any_pb.Any.serializeBinaryToWriter
     );
   }
   f = message.getClientId();
   if (f.length > 0) {
     writer.writeString(
       2,
-      f,
+      f
     );
   }
   f = message.getProof_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       3,
-      f,
+      f
     );
   }
   f = message.getProofHeight();
@@ -1992,68 +2130,76 @@ proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse.serializeBinaryToWr
     writer.writeMessage(
       4,
       f,
-      ibc_core_client_v1_client_pb.Height.serializeBinaryToWriter,
+      ibc_core_client_v1_client_pb.Height.serializeBinaryToWriter
     );
   }
 };
+
 
 /**
  * optional google.protobuf.Any consensus_state = 1;
  * @return {?proto.google.protobuf.Any}
  */
-proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse.prototype.getConsensusState = function () {
+proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse.prototype.getConsensusState = function() {
   return /** @type{?proto.google.protobuf.Any} */ (
     jspb.Message.getWrapperField(this, google_protobuf_any_pb.Any, 1));
 };
 
+
 /** @param {?proto.google.protobuf.Any|undefined} value */
-proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse.prototype.setConsensusState = function (value) {
+proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse.prototype.setConsensusState = function(value) {
   jspb.Message.setWrapperField(this, 1, value);
 };
 
-proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse.prototype.clearConsensusState = function () {
+
+proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse.prototype.clearConsensusState = function() {
   this.setConsensusState(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse.prototype.hasConsensusState = function () {
+proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse.prototype.hasConsensusState = function() {
   return jspb.Message.getField(this, 1) != null;
 };
+
 
 /**
  * optional string client_id = 2;
  * @return {string}
  */
-proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse.prototype.getClientId = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
+proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse.prototype.getClientId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
+
 /** @param {string} value */
-proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse.prototype.setClientId = function (value) {
+proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse.prototype.setClientId = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
+
 
 /**
  * optional bytes proof = 3;
  * @return {!(string|Uint8Array)}
  */
-proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse.prototype.getProof = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 3, ''));
+proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse.prototype.getProof = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
+
 
 /**
  * optional bytes proof = 3;
  * This is a type-conversion wrapper around `getProof()`
  * @return {string}
  */
-proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse.prototype.getProof_asB64 = function () {
+proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse.prototype.getProof_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getProof(),
-  ));
+      this.getProof()));
 };
+
 
 /**
  * optional bytes proof = 3;
@@ -2062,42 +2208,48 @@ proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse.prototype.getProof_
  * This is a type-conversion wrapper around `getProof()`
  * @return {!Uint8Array}
  */
-proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse.prototype.getProof_asU8 = function () {
+proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse.prototype.getProof_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getProof(),
-  ));
+      this.getProof()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse.prototype.setProof = function (value) {
+proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse.prototype.setProof = function(value) {
   jspb.Message.setProto3BytesField(this, 3, value);
 };
+
 
 /**
  * optional ibc.core.client.v1.Height proof_height = 4;
  * @return {?proto.ibc.core.client.v1.Height}
  */
-proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse.prototype.getProofHeight = function () {
+proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse.prototype.getProofHeight = function() {
   return /** @type{?proto.ibc.core.client.v1.Height} */ (
     jspb.Message.getWrapperField(this, ibc_core_client_v1_client_pb.Height, 4));
 };
 
+
 /** @param {?proto.ibc.core.client.v1.Height|undefined} value */
-proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse.prototype.setProofHeight = function (value) {
+proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse.prototype.setProofHeight = function(value) {
   jspb.Message.setWrapperField(this, 4, value);
 };
 
-proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse.prototype.clearProofHeight = function () {
+
+proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse.prototype.clearProofHeight = function() {
   this.setProofHeight(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse.prototype.hasProofHeight = function () {
+proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse.prototype.hasProofHeight = function() {
   return jspb.Message.getField(this, 4) != null;
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -2109,13 +2261,14 @@ proto.ibc.core.channel.v1.QueryChannelConsensusStateResponse.prototype.hasProofH
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.core.channel.v1.QueryPacketCommitmentRequest = function (opt_data) {
+proto.ibc.core.channel.v1.QueryPacketCommitmentRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.ibc.core.channel.v1.QueryPacketCommitmentRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.ibc.core.channel.v1.QueryPacketCommitmentRequest.displayName = 'proto.ibc.core.channel.v1.QueryPacketCommitmentRequest';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -2128,11 +2281,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.core.channel.v1.QueryPacketCommitmentRequest.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.core.channel.v1.QueryPacketCommitmentRequest.toObject(opt_includeInstance, this);
-  };
+proto.ibc.core.channel.v1.QueryPacketCommitmentRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.core.channel.v1.QueryPacketCommitmentRequest.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -2141,31 +2295,32 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.core.channel.v1.QueryPacketCommitmentRequest.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        portId: jspb.Message.getFieldWithDefault(msg, 1, ''),
-        channelId: jspb.Message.getFieldWithDefault(msg, 2, ''),
-        sequence: jspb.Message.getFieldWithDefault(msg, 3, 0),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.core.channel.v1.QueryPacketCommitmentRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    portId: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    channelId: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    sequence: jspb.Message.getFieldWithDefault(msg, 3, 0)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.core.channel.v1.QueryPacketCommitmentRequest}
  */
-proto.ibc.core.channel.v1.QueryPacketCommitmentRequest.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.core.channel.v1.QueryPacketCommitmentRequest();
+proto.ibc.core.channel.v1.QueryPacketCommitmentRequest.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.core.channel.v1.QueryPacketCommitmentRequest;
   return proto.ibc.core.channel.v1.QueryPacketCommitmentRequest.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -2174,42 +2329,44 @@ proto.ibc.core.channel.v1.QueryPacketCommitmentRequest.deserializeBinary = funct
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.core.channel.v1.QueryPacketCommitmentRequest}
  */
-proto.ibc.core.channel.v1.QueryPacketCommitmentRequest.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.core.channel.v1.QueryPacketCommitmentRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setPortId(value);
-        break;
-      case 2:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setChannelId(value);
-        break;
-      case 3:
-        var value = /** @type {number} */ (reader.readUint64());
-        msg.setSequence(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setPortId(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setChannelId(value);
+      break;
+    case 3:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setSequence(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.core.channel.v1.QueryPacketCommitmentRequest.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.core.channel.v1.QueryPacketCommitmentRequest.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.core.channel.v1.QueryPacketCommitmentRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -2218,69 +2375,77 @@ proto.ibc.core.channel.v1.QueryPacketCommitmentRequest.prototype.serializeBinary
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.core.channel.v1.QueryPacketCommitmentRequest.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.core.channel.v1.QueryPacketCommitmentRequest.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getPortId();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f,
+      f
     );
   }
   f = message.getChannelId();
   if (f.length > 0) {
     writer.writeString(
       2,
-      f,
+      f
     );
   }
   f = message.getSequence();
   if (f !== 0) {
     writer.writeUint64(
       3,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * optional string port_id = 1;
  * @return {string}
  */
-proto.ibc.core.channel.v1.QueryPacketCommitmentRequest.prototype.getPortId = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.ibc.core.channel.v1.QueryPacketCommitmentRequest.prototype.getPortId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
+
 /** @param {string} value */
-proto.ibc.core.channel.v1.QueryPacketCommitmentRequest.prototype.setPortId = function (value) {
+proto.ibc.core.channel.v1.QueryPacketCommitmentRequest.prototype.setPortId = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
+
 
 /**
  * optional string channel_id = 2;
  * @return {string}
  */
-proto.ibc.core.channel.v1.QueryPacketCommitmentRequest.prototype.getChannelId = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
+proto.ibc.core.channel.v1.QueryPacketCommitmentRequest.prototype.getChannelId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
+
 /** @param {string} value */
-proto.ibc.core.channel.v1.QueryPacketCommitmentRequest.prototype.setChannelId = function (value) {
+proto.ibc.core.channel.v1.QueryPacketCommitmentRequest.prototype.setChannelId = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
+
 
 /**
  * optional uint64 sequence = 3;
  * @return {number}
  */
-proto.ibc.core.channel.v1.QueryPacketCommitmentRequest.prototype.getSequence = function () {
+proto.ibc.core.channel.v1.QueryPacketCommitmentRequest.prototype.getSequence = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
+
 /** @param {number} value */
-proto.ibc.core.channel.v1.QueryPacketCommitmentRequest.prototype.setSequence = function (value) {
+proto.ibc.core.channel.v1.QueryPacketCommitmentRequest.prototype.setSequence = function(value) {
   jspb.Message.setProto3IntField(this, 3, value);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -2292,13 +2457,14 @@ proto.ibc.core.channel.v1.QueryPacketCommitmentRequest.prototype.setSequence = f
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.core.channel.v1.QueryPacketCommitmentResponse = function (opt_data) {
+proto.ibc.core.channel.v1.QueryPacketCommitmentResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.ibc.core.channel.v1.QueryPacketCommitmentResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.ibc.core.channel.v1.QueryPacketCommitmentResponse.displayName = 'proto.ibc.core.channel.v1.QueryPacketCommitmentResponse';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -2311,11 +2477,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.core.channel.v1.QueryPacketCommitmentResponse.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.core.channel.v1.QueryPacketCommitmentResponse.toObject(opt_includeInstance, this);
-  };
+proto.ibc.core.channel.v1.QueryPacketCommitmentResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.core.channel.v1.QueryPacketCommitmentResponse.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -2324,31 +2491,32 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.core.channel.v1.QueryPacketCommitmentResponse.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        commitment: msg.getCommitment_asB64(),
-        proof: msg.getProof_asB64(),
-        proofHeight: (f = msg.getProofHeight()) && ibc_core_client_v1_client_pb.Height.toObject(includeInstance, f),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.core.channel.v1.QueryPacketCommitmentResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    commitment: msg.getCommitment_asB64(),
+    proof: msg.getProof_asB64(),
+    proofHeight: (f = msg.getProofHeight()) && ibc_core_client_v1_client_pb.Height.toObject(includeInstance, f)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.core.channel.v1.QueryPacketCommitmentResponse}
  */
-proto.ibc.core.channel.v1.QueryPacketCommitmentResponse.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.core.channel.v1.QueryPacketCommitmentResponse();
+proto.ibc.core.channel.v1.QueryPacketCommitmentResponse.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.core.channel.v1.QueryPacketCommitmentResponse;
   return proto.ibc.core.channel.v1.QueryPacketCommitmentResponse.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -2357,43 +2525,45 @@ proto.ibc.core.channel.v1.QueryPacketCommitmentResponse.deserializeBinary = func
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.core.channel.v1.QueryPacketCommitmentResponse}
  */
-proto.ibc.core.channel.v1.QueryPacketCommitmentResponse.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.core.channel.v1.QueryPacketCommitmentResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setCommitment(value);
-        break;
-      case 2:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setProof(value);
-        break;
-      case 3:
-        var value = new ibc_core_client_v1_client_pb.Height();
-        reader.readMessage(value, ibc_core_client_v1_client_pb.Height.deserializeBinaryFromReader);
-        msg.setProofHeight(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setCommitment(value);
+      break;
+    case 2:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setProof(value);
+      break;
+    case 3:
+      var value = new ibc_core_client_v1_client_pb.Height;
+      reader.readMessage(value,ibc_core_client_v1_client_pb.Height.deserializeBinaryFromReader);
+      msg.setProofHeight(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.core.channel.v1.QueryPacketCommitmentResponse.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.core.channel.v1.QueryPacketCommitmentResponse.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.core.channel.v1.QueryPacketCommitmentResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -2402,20 +2572,20 @@ proto.ibc.core.channel.v1.QueryPacketCommitmentResponse.prototype.serializeBinar
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.core.channel.v1.QueryPacketCommitmentResponse.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.core.channel.v1.QueryPacketCommitmentResponse.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getCommitment_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       1,
-      f,
+      f
     );
   }
   f = message.getProof_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       2,
-      f,
+      f
     );
   }
   f = message.getProofHeight();
@@ -2423,29 +2593,31 @@ proto.ibc.core.channel.v1.QueryPacketCommitmentResponse.serializeBinaryToWriter 
     writer.writeMessage(
       3,
       f,
-      ibc_core_client_v1_client_pb.Height.serializeBinaryToWriter,
+      ibc_core_client_v1_client_pb.Height.serializeBinaryToWriter
     );
   }
 };
 
+
 /**
  * optional bytes commitment = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.ibc.core.channel.v1.QueryPacketCommitmentResponse.prototype.getCommitment = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.ibc.core.channel.v1.QueryPacketCommitmentResponse.prototype.getCommitment = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
+
 
 /**
  * optional bytes commitment = 1;
  * This is a type-conversion wrapper around `getCommitment()`
  * @return {string}
  */
-proto.ibc.core.channel.v1.QueryPacketCommitmentResponse.prototype.getCommitment_asB64 = function () {
+proto.ibc.core.channel.v1.QueryPacketCommitmentResponse.prototype.getCommitment_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getCommitment(),
-  ));
+      this.getCommitment()));
 };
+
 
 /**
  * optional bytes commitment = 1;
@@ -2454,35 +2626,37 @@ proto.ibc.core.channel.v1.QueryPacketCommitmentResponse.prototype.getCommitment_
  * This is a type-conversion wrapper around `getCommitment()`
  * @return {!Uint8Array}
  */
-proto.ibc.core.channel.v1.QueryPacketCommitmentResponse.prototype.getCommitment_asU8 = function () {
+proto.ibc.core.channel.v1.QueryPacketCommitmentResponse.prototype.getCommitment_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getCommitment(),
-  ));
+      this.getCommitment()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.ibc.core.channel.v1.QueryPacketCommitmentResponse.prototype.setCommitment = function (value) {
+proto.ibc.core.channel.v1.QueryPacketCommitmentResponse.prototype.setCommitment = function(value) {
   jspb.Message.setProto3BytesField(this, 1, value);
 };
 
+
 /**
  * optional bytes proof = 2;
  * @return {!(string|Uint8Array)}
  */
-proto.ibc.core.channel.v1.QueryPacketCommitmentResponse.prototype.getProof = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
+proto.ibc.core.channel.v1.QueryPacketCommitmentResponse.prototype.getProof = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
+
 
 /**
  * optional bytes proof = 2;
  * This is a type-conversion wrapper around `getProof()`
  * @return {string}
  */
-proto.ibc.core.channel.v1.QueryPacketCommitmentResponse.prototype.getProof_asB64 = function () {
+proto.ibc.core.channel.v1.QueryPacketCommitmentResponse.prototype.getProof_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getProof(),
-  ));
+      this.getProof()));
 };
+
 
 /**
  * optional bytes proof = 2;
@@ -2491,42 +2665,48 @@ proto.ibc.core.channel.v1.QueryPacketCommitmentResponse.prototype.getProof_asB64
  * This is a type-conversion wrapper around `getProof()`
  * @return {!Uint8Array}
  */
-proto.ibc.core.channel.v1.QueryPacketCommitmentResponse.prototype.getProof_asU8 = function () {
+proto.ibc.core.channel.v1.QueryPacketCommitmentResponse.prototype.getProof_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getProof(),
-  ));
+      this.getProof()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.ibc.core.channel.v1.QueryPacketCommitmentResponse.prototype.setProof = function (value) {
+proto.ibc.core.channel.v1.QueryPacketCommitmentResponse.prototype.setProof = function(value) {
   jspb.Message.setProto3BytesField(this, 2, value);
 };
+
 
 /**
  * optional ibc.core.client.v1.Height proof_height = 3;
  * @return {?proto.ibc.core.client.v1.Height}
  */
-proto.ibc.core.channel.v1.QueryPacketCommitmentResponse.prototype.getProofHeight = function () {
+proto.ibc.core.channel.v1.QueryPacketCommitmentResponse.prototype.getProofHeight = function() {
   return /** @type{?proto.ibc.core.client.v1.Height} */ (
     jspb.Message.getWrapperField(this, ibc_core_client_v1_client_pb.Height, 3));
 };
 
+
 /** @param {?proto.ibc.core.client.v1.Height|undefined} value */
-proto.ibc.core.channel.v1.QueryPacketCommitmentResponse.prototype.setProofHeight = function (value) {
+proto.ibc.core.channel.v1.QueryPacketCommitmentResponse.prototype.setProofHeight = function(value) {
   jspb.Message.setWrapperField(this, 3, value);
 };
 
-proto.ibc.core.channel.v1.QueryPacketCommitmentResponse.prototype.clearProofHeight = function () {
+
+proto.ibc.core.channel.v1.QueryPacketCommitmentResponse.prototype.clearProofHeight = function() {
   this.setProofHeight(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.ibc.core.channel.v1.QueryPacketCommitmentResponse.prototype.hasProofHeight = function () {
+proto.ibc.core.channel.v1.QueryPacketCommitmentResponse.prototype.hasProofHeight = function() {
   return jspb.Message.getField(this, 3) != null;
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -2538,13 +2718,14 @@ proto.ibc.core.channel.v1.QueryPacketCommitmentResponse.prototype.hasProofHeight
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.core.channel.v1.QueryPacketCommitmentsRequest = function (opt_data) {
+proto.ibc.core.channel.v1.QueryPacketCommitmentsRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.ibc.core.channel.v1.QueryPacketCommitmentsRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.ibc.core.channel.v1.QueryPacketCommitmentsRequest.displayName = 'proto.ibc.core.channel.v1.QueryPacketCommitmentsRequest';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -2557,11 +2738,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.core.channel.v1.QueryPacketCommitmentsRequest.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.core.channel.v1.QueryPacketCommitmentsRequest.toObject(opt_includeInstance, this);
-  };
+proto.ibc.core.channel.v1.QueryPacketCommitmentsRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.core.channel.v1.QueryPacketCommitmentsRequest.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -2570,31 +2752,32 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.core.channel.v1.QueryPacketCommitmentsRequest.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        portId: jspb.Message.getFieldWithDefault(msg, 1, ''),
-        channelId: jspb.Message.getFieldWithDefault(msg, 2, ''),
-        pagination: (f = msg.getPagination()) && cosmos_base_query_v1beta1_pagination_pb.PageRequest.toObject(includeInstance, f),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.core.channel.v1.QueryPacketCommitmentsRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    portId: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    channelId: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    pagination: (f = msg.getPagination()) && cosmos_base_query_v1beta1_pagination_pb.PageRequest.toObject(includeInstance, f)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.core.channel.v1.QueryPacketCommitmentsRequest}
  */
-proto.ibc.core.channel.v1.QueryPacketCommitmentsRequest.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.core.channel.v1.QueryPacketCommitmentsRequest();
+proto.ibc.core.channel.v1.QueryPacketCommitmentsRequest.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.core.channel.v1.QueryPacketCommitmentsRequest;
   return proto.ibc.core.channel.v1.QueryPacketCommitmentsRequest.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -2603,43 +2786,45 @@ proto.ibc.core.channel.v1.QueryPacketCommitmentsRequest.deserializeBinary = func
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.core.channel.v1.QueryPacketCommitmentsRequest}
  */
-proto.ibc.core.channel.v1.QueryPacketCommitmentsRequest.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.core.channel.v1.QueryPacketCommitmentsRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setPortId(value);
-        break;
-      case 2:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setChannelId(value);
-        break;
-      case 3:
-        var value = new cosmos_base_query_v1beta1_pagination_pb.PageRequest();
-        reader.readMessage(value, cosmos_base_query_v1beta1_pagination_pb.PageRequest.deserializeBinaryFromReader);
-        msg.setPagination(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setPortId(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setChannelId(value);
+      break;
+    case 3:
+      var value = new cosmos_base_query_v1beta1_pagination_pb.PageRequest;
+      reader.readMessage(value,cosmos_base_query_v1beta1_pagination_pb.PageRequest.deserializeBinaryFromReader);
+      msg.setPagination(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.core.channel.v1.QueryPacketCommitmentsRequest.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.core.channel.v1.QueryPacketCommitmentsRequest.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.core.channel.v1.QueryPacketCommitmentsRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -2648,20 +2833,20 @@ proto.ibc.core.channel.v1.QueryPacketCommitmentsRequest.prototype.serializeBinar
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.core.channel.v1.QueryPacketCommitmentsRequest.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.core.channel.v1.QueryPacketCommitmentsRequest.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getPortId();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f,
+      f
     );
   }
   f = message.getChannelId();
   if (f.length > 0) {
     writer.writeString(
       2,
-      f,
+      f
     );
   }
   f = message.getPagination();
@@ -2669,62 +2854,72 @@ proto.ibc.core.channel.v1.QueryPacketCommitmentsRequest.serializeBinaryToWriter 
     writer.writeMessage(
       3,
       f,
-      cosmos_base_query_v1beta1_pagination_pb.PageRequest.serializeBinaryToWriter,
+      cosmos_base_query_v1beta1_pagination_pb.PageRequest.serializeBinaryToWriter
     );
   }
 };
+
 
 /**
  * optional string port_id = 1;
  * @return {string}
  */
-proto.ibc.core.channel.v1.QueryPacketCommitmentsRequest.prototype.getPortId = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.ibc.core.channel.v1.QueryPacketCommitmentsRequest.prototype.getPortId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
+
 /** @param {string} value */
-proto.ibc.core.channel.v1.QueryPacketCommitmentsRequest.prototype.setPortId = function (value) {
+proto.ibc.core.channel.v1.QueryPacketCommitmentsRequest.prototype.setPortId = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
+
 
 /**
  * optional string channel_id = 2;
  * @return {string}
  */
-proto.ibc.core.channel.v1.QueryPacketCommitmentsRequest.prototype.getChannelId = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
+proto.ibc.core.channel.v1.QueryPacketCommitmentsRequest.prototype.getChannelId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
+
 /** @param {string} value */
-proto.ibc.core.channel.v1.QueryPacketCommitmentsRequest.prototype.setChannelId = function (value) {
+proto.ibc.core.channel.v1.QueryPacketCommitmentsRequest.prototype.setChannelId = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
+
 
 /**
  * optional cosmos.base.query.v1beta1.PageRequest pagination = 3;
  * @return {?proto.cosmos.base.query.v1beta1.PageRequest}
  */
-proto.ibc.core.channel.v1.QueryPacketCommitmentsRequest.prototype.getPagination = function () {
+proto.ibc.core.channel.v1.QueryPacketCommitmentsRequest.prototype.getPagination = function() {
   return /** @type{?proto.cosmos.base.query.v1beta1.PageRequest} */ (
     jspb.Message.getWrapperField(this, cosmos_base_query_v1beta1_pagination_pb.PageRequest, 3));
 };
 
+
 /** @param {?proto.cosmos.base.query.v1beta1.PageRequest|undefined} value */
-proto.ibc.core.channel.v1.QueryPacketCommitmentsRequest.prototype.setPagination = function (value) {
+proto.ibc.core.channel.v1.QueryPacketCommitmentsRequest.prototype.setPagination = function(value) {
   jspb.Message.setWrapperField(this, 3, value);
 };
 
-proto.ibc.core.channel.v1.QueryPacketCommitmentsRequest.prototype.clearPagination = function () {
+
+proto.ibc.core.channel.v1.QueryPacketCommitmentsRequest.prototype.clearPagination = function() {
   this.setPagination(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.ibc.core.channel.v1.QueryPacketCommitmentsRequest.prototype.hasPagination = function () {
+proto.ibc.core.channel.v1.QueryPacketCommitmentsRequest.prototype.hasPagination = function() {
   return jspb.Message.getField(this, 3) != null;
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -2736,7 +2931,7 @@ proto.ibc.core.channel.v1.QueryPacketCommitmentsRequest.prototype.hasPagination 
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse = function (opt_data) {
+proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse.repeatedFields_, null);
 };
 goog.inherits(proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse, jspb.Message);
@@ -2750,6 +2945,8 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse.repeatedFields_ = [1];
 
+
+
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -2761,11 +2958,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse.toObject(opt_includeInstance, this);
-  };
+proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -2774,32 +2972,33 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        commitmentsList: jspb.Message.toObjectList(msg.getCommitmentsList(),
-          ibc_core_channel_v1_channel_pb.PacketState.toObject, includeInstance),
-        pagination: (f = msg.getPagination()) && cosmos_base_query_v1beta1_pagination_pb.PageResponse.toObject(includeInstance, f),
-        height: (f = msg.getHeight()) && ibc_core_client_v1_client_pb.Height.toObject(includeInstance, f),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    commitmentsList: jspb.Message.toObjectList(msg.getCommitmentsList(),
+    ibc_core_channel_v1_channel_pb.PacketState.toObject, includeInstance),
+    pagination: (f = msg.getPagination()) && cosmos_base_query_v1beta1_pagination_pb.PageResponse.toObject(includeInstance, f),
+    height: (f = msg.getHeight()) && ibc_core_client_v1_client_pb.Height.toObject(includeInstance, f)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse}
  */
-proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse();
+proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse;
   return proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -2808,45 +3007,47 @@ proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse.deserializeBinary = fun
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse}
  */
-proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = new ibc_core_channel_v1_channel_pb.PacketState();
-        reader.readMessage(value, ibc_core_channel_v1_channel_pb.PacketState.deserializeBinaryFromReader);
-        msg.addCommitments(value);
-        break;
-      case 2:
-        var value = new cosmos_base_query_v1beta1_pagination_pb.PageResponse();
-        reader.readMessage(value, cosmos_base_query_v1beta1_pagination_pb.PageResponse.deserializeBinaryFromReader);
-        msg.setPagination(value);
-        break;
-      case 3:
-        var value = new ibc_core_client_v1_client_pb.Height();
-        reader.readMessage(value, ibc_core_client_v1_client_pb.Height.deserializeBinaryFromReader);
-        msg.setHeight(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = new ibc_core_channel_v1_channel_pb.PacketState;
+      reader.readMessage(value,ibc_core_channel_v1_channel_pb.PacketState.deserializeBinaryFromReader);
+      msg.addCommitments(value);
+      break;
+    case 2:
+      var value = new cosmos_base_query_v1beta1_pagination_pb.PageResponse;
+      reader.readMessage(value,cosmos_base_query_v1beta1_pagination_pb.PageResponse.deserializeBinaryFromReader);
+      msg.setPagination(value);
+      break;
+    case 3:
+      var value = new ibc_core_client_v1_client_pb.Height;
+      reader.readMessage(value,ibc_core_client_v1_client_pb.Height.deserializeBinaryFromReader);
+      msg.setHeight(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -2855,14 +3056,14 @@ proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse.prototype.serializeBina
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getCommitmentsList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       1,
       f,
-      ibc_core_channel_v1_channel_pb.PacketState.serializeBinaryToWriter,
+      ibc_core_channel_v1_channel_pb.PacketState.serializeBinaryToWriter
     );
   }
   f = message.getPagination();
@@ -2870,7 +3071,7 @@ proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse.serializeBinaryToWriter
     writer.writeMessage(
       2,
       f,
-      cosmos_base_query_v1beta1_pagination_pb.PageResponse.serializeBinaryToWriter,
+      cosmos_base_query_v1beta1_pagination_pb.PageResponse.serializeBinaryToWriter
     );
   }
   f = message.getHeight();
@@ -2878,89 +3079,103 @@ proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse.serializeBinaryToWriter
     writer.writeMessage(
       3,
       f,
-      ibc_core_client_v1_client_pb.Height.serializeBinaryToWriter,
+      ibc_core_client_v1_client_pb.Height.serializeBinaryToWriter
     );
   }
 };
+
 
 /**
  * repeated PacketState commitments = 1;
  * @return {!Array<!proto.ibc.core.channel.v1.PacketState>}
  */
-proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse.prototype.getCommitmentsList = function () {
+proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse.prototype.getCommitmentsList = function() {
   return /** @type{!Array<!proto.ibc.core.channel.v1.PacketState>} */ (
     jspb.Message.getRepeatedWrapperField(this, ibc_core_channel_v1_channel_pb.PacketState, 1));
 };
 
+
 /** @param {!Array<!proto.ibc.core.channel.v1.PacketState>} value */
-proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse.prototype.setCommitmentsList = function (value) {
+proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse.prototype.setCommitmentsList = function(value) {
   jspb.Message.setRepeatedWrapperField(this, 1, value);
 };
+
 
 /**
  * @param {!proto.ibc.core.channel.v1.PacketState=} opt_value
  * @param {number=} opt_index
  * @return {!proto.ibc.core.channel.v1.PacketState}
  */
-proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse.prototype.addCommitments = function (opt_value, opt_index) {
+proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse.prototype.addCommitments = function(opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.ibc.core.channel.v1.PacketState, opt_index);
 };
 
-proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse.prototype.clearCommitmentsList = function () {
+
+proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse.prototype.clearCommitmentsList = function() {
   this.setCommitmentsList([]);
 };
+
 
 /**
  * optional cosmos.base.query.v1beta1.PageResponse pagination = 2;
  * @return {?proto.cosmos.base.query.v1beta1.PageResponse}
  */
-proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse.prototype.getPagination = function () {
+proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse.prototype.getPagination = function() {
   return /** @type{?proto.cosmos.base.query.v1beta1.PageResponse} */ (
     jspb.Message.getWrapperField(this, cosmos_base_query_v1beta1_pagination_pb.PageResponse, 2));
 };
 
+
 /** @param {?proto.cosmos.base.query.v1beta1.PageResponse|undefined} value */
-proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse.prototype.setPagination = function (value) {
+proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse.prototype.setPagination = function(value) {
   jspb.Message.setWrapperField(this, 2, value);
 };
 
-proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse.prototype.clearPagination = function () {
+
+proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse.prototype.clearPagination = function() {
   this.setPagination(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse.prototype.hasPagination = function () {
+proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse.prototype.hasPagination = function() {
   return jspb.Message.getField(this, 2) != null;
 };
+
 
 /**
  * optional ibc.core.client.v1.Height height = 3;
  * @return {?proto.ibc.core.client.v1.Height}
  */
-proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse.prototype.getHeight = function () {
+proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse.prototype.getHeight = function() {
   return /** @type{?proto.ibc.core.client.v1.Height} */ (
     jspb.Message.getWrapperField(this, ibc_core_client_v1_client_pb.Height, 3));
 };
 
+
 /** @param {?proto.ibc.core.client.v1.Height|undefined} value */
-proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse.prototype.setHeight = function (value) {
+proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse.prototype.setHeight = function(value) {
   jspb.Message.setWrapperField(this, 3, value);
 };
 
-proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse.prototype.clearHeight = function () {
+
+proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse.prototype.clearHeight = function() {
   this.setHeight(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse.prototype.hasHeight = function () {
+proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse.prototype.hasHeight = function() {
   return jspb.Message.getField(this, 3) != null;
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -2972,13 +3187,14 @@ proto.ibc.core.channel.v1.QueryPacketCommitmentsResponse.prototype.hasHeight = f
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.core.channel.v1.QueryPacketReceiptRequest = function (opt_data) {
+proto.ibc.core.channel.v1.QueryPacketReceiptRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.ibc.core.channel.v1.QueryPacketReceiptRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.ibc.core.channel.v1.QueryPacketReceiptRequest.displayName = 'proto.ibc.core.channel.v1.QueryPacketReceiptRequest';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -2991,11 +3207,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.core.channel.v1.QueryPacketReceiptRequest.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.core.channel.v1.QueryPacketReceiptRequest.toObject(opt_includeInstance, this);
-  };
+proto.ibc.core.channel.v1.QueryPacketReceiptRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.core.channel.v1.QueryPacketReceiptRequest.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -3004,31 +3221,32 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.core.channel.v1.QueryPacketReceiptRequest.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        portId: jspb.Message.getFieldWithDefault(msg, 1, ''),
-        channelId: jspb.Message.getFieldWithDefault(msg, 2, ''),
-        sequence: jspb.Message.getFieldWithDefault(msg, 3, 0),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.core.channel.v1.QueryPacketReceiptRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    portId: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    channelId: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    sequence: jspb.Message.getFieldWithDefault(msg, 3, 0)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.core.channel.v1.QueryPacketReceiptRequest}
  */
-proto.ibc.core.channel.v1.QueryPacketReceiptRequest.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.core.channel.v1.QueryPacketReceiptRequest();
+proto.ibc.core.channel.v1.QueryPacketReceiptRequest.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.core.channel.v1.QueryPacketReceiptRequest;
   return proto.ibc.core.channel.v1.QueryPacketReceiptRequest.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -3037,42 +3255,44 @@ proto.ibc.core.channel.v1.QueryPacketReceiptRequest.deserializeBinary = function
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.core.channel.v1.QueryPacketReceiptRequest}
  */
-proto.ibc.core.channel.v1.QueryPacketReceiptRequest.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.core.channel.v1.QueryPacketReceiptRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setPortId(value);
-        break;
-      case 2:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setChannelId(value);
-        break;
-      case 3:
-        var value = /** @type {number} */ (reader.readUint64());
-        msg.setSequence(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setPortId(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setChannelId(value);
+      break;
+    case 3:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setSequence(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.core.channel.v1.QueryPacketReceiptRequest.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.core.channel.v1.QueryPacketReceiptRequest.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.core.channel.v1.QueryPacketReceiptRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -3081,69 +3301,77 @@ proto.ibc.core.channel.v1.QueryPacketReceiptRequest.prototype.serializeBinary = 
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.core.channel.v1.QueryPacketReceiptRequest.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.core.channel.v1.QueryPacketReceiptRequest.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getPortId();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f,
+      f
     );
   }
   f = message.getChannelId();
   if (f.length > 0) {
     writer.writeString(
       2,
-      f,
+      f
     );
   }
   f = message.getSequence();
   if (f !== 0) {
     writer.writeUint64(
       3,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * optional string port_id = 1;
  * @return {string}
  */
-proto.ibc.core.channel.v1.QueryPacketReceiptRequest.prototype.getPortId = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.ibc.core.channel.v1.QueryPacketReceiptRequest.prototype.getPortId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
+
 /** @param {string} value */
-proto.ibc.core.channel.v1.QueryPacketReceiptRequest.prototype.setPortId = function (value) {
+proto.ibc.core.channel.v1.QueryPacketReceiptRequest.prototype.setPortId = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
+
 
 /**
  * optional string channel_id = 2;
  * @return {string}
  */
-proto.ibc.core.channel.v1.QueryPacketReceiptRequest.prototype.getChannelId = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
+proto.ibc.core.channel.v1.QueryPacketReceiptRequest.prototype.getChannelId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
+
 /** @param {string} value */
-proto.ibc.core.channel.v1.QueryPacketReceiptRequest.prototype.setChannelId = function (value) {
+proto.ibc.core.channel.v1.QueryPacketReceiptRequest.prototype.setChannelId = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
+
 
 /**
  * optional uint64 sequence = 3;
  * @return {number}
  */
-proto.ibc.core.channel.v1.QueryPacketReceiptRequest.prototype.getSequence = function () {
+proto.ibc.core.channel.v1.QueryPacketReceiptRequest.prototype.getSequence = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
+
 /** @param {number} value */
-proto.ibc.core.channel.v1.QueryPacketReceiptRequest.prototype.setSequence = function (value) {
+proto.ibc.core.channel.v1.QueryPacketReceiptRequest.prototype.setSequence = function(value) {
   jspb.Message.setProto3IntField(this, 3, value);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -3155,13 +3383,14 @@ proto.ibc.core.channel.v1.QueryPacketReceiptRequest.prototype.setSequence = func
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.core.channel.v1.QueryPacketReceiptResponse = function (opt_data) {
+proto.ibc.core.channel.v1.QueryPacketReceiptResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.ibc.core.channel.v1.QueryPacketReceiptResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.ibc.core.channel.v1.QueryPacketReceiptResponse.displayName = 'proto.ibc.core.channel.v1.QueryPacketReceiptResponse';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -3174,11 +3403,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.core.channel.v1.QueryPacketReceiptResponse.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.core.channel.v1.QueryPacketReceiptResponse.toObject(opt_includeInstance, this);
-  };
+proto.ibc.core.channel.v1.QueryPacketReceiptResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.core.channel.v1.QueryPacketReceiptResponse.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -3187,31 +3417,32 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.core.channel.v1.QueryPacketReceiptResponse.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        received: jspb.Message.getFieldWithDefault(msg, 2, false),
-        proof: msg.getProof_asB64(),
-        proofHeight: (f = msg.getProofHeight()) && ibc_core_client_v1_client_pb.Height.toObject(includeInstance, f),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.core.channel.v1.QueryPacketReceiptResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    received: jspb.Message.getFieldWithDefault(msg, 2, false),
+    proof: msg.getProof_asB64(),
+    proofHeight: (f = msg.getProofHeight()) && ibc_core_client_v1_client_pb.Height.toObject(includeInstance, f)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.core.channel.v1.QueryPacketReceiptResponse}
  */
-proto.ibc.core.channel.v1.QueryPacketReceiptResponse.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.core.channel.v1.QueryPacketReceiptResponse();
+proto.ibc.core.channel.v1.QueryPacketReceiptResponse.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.core.channel.v1.QueryPacketReceiptResponse;
   return proto.ibc.core.channel.v1.QueryPacketReceiptResponse.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -3220,43 +3451,45 @@ proto.ibc.core.channel.v1.QueryPacketReceiptResponse.deserializeBinary = functio
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.core.channel.v1.QueryPacketReceiptResponse}
  */
-proto.ibc.core.channel.v1.QueryPacketReceiptResponse.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.core.channel.v1.QueryPacketReceiptResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 2:
-        var value = /** @type {boolean} */ (reader.readBool());
-        msg.setReceived(value);
-        break;
-      case 3:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setProof(value);
-        break;
-      case 4:
-        var value = new ibc_core_client_v1_client_pb.Height();
-        reader.readMessage(value, ibc_core_client_v1_client_pb.Height.deserializeBinaryFromReader);
-        msg.setProofHeight(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 2:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setReceived(value);
+      break;
+    case 3:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setProof(value);
+      break;
+    case 4:
+      var value = new ibc_core_client_v1_client_pb.Height;
+      reader.readMessage(value,ibc_core_client_v1_client_pb.Height.deserializeBinaryFromReader);
+      msg.setProofHeight(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.core.channel.v1.QueryPacketReceiptResponse.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.core.channel.v1.QueryPacketReceiptResponse.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.core.channel.v1.QueryPacketReceiptResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -3265,20 +3498,20 @@ proto.ibc.core.channel.v1.QueryPacketReceiptResponse.prototype.serializeBinary =
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.core.channel.v1.QueryPacketReceiptResponse.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.core.channel.v1.QueryPacketReceiptResponse.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getReceived();
   if (f) {
     writer.writeBool(
       2,
-      f,
+      f
     );
   }
   f = message.getProof_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       3,
-      f,
+      f
     );
   }
   f = message.getProofHeight();
@@ -3286,10 +3519,11 @@ proto.ibc.core.channel.v1.QueryPacketReceiptResponse.serializeBinaryToWriter = f
     writer.writeMessage(
       4,
       f,
-      ibc_core_client_v1_client_pb.Height.serializeBinaryToWriter,
+      ibc_core_client_v1_client_pb.Height.serializeBinaryToWriter
     );
   }
 };
+
 
 /**
  * optional bool received = 2;
@@ -3297,33 +3531,36 @@ proto.ibc.core.channel.v1.QueryPacketReceiptResponse.serializeBinaryToWriter = f
  * You should avoid comparisons like {@code val === true/false} in those cases.
  * @return {boolean}
  */
-proto.ibc.core.channel.v1.QueryPacketReceiptResponse.prototype.getReceived = function () {
+proto.ibc.core.channel.v1.QueryPacketReceiptResponse.prototype.getReceived = function() {
   return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 2, false));
 };
 
+
 /** @param {boolean} value */
-proto.ibc.core.channel.v1.QueryPacketReceiptResponse.prototype.setReceived = function (value) {
+proto.ibc.core.channel.v1.QueryPacketReceiptResponse.prototype.setReceived = function(value) {
   jspb.Message.setProto3BooleanField(this, 2, value);
 };
+
 
 /**
  * optional bytes proof = 3;
  * @return {!(string|Uint8Array)}
  */
-proto.ibc.core.channel.v1.QueryPacketReceiptResponse.prototype.getProof = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 3, ''));
+proto.ibc.core.channel.v1.QueryPacketReceiptResponse.prototype.getProof = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
+
 
 /**
  * optional bytes proof = 3;
  * This is a type-conversion wrapper around `getProof()`
  * @return {string}
  */
-proto.ibc.core.channel.v1.QueryPacketReceiptResponse.prototype.getProof_asB64 = function () {
+proto.ibc.core.channel.v1.QueryPacketReceiptResponse.prototype.getProof_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getProof(),
-  ));
+      this.getProof()));
 };
+
 
 /**
  * optional bytes proof = 3;
@@ -3332,42 +3569,48 @@ proto.ibc.core.channel.v1.QueryPacketReceiptResponse.prototype.getProof_asB64 = 
  * This is a type-conversion wrapper around `getProof()`
  * @return {!Uint8Array}
  */
-proto.ibc.core.channel.v1.QueryPacketReceiptResponse.prototype.getProof_asU8 = function () {
+proto.ibc.core.channel.v1.QueryPacketReceiptResponse.prototype.getProof_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getProof(),
-  ));
+      this.getProof()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.ibc.core.channel.v1.QueryPacketReceiptResponse.prototype.setProof = function (value) {
+proto.ibc.core.channel.v1.QueryPacketReceiptResponse.prototype.setProof = function(value) {
   jspb.Message.setProto3BytesField(this, 3, value);
 };
+
 
 /**
  * optional ibc.core.client.v1.Height proof_height = 4;
  * @return {?proto.ibc.core.client.v1.Height}
  */
-proto.ibc.core.channel.v1.QueryPacketReceiptResponse.prototype.getProofHeight = function () {
+proto.ibc.core.channel.v1.QueryPacketReceiptResponse.prototype.getProofHeight = function() {
   return /** @type{?proto.ibc.core.client.v1.Height} */ (
     jspb.Message.getWrapperField(this, ibc_core_client_v1_client_pb.Height, 4));
 };
 
+
 /** @param {?proto.ibc.core.client.v1.Height|undefined} value */
-proto.ibc.core.channel.v1.QueryPacketReceiptResponse.prototype.setProofHeight = function (value) {
+proto.ibc.core.channel.v1.QueryPacketReceiptResponse.prototype.setProofHeight = function(value) {
   jspb.Message.setWrapperField(this, 4, value);
 };
 
-proto.ibc.core.channel.v1.QueryPacketReceiptResponse.prototype.clearProofHeight = function () {
+
+proto.ibc.core.channel.v1.QueryPacketReceiptResponse.prototype.clearProofHeight = function() {
   this.setProofHeight(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.ibc.core.channel.v1.QueryPacketReceiptResponse.prototype.hasProofHeight = function () {
+proto.ibc.core.channel.v1.QueryPacketReceiptResponse.prototype.hasProofHeight = function() {
   return jspb.Message.getField(this, 4) != null;
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -3379,13 +3622,14 @@ proto.ibc.core.channel.v1.QueryPacketReceiptResponse.prototype.hasProofHeight = 
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementRequest = function (opt_data) {
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.ibc.core.channel.v1.QueryPacketAcknowledgementRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.ibc.core.channel.v1.QueryPacketAcknowledgementRequest.displayName = 'proto.ibc.core.channel.v1.QueryPacketAcknowledgementRequest';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -3398,11 +3642,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.core.channel.v1.QueryPacketAcknowledgementRequest.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.core.channel.v1.QueryPacketAcknowledgementRequest.toObject(opt_includeInstance, this);
-  };
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.core.channel.v1.QueryPacketAcknowledgementRequest.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -3411,31 +3656,32 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.core.channel.v1.QueryPacketAcknowledgementRequest.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        portId: jspb.Message.getFieldWithDefault(msg, 1, ''),
-        channelId: jspb.Message.getFieldWithDefault(msg, 2, ''),
-        sequence: jspb.Message.getFieldWithDefault(msg, 3, 0),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    portId: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    channelId: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    sequence: jspb.Message.getFieldWithDefault(msg, 3, 0)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.core.channel.v1.QueryPacketAcknowledgementRequest}
  */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementRequest.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.core.channel.v1.QueryPacketAcknowledgementRequest();
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementRequest.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.core.channel.v1.QueryPacketAcknowledgementRequest;
   return proto.ibc.core.channel.v1.QueryPacketAcknowledgementRequest.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -3444,42 +3690,44 @@ proto.ibc.core.channel.v1.QueryPacketAcknowledgementRequest.deserializeBinary = 
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.core.channel.v1.QueryPacketAcknowledgementRequest}
  */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementRequest.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setPortId(value);
-        break;
-      case 2:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setChannelId(value);
-        break;
-      case 3:
-        var value = /** @type {number} */ (reader.readUint64());
-        msg.setSequence(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setPortId(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setChannelId(value);
+      break;
+    case 3:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setSequence(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementRequest.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementRequest.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.core.channel.v1.QueryPacketAcknowledgementRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -3488,69 +3736,77 @@ proto.ibc.core.channel.v1.QueryPacketAcknowledgementRequest.prototype.serializeB
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementRequest.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementRequest.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getPortId();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f,
+      f
     );
   }
   f = message.getChannelId();
   if (f.length > 0) {
     writer.writeString(
       2,
-      f,
+      f
     );
   }
   f = message.getSequence();
   if (f !== 0) {
     writer.writeUint64(
       3,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * optional string port_id = 1;
  * @return {string}
  */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementRequest.prototype.getPortId = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementRequest.prototype.getPortId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
+
 /** @param {string} value */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementRequest.prototype.setPortId = function (value) {
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementRequest.prototype.setPortId = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
+
 
 /**
  * optional string channel_id = 2;
  * @return {string}
  */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementRequest.prototype.getChannelId = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementRequest.prototype.getChannelId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
+
 /** @param {string} value */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementRequest.prototype.setChannelId = function (value) {
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementRequest.prototype.setChannelId = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
+
 
 /**
  * optional uint64 sequence = 3;
  * @return {number}
  */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementRequest.prototype.getSequence = function () {
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementRequest.prototype.getSequence = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
+
 /** @param {number} value */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementRequest.prototype.setSequence = function (value) {
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementRequest.prototype.setSequence = function(value) {
   jspb.Message.setProto3IntField(this, 3, value);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -3562,13 +3818,14 @@ proto.ibc.core.channel.v1.QueryPacketAcknowledgementRequest.prototype.setSequenc
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse = function (opt_data) {
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse.displayName = 'proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -3581,11 +3838,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse.toObject(opt_includeInstance, this);
-  };
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -3594,31 +3852,32 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        acknowledgement: msg.getAcknowledgement_asB64(),
-        proof: msg.getProof_asB64(),
-        proofHeight: (f = msg.getProofHeight()) && ibc_core_client_v1_client_pb.Height.toObject(includeInstance, f),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    acknowledgement: msg.getAcknowledgement_asB64(),
+    proof: msg.getProof_asB64(),
+    proofHeight: (f = msg.getProofHeight()) && ibc_core_client_v1_client_pb.Height.toObject(includeInstance, f)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse}
  */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse();
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse;
   return proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -3627,43 +3886,45 @@ proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse.deserializeBinary =
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse}
  */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setAcknowledgement(value);
-        break;
-      case 2:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setProof(value);
-        break;
-      case 3:
-        var value = new ibc_core_client_v1_client_pb.Height();
-        reader.readMessage(value, ibc_core_client_v1_client_pb.Height.deserializeBinaryFromReader);
-        msg.setProofHeight(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setAcknowledgement(value);
+      break;
+    case 2:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setProof(value);
+      break;
+    case 3:
+      var value = new ibc_core_client_v1_client_pb.Height;
+      reader.readMessage(value,ibc_core_client_v1_client_pb.Height.deserializeBinaryFromReader);
+      msg.setProofHeight(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -3672,20 +3933,20 @@ proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse.prototype.serialize
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getAcknowledgement_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       1,
-      f,
+      f
     );
   }
   f = message.getProof_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       2,
-      f,
+      f
     );
   }
   f = message.getProofHeight();
@@ -3693,29 +3954,31 @@ proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse.serializeBinaryToWr
     writer.writeMessage(
       3,
       f,
-      ibc_core_client_v1_client_pb.Height.serializeBinaryToWriter,
+      ibc_core_client_v1_client_pb.Height.serializeBinaryToWriter
     );
   }
 };
 
+
 /**
  * optional bytes acknowledgement = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse.prototype.getAcknowledgement = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse.prototype.getAcknowledgement = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
+
 
 /**
  * optional bytes acknowledgement = 1;
  * This is a type-conversion wrapper around `getAcknowledgement()`
  * @return {string}
  */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse.prototype.getAcknowledgement_asB64 = function () {
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse.prototype.getAcknowledgement_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getAcknowledgement(),
-  ));
+      this.getAcknowledgement()));
 };
+
 
 /**
  * optional bytes acknowledgement = 1;
@@ -3724,35 +3987,37 @@ proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse.prototype.getAcknow
  * This is a type-conversion wrapper around `getAcknowledgement()`
  * @return {!Uint8Array}
  */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse.prototype.getAcknowledgement_asU8 = function () {
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse.prototype.getAcknowledgement_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getAcknowledgement(),
-  ));
+      this.getAcknowledgement()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse.prototype.setAcknowledgement = function (value) {
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse.prototype.setAcknowledgement = function(value) {
   jspb.Message.setProto3BytesField(this, 1, value);
 };
 
+
 /**
  * optional bytes proof = 2;
  * @return {!(string|Uint8Array)}
  */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse.prototype.getProof = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse.prototype.getProof = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
+
 
 /**
  * optional bytes proof = 2;
  * This is a type-conversion wrapper around `getProof()`
  * @return {string}
  */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse.prototype.getProof_asB64 = function () {
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse.prototype.getProof_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getProof(),
-  ));
+      this.getProof()));
 };
+
 
 /**
  * optional bytes proof = 2;
@@ -3761,42 +4026,48 @@ proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse.prototype.getProof_
  * This is a type-conversion wrapper around `getProof()`
  * @return {!Uint8Array}
  */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse.prototype.getProof_asU8 = function () {
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse.prototype.getProof_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getProof(),
-  ));
+      this.getProof()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse.prototype.setProof = function (value) {
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse.prototype.setProof = function(value) {
   jspb.Message.setProto3BytesField(this, 2, value);
 };
+
 
 /**
  * optional ibc.core.client.v1.Height proof_height = 3;
  * @return {?proto.ibc.core.client.v1.Height}
  */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse.prototype.getProofHeight = function () {
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse.prototype.getProofHeight = function() {
   return /** @type{?proto.ibc.core.client.v1.Height} */ (
     jspb.Message.getWrapperField(this, ibc_core_client_v1_client_pb.Height, 3));
 };
 
+
 /** @param {?proto.ibc.core.client.v1.Height|undefined} value */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse.prototype.setProofHeight = function (value) {
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse.prototype.setProofHeight = function(value) {
   jspb.Message.setWrapperField(this, 3, value);
 };
 
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse.prototype.clearProofHeight = function () {
+
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse.prototype.clearProofHeight = function() {
   this.setProofHeight(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse.prototype.hasProofHeight = function () {
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse.prototype.hasProofHeight = function() {
   return jspb.Message.getField(this, 3) != null;
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -3808,13 +4079,14 @@ proto.ibc.core.channel.v1.QueryPacketAcknowledgementResponse.prototype.hasProofH
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementsRequest = function (opt_data) {
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementsRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.ibc.core.channel.v1.QueryPacketAcknowledgementsRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.ibc.core.channel.v1.QueryPacketAcknowledgementsRequest.displayName = 'proto.ibc.core.channel.v1.QueryPacketAcknowledgementsRequest';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -3827,11 +4099,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.core.channel.v1.QueryPacketAcknowledgementsRequest.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.core.channel.v1.QueryPacketAcknowledgementsRequest.toObject(opt_includeInstance, this);
-  };
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementsRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.core.channel.v1.QueryPacketAcknowledgementsRequest.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -3840,31 +4113,32 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.core.channel.v1.QueryPacketAcknowledgementsRequest.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        portId: jspb.Message.getFieldWithDefault(msg, 1, ''),
-        channelId: jspb.Message.getFieldWithDefault(msg, 2, ''),
-        pagination: (f = msg.getPagination()) && cosmos_base_query_v1beta1_pagination_pb.PageRequest.toObject(includeInstance, f),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementsRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    portId: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    channelId: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    pagination: (f = msg.getPagination()) && cosmos_base_query_v1beta1_pagination_pb.PageRequest.toObject(includeInstance, f)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.core.channel.v1.QueryPacketAcknowledgementsRequest}
  */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementsRequest.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.core.channel.v1.QueryPacketAcknowledgementsRequest();
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementsRequest.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.core.channel.v1.QueryPacketAcknowledgementsRequest;
   return proto.ibc.core.channel.v1.QueryPacketAcknowledgementsRequest.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -3873,43 +4147,45 @@ proto.ibc.core.channel.v1.QueryPacketAcknowledgementsRequest.deserializeBinary =
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.core.channel.v1.QueryPacketAcknowledgementsRequest}
  */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementsRequest.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementsRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setPortId(value);
-        break;
-      case 2:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setChannelId(value);
-        break;
-      case 3:
-        var value = new cosmos_base_query_v1beta1_pagination_pb.PageRequest();
-        reader.readMessage(value, cosmos_base_query_v1beta1_pagination_pb.PageRequest.deserializeBinaryFromReader);
-        msg.setPagination(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setPortId(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setChannelId(value);
+      break;
+    case 3:
+      var value = new cosmos_base_query_v1beta1_pagination_pb.PageRequest;
+      reader.readMessage(value,cosmos_base_query_v1beta1_pagination_pb.PageRequest.deserializeBinaryFromReader);
+      msg.setPagination(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementsRequest.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementsRequest.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.core.channel.v1.QueryPacketAcknowledgementsRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -3918,20 +4194,20 @@ proto.ibc.core.channel.v1.QueryPacketAcknowledgementsRequest.prototype.serialize
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementsRequest.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementsRequest.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getPortId();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f,
+      f
     );
   }
   f = message.getChannelId();
   if (f.length > 0) {
     writer.writeString(
       2,
-      f,
+      f
     );
   }
   f = message.getPagination();
@@ -3939,62 +4215,72 @@ proto.ibc.core.channel.v1.QueryPacketAcknowledgementsRequest.serializeBinaryToWr
     writer.writeMessage(
       3,
       f,
-      cosmos_base_query_v1beta1_pagination_pb.PageRequest.serializeBinaryToWriter,
+      cosmos_base_query_v1beta1_pagination_pb.PageRequest.serializeBinaryToWriter
     );
   }
 };
+
 
 /**
  * optional string port_id = 1;
  * @return {string}
  */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementsRequest.prototype.getPortId = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementsRequest.prototype.getPortId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
+
 /** @param {string} value */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementsRequest.prototype.setPortId = function (value) {
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementsRequest.prototype.setPortId = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
+
 
 /**
  * optional string channel_id = 2;
  * @return {string}
  */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementsRequest.prototype.getChannelId = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementsRequest.prototype.getChannelId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
+
 /** @param {string} value */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementsRequest.prototype.setChannelId = function (value) {
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementsRequest.prototype.setChannelId = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
+
 
 /**
  * optional cosmos.base.query.v1beta1.PageRequest pagination = 3;
  * @return {?proto.cosmos.base.query.v1beta1.PageRequest}
  */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementsRequest.prototype.getPagination = function () {
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementsRequest.prototype.getPagination = function() {
   return /** @type{?proto.cosmos.base.query.v1beta1.PageRequest} */ (
     jspb.Message.getWrapperField(this, cosmos_base_query_v1beta1_pagination_pb.PageRequest, 3));
 };
 
+
 /** @param {?proto.cosmos.base.query.v1beta1.PageRequest|undefined} value */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementsRequest.prototype.setPagination = function (value) {
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementsRequest.prototype.setPagination = function(value) {
   jspb.Message.setWrapperField(this, 3, value);
 };
 
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementsRequest.prototype.clearPagination = function () {
+
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementsRequest.prototype.clearPagination = function() {
   this.setPagination(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementsRequest.prototype.hasPagination = function () {
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementsRequest.prototype.hasPagination = function() {
   return jspb.Message.getField(this, 3) != null;
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -4006,7 +4292,7 @@ proto.ibc.core.channel.v1.QueryPacketAcknowledgementsRequest.prototype.hasPagina
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse = function (opt_data) {
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse.repeatedFields_, null);
 };
 goog.inherits(proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse, jspb.Message);
@@ -4020,6 +4306,8 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse.repeatedFields_ = [1];
 
+
+
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -4031,11 +4319,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse.toObject(opt_includeInstance, this);
-  };
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -4044,32 +4333,33 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        acknowledgementsList: jspb.Message.toObjectList(msg.getAcknowledgementsList(),
-          ibc_core_channel_v1_channel_pb.PacketState.toObject, includeInstance),
-        pagination: (f = msg.getPagination()) && cosmos_base_query_v1beta1_pagination_pb.PageResponse.toObject(includeInstance, f),
-        height: (f = msg.getHeight()) && ibc_core_client_v1_client_pb.Height.toObject(includeInstance, f),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    acknowledgementsList: jspb.Message.toObjectList(msg.getAcknowledgementsList(),
+    ibc_core_channel_v1_channel_pb.PacketState.toObject, includeInstance),
+    pagination: (f = msg.getPagination()) && cosmos_base_query_v1beta1_pagination_pb.PageResponse.toObject(includeInstance, f),
+    height: (f = msg.getHeight()) && ibc_core_client_v1_client_pb.Height.toObject(includeInstance, f)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse}
  */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse();
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse;
   return proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -4078,45 +4368,47 @@ proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse.deserializeBinary 
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse}
  */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = new ibc_core_channel_v1_channel_pb.PacketState();
-        reader.readMessage(value, ibc_core_channel_v1_channel_pb.PacketState.deserializeBinaryFromReader);
-        msg.addAcknowledgements(value);
-        break;
-      case 2:
-        var value = new cosmos_base_query_v1beta1_pagination_pb.PageResponse();
-        reader.readMessage(value, cosmos_base_query_v1beta1_pagination_pb.PageResponse.deserializeBinaryFromReader);
-        msg.setPagination(value);
-        break;
-      case 3:
-        var value = new ibc_core_client_v1_client_pb.Height();
-        reader.readMessage(value, ibc_core_client_v1_client_pb.Height.deserializeBinaryFromReader);
-        msg.setHeight(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = new ibc_core_channel_v1_channel_pb.PacketState;
+      reader.readMessage(value,ibc_core_channel_v1_channel_pb.PacketState.deserializeBinaryFromReader);
+      msg.addAcknowledgements(value);
+      break;
+    case 2:
+      var value = new cosmos_base_query_v1beta1_pagination_pb.PageResponse;
+      reader.readMessage(value,cosmos_base_query_v1beta1_pagination_pb.PageResponse.deserializeBinaryFromReader);
+      msg.setPagination(value);
+      break;
+    case 3:
+      var value = new ibc_core_client_v1_client_pb.Height;
+      reader.readMessage(value,ibc_core_client_v1_client_pb.Height.deserializeBinaryFromReader);
+      msg.setHeight(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -4125,14 +4417,14 @@ proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse.prototype.serializ
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getAcknowledgementsList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       1,
       f,
-      ibc_core_channel_v1_channel_pb.PacketState.serializeBinaryToWriter,
+      ibc_core_channel_v1_channel_pb.PacketState.serializeBinaryToWriter
     );
   }
   f = message.getPagination();
@@ -4140,7 +4432,7 @@ proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse.serializeBinaryToW
     writer.writeMessage(
       2,
       f,
-      cosmos_base_query_v1beta1_pagination_pb.PageResponse.serializeBinaryToWriter,
+      cosmos_base_query_v1beta1_pagination_pb.PageResponse.serializeBinaryToWriter
     );
   }
   f = message.getHeight();
@@ -4148,89 +4440,103 @@ proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse.serializeBinaryToW
     writer.writeMessage(
       3,
       f,
-      ibc_core_client_v1_client_pb.Height.serializeBinaryToWriter,
+      ibc_core_client_v1_client_pb.Height.serializeBinaryToWriter
     );
   }
 };
+
 
 /**
  * repeated PacketState acknowledgements = 1;
  * @return {!Array<!proto.ibc.core.channel.v1.PacketState>}
  */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse.prototype.getAcknowledgementsList = function () {
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse.prototype.getAcknowledgementsList = function() {
   return /** @type{!Array<!proto.ibc.core.channel.v1.PacketState>} */ (
     jspb.Message.getRepeatedWrapperField(this, ibc_core_channel_v1_channel_pb.PacketState, 1));
 };
 
+
 /** @param {!Array<!proto.ibc.core.channel.v1.PacketState>} value */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse.prototype.setAcknowledgementsList = function (value) {
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse.prototype.setAcknowledgementsList = function(value) {
   jspb.Message.setRepeatedWrapperField(this, 1, value);
 };
+
 
 /**
  * @param {!proto.ibc.core.channel.v1.PacketState=} opt_value
  * @param {number=} opt_index
  * @return {!proto.ibc.core.channel.v1.PacketState}
  */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse.prototype.addAcknowledgements = function (opt_value, opt_index) {
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse.prototype.addAcknowledgements = function(opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.ibc.core.channel.v1.PacketState, opt_index);
 };
 
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse.prototype.clearAcknowledgementsList = function () {
+
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse.prototype.clearAcknowledgementsList = function() {
   this.setAcknowledgementsList([]);
 };
+
 
 /**
  * optional cosmos.base.query.v1beta1.PageResponse pagination = 2;
  * @return {?proto.cosmos.base.query.v1beta1.PageResponse}
  */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse.prototype.getPagination = function () {
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse.prototype.getPagination = function() {
   return /** @type{?proto.cosmos.base.query.v1beta1.PageResponse} */ (
     jspb.Message.getWrapperField(this, cosmos_base_query_v1beta1_pagination_pb.PageResponse, 2));
 };
 
+
 /** @param {?proto.cosmos.base.query.v1beta1.PageResponse|undefined} value */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse.prototype.setPagination = function (value) {
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse.prototype.setPagination = function(value) {
   jspb.Message.setWrapperField(this, 2, value);
 };
 
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse.prototype.clearPagination = function () {
+
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse.prototype.clearPagination = function() {
   this.setPagination(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse.prototype.hasPagination = function () {
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse.prototype.hasPagination = function() {
   return jspb.Message.getField(this, 2) != null;
 };
+
 
 /**
  * optional ibc.core.client.v1.Height height = 3;
  * @return {?proto.ibc.core.client.v1.Height}
  */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse.prototype.getHeight = function () {
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse.prototype.getHeight = function() {
   return /** @type{?proto.ibc.core.client.v1.Height} */ (
     jspb.Message.getWrapperField(this, ibc_core_client_v1_client_pb.Height, 3));
 };
 
+
 /** @param {?proto.ibc.core.client.v1.Height|undefined} value */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse.prototype.setHeight = function (value) {
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse.prototype.setHeight = function(value) {
   jspb.Message.setWrapperField(this, 3, value);
 };
 
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse.prototype.clearHeight = function () {
+
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse.prototype.clearHeight = function() {
   this.setHeight(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse.prototype.hasHeight = function () {
+proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse.prototype.hasHeight = function() {
   return jspb.Message.getField(this, 3) != null;
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -4242,7 +4548,7 @@ proto.ibc.core.channel.v1.QueryPacketAcknowledgementsResponse.prototype.hasHeigh
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.core.channel.v1.QueryUnreceivedPacketsRequest = function (opt_data) {
+proto.ibc.core.channel.v1.QueryUnreceivedPacketsRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.ibc.core.channel.v1.QueryUnreceivedPacketsRequest.repeatedFields_, null);
 };
 goog.inherits(proto.ibc.core.channel.v1.QueryUnreceivedPacketsRequest, jspb.Message);
@@ -4256,6 +4562,8 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.ibc.core.channel.v1.QueryUnreceivedPacketsRequest.repeatedFields_ = [3];
 
+
+
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -4267,11 +4575,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.core.channel.v1.QueryUnreceivedPacketsRequest.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.core.channel.v1.QueryUnreceivedPacketsRequest.toObject(opt_includeInstance, this);
-  };
+proto.ibc.core.channel.v1.QueryUnreceivedPacketsRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.core.channel.v1.QueryUnreceivedPacketsRequest.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -4280,31 +4589,32 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.core.channel.v1.QueryUnreceivedPacketsRequest.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        portId: jspb.Message.getFieldWithDefault(msg, 1, ''),
-        channelId: jspb.Message.getFieldWithDefault(msg, 2, ''),
-        packetCommitmentSequencesList: jspb.Message.getRepeatedField(msg, 3),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.core.channel.v1.QueryUnreceivedPacketsRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    portId: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    channelId: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    packetCommitmentSequencesList: jspb.Message.getRepeatedField(msg, 3)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.core.channel.v1.QueryUnreceivedPacketsRequest}
  */
-proto.ibc.core.channel.v1.QueryUnreceivedPacketsRequest.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.core.channel.v1.QueryUnreceivedPacketsRequest();
+proto.ibc.core.channel.v1.QueryUnreceivedPacketsRequest.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.core.channel.v1.QueryUnreceivedPacketsRequest;
   return proto.ibc.core.channel.v1.QueryUnreceivedPacketsRequest.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -4313,42 +4623,44 @@ proto.ibc.core.channel.v1.QueryUnreceivedPacketsRequest.deserializeBinary = func
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.core.channel.v1.QueryUnreceivedPacketsRequest}
  */
-proto.ibc.core.channel.v1.QueryUnreceivedPacketsRequest.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.core.channel.v1.QueryUnreceivedPacketsRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setPortId(value);
-        break;
-      case 2:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setChannelId(value);
-        break;
-      case 3:
-        var value = /** @type {!Array<number>} */ (reader.readPackedUint64());
-        msg.setPacketCommitmentSequencesList(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setPortId(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setChannelId(value);
+      break;
+    case 3:
+      var value = /** @type {!Array<number>} */ (reader.readPackedUint64());
+      msg.setPacketCommitmentSequencesList(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.core.channel.v1.QueryUnreceivedPacketsRequest.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.core.channel.v1.QueryUnreceivedPacketsRequest.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.core.channel.v1.QueryUnreceivedPacketsRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -4357,81 +4669,91 @@ proto.ibc.core.channel.v1.QueryUnreceivedPacketsRequest.prototype.serializeBinar
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.core.channel.v1.QueryUnreceivedPacketsRequest.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.core.channel.v1.QueryUnreceivedPacketsRequest.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getPortId();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f,
+      f
     );
   }
   f = message.getChannelId();
   if (f.length > 0) {
     writer.writeString(
       2,
-      f,
+      f
     );
   }
   f = message.getPacketCommitmentSequencesList();
   if (f.length > 0) {
     writer.writePackedUint64(
       3,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * optional string port_id = 1;
  * @return {string}
  */
-proto.ibc.core.channel.v1.QueryUnreceivedPacketsRequest.prototype.getPortId = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.ibc.core.channel.v1.QueryUnreceivedPacketsRequest.prototype.getPortId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
+
 /** @param {string} value */
-proto.ibc.core.channel.v1.QueryUnreceivedPacketsRequest.prototype.setPortId = function (value) {
+proto.ibc.core.channel.v1.QueryUnreceivedPacketsRequest.prototype.setPortId = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
+
 
 /**
  * optional string channel_id = 2;
  * @return {string}
  */
-proto.ibc.core.channel.v1.QueryUnreceivedPacketsRequest.prototype.getChannelId = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
+proto.ibc.core.channel.v1.QueryUnreceivedPacketsRequest.prototype.getChannelId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
+
 /** @param {string} value */
-proto.ibc.core.channel.v1.QueryUnreceivedPacketsRequest.prototype.setChannelId = function (value) {
+proto.ibc.core.channel.v1.QueryUnreceivedPacketsRequest.prototype.setChannelId = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
+
 
 /**
  * repeated uint64 packet_commitment_sequences = 3;
  * @return {!Array<number>}
  */
-proto.ibc.core.channel.v1.QueryUnreceivedPacketsRequest.prototype.getPacketCommitmentSequencesList = function () {
+proto.ibc.core.channel.v1.QueryUnreceivedPacketsRequest.prototype.getPacketCommitmentSequencesList = function() {
   return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 3));
 };
 
+
 /** @param {!Array<number>} value */
-proto.ibc.core.channel.v1.QueryUnreceivedPacketsRequest.prototype.setPacketCommitmentSequencesList = function (value) {
+proto.ibc.core.channel.v1.QueryUnreceivedPacketsRequest.prototype.setPacketCommitmentSequencesList = function(value) {
   jspb.Message.setField(this, 3, value || []);
 };
+
 
 /**
  * @param {!number} value
  * @param {number=} opt_index
  */
-proto.ibc.core.channel.v1.QueryUnreceivedPacketsRequest.prototype.addPacketCommitmentSequences = function (value, opt_index) {
+proto.ibc.core.channel.v1.QueryUnreceivedPacketsRequest.prototype.addPacketCommitmentSequences = function(value, opt_index) {
   jspb.Message.addToRepeatedField(this, 3, value, opt_index);
 };
 
-proto.ibc.core.channel.v1.QueryUnreceivedPacketsRequest.prototype.clearPacketCommitmentSequencesList = function () {
+
+proto.ibc.core.channel.v1.QueryUnreceivedPacketsRequest.prototype.clearPacketCommitmentSequencesList = function() {
   this.setPacketCommitmentSequencesList([]);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -4443,7 +4765,7 @@ proto.ibc.core.channel.v1.QueryUnreceivedPacketsRequest.prototype.clearPacketCom
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.core.channel.v1.QueryUnreceivedPacketsResponse = function (opt_data) {
+proto.ibc.core.channel.v1.QueryUnreceivedPacketsResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.ibc.core.channel.v1.QueryUnreceivedPacketsResponse.repeatedFields_, null);
 };
 goog.inherits(proto.ibc.core.channel.v1.QueryUnreceivedPacketsResponse, jspb.Message);
@@ -4457,6 +4779,8 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.ibc.core.channel.v1.QueryUnreceivedPacketsResponse.repeatedFields_ = [1];
 
+
+
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -4468,11 +4792,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.core.channel.v1.QueryUnreceivedPacketsResponse.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.core.channel.v1.QueryUnreceivedPacketsResponse.toObject(opt_includeInstance, this);
-  };
+proto.ibc.core.channel.v1.QueryUnreceivedPacketsResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.core.channel.v1.QueryUnreceivedPacketsResponse.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -4481,30 +4806,31 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.core.channel.v1.QueryUnreceivedPacketsResponse.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        sequencesList: jspb.Message.getRepeatedField(msg, 1),
-        height: (f = msg.getHeight()) && ibc_core_client_v1_client_pb.Height.toObject(includeInstance, f),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.core.channel.v1.QueryUnreceivedPacketsResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    sequencesList: jspb.Message.getRepeatedField(msg, 1),
+    height: (f = msg.getHeight()) && ibc_core_client_v1_client_pb.Height.toObject(includeInstance, f)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.core.channel.v1.QueryUnreceivedPacketsResponse}
  */
-proto.ibc.core.channel.v1.QueryUnreceivedPacketsResponse.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.core.channel.v1.QueryUnreceivedPacketsResponse();
+proto.ibc.core.channel.v1.QueryUnreceivedPacketsResponse.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.core.channel.v1.QueryUnreceivedPacketsResponse;
   return proto.ibc.core.channel.v1.QueryUnreceivedPacketsResponse.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -4513,39 +4839,41 @@ proto.ibc.core.channel.v1.QueryUnreceivedPacketsResponse.deserializeBinary = fun
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.core.channel.v1.QueryUnreceivedPacketsResponse}
  */
-proto.ibc.core.channel.v1.QueryUnreceivedPacketsResponse.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.core.channel.v1.QueryUnreceivedPacketsResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {!Array<number>} */ (reader.readPackedUint64());
-        msg.setSequencesList(value);
-        break;
-      case 2:
-        var value = new ibc_core_client_v1_client_pb.Height();
-        reader.readMessage(value, ibc_core_client_v1_client_pb.Height.deserializeBinaryFromReader);
-        msg.setHeight(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {!Array<number>} */ (reader.readPackedUint64());
+      msg.setSequencesList(value);
+      break;
+    case 2:
+      var value = new ibc_core_client_v1_client_pb.Height;
+      reader.readMessage(value,ibc_core_client_v1_client_pb.Height.deserializeBinaryFromReader);
+      msg.setHeight(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.core.channel.v1.QueryUnreceivedPacketsResponse.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.core.channel.v1.QueryUnreceivedPacketsResponse.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.core.channel.v1.QueryUnreceivedPacketsResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -4554,13 +4882,13 @@ proto.ibc.core.channel.v1.QueryUnreceivedPacketsResponse.prototype.serializeBina
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.core.channel.v1.QueryUnreceivedPacketsResponse.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.core.channel.v1.QueryUnreceivedPacketsResponse.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getSequencesList();
   if (f.length > 0) {
     writer.writePackedUint64(
       1,
-      f,
+      f
     );
   }
   f = message.getHeight();
@@ -4568,61 +4896,71 @@ proto.ibc.core.channel.v1.QueryUnreceivedPacketsResponse.serializeBinaryToWriter
     writer.writeMessage(
       2,
       f,
-      ibc_core_client_v1_client_pb.Height.serializeBinaryToWriter,
+      ibc_core_client_v1_client_pb.Height.serializeBinaryToWriter
     );
   }
 };
+
 
 /**
  * repeated uint64 sequences = 1;
  * @return {!Array<number>}
  */
-proto.ibc.core.channel.v1.QueryUnreceivedPacketsResponse.prototype.getSequencesList = function () {
+proto.ibc.core.channel.v1.QueryUnreceivedPacketsResponse.prototype.getSequencesList = function() {
   return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 1));
 };
 
+
 /** @param {!Array<number>} value */
-proto.ibc.core.channel.v1.QueryUnreceivedPacketsResponse.prototype.setSequencesList = function (value) {
+proto.ibc.core.channel.v1.QueryUnreceivedPacketsResponse.prototype.setSequencesList = function(value) {
   jspb.Message.setField(this, 1, value || []);
 };
+
 
 /**
  * @param {!number} value
  * @param {number=} opt_index
  */
-proto.ibc.core.channel.v1.QueryUnreceivedPacketsResponse.prototype.addSequences = function (value, opt_index) {
+proto.ibc.core.channel.v1.QueryUnreceivedPacketsResponse.prototype.addSequences = function(value, opt_index) {
   jspb.Message.addToRepeatedField(this, 1, value, opt_index);
 };
 
-proto.ibc.core.channel.v1.QueryUnreceivedPacketsResponse.prototype.clearSequencesList = function () {
+
+proto.ibc.core.channel.v1.QueryUnreceivedPacketsResponse.prototype.clearSequencesList = function() {
   this.setSequencesList([]);
 };
+
 
 /**
  * optional ibc.core.client.v1.Height height = 2;
  * @return {?proto.ibc.core.client.v1.Height}
  */
-proto.ibc.core.channel.v1.QueryUnreceivedPacketsResponse.prototype.getHeight = function () {
+proto.ibc.core.channel.v1.QueryUnreceivedPacketsResponse.prototype.getHeight = function() {
   return /** @type{?proto.ibc.core.client.v1.Height} */ (
     jspb.Message.getWrapperField(this, ibc_core_client_v1_client_pb.Height, 2));
 };
 
+
 /** @param {?proto.ibc.core.client.v1.Height|undefined} value */
-proto.ibc.core.channel.v1.QueryUnreceivedPacketsResponse.prototype.setHeight = function (value) {
+proto.ibc.core.channel.v1.QueryUnreceivedPacketsResponse.prototype.setHeight = function(value) {
   jspb.Message.setWrapperField(this, 2, value);
 };
 
-proto.ibc.core.channel.v1.QueryUnreceivedPacketsResponse.prototype.clearHeight = function () {
+
+proto.ibc.core.channel.v1.QueryUnreceivedPacketsResponse.prototype.clearHeight = function() {
   this.setHeight(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.ibc.core.channel.v1.QueryUnreceivedPacketsResponse.prototype.hasHeight = function () {
+proto.ibc.core.channel.v1.QueryUnreceivedPacketsResponse.prototype.hasHeight = function() {
   return jspb.Message.getField(this, 2) != null;
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -4634,7 +4972,7 @@ proto.ibc.core.channel.v1.QueryUnreceivedPacketsResponse.prototype.hasHeight = f
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.core.channel.v1.QueryUnreceivedAcksRequest = function (opt_data) {
+proto.ibc.core.channel.v1.QueryUnreceivedAcksRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.ibc.core.channel.v1.QueryUnreceivedAcksRequest.repeatedFields_, null);
 };
 goog.inherits(proto.ibc.core.channel.v1.QueryUnreceivedAcksRequest, jspb.Message);
@@ -4648,6 +4986,8 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.ibc.core.channel.v1.QueryUnreceivedAcksRequest.repeatedFields_ = [3];
 
+
+
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -4659,11 +4999,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.core.channel.v1.QueryUnreceivedAcksRequest.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.core.channel.v1.QueryUnreceivedAcksRequest.toObject(opt_includeInstance, this);
-  };
+proto.ibc.core.channel.v1.QueryUnreceivedAcksRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.core.channel.v1.QueryUnreceivedAcksRequest.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -4672,31 +5013,32 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.core.channel.v1.QueryUnreceivedAcksRequest.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        portId: jspb.Message.getFieldWithDefault(msg, 1, ''),
-        channelId: jspb.Message.getFieldWithDefault(msg, 2, ''),
-        packetAckSequencesList: jspb.Message.getRepeatedField(msg, 3),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.core.channel.v1.QueryUnreceivedAcksRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    portId: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    channelId: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    packetAckSequencesList: jspb.Message.getRepeatedField(msg, 3)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.core.channel.v1.QueryUnreceivedAcksRequest}
  */
-proto.ibc.core.channel.v1.QueryUnreceivedAcksRequest.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.core.channel.v1.QueryUnreceivedAcksRequest();
+proto.ibc.core.channel.v1.QueryUnreceivedAcksRequest.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.core.channel.v1.QueryUnreceivedAcksRequest;
   return proto.ibc.core.channel.v1.QueryUnreceivedAcksRequest.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -4705,42 +5047,44 @@ proto.ibc.core.channel.v1.QueryUnreceivedAcksRequest.deserializeBinary = functio
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.core.channel.v1.QueryUnreceivedAcksRequest}
  */
-proto.ibc.core.channel.v1.QueryUnreceivedAcksRequest.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.core.channel.v1.QueryUnreceivedAcksRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setPortId(value);
-        break;
-      case 2:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setChannelId(value);
-        break;
-      case 3:
-        var value = /** @type {!Array<number>} */ (reader.readPackedUint64());
-        msg.setPacketAckSequencesList(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setPortId(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setChannelId(value);
+      break;
+    case 3:
+      var value = /** @type {!Array<number>} */ (reader.readPackedUint64());
+      msg.setPacketAckSequencesList(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.core.channel.v1.QueryUnreceivedAcksRequest.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.core.channel.v1.QueryUnreceivedAcksRequest.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.core.channel.v1.QueryUnreceivedAcksRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -4749,81 +5093,91 @@ proto.ibc.core.channel.v1.QueryUnreceivedAcksRequest.prototype.serializeBinary =
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.core.channel.v1.QueryUnreceivedAcksRequest.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.core.channel.v1.QueryUnreceivedAcksRequest.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getPortId();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f,
+      f
     );
   }
   f = message.getChannelId();
   if (f.length > 0) {
     writer.writeString(
       2,
-      f,
+      f
     );
   }
   f = message.getPacketAckSequencesList();
   if (f.length > 0) {
     writer.writePackedUint64(
       3,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * optional string port_id = 1;
  * @return {string}
  */
-proto.ibc.core.channel.v1.QueryUnreceivedAcksRequest.prototype.getPortId = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.ibc.core.channel.v1.QueryUnreceivedAcksRequest.prototype.getPortId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
+
 /** @param {string} value */
-proto.ibc.core.channel.v1.QueryUnreceivedAcksRequest.prototype.setPortId = function (value) {
+proto.ibc.core.channel.v1.QueryUnreceivedAcksRequest.prototype.setPortId = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
+
 
 /**
  * optional string channel_id = 2;
  * @return {string}
  */
-proto.ibc.core.channel.v1.QueryUnreceivedAcksRequest.prototype.getChannelId = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
+proto.ibc.core.channel.v1.QueryUnreceivedAcksRequest.prototype.getChannelId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
+
 /** @param {string} value */
-proto.ibc.core.channel.v1.QueryUnreceivedAcksRequest.prototype.setChannelId = function (value) {
+proto.ibc.core.channel.v1.QueryUnreceivedAcksRequest.prototype.setChannelId = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
+
 
 /**
  * repeated uint64 packet_ack_sequences = 3;
  * @return {!Array<number>}
  */
-proto.ibc.core.channel.v1.QueryUnreceivedAcksRequest.prototype.getPacketAckSequencesList = function () {
+proto.ibc.core.channel.v1.QueryUnreceivedAcksRequest.prototype.getPacketAckSequencesList = function() {
   return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 3));
 };
 
+
 /** @param {!Array<number>} value */
-proto.ibc.core.channel.v1.QueryUnreceivedAcksRequest.prototype.setPacketAckSequencesList = function (value) {
+proto.ibc.core.channel.v1.QueryUnreceivedAcksRequest.prototype.setPacketAckSequencesList = function(value) {
   jspb.Message.setField(this, 3, value || []);
 };
+
 
 /**
  * @param {!number} value
  * @param {number=} opt_index
  */
-proto.ibc.core.channel.v1.QueryUnreceivedAcksRequest.prototype.addPacketAckSequences = function (value, opt_index) {
+proto.ibc.core.channel.v1.QueryUnreceivedAcksRequest.prototype.addPacketAckSequences = function(value, opt_index) {
   jspb.Message.addToRepeatedField(this, 3, value, opt_index);
 };
 
-proto.ibc.core.channel.v1.QueryUnreceivedAcksRequest.prototype.clearPacketAckSequencesList = function () {
+
+proto.ibc.core.channel.v1.QueryUnreceivedAcksRequest.prototype.clearPacketAckSequencesList = function() {
   this.setPacketAckSequencesList([]);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -4835,7 +5189,7 @@ proto.ibc.core.channel.v1.QueryUnreceivedAcksRequest.prototype.clearPacketAckSeq
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.core.channel.v1.QueryUnreceivedAcksResponse = function (opt_data) {
+proto.ibc.core.channel.v1.QueryUnreceivedAcksResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.ibc.core.channel.v1.QueryUnreceivedAcksResponse.repeatedFields_, null);
 };
 goog.inherits(proto.ibc.core.channel.v1.QueryUnreceivedAcksResponse, jspb.Message);
@@ -4849,6 +5203,8 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.ibc.core.channel.v1.QueryUnreceivedAcksResponse.repeatedFields_ = [1];
 
+
+
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -4860,11 +5216,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.core.channel.v1.QueryUnreceivedAcksResponse.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.core.channel.v1.QueryUnreceivedAcksResponse.toObject(opt_includeInstance, this);
-  };
+proto.ibc.core.channel.v1.QueryUnreceivedAcksResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.core.channel.v1.QueryUnreceivedAcksResponse.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -4873,30 +5230,31 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.core.channel.v1.QueryUnreceivedAcksResponse.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        sequencesList: jspb.Message.getRepeatedField(msg, 1),
-        height: (f = msg.getHeight()) && ibc_core_client_v1_client_pb.Height.toObject(includeInstance, f),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.core.channel.v1.QueryUnreceivedAcksResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    sequencesList: jspb.Message.getRepeatedField(msg, 1),
+    height: (f = msg.getHeight()) && ibc_core_client_v1_client_pb.Height.toObject(includeInstance, f)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.core.channel.v1.QueryUnreceivedAcksResponse}
  */
-proto.ibc.core.channel.v1.QueryUnreceivedAcksResponse.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.core.channel.v1.QueryUnreceivedAcksResponse();
+proto.ibc.core.channel.v1.QueryUnreceivedAcksResponse.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.core.channel.v1.QueryUnreceivedAcksResponse;
   return proto.ibc.core.channel.v1.QueryUnreceivedAcksResponse.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -4905,39 +5263,41 @@ proto.ibc.core.channel.v1.QueryUnreceivedAcksResponse.deserializeBinary = functi
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.core.channel.v1.QueryUnreceivedAcksResponse}
  */
-proto.ibc.core.channel.v1.QueryUnreceivedAcksResponse.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.core.channel.v1.QueryUnreceivedAcksResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {!Array<number>} */ (reader.readPackedUint64());
-        msg.setSequencesList(value);
-        break;
-      case 2:
-        var value = new ibc_core_client_v1_client_pb.Height();
-        reader.readMessage(value, ibc_core_client_v1_client_pb.Height.deserializeBinaryFromReader);
-        msg.setHeight(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {!Array<number>} */ (reader.readPackedUint64());
+      msg.setSequencesList(value);
+      break;
+    case 2:
+      var value = new ibc_core_client_v1_client_pb.Height;
+      reader.readMessage(value,ibc_core_client_v1_client_pb.Height.deserializeBinaryFromReader);
+      msg.setHeight(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.core.channel.v1.QueryUnreceivedAcksResponse.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.core.channel.v1.QueryUnreceivedAcksResponse.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.core.channel.v1.QueryUnreceivedAcksResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -4946,13 +5306,13 @@ proto.ibc.core.channel.v1.QueryUnreceivedAcksResponse.prototype.serializeBinary 
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.core.channel.v1.QueryUnreceivedAcksResponse.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.core.channel.v1.QueryUnreceivedAcksResponse.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getSequencesList();
   if (f.length > 0) {
     writer.writePackedUint64(
       1,
-      f,
+      f
     );
   }
   f = message.getHeight();
@@ -4960,61 +5320,71 @@ proto.ibc.core.channel.v1.QueryUnreceivedAcksResponse.serializeBinaryToWriter = 
     writer.writeMessage(
       2,
       f,
-      ibc_core_client_v1_client_pb.Height.serializeBinaryToWriter,
+      ibc_core_client_v1_client_pb.Height.serializeBinaryToWriter
     );
   }
 };
+
 
 /**
  * repeated uint64 sequences = 1;
  * @return {!Array<number>}
  */
-proto.ibc.core.channel.v1.QueryUnreceivedAcksResponse.prototype.getSequencesList = function () {
+proto.ibc.core.channel.v1.QueryUnreceivedAcksResponse.prototype.getSequencesList = function() {
   return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 1));
 };
 
+
 /** @param {!Array<number>} value */
-proto.ibc.core.channel.v1.QueryUnreceivedAcksResponse.prototype.setSequencesList = function (value) {
+proto.ibc.core.channel.v1.QueryUnreceivedAcksResponse.prototype.setSequencesList = function(value) {
   jspb.Message.setField(this, 1, value || []);
 };
+
 
 /**
  * @param {!number} value
  * @param {number=} opt_index
  */
-proto.ibc.core.channel.v1.QueryUnreceivedAcksResponse.prototype.addSequences = function (value, opt_index) {
+proto.ibc.core.channel.v1.QueryUnreceivedAcksResponse.prototype.addSequences = function(value, opt_index) {
   jspb.Message.addToRepeatedField(this, 1, value, opt_index);
 };
 
-proto.ibc.core.channel.v1.QueryUnreceivedAcksResponse.prototype.clearSequencesList = function () {
+
+proto.ibc.core.channel.v1.QueryUnreceivedAcksResponse.prototype.clearSequencesList = function() {
   this.setSequencesList([]);
 };
+
 
 /**
  * optional ibc.core.client.v1.Height height = 2;
  * @return {?proto.ibc.core.client.v1.Height}
  */
-proto.ibc.core.channel.v1.QueryUnreceivedAcksResponse.prototype.getHeight = function () {
+proto.ibc.core.channel.v1.QueryUnreceivedAcksResponse.prototype.getHeight = function() {
   return /** @type{?proto.ibc.core.client.v1.Height} */ (
     jspb.Message.getWrapperField(this, ibc_core_client_v1_client_pb.Height, 2));
 };
 
+
 /** @param {?proto.ibc.core.client.v1.Height|undefined} value */
-proto.ibc.core.channel.v1.QueryUnreceivedAcksResponse.prototype.setHeight = function (value) {
+proto.ibc.core.channel.v1.QueryUnreceivedAcksResponse.prototype.setHeight = function(value) {
   jspb.Message.setWrapperField(this, 2, value);
 };
 
-proto.ibc.core.channel.v1.QueryUnreceivedAcksResponse.prototype.clearHeight = function () {
+
+proto.ibc.core.channel.v1.QueryUnreceivedAcksResponse.prototype.clearHeight = function() {
   this.setHeight(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.ibc.core.channel.v1.QueryUnreceivedAcksResponse.prototype.hasHeight = function () {
+proto.ibc.core.channel.v1.QueryUnreceivedAcksResponse.prototype.hasHeight = function() {
   return jspb.Message.getField(this, 2) != null;
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -5026,13 +5396,14 @@ proto.ibc.core.channel.v1.QueryUnreceivedAcksResponse.prototype.hasHeight = func
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.core.channel.v1.QueryNextSequenceReceiveRequest = function (opt_data) {
+proto.ibc.core.channel.v1.QueryNextSequenceReceiveRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.ibc.core.channel.v1.QueryNextSequenceReceiveRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.ibc.core.channel.v1.QueryNextSequenceReceiveRequest.displayName = 'proto.ibc.core.channel.v1.QueryNextSequenceReceiveRequest';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -5045,11 +5416,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.core.channel.v1.QueryNextSequenceReceiveRequest.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.core.channel.v1.QueryNextSequenceReceiveRequest.toObject(opt_includeInstance, this);
-  };
+proto.ibc.core.channel.v1.QueryNextSequenceReceiveRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.core.channel.v1.QueryNextSequenceReceiveRequest.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -5058,30 +5430,31 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.core.channel.v1.QueryNextSequenceReceiveRequest.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        portId: jspb.Message.getFieldWithDefault(msg, 1, ''),
-        channelId: jspb.Message.getFieldWithDefault(msg, 2, ''),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.core.channel.v1.QueryNextSequenceReceiveRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    portId: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    channelId: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.core.channel.v1.QueryNextSequenceReceiveRequest}
  */
-proto.ibc.core.channel.v1.QueryNextSequenceReceiveRequest.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.core.channel.v1.QueryNextSequenceReceiveRequest();
+proto.ibc.core.channel.v1.QueryNextSequenceReceiveRequest.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.core.channel.v1.QueryNextSequenceReceiveRequest;
   return proto.ibc.core.channel.v1.QueryNextSequenceReceiveRequest.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -5090,38 +5463,40 @@ proto.ibc.core.channel.v1.QueryNextSequenceReceiveRequest.deserializeBinary = fu
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.core.channel.v1.QueryNextSequenceReceiveRequest}
  */
-proto.ibc.core.channel.v1.QueryNextSequenceReceiveRequest.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.core.channel.v1.QueryNextSequenceReceiveRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setPortId(value);
-        break;
-      case 2:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setChannelId(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setPortId(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setChannelId(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.core.channel.v1.QueryNextSequenceReceiveRequest.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.core.channel.v1.QueryNextSequenceReceiveRequest.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.core.channel.v1.QueryNextSequenceReceiveRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -5130,49 +5505,55 @@ proto.ibc.core.channel.v1.QueryNextSequenceReceiveRequest.prototype.serializeBin
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.core.channel.v1.QueryNextSequenceReceiveRequest.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.core.channel.v1.QueryNextSequenceReceiveRequest.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getPortId();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f,
+      f
     );
   }
   f = message.getChannelId();
   if (f.length > 0) {
     writer.writeString(
       2,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * optional string port_id = 1;
  * @return {string}
  */
-proto.ibc.core.channel.v1.QueryNextSequenceReceiveRequest.prototype.getPortId = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.ibc.core.channel.v1.QueryNextSequenceReceiveRequest.prototype.getPortId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
+
 /** @param {string} value */
-proto.ibc.core.channel.v1.QueryNextSequenceReceiveRequest.prototype.setPortId = function (value) {
+proto.ibc.core.channel.v1.QueryNextSequenceReceiveRequest.prototype.setPortId = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
+
 
 /**
  * optional string channel_id = 2;
  * @return {string}
  */
-proto.ibc.core.channel.v1.QueryNextSequenceReceiveRequest.prototype.getChannelId = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
+proto.ibc.core.channel.v1.QueryNextSequenceReceiveRequest.prototype.getChannelId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
+
 /** @param {string} value */
-proto.ibc.core.channel.v1.QueryNextSequenceReceiveRequest.prototype.setChannelId = function (value) {
+proto.ibc.core.channel.v1.QueryNextSequenceReceiveRequest.prototype.setChannelId = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -5184,13 +5565,14 @@ proto.ibc.core.channel.v1.QueryNextSequenceReceiveRequest.prototype.setChannelId
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.core.channel.v1.QueryNextSequenceReceiveResponse = function (opt_data) {
+proto.ibc.core.channel.v1.QueryNextSequenceReceiveResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.ibc.core.channel.v1.QueryNextSequenceReceiveResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.ibc.core.channel.v1.QueryNextSequenceReceiveResponse.displayName = 'proto.ibc.core.channel.v1.QueryNextSequenceReceiveResponse';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -5203,11 +5585,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.core.channel.v1.QueryNextSequenceReceiveResponse.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.core.channel.v1.QueryNextSequenceReceiveResponse.toObject(opt_includeInstance, this);
-  };
+proto.ibc.core.channel.v1.QueryNextSequenceReceiveResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.core.channel.v1.QueryNextSequenceReceiveResponse.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -5216,31 +5599,32 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.core.channel.v1.QueryNextSequenceReceiveResponse.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        nextSequenceReceive: jspb.Message.getFieldWithDefault(msg, 1, 0),
-        proof: msg.getProof_asB64(),
-        proofHeight: (f = msg.getProofHeight()) && ibc_core_client_v1_client_pb.Height.toObject(includeInstance, f),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.core.channel.v1.QueryNextSequenceReceiveResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    nextSequenceReceive: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    proof: msg.getProof_asB64(),
+    proofHeight: (f = msg.getProofHeight()) && ibc_core_client_v1_client_pb.Height.toObject(includeInstance, f)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.core.channel.v1.QueryNextSequenceReceiveResponse}
  */
-proto.ibc.core.channel.v1.QueryNextSequenceReceiveResponse.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.core.channel.v1.QueryNextSequenceReceiveResponse();
+proto.ibc.core.channel.v1.QueryNextSequenceReceiveResponse.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.core.channel.v1.QueryNextSequenceReceiveResponse;
   return proto.ibc.core.channel.v1.QueryNextSequenceReceiveResponse.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -5249,43 +5633,45 @@ proto.ibc.core.channel.v1.QueryNextSequenceReceiveResponse.deserializeBinary = f
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.core.channel.v1.QueryNextSequenceReceiveResponse}
  */
-proto.ibc.core.channel.v1.QueryNextSequenceReceiveResponse.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.core.channel.v1.QueryNextSequenceReceiveResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {number} */ (reader.readUint64());
-        msg.setNextSequenceReceive(value);
-        break;
-      case 2:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setProof(value);
-        break;
-      case 3:
-        var value = new ibc_core_client_v1_client_pb.Height();
-        reader.readMessage(value, ibc_core_client_v1_client_pb.Height.deserializeBinaryFromReader);
-        msg.setProofHeight(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setNextSequenceReceive(value);
+      break;
+    case 2:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setProof(value);
+      break;
+    case 3:
+      var value = new ibc_core_client_v1_client_pb.Height;
+      reader.readMessage(value,ibc_core_client_v1_client_pb.Height.deserializeBinaryFromReader);
+      msg.setProofHeight(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.core.channel.v1.QueryNextSequenceReceiveResponse.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.core.channel.v1.QueryNextSequenceReceiveResponse.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.core.channel.v1.QueryNextSequenceReceiveResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -5294,20 +5680,20 @@ proto.ibc.core.channel.v1.QueryNextSequenceReceiveResponse.prototype.serializeBi
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.core.channel.v1.QueryNextSequenceReceiveResponse.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.core.channel.v1.QueryNextSequenceReceiveResponse.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getNextSequenceReceive();
   if (f !== 0) {
     writer.writeUint64(
       1,
-      f,
+      f
     );
   }
   f = message.getProof_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       2,
-      f,
+      f
     );
   }
   f = message.getProofHeight();
@@ -5315,42 +5701,46 @@ proto.ibc.core.channel.v1.QueryNextSequenceReceiveResponse.serializeBinaryToWrit
     writer.writeMessage(
       3,
       f,
-      ibc_core_client_v1_client_pb.Height.serializeBinaryToWriter,
+      ibc_core_client_v1_client_pb.Height.serializeBinaryToWriter
     );
   }
 };
+
 
 /**
  * optional uint64 next_sequence_receive = 1;
  * @return {number}
  */
-proto.ibc.core.channel.v1.QueryNextSequenceReceiveResponse.prototype.getNextSequenceReceive = function () {
+proto.ibc.core.channel.v1.QueryNextSequenceReceiveResponse.prototype.getNextSequenceReceive = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
+
 /** @param {number} value */
-proto.ibc.core.channel.v1.QueryNextSequenceReceiveResponse.prototype.setNextSequenceReceive = function (value) {
+proto.ibc.core.channel.v1.QueryNextSequenceReceiveResponse.prototype.setNextSequenceReceive = function(value) {
   jspb.Message.setProto3IntField(this, 1, value);
 };
+
 
 /**
  * optional bytes proof = 2;
  * @return {!(string|Uint8Array)}
  */
-proto.ibc.core.channel.v1.QueryNextSequenceReceiveResponse.prototype.getProof = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
+proto.ibc.core.channel.v1.QueryNextSequenceReceiveResponse.prototype.getProof = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
+
 
 /**
  * optional bytes proof = 2;
  * This is a type-conversion wrapper around `getProof()`
  * @return {string}
  */
-proto.ibc.core.channel.v1.QueryNextSequenceReceiveResponse.prototype.getProof_asB64 = function () {
+proto.ibc.core.channel.v1.QueryNextSequenceReceiveResponse.prototype.getProof_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getProof(),
-  ));
+      this.getProof()));
 };
+
 
 /**
  * optional bytes proof = 2;
@@ -5359,41 +5749,46 @@ proto.ibc.core.channel.v1.QueryNextSequenceReceiveResponse.prototype.getProof_as
  * This is a type-conversion wrapper around `getProof()`
  * @return {!Uint8Array}
  */
-proto.ibc.core.channel.v1.QueryNextSequenceReceiveResponse.prototype.getProof_asU8 = function () {
+proto.ibc.core.channel.v1.QueryNextSequenceReceiveResponse.prototype.getProof_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getProof(),
-  ));
+      this.getProof()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.ibc.core.channel.v1.QueryNextSequenceReceiveResponse.prototype.setProof = function (value) {
+proto.ibc.core.channel.v1.QueryNextSequenceReceiveResponse.prototype.setProof = function(value) {
   jspb.Message.setProto3BytesField(this, 2, value);
 };
+
 
 /**
  * optional ibc.core.client.v1.Height proof_height = 3;
  * @return {?proto.ibc.core.client.v1.Height}
  */
-proto.ibc.core.channel.v1.QueryNextSequenceReceiveResponse.prototype.getProofHeight = function () {
+proto.ibc.core.channel.v1.QueryNextSequenceReceiveResponse.prototype.getProofHeight = function() {
   return /** @type{?proto.ibc.core.client.v1.Height} */ (
     jspb.Message.getWrapperField(this, ibc_core_client_v1_client_pb.Height, 3));
 };
 
+
 /** @param {?proto.ibc.core.client.v1.Height|undefined} value */
-proto.ibc.core.channel.v1.QueryNextSequenceReceiveResponse.prototype.setProofHeight = function (value) {
+proto.ibc.core.channel.v1.QueryNextSequenceReceiveResponse.prototype.setProofHeight = function(value) {
   jspb.Message.setWrapperField(this, 3, value);
 };
 
-proto.ibc.core.channel.v1.QueryNextSequenceReceiveResponse.prototype.clearProofHeight = function () {
+
+proto.ibc.core.channel.v1.QueryNextSequenceReceiveResponse.prototype.clearProofHeight = function() {
   this.setProofHeight(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.ibc.core.channel.v1.QueryNextSequenceReceiveResponse.prototype.hasProofHeight = function () {
+proto.ibc.core.channel.v1.QueryNextSequenceReceiveResponse.prototype.hasProofHeight = function() {
   return jspb.Message.getField(this, 3) != null;
 };
+
 
 goog.object.extend(exports, proto.ibc.core.channel.v1);

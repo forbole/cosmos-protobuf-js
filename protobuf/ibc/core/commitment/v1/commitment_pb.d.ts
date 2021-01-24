@@ -2,6 +2,7 @@
 // file: ibc/core/commitment/v1/commitment.proto
 
 import * as jspb from "google-protobuf";
+import * as gogoproto_gogo_pb from "../../../../gogoproto/gogo_pb";
 import * as confio_proofs_pb from "../../../../confio/proofs_pb";
 
 export class MerkleRoot extends jspb.Message {

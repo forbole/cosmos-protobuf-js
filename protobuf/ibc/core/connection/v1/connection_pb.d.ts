@@ -2,6 +2,7 @@
 // file: ibc/core/connection/v1/connection.proto
 
 import * as jspb from "google-protobuf";
+import * as gogoproto_gogo_pb from "../../../../gogoproto/gogo_pb";
 import * as ibc_core_commitment_v1_commitment_pb from "../../../../ibc/core/commitment/v1/commitment_pb";
 
 export class ConnectionEnd extends jspb.Message {

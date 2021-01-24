@@ -7,13 +7,11 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-const jspb = require('google-protobuf');
+var jspb = require('google-protobuf');
+var goog = jspb;
+var global = Function('return this')();
 
-const goog = jspb;
-const global = Function('return this')();
-
-const cosmos_base_v1beta1_coin_pb = require('../../base/v1beta1/coin_pb.js');
-
+var cosmos_base_v1beta1_coin_pb = require('../../../cosmos/base/v1beta1/coin_pb.js');
 goog.exportSymbol('proto.cosmos.bank.v1beta1.DenomUnit', null, global);
 goog.exportSymbol('proto.cosmos.bank.v1beta1.Input', null, global);
 goog.exportSymbol('proto.cosmos.bank.v1beta1.Metadata', null, global);
@@ -32,7 +30,7 @@ goog.exportSymbol('proto.cosmos.bank.v1beta1.Supply', null, global);
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.bank.v1beta1.Params = function (opt_data) {
+proto.cosmos.bank.v1beta1.Params = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.cosmos.bank.v1beta1.Params.repeatedFields_, null);
 };
 goog.inherits(proto.cosmos.bank.v1beta1.Params, jspb.Message);
@@ -46,6 +44,8 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.cosmos.bank.v1beta1.Params.repeatedFields_ = [1];
 
+
+
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -57,11 +57,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.cosmos.bank.v1beta1.Params.prototype.toObject = function (opt_includeInstance) {
-    return proto.cosmos.bank.v1beta1.Params.toObject(opt_includeInstance, this);
-  };
+proto.cosmos.bank.v1beta1.Params.prototype.toObject = function(opt_includeInstance) {
+  return proto.cosmos.bank.v1beta1.Params.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -70,30 +71,32 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.cosmos.bank.v1beta1.Params.toObject = function (includeInstance, msg) {
-    const obj = {
-      sendEnabledList: jspb.Message.toObjectList(msg.getSendEnabledList(),
-        proto.cosmos.bank.v1beta1.SendEnabled.toObject, includeInstance),
-      defaultSendEnabled: jspb.Message.getFieldWithDefault(msg, 2, false),
-    };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.cosmos.bank.v1beta1.Params.toObject = function(includeInstance, msg) {
+  var obj = {
+    sendEnabledList: jspb.Message.toObjectList(msg.getSendEnabledList(),
+    proto.cosmos.bank.v1beta1.SendEnabled.toObject, includeInstance),
+    defaultSendEnabled: jspb.Message.getFieldWithDefault(msg, 2, false)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.bank.v1beta1.Params}
  */
-proto.cosmos.bank.v1beta1.Params.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.cosmos.bank.v1beta1.Params();
+proto.cosmos.bank.v1beta1.Params.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.cosmos.bank.v1beta1.Params;
   return proto.cosmos.bank.v1beta1.Params.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -102,39 +105,41 @@ proto.cosmos.bank.v1beta1.Params.deserializeBinary = function (bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.bank.v1beta1.Params}
  */
-proto.cosmos.bank.v1beta1.Params.deserializeBinaryFromReader = function (msg, reader) {
+proto.cosmos.bank.v1beta1.Params.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = new proto.cosmos.bank.v1beta1.SendEnabled();
-        reader.readMessage(value, proto.cosmos.bank.v1beta1.SendEnabled.deserializeBinaryFromReader);
-        msg.addSendEnabled(value);
-        break;
-      case 2:
-        var value = /** @type {boolean} */ (reader.readBool());
-        msg.setDefaultSendEnabled(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = new proto.cosmos.bank.v1beta1.SendEnabled;
+      reader.readMessage(value,proto.cosmos.bank.v1beta1.SendEnabled.deserializeBinaryFromReader);
+      msg.addSendEnabled(value);
+      break;
+    case 2:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setDefaultSendEnabled(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.bank.v1beta1.Params.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.cosmos.bank.v1beta1.Params.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.cosmos.bank.v1beta1.Params.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -143,51 +148,56 @@ proto.cosmos.bank.v1beta1.Params.prototype.serializeBinary = function () {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.bank.v1beta1.Params.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.cosmos.bank.v1beta1.Params.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getSendEnabledList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       1,
       f,
-      proto.cosmos.bank.v1beta1.SendEnabled.serializeBinaryToWriter,
+      proto.cosmos.bank.v1beta1.SendEnabled.serializeBinaryToWriter
     );
   }
   f = message.getDefaultSendEnabled();
   if (f) {
     writer.writeBool(
       2,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * repeated SendEnabled send_enabled = 1;
  * @return {!Array<!proto.cosmos.bank.v1beta1.SendEnabled>}
  */
-proto.cosmos.bank.v1beta1.Params.prototype.getSendEnabledList = function () {
+proto.cosmos.bank.v1beta1.Params.prototype.getSendEnabledList = function() {
   return /** @type{!Array<!proto.cosmos.bank.v1beta1.SendEnabled>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.cosmos.bank.v1beta1.SendEnabled, 1));
 };
 
+
 /** @param {!Array<!proto.cosmos.bank.v1beta1.SendEnabled>} value */
-proto.cosmos.bank.v1beta1.Params.prototype.setSendEnabledList = function (value) {
+proto.cosmos.bank.v1beta1.Params.prototype.setSendEnabledList = function(value) {
   jspb.Message.setRepeatedWrapperField(this, 1, value);
 };
+
 
 /**
  * @param {!proto.cosmos.bank.v1beta1.SendEnabled=} opt_value
  * @param {number=} opt_index
  * @return {!proto.cosmos.bank.v1beta1.SendEnabled}
  */
-proto.cosmos.bank.v1beta1.Params.prototype.addSendEnabled = function (opt_value, opt_index) {
+proto.cosmos.bank.v1beta1.Params.prototype.addSendEnabled = function(opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.cosmos.bank.v1beta1.SendEnabled, opt_index);
 };
 
-proto.cosmos.bank.v1beta1.Params.prototype.clearSendEnabledList = function () {
+
+proto.cosmos.bank.v1beta1.Params.prototype.clearSendEnabledList = function() {
   this.setSendEnabledList([]);
 };
+
 
 /**
  * optional bool default_send_enabled = 2;
@@ -195,14 +205,17 @@ proto.cosmos.bank.v1beta1.Params.prototype.clearSendEnabledList = function () {
  * You should avoid comparisons like {@code val === true/false} in those cases.
  * @return {boolean}
  */
-proto.cosmos.bank.v1beta1.Params.prototype.getDefaultSendEnabled = function () {
+proto.cosmos.bank.v1beta1.Params.prototype.getDefaultSendEnabled = function() {
   return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 2, false));
 };
 
+
 /** @param {boolean} value */
-proto.cosmos.bank.v1beta1.Params.prototype.setDefaultSendEnabled = function (value) {
+proto.cosmos.bank.v1beta1.Params.prototype.setDefaultSendEnabled = function(value) {
   jspb.Message.setProto3BooleanField(this, 2, value);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -214,13 +227,14 @@ proto.cosmos.bank.v1beta1.Params.prototype.setDefaultSendEnabled = function (val
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.bank.v1beta1.SendEnabled = function (opt_data) {
+proto.cosmos.bank.v1beta1.SendEnabled = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.bank.v1beta1.SendEnabled, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.bank.v1beta1.SendEnabled.displayName = 'proto.cosmos.bank.v1beta1.SendEnabled';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -233,11 +247,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.cosmos.bank.v1beta1.SendEnabled.prototype.toObject = function (opt_includeInstance) {
-    return proto.cosmos.bank.v1beta1.SendEnabled.toObject(opt_includeInstance, this);
-  };
+proto.cosmos.bank.v1beta1.SendEnabled.prototype.toObject = function(opt_includeInstance) {
+  return proto.cosmos.bank.v1beta1.SendEnabled.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -246,29 +261,31 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.cosmos.bank.v1beta1.SendEnabled.toObject = function (includeInstance, msg) {
-    const obj = {
-      denom: jspb.Message.getFieldWithDefault(msg, 1, ''),
-      enabled: jspb.Message.getFieldWithDefault(msg, 2, false),
-    };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.cosmos.bank.v1beta1.SendEnabled.toObject = function(includeInstance, msg) {
+  var obj = {
+    denom: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    enabled: jspb.Message.getFieldWithDefault(msg, 2, false)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.bank.v1beta1.SendEnabled}
  */
-proto.cosmos.bank.v1beta1.SendEnabled.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.cosmos.bank.v1beta1.SendEnabled();
+proto.cosmos.bank.v1beta1.SendEnabled.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.cosmos.bank.v1beta1.SendEnabled;
   return proto.cosmos.bank.v1beta1.SendEnabled.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -277,38 +294,40 @@ proto.cosmos.bank.v1beta1.SendEnabled.deserializeBinary = function (bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.bank.v1beta1.SendEnabled}
  */
-proto.cosmos.bank.v1beta1.SendEnabled.deserializeBinaryFromReader = function (msg, reader) {
+proto.cosmos.bank.v1beta1.SendEnabled.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setDenom(value);
-        break;
-      case 2:
-        var value = /** @type {boolean} */ (reader.readBool());
-        msg.setEnabled(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setDenom(value);
+      break;
+    case 2:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setEnabled(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.bank.v1beta1.SendEnabled.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.cosmos.bank.v1beta1.SendEnabled.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.cosmos.bank.v1beta1.SendEnabled.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -317,36 +336,39 @@ proto.cosmos.bank.v1beta1.SendEnabled.prototype.serializeBinary = function () {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.bank.v1beta1.SendEnabled.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.cosmos.bank.v1beta1.SendEnabled.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getDenom();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f,
+      f
     );
   }
   f = message.getEnabled();
   if (f) {
     writer.writeBool(
       2,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * optional string denom = 1;
  * @return {string}
  */
-proto.cosmos.bank.v1beta1.SendEnabled.prototype.getDenom = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.cosmos.bank.v1beta1.SendEnabled.prototype.getDenom = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
+
 /** @param {string} value */
-proto.cosmos.bank.v1beta1.SendEnabled.prototype.setDenom = function (value) {
+proto.cosmos.bank.v1beta1.SendEnabled.prototype.setDenom = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
+
 
 /**
  * optional bool enabled = 2;
@@ -354,14 +376,17 @@ proto.cosmos.bank.v1beta1.SendEnabled.prototype.setDenom = function (value) {
  * You should avoid comparisons like {@code val === true/false} in those cases.
  * @return {boolean}
  */
-proto.cosmos.bank.v1beta1.SendEnabled.prototype.getEnabled = function () {
+proto.cosmos.bank.v1beta1.SendEnabled.prototype.getEnabled = function() {
   return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 2, false));
 };
 
+
 /** @param {boolean} value */
-proto.cosmos.bank.v1beta1.SendEnabled.prototype.setEnabled = function (value) {
+proto.cosmos.bank.v1beta1.SendEnabled.prototype.setEnabled = function(value) {
   jspb.Message.setProto3BooleanField(this, 2, value);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -373,7 +398,7 @@ proto.cosmos.bank.v1beta1.SendEnabled.prototype.setEnabled = function (value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.bank.v1beta1.Input = function (opt_data) {
+proto.cosmos.bank.v1beta1.Input = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.cosmos.bank.v1beta1.Input.repeatedFields_, null);
 };
 goog.inherits(proto.cosmos.bank.v1beta1.Input, jspb.Message);
@@ -387,6 +412,8 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.cosmos.bank.v1beta1.Input.repeatedFields_ = [2];
 
+
+
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -398,11 +425,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.cosmos.bank.v1beta1.Input.prototype.toObject = function (opt_includeInstance) {
-    return proto.cosmos.bank.v1beta1.Input.toObject(opt_includeInstance, this);
-  };
+proto.cosmos.bank.v1beta1.Input.prototype.toObject = function(opt_includeInstance) {
+  return proto.cosmos.bank.v1beta1.Input.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -411,30 +439,32 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.cosmos.bank.v1beta1.Input.toObject = function (includeInstance, msg) {
-    const obj = {
-      address: jspb.Message.getFieldWithDefault(msg, 1, ''),
-      coinsList: jspb.Message.toObjectList(msg.getCoinsList(),
-        cosmos_base_v1beta1_coin_pb.Coin.toObject, includeInstance),
-    };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.cosmos.bank.v1beta1.Input.toObject = function(includeInstance, msg) {
+  var obj = {
+    address: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    coinsList: jspb.Message.toObjectList(msg.getCoinsList(),
+    cosmos_base_v1beta1_coin_pb.Coin.toObject, includeInstance)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.bank.v1beta1.Input}
  */
-proto.cosmos.bank.v1beta1.Input.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.cosmos.bank.v1beta1.Input();
+proto.cosmos.bank.v1beta1.Input.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.cosmos.bank.v1beta1.Input;
   return proto.cosmos.bank.v1beta1.Input.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -443,39 +473,41 @@ proto.cosmos.bank.v1beta1.Input.deserializeBinary = function (bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.bank.v1beta1.Input}
  */
-proto.cosmos.bank.v1beta1.Input.deserializeBinaryFromReader = function (msg, reader) {
+proto.cosmos.bank.v1beta1.Input.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setAddress(value);
-        break;
-      case 2:
-        var value = new cosmos_base_v1beta1_coin_pb.Coin();
-        reader.readMessage(value, cosmos_base_v1beta1_coin_pb.Coin.deserializeBinaryFromReader);
-        msg.addCoins(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setAddress(value);
+      break;
+    case 2:
+      var value = new cosmos_base_v1beta1_coin_pb.Coin;
+      reader.readMessage(value,cosmos_base_v1beta1_coin_pb.Coin.deserializeBinaryFromReader);
+      msg.addCoins(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.bank.v1beta1.Input.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.cosmos.bank.v1beta1.Input.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.cosmos.bank.v1beta1.Input.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -484,13 +516,13 @@ proto.cosmos.bank.v1beta1.Input.prototype.serializeBinary = function () {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.bank.v1beta1.Input.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.cosmos.bank.v1beta1.Input.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getAddress();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f,
+      f
     );
   }
   f = message.getCoinsList();
@@ -498,50 +530,58 @@ proto.cosmos.bank.v1beta1.Input.serializeBinaryToWriter = function (message, wri
     writer.writeRepeatedMessage(
       2,
       f,
-      cosmos_base_v1beta1_coin_pb.Coin.serializeBinaryToWriter,
+      cosmos_base_v1beta1_coin_pb.Coin.serializeBinaryToWriter
     );
   }
 };
+
 
 /**
  * optional string address = 1;
  * @return {string}
  */
-proto.cosmos.bank.v1beta1.Input.prototype.getAddress = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.cosmos.bank.v1beta1.Input.prototype.getAddress = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
+
 /** @param {string} value */
-proto.cosmos.bank.v1beta1.Input.prototype.setAddress = function (value) {
+proto.cosmos.bank.v1beta1.Input.prototype.setAddress = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
+
 
 /**
  * repeated cosmos.base.v1beta1.Coin coins = 2;
  * @return {!Array<!proto.cosmos.base.v1beta1.Coin>}
  */
-proto.cosmos.bank.v1beta1.Input.prototype.getCoinsList = function () {
+proto.cosmos.bank.v1beta1.Input.prototype.getCoinsList = function() {
   return /** @type{!Array<!proto.cosmos.base.v1beta1.Coin>} */ (
     jspb.Message.getRepeatedWrapperField(this, cosmos_base_v1beta1_coin_pb.Coin, 2));
 };
 
+
 /** @param {!Array<!proto.cosmos.base.v1beta1.Coin>} value */
-proto.cosmos.bank.v1beta1.Input.prototype.setCoinsList = function (value) {
+proto.cosmos.bank.v1beta1.Input.prototype.setCoinsList = function(value) {
   jspb.Message.setRepeatedWrapperField(this, 2, value);
 };
+
 
 /**
  * @param {!proto.cosmos.base.v1beta1.Coin=} opt_value
  * @param {number=} opt_index
  * @return {!proto.cosmos.base.v1beta1.Coin}
  */
-proto.cosmos.bank.v1beta1.Input.prototype.addCoins = function (opt_value, opt_index) {
+proto.cosmos.bank.v1beta1.Input.prototype.addCoins = function(opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.cosmos.base.v1beta1.Coin, opt_index);
 };
 
-proto.cosmos.bank.v1beta1.Input.prototype.clearCoinsList = function () {
+
+proto.cosmos.bank.v1beta1.Input.prototype.clearCoinsList = function() {
   this.setCoinsList([]);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -553,7 +593,7 @@ proto.cosmos.bank.v1beta1.Input.prototype.clearCoinsList = function () {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.bank.v1beta1.Output = function (opt_data) {
+proto.cosmos.bank.v1beta1.Output = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.cosmos.bank.v1beta1.Output.repeatedFields_, null);
 };
 goog.inherits(proto.cosmos.bank.v1beta1.Output, jspb.Message);
@@ -567,6 +607,8 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.cosmos.bank.v1beta1.Output.repeatedFields_ = [2];
 
+
+
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -578,11 +620,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.cosmos.bank.v1beta1.Output.prototype.toObject = function (opt_includeInstance) {
-    return proto.cosmos.bank.v1beta1.Output.toObject(opt_includeInstance, this);
-  };
+proto.cosmos.bank.v1beta1.Output.prototype.toObject = function(opt_includeInstance) {
+  return proto.cosmos.bank.v1beta1.Output.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -591,30 +634,32 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.cosmos.bank.v1beta1.Output.toObject = function (includeInstance, msg) {
-    const obj = {
-      address: jspb.Message.getFieldWithDefault(msg, 1, ''),
-      coinsList: jspb.Message.toObjectList(msg.getCoinsList(),
-        cosmos_base_v1beta1_coin_pb.Coin.toObject, includeInstance),
-    };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.cosmos.bank.v1beta1.Output.toObject = function(includeInstance, msg) {
+  var obj = {
+    address: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    coinsList: jspb.Message.toObjectList(msg.getCoinsList(),
+    cosmos_base_v1beta1_coin_pb.Coin.toObject, includeInstance)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.bank.v1beta1.Output}
  */
-proto.cosmos.bank.v1beta1.Output.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.cosmos.bank.v1beta1.Output();
+proto.cosmos.bank.v1beta1.Output.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.cosmos.bank.v1beta1.Output;
   return proto.cosmos.bank.v1beta1.Output.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -623,39 +668,41 @@ proto.cosmos.bank.v1beta1.Output.deserializeBinary = function (bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.bank.v1beta1.Output}
  */
-proto.cosmos.bank.v1beta1.Output.deserializeBinaryFromReader = function (msg, reader) {
+proto.cosmos.bank.v1beta1.Output.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setAddress(value);
-        break;
-      case 2:
-        var value = new cosmos_base_v1beta1_coin_pb.Coin();
-        reader.readMessage(value, cosmos_base_v1beta1_coin_pb.Coin.deserializeBinaryFromReader);
-        msg.addCoins(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setAddress(value);
+      break;
+    case 2:
+      var value = new cosmos_base_v1beta1_coin_pb.Coin;
+      reader.readMessage(value,cosmos_base_v1beta1_coin_pb.Coin.deserializeBinaryFromReader);
+      msg.addCoins(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.bank.v1beta1.Output.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.cosmos.bank.v1beta1.Output.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.cosmos.bank.v1beta1.Output.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -664,13 +711,13 @@ proto.cosmos.bank.v1beta1.Output.prototype.serializeBinary = function () {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.bank.v1beta1.Output.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.cosmos.bank.v1beta1.Output.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getAddress();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f,
+      f
     );
   }
   f = message.getCoinsList();
@@ -678,50 +725,58 @@ proto.cosmos.bank.v1beta1.Output.serializeBinaryToWriter = function (message, wr
     writer.writeRepeatedMessage(
       2,
       f,
-      cosmos_base_v1beta1_coin_pb.Coin.serializeBinaryToWriter,
+      cosmos_base_v1beta1_coin_pb.Coin.serializeBinaryToWriter
     );
   }
 };
+
 
 /**
  * optional string address = 1;
  * @return {string}
  */
-proto.cosmos.bank.v1beta1.Output.prototype.getAddress = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.cosmos.bank.v1beta1.Output.prototype.getAddress = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
+
 /** @param {string} value */
-proto.cosmos.bank.v1beta1.Output.prototype.setAddress = function (value) {
+proto.cosmos.bank.v1beta1.Output.prototype.setAddress = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
+
 
 /**
  * repeated cosmos.base.v1beta1.Coin coins = 2;
  * @return {!Array<!proto.cosmos.base.v1beta1.Coin>}
  */
-proto.cosmos.bank.v1beta1.Output.prototype.getCoinsList = function () {
+proto.cosmos.bank.v1beta1.Output.prototype.getCoinsList = function() {
   return /** @type{!Array<!proto.cosmos.base.v1beta1.Coin>} */ (
     jspb.Message.getRepeatedWrapperField(this, cosmos_base_v1beta1_coin_pb.Coin, 2));
 };
 
+
 /** @param {!Array<!proto.cosmos.base.v1beta1.Coin>} value */
-proto.cosmos.bank.v1beta1.Output.prototype.setCoinsList = function (value) {
+proto.cosmos.bank.v1beta1.Output.prototype.setCoinsList = function(value) {
   jspb.Message.setRepeatedWrapperField(this, 2, value);
 };
+
 
 /**
  * @param {!proto.cosmos.base.v1beta1.Coin=} opt_value
  * @param {number=} opt_index
  * @return {!proto.cosmos.base.v1beta1.Coin}
  */
-proto.cosmos.bank.v1beta1.Output.prototype.addCoins = function (opt_value, opt_index) {
+proto.cosmos.bank.v1beta1.Output.prototype.addCoins = function(opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.cosmos.base.v1beta1.Coin, opt_index);
 };
 
-proto.cosmos.bank.v1beta1.Output.prototype.clearCoinsList = function () {
+
+proto.cosmos.bank.v1beta1.Output.prototype.clearCoinsList = function() {
   this.setCoinsList([]);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -733,7 +788,7 @@ proto.cosmos.bank.v1beta1.Output.prototype.clearCoinsList = function () {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.bank.v1beta1.Supply = function (opt_data) {
+proto.cosmos.bank.v1beta1.Supply = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.cosmos.bank.v1beta1.Supply.repeatedFields_, null);
 };
 goog.inherits(proto.cosmos.bank.v1beta1.Supply, jspb.Message);
@@ -747,6 +802,8 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.cosmos.bank.v1beta1.Supply.repeatedFields_ = [1];
 
+
+
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -758,11 +815,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.cosmos.bank.v1beta1.Supply.prototype.toObject = function (opt_includeInstance) {
-    return proto.cosmos.bank.v1beta1.Supply.toObject(opt_includeInstance, this);
-  };
+proto.cosmos.bank.v1beta1.Supply.prototype.toObject = function(opt_includeInstance) {
+  return proto.cosmos.bank.v1beta1.Supply.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -771,29 +829,31 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.cosmos.bank.v1beta1.Supply.toObject = function (includeInstance, msg) {
-    const obj = {
-      totalList: jspb.Message.toObjectList(msg.getTotalList(),
-        cosmos_base_v1beta1_coin_pb.Coin.toObject, includeInstance),
-    };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.cosmos.bank.v1beta1.Supply.toObject = function(includeInstance, msg) {
+  var obj = {
+    totalList: jspb.Message.toObjectList(msg.getTotalList(),
+    cosmos_base_v1beta1_coin_pb.Coin.toObject, includeInstance)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.bank.v1beta1.Supply}
  */
-proto.cosmos.bank.v1beta1.Supply.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.cosmos.bank.v1beta1.Supply();
+proto.cosmos.bank.v1beta1.Supply.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.cosmos.bank.v1beta1.Supply;
   return proto.cosmos.bank.v1beta1.Supply.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -802,35 +862,37 @@ proto.cosmos.bank.v1beta1.Supply.deserializeBinary = function (bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.bank.v1beta1.Supply}
  */
-proto.cosmos.bank.v1beta1.Supply.deserializeBinaryFromReader = function (msg, reader) {
+proto.cosmos.bank.v1beta1.Supply.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = new cosmos_base_v1beta1_coin_pb.Coin();
-        reader.readMessage(value, cosmos_base_v1beta1_coin_pb.Coin.deserializeBinaryFromReader);
-        msg.addTotal(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = new cosmos_base_v1beta1_coin_pb.Coin;
+      reader.readMessage(value,cosmos_base_v1beta1_coin_pb.Coin.deserializeBinaryFromReader);
+      msg.addTotal(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.bank.v1beta1.Supply.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.cosmos.bank.v1beta1.Supply.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.cosmos.bank.v1beta1.Supply.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -839,44 +901,50 @@ proto.cosmos.bank.v1beta1.Supply.prototype.serializeBinary = function () {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.bank.v1beta1.Supply.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.cosmos.bank.v1beta1.Supply.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getTotalList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       1,
       f,
-      cosmos_base_v1beta1_coin_pb.Coin.serializeBinaryToWriter,
+      cosmos_base_v1beta1_coin_pb.Coin.serializeBinaryToWriter
     );
   }
 };
+
 
 /**
  * repeated cosmos.base.v1beta1.Coin total = 1;
  * @return {!Array<!proto.cosmos.base.v1beta1.Coin>}
  */
-proto.cosmos.bank.v1beta1.Supply.prototype.getTotalList = function () {
+proto.cosmos.bank.v1beta1.Supply.prototype.getTotalList = function() {
   return /** @type{!Array<!proto.cosmos.base.v1beta1.Coin>} */ (
     jspb.Message.getRepeatedWrapperField(this, cosmos_base_v1beta1_coin_pb.Coin, 1));
 };
 
+
 /** @param {!Array<!proto.cosmos.base.v1beta1.Coin>} value */
-proto.cosmos.bank.v1beta1.Supply.prototype.setTotalList = function (value) {
+proto.cosmos.bank.v1beta1.Supply.prototype.setTotalList = function(value) {
   jspb.Message.setRepeatedWrapperField(this, 1, value);
 };
+
 
 /**
  * @param {!proto.cosmos.base.v1beta1.Coin=} opt_value
  * @param {number=} opt_index
  * @return {!proto.cosmos.base.v1beta1.Coin}
  */
-proto.cosmos.bank.v1beta1.Supply.prototype.addTotal = function (opt_value, opt_index) {
+proto.cosmos.bank.v1beta1.Supply.prototype.addTotal = function(opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.cosmos.base.v1beta1.Coin, opt_index);
 };
 
-proto.cosmos.bank.v1beta1.Supply.prototype.clearTotalList = function () {
+
+proto.cosmos.bank.v1beta1.Supply.prototype.clearTotalList = function() {
   this.setTotalList([]);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -888,7 +956,7 @@ proto.cosmos.bank.v1beta1.Supply.prototype.clearTotalList = function () {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.bank.v1beta1.DenomUnit = function (opt_data) {
+proto.cosmos.bank.v1beta1.DenomUnit = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.cosmos.bank.v1beta1.DenomUnit.repeatedFields_, null);
 };
 goog.inherits(proto.cosmos.bank.v1beta1.DenomUnit, jspb.Message);
@@ -902,6 +970,8 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.cosmos.bank.v1beta1.DenomUnit.repeatedFields_ = [3];
 
+
+
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -913,11 +983,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.cosmos.bank.v1beta1.DenomUnit.prototype.toObject = function (opt_includeInstance) {
-    return proto.cosmos.bank.v1beta1.DenomUnit.toObject(opt_includeInstance, this);
-  };
+proto.cosmos.bank.v1beta1.DenomUnit.prototype.toObject = function(opt_includeInstance) {
+  return proto.cosmos.bank.v1beta1.DenomUnit.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -926,30 +997,32 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.cosmos.bank.v1beta1.DenomUnit.toObject = function (includeInstance, msg) {
-    const obj = {
-      denom: jspb.Message.getFieldWithDefault(msg, 1, ''),
-      exponent: jspb.Message.getFieldWithDefault(msg, 2, 0),
-      aliasesList: jspb.Message.getRepeatedField(msg, 3),
-    };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.cosmos.bank.v1beta1.DenomUnit.toObject = function(includeInstance, msg) {
+  var obj = {
+    denom: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    exponent: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    aliasesList: jspb.Message.getRepeatedField(msg, 3)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.bank.v1beta1.DenomUnit}
  */
-proto.cosmos.bank.v1beta1.DenomUnit.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.cosmos.bank.v1beta1.DenomUnit();
+proto.cosmos.bank.v1beta1.DenomUnit.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.cosmos.bank.v1beta1.DenomUnit;
   return proto.cosmos.bank.v1beta1.DenomUnit.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -958,42 +1031,44 @@ proto.cosmos.bank.v1beta1.DenomUnit.deserializeBinary = function (bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.bank.v1beta1.DenomUnit}
  */
-proto.cosmos.bank.v1beta1.DenomUnit.deserializeBinaryFromReader = function (msg, reader) {
+proto.cosmos.bank.v1beta1.DenomUnit.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setDenom(value);
-        break;
-      case 2:
-        var value = /** @type {number} */ (reader.readUint32());
-        msg.setExponent(value);
-        break;
-      case 3:
-        var value = /** @type {string} */ (reader.readString());
-        msg.addAliases(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setDenom(value);
+      break;
+    case 2:
+      var value = /** @type {number} */ (reader.readUint32());
+      msg.setExponent(value);
+      break;
+    case 3:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addAliases(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.bank.v1beta1.DenomUnit.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.cosmos.bank.v1beta1.DenomUnit.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.cosmos.bank.v1beta1.DenomUnit.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -1002,81 +1077,91 @@ proto.cosmos.bank.v1beta1.DenomUnit.prototype.serializeBinary = function () {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.bank.v1beta1.DenomUnit.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.cosmos.bank.v1beta1.DenomUnit.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getDenom();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f,
+      f
     );
   }
   f = message.getExponent();
   if (f !== 0) {
     writer.writeUint32(
       2,
-      f,
+      f
     );
   }
   f = message.getAliasesList();
   if (f.length > 0) {
     writer.writeRepeatedString(
       3,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * optional string denom = 1;
  * @return {string}
  */
-proto.cosmos.bank.v1beta1.DenomUnit.prototype.getDenom = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.cosmos.bank.v1beta1.DenomUnit.prototype.getDenom = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
+
 /** @param {string} value */
-proto.cosmos.bank.v1beta1.DenomUnit.prototype.setDenom = function (value) {
+proto.cosmos.bank.v1beta1.DenomUnit.prototype.setDenom = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
+
 
 /**
  * optional uint32 exponent = 2;
  * @return {number}
  */
-proto.cosmos.bank.v1beta1.DenomUnit.prototype.getExponent = function () {
+proto.cosmos.bank.v1beta1.DenomUnit.prototype.getExponent = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
+
 /** @param {number} value */
-proto.cosmos.bank.v1beta1.DenomUnit.prototype.setExponent = function (value) {
+proto.cosmos.bank.v1beta1.DenomUnit.prototype.setExponent = function(value) {
   jspb.Message.setProto3IntField(this, 2, value);
 };
+
 
 /**
  * repeated string aliases = 3;
  * @return {!Array<string>}
  */
-proto.cosmos.bank.v1beta1.DenomUnit.prototype.getAliasesList = function () {
+proto.cosmos.bank.v1beta1.DenomUnit.prototype.getAliasesList = function() {
   return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 3));
 };
 
+
 /** @param {!Array<string>} value */
-proto.cosmos.bank.v1beta1.DenomUnit.prototype.setAliasesList = function (value) {
+proto.cosmos.bank.v1beta1.DenomUnit.prototype.setAliasesList = function(value) {
   jspb.Message.setField(this, 3, value || []);
 };
+
 
 /**
  * @param {!string} value
  * @param {number=} opt_index
  */
-proto.cosmos.bank.v1beta1.DenomUnit.prototype.addAliases = function (value, opt_index) {
+proto.cosmos.bank.v1beta1.DenomUnit.prototype.addAliases = function(value, opt_index) {
   jspb.Message.addToRepeatedField(this, 3, value, opt_index);
 };
 
-proto.cosmos.bank.v1beta1.DenomUnit.prototype.clearAliasesList = function () {
+
+proto.cosmos.bank.v1beta1.DenomUnit.prototype.clearAliasesList = function() {
   this.setAliasesList([]);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -1088,7 +1173,7 @@ proto.cosmos.bank.v1beta1.DenomUnit.prototype.clearAliasesList = function () {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.bank.v1beta1.Metadata = function (opt_data) {
+proto.cosmos.bank.v1beta1.Metadata = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.cosmos.bank.v1beta1.Metadata.repeatedFields_, null);
 };
 goog.inherits(proto.cosmos.bank.v1beta1.Metadata, jspb.Message);
@@ -1102,6 +1187,8 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.cosmos.bank.v1beta1.Metadata.repeatedFields_ = [2];
 
+
+
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -1113,11 +1200,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.cosmos.bank.v1beta1.Metadata.prototype.toObject = function (opt_includeInstance) {
-    return proto.cosmos.bank.v1beta1.Metadata.toObject(opt_includeInstance, this);
-  };
+proto.cosmos.bank.v1beta1.Metadata.prototype.toObject = function(opt_includeInstance) {
+  return proto.cosmos.bank.v1beta1.Metadata.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -1126,32 +1214,34 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.cosmos.bank.v1beta1.Metadata.toObject = function (includeInstance, msg) {
-    const obj = {
-      description: jspb.Message.getFieldWithDefault(msg, 1, ''),
-      denomUnitsList: jspb.Message.toObjectList(msg.getDenomUnitsList(),
-        proto.cosmos.bank.v1beta1.DenomUnit.toObject, includeInstance),
-      base: jspb.Message.getFieldWithDefault(msg, 3, ''),
-      display: jspb.Message.getFieldWithDefault(msg, 4, ''),
-    };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.cosmos.bank.v1beta1.Metadata.toObject = function(includeInstance, msg) {
+  var obj = {
+    description: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    denomUnitsList: jspb.Message.toObjectList(msg.getDenomUnitsList(),
+    proto.cosmos.bank.v1beta1.DenomUnit.toObject, includeInstance),
+    base: jspb.Message.getFieldWithDefault(msg, 3, ""),
+    display: jspb.Message.getFieldWithDefault(msg, 4, "")
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.bank.v1beta1.Metadata}
  */
-proto.cosmos.bank.v1beta1.Metadata.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.cosmos.bank.v1beta1.Metadata();
+proto.cosmos.bank.v1beta1.Metadata.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.cosmos.bank.v1beta1.Metadata;
   return proto.cosmos.bank.v1beta1.Metadata.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -1160,47 +1250,49 @@ proto.cosmos.bank.v1beta1.Metadata.deserializeBinary = function (bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.bank.v1beta1.Metadata}
  */
-proto.cosmos.bank.v1beta1.Metadata.deserializeBinaryFromReader = function (msg, reader) {
+proto.cosmos.bank.v1beta1.Metadata.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setDescription(value);
-        break;
-      case 2:
-        var value = new proto.cosmos.bank.v1beta1.DenomUnit();
-        reader.readMessage(value, proto.cosmos.bank.v1beta1.DenomUnit.deserializeBinaryFromReader);
-        msg.addDenomUnits(value);
-        break;
-      case 3:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setBase(value);
-        break;
-      case 4:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setDisplay(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setDescription(value);
+      break;
+    case 2:
+      var value = new proto.cosmos.bank.v1beta1.DenomUnit;
+      reader.readMessage(value,proto.cosmos.bank.v1beta1.DenomUnit.deserializeBinaryFromReader);
+      msg.addDenomUnits(value);
+      break;
+    case 3:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setBase(value);
+      break;
+    case 4:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setDisplay(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.bank.v1beta1.Metadata.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.cosmos.bank.v1beta1.Metadata.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.cosmos.bank.v1beta1.Metadata.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -1209,13 +1301,13 @@ proto.cosmos.bank.v1beta1.Metadata.prototype.serializeBinary = function () {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.bank.v1beta1.Metadata.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.cosmos.bank.v1beta1.Metadata.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getDescription();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f,
+      f
     );
   }
   f = message.getDenomUnitsList();
@@ -1223,89 +1315,100 @@ proto.cosmos.bank.v1beta1.Metadata.serializeBinaryToWriter = function (message, 
     writer.writeRepeatedMessage(
       2,
       f,
-      proto.cosmos.bank.v1beta1.DenomUnit.serializeBinaryToWriter,
+      proto.cosmos.bank.v1beta1.DenomUnit.serializeBinaryToWriter
     );
   }
   f = message.getBase();
   if (f.length > 0) {
     writer.writeString(
       3,
-      f,
+      f
     );
   }
   f = message.getDisplay();
   if (f.length > 0) {
     writer.writeString(
       4,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * optional string description = 1;
  * @return {string}
  */
-proto.cosmos.bank.v1beta1.Metadata.prototype.getDescription = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.cosmos.bank.v1beta1.Metadata.prototype.getDescription = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
+
 /** @param {string} value */
-proto.cosmos.bank.v1beta1.Metadata.prototype.setDescription = function (value) {
+proto.cosmos.bank.v1beta1.Metadata.prototype.setDescription = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
+
 
 /**
  * repeated DenomUnit denom_units = 2;
  * @return {!Array<!proto.cosmos.bank.v1beta1.DenomUnit>}
  */
-proto.cosmos.bank.v1beta1.Metadata.prototype.getDenomUnitsList = function () {
+proto.cosmos.bank.v1beta1.Metadata.prototype.getDenomUnitsList = function() {
   return /** @type{!Array<!proto.cosmos.bank.v1beta1.DenomUnit>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.cosmos.bank.v1beta1.DenomUnit, 2));
 };
 
+
 /** @param {!Array<!proto.cosmos.bank.v1beta1.DenomUnit>} value */
-proto.cosmos.bank.v1beta1.Metadata.prototype.setDenomUnitsList = function (value) {
+proto.cosmos.bank.v1beta1.Metadata.prototype.setDenomUnitsList = function(value) {
   jspb.Message.setRepeatedWrapperField(this, 2, value);
 };
+
 
 /**
  * @param {!proto.cosmos.bank.v1beta1.DenomUnit=} opt_value
  * @param {number=} opt_index
  * @return {!proto.cosmos.bank.v1beta1.DenomUnit}
  */
-proto.cosmos.bank.v1beta1.Metadata.prototype.addDenomUnits = function (opt_value, opt_index) {
+proto.cosmos.bank.v1beta1.Metadata.prototype.addDenomUnits = function(opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.cosmos.bank.v1beta1.DenomUnit, opt_index);
 };
 
-proto.cosmos.bank.v1beta1.Metadata.prototype.clearDenomUnitsList = function () {
+
+proto.cosmos.bank.v1beta1.Metadata.prototype.clearDenomUnitsList = function() {
   this.setDenomUnitsList([]);
 };
+
 
 /**
  * optional string base = 3;
  * @return {string}
  */
-proto.cosmos.bank.v1beta1.Metadata.prototype.getBase = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ''));
+proto.cosmos.bank.v1beta1.Metadata.prototype.getBase = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
+
 /** @param {string} value */
-proto.cosmos.bank.v1beta1.Metadata.prototype.setBase = function (value) {
+proto.cosmos.bank.v1beta1.Metadata.prototype.setBase = function(value) {
   jspb.Message.setProto3StringField(this, 3, value);
 };
+
 
 /**
  * optional string display = 4;
  * @return {string}
  */
-proto.cosmos.bank.v1beta1.Metadata.prototype.getDisplay = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ''));
+proto.cosmos.bank.v1beta1.Metadata.prototype.getDisplay = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
 };
 
+
 /** @param {string} value */
-proto.cosmos.bank.v1beta1.Metadata.prototype.setDisplay = function (value) {
+proto.cosmos.bank.v1beta1.Metadata.prototype.setDisplay = function(value) {
   jspb.Message.setProto3StringField(this, 4, value);
 };
+
 
 goog.object.extend(exports, proto.cosmos.bank.v1beta1);

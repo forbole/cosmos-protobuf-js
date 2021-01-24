@@ -7,13 +7,11 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-const jspb = require('google-protobuf');
+var jspb = require('google-protobuf');
+var goog = jspb;
+var global = Function('return this')();
 
-const goog = jspb;
-const global = Function('return this')();
-
-const gogoproto_gogo_pb = require('../../gogoproto/gogo_pb.js');
-
+var gogoproto_gogo_pb = require('../../gogoproto/gogo_pb.js');
 goog.exportSymbol('proto.tendermint.crypto.PublicKey', null, global);
 
 /**
@@ -26,7 +24,7 @@ goog.exportSymbol('proto.tendermint.crypto.PublicKey', null, global);
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.crypto.PublicKey = function (opt_data) {
+proto.tendermint.crypto.PublicKey = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, proto.tendermint.crypto.PublicKey.oneofGroups_);
 };
 goog.inherits(proto.tendermint.crypto.PublicKey, jspb.Message);
@@ -41,7 +39,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<!Array<number>>}
  * @const
  */
-proto.tendermint.crypto.PublicKey.oneofGroups_ = [[1, 2]];
+proto.tendermint.crypto.PublicKey.oneofGroups_ = [[1,2]];
 
 /**
  * @enum {number}
@@ -49,15 +47,17 @@ proto.tendermint.crypto.PublicKey.oneofGroups_ = [[1, 2]];
 proto.tendermint.crypto.PublicKey.SumCase = {
   SUM_NOT_SET: 0,
   ED25519: 1,
-  SECP256K1: 2,
+  SECP256K1: 2
 };
 
 /**
  * @return {proto.tendermint.crypto.PublicKey.SumCase}
  */
-proto.tendermint.crypto.PublicKey.prototype.getSumCase = function () {
+proto.tendermint.crypto.PublicKey.prototype.getSumCase = function() {
   return /** @type {proto.tendermint.crypto.PublicKey.SumCase} */(jspb.Message.computeOneofCase(this, proto.tendermint.crypto.PublicKey.oneofGroups_[0]));
 };
+
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -70,11 +70,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.tendermint.crypto.PublicKey.prototype.toObject = function (opt_includeInstance) {
-    return proto.tendermint.crypto.PublicKey.toObject(opt_includeInstance, this);
-  };
+proto.tendermint.crypto.PublicKey.prototype.toObject = function(opt_includeInstance) {
+  return proto.tendermint.crypto.PublicKey.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -83,30 +84,31 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.tendermint.crypto.PublicKey.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        ed25519: msg.getEd25519_asB64(),
-        secp256k1: msg.getSecp256k1_asB64(),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.tendermint.crypto.PublicKey.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    ed25519: msg.getEd25519_asB64(),
+    secp256k1: msg.getSecp256k1_asB64()
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.crypto.PublicKey}
  */
-proto.tendermint.crypto.PublicKey.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.tendermint.crypto.PublicKey();
+proto.tendermint.crypto.PublicKey.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.tendermint.crypto.PublicKey;
   return proto.tendermint.crypto.PublicKey.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -115,38 +117,40 @@ proto.tendermint.crypto.PublicKey.deserializeBinary = function (bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.crypto.PublicKey}
  */
-proto.tendermint.crypto.PublicKey.deserializeBinaryFromReader = function (msg, reader) {
+proto.tendermint.crypto.PublicKey.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setEd25519(value);
-        break;
-      case 2:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setSecp256k1(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setEd25519(value);
+      break;
+    case 2:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setSecp256k1(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.crypto.PublicKey.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.tendermint.crypto.PublicKey.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.tendermint.crypto.PublicKey.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -155,42 +159,44 @@ proto.tendermint.crypto.PublicKey.prototype.serializeBinary = function () {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.crypto.PublicKey.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.tendermint.crypto.PublicKey.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = /** @type {!(string|Uint8Array)} */ (jspb.Message.getField(message, 1));
   if (f != null) {
     writer.writeBytes(
       1,
-      f,
+      f
     );
   }
   f = /** @type {!(string|Uint8Array)} */ (jspb.Message.getField(message, 2));
   if (f != null) {
     writer.writeBytes(
       2,
-      f,
+      f
     );
   }
 };
 
+
 /**
  * optional bytes ed25519 = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.tendermint.crypto.PublicKey.prototype.getEd25519 = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.tendermint.crypto.PublicKey.prototype.getEd25519 = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
+
 
 /**
  * optional bytes ed25519 = 1;
  * This is a type-conversion wrapper around `getEd25519()`
  * @return {string}
  */
-proto.tendermint.crypto.PublicKey.prototype.getEd25519_asB64 = function () {
+proto.tendermint.crypto.PublicKey.prototype.getEd25519_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getEd25519(),
-  ));
+      this.getEd25519()));
 };
+
 
 /**
  * optional bytes ed25519 = 1;
@@ -199,47 +205,51 @@ proto.tendermint.crypto.PublicKey.prototype.getEd25519_asB64 = function () {
  * This is a type-conversion wrapper around `getEd25519()`
  * @return {!Uint8Array}
  */
-proto.tendermint.crypto.PublicKey.prototype.getEd25519_asU8 = function () {
+proto.tendermint.crypto.PublicKey.prototype.getEd25519_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getEd25519(),
-  ));
+      this.getEd25519()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.tendermint.crypto.PublicKey.prototype.setEd25519 = function (value) {
+proto.tendermint.crypto.PublicKey.prototype.setEd25519 = function(value) {
   jspb.Message.setOneofField(this, 1, proto.tendermint.crypto.PublicKey.oneofGroups_[0], value);
 };
 
-proto.tendermint.crypto.PublicKey.prototype.clearEd25519 = function () {
+
+proto.tendermint.crypto.PublicKey.prototype.clearEd25519 = function() {
   jspb.Message.setOneofField(this, 1, proto.tendermint.crypto.PublicKey.oneofGroups_[0], undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.crypto.PublicKey.prototype.hasEd25519 = function () {
+proto.tendermint.crypto.PublicKey.prototype.hasEd25519 = function() {
   return jspb.Message.getField(this, 1) != null;
 };
+
 
 /**
  * optional bytes secp256k1 = 2;
  * @return {!(string|Uint8Array)}
  */
-proto.tendermint.crypto.PublicKey.prototype.getSecp256k1 = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
+proto.tendermint.crypto.PublicKey.prototype.getSecp256k1 = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
+
 
 /**
  * optional bytes secp256k1 = 2;
  * This is a type-conversion wrapper around `getSecp256k1()`
  * @return {string}
  */
-proto.tendermint.crypto.PublicKey.prototype.getSecp256k1_asB64 = function () {
+proto.tendermint.crypto.PublicKey.prototype.getSecp256k1_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getSecp256k1(),
-  ));
+      this.getSecp256k1()));
 };
+
 
 /**
  * optional bytes secp256k1 = 2;
@@ -248,27 +258,30 @@ proto.tendermint.crypto.PublicKey.prototype.getSecp256k1_asB64 = function () {
  * This is a type-conversion wrapper around `getSecp256k1()`
  * @return {!Uint8Array}
  */
-proto.tendermint.crypto.PublicKey.prototype.getSecp256k1_asU8 = function () {
+proto.tendermint.crypto.PublicKey.prototype.getSecp256k1_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getSecp256k1(),
-  ));
+      this.getSecp256k1()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.tendermint.crypto.PublicKey.prototype.setSecp256k1 = function (value) {
+proto.tendermint.crypto.PublicKey.prototype.setSecp256k1 = function(value) {
   jspb.Message.setOneofField(this, 2, proto.tendermint.crypto.PublicKey.oneofGroups_[0], value);
 };
 
-proto.tendermint.crypto.PublicKey.prototype.clearSecp256k1 = function () {
+
+proto.tendermint.crypto.PublicKey.prototype.clearSecp256k1 = function() {
   jspb.Message.setOneofField(this, 2, proto.tendermint.crypto.PublicKey.oneofGroups_[0], undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.crypto.PublicKey.prototype.hasSecp256k1 = function () {
+proto.tendermint.crypto.PublicKey.prototype.hasSecp256k1 = function() {
   return jspb.Message.getField(this, 2) != null;
 };
+
 
 goog.object.extend(exports, proto.tendermint.crypto);

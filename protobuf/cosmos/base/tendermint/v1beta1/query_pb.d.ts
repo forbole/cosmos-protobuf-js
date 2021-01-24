@@ -2,7 +2,9 @@
 // file: cosmos/base/tendermint/v1beta1/query.proto
 
 import * as jspb from "google-protobuf";
+import * as gogoproto_gogo_pb from "../../../../gogoproto/gogo_pb";
 import * as google_protobuf_any_pb from "google-protobuf/google/protobuf/any_pb";
+import * as google_api_annotations_pb from "../../../../google/api/annotations_pb";
 import * as tendermint_p2p_types_pb from "../../../../tendermint/p2p/types_pb";
 import * as tendermint_types_block_pb from "../../../../tendermint/types/block_pb";
 import * as tendermint_types_types_pb from "../../../../tendermint/types/types_pb";

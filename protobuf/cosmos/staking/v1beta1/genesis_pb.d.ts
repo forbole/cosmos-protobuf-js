@@ -2,6 +2,7 @@
 // file: cosmos/staking/v1beta1/genesis.proto
 
 import * as jspb from "google-protobuf";
+import * as gogoproto_gogo_pb from "../../../gogoproto/gogo_pb";
 import * as cosmos_staking_v1beta1_staking_pb from "../../../cosmos/staking/v1beta1/staking_pb";
 
 export class GenesisState extends jspb.Message {

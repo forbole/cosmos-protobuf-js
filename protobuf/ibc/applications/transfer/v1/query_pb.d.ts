@@ -2,8 +2,10 @@
 // file: ibc/applications/transfer/v1/query.proto
 
 import * as jspb from "google-protobuf";
+import * as gogoproto_gogo_pb from "../../../../gogoproto/gogo_pb";
 import * as cosmos_base_query_v1beta1_pagination_pb from "../../../../cosmos/base/query/v1beta1/pagination_pb";
 import * as ibc_applications_transfer_v1_transfer_pb from "../../../../ibc/applications/transfer/v1/transfer_pb";
+import * as google_api_annotations_pb from "../../../../google/api/annotations_pb";
 
 export class QueryDenomTraceRequest extends jspb.Message {
   getHash(): string;

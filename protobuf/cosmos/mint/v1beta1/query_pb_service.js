@@ -1,40 +1,40 @@
 // package: cosmos.mint.v1beta1
 // file: cosmos/mint/v1beta1/query.proto
 
-const { grpc } = require('@improbable-eng/grpc-web');
-const cosmos_mint_v1beta1_query_pb = require('./query_pb');
+var cosmos_mint_v1beta1_query_pb = require("../../../cosmos/mint/v1beta1/query_pb");
+var grpc = require("@improbable-eng/grpc-web").grpc;
 
-const Query = (function () {
+var Query = (function () {
   function Query() {}
-  Query.serviceName = 'cosmos.mint.v1beta1.Query';
+  Query.serviceName = "cosmos.mint.v1beta1.Query";
   return Query;
 }());
 
 Query.Params = {
-  methodName: 'Params',
+  methodName: "Params",
   service: Query,
   requestStream: false,
   responseStream: false,
   requestType: cosmos_mint_v1beta1_query_pb.QueryParamsRequest,
-  responseType: cosmos_mint_v1beta1_query_pb.QueryParamsResponse,
+  responseType: cosmos_mint_v1beta1_query_pb.QueryParamsResponse
 };
 
 Query.Inflation = {
-  methodName: 'Inflation',
+  methodName: "Inflation",
   service: Query,
   requestStream: false,
   responseStream: false,
   requestType: cosmos_mint_v1beta1_query_pb.QueryInflationRequest,
-  responseType: cosmos_mint_v1beta1_query_pb.QueryInflationResponse,
+  responseType: cosmos_mint_v1beta1_query_pb.QueryInflationResponse
 };
 
 Query.AnnualProvisions = {
-  methodName: 'AnnualProvisions',
+  methodName: "AnnualProvisions",
   service: Query,
   requestStream: false,
   responseStream: false,
   requestType: cosmos_mint_v1beta1_query_pb.QueryAnnualProvisionsRequest,
-  responseType: cosmos_mint_v1beta1_query_pb.QueryAnnualProvisionsResponse,
+  responseType: cosmos_mint_v1beta1_query_pb.QueryAnnualProvisionsResponse
 };
 
 exports.Query = Query;
@@ -48,16 +48,16 @@ QueryClient.prototype.params = function params(requestMessage, metadata, callbac
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  const client = grpc.unary(Query.Params, {
+  var client = grpc.unary(Query.Params, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata,
+    metadata: metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd(response) {
+    onEnd: function (response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          const err = new Error(response.statusMessage);
+          var err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -65,13 +65,13 @@ QueryClient.prototype.params = function params(requestMessage, metadata, callbac
           callback(null, response.message);
         }
       }
-    },
+    }
   });
   return {
-    cancel() {
+    cancel: function () {
       callback = null;
       client.close();
-    },
+    }
   };
 };
 
@@ -79,16 +79,16 @@ QueryClient.prototype.inflation = function inflation(requestMessage, metadata, c
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  const client = grpc.unary(Query.Inflation, {
+  var client = grpc.unary(Query.Inflation, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata,
+    metadata: metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd(response) {
+    onEnd: function (response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          const err = new Error(response.statusMessage);
+          var err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -96,13 +96,13 @@ QueryClient.prototype.inflation = function inflation(requestMessage, metadata, c
           callback(null, response.message);
         }
       }
-    },
+    }
   });
   return {
-    cancel() {
+    cancel: function () {
       callback = null;
       client.close();
-    },
+    }
   };
 };
 
@@ -110,16 +110,16 @@ QueryClient.prototype.annualProvisions = function annualProvisions(requestMessag
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  const client = grpc.unary(Query.AnnualProvisions, {
+  var client = grpc.unary(Query.AnnualProvisions, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata,
+    metadata: metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd(response) {
+    onEnd: function (response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          const err = new Error(response.statusMessage);
+          var err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -127,14 +127,15 @@ QueryClient.prototype.annualProvisions = function annualProvisions(requestMessag
           callback(null, response.message);
         }
       }
-    },
+    }
   });
   return {
-    cancel() {
+    cancel: function () {
       callback = null;
       client.close();
-    },
+    }
   };
 };
 
 exports.QueryClient = QueryClient;
+

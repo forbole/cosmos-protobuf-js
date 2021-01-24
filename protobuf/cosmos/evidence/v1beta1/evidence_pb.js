@@ -7,14 +7,12 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-const jspb = require('google-protobuf');
+var jspb = require('google-protobuf');
+var goog = jspb;
+var global = Function('return this')();
 
-const goog = jspb;
-const global = Function('return this')();
-
-const google_protobuf_timestamp_pb = require('google-protobuf/google/protobuf/timestamp_pb.js');
-const gogoproto_gogo_pb = require('../../../gogoproto/gogo_pb.js');
-
+var gogoproto_gogo_pb = require('../../../gogoproto/gogo_pb.js');
+var google_protobuf_timestamp_pb = require('google-protobuf/google/protobuf/timestamp_pb.js');
 goog.exportSymbol('proto.cosmos.evidence.v1beta1.Equivocation', null, global);
 
 /**
@@ -27,13 +25,14 @@ goog.exportSymbol('proto.cosmos.evidence.v1beta1.Equivocation', null, global);
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.evidence.v1beta1.Equivocation = function (opt_data) {
+proto.cosmos.evidence.v1beta1.Equivocation = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.evidence.v1beta1.Equivocation, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.evidence.v1beta1.Equivocation.displayName = 'proto.cosmos.evidence.v1beta1.Equivocation';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -46,11 +45,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.cosmos.evidence.v1beta1.Equivocation.prototype.toObject = function (opt_includeInstance) {
-    return proto.cosmos.evidence.v1beta1.Equivocation.toObject(opt_includeInstance, this);
-  };
+proto.cosmos.evidence.v1beta1.Equivocation.prototype.toObject = function(opt_includeInstance) {
+  return proto.cosmos.evidence.v1beta1.Equivocation.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -59,32 +59,33 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.cosmos.evidence.v1beta1.Equivocation.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        height: jspb.Message.getFieldWithDefault(msg, 1, 0),
-        time: (f = msg.getTime()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
-        power: jspb.Message.getFieldWithDefault(msg, 3, 0),
-        consensusAddress: jspb.Message.getFieldWithDefault(msg, 4, ''),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.cosmos.evidence.v1beta1.Equivocation.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    height: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    time: (f = msg.getTime()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
+    power: jspb.Message.getFieldWithDefault(msg, 3, 0),
+    consensusAddress: jspb.Message.getFieldWithDefault(msg, 4, "")
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.evidence.v1beta1.Equivocation}
  */
-proto.cosmos.evidence.v1beta1.Equivocation.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.cosmos.evidence.v1beta1.Equivocation();
+proto.cosmos.evidence.v1beta1.Equivocation.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.cosmos.evidence.v1beta1.Equivocation;
   return proto.cosmos.evidence.v1beta1.Equivocation.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -93,47 +94,49 @@ proto.cosmos.evidence.v1beta1.Equivocation.deserializeBinary = function (bytes) 
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.evidence.v1beta1.Equivocation}
  */
-proto.cosmos.evidence.v1beta1.Equivocation.deserializeBinaryFromReader = function (msg, reader) {
+proto.cosmos.evidence.v1beta1.Equivocation.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {number} */ (reader.readInt64());
-        msg.setHeight(value);
-        break;
-      case 2:
-        var value = new google_protobuf_timestamp_pb.Timestamp();
-        reader.readMessage(value, google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
-        msg.setTime(value);
-        break;
-      case 3:
-        var value = /** @type {number} */ (reader.readInt64());
-        msg.setPower(value);
-        break;
-      case 4:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setConsensusAddress(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setHeight(value);
+      break;
+    case 2:
+      var value = new google_protobuf_timestamp_pb.Timestamp;
+      reader.readMessage(value,google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
+      msg.setTime(value);
+      break;
+    case 3:
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setPower(value);
+      break;
+    case 4:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setConsensusAddress(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.evidence.v1beta1.Equivocation.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.cosmos.evidence.v1beta1.Equivocation.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.cosmos.evidence.v1beta1.Equivocation.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -142,13 +145,13 @@ proto.cosmos.evidence.v1beta1.Equivocation.prototype.serializeBinary = function 
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.evidence.v1beta1.Equivocation.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.cosmos.evidence.v1beta1.Equivocation.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getHeight();
   if (f !== 0) {
     writer.writeInt64(
       1,
-      f,
+      f
     );
   }
   f = message.getTime();
@@ -156,88 +159,99 @@ proto.cosmos.evidence.v1beta1.Equivocation.serializeBinaryToWriter = function (m
     writer.writeMessage(
       2,
       f,
-      google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter,
+      google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter
     );
   }
   f = message.getPower();
   if (f !== 0) {
     writer.writeInt64(
       3,
-      f,
+      f
     );
   }
   f = message.getConsensusAddress();
   if (f.length > 0) {
     writer.writeString(
       4,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * optional int64 height = 1;
  * @return {number}
  */
-proto.cosmos.evidence.v1beta1.Equivocation.prototype.getHeight = function () {
+proto.cosmos.evidence.v1beta1.Equivocation.prototype.getHeight = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
+
 /** @param {number} value */
-proto.cosmos.evidence.v1beta1.Equivocation.prototype.setHeight = function (value) {
+proto.cosmos.evidence.v1beta1.Equivocation.prototype.setHeight = function(value) {
   jspb.Message.setProto3IntField(this, 1, value);
 };
+
 
 /**
  * optional google.protobuf.Timestamp time = 2;
  * @return {?proto.google.protobuf.Timestamp}
  */
-proto.cosmos.evidence.v1beta1.Equivocation.prototype.getTime = function () {
+proto.cosmos.evidence.v1beta1.Equivocation.prototype.getTime = function() {
   return /** @type{?proto.google.protobuf.Timestamp} */ (
     jspb.Message.getWrapperField(this, google_protobuf_timestamp_pb.Timestamp, 2));
 };
 
+
 /** @param {?proto.google.protobuf.Timestamp|undefined} value */
-proto.cosmos.evidence.v1beta1.Equivocation.prototype.setTime = function (value) {
+proto.cosmos.evidence.v1beta1.Equivocation.prototype.setTime = function(value) {
   jspb.Message.setWrapperField(this, 2, value);
 };
 
-proto.cosmos.evidence.v1beta1.Equivocation.prototype.clearTime = function () {
+
+proto.cosmos.evidence.v1beta1.Equivocation.prototype.clearTime = function() {
   this.setTime(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.cosmos.evidence.v1beta1.Equivocation.prototype.hasTime = function () {
+proto.cosmos.evidence.v1beta1.Equivocation.prototype.hasTime = function() {
   return jspb.Message.getField(this, 2) != null;
 };
+
 
 /**
  * optional int64 power = 3;
  * @return {number}
  */
-proto.cosmos.evidence.v1beta1.Equivocation.prototype.getPower = function () {
+proto.cosmos.evidence.v1beta1.Equivocation.prototype.getPower = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
+
 /** @param {number} value */
-proto.cosmos.evidence.v1beta1.Equivocation.prototype.setPower = function (value) {
+proto.cosmos.evidence.v1beta1.Equivocation.prototype.setPower = function(value) {
   jspb.Message.setProto3IntField(this, 3, value);
 };
+
 
 /**
  * optional string consensus_address = 4;
  * @return {string}
  */
-proto.cosmos.evidence.v1beta1.Equivocation.prototype.getConsensusAddress = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ''));
+proto.cosmos.evidence.v1beta1.Equivocation.prototype.getConsensusAddress = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
 };
 
+
 /** @param {string} value */
-proto.cosmos.evidence.v1beta1.Equivocation.prototype.setConsensusAddress = function (value) {
+proto.cosmos.evidence.v1beta1.Equivocation.prototype.setConsensusAddress = function(value) {
   jspb.Message.setProto3StringField(this, 4, value);
 };
+
 
 goog.object.extend(exports, proto.cosmos.evidence.v1beta1);

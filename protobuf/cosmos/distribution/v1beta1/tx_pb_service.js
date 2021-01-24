@@ -1,49 +1,49 @@
 // package: cosmos.distribution.v1beta1
 // file: cosmos/distribution/v1beta1/tx.proto
 
-const { grpc } = require('@improbable-eng/grpc-web');
-const cosmos_distribution_v1beta1_tx_pb = require('./tx_pb');
+var cosmos_distribution_v1beta1_tx_pb = require("../../../cosmos/distribution/v1beta1/tx_pb");
+var grpc = require("@improbable-eng/grpc-web").grpc;
 
-const Msg = (function () {
+var Msg = (function () {
   function Msg() {}
-  Msg.serviceName = 'cosmos.distribution.v1beta1.Msg';
+  Msg.serviceName = "cosmos.distribution.v1beta1.Msg";
   return Msg;
 }());
 
 Msg.SetWithdrawAddress = {
-  methodName: 'SetWithdrawAddress',
+  methodName: "SetWithdrawAddress",
   service: Msg,
   requestStream: false,
   responseStream: false,
   requestType: cosmos_distribution_v1beta1_tx_pb.MsgSetWithdrawAddress,
-  responseType: cosmos_distribution_v1beta1_tx_pb.MsgSetWithdrawAddressResponse,
+  responseType: cosmos_distribution_v1beta1_tx_pb.MsgSetWithdrawAddressResponse
 };
 
 Msg.WithdrawDelegatorReward = {
-  methodName: 'WithdrawDelegatorReward',
+  methodName: "WithdrawDelegatorReward",
   service: Msg,
   requestStream: false,
   responseStream: false,
   requestType: cosmos_distribution_v1beta1_tx_pb.MsgWithdrawDelegatorReward,
-  responseType: cosmos_distribution_v1beta1_tx_pb.MsgWithdrawDelegatorRewardResponse,
+  responseType: cosmos_distribution_v1beta1_tx_pb.MsgWithdrawDelegatorRewardResponse
 };
 
 Msg.WithdrawValidatorCommission = {
-  methodName: 'WithdrawValidatorCommission',
+  methodName: "WithdrawValidatorCommission",
   service: Msg,
   requestStream: false,
   responseStream: false,
   requestType: cosmos_distribution_v1beta1_tx_pb.MsgWithdrawValidatorCommission,
-  responseType: cosmos_distribution_v1beta1_tx_pb.MsgWithdrawValidatorCommissionResponse,
+  responseType: cosmos_distribution_v1beta1_tx_pb.MsgWithdrawValidatorCommissionResponse
 };
 
 Msg.FundCommunityPool = {
-  methodName: 'FundCommunityPool',
+  methodName: "FundCommunityPool",
   service: Msg,
   requestStream: false,
   responseStream: false,
   requestType: cosmos_distribution_v1beta1_tx_pb.MsgFundCommunityPool,
-  responseType: cosmos_distribution_v1beta1_tx_pb.MsgFundCommunityPoolResponse,
+  responseType: cosmos_distribution_v1beta1_tx_pb.MsgFundCommunityPoolResponse
 };
 
 exports.Msg = Msg;
@@ -57,16 +57,16 @@ MsgClient.prototype.setWithdrawAddress = function setWithdrawAddress(requestMess
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  const client = grpc.unary(Msg.SetWithdrawAddress, {
+  var client = grpc.unary(Msg.SetWithdrawAddress, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata,
+    metadata: metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd(response) {
+    onEnd: function (response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          const err = new Error(response.statusMessage);
+          var err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -74,13 +74,13 @@ MsgClient.prototype.setWithdrawAddress = function setWithdrawAddress(requestMess
           callback(null, response.message);
         }
       }
-    },
+    }
   });
   return {
-    cancel() {
+    cancel: function () {
       callback = null;
       client.close();
-    },
+    }
   };
 };
 
@@ -88,16 +88,16 @@ MsgClient.prototype.withdrawDelegatorReward = function withdrawDelegatorReward(r
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  const client = grpc.unary(Msg.WithdrawDelegatorReward, {
+  var client = grpc.unary(Msg.WithdrawDelegatorReward, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata,
+    metadata: metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd(response) {
+    onEnd: function (response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          const err = new Error(response.statusMessage);
+          var err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -105,13 +105,13 @@ MsgClient.prototype.withdrawDelegatorReward = function withdrawDelegatorReward(r
           callback(null, response.message);
         }
       }
-    },
+    }
   });
   return {
-    cancel() {
+    cancel: function () {
       callback = null;
       client.close();
-    },
+    }
   };
 };
 
@@ -119,16 +119,16 @@ MsgClient.prototype.withdrawValidatorCommission = function withdrawValidatorComm
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  const client = grpc.unary(Msg.WithdrawValidatorCommission, {
+  var client = grpc.unary(Msg.WithdrawValidatorCommission, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata,
+    metadata: metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd(response) {
+    onEnd: function (response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          const err = new Error(response.statusMessage);
+          var err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -136,13 +136,13 @@ MsgClient.prototype.withdrawValidatorCommission = function withdrawValidatorComm
           callback(null, response.message);
         }
       }
-    },
+    }
   });
   return {
-    cancel() {
+    cancel: function () {
       callback = null;
       client.close();
-    },
+    }
   };
 };
 
@@ -150,16 +150,16 @@ MsgClient.prototype.fundCommunityPool = function fundCommunityPool(requestMessag
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  const client = grpc.unary(Msg.FundCommunityPool, {
+  var client = grpc.unary(Msg.FundCommunityPool, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata,
+    metadata: metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd(response) {
+    onEnd: function (response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          const err = new Error(response.statusMessage);
+          var err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -167,14 +167,15 @@ MsgClient.prototype.fundCommunityPool = function fundCommunityPool(requestMessag
           callback(null, response.message);
         }
       }
-    },
+    }
   });
   return {
-    cancel() {
+    cancel: function () {
       callback = null;
       client.close();
-    },
+    }
   };
 };
 
 exports.MsgClient = MsgClient;
+

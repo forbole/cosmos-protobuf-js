@@ -2,6 +2,7 @@
 // file: cosmos/slashing/v1beta1/slashing.proto
 
 import * as jspb from "google-protobuf";
+import * as gogoproto_gogo_pb from "../../../gogoproto/gogo_pb";
 import * as google_protobuf_duration_pb from "google-protobuf/google/protobuf/duration_pb";
 import * as google_protobuf_timestamp_pb from "google-protobuf/google/protobuf/timestamp_pb";
 

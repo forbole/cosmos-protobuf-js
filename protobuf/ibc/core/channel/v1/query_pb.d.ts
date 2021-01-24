@@ -5,7 +5,9 @@ import * as jspb from "google-protobuf";
 import * as ibc_core_client_v1_client_pb from "../../../../ibc/core/client/v1/client_pb";
 import * as cosmos_base_query_v1beta1_pagination_pb from "../../../../cosmos/base/query/v1beta1/pagination_pb";
 import * as ibc_core_channel_v1_channel_pb from "../../../../ibc/core/channel/v1/channel_pb";
+import * as google_api_annotations_pb from "../../../../google/api/annotations_pb";
 import * as google_protobuf_any_pb from "google-protobuf/google/protobuf/any_pb";
+import * as gogoproto_gogo_pb from "../../../../gogoproto/gogo_pb";
 
 export class QueryChannelRequest extends jspb.Message {
   getPortId(): string;

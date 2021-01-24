@@ -2,6 +2,7 @@
 // file: tendermint/version/types.proto
 
 import * as jspb from "google-protobuf";
+import * as gogoproto_gogo_pb from "../../gogoproto/gogo_pb";
 
 export class App extends jspb.Message {
   getProtocol(): number;

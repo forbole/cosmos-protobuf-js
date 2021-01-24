@@ -2,6 +2,7 @@
 // file: tendermint/types/validator.proto
 
 import * as jspb from "google-protobuf";
+import * as gogoproto_gogo_pb from "../../gogoproto/gogo_pb";
 import * as tendermint_crypto_keys_pb from "../../tendermint/crypto/keys_pb";
 
 export class ValidatorSet extends jspb.Message {

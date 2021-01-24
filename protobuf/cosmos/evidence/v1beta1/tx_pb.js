@@ -7,15 +7,11 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-const jspb = require('google-protobuf');
+var jspb = require('google-protobuf');
+var goog = jspb;
+var global = Function('return this')();
 
-const goog = jspb;
-const global = Function('return this')();
-
-const google_protobuf_any_pb = require('google-protobuf/google/protobuf/any_pb.js');
-const gogoproto_gogo_pb = require('../../../gogoproto/gogo_pb.js');
-const cosmos_proto_cosmos_pb = require('../../../cosmos_proto/cosmos_pb.js');
-
+var google_protobuf_any_pb = require('google-protobuf/google/protobuf/any_pb.js');
 goog.exportSymbol('proto.cosmos.evidence.v1beta1.MsgSubmitEvidence', null, global);
 goog.exportSymbol('proto.cosmos.evidence.v1beta1.MsgSubmitEvidenceResponse', null, global);
 
@@ -29,13 +25,14 @@ goog.exportSymbol('proto.cosmos.evidence.v1beta1.MsgSubmitEvidenceResponse', nul
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.evidence.v1beta1.MsgSubmitEvidence = function (opt_data) {
+proto.cosmos.evidence.v1beta1.MsgSubmitEvidence = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.evidence.v1beta1.MsgSubmitEvidence, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.evidence.v1beta1.MsgSubmitEvidence.displayName = 'proto.cosmos.evidence.v1beta1.MsgSubmitEvidence';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -48,11 +45,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.cosmos.evidence.v1beta1.MsgSubmitEvidence.prototype.toObject = function (opt_includeInstance) {
-    return proto.cosmos.evidence.v1beta1.MsgSubmitEvidence.toObject(opt_includeInstance, this);
-  };
+proto.cosmos.evidence.v1beta1.MsgSubmitEvidence.prototype.toObject = function(opt_includeInstance) {
+  return proto.cosmos.evidence.v1beta1.MsgSubmitEvidence.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -61,30 +59,31 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.cosmos.evidence.v1beta1.MsgSubmitEvidence.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        submitter: jspb.Message.getFieldWithDefault(msg, 1, ''),
-        evidence: (f = msg.getEvidence()) && google_protobuf_any_pb.Any.toObject(includeInstance, f),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.cosmos.evidence.v1beta1.MsgSubmitEvidence.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    submitter: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    evidence: (f = msg.getEvidence()) && google_protobuf_any_pb.Any.toObject(includeInstance, f)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.evidence.v1beta1.MsgSubmitEvidence}
  */
-proto.cosmos.evidence.v1beta1.MsgSubmitEvidence.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.cosmos.evidence.v1beta1.MsgSubmitEvidence();
+proto.cosmos.evidence.v1beta1.MsgSubmitEvidence.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.cosmos.evidence.v1beta1.MsgSubmitEvidence;
   return proto.cosmos.evidence.v1beta1.MsgSubmitEvidence.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -93,39 +92,41 @@ proto.cosmos.evidence.v1beta1.MsgSubmitEvidence.deserializeBinary = function (by
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.evidence.v1beta1.MsgSubmitEvidence}
  */
-proto.cosmos.evidence.v1beta1.MsgSubmitEvidence.deserializeBinaryFromReader = function (msg, reader) {
+proto.cosmos.evidence.v1beta1.MsgSubmitEvidence.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setSubmitter(value);
-        break;
-      case 2:
-        var value = new google_protobuf_any_pb.Any();
-        reader.readMessage(value, google_protobuf_any_pb.Any.deserializeBinaryFromReader);
-        msg.setEvidence(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setSubmitter(value);
+      break;
+    case 2:
+      var value = new google_protobuf_any_pb.Any;
+      reader.readMessage(value,google_protobuf_any_pb.Any.deserializeBinaryFromReader);
+      msg.setEvidence(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.evidence.v1beta1.MsgSubmitEvidence.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.cosmos.evidence.v1beta1.MsgSubmitEvidence.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.cosmos.evidence.v1beta1.MsgSubmitEvidence.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -134,13 +135,13 @@ proto.cosmos.evidence.v1beta1.MsgSubmitEvidence.prototype.serializeBinary = func
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.evidence.v1beta1.MsgSubmitEvidence.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.cosmos.evidence.v1beta1.MsgSubmitEvidence.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getSubmitter();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f,
+      f
     );
   }
   f = message.getEvidence();
@@ -148,49 +149,57 @@ proto.cosmos.evidence.v1beta1.MsgSubmitEvidence.serializeBinaryToWriter = functi
     writer.writeMessage(
       2,
       f,
-      google_protobuf_any_pb.Any.serializeBinaryToWriter,
+      google_protobuf_any_pb.Any.serializeBinaryToWriter
     );
   }
 };
+
 
 /**
  * optional string submitter = 1;
  * @return {string}
  */
-proto.cosmos.evidence.v1beta1.MsgSubmitEvidence.prototype.getSubmitter = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.cosmos.evidence.v1beta1.MsgSubmitEvidence.prototype.getSubmitter = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
+
 /** @param {string} value */
-proto.cosmos.evidence.v1beta1.MsgSubmitEvidence.prototype.setSubmitter = function (value) {
+proto.cosmos.evidence.v1beta1.MsgSubmitEvidence.prototype.setSubmitter = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
+
 
 /**
  * optional google.protobuf.Any evidence = 2;
  * @return {?proto.google.protobuf.Any}
  */
-proto.cosmos.evidence.v1beta1.MsgSubmitEvidence.prototype.getEvidence = function () {
+proto.cosmos.evidence.v1beta1.MsgSubmitEvidence.prototype.getEvidence = function() {
   return /** @type{?proto.google.protobuf.Any} */ (
     jspb.Message.getWrapperField(this, google_protobuf_any_pb.Any, 2));
 };
 
+
 /** @param {?proto.google.protobuf.Any|undefined} value */
-proto.cosmos.evidence.v1beta1.MsgSubmitEvidence.prototype.setEvidence = function (value) {
+proto.cosmos.evidence.v1beta1.MsgSubmitEvidence.prototype.setEvidence = function(value) {
   jspb.Message.setWrapperField(this, 2, value);
 };
 
-proto.cosmos.evidence.v1beta1.MsgSubmitEvidence.prototype.clearEvidence = function () {
+
+proto.cosmos.evidence.v1beta1.MsgSubmitEvidence.prototype.clearEvidence = function() {
   this.setEvidence(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.cosmos.evidence.v1beta1.MsgSubmitEvidence.prototype.hasEvidence = function () {
+proto.cosmos.evidence.v1beta1.MsgSubmitEvidence.prototype.hasEvidence = function() {
   return jspb.Message.getField(this, 2) != null;
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -202,13 +211,14 @@ proto.cosmos.evidence.v1beta1.MsgSubmitEvidence.prototype.hasEvidence = function
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.evidence.v1beta1.MsgSubmitEvidenceResponse = function (opt_data) {
+proto.cosmos.evidence.v1beta1.MsgSubmitEvidenceResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.evidence.v1beta1.MsgSubmitEvidenceResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.evidence.v1beta1.MsgSubmitEvidenceResponse.displayName = 'proto.cosmos.evidence.v1beta1.MsgSubmitEvidenceResponse';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -221,11 +231,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.cosmos.evidence.v1beta1.MsgSubmitEvidenceResponse.prototype.toObject = function (opt_includeInstance) {
-    return proto.cosmos.evidence.v1beta1.MsgSubmitEvidenceResponse.toObject(opt_includeInstance, this);
-  };
+proto.cosmos.evidence.v1beta1.MsgSubmitEvidenceResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.cosmos.evidence.v1beta1.MsgSubmitEvidenceResponse.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -234,29 +245,30 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.cosmos.evidence.v1beta1.MsgSubmitEvidenceResponse.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        hash: msg.getHash_asB64(),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.cosmos.evidence.v1beta1.MsgSubmitEvidenceResponse.toObject = function(includeInstance, msg) {
+  var obj = {
+    hash: msg.getHash_asB64()
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.evidence.v1beta1.MsgSubmitEvidenceResponse}
  */
-proto.cosmos.evidence.v1beta1.MsgSubmitEvidenceResponse.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.cosmos.evidence.v1beta1.MsgSubmitEvidenceResponse();
+proto.cosmos.evidence.v1beta1.MsgSubmitEvidenceResponse.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.cosmos.evidence.v1beta1.MsgSubmitEvidenceResponse;
   return proto.cosmos.evidence.v1beta1.MsgSubmitEvidenceResponse.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -265,34 +277,36 @@ proto.cosmos.evidence.v1beta1.MsgSubmitEvidenceResponse.deserializeBinary = func
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.evidence.v1beta1.MsgSubmitEvidenceResponse}
  */
-proto.cosmos.evidence.v1beta1.MsgSubmitEvidenceResponse.deserializeBinaryFromReader = function (msg, reader) {
+proto.cosmos.evidence.v1beta1.MsgSubmitEvidenceResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 4:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setHash(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 4:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setHash(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.evidence.v1beta1.MsgSubmitEvidenceResponse.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.cosmos.evidence.v1beta1.MsgSubmitEvidenceResponse.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.cosmos.evidence.v1beta1.MsgSubmitEvidenceResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -301,35 +315,37 @@ proto.cosmos.evidence.v1beta1.MsgSubmitEvidenceResponse.prototype.serializeBinar
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.evidence.v1beta1.MsgSubmitEvidenceResponse.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.cosmos.evidence.v1beta1.MsgSubmitEvidenceResponse.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getHash_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       4,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * optional bytes hash = 4;
  * @return {!(string|Uint8Array)}
  */
-proto.cosmos.evidence.v1beta1.MsgSubmitEvidenceResponse.prototype.getHash = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 4, ''));
+proto.cosmos.evidence.v1beta1.MsgSubmitEvidenceResponse.prototype.getHash = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
 };
+
 
 /**
  * optional bytes hash = 4;
  * This is a type-conversion wrapper around `getHash()`
  * @return {string}
  */
-proto.cosmos.evidence.v1beta1.MsgSubmitEvidenceResponse.prototype.getHash_asB64 = function () {
+proto.cosmos.evidence.v1beta1.MsgSubmitEvidenceResponse.prototype.getHash_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getHash(),
-  ));
+      this.getHash()));
 };
+
 
 /**
  * optional bytes hash = 4;
@@ -338,15 +354,16 @@ proto.cosmos.evidence.v1beta1.MsgSubmitEvidenceResponse.prototype.getHash_asB64 
  * This is a type-conversion wrapper around `getHash()`
  * @return {!Uint8Array}
  */
-proto.cosmos.evidence.v1beta1.MsgSubmitEvidenceResponse.prototype.getHash_asU8 = function () {
+proto.cosmos.evidence.v1beta1.MsgSubmitEvidenceResponse.prototype.getHash_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getHash(),
-  ));
+      this.getHash()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.cosmos.evidence.v1beta1.MsgSubmitEvidenceResponse.prototype.setHash = function (value) {
+proto.cosmos.evidence.v1beta1.MsgSubmitEvidenceResponse.prototype.setHash = function(value) {
   jspb.Message.setProto3BytesField(this, 4, value);
 };
+
 
 goog.object.extend(exports, proto.cosmos.evidence.v1beta1);

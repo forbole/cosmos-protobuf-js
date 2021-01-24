@@ -2,6 +2,7 @@
 // file: cosmos/base/reflection/v1beta1/reflection.proto
 
 import * as jspb from "google-protobuf";
+import * as google_api_annotations_pb from "../../../../google/api/annotations_pb";
 
 export class ListAllInterfacesRequest extends jspb.Message {
   serializeBinary(): Uint8Array;

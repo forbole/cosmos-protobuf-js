@@ -2,6 +2,7 @@
 // file: cosmos/base/v1beta1/coin.proto
 
 import * as jspb from "google-protobuf";
+import * as gogoproto_gogo_pb from "../../../gogoproto/gogo_pb";
 
 export class Coin extends jspb.Message {
   getDenom(): string;

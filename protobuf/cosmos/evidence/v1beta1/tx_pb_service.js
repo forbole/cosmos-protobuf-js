@@ -1,22 +1,22 @@
 // package: cosmos.evidence.v1beta1
 // file: cosmos/evidence/v1beta1/tx.proto
 
-const { grpc } = require('@improbable-eng/grpc-web');
-const cosmos_evidence_v1beta1_tx_pb = require('./tx_pb');
+var cosmos_evidence_v1beta1_tx_pb = require("../../../cosmos/evidence/v1beta1/tx_pb");
+var grpc = require("@improbable-eng/grpc-web").grpc;
 
-const Msg = (function () {
+var Msg = (function () {
   function Msg() {}
-  Msg.serviceName = 'cosmos.evidence.v1beta1.Msg';
+  Msg.serviceName = "cosmos.evidence.v1beta1.Msg";
   return Msg;
 }());
 
 Msg.SubmitEvidence = {
-  methodName: 'SubmitEvidence',
+  methodName: "SubmitEvidence",
   service: Msg,
   requestStream: false,
   responseStream: false,
   requestType: cosmos_evidence_v1beta1_tx_pb.MsgSubmitEvidence,
-  responseType: cosmos_evidence_v1beta1_tx_pb.MsgSubmitEvidenceResponse,
+  responseType: cosmos_evidence_v1beta1_tx_pb.MsgSubmitEvidenceResponse
 };
 
 exports.Msg = Msg;
@@ -30,16 +30,16 @@ MsgClient.prototype.submitEvidence = function submitEvidence(requestMessage, met
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  const client = grpc.unary(Msg.SubmitEvidence, {
+  var client = grpc.unary(Msg.SubmitEvidence, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata,
+    metadata: metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd(response) {
+    onEnd: function (response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          const err = new Error(response.statusMessage);
+          var err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -47,14 +47,15 @@ MsgClient.prototype.submitEvidence = function submitEvidence(requestMessage, met
           callback(null, response.message);
         }
       }
-    },
+    }
   });
   return {
-    cancel() {
+    cancel: function () {
       callback = null;
       client.close();
-    },
+    }
   };
 };
 
 exports.MsgClient = MsgClient;
+

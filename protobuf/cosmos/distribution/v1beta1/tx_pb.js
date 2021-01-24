@@ -7,14 +7,12 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-const jspb = require('google-protobuf');
+var jspb = require('google-protobuf');
+var goog = jspb;
+var global = Function('return this')();
 
-const goog = jspb;
-const global = Function('return this')();
-
-const gogoproto_gogo_pb = require('../../../gogoproto/gogo_pb.js');
-const cosmos_base_v1beta1_coin_pb = require('../../base/v1beta1/coin_pb.js');
-
+var gogoproto_gogo_pb = require('../../../gogoproto/gogo_pb.js');
+var cosmos_base_v1beta1_coin_pb = require('../../../cosmos/base/v1beta1/coin_pb.js');
 goog.exportSymbol('proto.cosmos.distribution.v1beta1.MsgFundCommunityPool', null, global);
 goog.exportSymbol('proto.cosmos.distribution.v1beta1.MsgFundCommunityPoolResponse', null, global);
 goog.exportSymbol('proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddress', null, global);
@@ -34,13 +32,14 @@ goog.exportSymbol('proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommiss
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddress = function (opt_data) {
+proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddress = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddress, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddress.displayName = 'proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddress';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -53,11 +52,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddress.prototype.toObject = function (opt_includeInstance) {
-    return proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddress.toObject(opt_includeInstance, this);
-  };
+proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddress.prototype.toObject = function(opt_includeInstance) {
+  return proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddress.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -66,30 +66,31 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddress.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        delegatorAddress: jspb.Message.getFieldWithDefault(msg, 1, ''),
-        withdrawAddress: jspb.Message.getFieldWithDefault(msg, 2, ''),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddress.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    delegatorAddress: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    withdrawAddress: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddress}
  */
-proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddress.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddress();
+proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddress.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddress;
   return proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddress.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -98,38 +99,40 @@ proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddress.deserializeBinary = func
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddress}
  */
-proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddress.deserializeBinaryFromReader = function (msg, reader) {
+proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddress.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setDelegatorAddress(value);
-        break;
-      case 2:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setWithdrawAddress(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setDelegatorAddress(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setWithdrawAddress(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddress.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddress.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddress.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -138,49 +141,55 @@ proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddress.prototype.serializeBinar
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddress.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddress.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getDelegatorAddress();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f,
+      f
     );
   }
   f = message.getWithdrawAddress();
   if (f.length > 0) {
     writer.writeString(
       2,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * optional string delegator_address = 1;
  * @return {string}
  */
-proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddress.prototype.getDelegatorAddress = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddress.prototype.getDelegatorAddress = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
+
 /** @param {string} value */
-proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddress.prototype.setDelegatorAddress = function (value) {
+proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddress.prototype.setDelegatorAddress = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
+
 
 /**
  * optional string withdraw_address = 2;
  * @return {string}
  */
-proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddress.prototype.getWithdrawAddress = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
+proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddress.prototype.getWithdrawAddress = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
+
 /** @param {string} value */
-proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddress.prototype.setWithdrawAddress = function (value) {
+proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddress.prototype.setWithdrawAddress = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -192,13 +201,14 @@ proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddress.prototype.setWithdrawAdd
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddressResponse = function (opt_data) {
+proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddressResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddressResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddressResponse.displayName = 'proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddressResponse';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -211,11 +221,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddressResponse.prototype.toObject = function (opt_includeInstance) {
-    return proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddressResponse.toObject(opt_includeInstance, this);
-  };
+proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddressResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddressResponse.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -224,29 +235,30 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddressResponse.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
+proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddressResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
 
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddressResponse}
  */
-proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddressResponse.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddressResponse();
+proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddressResponse.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddressResponse;
   return proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddressResponse.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -255,30 +267,32 @@ proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddressResponse.deserializeBinar
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddressResponse}
  */
-proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddressResponse.deserializeBinaryFromReader = function (msg, reader) {
+proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddressResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      default:
-        reader.skipField();
-        break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddressResponse.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddressResponse.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddressResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -287,9 +301,11 @@ proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddressResponse.prototype.serial
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddressResponse.serializeBinaryToWriter = function (message, writer) {
-  const f;
+proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddressResponse.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -301,13 +317,14 @@ proto.cosmos.distribution.v1beta1.MsgSetWithdrawAddressResponse.serializeBinaryT
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward = function (opt_data) {
+proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward.displayName = 'proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -320,11 +337,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward.prototype.toObject = function (opt_includeInstance) {
-    return proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward.toObject(opt_includeInstance, this);
-  };
+proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward.prototype.toObject = function(opt_includeInstance) {
+  return proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -333,30 +351,31 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        delegatorAddress: jspb.Message.getFieldWithDefault(msg, 1, ''),
-        validatorAddress: jspb.Message.getFieldWithDefault(msg, 2, ''),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    delegatorAddress: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    validatorAddress: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward}
  */
-proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward();
+proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward;
   return proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -365,38 +384,40 @@ proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward.deserializeBinary =
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward}
  */
-proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward.deserializeBinaryFromReader = function (msg, reader) {
+proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setDelegatorAddress(value);
-        break;
-      case 2:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setValidatorAddress(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setDelegatorAddress(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setValidatorAddress(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -405,49 +426,55 @@ proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward.prototype.serialize
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getDelegatorAddress();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f,
+      f
     );
   }
   f = message.getValidatorAddress();
   if (f.length > 0) {
     writer.writeString(
       2,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * optional string delegator_address = 1;
  * @return {string}
  */
-proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward.prototype.getDelegatorAddress = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward.prototype.getDelegatorAddress = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
+
 /** @param {string} value */
-proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward.prototype.setDelegatorAddress = function (value) {
+proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward.prototype.setDelegatorAddress = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
+
 
 /**
  * optional string validator_address = 2;
  * @return {string}
  */
-proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward.prototype.getValidatorAddress = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
+proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward.prototype.getValidatorAddress = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
+
 /** @param {string} value */
-proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward.prototype.setValidatorAddress = function (value) {
+proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward.prototype.setValidatorAddress = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -459,13 +486,14 @@ proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward.prototype.setValida
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorRewardResponse = function (opt_data) {
+proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorRewardResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorRewardResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorRewardResponse.displayName = 'proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorRewardResponse';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -478,11 +506,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorRewardResponse.prototype.toObject = function (opt_includeInstance) {
-    return proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorRewardResponse.toObject(opt_includeInstance, this);
-  };
+proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorRewardResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorRewardResponse.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -491,29 +520,30 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorRewardResponse.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
+proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorRewardResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
 
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorRewardResponse}
  */
-proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorRewardResponse.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorRewardResponse();
+proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorRewardResponse.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorRewardResponse;
   return proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorRewardResponse.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -522,30 +552,32 @@ proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorRewardResponse.deserialize
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorRewardResponse}
  */
-proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorRewardResponse.deserializeBinaryFromReader = function (msg, reader) {
+proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorRewardResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      default:
-        reader.skipField();
-        break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorRewardResponse.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorRewardResponse.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorRewardResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -554,9 +586,11 @@ proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorRewardResponse.prototype.s
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorRewardResponse.serializeBinaryToWriter = function (message, writer) {
-  const f;
+proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorRewardResponse.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -568,13 +602,14 @@ proto.cosmos.distribution.v1beta1.MsgWithdrawDelegatorRewardResponse.serializeBi
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommission = function (opt_data) {
+proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommission = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommission, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommission.displayName = 'proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommission';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -587,11 +622,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommission.prototype.toObject = function (opt_includeInstance) {
-    return proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommission.toObject(opt_includeInstance, this);
-  };
+proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommission.prototype.toObject = function(opt_includeInstance) {
+  return proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommission.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -600,29 +636,30 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommission.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        validatorAddress: jspb.Message.getFieldWithDefault(msg, 1, ''),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommission.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    validatorAddress: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommission}
  */
-proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommission.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommission();
+proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommission.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommission;
   return proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommission.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -631,34 +668,36 @@ proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommission.deserializeBina
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommission}
  */
-proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommission.deserializeBinaryFromReader = function (msg, reader) {
+proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommission.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setValidatorAddress(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setValidatorAddress(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommission.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommission.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommission.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -667,29 +706,33 @@ proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommission.prototype.seria
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommission.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommission.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getValidatorAddress();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * optional string validator_address = 1;
  * @return {string}
  */
-proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommission.prototype.getValidatorAddress = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommission.prototype.getValidatorAddress = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
+
 /** @param {string} value */
-proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommission.prototype.setValidatorAddress = function (value) {
+proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommission.prototype.setValidatorAddress = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -701,13 +744,14 @@ proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommission.prototype.setVa
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommissionResponse = function (opt_data) {
+proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommissionResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommissionResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommissionResponse.displayName = 'proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommissionResponse';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -720,11 +764,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommissionResponse.prototype.toObject = function (opt_includeInstance) {
-    return proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommissionResponse.toObject(opt_includeInstance, this);
-  };
+proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommissionResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommissionResponse.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -733,29 +778,30 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommissionResponse.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
+proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommissionResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
 
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommissionResponse}
  */
-proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommissionResponse.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommissionResponse();
+proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommissionResponse.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommissionResponse;
   return proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommissionResponse.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -764,30 +810,32 @@ proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommissionResponse.deseria
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommissionResponse}
  */
-proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommissionResponse.deserializeBinaryFromReader = function (msg, reader) {
+proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommissionResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      default:
-        reader.skipField();
-        break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommissionResponse.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommissionResponse.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommissionResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -796,9 +844,11 @@ proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommissionResponse.prototy
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommissionResponse.serializeBinaryToWriter = function (message, writer) {
-  const f;
+proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommissionResponse.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -810,7 +860,7 @@ proto.cosmos.distribution.v1beta1.MsgWithdrawValidatorCommissionResponse.seriali
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.distribution.v1beta1.MsgFundCommunityPool = function (opt_data) {
+proto.cosmos.distribution.v1beta1.MsgFundCommunityPool = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.cosmos.distribution.v1beta1.MsgFundCommunityPool.repeatedFields_, null);
 };
 goog.inherits(proto.cosmos.distribution.v1beta1.MsgFundCommunityPool, jspb.Message);
@@ -824,6 +874,8 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.cosmos.distribution.v1beta1.MsgFundCommunityPool.repeatedFields_ = [1];
 
+
+
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -835,11 +887,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.cosmos.distribution.v1beta1.MsgFundCommunityPool.prototype.toObject = function (opt_includeInstance) {
-    return proto.cosmos.distribution.v1beta1.MsgFundCommunityPool.toObject(opt_includeInstance, this);
-  };
+proto.cosmos.distribution.v1beta1.MsgFundCommunityPool.prototype.toObject = function(opt_includeInstance) {
+  return proto.cosmos.distribution.v1beta1.MsgFundCommunityPool.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -848,31 +901,32 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.cosmos.distribution.v1beta1.MsgFundCommunityPool.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        amountList: jspb.Message.toObjectList(msg.getAmountList(),
-          cosmos_base_v1beta1_coin_pb.Coin.toObject, includeInstance),
-        depositor: jspb.Message.getFieldWithDefault(msg, 2, ''),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.cosmos.distribution.v1beta1.MsgFundCommunityPool.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    amountList: jspb.Message.toObjectList(msg.getAmountList(),
+    cosmos_base_v1beta1_coin_pb.Coin.toObject, includeInstance),
+    depositor: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.distribution.v1beta1.MsgFundCommunityPool}
  */
-proto.cosmos.distribution.v1beta1.MsgFundCommunityPool.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.cosmos.distribution.v1beta1.MsgFundCommunityPool();
+proto.cosmos.distribution.v1beta1.MsgFundCommunityPool.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.cosmos.distribution.v1beta1.MsgFundCommunityPool;
   return proto.cosmos.distribution.v1beta1.MsgFundCommunityPool.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -881,39 +935,41 @@ proto.cosmos.distribution.v1beta1.MsgFundCommunityPool.deserializeBinary = funct
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.distribution.v1beta1.MsgFundCommunityPool}
  */
-proto.cosmos.distribution.v1beta1.MsgFundCommunityPool.deserializeBinaryFromReader = function (msg, reader) {
+proto.cosmos.distribution.v1beta1.MsgFundCommunityPool.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = new cosmos_base_v1beta1_coin_pb.Coin();
-        reader.readMessage(value, cosmos_base_v1beta1_coin_pb.Coin.deserializeBinaryFromReader);
-        msg.addAmount(value);
-        break;
-      case 2:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setDepositor(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = new cosmos_base_v1beta1_coin_pb.Coin;
+      reader.readMessage(value,cosmos_base_v1beta1_coin_pb.Coin.deserializeBinaryFromReader);
+      msg.addAmount(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setDepositor(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.distribution.v1beta1.MsgFundCommunityPool.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.cosmos.distribution.v1beta1.MsgFundCommunityPool.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.cosmos.distribution.v1beta1.MsgFundCommunityPool.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -922,64 +978,72 @@ proto.cosmos.distribution.v1beta1.MsgFundCommunityPool.prototype.serializeBinary
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.distribution.v1beta1.MsgFundCommunityPool.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.cosmos.distribution.v1beta1.MsgFundCommunityPool.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getAmountList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       1,
       f,
-      cosmos_base_v1beta1_coin_pb.Coin.serializeBinaryToWriter,
+      cosmos_base_v1beta1_coin_pb.Coin.serializeBinaryToWriter
     );
   }
   f = message.getDepositor();
   if (f.length > 0) {
     writer.writeString(
       2,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * repeated cosmos.base.v1beta1.Coin amount = 1;
  * @return {!Array<!proto.cosmos.base.v1beta1.Coin>}
  */
-proto.cosmos.distribution.v1beta1.MsgFundCommunityPool.prototype.getAmountList = function () {
+proto.cosmos.distribution.v1beta1.MsgFundCommunityPool.prototype.getAmountList = function() {
   return /** @type{!Array<!proto.cosmos.base.v1beta1.Coin>} */ (
     jspb.Message.getRepeatedWrapperField(this, cosmos_base_v1beta1_coin_pb.Coin, 1));
 };
 
+
 /** @param {!Array<!proto.cosmos.base.v1beta1.Coin>} value */
-proto.cosmos.distribution.v1beta1.MsgFundCommunityPool.prototype.setAmountList = function (value) {
+proto.cosmos.distribution.v1beta1.MsgFundCommunityPool.prototype.setAmountList = function(value) {
   jspb.Message.setRepeatedWrapperField(this, 1, value);
 };
+
 
 /**
  * @param {!proto.cosmos.base.v1beta1.Coin=} opt_value
  * @param {number=} opt_index
  * @return {!proto.cosmos.base.v1beta1.Coin}
  */
-proto.cosmos.distribution.v1beta1.MsgFundCommunityPool.prototype.addAmount = function (opt_value, opt_index) {
+proto.cosmos.distribution.v1beta1.MsgFundCommunityPool.prototype.addAmount = function(opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.cosmos.base.v1beta1.Coin, opt_index);
 };
 
-proto.cosmos.distribution.v1beta1.MsgFundCommunityPool.prototype.clearAmountList = function () {
+
+proto.cosmos.distribution.v1beta1.MsgFundCommunityPool.prototype.clearAmountList = function() {
   this.setAmountList([]);
 };
+
 
 /**
  * optional string depositor = 2;
  * @return {string}
  */
-proto.cosmos.distribution.v1beta1.MsgFundCommunityPool.prototype.getDepositor = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
+proto.cosmos.distribution.v1beta1.MsgFundCommunityPool.prototype.getDepositor = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
+
 /** @param {string} value */
-proto.cosmos.distribution.v1beta1.MsgFundCommunityPool.prototype.setDepositor = function (value) {
+proto.cosmos.distribution.v1beta1.MsgFundCommunityPool.prototype.setDepositor = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -991,13 +1055,14 @@ proto.cosmos.distribution.v1beta1.MsgFundCommunityPool.prototype.setDepositor = 
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.distribution.v1beta1.MsgFundCommunityPoolResponse = function (opt_data) {
+proto.cosmos.distribution.v1beta1.MsgFundCommunityPoolResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.distribution.v1beta1.MsgFundCommunityPoolResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.distribution.v1beta1.MsgFundCommunityPoolResponse.displayName = 'proto.cosmos.distribution.v1beta1.MsgFundCommunityPoolResponse';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -1010,11 +1075,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.cosmos.distribution.v1beta1.MsgFundCommunityPoolResponse.prototype.toObject = function (opt_includeInstance) {
-    return proto.cosmos.distribution.v1beta1.MsgFundCommunityPoolResponse.toObject(opt_includeInstance, this);
-  };
+proto.cosmos.distribution.v1beta1.MsgFundCommunityPoolResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.cosmos.distribution.v1beta1.MsgFundCommunityPoolResponse.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -1023,29 +1089,30 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.cosmos.distribution.v1beta1.MsgFundCommunityPoolResponse.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
+proto.cosmos.distribution.v1beta1.MsgFundCommunityPoolResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
 
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.distribution.v1beta1.MsgFundCommunityPoolResponse}
  */
-proto.cosmos.distribution.v1beta1.MsgFundCommunityPoolResponse.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.cosmos.distribution.v1beta1.MsgFundCommunityPoolResponse();
+proto.cosmos.distribution.v1beta1.MsgFundCommunityPoolResponse.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.cosmos.distribution.v1beta1.MsgFundCommunityPoolResponse;
   return proto.cosmos.distribution.v1beta1.MsgFundCommunityPoolResponse.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -1054,30 +1121,32 @@ proto.cosmos.distribution.v1beta1.MsgFundCommunityPoolResponse.deserializeBinary
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.distribution.v1beta1.MsgFundCommunityPoolResponse}
  */
-proto.cosmos.distribution.v1beta1.MsgFundCommunityPoolResponse.deserializeBinaryFromReader = function (msg, reader) {
+proto.cosmos.distribution.v1beta1.MsgFundCommunityPoolResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      default:
-        reader.skipField();
-        break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.distribution.v1beta1.MsgFundCommunityPoolResponse.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.cosmos.distribution.v1beta1.MsgFundCommunityPoolResponse.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.cosmos.distribution.v1beta1.MsgFundCommunityPoolResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -1086,8 +1155,9 @@ proto.cosmos.distribution.v1beta1.MsgFundCommunityPoolResponse.prototype.seriali
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.distribution.v1beta1.MsgFundCommunityPoolResponse.serializeBinaryToWriter = function (message, writer) {
-  const f;
+proto.cosmos.distribution.v1beta1.MsgFundCommunityPoolResponse.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
 };
+
 
 goog.object.extend(exports, proto.cosmos.distribution.v1beta1);

@@ -7,13 +7,11 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-const jspb = require('google-protobuf');
+var jspb = require('google-protobuf');
+var goog = jspb;
+var global = Function('return this')();
 
-const goog = jspb;
-const global = Function('return this')();
-
-const gogoproto_gogo_pb = require('../../../gogoproto/gogo_pb.js');
-
+var gogoproto_gogo_pb = require('../../../gogoproto/gogo_pb.js');
 goog.exportSymbol('proto.cosmos.crisis.v1beta1.MsgVerifyInvariant', null, global);
 goog.exportSymbol('proto.cosmos.crisis.v1beta1.MsgVerifyInvariantResponse', null, global);
 
@@ -27,13 +25,14 @@ goog.exportSymbol('proto.cosmos.crisis.v1beta1.MsgVerifyInvariantResponse', null
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.crisis.v1beta1.MsgVerifyInvariant = function (opt_data) {
+proto.cosmos.crisis.v1beta1.MsgVerifyInvariant = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.crisis.v1beta1.MsgVerifyInvariant, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.crisis.v1beta1.MsgVerifyInvariant.displayName = 'proto.cosmos.crisis.v1beta1.MsgVerifyInvariant';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -46,11 +45,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.cosmos.crisis.v1beta1.MsgVerifyInvariant.prototype.toObject = function (opt_includeInstance) {
-    return proto.cosmos.crisis.v1beta1.MsgVerifyInvariant.toObject(opt_includeInstance, this);
-  };
+proto.cosmos.crisis.v1beta1.MsgVerifyInvariant.prototype.toObject = function(opt_includeInstance) {
+  return proto.cosmos.crisis.v1beta1.MsgVerifyInvariant.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -59,31 +59,32 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.cosmos.crisis.v1beta1.MsgVerifyInvariant.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        sender: jspb.Message.getFieldWithDefault(msg, 1, ''),
-        invariantModuleName: jspb.Message.getFieldWithDefault(msg, 2, ''),
-        invariantRoute: jspb.Message.getFieldWithDefault(msg, 3, ''),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.cosmos.crisis.v1beta1.MsgVerifyInvariant.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    sender: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    invariantModuleName: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    invariantRoute: jspb.Message.getFieldWithDefault(msg, 3, "")
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.crisis.v1beta1.MsgVerifyInvariant}
  */
-proto.cosmos.crisis.v1beta1.MsgVerifyInvariant.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.cosmos.crisis.v1beta1.MsgVerifyInvariant();
+proto.cosmos.crisis.v1beta1.MsgVerifyInvariant.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.cosmos.crisis.v1beta1.MsgVerifyInvariant;
   return proto.cosmos.crisis.v1beta1.MsgVerifyInvariant.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -92,42 +93,44 @@ proto.cosmos.crisis.v1beta1.MsgVerifyInvariant.deserializeBinary = function (byt
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.crisis.v1beta1.MsgVerifyInvariant}
  */
-proto.cosmos.crisis.v1beta1.MsgVerifyInvariant.deserializeBinaryFromReader = function (msg, reader) {
+proto.cosmos.crisis.v1beta1.MsgVerifyInvariant.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setSender(value);
-        break;
-      case 2:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setInvariantModuleName(value);
-        break;
-      case 3:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setInvariantRoute(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setSender(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setInvariantModuleName(value);
+      break;
+    case 3:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setInvariantRoute(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.crisis.v1beta1.MsgVerifyInvariant.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.cosmos.crisis.v1beta1.MsgVerifyInvariant.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.cosmos.crisis.v1beta1.MsgVerifyInvariant.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -136,69 +139,77 @@ proto.cosmos.crisis.v1beta1.MsgVerifyInvariant.prototype.serializeBinary = funct
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.crisis.v1beta1.MsgVerifyInvariant.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.cosmos.crisis.v1beta1.MsgVerifyInvariant.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getSender();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f,
+      f
     );
   }
   f = message.getInvariantModuleName();
   if (f.length > 0) {
     writer.writeString(
       2,
-      f,
+      f
     );
   }
   f = message.getInvariantRoute();
   if (f.length > 0) {
     writer.writeString(
       3,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * optional string sender = 1;
  * @return {string}
  */
-proto.cosmos.crisis.v1beta1.MsgVerifyInvariant.prototype.getSender = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.cosmos.crisis.v1beta1.MsgVerifyInvariant.prototype.getSender = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
+
 /** @param {string} value */
-proto.cosmos.crisis.v1beta1.MsgVerifyInvariant.prototype.setSender = function (value) {
+proto.cosmos.crisis.v1beta1.MsgVerifyInvariant.prototype.setSender = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
+
 
 /**
  * optional string invariant_module_name = 2;
  * @return {string}
  */
-proto.cosmos.crisis.v1beta1.MsgVerifyInvariant.prototype.getInvariantModuleName = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
+proto.cosmos.crisis.v1beta1.MsgVerifyInvariant.prototype.getInvariantModuleName = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
+
 /** @param {string} value */
-proto.cosmos.crisis.v1beta1.MsgVerifyInvariant.prototype.setInvariantModuleName = function (value) {
+proto.cosmos.crisis.v1beta1.MsgVerifyInvariant.prototype.setInvariantModuleName = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
+
 
 /**
  * optional string invariant_route = 3;
  * @return {string}
  */
-proto.cosmos.crisis.v1beta1.MsgVerifyInvariant.prototype.getInvariantRoute = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ''));
+proto.cosmos.crisis.v1beta1.MsgVerifyInvariant.prototype.getInvariantRoute = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
+
 /** @param {string} value */
-proto.cosmos.crisis.v1beta1.MsgVerifyInvariant.prototype.setInvariantRoute = function (value) {
+proto.cosmos.crisis.v1beta1.MsgVerifyInvariant.prototype.setInvariantRoute = function(value) {
   jspb.Message.setProto3StringField(this, 3, value);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -210,13 +221,14 @@ proto.cosmos.crisis.v1beta1.MsgVerifyInvariant.prototype.setInvariantRoute = fun
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.crisis.v1beta1.MsgVerifyInvariantResponse = function (opt_data) {
+proto.cosmos.crisis.v1beta1.MsgVerifyInvariantResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.crisis.v1beta1.MsgVerifyInvariantResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.crisis.v1beta1.MsgVerifyInvariantResponse.displayName = 'proto.cosmos.crisis.v1beta1.MsgVerifyInvariantResponse';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -229,11 +241,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.cosmos.crisis.v1beta1.MsgVerifyInvariantResponse.prototype.toObject = function (opt_includeInstance) {
-    return proto.cosmos.crisis.v1beta1.MsgVerifyInvariantResponse.toObject(opt_includeInstance, this);
-  };
+proto.cosmos.crisis.v1beta1.MsgVerifyInvariantResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.cosmos.crisis.v1beta1.MsgVerifyInvariantResponse.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -242,29 +255,30 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.cosmos.crisis.v1beta1.MsgVerifyInvariantResponse.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
+proto.cosmos.crisis.v1beta1.MsgVerifyInvariantResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
 
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.crisis.v1beta1.MsgVerifyInvariantResponse}
  */
-proto.cosmos.crisis.v1beta1.MsgVerifyInvariantResponse.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.cosmos.crisis.v1beta1.MsgVerifyInvariantResponse();
+proto.cosmos.crisis.v1beta1.MsgVerifyInvariantResponse.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.cosmos.crisis.v1beta1.MsgVerifyInvariantResponse;
   return proto.cosmos.crisis.v1beta1.MsgVerifyInvariantResponse.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -273,30 +287,32 @@ proto.cosmos.crisis.v1beta1.MsgVerifyInvariantResponse.deserializeBinary = funct
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.crisis.v1beta1.MsgVerifyInvariantResponse}
  */
-proto.cosmos.crisis.v1beta1.MsgVerifyInvariantResponse.deserializeBinaryFromReader = function (msg, reader) {
+proto.cosmos.crisis.v1beta1.MsgVerifyInvariantResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      default:
-        reader.skipField();
-        break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.crisis.v1beta1.MsgVerifyInvariantResponse.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.cosmos.crisis.v1beta1.MsgVerifyInvariantResponse.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.cosmos.crisis.v1beta1.MsgVerifyInvariantResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -305,8 +321,9 @@ proto.cosmos.crisis.v1beta1.MsgVerifyInvariantResponse.prototype.serializeBinary
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.crisis.v1beta1.MsgVerifyInvariantResponse.serializeBinaryToWriter = function (message, writer) {
-  const f;
+proto.cosmos.crisis.v1beta1.MsgVerifyInvariantResponse.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
 };
+
 
 goog.object.extend(exports, proto.cosmos.crisis.v1beta1);

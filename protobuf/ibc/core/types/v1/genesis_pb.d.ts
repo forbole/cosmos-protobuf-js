@@ -2,6 +2,7 @@
 // file: ibc/core/types/v1/genesis.proto
 
 import * as jspb from "google-protobuf";
+import * as gogoproto_gogo_pb from "../../../../gogoproto/gogo_pb";
 import * as ibc_core_client_v1_genesis_pb from "../../../../ibc/core/client/v1/genesis_pb";
 import * as ibc_core_connection_v1_genesis_pb from "../../../../ibc/core/connection/v1/genesis_pb";
 import * as ibc_core_channel_v1_genesis_pb from "../../../../ibc/core/channel/v1/genesis_pb";

@@ -2,6 +2,7 @@
 // file: cosmos/base/store/v1beta1/commit_info.proto
 
 import * as jspb from "google-protobuf";
+import * as gogoproto_gogo_pb from "../../../../gogoproto/gogo_pb";
 
 export class CommitInfo extends jspb.Message {
   getVersion(): number;

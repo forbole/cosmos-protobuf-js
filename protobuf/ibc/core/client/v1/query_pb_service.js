@@ -1,58 +1,58 @@
 // package: ibc.core.client.v1
 // file: ibc/core/client/v1/query.proto
 
-const { grpc } = require('@improbable-eng/grpc-web');
-const ibc_core_client_v1_query_pb = require('./query_pb');
+var ibc_core_client_v1_query_pb = require("../../../../ibc/core/client/v1/query_pb");
+var grpc = require("@improbable-eng/grpc-web").grpc;
 
-const Query = (function () {
+var Query = (function () {
   function Query() {}
-  Query.serviceName = 'ibc.core.client.v1.Query';
+  Query.serviceName = "ibc.core.client.v1.Query";
   return Query;
 }());
 
 Query.ClientState = {
-  methodName: 'ClientState',
+  methodName: "ClientState",
   service: Query,
   requestStream: false,
   responseStream: false,
   requestType: ibc_core_client_v1_query_pb.QueryClientStateRequest,
-  responseType: ibc_core_client_v1_query_pb.QueryClientStateResponse,
+  responseType: ibc_core_client_v1_query_pb.QueryClientStateResponse
 };
 
 Query.ClientStates = {
-  methodName: 'ClientStates',
+  methodName: "ClientStates",
   service: Query,
   requestStream: false,
   responseStream: false,
   requestType: ibc_core_client_v1_query_pb.QueryClientStatesRequest,
-  responseType: ibc_core_client_v1_query_pb.QueryClientStatesResponse,
+  responseType: ibc_core_client_v1_query_pb.QueryClientStatesResponse
 };
 
 Query.ConsensusState = {
-  methodName: 'ConsensusState',
+  methodName: "ConsensusState",
   service: Query,
   requestStream: false,
   responseStream: false,
   requestType: ibc_core_client_v1_query_pb.QueryConsensusStateRequest,
-  responseType: ibc_core_client_v1_query_pb.QueryConsensusStateResponse,
+  responseType: ibc_core_client_v1_query_pb.QueryConsensusStateResponse
 };
 
 Query.ConsensusStates = {
-  methodName: 'ConsensusStates',
+  methodName: "ConsensusStates",
   service: Query,
   requestStream: false,
   responseStream: false,
   requestType: ibc_core_client_v1_query_pb.QueryConsensusStatesRequest,
-  responseType: ibc_core_client_v1_query_pb.QueryConsensusStatesResponse,
+  responseType: ibc_core_client_v1_query_pb.QueryConsensusStatesResponse
 };
 
 Query.ClientParams = {
-  methodName: 'ClientParams',
+  methodName: "ClientParams",
   service: Query,
   requestStream: false,
   responseStream: false,
   requestType: ibc_core_client_v1_query_pb.QueryClientParamsRequest,
-  responseType: ibc_core_client_v1_query_pb.QueryClientParamsResponse,
+  responseType: ibc_core_client_v1_query_pb.QueryClientParamsResponse
 };
 
 exports.Query = Query;
@@ -66,16 +66,16 @@ QueryClient.prototype.clientState = function clientState(requestMessage, metadat
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  const client = grpc.unary(Query.ClientState, {
+  var client = grpc.unary(Query.ClientState, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata,
+    metadata: metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd(response) {
+    onEnd: function (response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          const err = new Error(response.statusMessage);
+          var err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -83,13 +83,13 @@ QueryClient.prototype.clientState = function clientState(requestMessage, metadat
           callback(null, response.message);
         }
       }
-    },
+    }
   });
   return {
-    cancel() {
+    cancel: function () {
       callback = null;
       client.close();
-    },
+    }
   };
 };
 
@@ -97,16 +97,16 @@ QueryClient.prototype.clientStates = function clientStates(requestMessage, metad
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  const client = grpc.unary(Query.ClientStates, {
+  var client = grpc.unary(Query.ClientStates, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata,
+    metadata: metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd(response) {
+    onEnd: function (response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          const err = new Error(response.statusMessage);
+          var err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -114,13 +114,13 @@ QueryClient.prototype.clientStates = function clientStates(requestMessage, metad
           callback(null, response.message);
         }
       }
-    },
+    }
   });
   return {
-    cancel() {
+    cancel: function () {
       callback = null;
       client.close();
-    },
+    }
   };
 };
 
@@ -128,16 +128,16 @@ QueryClient.prototype.consensusState = function consensusState(requestMessage, m
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  const client = grpc.unary(Query.ConsensusState, {
+  var client = grpc.unary(Query.ConsensusState, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata,
+    metadata: metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd(response) {
+    onEnd: function (response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          const err = new Error(response.statusMessage);
+          var err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -145,13 +145,13 @@ QueryClient.prototype.consensusState = function consensusState(requestMessage, m
           callback(null, response.message);
         }
       }
-    },
+    }
   });
   return {
-    cancel() {
+    cancel: function () {
       callback = null;
       client.close();
-    },
+    }
   };
 };
 
@@ -159,16 +159,16 @@ QueryClient.prototype.consensusStates = function consensusStates(requestMessage,
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  const client = grpc.unary(Query.ConsensusStates, {
+  var client = grpc.unary(Query.ConsensusStates, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata,
+    metadata: metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd(response) {
+    onEnd: function (response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          const err = new Error(response.statusMessage);
+          var err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -176,13 +176,13 @@ QueryClient.prototype.consensusStates = function consensusStates(requestMessage,
           callback(null, response.message);
         }
       }
-    },
+    }
   });
   return {
-    cancel() {
+    cancel: function () {
       callback = null;
       client.close();
-    },
+    }
   };
 };
 
@@ -190,16 +190,16 @@ QueryClient.prototype.clientParams = function clientParams(requestMessage, metad
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  const client = grpc.unary(Query.ClientParams, {
+  var client = grpc.unary(Query.ClientParams, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata,
+    metadata: metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd(response) {
+    onEnd: function (response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          const err = new Error(response.statusMessage);
+          var err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -207,14 +207,15 @@ QueryClient.prototype.clientParams = function clientParams(requestMessage, metad
           callback(null, response.message);
         }
       }
-    },
+    }
   });
   return {
-    cancel() {
+    cancel: function () {
       callback = null;
       client.close();
-    },
+    }
   };
 };
 
 exports.QueryClient = QueryClient;
+

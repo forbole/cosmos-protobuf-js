@@ -2,10 +2,18 @@
 // file: google/logging/v2/logging.proto
 
 import * as jspb from "google-protobuf";
+import * as google_api_client_pb from "../../../google/api/client_pb";
+import * as google_api_field_behavior_pb from "../../../google/api/field_behavior_pb";
 import * as google_api_monitored_resource_pb from "../../../google/api/monitored_resource_pb";
+import * as google_api_resource_pb from "../../../google/api/resource_pb";
 import * as google_logging_v2_log_entry_pb from "../../../google/logging/v2/log_entry_pb";
+import * as google_logging_v2_logging_config_pb from "../../../google/logging/v2/logging_config_pb";
 import * as google_protobuf_duration_pb from "google-protobuf/google/protobuf/duration_pb";
+import * as google_protobuf_empty_pb from "google-protobuf/google/protobuf/empty_pb";
+import * as google_protobuf_field_mask_pb from "google-protobuf/google/protobuf/field_mask_pb";
+import * as google_protobuf_timestamp_pb from "google-protobuf/google/protobuf/timestamp_pb";
 import * as google_rpc_status_pb from "../../../google/rpc/status_pb";
+import * as google_api_annotations_pb from "../../../google/api/annotations_pb";
 
 export class DeleteLogRequest extends jspb.Message {
   getLogName(): string;

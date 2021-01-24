@@ -7,14 +7,12 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-const jspb = require('google-protobuf');
+var jspb = require('google-protobuf');
+var goog = jspb;
+var global = Function('return this')();
 
-const goog = jspb;
-const global = Function('return this')();
-
-const gogoproto_gogo_pb = require('../../../../gogoproto/gogo_pb.js');
-const ibc_core_commitment_v1_commitment_pb = require('../../commitment/v1/commitment_pb.js');
-
+var gogoproto_gogo_pb = require('../../../../gogoproto/gogo_pb.js');
+var ibc_core_commitment_v1_commitment_pb = require('../../../../ibc/core/commitment/v1/commitment_pb.js');
 goog.exportSymbol('proto.ibc.core.connection.v1.ClientPaths', null, global);
 goog.exportSymbol('proto.ibc.core.connection.v1.ConnectionEnd', null, global);
 goog.exportSymbol('proto.ibc.core.connection.v1.ConnectionPaths', null, global);
@@ -33,7 +31,7 @@ goog.exportSymbol('proto.ibc.core.connection.v1.Version', null, global);
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.core.connection.v1.ConnectionEnd = function (opt_data) {
+proto.ibc.core.connection.v1.ConnectionEnd = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.ibc.core.connection.v1.ConnectionEnd.repeatedFields_, null);
 };
 goog.inherits(proto.ibc.core.connection.v1.ConnectionEnd, jspb.Message);
@@ -47,6 +45,8 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.ibc.core.connection.v1.ConnectionEnd.repeatedFields_ = [2];
 
+
+
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -58,11 +58,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.core.connection.v1.ConnectionEnd.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.core.connection.v1.ConnectionEnd.toObject(opt_includeInstance, this);
-  };
+proto.ibc.core.connection.v1.ConnectionEnd.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.core.connection.v1.ConnectionEnd.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -71,34 +72,35 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.core.connection.v1.ConnectionEnd.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        clientId: jspb.Message.getFieldWithDefault(msg, 1, ''),
-        versionsList: jspb.Message.toObjectList(msg.getVersionsList(),
-          proto.ibc.core.connection.v1.Version.toObject, includeInstance),
-        state: jspb.Message.getFieldWithDefault(msg, 3, 0),
-        counterparty: (f = msg.getCounterparty()) && proto.ibc.core.connection.v1.Counterparty.toObject(includeInstance, f),
-        delayPeriod: jspb.Message.getFieldWithDefault(msg, 5, 0),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.core.connection.v1.ConnectionEnd.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    clientId: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    versionsList: jspb.Message.toObjectList(msg.getVersionsList(),
+    proto.ibc.core.connection.v1.Version.toObject, includeInstance),
+    state: jspb.Message.getFieldWithDefault(msg, 3, 0),
+    counterparty: (f = msg.getCounterparty()) && proto.ibc.core.connection.v1.Counterparty.toObject(includeInstance, f),
+    delayPeriod: jspb.Message.getFieldWithDefault(msg, 5, 0)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.core.connection.v1.ConnectionEnd}
  */
-proto.ibc.core.connection.v1.ConnectionEnd.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.core.connection.v1.ConnectionEnd();
+proto.ibc.core.connection.v1.ConnectionEnd.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.core.connection.v1.ConnectionEnd;
   return proto.ibc.core.connection.v1.ConnectionEnd.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -107,52 +109,54 @@ proto.ibc.core.connection.v1.ConnectionEnd.deserializeBinary = function (bytes) 
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.core.connection.v1.ConnectionEnd}
  */
-proto.ibc.core.connection.v1.ConnectionEnd.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.core.connection.v1.ConnectionEnd.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setClientId(value);
-        break;
-      case 2:
-        var value = new proto.ibc.core.connection.v1.Version();
-        reader.readMessage(value, proto.ibc.core.connection.v1.Version.deserializeBinaryFromReader);
-        msg.addVersions(value);
-        break;
-      case 3:
-        var value = /** @type {!proto.ibc.core.connection.v1.State} */ (reader.readEnum());
-        msg.setState(value);
-        break;
-      case 4:
-        var value = new proto.ibc.core.connection.v1.Counterparty();
-        reader.readMessage(value, proto.ibc.core.connection.v1.Counterparty.deserializeBinaryFromReader);
-        msg.setCounterparty(value);
-        break;
-      case 5:
-        var value = /** @type {number} */ (reader.readUint64());
-        msg.setDelayPeriod(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setClientId(value);
+      break;
+    case 2:
+      var value = new proto.ibc.core.connection.v1.Version;
+      reader.readMessage(value,proto.ibc.core.connection.v1.Version.deserializeBinaryFromReader);
+      msg.addVersions(value);
+      break;
+    case 3:
+      var value = /** @type {!proto.ibc.core.connection.v1.State} */ (reader.readEnum());
+      msg.setState(value);
+      break;
+    case 4:
+      var value = new proto.ibc.core.connection.v1.Counterparty;
+      reader.readMessage(value,proto.ibc.core.connection.v1.Counterparty.deserializeBinaryFromReader);
+      msg.setCounterparty(value);
+      break;
+    case 5:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setDelayPeriod(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.core.connection.v1.ConnectionEnd.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.core.connection.v1.ConnectionEnd.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.core.connection.v1.ConnectionEnd.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -161,13 +165,13 @@ proto.ibc.core.connection.v1.ConnectionEnd.prototype.serializeBinary = function 
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.core.connection.v1.ConnectionEnd.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.core.connection.v1.ConnectionEnd.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getClientId();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f,
+      f
     );
   }
   f = message.getVersionsList();
@@ -175,14 +179,14 @@ proto.ibc.core.connection.v1.ConnectionEnd.serializeBinaryToWriter = function (m
     writer.writeRepeatedMessage(
       2,
       f,
-      proto.ibc.core.connection.v1.Version.serializeBinaryToWriter,
+      proto.ibc.core.connection.v1.Version.serializeBinaryToWriter
     );
   }
   f = message.getState();
   if (f !== 0.0) {
     writer.writeEnum(
       3,
-      f,
+      f
     );
   }
   f = message.getCounterparty();
@@ -190,109 +194,125 @@ proto.ibc.core.connection.v1.ConnectionEnd.serializeBinaryToWriter = function (m
     writer.writeMessage(
       4,
       f,
-      proto.ibc.core.connection.v1.Counterparty.serializeBinaryToWriter,
+      proto.ibc.core.connection.v1.Counterparty.serializeBinaryToWriter
     );
   }
   f = message.getDelayPeriod();
   if (f !== 0) {
     writer.writeUint64(
       5,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * optional string client_id = 1;
  * @return {string}
  */
-proto.ibc.core.connection.v1.ConnectionEnd.prototype.getClientId = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.ibc.core.connection.v1.ConnectionEnd.prototype.getClientId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
+
 /** @param {string} value */
-proto.ibc.core.connection.v1.ConnectionEnd.prototype.setClientId = function (value) {
+proto.ibc.core.connection.v1.ConnectionEnd.prototype.setClientId = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
+
 
 /**
  * repeated Version versions = 2;
  * @return {!Array<!proto.ibc.core.connection.v1.Version>}
  */
-proto.ibc.core.connection.v1.ConnectionEnd.prototype.getVersionsList = function () {
+proto.ibc.core.connection.v1.ConnectionEnd.prototype.getVersionsList = function() {
   return /** @type{!Array<!proto.ibc.core.connection.v1.Version>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.ibc.core.connection.v1.Version, 2));
 };
 
+
 /** @param {!Array<!proto.ibc.core.connection.v1.Version>} value */
-proto.ibc.core.connection.v1.ConnectionEnd.prototype.setVersionsList = function (value) {
+proto.ibc.core.connection.v1.ConnectionEnd.prototype.setVersionsList = function(value) {
   jspb.Message.setRepeatedWrapperField(this, 2, value);
 };
+
 
 /**
  * @param {!proto.ibc.core.connection.v1.Version=} opt_value
  * @param {number=} opt_index
  * @return {!proto.ibc.core.connection.v1.Version}
  */
-proto.ibc.core.connection.v1.ConnectionEnd.prototype.addVersions = function (opt_value, opt_index) {
+proto.ibc.core.connection.v1.ConnectionEnd.prototype.addVersions = function(opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.ibc.core.connection.v1.Version, opt_index);
 };
 
-proto.ibc.core.connection.v1.ConnectionEnd.prototype.clearVersionsList = function () {
+
+proto.ibc.core.connection.v1.ConnectionEnd.prototype.clearVersionsList = function() {
   this.setVersionsList([]);
 };
+
 
 /**
  * optional State state = 3;
  * @return {!proto.ibc.core.connection.v1.State}
  */
-proto.ibc.core.connection.v1.ConnectionEnd.prototype.getState = function () {
+proto.ibc.core.connection.v1.ConnectionEnd.prototype.getState = function() {
   return /** @type {!proto.ibc.core.connection.v1.State} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
+
 /** @param {!proto.ibc.core.connection.v1.State} value */
-proto.ibc.core.connection.v1.ConnectionEnd.prototype.setState = function (value) {
+proto.ibc.core.connection.v1.ConnectionEnd.prototype.setState = function(value) {
   jspb.Message.setProto3EnumField(this, 3, value);
 };
+
 
 /**
  * optional Counterparty counterparty = 4;
  * @return {?proto.ibc.core.connection.v1.Counterparty}
  */
-proto.ibc.core.connection.v1.ConnectionEnd.prototype.getCounterparty = function () {
+proto.ibc.core.connection.v1.ConnectionEnd.prototype.getCounterparty = function() {
   return /** @type{?proto.ibc.core.connection.v1.Counterparty} */ (
     jspb.Message.getWrapperField(this, proto.ibc.core.connection.v1.Counterparty, 4));
 };
 
+
 /** @param {?proto.ibc.core.connection.v1.Counterparty|undefined} value */
-proto.ibc.core.connection.v1.ConnectionEnd.prototype.setCounterparty = function (value) {
+proto.ibc.core.connection.v1.ConnectionEnd.prototype.setCounterparty = function(value) {
   jspb.Message.setWrapperField(this, 4, value);
 };
 
-proto.ibc.core.connection.v1.ConnectionEnd.prototype.clearCounterparty = function () {
+
+proto.ibc.core.connection.v1.ConnectionEnd.prototype.clearCounterparty = function() {
   this.setCounterparty(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.ibc.core.connection.v1.ConnectionEnd.prototype.hasCounterparty = function () {
+proto.ibc.core.connection.v1.ConnectionEnd.prototype.hasCounterparty = function() {
   return jspb.Message.getField(this, 4) != null;
 };
+
 
 /**
  * optional uint64 delay_period = 5;
  * @return {number}
  */
-proto.ibc.core.connection.v1.ConnectionEnd.prototype.getDelayPeriod = function () {
+proto.ibc.core.connection.v1.ConnectionEnd.prototype.getDelayPeriod = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
 };
 
+
 /** @param {number} value */
-proto.ibc.core.connection.v1.ConnectionEnd.prototype.setDelayPeriod = function (value) {
+proto.ibc.core.connection.v1.ConnectionEnd.prototype.setDelayPeriod = function(value) {
   jspb.Message.setProto3IntField(this, 5, value);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -304,7 +324,7 @@ proto.ibc.core.connection.v1.ConnectionEnd.prototype.setDelayPeriod = function (
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.core.connection.v1.IdentifiedConnection = function (opt_data) {
+proto.ibc.core.connection.v1.IdentifiedConnection = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.ibc.core.connection.v1.IdentifiedConnection.repeatedFields_, null);
 };
 goog.inherits(proto.ibc.core.connection.v1.IdentifiedConnection, jspb.Message);
@@ -318,6 +338,8 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.ibc.core.connection.v1.IdentifiedConnection.repeatedFields_ = [3];
 
+
+
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -329,11 +351,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.core.connection.v1.IdentifiedConnection.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.core.connection.v1.IdentifiedConnection.toObject(opt_includeInstance, this);
-  };
+proto.ibc.core.connection.v1.IdentifiedConnection.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.core.connection.v1.IdentifiedConnection.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -342,35 +365,36 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.core.connection.v1.IdentifiedConnection.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        id: jspb.Message.getFieldWithDefault(msg, 1, ''),
-        clientId: jspb.Message.getFieldWithDefault(msg, 2, ''),
-        versionsList: jspb.Message.toObjectList(msg.getVersionsList(),
-          proto.ibc.core.connection.v1.Version.toObject, includeInstance),
-        state: jspb.Message.getFieldWithDefault(msg, 4, 0),
-        counterparty: (f = msg.getCounterparty()) && proto.ibc.core.connection.v1.Counterparty.toObject(includeInstance, f),
-        delayPeriod: jspb.Message.getFieldWithDefault(msg, 6, 0),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.core.connection.v1.IdentifiedConnection.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    id: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    clientId: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    versionsList: jspb.Message.toObjectList(msg.getVersionsList(),
+    proto.ibc.core.connection.v1.Version.toObject, includeInstance),
+    state: jspb.Message.getFieldWithDefault(msg, 4, 0),
+    counterparty: (f = msg.getCounterparty()) && proto.ibc.core.connection.v1.Counterparty.toObject(includeInstance, f),
+    delayPeriod: jspb.Message.getFieldWithDefault(msg, 6, 0)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.core.connection.v1.IdentifiedConnection}
  */
-proto.ibc.core.connection.v1.IdentifiedConnection.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.core.connection.v1.IdentifiedConnection();
+proto.ibc.core.connection.v1.IdentifiedConnection.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.core.connection.v1.IdentifiedConnection;
   return proto.ibc.core.connection.v1.IdentifiedConnection.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -379,56 +403,58 @@ proto.ibc.core.connection.v1.IdentifiedConnection.deserializeBinary = function (
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.core.connection.v1.IdentifiedConnection}
  */
-proto.ibc.core.connection.v1.IdentifiedConnection.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.core.connection.v1.IdentifiedConnection.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setId(value);
-        break;
-      case 2:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setClientId(value);
-        break;
-      case 3:
-        var value = new proto.ibc.core.connection.v1.Version();
-        reader.readMessage(value, proto.ibc.core.connection.v1.Version.deserializeBinaryFromReader);
-        msg.addVersions(value);
-        break;
-      case 4:
-        var value = /** @type {!proto.ibc.core.connection.v1.State} */ (reader.readEnum());
-        msg.setState(value);
-        break;
-      case 5:
-        var value = new proto.ibc.core.connection.v1.Counterparty();
-        reader.readMessage(value, proto.ibc.core.connection.v1.Counterparty.deserializeBinaryFromReader);
-        msg.setCounterparty(value);
-        break;
-      case 6:
-        var value = /** @type {number} */ (reader.readUint64());
-        msg.setDelayPeriod(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setId(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setClientId(value);
+      break;
+    case 3:
+      var value = new proto.ibc.core.connection.v1.Version;
+      reader.readMessage(value,proto.ibc.core.connection.v1.Version.deserializeBinaryFromReader);
+      msg.addVersions(value);
+      break;
+    case 4:
+      var value = /** @type {!proto.ibc.core.connection.v1.State} */ (reader.readEnum());
+      msg.setState(value);
+      break;
+    case 5:
+      var value = new proto.ibc.core.connection.v1.Counterparty;
+      reader.readMessage(value,proto.ibc.core.connection.v1.Counterparty.deserializeBinaryFromReader);
+      msg.setCounterparty(value);
+      break;
+    case 6:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setDelayPeriod(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.core.connection.v1.IdentifiedConnection.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.core.connection.v1.IdentifiedConnection.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.core.connection.v1.IdentifiedConnection.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -437,20 +463,20 @@ proto.ibc.core.connection.v1.IdentifiedConnection.prototype.serializeBinary = fu
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.core.connection.v1.IdentifiedConnection.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.core.connection.v1.IdentifiedConnection.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getId();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f,
+      f
     );
   }
   f = message.getClientId();
   if (f.length > 0) {
     writer.writeString(
       2,
-      f,
+      f
     );
   }
   f = message.getVersionsList();
@@ -458,14 +484,14 @@ proto.ibc.core.connection.v1.IdentifiedConnection.serializeBinaryToWriter = func
     writer.writeRepeatedMessage(
       3,
       f,
-      proto.ibc.core.connection.v1.Version.serializeBinaryToWriter,
+      proto.ibc.core.connection.v1.Version.serializeBinaryToWriter
     );
   }
   f = message.getState();
   if (f !== 0.0) {
     writer.writeEnum(
       4,
-      f,
+      f
     );
   }
   f = message.getCounterparty();
@@ -473,122 +499,140 @@ proto.ibc.core.connection.v1.IdentifiedConnection.serializeBinaryToWriter = func
     writer.writeMessage(
       5,
       f,
-      proto.ibc.core.connection.v1.Counterparty.serializeBinaryToWriter,
+      proto.ibc.core.connection.v1.Counterparty.serializeBinaryToWriter
     );
   }
   f = message.getDelayPeriod();
   if (f !== 0) {
     writer.writeUint64(
       6,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * optional string id = 1;
  * @return {string}
  */
-proto.ibc.core.connection.v1.IdentifiedConnection.prototype.getId = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.ibc.core.connection.v1.IdentifiedConnection.prototype.getId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
+
 /** @param {string} value */
-proto.ibc.core.connection.v1.IdentifiedConnection.prototype.setId = function (value) {
+proto.ibc.core.connection.v1.IdentifiedConnection.prototype.setId = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
+
 
 /**
  * optional string client_id = 2;
  * @return {string}
  */
-proto.ibc.core.connection.v1.IdentifiedConnection.prototype.getClientId = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
+proto.ibc.core.connection.v1.IdentifiedConnection.prototype.getClientId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
+
 /** @param {string} value */
-proto.ibc.core.connection.v1.IdentifiedConnection.prototype.setClientId = function (value) {
+proto.ibc.core.connection.v1.IdentifiedConnection.prototype.setClientId = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
+
 
 /**
  * repeated Version versions = 3;
  * @return {!Array<!proto.ibc.core.connection.v1.Version>}
  */
-proto.ibc.core.connection.v1.IdentifiedConnection.prototype.getVersionsList = function () {
+proto.ibc.core.connection.v1.IdentifiedConnection.prototype.getVersionsList = function() {
   return /** @type{!Array<!proto.ibc.core.connection.v1.Version>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.ibc.core.connection.v1.Version, 3));
 };
 
+
 /** @param {!Array<!proto.ibc.core.connection.v1.Version>} value */
-proto.ibc.core.connection.v1.IdentifiedConnection.prototype.setVersionsList = function (value) {
+proto.ibc.core.connection.v1.IdentifiedConnection.prototype.setVersionsList = function(value) {
   jspb.Message.setRepeatedWrapperField(this, 3, value);
 };
+
 
 /**
  * @param {!proto.ibc.core.connection.v1.Version=} opt_value
  * @param {number=} opt_index
  * @return {!proto.ibc.core.connection.v1.Version}
  */
-proto.ibc.core.connection.v1.IdentifiedConnection.prototype.addVersions = function (opt_value, opt_index) {
+proto.ibc.core.connection.v1.IdentifiedConnection.prototype.addVersions = function(opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 3, opt_value, proto.ibc.core.connection.v1.Version, opt_index);
 };
 
-proto.ibc.core.connection.v1.IdentifiedConnection.prototype.clearVersionsList = function () {
+
+proto.ibc.core.connection.v1.IdentifiedConnection.prototype.clearVersionsList = function() {
   this.setVersionsList([]);
 };
+
 
 /**
  * optional State state = 4;
  * @return {!proto.ibc.core.connection.v1.State}
  */
-proto.ibc.core.connection.v1.IdentifiedConnection.prototype.getState = function () {
+proto.ibc.core.connection.v1.IdentifiedConnection.prototype.getState = function() {
   return /** @type {!proto.ibc.core.connection.v1.State} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
 };
 
+
 /** @param {!proto.ibc.core.connection.v1.State} value */
-proto.ibc.core.connection.v1.IdentifiedConnection.prototype.setState = function (value) {
+proto.ibc.core.connection.v1.IdentifiedConnection.prototype.setState = function(value) {
   jspb.Message.setProto3EnumField(this, 4, value);
 };
+
 
 /**
  * optional Counterparty counterparty = 5;
  * @return {?proto.ibc.core.connection.v1.Counterparty}
  */
-proto.ibc.core.connection.v1.IdentifiedConnection.prototype.getCounterparty = function () {
+proto.ibc.core.connection.v1.IdentifiedConnection.prototype.getCounterparty = function() {
   return /** @type{?proto.ibc.core.connection.v1.Counterparty} */ (
     jspb.Message.getWrapperField(this, proto.ibc.core.connection.v1.Counterparty, 5));
 };
 
+
 /** @param {?proto.ibc.core.connection.v1.Counterparty|undefined} value */
-proto.ibc.core.connection.v1.IdentifiedConnection.prototype.setCounterparty = function (value) {
+proto.ibc.core.connection.v1.IdentifiedConnection.prototype.setCounterparty = function(value) {
   jspb.Message.setWrapperField(this, 5, value);
 };
 
-proto.ibc.core.connection.v1.IdentifiedConnection.prototype.clearCounterparty = function () {
+
+proto.ibc.core.connection.v1.IdentifiedConnection.prototype.clearCounterparty = function() {
   this.setCounterparty(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.ibc.core.connection.v1.IdentifiedConnection.prototype.hasCounterparty = function () {
+proto.ibc.core.connection.v1.IdentifiedConnection.prototype.hasCounterparty = function() {
   return jspb.Message.getField(this, 5) != null;
 };
+
 
 /**
  * optional uint64 delay_period = 6;
  * @return {number}
  */
-proto.ibc.core.connection.v1.IdentifiedConnection.prototype.getDelayPeriod = function () {
+proto.ibc.core.connection.v1.IdentifiedConnection.prototype.getDelayPeriod = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
 };
 
+
 /** @param {number} value */
-proto.ibc.core.connection.v1.IdentifiedConnection.prototype.setDelayPeriod = function (value) {
+proto.ibc.core.connection.v1.IdentifiedConnection.prototype.setDelayPeriod = function(value) {
   jspb.Message.setProto3IntField(this, 6, value);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -600,13 +644,14 @@ proto.ibc.core.connection.v1.IdentifiedConnection.prototype.setDelayPeriod = fun
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.core.connection.v1.Counterparty = function (opt_data) {
+proto.ibc.core.connection.v1.Counterparty = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.ibc.core.connection.v1.Counterparty, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.ibc.core.connection.v1.Counterparty.displayName = 'proto.ibc.core.connection.v1.Counterparty';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -619,11 +664,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.core.connection.v1.Counterparty.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.core.connection.v1.Counterparty.toObject(opt_includeInstance, this);
-  };
+proto.ibc.core.connection.v1.Counterparty.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.core.connection.v1.Counterparty.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -632,31 +678,32 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.core.connection.v1.Counterparty.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        clientId: jspb.Message.getFieldWithDefault(msg, 1, ''),
-        connectionId: jspb.Message.getFieldWithDefault(msg, 2, ''),
-        prefix: (f = msg.getPrefix()) && ibc_core_commitment_v1_commitment_pb.MerklePrefix.toObject(includeInstance, f),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.core.connection.v1.Counterparty.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    clientId: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    connectionId: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    prefix: (f = msg.getPrefix()) && ibc_core_commitment_v1_commitment_pb.MerklePrefix.toObject(includeInstance, f)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.core.connection.v1.Counterparty}
  */
-proto.ibc.core.connection.v1.Counterparty.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.core.connection.v1.Counterparty();
+proto.ibc.core.connection.v1.Counterparty.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.core.connection.v1.Counterparty;
   return proto.ibc.core.connection.v1.Counterparty.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -665,43 +712,45 @@ proto.ibc.core.connection.v1.Counterparty.deserializeBinary = function (bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.core.connection.v1.Counterparty}
  */
-proto.ibc.core.connection.v1.Counterparty.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.core.connection.v1.Counterparty.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setClientId(value);
-        break;
-      case 2:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setConnectionId(value);
-        break;
-      case 3:
-        var value = new ibc_core_commitment_v1_commitment_pb.MerklePrefix();
-        reader.readMessage(value, ibc_core_commitment_v1_commitment_pb.MerklePrefix.deserializeBinaryFromReader);
-        msg.setPrefix(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setClientId(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setConnectionId(value);
+      break;
+    case 3:
+      var value = new ibc_core_commitment_v1_commitment_pb.MerklePrefix;
+      reader.readMessage(value,ibc_core_commitment_v1_commitment_pb.MerklePrefix.deserializeBinaryFromReader);
+      msg.setPrefix(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.core.connection.v1.Counterparty.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.core.connection.v1.Counterparty.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.core.connection.v1.Counterparty.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -710,20 +759,20 @@ proto.ibc.core.connection.v1.Counterparty.prototype.serializeBinary = function (
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.core.connection.v1.Counterparty.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.core.connection.v1.Counterparty.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getClientId();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f,
+      f
     );
   }
   f = message.getConnectionId();
   if (f.length > 0) {
     writer.writeString(
       2,
-      f,
+      f
     );
   }
   f = message.getPrefix();
@@ -731,62 +780,72 @@ proto.ibc.core.connection.v1.Counterparty.serializeBinaryToWriter = function (me
     writer.writeMessage(
       3,
       f,
-      ibc_core_commitment_v1_commitment_pb.MerklePrefix.serializeBinaryToWriter,
+      ibc_core_commitment_v1_commitment_pb.MerklePrefix.serializeBinaryToWriter
     );
   }
 };
+
 
 /**
  * optional string client_id = 1;
  * @return {string}
  */
-proto.ibc.core.connection.v1.Counterparty.prototype.getClientId = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.ibc.core.connection.v1.Counterparty.prototype.getClientId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
+
 /** @param {string} value */
-proto.ibc.core.connection.v1.Counterparty.prototype.setClientId = function (value) {
+proto.ibc.core.connection.v1.Counterparty.prototype.setClientId = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
+
 
 /**
  * optional string connection_id = 2;
  * @return {string}
  */
-proto.ibc.core.connection.v1.Counterparty.prototype.getConnectionId = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
+proto.ibc.core.connection.v1.Counterparty.prototype.getConnectionId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
+
 /** @param {string} value */
-proto.ibc.core.connection.v1.Counterparty.prototype.setConnectionId = function (value) {
+proto.ibc.core.connection.v1.Counterparty.prototype.setConnectionId = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
+
 
 /**
  * optional ibc.core.commitment.v1.MerklePrefix prefix = 3;
  * @return {?proto.ibc.core.commitment.v1.MerklePrefix}
  */
-proto.ibc.core.connection.v1.Counterparty.prototype.getPrefix = function () {
+proto.ibc.core.connection.v1.Counterparty.prototype.getPrefix = function() {
   return /** @type{?proto.ibc.core.commitment.v1.MerklePrefix} */ (
     jspb.Message.getWrapperField(this, ibc_core_commitment_v1_commitment_pb.MerklePrefix, 3));
 };
 
+
 /** @param {?proto.ibc.core.commitment.v1.MerklePrefix|undefined} value */
-proto.ibc.core.connection.v1.Counterparty.prototype.setPrefix = function (value) {
+proto.ibc.core.connection.v1.Counterparty.prototype.setPrefix = function(value) {
   jspb.Message.setWrapperField(this, 3, value);
 };
 
-proto.ibc.core.connection.v1.Counterparty.prototype.clearPrefix = function () {
+
+proto.ibc.core.connection.v1.Counterparty.prototype.clearPrefix = function() {
   this.setPrefix(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.ibc.core.connection.v1.Counterparty.prototype.hasPrefix = function () {
+proto.ibc.core.connection.v1.Counterparty.prototype.hasPrefix = function() {
   return jspb.Message.getField(this, 3) != null;
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -798,7 +857,7 @@ proto.ibc.core.connection.v1.Counterparty.prototype.hasPrefix = function () {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.core.connection.v1.ClientPaths = function (opt_data) {
+proto.ibc.core.connection.v1.ClientPaths = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.ibc.core.connection.v1.ClientPaths.repeatedFields_, null);
 };
 goog.inherits(proto.ibc.core.connection.v1.ClientPaths, jspb.Message);
@@ -812,6 +871,8 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.ibc.core.connection.v1.ClientPaths.repeatedFields_ = [1];
 
+
+
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -823,11 +884,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.core.connection.v1.ClientPaths.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.core.connection.v1.ClientPaths.toObject(opt_includeInstance, this);
-  };
+proto.ibc.core.connection.v1.ClientPaths.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.core.connection.v1.ClientPaths.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -836,29 +898,30 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.core.connection.v1.ClientPaths.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        pathsList: jspb.Message.getRepeatedField(msg, 1),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.core.connection.v1.ClientPaths.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    pathsList: jspb.Message.getRepeatedField(msg, 1)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.core.connection.v1.ClientPaths}
  */
-proto.ibc.core.connection.v1.ClientPaths.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.core.connection.v1.ClientPaths();
+proto.ibc.core.connection.v1.ClientPaths.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.core.connection.v1.ClientPaths;
   return proto.ibc.core.connection.v1.ClientPaths.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -867,34 +930,36 @@ proto.ibc.core.connection.v1.ClientPaths.deserializeBinary = function (bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.core.connection.v1.ClientPaths}
  */
-proto.ibc.core.connection.v1.ClientPaths.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.core.connection.v1.ClientPaths.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {string} */ (reader.readString());
-        msg.addPaths(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addPaths(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.core.connection.v1.ClientPaths.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.core.connection.v1.ClientPaths.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.core.connection.v1.ClientPaths.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -903,41 +968,47 @@ proto.ibc.core.connection.v1.ClientPaths.prototype.serializeBinary = function ()
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.core.connection.v1.ClientPaths.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.core.connection.v1.ClientPaths.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getPathsList();
   if (f.length > 0) {
     writer.writeRepeatedString(
       1,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * repeated string paths = 1;
  * @return {!Array<string>}
  */
-proto.ibc.core.connection.v1.ClientPaths.prototype.getPathsList = function () {
+proto.ibc.core.connection.v1.ClientPaths.prototype.getPathsList = function() {
   return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 1));
 };
 
+
 /** @param {!Array<string>} value */
-proto.ibc.core.connection.v1.ClientPaths.prototype.setPathsList = function (value) {
+proto.ibc.core.connection.v1.ClientPaths.prototype.setPathsList = function(value) {
   jspb.Message.setField(this, 1, value || []);
 };
+
 
 /**
  * @param {!string} value
  * @param {number=} opt_index
  */
-proto.ibc.core.connection.v1.ClientPaths.prototype.addPaths = function (value, opt_index) {
+proto.ibc.core.connection.v1.ClientPaths.prototype.addPaths = function(value, opt_index) {
   jspb.Message.addToRepeatedField(this, 1, value, opt_index);
 };
 
-proto.ibc.core.connection.v1.ClientPaths.prototype.clearPathsList = function () {
+
+proto.ibc.core.connection.v1.ClientPaths.prototype.clearPathsList = function() {
   this.setPathsList([]);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -949,7 +1020,7 @@ proto.ibc.core.connection.v1.ClientPaths.prototype.clearPathsList = function () 
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.core.connection.v1.ConnectionPaths = function (opt_data) {
+proto.ibc.core.connection.v1.ConnectionPaths = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.ibc.core.connection.v1.ConnectionPaths.repeatedFields_, null);
 };
 goog.inherits(proto.ibc.core.connection.v1.ConnectionPaths, jspb.Message);
@@ -963,6 +1034,8 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.ibc.core.connection.v1.ConnectionPaths.repeatedFields_ = [2];
 
+
+
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -974,11 +1047,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.core.connection.v1.ConnectionPaths.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.core.connection.v1.ConnectionPaths.toObject(opt_includeInstance, this);
-  };
+proto.ibc.core.connection.v1.ConnectionPaths.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.core.connection.v1.ConnectionPaths.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -987,30 +1061,31 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.core.connection.v1.ConnectionPaths.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        clientId: jspb.Message.getFieldWithDefault(msg, 1, ''),
-        pathsList: jspb.Message.getRepeatedField(msg, 2),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.core.connection.v1.ConnectionPaths.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    clientId: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    pathsList: jspb.Message.getRepeatedField(msg, 2)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.core.connection.v1.ConnectionPaths}
  */
-proto.ibc.core.connection.v1.ConnectionPaths.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.core.connection.v1.ConnectionPaths();
+proto.ibc.core.connection.v1.ConnectionPaths.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.core.connection.v1.ConnectionPaths;
   return proto.ibc.core.connection.v1.ConnectionPaths.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -1019,38 +1094,40 @@ proto.ibc.core.connection.v1.ConnectionPaths.deserializeBinary = function (bytes
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.core.connection.v1.ConnectionPaths}
  */
-proto.ibc.core.connection.v1.ConnectionPaths.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.core.connection.v1.ConnectionPaths.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setClientId(value);
-        break;
-      case 2:
-        var value = /** @type {string} */ (reader.readString());
-        msg.addPaths(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setClientId(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addPaths(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.core.connection.v1.ConnectionPaths.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.core.connection.v1.ConnectionPaths.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.core.connection.v1.ConnectionPaths.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -1059,61 +1136,69 @@ proto.ibc.core.connection.v1.ConnectionPaths.prototype.serializeBinary = functio
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.core.connection.v1.ConnectionPaths.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.core.connection.v1.ConnectionPaths.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getClientId();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f,
+      f
     );
   }
   f = message.getPathsList();
   if (f.length > 0) {
     writer.writeRepeatedString(
       2,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * optional string client_id = 1;
  * @return {string}
  */
-proto.ibc.core.connection.v1.ConnectionPaths.prototype.getClientId = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.ibc.core.connection.v1.ConnectionPaths.prototype.getClientId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
+
 /** @param {string} value */
-proto.ibc.core.connection.v1.ConnectionPaths.prototype.setClientId = function (value) {
+proto.ibc.core.connection.v1.ConnectionPaths.prototype.setClientId = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
+
 
 /**
  * repeated string paths = 2;
  * @return {!Array<string>}
  */
-proto.ibc.core.connection.v1.ConnectionPaths.prototype.getPathsList = function () {
+proto.ibc.core.connection.v1.ConnectionPaths.prototype.getPathsList = function() {
   return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 2));
 };
 
+
 /** @param {!Array<string>} value */
-proto.ibc.core.connection.v1.ConnectionPaths.prototype.setPathsList = function (value) {
+proto.ibc.core.connection.v1.ConnectionPaths.prototype.setPathsList = function(value) {
   jspb.Message.setField(this, 2, value || []);
 };
+
 
 /**
  * @param {!string} value
  * @param {number=} opt_index
  */
-proto.ibc.core.connection.v1.ConnectionPaths.prototype.addPaths = function (value, opt_index) {
+proto.ibc.core.connection.v1.ConnectionPaths.prototype.addPaths = function(value, opt_index) {
   jspb.Message.addToRepeatedField(this, 2, value, opt_index);
 };
 
-proto.ibc.core.connection.v1.ConnectionPaths.prototype.clearPathsList = function () {
+
+proto.ibc.core.connection.v1.ConnectionPaths.prototype.clearPathsList = function() {
   this.setPathsList([]);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -1125,7 +1210,7 @@ proto.ibc.core.connection.v1.ConnectionPaths.prototype.clearPathsList = function
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.core.connection.v1.Version = function (opt_data) {
+proto.ibc.core.connection.v1.Version = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.ibc.core.connection.v1.Version.repeatedFields_, null);
 };
 goog.inherits(proto.ibc.core.connection.v1.Version, jspb.Message);
@@ -1139,6 +1224,8 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.ibc.core.connection.v1.Version.repeatedFields_ = [2];
 
+
+
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -1150,11 +1237,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.core.connection.v1.Version.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.core.connection.v1.Version.toObject(opt_includeInstance, this);
-  };
+proto.ibc.core.connection.v1.Version.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.core.connection.v1.Version.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -1163,30 +1251,31 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.core.connection.v1.Version.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        identifier: jspb.Message.getFieldWithDefault(msg, 1, ''),
-        featuresList: jspb.Message.getRepeatedField(msg, 2),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.core.connection.v1.Version.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    identifier: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    featuresList: jspb.Message.getRepeatedField(msg, 2)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.core.connection.v1.Version}
  */
-proto.ibc.core.connection.v1.Version.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.core.connection.v1.Version();
+proto.ibc.core.connection.v1.Version.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.core.connection.v1.Version;
   return proto.ibc.core.connection.v1.Version.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -1195,38 +1284,40 @@ proto.ibc.core.connection.v1.Version.deserializeBinary = function (bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.core.connection.v1.Version}
  */
-proto.ibc.core.connection.v1.Version.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.core.connection.v1.Version.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setIdentifier(value);
-        break;
-      case 2:
-        var value = /** @type {string} */ (reader.readString());
-        msg.addFeatures(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setIdentifier(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addFeatures(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.core.connection.v1.Version.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.core.connection.v1.Version.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.core.connection.v1.Version.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -1235,61 +1326,68 @@ proto.ibc.core.connection.v1.Version.prototype.serializeBinary = function () {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.core.connection.v1.Version.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.core.connection.v1.Version.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getIdentifier();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f,
+      f
     );
   }
   f = message.getFeaturesList();
   if (f.length > 0) {
     writer.writeRepeatedString(
       2,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * optional string identifier = 1;
  * @return {string}
  */
-proto.ibc.core.connection.v1.Version.prototype.getIdentifier = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.ibc.core.connection.v1.Version.prototype.getIdentifier = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
+
 /** @param {string} value */
-proto.ibc.core.connection.v1.Version.prototype.setIdentifier = function (value) {
+proto.ibc.core.connection.v1.Version.prototype.setIdentifier = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
+
 
 /**
  * repeated string features = 2;
  * @return {!Array<string>}
  */
-proto.ibc.core.connection.v1.Version.prototype.getFeaturesList = function () {
+proto.ibc.core.connection.v1.Version.prototype.getFeaturesList = function() {
   return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 2));
 };
 
+
 /** @param {!Array<string>} value */
-proto.ibc.core.connection.v1.Version.prototype.setFeaturesList = function (value) {
+proto.ibc.core.connection.v1.Version.prototype.setFeaturesList = function(value) {
   jspb.Message.setField(this, 2, value || []);
 };
+
 
 /**
  * @param {!string} value
  * @param {number=} opt_index
  */
-proto.ibc.core.connection.v1.Version.prototype.addFeatures = function (value, opt_index) {
+proto.ibc.core.connection.v1.Version.prototype.addFeatures = function(value, opt_index) {
   jspb.Message.addToRepeatedField(this, 2, value, opt_index);
 };
 
-proto.ibc.core.connection.v1.Version.prototype.clearFeaturesList = function () {
+
+proto.ibc.core.connection.v1.Version.prototype.clearFeaturesList = function() {
   this.setFeaturesList([]);
 };
+
 
 /**
  * @enum {number}
@@ -1298,7 +1396,7 @@ proto.ibc.core.connection.v1.State = {
   STATE_UNINITIALIZED_UNSPECIFIED: 0,
   STATE_INIT: 1,
   STATE_TRYOPEN: 2,
-  STATE_OPEN: 3,
+  STATE_OPEN: 3
 };
 
 goog.object.extend(exports, proto.ibc.core.connection.v1);

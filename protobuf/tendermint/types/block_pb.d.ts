@@ -2,6 +2,7 @@
 // file: tendermint/types/block.proto
 
 import * as jspb from "google-protobuf";
+import * as gogoproto_gogo_pb from "../../gogoproto/gogo_pb";
 import * as tendermint_types_types_pb from "../../tendermint/types/types_pb";
 import * as tendermint_types_evidence_pb from "../../tendermint/types/evidence_pb";
 

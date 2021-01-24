@@ -7,6 +7,7 @@ import * as tendermint_types_types_pb from "../../tendermint/types/types_pb";
 import * as tendermint_crypto_keys_pb from "../../tendermint/crypto/keys_pb";
 import * as tendermint_types_params_pb from "../../tendermint/types/params_pb";
 import * as google_protobuf_timestamp_pb from "google-protobuf/google/protobuf/timestamp_pb";
+import * as gogoproto_gogo_pb from "../../gogoproto/gogo_pb";
 
 export class Request extends jspb.Message {
   hasEcho(): boolean;

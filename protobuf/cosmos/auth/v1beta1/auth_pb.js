@@ -7,13 +7,11 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-const jspb = require('google-protobuf');
+var jspb = require('google-protobuf');
+var goog = jspb;
+var global = Function('return this')();
 
-const goog = jspb;
-const global = Function('return this')();
-
-const google_protobuf_any_pb = require('google-protobuf/google/protobuf/any_pb.js');
-
+var google_protobuf_any_pb = require('google-protobuf/google/protobuf/any_pb.js');
 goog.exportSymbol('proto.cosmos.auth.v1beta1.BaseAccount', null, global);
 goog.exportSymbol('proto.cosmos.auth.v1beta1.ModuleAccount', null, global);
 goog.exportSymbol('proto.cosmos.auth.v1beta1.Params', null, global);
@@ -28,13 +26,14 @@ goog.exportSymbol('proto.cosmos.auth.v1beta1.Params', null, global);
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.auth.v1beta1.BaseAccount = function (opt_data) {
+proto.cosmos.auth.v1beta1.BaseAccount = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.auth.v1beta1.BaseAccount, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.auth.v1beta1.BaseAccount.displayName = 'proto.cosmos.auth.v1beta1.BaseAccount';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -47,11 +46,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.cosmos.auth.v1beta1.BaseAccount.prototype.toObject = function (opt_includeInstance) {
-    return proto.cosmos.auth.v1beta1.BaseAccount.toObject(opt_includeInstance, this);
-  };
+proto.cosmos.auth.v1beta1.BaseAccount.prototype.toObject = function(opt_includeInstance) {
+  return proto.cosmos.auth.v1beta1.BaseAccount.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -60,32 +60,33 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.cosmos.auth.v1beta1.BaseAccount.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        address: jspb.Message.getFieldWithDefault(msg, 1, ''),
-        pubKey: (f = msg.getPubKey()) && google_protobuf_any_pb.Any.toObject(includeInstance, f),
-        accountNumber: jspb.Message.getFieldWithDefault(msg, 3, 0),
-        sequence: jspb.Message.getFieldWithDefault(msg, 4, 0),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.cosmos.auth.v1beta1.BaseAccount.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    address: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    pubKey: (f = msg.getPubKey()) && google_protobuf_any_pb.Any.toObject(includeInstance, f),
+    accountNumber: jspb.Message.getFieldWithDefault(msg, 3, 0),
+    sequence: jspb.Message.getFieldWithDefault(msg, 4, 0)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.auth.v1beta1.BaseAccount}
  */
-proto.cosmos.auth.v1beta1.BaseAccount.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.cosmos.auth.v1beta1.BaseAccount();
+proto.cosmos.auth.v1beta1.BaseAccount.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.cosmos.auth.v1beta1.BaseAccount;
   return proto.cosmos.auth.v1beta1.BaseAccount.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -94,47 +95,49 @@ proto.cosmos.auth.v1beta1.BaseAccount.deserializeBinary = function (bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.auth.v1beta1.BaseAccount}
  */
-proto.cosmos.auth.v1beta1.BaseAccount.deserializeBinaryFromReader = function (msg, reader) {
+proto.cosmos.auth.v1beta1.BaseAccount.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setAddress(value);
-        break;
-      case 2:
-        var value = new google_protobuf_any_pb.Any();
-        reader.readMessage(value, google_protobuf_any_pb.Any.deserializeBinaryFromReader);
-        msg.setPubKey(value);
-        break;
-      case 3:
-        var value = /** @type {number} */ (reader.readUint64());
-        msg.setAccountNumber(value);
-        break;
-      case 4:
-        var value = /** @type {number} */ (reader.readUint64());
-        msg.setSequence(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setAddress(value);
+      break;
+    case 2:
+      var value = new google_protobuf_any_pb.Any;
+      reader.readMessage(value,google_protobuf_any_pb.Any.deserializeBinaryFromReader);
+      msg.setPubKey(value);
+      break;
+    case 3:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setAccountNumber(value);
+      break;
+    case 4:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setSequence(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.auth.v1beta1.BaseAccount.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.cosmos.auth.v1beta1.BaseAccount.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.cosmos.auth.v1beta1.BaseAccount.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -143,13 +146,13 @@ proto.cosmos.auth.v1beta1.BaseAccount.prototype.serializeBinary = function () {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.auth.v1beta1.BaseAccount.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.cosmos.auth.v1beta1.BaseAccount.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getAddress();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f,
+      f
     );
   }
   f = message.getPubKey();
@@ -157,89 +160,101 @@ proto.cosmos.auth.v1beta1.BaseAccount.serializeBinaryToWriter = function (messag
     writer.writeMessage(
       2,
       f,
-      google_protobuf_any_pb.Any.serializeBinaryToWriter,
+      google_protobuf_any_pb.Any.serializeBinaryToWriter
     );
   }
   f = message.getAccountNumber();
   if (f !== 0) {
     writer.writeUint64(
       3,
-      f,
+      f
     );
   }
   f = message.getSequence();
   if (f !== 0) {
     writer.writeUint64(
       4,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * optional string address = 1;
  * @return {string}
  */
-proto.cosmos.auth.v1beta1.BaseAccount.prototype.getAddress = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.cosmos.auth.v1beta1.BaseAccount.prototype.getAddress = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
+
 /** @param {string} value */
-proto.cosmos.auth.v1beta1.BaseAccount.prototype.setAddress = function (value) {
+proto.cosmos.auth.v1beta1.BaseAccount.prototype.setAddress = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
+
 
 /**
  * optional google.protobuf.Any pub_key = 2;
  * @return {?proto.google.protobuf.Any}
  */
-proto.cosmos.auth.v1beta1.BaseAccount.prototype.getPubKey = function () {
+proto.cosmos.auth.v1beta1.BaseAccount.prototype.getPubKey = function() {
   return /** @type{?proto.google.protobuf.Any} */ (
     jspb.Message.getWrapperField(this, google_protobuf_any_pb.Any, 2));
 };
 
+
 /** @param {?proto.google.protobuf.Any|undefined} value */
-proto.cosmos.auth.v1beta1.BaseAccount.prototype.setPubKey = function (value) {
+proto.cosmos.auth.v1beta1.BaseAccount.prototype.setPubKey = function(value) {
   jspb.Message.setWrapperField(this, 2, value);
 };
 
-proto.cosmos.auth.v1beta1.BaseAccount.prototype.clearPubKey = function () {
+
+proto.cosmos.auth.v1beta1.BaseAccount.prototype.clearPubKey = function() {
   this.setPubKey(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.cosmos.auth.v1beta1.BaseAccount.prototype.hasPubKey = function () {
+proto.cosmos.auth.v1beta1.BaseAccount.prototype.hasPubKey = function() {
   return jspb.Message.getField(this, 2) != null;
 };
+
 
 /**
  * optional uint64 account_number = 3;
  * @return {number}
  */
-proto.cosmos.auth.v1beta1.BaseAccount.prototype.getAccountNumber = function () {
+proto.cosmos.auth.v1beta1.BaseAccount.prototype.getAccountNumber = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
+
 /** @param {number} value */
-proto.cosmos.auth.v1beta1.BaseAccount.prototype.setAccountNumber = function (value) {
+proto.cosmos.auth.v1beta1.BaseAccount.prototype.setAccountNumber = function(value) {
   jspb.Message.setProto3IntField(this, 3, value);
 };
+
 
 /**
  * optional uint64 sequence = 4;
  * @return {number}
  */
-proto.cosmos.auth.v1beta1.BaseAccount.prototype.getSequence = function () {
+proto.cosmos.auth.v1beta1.BaseAccount.prototype.getSequence = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
 };
 
+
 /** @param {number} value */
-proto.cosmos.auth.v1beta1.BaseAccount.prototype.setSequence = function (value) {
+proto.cosmos.auth.v1beta1.BaseAccount.prototype.setSequence = function(value) {
   jspb.Message.setProto3IntField(this, 4, value);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -251,7 +266,7 @@ proto.cosmos.auth.v1beta1.BaseAccount.prototype.setSequence = function (value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.auth.v1beta1.ModuleAccount = function (opt_data) {
+proto.cosmos.auth.v1beta1.ModuleAccount = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.cosmos.auth.v1beta1.ModuleAccount.repeatedFields_, null);
 };
 goog.inherits(proto.cosmos.auth.v1beta1.ModuleAccount, jspb.Message);
@@ -265,6 +280,8 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.cosmos.auth.v1beta1.ModuleAccount.repeatedFields_ = [3];
 
+
+
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -276,11 +293,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.cosmos.auth.v1beta1.ModuleAccount.prototype.toObject = function (opt_includeInstance) {
-    return proto.cosmos.auth.v1beta1.ModuleAccount.toObject(opt_includeInstance, this);
-  };
+proto.cosmos.auth.v1beta1.ModuleAccount.prototype.toObject = function(opt_includeInstance) {
+  return proto.cosmos.auth.v1beta1.ModuleAccount.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -289,31 +307,32 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.cosmos.auth.v1beta1.ModuleAccount.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        baseAccount: (f = msg.getBaseAccount()) && proto.cosmos.auth.v1beta1.BaseAccount.toObject(includeInstance, f),
-        name: jspb.Message.getFieldWithDefault(msg, 2, ''),
-        permissionsList: jspb.Message.getRepeatedField(msg, 3),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.cosmos.auth.v1beta1.ModuleAccount.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    baseAccount: (f = msg.getBaseAccount()) && proto.cosmos.auth.v1beta1.BaseAccount.toObject(includeInstance, f),
+    name: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    permissionsList: jspb.Message.getRepeatedField(msg, 3)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.auth.v1beta1.ModuleAccount}
  */
-proto.cosmos.auth.v1beta1.ModuleAccount.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.cosmos.auth.v1beta1.ModuleAccount();
+proto.cosmos.auth.v1beta1.ModuleAccount.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.cosmos.auth.v1beta1.ModuleAccount;
   return proto.cosmos.auth.v1beta1.ModuleAccount.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -322,43 +341,45 @@ proto.cosmos.auth.v1beta1.ModuleAccount.deserializeBinary = function (bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.auth.v1beta1.ModuleAccount}
  */
-proto.cosmos.auth.v1beta1.ModuleAccount.deserializeBinaryFromReader = function (msg, reader) {
+proto.cosmos.auth.v1beta1.ModuleAccount.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = new proto.cosmos.auth.v1beta1.BaseAccount();
-        reader.readMessage(value, proto.cosmos.auth.v1beta1.BaseAccount.deserializeBinaryFromReader);
-        msg.setBaseAccount(value);
-        break;
-      case 2:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setName(value);
-        break;
-      case 3:
-        var value = /** @type {string} */ (reader.readString());
-        msg.addPermissions(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = new proto.cosmos.auth.v1beta1.BaseAccount;
+      reader.readMessage(value,proto.cosmos.auth.v1beta1.BaseAccount.deserializeBinaryFromReader);
+      msg.setBaseAccount(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setName(value);
+      break;
+    case 3:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addPermissions(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.auth.v1beta1.ModuleAccount.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.cosmos.auth.v1beta1.ModuleAccount.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.cosmos.auth.v1beta1.ModuleAccount.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -367,95 +388,107 @@ proto.cosmos.auth.v1beta1.ModuleAccount.prototype.serializeBinary = function () 
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.auth.v1beta1.ModuleAccount.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.cosmos.auth.v1beta1.ModuleAccount.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getBaseAccount();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.cosmos.auth.v1beta1.BaseAccount.serializeBinaryToWriter,
+      proto.cosmos.auth.v1beta1.BaseAccount.serializeBinaryToWriter
     );
   }
   f = message.getName();
   if (f.length > 0) {
     writer.writeString(
       2,
-      f,
+      f
     );
   }
   f = message.getPermissionsList();
   if (f.length > 0) {
     writer.writeRepeatedString(
       3,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * optional BaseAccount base_account = 1;
  * @return {?proto.cosmos.auth.v1beta1.BaseAccount}
  */
-proto.cosmos.auth.v1beta1.ModuleAccount.prototype.getBaseAccount = function () {
+proto.cosmos.auth.v1beta1.ModuleAccount.prototype.getBaseAccount = function() {
   return /** @type{?proto.cosmos.auth.v1beta1.BaseAccount} */ (
     jspb.Message.getWrapperField(this, proto.cosmos.auth.v1beta1.BaseAccount, 1));
 };
 
+
 /** @param {?proto.cosmos.auth.v1beta1.BaseAccount|undefined} value */
-proto.cosmos.auth.v1beta1.ModuleAccount.prototype.setBaseAccount = function (value) {
+proto.cosmos.auth.v1beta1.ModuleAccount.prototype.setBaseAccount = function(value) {
   jspb.Message.setWrapperField(this, 1, value);
 };
 
-proto.cosmos.auth.v1beta1.ModuleAccount.prototype.clearBaseAccount = function () {
+
+proto.cosmos.auth.v1beta1.ModuleAccount.prototype.clearBaseAccount = function() {
   this.setBaseAccount(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.cosmos.auth.v1beta1.ModuleAccount.prototype.hasBaseAccount = function () {
+proto.cosmos.auth.v1beta1.ModuleAccount.prototype.hasBaseAccount = function() {
   return jspb.Message.getField(this, 1) != null;
 };
+
 
 /**
  * optional string name = 2;
  * @return {string}
  */
-proto.cosmos.auth.v1beta1.ModuleAccount.prototype.getName = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
+proto.cosmos.auth.v1beta1.ModuleAccount.prototype.getName = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
+
 /** @param {string} value */
-proto.cosmos.auth.v1beta1.ModuleAccount.prototype.setName = function (value) {
+proto.cosmos.auth.v1beta1.ModuleAccount.prototype.setName = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
+
 
 /**
  * repeated string permissions = 3;
  * @return {!Array<string>}
  */
-proto.cosmos.auth.v1beta1.ModuleAccount.prototype.getPermissionsList = function () {
+proto.cosmos.auth.v1beta1.ModuleAccount.prototype.getPermissionsList = function() {
   return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 3));
 };
 
+
 /** @param {!Array<string>} value */
-proto.cosmos.auth.v1beta1.ModuleAccount.prototype.setPermissionsList = function (value) {
+proto.cosmos.auth.v1beta1.ModuleAccount.prototype.setPermissionsList = function(value) {
   jspb.Message.setField(this, 3, value || []);
 };
+
 
 /**
  * @param {!string} value
  * @param {number=} opt_index
  */
-proto.cosmos.auth.v1beta1.ModuleAccount.prototype.addPermissions = function (value, opt_index) {
+proto.cosmos.auth.v1beta1.ModuleAccount.prototype.addPermissions = function(value, opt_index) {
   jspb.Message.addToRepeatedField(this, 3, value, opt_index);
 };
 
-proto.cosmos.auth.v1beta1.ModuleAccount.prototype.clearPermissionsList = function () {
+
+proto.cosmos.auth.v1beta1.ModuleAccount.prototype.clearPermissionsList = function() {
   this.setPermissionsList([]);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -467,13 +500,14 @@ proto.cosmos.auth.v1beta1.ModuleAccount.prototype.clearPermissionsList = functio
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.auth.v1beta1.Params = function (opt_data) {
+proto.cosmos.auth.v1beta1.Params = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.auth.v1beta1.Params, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.auth.v1beta1.Params.displayName = 'proto.cosmos.auth.v1beta1.Params';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -486,11 +520,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.cosmos.auth.v1beta1.Params.prototype.toObject = function (opt_includeInstance) {
-    return proto.cosmos.auth.v1beta1.Params.toObject(opt_includeInstance, this);
-  };
+proto.cosmos.auth.v1beta1.Params.prototype.toObject = function(opt_includeInstance) {
+  return proto.cosmos.auth.v1beta1.Params.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -499,32 +534,34 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.cosmos.auth.v1beta1.Params.toObject = function (includeInstance, msg) {
-    const obj = {
-      maxMemoCharacters: jspb.Message.getFieldWithDefault(msg, 1, 0),
-      txSigLimit: jspb.Message.getFieldWithDefault(msg, 2, 0),
-      txSizeCostPerByte: jspb.Message.getFieldWithDefault(msg, 3, 0),
-      sigVerifyCostEd25519: jspb.Message.getFieldWithDefault(msg, 4, 0),
-      sigVerifyCostSecp256k1: jspb.Message.getFieldWithDefault(msg, 5, 0),
-    };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.cosmos.auth.v1beta1.Params.toObject = function(includeInstance, msg) {
+  var obj = {
+    maxMemoCharacters: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    txSigLimit: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    txSizeCostPerByte: jspb.Message.getFieldWithDefault(msg, 3, 0),
+    sigVerifyCostEd25519: jspb.Message.getFieldWithDefault(msg, 4, 0),
+    sigVerifyCostSecp256k1: jspb.Message.getFieldWithDefault(msg, 5, 0)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.auth.v1beta1.Params}
  */
-proto.cosmos.auth.v1beta1.Params.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.cosmos.auth.v1beta1.Params();
+proto.cosmos.auth.v1beta1.Params.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.cosmos.auth.v1beta1.Params;
   return proto.cosmos.auth.v1beta1.Params.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -533,50 +570,52 @@ proto.cosmos.auth.v1beta1.Params.deserializeBinary = function (bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.auth.v1beta1.Params}
  */
-proto.cosmos.auth.v1beta1.Params.deserializeBinaryFromReader = function (msg, reader) {
+proto.cosmos.auth.v1beta1.Params.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {number} */ (reader.readUint64());
-        msg.setMaxMemoCharacters(value);
-        break;
-      case 2:
-        var value = /** @type {number} */ (reader.readUint64());
-        msg.setTxSigLimit(value);
-        break;
-      case 3:
-        var value = /** @type {number} */ (reader.readUint64());
-        msg.setTxSizeCostPerByte(value);
-        break;
-      case 4:
-        var value = /** @type {number} */ (reader.readUint64());
-        msg.setSigVerifyCostEd25519(value);
-        break;
-      case 5:
-        var value = /** @type {number} */ (reader.readUint64());
-        msg.setSigVerifyCostSecp256k1(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setMaxMemoCharacters(value);
+      break;
+    case 2:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setTxSigLimit(value);
+      break;
+    case 3:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setTxSizeCostPerByte(value);
+      break;
+    case 4:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setSigVerifyCostEd25519(value);
+      break;
+    case 5:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setSigVerifyCostSecp256k1(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.auth.v1beta1.Params.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.cosmos.auth.v1beta1.Params.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.cosmos.auth.v1beta1.Params.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -585,108 +624,119 @@ proto.cosmos.auth.v1beta1.Params.prototype.serializeBinary = function () {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.auth.v1beta1.Params.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.cosmos.auth.v1beta1.Params.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getMaxMemoCharacters();
   if (f !== 0) {
     writer.writeUint64(
       1,
-      f,
+      f
     );
   }
   f = message.getTxSigLimit();
   if (f !== 0) {
     writer.writeUint64(
       2,
-      f,
+      f
     );
   }
   f = message.getTxSizeCostPerByte();
   if (f !== 0) {
     writer.writeUint64(
       3,
-      f,
+      f
     );
   }
   f = message.getSigVerifyCostEd25519();
   if (f !== 0) {
     writer.writeUint64(
       4,
-      f,
+      f
     );
   }
   f = message.getSigVerifyCostSecp256k1();
   if (f !== 0) {
     writer.writeUint64(
       5,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * optional uint64 max_memo_characters = 1;
  * @return {number}
  */
-proto.cosmos.auth.v1beta1.Params.prototype.getMaxMemoCharacters = function () {
+proto.cosmos.auth.v1beta1.Params.prototype.getMaxMemoCharacters = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
+
 /** @param {number} value */
-proto.cosmos.auth.v1beta1.Params.prototype.setMaxMemoCharacters = function (value) {
+proto.cosmos.auth.v1beta1.Params.prototype.setMaxMemoCharacters = function(value) {
   jspb.Message.setProto3IntField(this, 1, value);
 };
+
 
 /**
  * optional uint64 tx_sig_limit = 2;
  * @return {number}
  */
-proto.cosmos.auth.v1beta1.Params.prototype.getTxSigLimit = function () {
+proto.cosmos.auth.v1beta1.Params.prototype.getTxSigLimit = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
+
 /** @param {number} value */
-proto.cosmos.auth.v1beta1.Params.prototype.setTxSigLimit = function (value) {
+proto.cosmos.auth.v1beta1.Params.prototype.setTxSigLimit = function(value) {
   jspb.Message.setProto3IntField(this, 2, value);
 };
+
 
 /**
  * optional uint64 tx_size_cost_per_byte = 3;
  * @return {number}
  */
-proto.cosmos.auth.v1beta1.Params.prototype.getTxSizeCostPerByte = function () {
+proto.cosmos.auth.v1beta1.Params.prototype.getTxSizeCostPerByte = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
+
 /** @param {number} value */
-proto.cosmos.auth.v1beta1.Params.prototype.setTxSizeCostPerByte = function (value) {
+proto.cosmos.auth.v1beta1.Params.prototype.setTxSizeCostPerByte = function(value) {
   jspb.Message.setProto3IntField(this, 3, value);
 };
+
 
 /**
  * optional uint64 sig_verify_cost_ed25519 = 4;
  * @return {number}
  */
-proto.cosmos.auth.v1beta1.Params.prototype.getSigVerifyCostEd25519 = function () {
+proto.cosmos.auth.v1beta1.Params.prototype.getSigVerifyCostEd25519 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
 };
 
+
 /** @param {number} value */
-proto.cosmos.auth.v1beta1.Params.prototype.setSigVerifyCostEd25519 = function (value) {
+proto.cosmos.auth.v1beta1.Params.prototype.setSigVerifyCostEd25519 = function(value) {
   jspb.Message.setProto3IntField(this, 4, value);
 };
+
 
 /**
  * optional uint64 sig_verify_cost_secp256k1 = 5;
  * @return {number}
  */
-proto.cosmos.auth.v1beta1.Params.prototype.getSigVerifyCostSecp256k1 = function () {
+proto.cosmos.auth.v1beta1.Params.prototype.getSigVerifyCostSecp256k1 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
 };
 
+
 /** @param {number} value */
-proto.cosmos.auth.v1beta1.Params.prototype.setSigVerifyCostSecp256k1 = function (value) {
+proto.cosmos.auth.v1beta1.Params.prototype.setSigVerifyCostSecp256k1 = function(value) {
   jspb.Message.setProto3IntField(this, 5, value);
 };
+
 
 goog.object.extend(exports, proto.cosmos.auth.v1beta1);

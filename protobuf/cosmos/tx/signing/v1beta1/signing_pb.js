@@ -7,14 +7,12 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-const jspb = require('google-protobuf');
+var jspb = require('google-protobuf');
+var goog = jspb;
+var global = Function('return this')();
 
-const goog = jspb;
-const global = Function('return this')();
-
-const google_protobuf_any_pb = require('google-protobuf/google/protobuf/any_pb.js');
-const cosmos_crypto_multisig_v1beta1_multisig_pb = require('../../../crypto/multisig/v1beta1/multisig_pb.js');
-
+var cosmos_crypto_multisig_v1beta1_multisig_pb = require('../../../../cosmos/crypto/multisig/v1beta1/multisig_pb.js');
+var google_protobuf_any_pb = require('google-protobuf/google/protobuf/any_pb.js');
 goog.exportSymbol('proto.cosmos.tx.signing.v1beta1.SignMode', null, global);
 goog.exportSymbol('proto.cosmos.tx.signing.v1beta1.SignatureDescriptor', null, global);
 goog.exportSymbol('proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data', null, global);
@@ -32,7 +30,7 @@ goog.exportSymbol('proto.cosmos.tx.signing.v1beta1.SignatureDescriptors', null, 
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptors = function (opt_data) {
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptors = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.cosmos.tx.signing.v1beta1.SignatureDescriptors.repeatedFields_, null);
 };
 goog.inherits(proto.cosmos.tx.signing.v1beta1.SignatureDescriptors, jspb.Message);
@@ -46,6 +44,8 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.cosmos.tx.signing.v1beta1.SignatureDescriptors.repeatedFields_ = [1];
 
+
+
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -57,11 +57,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.cosmos.tx.signing.v1beta1.SignatureDescriptors.prototype.toObject = function (opt_includeInstance) {
-    return proto.cosmos.tx.signing.v1beta1.SignatureDescriptors.toObject(opt_includeInstance, this);
-  };
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptors.prototype.toObject = function(opt_includeInstance) {
+  return proto.cosmos.tx.signing.v1beta1.SignatureDescriptors.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -70,30 +71,31 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.cosmos.tx.signing.v1beta1.SignatureDescriptors.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        signaturesList: jspb.Message.toObjectList(msg.getSignaturesList(),
-          proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.toObject, includeInstance),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptors.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    signaturesList: jspb.Message.toObjectList(msg.getSignaturesList(),
+    proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.toObject, includeInstance)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.tx.signing.v1beta1.SignatureDescriptors}
  */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptors.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.cosmos.tx.signing.v1beta1.SignatureDescriptors();
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptors.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.cosmos.tx.signing.v1beta1.SignatureDescriptors;
   return proto.cosmos.tx.signing.v1beta1.SignatureDescriptors.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -102,35 +104,37 @@ proto.cosmos.tx.signing.v1beta1.SignatureDescriptors.deserializeBinary = functio
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.tx.signing.v1beta1.SignatureDescriptors}
  */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptors.deserializeBinaryFromReader = function (msg, reader) {
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptors.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = new proto.cosmos.tx.signing.v1beta1.SignatureDescriptor();
-        reader.readMessage(value, proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.deserializeBinaryFromReader);
-        msg.addSignatures(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = new proto.cosmos.tx.signing.v1beta1.SignatureDescriptor;
+      reader.readMessage(value,proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.deserializeBinaryFromReader);
+      msg.addSignatures(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptors.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptors.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.cosmos.tx.signing.v1beta1.SignatureDescriptors.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -139,44 +143,50 @@ proto.cosmos.tx.signing.v1beta1.SignatureDescriptors.prototype.serializeBinary =
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptors.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptors.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getSignaturesList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       1,
       f,
-      proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.serializeBinaryToWriter,
+      proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.serializeBinaryToWriter
     );
   }
 };
+
 
 /**
  * repeated SignatureDescriptor signatures = 1;
  * @return {!Array<!proto.cosmos.tx.signing.v1beta1.SignatureDescriptor>}
  */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptors.prototype.getSignaturesList = function () {
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptors.prototype.getSignaturesList = function() {
   return /** @type{!Array<!proto.cosmos.tx.signing.v1beta1.SignatureDescriptor>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.cosmos.tx.signing.v1beta1.SignatureDescriptor, 1));
 };
 
+
 /** @param {!Array<!proto.cosmos.tx.signing.v1beta1.SignatureDescriptor>} value */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptors.prototype.setSignaturesList = function (value) {
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptors.prototype.setSignaturesList = function(value) {
   jspb.Message.setRepeatedWrapperField(this, 1, value);
 };
+
 
 /**
  * @param {!proto.cosmos.tx.signing.v1beta1.SignatureDescriptor=} opt_value
  * @param {number=} opt_index
  * @return {!proto.cosmos.tx.signing.v1beta1.SignatureDescriptor}
  */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptors.prototype.addSignatures = function (opt_value, opt_index) {
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptors.prototype.addSignatures = function(opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.cosmos.tx.signing.v1beta1.SignatureDescriptor, opt_index);
 };
 
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptors.prototype.clearSignaturesList = function () {
+
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptors.prototype.clearSignaturesList = function() {
   this.setSignaturesList([]);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -188,13 +198,14 @@ proto.cosmos.tx.signing.v1beta1.SignatureDescriptors.prototype.clearSignaturesLi
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor = function (opt_data) {
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.tx.signing.v1beta1.SignatureDescriptor, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.displayName = 'proto.cosmos.tx.signing.v1beta1.SignatureDescriptor';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -207,11 +218,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.prototype.toObject = function (opt_includeInstance) {
-    return proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.toObject(opt_includeInstance, this);
-  };
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.prototype.toObject = function(opt_includeInstance) {
+  return proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -220,31 +232,32 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        publicKey: (f = msg.getPublicKey()) && google_protobuf_any_pb.Any.toObject(includeInstance, f),
-        data: (f = msg.getData()) && proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.toObject(includeInstance, f),
-        sequence: jspb.Message.getFieldWithDefault(msg, 3, 0),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    publicKey: (f = msg.getPublicKey()) && google_protobuf_any_pb.Any.toObject(includeInstance, f),
+    data: (f = msg.getData()) && proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.toObject(includeInstance, f),
+    sequence: jspb.Message.getFieldWithDefault(msg, 3, 0)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.tx.signing.v1beta1.SignatureDescriptor}
  */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.cosmos.tx.signing.v1beta1.SignatureDescriptor();
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.cosmos.tx.signing.v1beta1.SignatureDescriptor;
   return proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -253,44 +266,46 @@ proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.deserializeBinary = function
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.tx.signing.v1beta1.SignatureDescriptor}
  */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.deserializeBinaryFromReader = function (msg, reader) {
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = new google_protobuf_any_pb.Any();
-        reader.readMessage(value, google_protobuf_any_pb.Any.deserializeBinaryFromReader);
-        msg.setPublicKey(value);
-        break;
-      case 2:
-        var value = new proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data();
-        reader.readMessage(value, proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.deserializeBinaryFromReader);
-        msg.setData(value);
-        break;
-      case 3:
-        var value = /** @type {number} */ (reader.readUint64());
-        msg.setSequence(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = new google_protobuf_any_pb.Any;
+      reader.readMessage(value,google_protobuf_any_pb.Any.deserializeBinaryFromReader);
+      msg.setPublicKey(value);
+      break;
+    case 2:
+      var value = new proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data;
+      reader.readMessage(value,proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.deserializeBinaryFromReader);
+      msg.setData(value);
+      break;
+    case 3:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setSequence(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -299,14 +314,14 @@ proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.prototype.serializeBinary = 
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getPublicKey();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      google_protobuf_any_pb.Any.serializeBinaryToWriter,
+      google_protobuf_any_pb.Any.serializeBinaryToWriter
     );
   }
   f = message.getData();
@@ -314,17 +329,19 @@ proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.serializeBinaryToWriter = fu
     writer.writeMessage(
       2,
       f,
-      proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.serializeBinaryToWriter,
+      proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.serializeBinaryToWriter
     );
   }
   f = message.getSequence();
   if (f !== 0) {
     writer.writeUint64(
       3,
-      f,
+      f
     );
   }
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -336,7 +353,7 @@ proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.serializeBinaryToWriter = fu
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data = function (opt_data) {
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.oneofGroups_);
 };
 goog.inherits(proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data, jspb.Message);
@@ -351,7 +368,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<!Array<number>>}
  * @const
  */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.oneofGroups_ = [[1, 2]];
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.oneofGroups_ = [[1,2]];
 
 /**
  * @enum {number}
@@ -359,15 +376,17 @@ proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.oneofGroups_ = [[1, 2]]
 proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.SumCase = {
   SUM_NOT_SET: 0,
   SINGLE: 1,
-  MULTI: 2,
+  MULTI: 2
 };
 
 /**
  * @return {proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.SumCase}
  */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.prototype.getSumCase = function () {
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.prototype.getSumCase = function() {
   return /** @type {proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.SumCase} */(jspb.Message.computeOneofCase(this, proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.oneofGroups_[0]));
 };
+
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -380,11 +399,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.prototype.toObject = function (opt_includeInstance) {
-    return proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.toObject(opt_includeInstance, this);
-  };
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.prototype.toObject = function(opt_includeInstance) {
+  return proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -393,30 +413,31 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        single: (f = msg.getSingle()) && proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single.toObject(includeInstance, f),
-        multi: (f = msg.getMulti()) && proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi.toObject(includeInstance, f),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    single: (f = msg.getSingle()) && proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single.toObject(includeInstance, f),
+    multi: (f = msg.getMulti()) && proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi.toObject(includeInstance, f)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data}
  */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data();
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data;
   return proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -425,40 +446,42 @@ proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.deserializeBinary = fun
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data}
  */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.deserializeBinaryFromReader = function (msg, reader) {
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = new proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single();
-        reader.readMessage(value, proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single.deserializeBinaryFromReader);
-        msg.setSingle(value);
-        break;
-      case 2:
-        var value = new proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi();
-        reader.readMessage(value, proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi.deserializeBinaryFromReader);
-        msg.setMulti(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = new proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single;
+      reader.readMessage(value,proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single.deserializeBinaryFromReader);
+      msg.setSingle(value);
+      break;
+    case 2:
+      var value = new proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi;
+      reader.readMessage(value,proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi.deserializeBinaryFromReader);
+      msg.setMulti(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -467,14 +490,14 @@ proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.prototype.serializeBina
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getSingle();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single.serializeBinaryToWriter,
+      proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single.serializeBinaryToWriter
     );
   }
   f = message.getMulti();
@@ -482,10 +505,12 @@ proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.serializeBinaryToWriter
     writer.writeMessage(
       2,
       f,
-      proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi.serializeBinaryToWriter,
+      proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi.serializeBinaryToWriter
     );
   }
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -497,13 +522,14 @@ proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.serializeBinaryToWriter
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single = function (opt_data) {
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single.displayName = 'proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -516,11 +542,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single.prototype.toObject = function (opt_includeInstance) {
-    return proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single.toObject(opt_includeInstance, this);
-  };
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single.prototype.toObject = function(opt_includeInstance) {
+  return proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -529,30 +556,31 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        mode: jspb.Message.getFieldWithDefault(msg, 1, 0),
-        signature: msg.getSignature_asB64(),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    mode: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    signature: msg.getSignature_asB64()
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single}
  */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single();
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single;
   return proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -561,38 +589,40 @@ proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single.deserializeBinar
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single}
  */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single.deserializeBinaryFromReader = function (msg, reader) {
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {!proto.cosmos.tx.signing.v1beta1.SignMode} */ (reader.readEnum());
-        msg.setMode(value);
-        break;
-      case 2:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setSignature(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {!proto.cosmos.tx.signing.v1beta1.SignMode} */ (reader.readEnum());
+      msg.setMode(value);
+      break;
+    case 2:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setSignature(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -601,55 +631,59 @@ proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single.prototype.serial
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getMode();
   if (f !== 0.0) {
     writer.writeEnum(
       1,
-      f,
+      f
     );
   }
   f = message.getSignature_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       2,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * optional SignMode mode = 1;
  * @return {!proto.cosmos.tx.signing.v1beta1.SignMode}
  */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single.prototype.getMode = function () {
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single.prototype.getMode = function() {
   return /** @type {!proto.cosmos.tx.signing.v1beta1.SignMode} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
+
 /** @param {!proto.cosmos.tx.signing.v1beta1.SignMode} value */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single.prototype.setMode = function (value) {
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single.prototype.setMode = function(value) {
   jspb.Message.setProto3EnumField(this, 1, value);
 };
+
 
 /**
  * optional bytes signature = 2;
  * @return {!(string|Uint8Array)}
  */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single.prototype.getSignature = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single.prototype.getSignature = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
+
 
 /**
  * optional bytes signature = 2;
  * This is a type-conversion wrapper around `getSignature()`
  * @return {string}
  */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single.prototype.getSignature_asB64 = function () {
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single.prototype.getSignature_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getSignature(),
-  ));
+      this.getSignature()));
 };
+
 
 /**
  * optional bytes signature = 2;
@@ -658,16 +692,18 @@ proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single.prototype.getSig
  * This is a type-conversion wrapper around `getSignature()`
  * @return {!Uint8Array}
  */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single.prototype.getSignature_asU8 = function () {
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single.prototype.getSignature_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getSignature(),
-  ));
+      this.getSignature()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single.prototype.setSignature = function (value) {
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single.prototype.setSignature = function(value) {
   jspb.Message.setProto3BytesField(this, 2, value);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -679,7 +715,7 @@ proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single.prototype.setSig
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi = function (opt_data) {
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi.repeatedFields_, null);
 };
 goog.inherits(proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi, jspb.Message);
@@ -693,6 +729,8 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi.repeatedFields_ = [2];
 
+
+
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -704,11 +742,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi.prototype.toObject = function (opt_includeInstance) {
-    return proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi.toObject(opt_includeInstance, this);
-  };
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi.prototype.toObject = function(opt_includeInstance) {
+  return proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -717,31 +756,32 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        bitarray: (f = msg.getBitarray()) && cosmos_crypto_multisig_v1beta1_multisig_pb.CompactBitArray.toObject(includeInstance, f),
-        signaturesList: jspb.Message.toObjectList(msg.getSignaturesList(),
-          proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.toObject, includeInstance),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    bitarray: (f = msg.getBitarray()) && cosmos_crypto_multisig_v1beta1_multisig_pb.CompactBitArray.toObject(includeInstance, f),
+    signaturesList: jspb.Message.toObjectList(msg.getSignaturesList(),
+    proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.toObject, includeInstance)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi}
  */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi();
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi;
   return proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -750,40 +790,42 @@ proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi.deserializeBinary
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi}
  */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi.deserializeBinaryFromReader = function (msg, reader) {
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = new cosmos_crypto_multisig_v1beta1_multisig_pb.CompactBitArray();
-        reader.readMessage(value, cosmos_crypto_multisig_v1beta1_multisig_pb.CompactBitArray.deserializeBinaryFromReader);
-        msg.setBitarray(value);
-        break;
-      case 2:
-        var value = new proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data();
-        reader.readMessage(value, proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.deserializeBinaryFromReader);
-        msg.addSignatures(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = new cosmos_crypto_multisig_v1beta1_multisig_pb.CompactBitArray;
+      reader.readMessage(value,cosmos_crypto_multisig_v1beta1_multisig_pb.CompactBitArray.deserializeBinaryFromReader);
+      msg.setBitarray(value);
+      break;
+    case 2:
+      var value = new proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data;
+      reader.readMessage(value,proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.deserializeBinaryFromReader);
+      msg.addSignatures(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -792,14 +834,14 @@ proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi.prototype.seriali
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getBitarray();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      cosmos_crypto_multisig_v1beta1_multisig_pb.CompactBitArray.serializeBinaryToWriter,
+      cosmos_crypto_multisig_v1beta1_multisig_pb.CompactBitArray.serializeBinaryToWriter
     );
   }
   f = message.getSignaturesList();
@@ -807,180 +849,207 @@ proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi.serializeBinaryTo
     writer.writeRepeatedMessage(
       2,
       f,
-      proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.serializeBinaryToWriter,
+      proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.serializeBinaryToWriter
     );
   }
 };
+
 
 /**
  * optional cosmos.crypto.multisig.v1beta1.CompactBitArray bitarray = 1;
  * @return {?proto.cosmos.crypto.multisig.v1beta1.CompactBitArray}
  */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi.prototype.getBitarray = function () {
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi.prototype.getBitarray = function() {
   return /** @type{?proto.cosmos.crypto.multisig.v1beta1.CompactBitArray} */ (
     jspb.Message.getWrapperField(this, cosmos_crypto_multisig_v1beta1_multisig_pb.CompactBitArray, 1));
 };
 
+
 /** @param {?proto.cosmos.crypto.multisig.v1beta1.CompactBitArray|undefined} value */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi.prototype.setBitarray = function (value) {
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi.prototype.setBitarray = function(value) {
   jspb.Message.setWrapperField(this, 1, value);
 };
 
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi.prototype.clearBitarray = function () {
+
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi.prototype.clearBitarray = function() {
   this.setBitarray(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi.prototype.hasBitarray = function () {
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi.prototype.hasBitarray = function() {
   return jspb.Message.getField(this, 1) != null;
 };
+
 
 /**
  * repeated Data signatures = 2;
  * @return {!Array<!proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data>}
  */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi.prototype.getSignaturesList = function () {
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi.prototype.getSignaturesList = function() {
   return /** @type{!Array<!proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data, 2));
 };
 
+
 /** @param {!Array<!proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data>} value */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi.prototype.setSignaturesList = function (value) {
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi.prototype.setSignaturesList = function(value) {
   jspb.Message.setRepeatedWrapperField(this, 2, value);
 };
+
 
 /**
  * @param {!proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data=} opt_value
  * @param {number=} opt_index
  * @return {!proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data}
  */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi.prototype.addSignatures = function (opt_value, opt_index) {
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi.prototype.addSignatures = function(opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data, opt_index);
 };
 
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi.prototype.clearSignaturesList = function () {
+
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi.prototype.clearSignaturesList = function() {
   this.setSignaturesList([]);
 };
+
 
 /**
  * optional Single single = 1;
  * @return {?proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single}
  */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.prototype.getSingle = function () {
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.prototype.getSingle = function() {
   return /** @type{?proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single} */ (
     jspb.Message.getWrapperField(this, proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single, 1));
 };
 
+
 /** @param {?proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Single|undefined} value */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.prototype.setSingle = function (value) {
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.prototype.setSingle = function(value) {
   jspb.Message.setOneofWrapperField(this, 1, proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.oneofGroups_[0], value);
 };
 
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.prototype.clearSingle = function () {
+
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.prototype.clearSingle = function() {
   this.setSingle(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.prototype.hasSingle = function () {
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.prototype.hasSingle = function() {
   return jspb.Message.getField(this, 1) != null;
 };
+
 
 /**
  * optional Multi multi = 2;
  * @return {?proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi}
  */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.prototype.getMulti = function () {
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.prototype.getMulti = function() {
   return /** @type{?proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi} */ (
     jspb.Message.getWrapperField(this, proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi, 2));
 };
 
+
 /** @param {?proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.Multi|undefined} value */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.prototype.setMulti = function (value) {
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.prototype.setMulti = function(value) {
   jspb.Message.setOneofWrapperField(this, 2, proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.oneofGroups_[0], value);
 };
 
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.prototype.clearMulti = function () {
+
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.prototype.clearMulti = function() {
   this.setMulti(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.prototype.hasMulti = function () {
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data.prototype.hasMulti = function() {
   return jspb.Message.getField(this, 2) != null;
 };
+
 
 /**
  * optional google.protobuf.Any public_key = 1;
  * @return {?proto.google.protobuf.Any}
  */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.prototype.getPublicKey = function () {
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.prototype.getPublicKey = function() {
   return /** @type{?proto.google.protobuf.Any} */ (
     jspb.Message.getWrapperField(this, google_protobuf_any_pb.Any, 1));
 };
 
+
 /** @param {?proto.google.protobuf.Any|undefined} value */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.prototype.setPublicKey = function (value) {
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.prototype.setPublicKey = function(value) {
   jspb.Message.setWrapperField(this, 1, value);
 };
 
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.prototype.clearPublicKey = function () {
+
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.prototype.clearPublicKey = function() {
   this.setPublicKey(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.prototype.hasPublicKey = function () {
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.prototype.hasPublicKey = function() {
   return jspb.Message.getField(this, 1) != null;
 };
+
 
 /**
  * optional Data data = 2;
  * @return {?proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data}
  */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.prototype.getData = function () {
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.prototype.getData = function() {
   return /** @type{?proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data} */ (
     jspb.Message.getWrapperField(this, proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data, 2));
 };
 
+
 /** @param {?proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.Data|undefined} value */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.prototype.setData = function (value) {
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.prototype.setData = function(value) {
   jspb.Message.setWrapperField(this, 2, value);
 };
 
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.prototype.clearData = function () {
+
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.prototype.clearData = function() {
   this.setData(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.prototype.hasData = function () {
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.prototype.hasData = function() {
   return jspb.Message.getField(this, 2) != null;
 };
+
 
 /**
  * optional uint64 sequence = 3;
  * @return {number}
  */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.prototype.getSequence = function () {
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.prototype.getSequence = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
+
 /** @param {number} value */
-proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.prototype.setSequence = function (value) {
+proto.cosmos.tx.signing.v1beta1.SignatureDescriptor.prototype.setSequence = function(value) {
   jspb.Message.setProto3IntField(this, 3, value);
 };
+
 
 /**
  * @enum {number}
@@ -989,7 +1058,7 @@ proto.cosmos.tx.signing.v1beta1.SignMode = {
   SIGN_MODE_UNSPECIFIED: 0,
   SIGN_MODE_DIRECT: 1,
   SIGN_MODE_TEXTUAL: 2,
-  SIGN_MODE_LEGACY_AMINO_JSON: 127,
+  SIGN_MODE_LEGACY_AMINO_JSON: 127
 };
 
 goog.object.extend(exports, proto.cosmos.tx.signing.v1beta1);

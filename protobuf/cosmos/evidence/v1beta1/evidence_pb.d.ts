@@ -2,6 +2,7 @@
 // file: cosmos/evidence/v1beta1/evidence.proto
 
 import * as jspb from "google-protobuf";
+import * as gogoproto_gogo_pb from "../../../gogoproto/gogo_pb";
 import * as google_protobuf_timestamp_pb from "google-protobuf/google/protobuf/timestamp_pb";
 
 export class Equivocation extends jspb.Message {

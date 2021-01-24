@@ -7,16 +7,14 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-const jspb = require('google-protobuf');
+var jspb = require('google-protobuf');
+var goog = jspb;
+var global = Function('return this')();
 
-const goog = jspb;
-const global = Function('return this')();
-
-const google_protobuf_any_pb = require('google-protobuf/google/protobuf/any_pb.js');
-const ibc_core_connection_v1_connection_pb = require('../../../core/connection/v1/connection_pb.js');
-const ibc_core_channel_v1_channel_pb = require('../../../core/channel/v1/channel_pb.js');
-const gogoproto_gogo_pb = require('../../../../gogoproto/gogo_pb.js');
-
+var ibc_core_connection_v1_connection_pb = require('../../../../ibc/core/connection/v1/connection_pb.js');
+var ibc_core_channel_v1_channel_pb = require('../../../../ibc/core/channel/v1/channel_pb.js');
+var gogoproto_gogo_pb = require('../../../../gogoproto/gogo_pb.js');
+var google_protobuf_any_pb = require('google-protobuf/google/protobuf/any_pb.js');
 goog.exportSymbol('proto.ibc.lightclients.solomachine.v1.ChannelStateData', null, global);
 goog.exportSymbol('proto.ibc.lightclients.solomachine.v1.ClientState', null, global);
 goog.exportSymbol('proto.ibc.lightclients.solomachine.v1.ClientStateData', null, global);
@@ -45,13 +43,14 @@ goog.exportSymbol('proto.ibc.lightclients.solomachine.v1.TimestampedSignatureDat
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.lightclients.solomachine.v1.ClientState = function (opt_data) {
+proto.ibc.lightclients.solomachine.v1.ClientState = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.ibc.lightclients.solomachine.v1.ClientState, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.ibc.lightclients.solomachine.v1.ClientState.displayName = 'proto.ibc.lightclients.solomachine.v1.ClientState';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -64,11 +63,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.lightclients.solomachine.v1.ClientState.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.lightclients.solomachine.v1.ClientState.toObject(opt_includeInstance, this);
-  };
+proto.ibc.lightclients.solomachine.v1.ClientState.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.lightclients.solomachine.v1.ClientState.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -77,32 +77,33 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.lightclients.solomachine.v1.ClientState.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        sequence: jspb.Message.getFieldWithDefault(msg, 1, 0),
-        frozenSequence: jspb.Message.getFieldWithDefault(msg, 2, 0),
-        consensusState: (f = msg.getConsensusState()) && proto.ibc.lightclients.solomachine.v1.ConsensusState.toObject(includeInstance, f),
-        allowUpdateAfterProposal: jspb.Message.getFieldWithDefault(msg, 4, false),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.lightclients.solomachine.v1.ClientState.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    sequence: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    frozenSequence: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    consensusState: (f = msg.getConsensusState()) && proto.ibc.lightclients.solomachine.v1.ConsensusState.toObject(includeInstance, f),
+    allowUpdateAfterProposal: jspb.Message.getFieldWithDefault(msg, 4, false)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.lightclients.solomachine.v1.ClientState}
  */
-proto.ibc.lightclients.solomachine.v1.ClientState.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.lightclients.solomachine.v1.ClientState();
+proto.ibc.lightclients.solomachine.v1.ClientState.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.lightclients.solomachine.v1.ClientState;
   return proto.ibc.lightclients.solomachine.v1.ClientState.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -111,47 +112,49 @@ proto.ibc.lightclients.solomachine.v1.ClientState.deserializeBinary = function (
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.lightclients.solomachine.v1.ClientState}
  */
-proto.ibc.lightclients.solomachine.v1.ClientState.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.lightclients.solomachine.v1.ClientState.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {number} */ (reader.readUint64());
-        msg.setSequence(value);
-        break;
-      case 2:
-        var value = /** @type {number} */ (reader.readUint64());
-        msg.setFrozenSequence(value);
-        break;
-      case 3:
-        var value = new proto.ibc.lightclients.solomachine.v1.ConsensusState();
-        reader.readMessage(value, proto.ibc.lightclients.solomachine.v1.ConsensusState.deserializeBinaryFromReader);
-        msg.setConsensusState(value);
-        break;
-      case 4:
-        var value = /** @type {boolean} */ (reader.readBool());
-        msg.setAllowUpdateAfterProposal(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setSequence(value);
+      break;
+    case 2:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setFrozenSequence(value);
+      break;
+    case 3:
+      var value = new proto.ibc.lightclients.solomachine.v1.ConsensusState;
+      reader.readMessage(value,proto.ibc.lightclients.solomachine.v1.ConsensusState.deserializeBinaryFromReader);
+      msg.setConsensusState(value);
+      break;
+    case 4:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setAllowUpdateAfterProposal(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.lightclients.solomachine.v1.ClientState.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.lightclients.solomachine.v1.ClientState.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.lightclients.solomachine.v1.ClientState.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -160,20 +163,20 @@ proto.ibc.lightclients.solomachine.v1.ClientState.prototype.serializeBinary = fu
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.lightclients.solomachine.v1.ClientState.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.lightclients.solomachine.v1.ClientState.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getSequence();
   if (f !== 0) {
     writer.writeUint64(
       1,
-      f,
+      f
     );
   }
   f = message.getFrozenSequence();
   if (f !== 0) {
     writer.writeUint64(
       2,
-      f,
+      f
     );
   }
   f = message.getConsensusState();
@@ -181,69 +184,78 @@ proto.ibc.lightclients.solomachine.v1.ClientState.serializeBinaryToWriter = func
     writer.writeMessage(
       3,
       f,
-      proto.ibc.lightclients.solomachine.v1.ConsensusState.serializeBinaryToWriter,
+      proto.ibc.lightclients.solomachine.v1.ConsensusState.serializeBinaryToWriter
     );
   }
   f = message.getAllowUpdateAfterProposal();
   if (f) {
     writer.writeBool(
       4,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * optional uint64 sequence = 1;
  * @return {number}
  */
-proto.ibc.lightclients.solomachine.v1.ClientState.prototype.getSequence = function () {
+proto.ibc.lightclients.solomachine.v1.ClientState.prototype.getSequence = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
+
 /** @param {number} value */
-proto.ibc.lightclients.solomachine.v1.ClientState.prototype.setSequence = function (value) {
+proto.ibc.lightclients.solomachine.v1.ClientState.prototype.setSequence = function(value) {
   jspb.Message.setProto3IntField(this, 1, value);
 };
+
 
 /**
  * optional uint64 frozen_sequence = 2;
  * @return {number}
  */
-proto.ibc.lightclients.solomachine.v1.ClientState.prototype.getFrozenSequence = function () {
+proto.ibc.lightclients.solomachine.v1.ClientState.prototype.getFrozenSequence = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
+
 /** @param {number} value */
-proto.ibc.lightclients.solomachine.v1.ClientState.prototype.setFrozenSequence = function (value) {
+proto.ibc.lightclients.solomachine.v1.ClientState.prototype.setFrozenSequence = function(value) {
   jspb.Message.setProto3IntField(this, 2, value);
 };
+
 
 /**
  * optional ConsensusState consensus_state = 3;
  * @return {?proto.ibc.lightclients.solomachine.v1.ConsensusState}
  */
-proto.ibc.lightclients.solomachine.v1.ClientState.prototype.getConsensusState = function () {
+proto.ibc.lightclients.solomachine.v1.ClientState.prototype.getConsensusState = function() {
   return /** @type{?proto.ibc.lightclients.solomachine.v1.ConsensusState} */ (
     jspb.Message.getWrapperField(this, proto.ibc.lightclients.solomachine.v1.ConsensusState, 3));
 };
 
+
 /** @param {?proto.ibc.lightclients.solomachine.v1.ConsensusState|undefined} value */
-proto.ibc.lightclients.solomachine.v1.ClientState.prototype.setConsensusState = function (value) {
+proto.ibc.lightclients.solomachine.v1.ClientState.prototype.setConsensusState = function(value) {
   jspb.Message.setWrapperField(this, 3, value);
 };
 
-proto.ibc.lightclients.solomachine.v1.ClientState.prototype.clearConsensusState = function () {
+
+proto.ibc.lightclients.solomachine.v1.ClientState.prototype.clearConsensusState = function() {
   this.setConsensusState(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.ibc.lightclients.solomachine.v1.ClientState.prototype.hasConsensusState = function () {
+proto.ibc.lightclients.solomachine.v1.ClientState.prototype.hasConsensusState = function() {
   return jspb.Message.getField(this, 3) != null;
 };
+
 
 /**
  * optional bool allow_update_after_proposal = 4;
@@ -251,14 +263,17 @@ proto.ibc.lightclients.solomachine.v1.ClientState.prototype.hasConsensusState = 
  * You should avoid comparisons like {@code val === true/false} in those cases.
  * @return {boolean}
  */
-proto.ibc.lightclients.solomachine.v1.ClientState.prototype.getAllowUpdateAfterProposal = function () {
+proto.ibc.lightclients.solomachine.v1.ClientState.prototype.getAllowUpdateAfterProposal = function() {
   return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 4, false));
 };
 
+
 /** @param {boolean} value */
-proto.ibc.lightclients.solomachine.v1.ClientState.prototype.setAllowUpdateAfterProposal = function (value) {
+proto.ibc.lightclients.solomachine.v1.ClientState.prototype.setAllowUpdateAfterProposal = function(value) {
   jspb.Message.setProto3BooleanField(this, 4, value);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -270,13 +285,14 @@ proto.ibc.lightclients.solomachine.v1.ClientState.prototype.setAllowUpdateAfterP
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.lightclients.solomachine.v1.ConsensusState = function (opt_data) {
+proto.ibc.lightclients.solomachine.v1.ConsensusState = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.ibc.lightclients.solomachine.v1.ConsensusState, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.ibc.lightclients.solomachine.v1.ConsensusState.displayName = 'proto.ibc.lightclients.solomachine.v1.ConsensusState';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -289,11 +305,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.lightclients.solomachine.v1.ConsensusState.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.lightclients.solomachine.v1.ConsensusState.toObject(opt_includeInstance, this);
-  };
+proto.ibc.lightclients.solomachine.v1.ConsensusState.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.lightclients.solomachine.v1.ConsensusState.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -302,31 +319,32 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.lightclients.solomachine.v1.ConsensusState.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        publicKey: (f = msg.getPublicKey()) && google_protobuf_any_pb.Any.toObject(includeInstance, f),
-        diversifier: jspb.Message.getFieldWithDefault(msg, 2, ''),
-        timestamp: jspb.Message.getFieldWithDefault(msg, 3, 0),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.lightclients.solomachine.v1.ConsensusState.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    publicKey: (f = msg.getPublicKey()) && google_protobuf_any_pb.Any.toObject(includeInstance, f),
+    diversifier: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    timestamp: jspb.Message.getFieldWithDefault(msg, 3, 0)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.lightclients.solomachine.v1.ConsensusState}
  */
-proto.ibc.lightclients.solomachine.v1.ConsensusState.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.lightclients.solomachine.v1.ConsensusState();
+proto.ibc.lightclients.solomachine.v1.ConsensusState.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.lightclients.solomachine.v1.ConsensusState;
   return proto.ibc.lightclients.solomachine.v1.ConsensusState.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -335,43 +353,45 @@ proto.ibc.lightclients.solomachine.v1.ConsensusState.deserializeBinary = functio
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.lightclients.solomachine.v1.ConsensusState}
  */
-proto.ibc.lightclients.solomachine.v1.ConsensusState.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.lightclients.solomachine.v1.ConsensusState.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = new google_protobuf_any_pb.Any();
-        reader.readMessage(value, google_protobuf_any_pb.Any.deserializeBinaryFromReader);
-        msg.setPublicKey(value);
-        break;
-      case 2:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setDiversifier(value);
-        break;
-      case 3:
-        var value = /** @type {number} */ (reader.readUint64());
-        msg.setTimestamp(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = new google_protobuf_any_pb.Any;
+      reader.readMessage(value,google_protobuf_any_pb.Any.deserializeBinaryFromReader);
+      msg.setPublicKey(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setDiversifier(value);
+      break;
+    case 3:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setTimestamp(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.lightclients.solomachine.v1.ConsensusState.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.lightclients.solomachine.v1.ConsensusState.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.lightclients.solomachine.v1.ConsensusState.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -380,83 +400,93 @@ proto.ibc.lightclients.solomachine.v1.ConsensusState.prototype.serializeBinary =
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.lightclients.solomachine.v1.ConsensusState.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.lightclients.solomachine.v1.ConsensusState.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getPublicKey();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      google_protobuf_any_pb.Any.serializeBinaryToWriter,
+      google_protobuf_any_pb.Any.serializeBinaryToWriter
     );
   }
   f = message.getDiversifier();
   if (f.length > 0) {
     writer.writeString(
       2,
-      f,
+      f
     );
   }
   f = message.getTimestamp();
   if (f !== 0) {
     writer.writeUint64(
       3,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * optional google.protobuf.Any public_key = 1;
  * @return {?proto.google.protobuf.Any}
  */
-proto.ibc.lightclients.solomachine.v1.ConsensusState.prototype.getPublicKey = function () {
+proto.ibc.lightclients.solomachine.v1.ConsensusState.prototype.getPublicKey = function() {
   return /** @type{?proto.google.protobuf.Any} */ (
     jspb.Message.getWrapperField(this, google_protobuf_any_pb.Any, 1));
 };
 
+
 /** @param {?proto.google.protobuf.Any|undefined} value */
-proto.ibc.lightclients.solomachine.v1.ConsensusState.prototype.setPublicKey = function (value) {
+proto.ibc.lightclients.solomachine.v1.ConsensusState.prototype.setPublicKey = function(value) {
   jspb.Message.setWrapperField(this, 1, value);
 };
 
-proto.ibc.lightclients.solomachine.v1.ConsensusState.prototype.clearPublicKey = function () {
+
+proto.ibc.lightclients.solomachine.v1.ConsensusState.prototype.clearPublicKey = function() {
   this.setPublicKey(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.ibc.lightclients.solomachine.v1.ConsensusState.prototype.hasPublicKey = function () {
+proto.ibc.lightclients.solomachine.v1.ConsensusState.prototype.hasPublicKey = function() {
   return jspb.Message.getField(this, 1) != null;
 };
+
 
 /**
  * optional string diversifier = 2;
  * @return {string}
  */
-proto.ibc.lightclients.solomachine.v1.ConsensusState.prototype.getDiversifier = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
+proto.ibc.lightclients.solomachine.v1.ConsensusState.prototype.getDiversifier = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
+
 /** @param {string} value */
-proto.ibc.lightclients.solomachine.v1.ConsensusState.prototype.setDiversifier = function (value) {
+proto.ibc.lightclients.solomachine.v1.ConsensusState.prototype.setDiversifier = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
+
 
 /**
  * optional uint64 timestamp = 3;
  * @return {number}
  */
-proto.ibc.lightclients.solomachine.v1.ConsensusState.prototype.getTimestamp = function () {
+proto.ibc.lightclients.solomachine.v1.ConsensusState.prototype.getTimestamp = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
+
 /** @param {number} value */
-proto.ibc.lightclients.solomachine.v1.ConsensusState.prototype.setTimestamp = function (value) {
+proto.ibc.lightclients.solomachine.v1.ConsensusState.prototype.setTimestamp = function(value) {
   jspb.Message.setProto3IntField(this, 3, value);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -468,13 +498,14 @@ proto.ibc.lightclients.solomachine.v1.ConsensusState.prototype.setTimestamp = fu
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.lightclients.solomachine.v1.Header = function (opt_data) {
+proto.ibc.lightclients.solomachine.v1.Header = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.ibc.lightclients.solomachine.v1.Header, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.ibc.lightclients.solomachine.v1.Header.displayName = 'proto.ibc.lightclients.solomachine.v1.Header';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -487,11 +518,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.lightclients.solomachine.v1.Header.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.lightclients.solomachine.v1.Header.toObject(opt_includeInstance, this);
-  };
+proto.ibc.lightclients.solomachine.v1.Header.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.lightclients.solomachine.v1.Header.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -500,33 +532,34 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.lightclients.solomachine.v1.Header.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        sequence: jspb.Message.getFieldWithDefault(msg, 1, 0),
-        timestamp: jspb.Message.getFieldWithDefault(msg, 2, 0),
-        signature: msg.getSignature_asB64(),
-        newPublicKey: (f = msg.getNewPublicKey()) && google_protobuf_any_pb.Any.toObject(includeInstance, f),
-        newDiversifier: jspb.Message.getFieldWithDefault(msg, 5, ''),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.lightclients.solomachine.v1.Header.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    sequence: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    timestamp: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    signature: msg.getSignature_asB64(),
+    newPublicKey: (f = msg.getNewPublicKey()) && google_protobuf_any_pb.Any.toObject(includeInstance, f),
+    newDiversifier: jspb.Message.getFieldWithDefault(msg, 5, "")
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.lightclients.solomachine.v1.Header}
  */
-proto.ibc.lightclients.solomachine.v1.Header.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.lightclients.solomachine.v1.Header();
+proto.ibc.lightclients.solomachine.v1.Header.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.lightclients.solomachine.v1.Header;
   return proto.ibc.lightclients.solomachine.v1.Header.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -535,51 +568,53 @@ proto.ibc.lightclients.solomachine.v1.Header.deserializeBinary = function (bytes
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.lightclients.solomachine.v1.Header}
  */
-proto.ibc.lightclients.solomachine.v1.Header.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.lightclients.solomachine.v1.Header.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {number} */ (reader.readUint64());
-        msg.setSequence(value);
-        break;
-      case 2:
-        var value = /** @type {number} */ (reader.readUint64());
-        msg.setTimestamp(value);
-        break;
-      case 3:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setSignature(value);
-        break;
-      case 4:
-        var value = new google_protobuf_any_pb.Any();
-        reader.readMessage(value, google_protobuf_any_pb.Any.deserializeBinaryFromReader);
-        msg.setNewPublicKey(value);
-        break;
-      case 5:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setNewDiversifier(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setSequence(value);
+      break;
+    case 2:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setTimestamp(value);
+      break;
+    case 3:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setSignature(value);
+      break;
+    case 4:
+      var value = new google_protobuf_any_pb.Any;
+      reader.readMessage(value,google_protobuf_any_pb.Any.deserializeBinaryFromReader);
+      msg.setNewPublicKey(value);
+      break;
+    case 5:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setNewDiversifier(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.lightclients.solomachine.v1.Header.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.lightclients.solomachine.v1.Header.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.lightclients.solomachine.v1.Header.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -588,27 +623,27 @@ proto.ibc.lightclients.solomachine.v1.Header.prototype.serializeBinary = functio
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.lightclients.solomachine.v1.Header.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.lightclients.solomachine.v1.Header.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getSequence();
   if (f !== 0) {
     writer.writeUint64(
       1,
-      f,
+      f
     );
   }
   f = message.getTimestamp();
   if (f !== 0) {
     writer.writeUint64(
       2,
-      f,
+      f
     );
   }
   f = message.getSignature_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       3,
-      f,
+      f
     );
   }
   f = message.getNewPublicKey();
@@ -616,62 +651,68 @@ proto.ibc.lightclients.solomachine.v1.Header.serializeBinaryToWriter = function 
     writer.writeMessage(
       4,
       f,
-      google_protobuf_any_pb.Any.serializeBinaryToWriter,
+      google_protobuf_any_pb.Any.serializeBinaryToWriter
     );
   }
   f = message.getNewDiversifier();
   if (f.length > 0) {
     writer.writeString(
       5,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * optional uint64 sequence = 1;
  * @return {number}
  */
-proto.ibc.lightclients.solomachine.v1.Header.prototype.getSequence = function () {
+proto.ibc.lightclients.solomachine.v1.Header.prototype.getSequence = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
+
 /** @param {number} value */
-proto.ibc.lightclients.solomachine.v1.Header.prototype.setSequence = function (value) {
+proto.ibc.lightclients.solomachine.v1.Header.prototype.setSequence = function(value) {
   jspb.Message.setProto3IntField(this, 1, value);
 };
+
 
 /**
  * optional uint64 timestamp = 2;
  * @return {number}
  */
-proto.ibc.lightclients.solomachine.v1.Header.prototype.getTimestamp = function () {
+proto.ibc.lightclients.solomachine.v1.Header.prototype.getTimestamp = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
+
 /** @param {number} value */
-proto.ibc.lightclients.solomachine.v1.Header.prototype.setTimestamp = function (value) {
+proto.ibc.lightclients.solomachine.v1.Header.prototype.setTimestamp = function(value) {
   jspb.Message.setProto3IntField(this, 2, value);
 };
+
 
 /**
  * optional bytes signature = 3;
  * @return {!(string|Uint8Array)}
  */
-proto.ibc.lightclients.solomachine.v1.Header.prototype.getSignature = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 3, ''));
+proto.ibc.lightclients.solomachine.v1.Header.prototype.getSignature = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
+
 
 /**
  * optional bytes signature = 3;
  * This is a type-conversion wrapper around `getSignature()`
  * @return {string}
  */
-proto.ibc.lightclients.solomachine.v1.Header.prototype.getSignature_asB64 = function () {
+proto.ibc.lightclients.solomachine.v1.Header.prototype.getSignature_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getSignature(),
-  ));
+      this.getSignature()));
 };
+
 
 /**
  * optional bytes signature = 3;
@@ -680,55 +721,63 @@ proto.ibc.lightclients.solomachine.v1.Header.prototype.getSignature_asB64 = func
  * This is a type-conversion wrapper around `getSignature()`
  * @return {!Uint8Array}
  */
-proto.ibc.lightclients.solomachine.v1.Header.prototype.getSignature_asU8 = function () {
+proto.ibc.lightclients.solomachine.v1.Header.prototype.getSignature_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getSignature(),
-  ));
+      this.getSignature()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.ibc.lightclients.solomachine.v1.Header.prototype.setSignature = function (value) {
+proto.ibc.lightclients.solomachine.v1.Header.prototype.setSignature = function(value) {
   jspb.Message.setProto3BytesField(this, 3, value);
 };
+
 
 /**
  * optional google.protobuf.Any new_public_key = 4;
  * @return {?proto.google.protobuf.Any}
  */
-proto.ibc.lightclients.solomachine.v1.Header.prototype.getNewPublicKey = function () {
+proto.ibc.lightclients.solomachine.v1.Header.prototype.getNewPublicKey = function() {
   return /** @type{?proto.google.protobuf.Any} */ (
     jspb.Message.getWrapperField(this, google_protobuf_any_pb.Any, 4));
 };
 
+
 /** @param {?proto.google.protobuf.Any|undefined} value */
-proto.ibc.lightclients.solomachine.v1.Header.prototype.setNewPublicKey = function (value) {
+proto.ibc.lightclients.solomachine.v1.Header.prototype.setNewPublicKey = function(value) {
   jspb.Message.setWrapperField(this, 4, value);
 };
 
-proto.ibc.lightclients.solomachine.v1.Header.prototype.clearNewPublicKey = function () {
+
+proto.ibc.lightclients.solomachine.v1.Header.prototype.clearNewPublicKey = function() {
   this.setNewPublicKey(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.ibc.lightclients.solomachine.v1.Header.prototype.hasNewPublicKey = function () {
+proto.ibc.lightclients.solomachine.v1.Header.prototype.hasNewPublicKey = function() {
   return jspb.Message.getField(this, 4) != null;
 };
+
 
 /**
  * optional string new_diversifier = 5;
  * @return {string}
  */
-proto.ibc.lightclients.solomachine.v1.Header.prototype.getNewDiversifier = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ''));
+proto.ibc.lightclients.solomachine.v1.Header.prototype.getNewDiversifier = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
 };
 
+
 /** @param {string} value */
-proto.ibc.lightclients.solomachine.v1.Header.prototype.setNewDiversifier = function (value) {
+proto.ibc.lightclients.solomachine.v1.Header.prototype.setNewDiversifier = function(value) {
   jspb.Message.setProto3StringField(this, 5, value);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -740,13 +789,14 @@ proto.ibc.lightclients.solomachine.v1.Header.prototype.setNewDiversifier = funct
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.lightclients.solomachine.v1.Misbehaviour = function (opt_data) {
+proto.ibc.lightclients.solomachine.v1.Misbehaviour = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.ibc.lightclients.solomachine.v1.Misbehaviour, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.ibc.lightclients.solomachine.v1.Misbehaviour.displayName = 'proto.ibc.lightclients.solomachine.v1.Misbehaviour';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -759,11 +809,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.lightclients.solomachine.v1.Misbehaviour.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.lightclients.solomachine.v1.Misbehaviour.toObject(opt_includeInstance, this);
-  };
+proto.ibc.lightclients.solomachine.v1.Misbehaviour.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.lightclients.solomachine.v1.Misbehaviour.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -772,32 +823,33 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.lightclients.solomachine.v1.Misbehaviour.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        clientId: jspb.Message.getFieldWithDefault(msg, 1, ''),
-        sequence: jspb.Message.getFieldWithDefault(msg, 2, 0),
-        signatureOne: (f = msg.getSignatureOne()) && proto.ibc.lightclients.solomachine.v1.SignatureAndData.toObject(includeInstance, f),
-        signatureTwo: (f = msg.getSignatureTwo()) && proto.ibc.lightclients.solomachine.v1.SignatureAndData.toObject(includeInstance, f),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.lightclients.solomachine.v1.Misbehaviour.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    clientId: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    sequence: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    signatureOne: (f = msg.getSignatureOne()) && proto.ibc.lightclients.solomachine.v1.SignatureAndData.toObject(includeInstance, f),
+    signatureTwo: (f = msg.getSignatureTwo()) && proto.ibc.lightclients.solomachine.v1.SignatureAndData.toObject(includeInstance, f)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.lightclients.solomachine.v1.Misbehaviour}
  */
-proto.ibc.lightclients.solomachine.v1.Misbehaviour.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.lightclients.solomachine.v1.Misbehaviour();
+proto.ibc.lightclients.solomachine.v1.Misbehaviour.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.lightclients.solomachine.v1.Misbehaviour;
   return proto.ibc.lightclients.solomachine.v1.Misbehaviour.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -806,48 +858,50 @@ proto.ibc.lightclients.solomachine.v1.Misbehaviour.deserializeBinary = function 
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.lightclients.solomachine.v1.Misbehaviour}
  */
-proto.ibc.lightclients.solomachine.v1.Misbehaviour.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.lightclients.solomachine.v1.Misbehaviour.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setClientId(value);
-        break;
-      case 2:
-        var value = /** @type {number} */ (reader.readUint64());
-        msg.setSequence(value);
-        break;
-      case 3:
-        var value = new proto.ibc.lightclients.solomachine.v1.SignatureAndData();
-        reader.readMessage(value, proto.ibc.lightclients.solomachine.v1.SignatureAndData.deserializeBinaryFromReader);
-        msg.setSignatureOne(value);
-        break;
-      case 4:
-        var value = new proto.ibc.lightclients.solomachine.v1.SignatureAndData();
-        reader.readMessage(value, proto.ibc.lightclients.solomachine.v1.SignatureAndData.deserializeBinaryFromReader);
-        msg.setSignatureTwo(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setClientId(value);
+      break;
+    case 2:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setSequence(value);
+      break;
+    case 3:
+      var value = new proto.ibc.lightclients.solomachine.v1.SignatureAndData;
+      reader.readMessage(value,proto.ibc.lightclients.solomachine.v1.SignatureAndData.deserializeBinaryFromReader);
+      msg.setSignatureOne(value);
+      break;
+    case 4:
+      var value = new proto.ibc.lightclients.solomachine.v1.SignatureAndData;
+      reader.readMessage(value,proto.ibc.lightclients.solomachine.v1.SignatureAndData.deserializeBinaryFromReader);
+      msg.setSignatureTwo(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.lightclients.solomachine.v1.Misbehaviour.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.lightclients.solomachine.v1.Misbehaviour.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.lightclients.solomachine.v1.Misbehaviour.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -856,20 +910,20 @@ proto.ibc.lightclients.solomachine.v1.Misbehaviour.prototype.serializeBinary = f
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.lightclients.solomachine.v1.Misbehaviour.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.lightclients.solomachine.v1.Misbehaviour.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getClientId();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f,
+      f
     );
   }
   f = message.getSequence();
   if (f !== 0) {
     writer.writeUint64(
       2,
-      f,
+      f
     );
   }
   f = message.getSignatureOne();
@@ -877,7 +931,7 @@ proto.ibc.lightclients.solomachine.v1.Misbehaviour.serializeBinaryToWriter = fun
     writer.writeMessage(
       3,
       f,
-      proto.ibc.lightclients.solomachine.v1.SignatureAndData.serializeBinaryToWriter,
+      proto.ibc.lightclients.solomachine.v1.SignatureAndData.serializeBinaryToWriter
     );
   }
   f = message.getSignatureTwo();
@@ -885,88 +939,102 @@ proto.ibc.lightclients.solomachine.v1.Misbehaviour.serializeBinaryToWriter = fun
     writer.writeMessage(
       4,
       f,
-      proto.ibc.lightclients.solomachine.v1.SignatureAndData.serializeBinaryToWriter,
+      proto.ibc.lightclients.solomachine.v1.SignatureAndData.serializeBinaryToWriter
     );
   }
 };
+
 
 /**
  * optional string client_id = 1;
  * @return {string}
  */
-proto.ibc.lightclients.solomachine.v1.Misbehaviour.prototype.getClientId = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.ibc.lightclients.solomachine.v1.Misbehaviour.prototype.getClientId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
+
 /** @param {string} value */
-proto.ibc.lightclients.solomachine.v1.Misbehaviour.prototype.setClientId = function (value) {
+proto.ibc.lightclients.solomachine.v1.Misbehaviour.prototype.setClientId = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
+
 
 /**
  * optional uint64 sequence = 2;
  * @return {number}
  */
-proto.ibc.lightclients.solomachine.v1.Misbehaviour.prototype.getSequence = function () {
+proto.ibc.lightclients.solomachine.v1.Misbehaviour.prototype.getSequence = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
+
 /** @param {number} value */
-proto.ibc.lightclients.solomachine.v1.Misbehaviour.prototype.setSequence = function (value) {
+proto.ibc.lightclients.solomachine.v1.Misbehaviour.prototype.setSequence = function(value) {
   jspb.Message.setProto3IntField(this, 2, value);
 };
+
 
 /**
  * optional SignatureAndData signature_one = 3;
  * @return {?proto.ibc.lightclients.solomachine.v1.SignatureAndData}
  */
-proto.ibc.lightclients.solomachine.v1.Misbehaviour.prototype.getSignatureOne = function () {
+proto.ibc.lightclients.solomachine.v1.Misbehaviour.prototype.getSignatureOne = function() {
   return /** @type{?proto.ibc.lightclients.solomachine.v1.SignatureAndData} */ (
     jspb.Message.getWrapperField(this, proto.ibc.lightclients.solomachine.v1.SignatureAndData, 3));
 };
 
+
 /** @param {?proto.ibc.lightclients.solomachine.v1.SignatureAndData|undefined} value */
-proto.ibc.lightclients.solomachine.v1.Misbehaviour.prototype.setSignatureOne = function (value) {
+proto.ibc.lightclients.solomachine.v1.Misbehaviour.prototype.setSignatureOne = function(value) {
   jspb.Message.setWrapperField(this, 3, value);
 };
 
-proto.ibc.lightclients.solomachine.v1.Misbehaviour.prototype.clearSignatureOne = function () {
+
+proto.ibc.lightclients.solomachine.v1.Misbehaviour.prototype.clearSignatureOne = function() {
   this.setSignatureOne(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.ibc.lightclients.solomachine.v1.Misbehaviour.prototype.hasSignatureOne = function () {
+proto.ibc.lightclients.solomachine.v1.Misbehaviour.prototype.hasSignatureOne = function() {
   return jspb.Message.getField(this, 3) != null;
 };
+
 
 /**
  * optional SignatureAndData signature_two = 4;
  * @return {?proto.ibc.lightclients.solomachine.v1.SignatureAndData}
  */
-proto.ibc.lightclients.solomachine.v1.Misbehaviour.prototype.getSignatureTwo = function () {
+proto.ibc.lightclients.solomachine.v1.Misbehaviour.prototype.getSignatureTwo = function() {
   return /** @type{?proto.ibc.lightclients.solomachine.v1.SignatureAndData} */ (
     jspb.Message.getWrapperField(this, proto.ibc.lightclients.solomachine.v1.SignatureAndData, 4));
 };
 
+
 /** @param {?proto.ibc.lightclients.solomachine.v1.SignatureAndData|undefined} value */
-proto.ibc.lightclients.solomachine.v1.Misbehaviour.prototype.setSignatureTwo = function (value) {
+proto.ibc.lightclients.solomachine.v1.Misbehaviour.prototype.setSignatureTwo = function(value) {
   jspb.Message.setWrapperField(this, 4, value);
 };
 
-proto.ibc.lightclients.solomachine.v1.Misbehaviour.prototype.clearSignatureTwo = function () {
+
+proto.ibc.lightclients.solomachine.v1.Misbehaviour.prototype.clearSignatureTwo = function() {
   this.setSignatureTwo(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.ibc.lightclients.solomachine.v1.Misbehaviour.prototype.hasSignatureTwo = function () {
+proto.ibc.lightclients.solomachine.v1.Misbehaviour.prototype.hasSignatureTwo = function() {
   return jspb.Message.getField(this, 4) != null;
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -978,13 +1046,14 @@ proto.ibc.lightclients.solomachine.v1.Misbehaviour.prototype.hasSignatureTwo = f
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.lightclients.solomachine.v1.SignatureAndData = function (opt_data) {
+proto.ibc.lightclients.solomachine.v1.SignatureAndData = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.ibc.lightclients.solomachine.v1.SignatureAndData, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.ibc.lightclients.solomachine.v1.SignatureAndData.displayName = 'proto.ibc.lightclients.solomachine.v1.SignatureAndData';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -997,11 +1066,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.lightclients.solomachine.v1.SignatureAndData.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.lightclients.solomachine.v1.SignatureAndData.toObject(opt_includeInstance, this);
-  };
+proto.ibc.lightclients.solomachine.v1.SignatureAndData.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.lightclients.solomachine.v1.SignatureAndData.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -1010,32 +1080,33 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.lightclients.solomachine.v1.SignatureAndData.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        signature: msg.getSignature_asB64(),
-        dataType: jspb.Message.getFieldWithDefault(msg, 2, 0),
-        data: msg.getData_asB64(),
-        timestamp: jspb.Message.getFieldWithDefault(msg, 4, 0),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.lightclients.solomachine.v1.SignatureAndData.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    signature: msg.getSignature_asB64(),
+    dataType: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    data: msg.getData_asB64(),
+    timestamp: jspb.Message.getFieldWithDefault(msg, 4, 0)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.lightclients.solomachine.v1.SignatureAndData}
  */
-proto.ibc.lightclients.solomachine.v1.SignatureAndData.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.lightclients.solomachine.v1.SignatureAndData();
+proto.ibc.lightclients.solomachine.v1.SignatureAndData.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.lightclients.solomachine.v1.SignatureAndData;
   return proto.ibc.lightclients.solomachine.v1.SignatureAndData.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -1044,46 +1115,48 @@ proto.ibc.lightclients.solomachine.v1.SignatureAndData.deserializeBinary = funct
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.lightclients.solomachine.v1.SignatureAndData}
  */
-proto.ibc.lightclients.solomachine.v1.SignatureAndData.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.lightclients.solomachine.v1.SignatureAndData.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setSignature(value);
-        break;
-      case 2:
-        var value = /** @type {!proto.ibc.lightclients.solomachine.v1.DataType} */ (reader.readEnum());
-        msg.setDataType(value);
-        break;
-      case 3:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setData(value);
-        break;
-      case 4:
-        var value = /** @type {number} */ (reader.readUint64());
-        msg.setTimestamp(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setSignature(value);
+      break;
+    case 2:
+      var value = /** @type {!proto.ibc.lightclients.solomachine.v1.DataType} */ (reader.readEnum());
+      msg.setDataType(value);
+      break;
+    case 3:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setData(value);
+      break;
+    case 4:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setTimestamp(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.lightclients.solomachine.v1.SignatureAndData.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.lightclients.solomachine.v1.SignatureAndData.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.lightclients.solomachine.v1.SignatureAndData.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -1092,56 +1165,58 @@ proto.ibc.lightclients.solomachine.v1.SignatureAndData.prototype.serializeBinary
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.lightclients.solomachine.v1.SignatureAndData.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.lightclients.solomachine.v1.SignatureAndData.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getSignature_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       1,
-      f,
+      f
     );
   }
   f = message.getDataType();
   if (f !== 0.0) {
     writer.writeEnum(
       2,
-      f,
+      f
     );
   }
   f = message.getData_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       3,
-      f,
+      f
     );
   }
   f = message.getTimestamp();
   if (f !== 0) {
     writer.writeUint64(
       4,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * optional bytes signature = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.ibc.lightclients.solomachine.v1.SignatureAndData.prototype.getSignature = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.ibc.lightclients.solomachine.v1.SignatureAndData.prototype.getSignature = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
+
 
 /**
  * optional bytes signature = 1;
  * This is a type-conversion wrapper around `getSignature()`
  * @return {string}
  */
-proto.ibc.lightclients.solomachine.v1.SignatureAndData.prototype.getSignature_asB64 = function () {
+proto.ibc.lightclients.solomachine.v1.SignatureAndData.prototype.getSignature_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getSignature(),
-  ));
+      this.getSignature()));
 };
+
 
 /**
  * optional bytes signature = 1;
@@ -1150,48 +1225,52 @@ proto.ibc.lightclients.solomachine.v1.SignatureAndData.prototype.getSignature_as
  * This is a type-conversion wrapper around `getSignature()`
  * @return {!Uint8Array}
  */
-proto.ibc.lightclients.solomachine.v1.SignatureAndData.prototype.getSignature_asU8 = function () {
+proto.ibc.lightclients.solomachine.v1.SignatureAndData.prototype.getSignature_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getSignature(),
-  ));
+      this.getSignature()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.ibc.lightclients.solomachine.v1.SignatureAndData.prototype.setSignature = function (value) {
+proto.ibc.lightclients.solomachine.v1.SignatureAndData.prototype.setSignature = function(value) {
   jspb.Message.setProto3BytesField(this, 1, value);
 };
+
 
 /**
  * optional DataType data_type = 2;
  * @return {!proto.ibc.lightclients.solomachine.v1.DataType}
  */
-proto.ibc.lightclients.solomachine.v1.SignatureAndData.prototype.getDataType = function () {
+proto.ibc.lightclients.solomachine.v1.SignatureAndData.prototype.getDataType = function() {
   return /** @type {!proto.ibc.lightclients.solomachine.v1.DataType} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
+
 /** @param {!proto.ibc.lightclients.solomachine.v1.DataType} value */
-proto.ibc.lightclients.solomachine.v1.SignatureAndData.prototype.setDataType = function (value) {
+proto.ibc.lightclients.solomachine.v1.SignatureAndData.prototype.setDataType = function(value) {
   jspb.Message.setProto3EnumField(this, 2, value);
 };
+
 
 /**
  * optional bytes data = 3;
  * @return {!(string|Uint8Array)}
  */
-proto.ibc.lightclients.solomachine.v1.SignatureAndData.prototype.getData = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 3, ''));
+proto.ibc.lightclients.solomachine.v1.SignatureAndData.prototype.getData = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
+
 
 /**
  * optional bytes data = 3;
  * This is a type-conversion wrapper around `getData()`
  * @return {string}
  */
-proto.ibc.lightclients.solomachine.v1.SignatureAndData.prototype.getData_asB64 = function () {
+proto.ibc.lightclients.solomachine.v1.SignatureAndData.prototype.getData_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getData(),
-  ));
+      this.getData()));
 };
+
 
 /**
  * optional bytes data = 3;
@@ -1200,29 +1279,33 @@ proto.ibc.lightclients.solomachine.v1.SignatureAndData.prototype.getData_asB64 =
  * This is a type-conversion wrapper around `getData()`
  * @return {!Uint8Array}
  */
-proto.ibc.lightclients.solomachine.v1.SignatureAndData.prototype.getData_asU8 = function () {
+proto.ibc.lightclients.solomachine.v1.SignatureAndData.prototype.getData_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getData(),
-  ));
+      this.getData()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.ibc.lightclients.solomachine.v1.SignatureAndData.prototype.setData = function (value) {
+proto.ibc.lightclients.solomachine.v1.SignatureAndData.prototype.setData = function(value) {
   jspb.Message.setProto3BytesField(this, 3, value);
 };
+
 
 /**
  * optional uint64 timestamp = 4;
  * @return {number}
  */
-proto.ibc.lightclients.solomachine.v1.SignatureAndData.prototype.getTimestamp = function () {
+proto.ibc.lightclients.solomachine.v1.SignatureAndData.prototype.getTimestamp = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
 };
 
+
 /** @param {number} value */
-proto.ibc.lightclients.solomachine.v1.SignatureAndData.prototype.setTimestamp = function (value) {
+proto.ibc.lightclients.solomachine.v1.SignatureAndData.prototype.setTimestamp = function(value) {
   jspb.Message.setProto3IntField(this, 4, value);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -1234,13 +1317,14 @@ proto.ibc.lightclients.solomachine.v1.SignatureAndData.prototype.setTimestamp = 
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.lightclients.solomachine.v1.TimestampedSignatureData = function (opt_data) {
+proto.ibc.lightclients.solomachine.v1.TimestampedSignatureData = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.ibc.lightclients.solomachine.v1.TimestampedSignatureData, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.ibc.lightclients.solomachine.v1.TimestampedSignatureData.displayName = 'proto.ibc.lightclients.solomachine.v1.TimestampedSignatureData';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -1253,11 +1337,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.lightclients.solomachine.v1.TimestampedSignatureData.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.lightclients.solomachine.v1.TimestampedSignatureData.toObject(opt_includeInstance, this);
-  };
+proto.ibc.lightclients.solomachine.v1.TimestampedSignatureData.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.lightclients.solomachine.v1.TimestampedSignatureData.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -1266,30 +1351,31 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.lightclients.solomachine.v1.TimestampedSignatureData.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        signatureData: msg.getSignatureData_asB64(),
-        timestamp: jspb.Message.getFieldWithDefault(msg, 2, 0),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.lightclients.solomachine.v1.TimestampedSignatureData.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    signatureData: msg.getSignatureData_asB64(),
+    timestamp: jspb.Message.getFieldWithDefault(msg, 2, 0)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.lightclients.solomachine.v1.TimestampedSignatureData}
  */
-proto.ibc.lightclients.solomachine.v1.TimestampedSignatureData.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.lightclients.solomachine.v1.TimestampedSignatureData();
+proto.ibc.lightclients.solomachine.v1.TimestampedSignatureData.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.lightclients.solomachine.v1.TimestampedSignatureData;
   return proto.ibc.lightclients.solomachine.v1.TimestampedSignatureData.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -1298,38 +1384,40 @@ proto.ibc.lightclients.solomachine.v1.TimestampedSignatureData.deserializeBinary
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.lightclients.solomachine.v1.TimestampedSignatureData}
  */
-proto.ibc.lightclients.solomachine.v1.TimestampedSignatureData.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.lightclients.solomachine.v1.TimestampedSignatureData.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setSignatureData(value);
-        break;
-      case 2:
-        var value = /** @type {number} */ (reader.readUint64());
-        msg.setTimestamp(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setSignatureData(value);
+      break;
+    case 2:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setTimestamp(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.lightclients.solomachine.v1.TimestampedSignatureData.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.lightclients.solomachine.v1.TimestampedSignatureData.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.lightclients.solomachine.v1.TimestampedSignatureData.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -1338,42 +1426,44 @@ proto.ibc.lightclients.solomachine.v1.TimestampedSignatureData.prototype.seriali
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.lightclients.solomachine.v1.TimestampedSignatureData.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.lightclients.solomachine.v1.TimestampedSignatureData.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getSignatureData_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       1,
-      f,
+      f
     );
   }
   f = message.getTimestamp();
   if (f !== 0) {
     writer.writeUint64(
       2,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * optional bytes signature_data = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.ibc.lightclients.solomachine.v1.TimestampedSignatureData.prototype.getSignatureData = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.ibc.lightclients.solomachine.v1.TimestampedSignatureData.prototype.getSignatureData = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
+
 
 /**
  * optional bytes signature_data = 1;
  * This is a type-conversion wrapper around `getSignatureData()`
  * @return {string}
  */
-proto.ibc.lightclients.solomachine.v1.TimestampedSignatureData.prototype.getSignatureData_asB64 = function () {
+proto.ibc.lightclients.solomachine.v1.TimestampedSignatureData.prototype.getSignatureData_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getSignatureData(),
-  ));
+      this.getSignatureData()));
 };
+
 
 /**
  * optional bytes signature_data = 1;
@@ -1382,29 +1472,33 @@ proto.ibc.lightclients.solomachine.v1.TimestampedSignatureData.prototype.getSign
  * This is a type-conversion wrapper around `getSignatureData()`
  * @return {!Uint8Array}
  */
-proto.ibc.lightclients.solomachine.v1.TimestampedSignatureData.prototype.getSignatureData_asU8 = function () {
+proto.ibc.lightclients.solomachine.v1.TimestampedSignatureData.prototype.getSignatureData_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getSignatureData(),
-  ));
+      this.getSignatureData()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.ibc.lightclients.solomachine.v1.TimestampedSignatureData.prototype.setSignatureData = function (value) {
+proto.ibc.lightclients.solomachine.v1.TimestampedSignatureData.prototype.setSignatureData = function(value) {
   jspb.Message.setProto3BytesField(this, 1, value);
 };
+
 
 /**
  * optional uint64 timestamp = 2;
  * @return {number}
  */
-proto.ibc.lightclients.solomachine.v1.TimestampedSignatureData.prototype.getTimestamp = function () {
+proto.ibc.lightclients.solomachine.v1.TimestampedSignatureData.prototype.getTimestamp = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
+
 /** @param {number} value */
-proto.ibc.lightclients.solomachine.v1.TimestampedSignatureData.prototype.setTimestamp = function (value) {
+proto.ibc.lightclients.solomachine.v1.TimestampedSignatureData.prototype.setTimestamp = function(value) {
   jspb.Message.setProto3IntField(this, 2, value);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -1416,13 +1510,14 @@ proto.ibc.lightclients.solomachine.v1.TimestampedSignatureData.prototype.setTime
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.lightclients.solomachine.v1.SignBytes = function (opt_data) {
+proto.ibc.lightclients.solomachine.v1.SignBytes = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.ibc.lightclients.solomachine.v1.SignBytes, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.ibc.lightclients.solomachine.v1.SignBytes.displayName = 'proto.ibc.lightclients.solomachine.v1.SignBytes';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -1435,11 +1530,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.lightclients.solomachine.v1.SignBytes.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.lightclients.solomachine.v1.SignBytes.toObject(opt_includeInstance, this);
-  };
+proto.ibc.lightclients.solomachine.v1.SignBytes.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.lightclients.solomachine.v1.SignBytes.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -1448,33 +1544,34 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.lightclients.solomachine.v1.SignBytes.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        sequence: jspb.Message.getFieldWithDefault(msg, 1, 0),
-        timestamp: jspb.Message.getFieldWithDefault(msg, 2, 0),
-        diversifier: jspb.Message.getFieldWithDefault(msg, 3, ''),
-        dataType: jspb.Message.getFieldWithDefault(msg, 4, 0),
-        data: msg.getData_asB64(),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.lightclients.solomachine.v1.SignBytes.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    sequence: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    timestamp: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    diversifier: jspb.Message.getFieldWithDefault(msg, 3, ""),
+    dataType: jspb.Message.getFieldWithDefault(msg, 4, 0),
+    data: msg.getData_asB64()
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.lightclients.solomachine.v1.SignBytes}
  */
-proto.ibc.lightclients.solomachine.v1.SignBytes.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.lightclients.solomachine.v1.SignBytes();
+proto.ibc.lightclients.solomachine.v1.SignBytes.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.lightclients.solomachine.v1.SignBytes;
   return proto.ibc.lightclients.solomachine.v1.SignBytes.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -1483,50 +1580,52 @@ proto.ibc.lightclients.solomachine.v1.SignBytes.deserializeBinary = function (by
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.lightclients.solomachine.v1.SignBytes}
  */
-proto.ibc.lightclients.solomachine.v1.SignBytes.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.lightclients.solomachine.v1.SignBytes.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {number} */ (reader.readUint64());
-        msg.setSequence(value);
-        break;
-      case 2:
-        var value = /** @type {number} */ (reader.readUint64());
-        msg.setTimestamp(value);
-        break;
-      case 3:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setDiversifier(value);
-        break;
-      case 4:
-        var value = /** @type {!proto.ibc.lightclients.solomachine.v1.DataType} */ (reader.readEnum());
-        msg.setDataType(value);
-        break;
-      case 5:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setData(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setSequence(value);
+      break;
+    case 2:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setTimestamp(value);
+      break;
+    case 3:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setDiversifier(value);
+      break;
+    case 4:
+      var value = /** @type {!proto.ibc.lightclients.solomachine.v1.DataType} */ (reader.readEnum());
+      msg.setDataType(value);
+      break;
+    case 5:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setData(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.lightclients.solomachine.v1.SignBytes.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.lightclients.solomachine.v1.SignBytes.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.lightclients.solomachine.v1.SignBytes.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -1535,115 +1634,125 @@ proto.ibc.lightclients.solomachine.v1.SignBytes.prototype.serializeBinary = func
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.lightclients.solomachine.v1.SignBytes.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.lightclients.solomachine.v1.SignBytes.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getSequence();
   if (f !== 0) {
     writer.writeUint64(
       1,
-      f,
+      f
     );
   }
   f = message.getTimestamp();
   if (f !== 0) {
     writer.writeUint64(
       2,
-      f,
+      f
     );
   }
   f = message.getDiversifier();
   if (f.length > 0) {
     writer.writeString(
       3,
-      f,
+      f
     );
   }
   f = message.getDataType();
   if (f !== 0.0) {
     writer.writeEnum(
       4,
-      f,
+      f
     );
   }
   f = message.getData_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       5,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * optional uint64 sequence = 1;
  * @return {number}
  */
-proto.ibc.lightclients.solomachine.v1.SignBytes.prototype.getSequence = function () {
+proto.ibc.lightclients.solomachine.v1.SignBytes.prototype.getSequence = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
+
 /** @param {number} value */
-proto.ibc.lightclients.solomachine.v1.SignBytes.prototype.setSequence = function (value) {
+proto.ibc.lightclients.solomachine.v1.SignBytes.prototype.setSequence = function(value) {
   jspb.Message.setProto3IntField(this, 1, value);
 };
+
 
 /**
  * optional uint64 timestamp = 2;
  * @return {number}
  */
-proto.ibc.lightclients.solomachine.v1.SignBytes.prototype.getTimestamp = function () {
+proto.ibc.lightclients.solomachine.v1.SignBytes.prototype.getTimestamp = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
+
 /** @param {number} value */
-proto.ibc.lightclients.solomachine.v1.SignBytes.prototype.setTimestamp = function (value) {
+proto.ibc.lightclients.solomachine.v1.SignBytes.prototype.setTimestamp = function(value) {
   jspb.Message.setProto3IntField(this, 2, value);
 };
+
 
 /**
  * optional string diversifier = 3;
  * @return {string}
  */
-proto.ibc.lightclients.solomachine.v1.SignBytes.prototype.getDiversifier = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ''));
+proto.ibc.lightclients.solomachine.v1.SignBytes.prototype.getDiversifier = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
+
 /** @param {string} value */
-proto.ibc.lightclients.solomachine.v1.SignBytes.prototype.setDiversifier = function (value) {
+proto.ibc.lightclients.solomachine.v1.SignBytes.prototype.setDiversifier = function(value) {
   jspb.Message.setProto3StringField(this, 3, value);
 };
+
 
 /**
  * optional DataType data_type = 4;
  * @return {!proto.ibc.lightclients.solomachine.v1.DataType}
  */
-proto.ibc.lightclients.solomachine.v1.SignBytes.prototype.getDataType = function () {
+proto.ibc.lightclients.solomachine.v1.SignBytes.prototype.getDataType = function() {
   return /** @type {!proto.ibc.lightclients.solomachine.v1.DataType} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
 };
 
+
 /** @param {!proto.ibc.lightclients.solomachine.v1.DataType} value */
-proto.ibc.lightclients.solomachine.v1.SignBytes.prototype.setDataType = function (value) {
+proto.ibc.lightclients.solomachine.v1.SignBytes.prototype.setDataType = function(value) {
   jspb.Message.setProto3EnumField(this, 4, value);
 };
+
 
 /**
  * optional bytes data = 5;
  * @return {!(string|Uint8Array)}
  */
-proto.ibc.lightclients.solomachine.v1.SignBytes.prototype.getData = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 5, ''));
+proto.ibc.lightclients.solomachine.v1.SignBytes.prototype.getData = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
 };
+
 
 /**
  * optional bytes data = 5;
  * This is a type-conversion wrapper around `getData()`
  * @return {string}
  */
-proto.ibc.lightclients.solomachine.v1.SignBytes.prototype.getData_asB64 = function () {
+proto.ibc.lightclients.solomachine.v1.SignBytes.prototype.getData_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getData(),
-  ));
+      this.getData()));
 };
+
 
 /**
  * optional bytes data = 5;
@@ -1652,16 +1761,18 @@ proto.ibc.lightclients.solomachine.v1.SignBytes.prototype.getData_asB64 = functi
  * This is a type-conversion wrapper around `getData()`
  * @return {!Uint8Array}
  */
-proto.ibc.lightclients.solomachine.v1.SignBytes.prototype.getData_asU8 = function () {
+proto.ibc.lightclients.solomachine.v1.SignBytes.prototype.getData_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getData(),
-  ));
+      this.getData()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.ibc.lightclients.solomachine.v1.SignBytes.prototype.setData = function (value) {
+proto.ibc.lightclients.solomachine.v1.SignBytes.prototype.setData = function(value) {
   jspb.Message.setProto3BytesField(this, 5, value);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -1673,13 +1784,14 @@ proto.ibc.lightclients.solomachine.v1.SignBytes.prototype.setData = function (va
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.lightclients.solomachine.v1.HeaderData = function (opt_data) {
+proto.ibc.lightclients.solomachine.v1.HeaderData = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.ibc.lightclients.solomachine.v1.HeaderData, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.ibc.lightclients.solomachine.v1.HeaderData.displayName = 'proto.ibc.lightclients.solomachine.v1.HeaderData';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -1692,11 +1804,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.lightclients.solomachine.v1.HeaderData.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.lightclients.solomachine.v1.HeaderData.toObject(opt_includeInstance, this);
-  };
+proto.ibc.lightclients.solomachine.v1.HeaderData.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.lightclients.solomachine.v1.HeaderData.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -1705,30 +1818,31 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.lightclients.solomachine.v1.HeaderData.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        newPubKey: (f = msg.getNewPubKey()) && google_protobuf_any_pb.Any.toObject(includeInstance, f),
-        newDiversifier: jspb.Message.getFieldWithDefault(msg, 2, ''),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.lightclients.solomachine.v1.HeaderData.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    newPubKey: (f = msg.getNewPubKey()) && google_protobuf_any_pb.Any.toObject(includeInstance, f),
+    newDiversifier: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.lightclients.solomachine.v1.HeaderData}
  */
-proto.ibc.lightclients.solomachine.v1.HeaderData.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.lightclients.solomachine.v1.HeaderData();
+proto.ibc.lightclients.solomachine.v1.HeaderData.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.lightclients.solomachine.v1.HeaderData;
   return proto.ibc.lightclients.solomachine.v1.HeaderData.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -1737,39 +1851,41 @@ proto.ibc.lightclients.solomachine.v1.HeaderData.deserializeBinary = function (b
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.lightclients.solomachine.v1.HeaderData}
  */
-proto.ibc.lightclients.solomachine.v1.HeaderData.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.lightclients.solomachine.v1.HeaderData.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = new google_protobuf_any_pb.Any();
-        reader.readMessage(value, google_protobuf_any_pb.Any.deserializeBinaryFromReader);
-        msg.setNewPubKey(value);
-        break;
-      case 2:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setNewDiversifier(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = new google_protobuf_any_pb.Any;
+      reader.readMessage(value,google_protobuf_any_pb.Any.deserializeBinaryFromReader);
+      msg.setNewPubKey(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setNewDiversifier(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.lightclients.solomachine.v1.HeaderData.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.lightclients.solomachine.v1.HeaderData.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.lightclients.solomachine.v1.HeaderData.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -1778,63 +1894,71 @@ proto.ibc.lightclients.solomachine.v1.HeaderData.prototype.serializeBinary = fun
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.lightclients.solomachine.v1.HeaderData.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.lightclients.solomachine.v1.HeaderData.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getNewPubKey();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      google_protobuf_any_pb.Any.serializeBinaryToWriter,
+      google_protobuf_any_pb.Any.serializeBinaryToWriter
     );
   }
   f = message.getNewDiversifier();
   if (f.length > 0) {
     writer.writeString(
       2,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * optional google.protobuf.Any new_pub_key = 1;
  * @return {?proto.google.protobuf.Any}
  */
-proto.ibc.lightclients.solomachine.v1.HeaderData.prototype.getNewPubKey = function () {
+proto.ibc.lightclients.solomachine.v1.HeaderData.prototype.getNewPubKey = function() {
   return /** @type{?proto.google.protobuf.Any} */ (
     jspb.Message.getWrapperField(this, google_protobuf_any_pb.Any, 1));
 };
 
+
 /** @param {?proto.google.protobuf.Any|undefined} value */
-proto.ibc.lightclients.solomachine.v1.HeaderData.prototype.setNewPubKey = function (value) {
+proto.ibc.lightclients.solomachine.v1.HeaderData.prototype.setNewPubKey = function(value) {
   jspb.Message.setWrapperField(this, 1, value);
 };
 
-proto.ibc.lightclients.solomachine.v1.HeaderData.prototype.clearNewPubKey = function () {
+
+proto.ibc.lightclients.solomachine.v1.HeaderData.prototype.clearNewPubKey = function() {
   this.setNewPubKey(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.ibc.lightclients.solomachine.v1.HeaderData.prototype.hasNewPubKey = function () {
+proto.ibc.lightclients.solomachine.v1.HeaderData.prototype.hasNewPubKey = function() {
   return jspb.Message.getField(this, 1) != null;
 };
+
 
 /**
  * optional string new_diversifier = 2;
  * @return {string}
  */
-proto.ibc.lightclients.solomachine.v1.HeaderData.prototype.getNewDiversifier = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
+proto.ibc.lightclients.solomachine.v1.HeaderData.prototype.getNewDiversifier = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
+
 /** @param {string} value */
-proto.ibc.lightclients.solomachine.v1.HeaderData.prototype.setNewDiversifier = function (value) {
+proto.ibc.lightclients.solomachine.v1.HeaderData.prototype.setNewDiversifier = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -1846,13 +1970,14 @@ proto.ibc.lightclients.solomachine.v1.HeaderData.prototype.setNewDiversifier = f
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.lightclients.solomachine.v1.ClientStateData = function (opt_data) {
+proto.ibc.lightclients.solomachine.v1.ClientStateData = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.ibc.lightclients.solomachine.v1.ClientStateData, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.ibc.lightclients.solomachine.v1.ClientStateData.displayName = 'proto.ibc.lightclients.solomachine.v1.ClientStateData';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -1865,11 +1990,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.lightclients.solomachine.v1.ClientStateData.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.lightclients.solomachine.v1.ClientStateData.toObject(opt_includeInstance, this);
-  };
+proto.ibc.lightclients.solomachine.v1.ClientStateData.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.lightclients.solomachine.v1.ClientStateData.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -1878,30 +2004,31 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.lightclients.solomachine.v1.ClientStateData.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        path: msg.getPath_asB64(),
-        clientState: (f = msg.getClientState()) && google_protobuf_any_pb.Any.toObject(includeInstance, f),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.lightclients.solomachine.v1.ClientStateData.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    path: msg.getPath_asB64(),
+    clientState: (f = msg.getClientState()) && google_protobuf_any_pb.Any.toObject(includeInstance, f)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.lightclients.solomachine.v1.ClientStateData}
  */
-proto.ibc.lightclients.solomachine.v1.ClientStateData.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.lightclients.solomachine.v1.ClientStateData();
+proto.ibc.lightclients.solomachine.v1.ClientStateData.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.lightclients.solomachine.v1.ClientStateData;
   return proto.ibc.lightclients.solomachine.v1.ClientStateData.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -1910,39 +2037,41 @@ proto.ibc.lightclients.solomachine.v1.ClientStateData.deserializeBinary = functi
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.lightclients.solomachine.v1.ClientStateData}
  */
-proto.ibc.lightclients.solomachine.v1.ClientStateData.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.lightclients.solomachine.v1.ClientStateData.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setPath(value);
-        break;
-      case 2:
-        var value = new google_protobuf_any_pb.Any();
-        reader.readMessage(value, google_protobuf_any_pb.Any.deserializeBinaryFromReader);
-        msg.setClientState(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setPath(value);
+      break;
+    case 2:
+      var value = new google_protobuf_any_pb.Any;
+      reader.readMessage(value,google_protobuf_any_pb.Any.deserializeBinaryFromReader);
+      msg.setClientState(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.lightclients.solomachine.v1.ClientStateData.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.lightclients.solomachine.v1.ClientStateData.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.lightclients.solomachine.v1.ClientStateData.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -1951,13 +2080,13 @@ proto.ibc.lightclients.solomachine.v1.ClientStateData.prototype.serializeBinary 
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.lightclients.solomachine.v1.ClientStateData.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.lightclients.solomachine.v1.ClientStateData.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getPath_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       1,
-      f,
+      f
     );
   }
   f = message.getClientState();
@@ -1965,29 +2094,31 @@ proto.ibc.lightclients.solomachine.v1.ClientStateData.serializeBinaryToWriter = 
     writer.writeMessage(
       2,
       f,
-      google_protobuf_any_pb.Any.serializeBinaryToWriter,
+      google_protobuf_any_pb.Any.serializeBinaryToWriter
     );
   }
 };
+
 
 /**
  * optional bytes path = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.ibc.lightclients.solomachine.v1.ClientStateData.prototype.getPath = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.ibc.lightclients.solomachine.v1.ClientStateData.prototype.getPath = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
+
 
 /**
  * optional bytes path = 1;
  * This is a type-conversion wrapper around `getPath()`
  * @return {string}
  */
-proto.ibc.lightclients.solomachine.v1.ClientStateData.prototype.getPath_asB64 = function () {
+proto.ibc.lightclients.solomachine.v1.ClientStateData.prototype.getPath_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getPath(),
-  ));
+      this.getPath()));
 };
+
 
 /**
  * optional bytes path = 1;
@@ -1996,42 +2127,48 @@ proto.ibc.lightclients.solomachine.v1.ClientStateData.prototype.getPath_asB64 = 
  * This is a type-conversion wrapper around `getPath()`
  * @return {!Uint8Array}
  */
-proto.ibc.lightclients.solomachine.v1.ClientStateData.prototype.getPath_asU8 = function () {
+proto.ibc.lightclients.solomachine.v1.ClientStateData.prototype.getPath_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getPath(),
-  ));
+      this.getPath()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.ibc.lightclients.solomachine.v1.ClientStateData.prototype.setPath = function (value) {
+proto.ibc.lightclients.solomachine.v1.ClientStateData.prototype.setPath = function(value) {
   jspb.Message.setProto3BytesField(this, 1, value);
 };
+
 
 /**
  * optional google.protobuf.Any client_state = 2;
  * @return {?proto.google.protobuf.Any}
  */
-proto.ibc.lightclients.solomachine.v1.ClientStateData.prototype.getClientState = function () {
+proto.ibc.lightclients.solomachine.v1.ClientStateData.prototype.getClientState = function() {
   return /** @type{?proto.google.protobuf.Any} */ (
     jspb.Message.getWrapperField(this, google_protobuf_any_pb.Any, 2));
 };
 
+
 /** @param {?proto.google.protobuf.Any|undefined} value */
-proto.ibc.lightclients.solomachine.v1.ClientStateData.prototype.setClientState = function (value) {
+proto.ibc.lightclients.solomachine.v1.ClientStateData.prototype.setClientState = function(value) {
   jspb.Message.setWrapperField(this, 2, value);
 };
 
-proto.ibc.lightclients.solomachine.v1.ClientStateData.prototype.clearClientState = function () {
+
+proto.ibc.lightclients.solomachine.v1.ClientStateData.prototype.clearClientState = function() {
   this.setClientState(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.ibc.lightclients.solomachine.v1.ClientStateData.prototype.hasClientState = function () {
+proto.ibc.lightclients.solomachine.v1.ClientStateData.prototype.hasClientState = function() {
   return jspb.Message.getField(this, 2) != null;
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -2043,13 +2180,14 @@ proto.ibc.lightclients.solomachine.v1.ClientStateData.prototype.hasClientState =
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.lightclients.solomachine.v1.ConsensusStateData = function (opt_data) {
+proto.ibc.lightclients.solomachine.v1.ConsensusStateData = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.ibc.lightclients.solomachine.v1.ConsensusStateData, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.ibc.lightclients.solomachine.v1.ConsensusStateData.displayName = 'proto.ibc.lightclients.solomachine.v1.ConsensusStateData';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -2062,11 +2200,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.lightclients.solomachine.v1.ConsensusStateData.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.lightclients.solomachine.v1.ConsensusStateData.toObject(opt_includeInstance, this);
-  };
+proto.ibc.lightclients.solomachine.v1.ConsensusStateData.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.lightclients.solomachine.v1.ConsensusStateData.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -2075,30 +2214,31 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.lightclients.solomachine.v1.ConsensusStateData.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        path: msg.getPath_asB64(),
-        consensusState: (f = msg.getConsensusState()) && google_protobuf_any_pb.Any.toObject(includeInstance, f),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.lightclients.solomachine.v1.ConsensusStateData.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    path: msg.getPath_asB64(),
+    consensusState: (f = msg.getConsensusState()) && google_protobuf_any_pb.Any.toObject(includeInstance, f)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.lightclients.solomachine.v1.ConsensusStateData}
  */
-proto.ibc.lightclients.solomachine.v1.ConsensusStateData.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.lightclients.solomachine.v1.ConsensusStateData();
+proto.ibc.lightclients.solomachine.v1.ConsensusStateData.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.lightclients.solomachine.v1.ConsensusStateData;
   return proto.ibc.lightclients.solomachine.v1.ConsensusStateData.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -2107,39 +2247,41 @@ proto.ibc.lightclients.solomachine.v1.ConsensusStateData.deserializeBinary = fun
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.lightclients.solomachine.v1.ConsensusStateData}
  */
-proto.ibc.lightclients.solomachine.v1.ConsensusStateData.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.lightclients.solomachine.v1.ConsensusStateData.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setPath(value);
-        break;
-      case 2:
-        var value = new google_protobuf_any_pb.Any();
-        reader.readMessage(value, google_protobuf_any_pb.Any.deserializeBinaryFromReader);
-        msg.setConsensusState(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setPath(value);
+      break;
+    case 2:
+      var value = new google_protobuf_any_pb.Any;
+      reader.readMessage(value,google_protobuf_any_pb.Any.deserializeBinaryFromReader);
+      msg.setConsensusState(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.lightclients.solomachine.v1.ConsensusStateData.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.lightclients.solomachine.v1.ConsensusStateData.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.lightclients.solomachine.v1.ConsensusStateData.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -2148,13 +2290,13 @@ proto.ibc.lightclients.solomachine.v1.ConsensusStateData.prototype.serializeBina
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.lightclients.solomachine.v1.ConsensusStateData.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.lightclients.solomachine.v1.ConsensusStateData.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getPath_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       1,
-      f,
+      f
     );
   }
   f = message.getConsensusState();
@@ -2162,29 +2304,31 @@ proto.ibc.lightclients.solomachine.v1.ConsensusStateData.serializeBinaryToWriter
     writer.writeMessage(
       2,
       f,
-      google_protobuf_any_pb.Any.serializeBinaryToWriter,
+      google_protobuf_any_pb.Any.serializeBinaryToWriter
     );
   }
 };
+
 
 /**
  * optional bytes path = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.ibc.lightclients.solomachine.v1.ConsensusStateData.prototype.getPath = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.ibc.lightclients.solomachine.v1.ConsensusStateData.prototype.getPath = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
+
 
 /**
  * optional bytes path = 1;
  * This is a type-conversion wrapper around `getPath()`
  * @return {string}
  */
-proto.ibc.lightclients.solomachine.v1.ConsensusStateData.prototype.getPath_asB64 = function () {
+proto.ibc.lightclients.solomachine.v1.ConsensusStateData.prototype.getPath_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getPath(),
-  ));
+      this.getPath()));
 };
+
 
 /**
  * optional bytes path = 1;
@@ -2193,42 +2337,48 @@ proto.ibc.lightclients.solomachine.v1.ConsensusStateData.prototype.getPath_asB64
  * This is a type-conversion wrapper around `getPath()`
  * @return {!Uint8Array}
  */
-proto.ibc.lightclients.solomachine.v1.ConsensusStateData.prototype.getPath_asU8 = function () {
+proto.ibc.lightclients.solomachine.v1.ConsensusStateData.prototype.getPath_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getPath(),
-  ));
+      this.getPath()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.ibc.lightclients.solomachine.v1.ConsensusStateData.prototype.setPath = function (value) {
+proto.ibc.lightclients.solomachine.v1.ConsensusStateData.prototype.setPath = function(value) {
   jspb.Message.setProto3BytesField(this, 1, value);
 };
+
 
 /**
  * optional google.protobuf.Any consensus_state = 2;
  * @return {?proto.google.protobuf.Any}
  */
-proto.ibc.lightclients.solomachine.v1.ConsensusStateData.prototype.getConsensusState = function () {
+proto.ibc.lightclients.solomachine.v1.ConsensusStateData.prototype.getConsensusState = function() {
   return /** @type{?proto.google.protobuf.Any} */ (
     jspb.Message.getWrapperField(this, google_protobuf_any_pb.Any, 2));
 };
 
+
 /** @param {?proto.google.protobuf.Any|undefined} value */
-proto.ibc.lightclients.solomachine.v1.ConsensusStateData.prototype.setConsensusState = function (value) {
+proto.ibc.lightclients.solomachine.v1.ConsensusStateData.prototype.setConsensusState = function(value) {
   jspb.Message.setWrapperField(this, 2, value);
 };
 
-proto.ibc.lightclients.solomachine.v1.ConsensusStateData.prototype.clearConsensusState = function () {
+
+proto.ibc.lightclients.solomachine.v1.ConsensusStateData.prototype.clearConsensusState = function() {
   this.setConsensusState(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.ibc.lightclients.solomachine.v1.ConsensusStateData.prototype.hasConsensusState = function () {
+proto.ibc.lightclients.solomachine.v1.ConsensusStateData.prototype.hasConsensusState = function() {
   return jspb.Message.getField(this, 2) != null;
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -2240,13 +2390,14 @@ proto.ibc.lightclients.solomachine.v1.ConsensusStateData.prototype.hasConsensusS
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.lightclients.solomachine.v1.ConnectionStateData = function (opt_data) {
+proto.ibc.lightclients.solomachine.v1.ConnectionStateData = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.ibc.lightclients.solomachine.v1.ConnectionStateData, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.ibc.lightclients.solomachine.v1.ConnectionStateData.displayName = 'proto.ibc.lightclients.solomachine.v1.ConnectionStateData';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -2259,11 +2410,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.lightclients.solomachine.v1.ConnectionStateData.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.lightclients.solomachine.v1.ConnectionStateData.toObject(opt_includeInstance, this);
-  };
+proto.ibc.lightclients.solomachine.v1.ConnectionStateData.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.lightclients.solomachine.v1.ConnectionStateData.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -2272,30 +2424,31 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.lightclients.solomachine.v1.ConnectionStateData.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        path: msg.getPath_asB64(),
-        connection: (f = msg.getConnection()) && ibc_core_connection_v1_connection_pb.ConnectionEnd.toObject(includeInstance, f),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.lightclients.solomachine.v1.ConnectionStateData.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    path: msg.getPath_asB64(),
+    connection: (f = msg.getConnection()) && ibc_core_connection_v1_connection_pb.ConnectionEnd.toObject(includeInstance, f)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.lightclients.solomachine.v1.ConnectionStateData}
  */
-proto.ibc.lightclients.solomachine.v1.ConnectionStateData.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.lightclients.solomachine.v1.ConnectionStateData();
+proto.ibc.lightclients.solomachine.v1.ConnectionStateData.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.lightclients.solomachine.v1.ConnectionStateData;
   return proto.ibc.lightclients.solomachine.v1.ConnectionStateData.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -2304,39 +2457,41 @@ proto.ibc.lightclients.solomachine.v1.ConnectionStateData.deserializeBinary = fu
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.lightclients.solomachine.v1.ConnectionStateData}
  */
-proto.ibc.lightclients.solomachine.v1.ConnectionStateData.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.lightclients.solomachine.v1.ConnectionStateData.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setPath(value);
-        break;
-      case 2:
-        var value = new ibc_core_connection_v1_connection_pb.ConnectionEnd();
-        reader.readMessage(value, ibc_core_connection_v1_connection_pb.ConnectionEnd.deserializeBinaryFromReader);
-        msg.setConnection(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setPath(value);
+      break;
+    case 2:
+      var value = new ibc_core_connection_v1_connection_pb.ConnectionEnd;
+      reader.readMessage(value,ibc_core_connection_v1_connection_pb.ConnectionEnd.deserializeBinaryFromReader);
+      msg.setConnection(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.lightclients.solomachine.v1.ConnectionStateData.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.lightclients.solomachine.v1.ConnectionStateData.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.lightclients.solomachine.v1.ConnectionStateData.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -2345,13 +2500,13 @@ proto.ibc.lightclients.solomachine.v1.ConnectionStateData.prototype.serializeBin
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.lightclients.solomachine.v1.ConnectionStateData.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.lightclients.solomachine.v1.ConnectionStateData.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getPath_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       1,
-      f,
+      f
     );
   }
   f = message.getConnection();
@@ -2359,29 +2514,31 @@ proto.ibc.lightclients.solomachine.v1.ConnectionStateData.serializeBinaryToWrite
     writer.writeMessage(
       2,
       f,
-      ibc_core_connection_v1_connection_pb.ConnectionEnd.serializeBinaryToWriter,
+      ibc_core_connection_v1_connection_pb.ConnectionEnd.serializeBinaryToWriter
     );
   }
 };
+
 
 /**
  * optional bytes path = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.ibc.lightclients.solomachine.v1.ConnectionStateData.prototype.getPath = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.ibc.lightclients.solomachine.v1.ConnectionStateData.prototype.getPath = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
+
 
 /**
  * optional bytes path = 1;
  * This is a type-conversion wrapper around `getPath()`
  * @return {string}
  */
-proto.ibc.lightclients.solomachine.v1.ConnectionStateData.prototype.getPath_asB64 = function () {
+proto.ibc.lightclients.solomachine.v1.ConnectionStateData.prototype.getPath_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getPath(),
-  ));
+      this.getPath()));
 };
+
 
 /**
  * optional bytes path = 1;
@@ -2390,42 +2547,48 @@ proto.ibc.lightclients.solomachine.v1.ConnectionStateData.prototype.getPath_asB6
  * This is a type-conversion wrapper around `getPath()`
  * @return {!Uint8Array}
  */
-proto.ibc.lightclients.solomachine.v1.ConnectionStateData.prototype.getPath_asU8 = function () {
+proto.ibc.lightclients.solomachine.v1.ConnectionStateData.prototype.getPath_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getPath(),
-  ));
+      this.getPath()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.ibc.lightclients.solomachine.v1.ConnectionStateData.prototype.setPath = function (value) {
+proto.ibc.lightclients.solomachine.v1.ConnectionStateData.prototype.setPath = function(value) {
   jspb.Message.setProto3BytesField(this, 1, value);
 };
+
 
 /**
  * optional ibc.core.connection.v1.ConnectionEnd connection = 2;
  * @return {?proto.ibc.core.connection.v1.ConnectionEnd}
  */
-proto.ibc.lightclients.solomachine.v1.ConnectionStateData.prototype.getConnection = function () {
+proto.ibc.lightclients.solomachine.v1.ConnectionStateData.prototype.getConnection = function() {
   return /** @type{?proto.ibc.core.connection.v1.ConnectionEnd} */ (
     jspb.Message.getWrapperField(this, ibc_core_connection_v1_connection_pb.ConnectionEnd, 2));
 };
 
+
 /** @param {?proto.ibc.core.connection.v1.ConnectionEnd|undefined} value */
-proto.ibc.lightclients.solomachine.v1.ConnectionStateData.prototype.setConnection = function (value) {
+proto.ibc.lightclients.solomachine.v1.ConnectionStateData.prototype.setConnection = function(value) {
   jspb.Message.setWrapperField(this, 2, value);
 };
 
-proto.ibc.lightclients.solomachine.v1.ConnectionStateData.prototype.clearConnection = function () {
+
+proto.ibc.lightclients.solomachine.v1.ConnectionStateData.prototype.clearConnection = function() {
   this.setConnection(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.ibc.lightclients.solomachine.v1.ConnectionStateData.prototype.hasConnection = function () {
+proto.ibc.lightclients.solomachine.v1.ConnectionStateData.prototype.hasConnection = function() {
   return jspb.Message.getField(this, 2) != null;
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -2437,13 +2600,14 @@ proto.ibc.lightclients.solomachine.v1.ConnectionStateData.prototype.hasConnectio
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.lightclients.solomachine.v1.ChannelStateData = function (opt_data) {
+proto.ibc.lightclients.solomachine.v1.ChannelStateData = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.ibc.lightclients.solomachine.v1.ChannelStateData, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.ibc.lightclients.solomachine.v1.ChannelStateData.displayName = 'proto.ibc.lightclients.solomachine.v1.ChannelStateData';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -2456,11 +2620,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.lightclients.solomachine.v1.ChannelStateData.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.lightclients.solomachine.v1.ChannelStateData.toObject(opt_includeInstance, this);
-  };
+proto.ibc.lightclients.solomachine.v1.ChannelStateData.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.lightclients.solomachine.v1.ChannelStateData.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -2469,30 +2634,31 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.lightclients.solomachine.v1.ChannelStateData.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        path: msg.getPath_asB64(),
-        channel: (f = msg.getChannel()) && ibc_core_channel_v1_channel_pb.Channel.toObject(includeInstance, f),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.lightclients.solomachine.v1.ChannelStateData.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    path: msg.getPath_asB64(),
+    channel: (f = msg.getChannel()) && ibc_core_channel_v1_channel_pb.Channel.toObject(includeInstance, f)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.lightclients.solomachine.v1.ChannelStateData}
  */
-proto.ibc.lightclients.solomachine.v1.ChannelStateData.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.lightclients.solomachine.v1.ChannelStateData();
+proto.ibc.lightclients.solomachine.v1.ChannelStateData.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.lightclients.solomachine.v1.ChannelStateData;
   return proto.ibc.lightclients.solomachine.v1.ChannelStateData.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -2501,39 +2667,41 @@ proto.ibc.lightclients.solomachine.v1.ChannelStateData.deserializeBinary = funct
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.lightclients.solomachine.v1.ChannelStateData}
  */
-proto.ibc.lightclients.solomachine.v1.ChannelStateData.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.lightclients.solomachine.v1.ChannelStateData.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setPath(value);
-        break;
-      case 2:
-        var value = new ibc_core_channel_v1_channel_pb.Channel();
-        reader.readMessage(value, ibc_core_channel_v1_channel_pb.Channel.deserializeBinaryFromReader);
-        msg.setChannel(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setPath(value);
+      break;
+    case 2:
+      var value = new ibc_core_channel_v1_channel_pb.Channel;
+      reader.readMessage(value,ibc_core_channel_v1_channel_pb.Channel.deserializeBinaryFromReader);
+      msg.setChannel(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.lightclients.solomachine.v1.ChannelStateData.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.lightclients.solomachine.v1.ChannelStateData.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.lightclients.solomachine.v1.ChannelStateData.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -2542,13 +2710,13 @@ proto.ibc.lightclients.solomachine.v1.ChannelStateData.prototype.serializeBinary
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.lightclients.solomachine.v1.ChannelStateData.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.lightclients.solomachine.v1.ChannelStateData.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getPath_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       1,
-      f,
+      f
     );
   }
   f = message.getChannel();
@@ -2556,29 +2724,31 @@ proto.ibc.lightclients.solomachine.v1.ChannelStateData.serializeBinaryToWriter =
     writer.writeMessage(
       2,
       f,
-      ibc_core_channel_v1_channel_pb.Channel.serializeBinaryToWriter,
+      ibc_core_channel_v1_channel_pb.Channel.serializeBinaryToWriter
     );
   }
 };
+
 
 /**
  * optional bytes path = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.ibc.lightclients.solomachine.v1.ChannelStateData.prototype.getPath = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.ibc.lightclients.solomachine.v1.ChannelStateData.prototype.getPath = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
+
 
 /**
  * optional bytes path = 1;
  * This is a type-conversion wrapper around `getPath()`
  * @return {string}
  */
-proto.ibc.lightclients.solomachine.v1.ChannelStateData.prototype.getPath_asB64 = function () {
+proto.ibc.lightclients.solomachine.v1.ChannelStateData.prototype.getPath_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getPath(),
-  ));
+      this.getPath()));
 };
+
 
 /**
  * optional bytes path = 1;
@@ -2587,42 +2757,48 @@ proto.ibc.lightclients.solomachine.v1.ChannelStateData.prototype.getPath_asB64 =
  * This is a type-conversion wrapper around `getPath()`
  * @return {!Uint8Array}
  */
-proto.ibc.lightclients.solomachine.v1.ChannelStateData.prototype.getPath_asU8 = function () {
+proto.ibc.lightclients.solomachine.v1.ChannelStateData.prototype.getPath_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getPath(),
-  ));
+      this.getPath()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.ibc.lightclients.solomachine.v1.ChannelStateData.prototype.setPath = function (value) {
+proto.ibc.lightclients.solomachine.v1.ChannelStateData.prototype.setPath = function(value) {
   jspb.Message.setProto3BytesField(this, 1, value);
 };
+
 
 /**
  * optional ibc.core.channel.v1.Channel channel = 2;
  * @return {?proto.ibc.core.channel.v1.Channel}
  */
-proto.ibc.lightclients.solomachine.v1.ChannelStateData.prototype.getChannel = function () {
+proto.ibc.lightclients.solomachine.v1.ChannelStateData.prototype.getChannel = function() {
   return /** @type{?proto.ibc.core.channel.v1.Channel} */ (
     jspb.Message.getWrapperField(this, ibc_core_channel_v1_channel_pb.Channel, 2));
 };
 
+
 /** @param {?proto.ibc.core.channel.v1.Channel|undefined} value */
-proto.ibc.lightclients.solomachine.v1.ChannelStateData.prototype.setChannel = function (value) {
+proto.ibc.lightclients.solomachine.v1.ChannelStateData.prototype.setChannel = function(value) {
   jspb.Message.setWrapperField(this, 2, value);
 };
 
-proto.ibc.lightclients.solomachine.v1.ChannelStateData.prototype.clearChannel = function () {
+
+proto.ibc.lightclients.solomachine.v1.ChannelStateData.prototype.clearChannel = function() {
   this.setChannel(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.ibc.lightclients.solomachine.v1.ChannelStateData.prototype.hasChannel = function () {
+proto.ibc.lightclients.solomachine.v1.ChannelStateData.prototype.hasChannel = function() {
   return jspb.Message.getField(this, 2) != null;
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -2634,13 +2810,14 @@ proto.ibc.lightclients.solomachine.v1.ChannelStateData.prototype.hasChannel = fu
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.lightclients.solomachine.v1.PacketCommitmentData = function (opt_data) {
+proto.ibc.lightclients.solomachine.v1.PacketCommitmentData = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.ibc.lightclients.solomachine.v1.PacketCommitmentData, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.ibc.lightclients.solomachine.v1.PacketCommitmentData.displayName = 'proto.ibc.lightclients.solomachine.v1.PacketCommitmentData';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -2653,11 +2830,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.lightclients.solomachine.v1.PacketCommitmentData.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.lightclients.solomachine.v1.PacketCommitmentData.toObject(opt_includeInstance, this);
-  };
+proto.ibc.lightclients.solomachine.v1.PacketCommitmentData.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.lightclients.solomachine.v1.PacketCommitmentData.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -2666,30 +2844,31 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.lightclients.solomachine.v1.PacketCommitmentData.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        path: msg.getPath_asB64(),
-        commitment: msg.getCommitment_asB64(),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.lightclients.solomachine.v1.PacketCommitmentData.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    path: msg.getPath_asB64(),
+    commitment: msg.getCommitment_asB64()
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.lightclients.solomachine.v1.PacketCommitmentData}
  */
-proto.ibc.lightclients.solomachine.v1.PacketCommitmentData.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.lightclients.solomachine.v1.PacketCommitmentData();
+proto.ibc.lightclients.solomachine.v1.PacketCommitmentData.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.lightclients.solomachine.v1.PacketCommitmentData;
   return proto.ibc.lightclients.solomachine.v1.PacketCommitmentData.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -2698,38 +2877,40 @@ proto.ibc.lightclients.solomachine.v1.PacketCommitmentData.deserializeBinary = f
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.lightclients.solomachine.v1.PacketCommitmentData}
  */
-proto.ibc.lightclients.solomachine.v1.PacketCommitmentData.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.lightclients.solomachine.v1.PacketCommitmentData.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setPath(value);
-        break;
-      case 2:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setCommitment(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setPath(value);
+      break;
+    case 2:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setCommitment(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.lightclients.solomachine.v1.PacketCommitmentData.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.lightclients.solomachine.v1.PacketCommitmentData.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.lightclients.solomachine.v1.PacketCommitmentData.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -2738,42 +2919,44 @@ proto.ibc.lightclients.solomachine.v1.PacketCommitmentData.prototype.serializeBi
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.lightclients.solomachine.v1.PacketCommitmentData.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.lightclients.solomachine.v1.PacketCommitmentData.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getPath_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       1,
-      f,
+      f
     );
   }
   f = message.getCommitment_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       2,
-      f,
+      f
     );
   }
 };
 
+
 /**
  * optional bytes path = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.ibc.lightclients.solomachine.v1.PacketCommitmentData.prototype.getPath = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.ibc.lightclients.solomachine.v1.PacketCommitmentData.prototype.getPath = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
+
 
 /**
  * optional bytes path = 1;
  * This is a type-conversion wrapper around `getPath()`
  * @return {string}
  */
-proto.ibc.lightclients.solomachine.v1.PacketCommitmentData.prototype.getPath_asB64 = function () {
+proto.ibc.lightclients.solomachine.v1.PacketCommitmentData.prototype.getPath_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getPath(),
-  ));
+      this.getPath()));
 };
+
 
 /**
  * optional bytes path = 1;
@@ -2782,35 +2965,37 @@ proto.ibc.lightclients.solomachine.v1.PacketCommitmentData.prototype.getPath_asB
  * This is a type-conversion wrapper around `getPath()`
  * @return {!Uint8Array}
  */
-proto.ibc.lightclients.solomachine.v1.PacketCommitmentData.prototype.getPath_asU8 = function () {
+proto.ibc.lightclients.solomachine.v1.PacketCommitmentData.prototype.getPath_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getPath(),
-  ));
+      this.getPath()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.ibc.lightclients.solomachine.v1.PacketCommitmentData.prototype.setPath = function (value) {
+proto.ibc.lightclients.solomachine.v1.PacketCommitmentData.prototype.setPath = function(value) {
   jspb.Message.setProto3BytesField(this, 1, value);
 };
 
+
 /**
  * optional bytes commitment = 2;
  * @return {!(string|Uint8Array)}
  */
-proto.ibc.lightclients.solomachine.v1.PacketCommitmentData.prototype.getCommitment = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
+proto.ibc.lightclients.solomachine.v1.PacketCommitmentData.prototype.getCommitment = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
+
 
 /**
  * optional bytes commitment = 2;
  * This is a type-conversion wrapper around `getCommitment()`
  * @return {string}
  */
-proto.ibc.lightclients.solomachine.v1.PacketCommitmentData.prototype.getCommitment_asB64 = function () {
+proto.ibc.lightclients.solomachine.v1.PacketCommitmentData.prototype.getCommitment_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getCommitment(),
-  ));
+      this.getCommitment()));
 };
+
 
 /**
  * optional bytes commitment = 2;
@@ -2819,16 +3004,18 @@ proto.ibc.lightclients.solomachine.v1.PacketCommitmentData.prototype.getCommitme
  * This is a type-conversion wrapper around `getCommitment()`
  * @return {!Uint8Array}
  */
-proto.ibc.lightclients.solomachine.v1.PacketCommitmentData.prototype.getCommitment_asU8 = function () {
+proto.ibc.lightclients.solomachine.v1.PacketCommitmentData.prototype.getCommitment_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getCommitment(),
-  ));
+      this.getCommitment()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.ibc.lightclients.solomachine.v1.PacketCommitmentData.prototype.setCommitment = function (value) {
+proto.ibc.lightclients.solomachine.v1.PacketCommitmentData.prototype.setCommitment = function(value) {
   jspb.Message.setProto3BytesField(this, 2, value);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -2840,13 +3027,14 @@ proto.ibc.lightclients.solomachine.v1.PacketCommitmentData.prototype.setCommitme
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.lightclients.solomachine.v1.PacketAcknowledgementData = function (opt_data) {
+proto.ibc.lightclients.solomachine.v1.PacketAcknowledgementData = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.ibc.lightclients.solomachine.v1.PacketAcknowledgementData, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.ibc.lightclients.solomachine.v1.PacketAcknowledgementData.displayName = 'proto.ibc.lightclients.solomachine.v1.PacketAcknowledgementData';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -2859,11 +3047,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.lightclients.solomachine.v1.PacketAcknowledgementData.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.lightclients.solomachine.v1.PacketAcknowledgementData.toObject(opt_includeInstance, this);
-  };
+proto.ibc.lightclients.solomachine.v1.PacketAcknowledgementData.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.lightclients.solomachine.v1.PacketAcknowledgementData.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -2872,30 +3061,31 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.lightclients.solomachine.v1.PacketAcknowledgementData.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        path: msg.getPath_asB64(),
-        acknowledgement: msg.getAcknowledgement_asB64(),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.lightclients.solomachine.v1.PacketAcknowledgementData.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    path: msg.getPath_asB64(),
+    acknowledgement: msg.getAcknowledgement_asB64()
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.lightclients.solomachine.v1.PacketAcknowledgementData}
  */
-proto.ibc.lightclients.solomachine.v1.PacketAcknowledgementData.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.lightclients.solomachine.v1.PacketAcknowledgementData();
+proto.ibc.lightclients.solomachine.v1.PacketAcknowledgementData.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.lightclients.solomachine.v1.PacketAcknowledgementData;
   return proto.ibc.lightclients.solomachine.v1.PacketAcknowledgementData.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -2904,38 +3094,40 @@ proto.ibc.lightclients.solomachine.v1.PacketAcknowledgementData.deserializeBinar
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.lightclients.solomachine.v1.PacketAcknowledgementData}
  */
-proto.ibc.lightclients.solomachine.v1.PacketAcknowledgementData.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.lightclients.solomachine.v1.PacketAcknowledgementData.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setPath(value);
-        break;
-      case 2:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setAcknowledgement(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setPath(value);
+      break;
+    case 2:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setAcknowledgement(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.lightclients.solomachine.v1.PacketAcknowledgementData.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.lightclients.solomachine.v1.PacketAcknowledgementData.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.lightclients.solomachine.v1.PacketAcknowledgementData.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -2944,42 +3136,44 @@ proto.ibc.lightclients.solomachine.v1.PacketAcknowledgementData.prototype.serial
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.lightclients.solomachine.v1.PacketAcknowledgementData.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.lightclients.solomachine.v1.PacketAcknowledgementData.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getPath_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       1,
-      f,
+      f
     );
   }
   f = message.getAcknowledgement_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       2,
-      f,
+      f
     );
   }
 };
 
+
 /**
  * optional bytes path = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.ibc.lightclients.solomachine.v1.PacketAcknowledgementData.prototype.getPath = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.ibc.lightclients.solomachine.v1.PacketAcknowledgementData.prototype.getPath = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
+
 
 /**
  * optional bytes path = 1;
  * This is a type-conversion wrapper around `getPath()`
  * @return {string}
  */
-proto.ibc.lightclients.solomachine.v1.PacketAcknowledgementData.prototype.getPath_asB64 = function () {
+proto.ibc.lightclients.solomachine.v1.PacketAcknowledgementData.prototype.getPath_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getPath(),
-  ));
+      this.getPath()));
 };
+
 
 /**
  * optional bytes path = 1;
@@ -2988,35 +3182,37 @@ proto.ibc.lightclients.solomachine.v1.PacketAcknowledgementData.prototype.getPat
  * This is a type-conversion wrapper around `getPath()`
  * @return {!Uint8Array}
  */
-proto.ibc.lightclients.solomachine.v1.PacketAcknowledgementData.prototype.getPath_asU8 = function () {
+proto.ibc.lightclients.solomachine.v1.PacketAcknowledgementData.prototype.getPath_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getPath(),
-  ));
+      this.getPath()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.ibc.lightclients.solomachine.v1.PacketAcknowledgementData.prototype.setPath = function (value) {
+proto.ibc.lightclients.solomachine.v1.PacketAcknowledgementData.prototype.setPath = function(value) {
   jspb.Message.setProto3BytesField(this, 1, value);
 };
 
+
 /**
  * optional bytes acknowledgement = 2;
  * @return {!(string|Uint8Array)}
  */
-proto.ibc.lightclients.solomachine.v1.PacketAcknowledgementData.prototype.getAcknowledgement = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
+proto.ibc.lightclients.solomachine.v1.PacketAcknowledgementData.prototype.getAcknowledgement = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
+
 
 /**
  * optional bytes acknowledgement = 2;
  * This is a type-conversion wrapper around `getAcknowledgement()`
  * @return {string}
  */
-proto.ibc.lightclients.solomachine.v1.PacketAcknowledgementData.prototype.getAcknowledgement_asB64 = function () {
+proto.ibc.lightclients.solomachine.v1.PacketAcknowledgementData.prototype.getAcknowledgement_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getAcknowledgement(),
-  ));
+      this.getAcknowledgement()));
 };
+
 
 /**
  * optional bytes acknowledgement = 2;
@@ -3025,16 +3221,18 @@ proto.ibc.lightclients.solomachine.v1.PacketAcknowledgementData.prototype.getAck
  * This is a type-conversion wrapper around `getAcknowledgement()`
  * @return {!Uint8Array}
  */
-proto.ibc.lightclients.solomachine.v1.PacketAcknowledgementData.prototype.getAcknowledgement_asU8 = function () {
+proto.ibc.lightclients.solomachine.v1.PacketAcknowledgementData.prototype.getAcknowledgement_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getAcknowledgement(),
-  ));
+      this.getAcknowledgement()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.ibc.lightclients.solomachine.v1.PacketAcknowledgementData.prototype.setAcknowledgement = function (value) {
+proto.ibc.lightclients.solomachine.v1.PacketAcknowledgementData.prototype.setAcknowledgement = function(value) {
   jspb.Message.setProto3BytesField(this, 2, value);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -3046,13 +3244,14 @@ proto.ibc.lightclients.solomachine.v1.PacketAcknowledgementData.prototype.setAck
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.lightclients.solomachine.v1.PacketReceiptAbsenceData = function (opt_data) {
+proto.ibc.lightclients.solomachine.v1.PacketReceiptAbsenceData = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.ibc.lightclients.solomachine.v1.PacketReceiptAbsenceData, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.ibc.lightclients.solomachine.v1.PacketReceiptAbsenceData.displayName = 'proto.ibc.lightclients.solomachine.v1.PacketReceiptAbsenceData';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -3065,11 +3264,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.lightclients.solomachine.v1.PacketReceiptAbsenceData.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.lightclients.solomachine.v1.PacketReceiptAbsenceData.toObject(opt_includeInstance, this);
-  };
+proto.ibc.lightclients.solomachine.v1.PacketReceiptAbsenceData.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.lightclients.solomachine.v1.PacketReceiptAbsenceData.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -3078,29 +3278,30 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.lightclients.solomachine.v1.PacketReceiptAbsenceData.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        path: msg.getPath_asB64(),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.lightclients.solomachine.v1.PacketReceiptAbsenceData.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    path: msg.getPath_asB64()
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.lightclients.solomachine.v1.PacketReceiptAbsenceData}
  */
-proto.ibc.lightclients.solomachine.v1.PacketReceiptAbsenceData.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.lightclients.solomachine.v1.PacketReceiptAbsenceData();
+proto.ibc.lightclients.solomachine.v1.PacketReceiptAbsenceData.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.lightclients.solomachine.v1.PacketReceiptAbsenceData;
   return proto.ibc.lightclients.solomachine.v1.PacketReceiptAbsenceData.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -3109,34 +3310,36 @@ proto.ibc.lightclients.solomachine.v1.PacketReceiptAbsenceData.deserializeBinary
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.lightclients.solomachine.v1.PacketReceiptAbsenceData}
  */
-proto.ibc.lightclients.solomachine.v1.PacketReceiptAbsenceData.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.lightclients.solomachine.v1.PacketReceiptAbsenceData.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setPath(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setPath(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.lightclients.solomachine.v1.PacketReceiptAbsenceData.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.lightclients.solomachine.v1.PacketReceiptAbsenceData.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.lightclients.solomachine.v1.PacketReceiptAbsenceData.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -3145,35 +3348,37 @@ proto.ibc.lightclients.solomachine.v1.PacketReceiptAbsenceData.prototype.seriali
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.lightclients.solomachine.v1.PacketReceiptAbsenceData.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.lightclients.solomachine.v1.PacketReceiptAbsenceData.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getPath_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       1,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * optional bytes path = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.ibc.lightclients.solomachine.v1.PacketReceiptAbsenceData.prototype.getPath = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.ibc.lightclients.solomachine.v1.PacketReceiptAbsenceData.prototype.getPath = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
+
 
 /**
  * optional bytes path = 1;
  * This is a type-conversion wrapper around `getPath()`
  * @return {string}
  */
-proto.ibc.lightclients.solomachine.v1.PacketReceiptAbsenceData.prototype.getPath_asB64 = function () {
+proto.ibc.lightclients.solomachine.v1.PacketReceiptAbsenceData.prototype.getPath_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getPath(),
-  ));
+      this.getPath()));
 };
+
 
 /**
  * optional bytes path = 1;
@@ -3182,16 +3387,18 @@ proto.ibc.lightclients.solomachine.v1.PacketReceiptAbsenceData.prototype.getPath
  * This is a type-conversion wrapper around `getPath()`
  * @return {!Uint8Array}
  */
-proto.ibc.lightclients.solomachine.v1.PacketReceiptAbsenceData.prototype.getPath_asU8 = function () {
+proto.ibc.lightclients.solomachine.v1.PacketReceiptAbsenceData.prototype.getPath_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getPath(),
-  ));
+      this.getPath()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.ibc.lightclients.solomachine.v1.PacketReceiptAbsenceData.prototype.setPath = function (value) {
+proto.ibc.lightclients.solomachine.v1.PacketReceiptAbsenceData.prototype.setPath = function(value) {
   jspb.Message.setProto3BytesField(this, 1, value);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -3203,13 +3410,14 @@ proto.ibc.lightclients.solomachine.v1.PacketReceiptAbsenceData.prototype.setPath
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.lightclients.solomachine.v1.NextSequenceRecvData = function (opt_data) {
+proto.ibc.lightclients.solomachine.v1.NextSequenceRecvData = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.ibc.lightclients.solomachine.v1.NextSequenceRecvData, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.ibc.lightclients.solomachine.v1.NextSequenceRecvData.displayName = 'proto.ibc.lightclients.solomachine.v1.NextSequenceRecvData';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -3222,11 +3430,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.lightclients.solomachine.v1.NextSequenceRecvData.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.lightclients.solomachine.v1.NextSequenceRecvData.toObject(opt_includeInstance, this);
-  };
+proto.ibc.lightclients.solomachine.v1.NextSequenceRecvData.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.lightclients.solomachine.v1.NextSequenceRecvData.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -3235,30 +3444,31 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.lightclients.solomachine.v1.NextSequenceRecvData.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        path: msg.getPath_asB64(),
-        nextSeqRecv: jspb.Message.getFieldWithDefault(msg, 2, 0),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.lightclients.solomachine.v1.NextSequenceRecvData.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    path: msg.getPath_asB64(),
+    nextSeqRecv: jspb.Message.getFieldWithDefault(msg, 2, 0)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.lightclients.solomachine.v1.NextSequenceRecvData}
  */
-proto.ibc.lightclients.solomachine.v1.NextSequenceRecvData.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.lightclients.solomachine.v1.NextSequenceRecvData();
+proto.ibc.lightclients.solomachine.v1.NextSequenceRecvData.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.lightclients.solomachine.v1.NextSequenceRecvData;
   return proto.ibc.lightclients.solomachine.v1.NextSequenceRecvData.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -3267,38 +3477,40 @@ proto.ibc.lightclients.solomachine.v1.NextSequenceRecvData.deserializeBinary = f
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.lightclients.solomachine.v1.NextSequenceRecvData}
  */
-proto.ibc.lightclients.solomachine.v1.NextSequenceRecvData.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.lightclients.solomachine.v1.NextSequenceRecvData.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setPath(value);
-        break;
-      case 2:
-        var value = /** @type {number} */ (reader.readUint64());
-        msg.setNextSeqRecv(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setPath(value);
+      break;
+    case 2:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setNextSeqRecv(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.lightclients.solomachine.v1.NextSequenceRecvData.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.lightclients.solomachine.v1.NextSequenceRecvData.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.lightclients.solomachine.v1.NextSequenceRecvData.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -3307,42 +3519,44 @@ proto.ibc.lightclients.solomachine.v1.NextSequenceRecvData.prototype.serializeBi
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.lightclients.solomachine.v1.NextSequenceRecvData.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.lightclients.solomachine.v1.NextSequenceRecvData.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getPath_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       1,
-      f,
+      f
     );
   }
   f = message.getNextSeqRecv();
   if (f !== 0) {
     writer.writeUint64(
       2,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * optional bytes path = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.ibc.lightclients.solomachine.v1.NextSequenceRecvData.prototype.getPath = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.ibc.lightclients.solomachine.v1.NextSequenceRecvData.prototype.getPath = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
+
 
 /**
  * optional bytes path = 1;
  * This is a type-conversion wrapper around `getPath()`
  * @return {string}
  */
-proto.ibc.lightclients.solomachine.v1.NextSequenceRecvData.prototype.getPath_asB64 = function () {
+proto.ibc.lightclients.solomachine.v1.NextSequenceRecvData.prototype.getPath_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getPath(),
-  ));
+      this.getPath()));
 };
+
 
 /**
  * optional bytes path = 1;
@@ -3351,29 +3565,32 @@ proto.ibc.lightclients.solomachine.v1.NextSequenceRecvData.prototype.getPath_asB
  * This is a type-conversion wrapper around `getPath()`
  * @return {!Uint8Array}
  */
-proto.ibc.lightclients.solomachine.v1.NextSequenceRecvData.prototype.getPath_asU8 = function () {
+proto.ibc.lightclients.solomachine.v1.NextSequenceRecvData.prototype.getPath_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getPath(),
-  ));
+      this.getPath()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.ibc.lightclients.solomachine.v1.NextSequenceRecvData.prototype.setPath = function (value) {
+proto.ibc.lightclients.solomachine.v1.NextSequenceRecvData.prototype.setPath = function(value) {
   jspb.Message.setProto3BytesField(this, 1, value);
 };
+
 
 /**
  * optional uint64 next_seq_recv = 2;
  * @return {number}
  */
-proto.ibc.lightclients.solomachine.v1.NextSequenceRecvData.prototype.getNextSeqRecv = function () {
+proto.ibc.lightclients.solomachine.v1.NextSequenceRecvData.prototype.getNextSeqRecv = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
+
 /** @param {number} value */
-proto.ibc.lightclients.solomachine.v1.NextSequenceRecvData.prototype.setNextSeqRecv = function (value) {
+proto.ibc.lightclients.solomachine.v1.NextSequenceRecvData.prototype.setNextSeqRecv = function(value) {
   jspb.Message.setProto3IntField(this, 2, value);
 };
+
 
 /**
  * @enum {number}
@@ -3388,7 +3605,7 @@ proto.ibc.lightclients.solomachine.v1.DataType = {
   DATA_TYPE_PACKET_ACKNOWLEDGEMENT: 6,
   DATA_TYPE_PACKET_RECEIPT_ABSENCE: 7,
   DATA_TYPE_NEXT_SEQUENCE_RECV: 8,
-  DATA_TYPE_HEADER: 9,
+  DATA_TYPE_HEADER: 9
 };
 
 goog.object.extend(exports, proto.ibc.lightclients.solomachine.v1);

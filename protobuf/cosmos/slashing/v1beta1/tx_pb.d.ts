@@ -2,6 +2,7 @@
 // file: cosmos/slashing/v1beta1/tx.proto
 
 import * as jspb from "google-protobuf";
+import * as gogoproto_gogo_pb from "../../../gogoproto/gogo_pb";
 
 export class MsgUnjail extends jspb.Message {
   getValidatorAddr(): string;

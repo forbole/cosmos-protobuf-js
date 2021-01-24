@@ -7,16 +7,14 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-const jspb = require('google-protobuf');
+var jspb = require('google-protobuf');
+var goog = jspb;
+var global = Function('return this')();
 
-const goog = jspb;
-const global = Function('return this')();
-
-const gogoproto_gogo_pb = require('../../../../gogoproto/gogo_pb.js');
-const cosmos_base_query_v1beta1_pagination_pb = require('../../../../cosmos/base/query/v1beta1/pagination_pb.js');
-const ibc_applications_transfer_v1_transfer_pb = require('./transfer_pb.js');
-const google_api_annotations_pb = require('../../../../google/api/annotations_pb.js');
-
+var gogoproto_gogo_pb = require('../../../../gogoproto/gogo_pb.js');
+var cosmos_base_query_v1beta1_pagination_pb = require('../../../../cosmos/base/query/v1beta1/pagination_pb.js');
+var ibc_applications_transfer_v1_transfer_pb = require('../../../../ibc/applications/transfer/v1/transfer_pb.js');
+var google_api_annotations_pb = require('../../../../google/api/annotations_pb.js');
 goog.exportSymbol('proto.ibc.applications.transfer.v1.QueryDenomTraceRequest', null, global);
 goog.exportSymbol('proto.ibc.applications.transfer.v1.QueryDenomTraceResponse', null, global);
 goog.exportSymbol('proto.ibc.applications.transfer.v1.QueryDenomTracesRequest', null, global);
@@ -34,13 +32,14 @@ goog.exportSymbol('proto.ibc.applications.transfer.v1.QueryParamsResponse', null
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.applications.transfer.v1.QueryDenomTraceRequest = function (opt_data) {
+proto.ibc.applications.transfer.v1.QueryDenomTraceRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.ibc.applications.transfer.v1.QueryDenomTraceRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.ibc.applications.transfer.v1.QueryDenomTraceRequest.displayName = 'proto.ibc.applications.transfer.v1.QueryDenomTraceRequest';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -53,11 +52,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.applications.transfer.v1.QueryDenomTraceRequest.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.applications.transfer.v1.QueryDenomTraceRequest.toObject(opt_includeInstance, this);
-  };
+proto.ibc.applications.transfer.v1.QueryDenomTraceRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.applications.transfer.v1.QueryDenomTraceRequest.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -66,29 +66,30 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.applications.transfer.v1.QueryDenomTraceRequest.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        hash: jspb.Message.getFieldWithDefault(msg, 1, ''),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.applications.transfer.v1.QueryDenomTraceRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    hash: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.applications.transfer.v1.QueryDenomTraceRequest}
  */
-proto.ibc.applications.transfer.v1.QueryDenomTraceRequest.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.applications.transfer.v1.QueryDenomTraceRequest();
+proto.ibc.applications.transfer.v1.QueryDenomTraceRequest.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.applications.transfer.v1.QueryDenomTraceRequest;
   return proto.ibc.applications.transfer.v1.QueryDenomTraceRequest.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -97,34 +98,36 @@ proto.ibc.applications.transfer.v1.QueryDenomTraceRequest.deserializeBinary = fu
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.applications.transfer.v1.QueryDenomTraceRequest}
  */
-proto.ibc.applications.transfer.v1.QueryDenomTraceRequest.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.applications.transfer.v1.QueryDenomTraceRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setHash(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setHash(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.applications.transfer.v1.QueryDenomTraceRequest.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.applications.transfer.v1.QueryDenomTraceRequest.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.applications.transfer.v1.QueryDenomTraceRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -133,29 +136,33 @@ proto.ibc.applications.transfer.v1.QueryDenomTraceRequest.prototype.serializeBin
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.applications.transfer.v1.QueryDenomTraceRequest.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.applications.transfer.v1.QueryDenomTraceRequest.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getHash();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * optional string hash = 1;
  * @return {string}
  */
-proto.ibc.applications.transfer.v1.QueryDenomTraceRequest.prototype.getHash = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.ibc.applications.transfer.v1.QueryDenomTraceRequest.prototype.getHash = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
+
 /** @param {string} value */
-proto.ibc.applications.transfer.v1.QueryDenomTraceRequest.prototype.setHash = function (value) {
+proto.ibc.applications.transfer.v1.QueryDenomTraceRequest.prototype.setHash = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -167,13 +174,14 @@ proto.ibc.applications.transfer.v1.QueryDenomTraceRequest.prototype.setHash = fu
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.applications.transfer.v1.QueryDenomTraceResponse = function (opt_data) {
+proto.ibc.applications.transfer.v1.QueryDenomTraceResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.ibc.applications.transfer.v1.QueryDenomTraceResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.ibc.applications.transfer.v1.QueryDenomTraceResponse.displayName = 'proto.ibc.applications.transfer.v1.QueryDenomTraceResponse';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -186,11 +194,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.applications.transfer.v1.QueryDenomTraceResponse.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.applications.transfer.v1.QueryDenomTraceResponse.toObject(opt_includeInstance, this);
-  };
+proto.ibc.applications.transfer.v1.QueryDenomTraceResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.applications.transfer.v1.QueryDenomTraceResponse.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -199,29 +208,30 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.applications.transfer.v1.QueryDenomTraceResponse.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        denomTrace: (f = msg.getDenomTrace()) && ibc_applications_transfer_v1_transfer_pb.DenomTrace.toObject(includeInstance, f),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.applications.transfer.v1.QueryDenomTraceResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    denomTrace: (f = msg.getDenomTrace()) && ibc_applications_transfer_v1_transfer_pb.DenomTrace.toObject(includeInstance, f)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.applications.transfer.v1.QueryDenomTraceResponse}
  */
-proto.ibc.applications.transfer.v1.QueryDenomTraceResponse.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.applications.transfer.v1.QueryDenomTraceResponse();
+proto.ibc.applications.transfer.v1.QueryDenomTraceResponse.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.applications.transfer.v1.QueryDenomTraceResponse;
   return proto.ibc.applications.transfer.v1.QueryDenomTraceResponse.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -230,35 +240,37 @@ proto.ibc.applications.transfer.v1.QueryDenomTraceResponse.deserializeBinary = f
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.applications.transfer.v1.QueryDenomTraceResponse}
  */
-proto.ibc.applications.transfer.v1.QueryDenomTraceResponse.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.applications.transfer.v1.QueryDenomTraceResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = new ibc_applications_transfer_v1_transfer_pb.DenomTrace();
-        reader.readMessage(value, ibc_applications_transfer_v1_transfer_pb.DenomTrace.deserializeBinaryFromReader);
-        msg.setDenomTrace(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = new ibc_applications_transfer_v1_transfer_pb.DenomTrace;
+      reader.readMessage(value,ibc_applications_transfer_v1_transfer_pb.DenomTrace.deserializeBinaryFromReader);
+      msg.setDenomTrace(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.applications.transfer.v1.QueryDenomTraceResponse.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.applications.transfer.v1.QueryDenomTraceResponse.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.applications.transfer.v1.QueryDenomTraceResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -267,43 +279,49 @@ proto.ibc.applications.transfer.v1.QueryDenomTraceResponse.prototype.serializeBi
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.applications.transfer.v1.QueryDenomTraceResponse.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.applications.transfer.v1.QueryDenomTraceResponse.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getDenomTrace();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      ibc_applications_transfer_v1_transfer_pb.DenomTrace.serializeBinaryToWriter,
+      ibc_applications_transfer_v1_transfer_pb.DenomTrace.serializeBinaryToWriter
     );
   }
 };
+
 
 /**
  * optional DenomTrace denom_trace = 1;
  * @return {?proto.ibc.applications.transfer.v1.DenomTrace}
  */
-proto.ibc.applications.transfer.v1.QueryDenomTraceResponse.prototype.getDenomTrace = function () {
+proto.ibc.applications.transfer.v1.QueryDenomTraceResponse.prototype.getDenomTrace = function() {
   return /** @type{?proto.ibc.applications.transfer.v1.DenomTrace} */ (
     jspb.Message.getWrapperField(this, ibc_applications_transfer_v1_transfer_pb.DenomTrace, 1));
 };
 
+
 /** @param {?proto.ibc.applications.transfer.v1.DenomTrace|undefined} value */
-proto.ibc.applications.transfer.v1.QueryDenomTraceResponse.prototype.setDenomTrace = function (value) {
+proto.ibc.applications.transfer.v1.QueryDenomTraceResponse.prototype.setDenomTrace = function(value) {
   jspb.Message.setWrapperField(this, 1, value);
 };
 
-proto.ibc.applications.transfer.v1.QueryDenomTraceResponse.prototype.clearDenomTrace = function () {
+
+proto.ibc.applications.transfer.v1.QueryDenomTraceResponse.prototype.clearDenomTrace = function() {
   this.setDenomTrace(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.ibc.applications.transfer.v1.QueryDenomTraceResponse.prototype.hasDenomTrace = function () {
+proto.ibc.applications.transfer.v1.QueryDenomTraceResponse.prototype.hasDenomTrace = function() {
   return jspb.Message.getField(this, 1) != null;
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -315,13 +333,14 @@ proto.ibc.applications.transfer.v1.QueryDenomTraceResponse.prototype.hasDenomTra
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.applications.transfer.v1.QueryDenomTracesRequest = function (opt_data) {
+proto.ibc.applications.transfer.v1.QueryDenomTracesRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.ibc.applications.transfer.v1.QueryDenomTracesRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.ibc.applications.transfer.v1.QueryDenomTracesRequest.displayName = 'proto.ibc.applications.transfer.v1.QueryDenomTracesRequest';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -334,11 +353,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.applications.transfer.v1.QueryDenomTracesRequest.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.applications.transfer.v1.QueryDenomTracesRequest.toObject(opt_includeInstance, this);
-  };
+proto.ibc.applications.transfer.v1.QueryDenomTracesRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.applications.transfer.v1.QueryDenomTracesRequest.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -347,29 +367,30 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.applications.transfer.v1.QueryDenomTracesRequest.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        pagination: (f = msg.getPagination()) && cosmos_base_query_v1beta1_pagination_pb.PageRequest.toObject(includeInstance, f),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.applications.transfer.v1.QueryDenomTracesRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    pagination: (f = msg.getPagination()) && cosmos_base_query_v1beta1_pagination_pb.PageRequest.toObject(includeInstance, f)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.applications.transfer.v1.QueryDenomTracesRequest}
  */
-proto.ibc.applications.transfer.v1.QueryDenomTracesRequest.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.applications.transfer.v1.QueryDenomTracesRequest();
+proto.ibc.applications.transfer.v1.QueryDenomTracesRequest.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.applications.transfer.v1.QueryDenomTracesRequest;
   return proto.ibc.applications.transfer.v1.QueryDenomTracesRequest.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -378,35 +399,37 @@ proto.ibc.applications.transfer.v1.QueryDenomTracesRequest.deserializeBinary = f
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.applications.transfer.v1.QueryDenomTracesRequest}
  */
-proto.ibc.applications.transfer.v1.QueryDenomTracesRequest.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.applications.transfer.v1.QueryDenomTracesRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = new cosmos_base_query_v1beta1_pagination_pb.PageRequest();
-        reader.readMessage(value, cosmos_base_query_v1beta1_pagination_pb.PageRequest.deserializeBinaryFromReader);
-        msg.setPagination(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = new cosmos_base_query_v1beta1_pagination_pb.PageRequest;
+      reader.readMessage(value,cosmos_base_query_v1beta1_pagination_pb.PageRequest.deserializeBinaryFromReader);
+      msg.setPagination(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.applications.transfer.v1.QueryDenomTracesRequest.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.applications.transfer.v1.QueryDenomTracesRequest.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.applications.transfer.v1.QueryDenomTracesRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -415,43 +438,49 @@ proto.ibc.applications.transfer.v1.QueryDenomTracesRequest.prototype.serializeBi
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.applications.transfer.v1.QueryDenomTracesRequest.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.applications.transfer.v1.QueryDenomTracesRequest.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getPagination();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      cosmos_base_query_v1beta1_pagination_pb.PageRequest.serializeBinaryToWriter,
+      cosmos_base_query_v1beta1_pagination_pb.PageRequest.serializeBinaryToWriter
     );
   }
 };
+
 
 /**
  * optional cosmos.base.query.v1beta1.PageRequest pagination = 1;
  * @return {?proto.cosmos.base.query.v1beta1.PageRequest}
  */
-proto.ibc.applications.transfer.v1.QueryDenomTracesRequest.prototype.getPagination = function () {
+proto.ibc.applications.transfer.v1.QueryDenomTracesRequest.prototype.getPagination = function() {
   return /** @type{?proto.cosmos.base.query.v1beta1.PageRequest} */ (
     jspb.Message.getWrapperField(this, cosmos_base_query_v1beta1_pagination_pb.PageRequest, 1));
 };
 
+
 /** @param {?proto.cosmos.base.query.v1beta1.PageRequest|undefined} value */
-proto.ibc.applications.transfer.v1.QueryDenomTracesRequest.prototype.setPagination = function (value) {
+proto.ibc.applications.transfer.v1.QueryDenomTracesRequest.prototype.setPagination = function(value) {
   jspb.Message.setWrapperField(this, 1, value);
 };
 
-proto.ibc.applications.transfer.v1.QueryDenomTracesRequest.prototype.clearPagination = function () {
+
+proto.ibc.applications.transfer.v1.QueryDenomTracesRequest.prototype.clearPagination = function() {
   this.setPagination(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.ibc.applications.transfer.v1.QueryDenomTracesRequest.prototype.hasPagination = function () {
+proto.ibc.applications.transfer.v1.QueryDenomTracesRequest.prototype.hasPagination = function() {
   return jspb.Message.getField(this, 1) != null;
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -463,7 +492,7 @@ proto.ibc.applications.transfer.v1.QueryDenomTracesRequest.prototype.hasPaginati
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.applications.transfer.v1.QueryDenomTracesResponse = function (opt_data) {
+proto.ibc.applications.transfer.v1.QueryDenomTracesResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.ibc.applications.transfer.v1.QueryDenomTracesResponse.repeatedFields_, null);
 };
 goog.inherits(proto.ibc.applications.transfer.v1.QueryDenomTracesResponse, jspb.Message);
@@ -477,6 +506,8 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.ibc.applications.transfer.v1.QueryDenomTracesResponse.repeatedFields_ = [1];
 
+
+
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -488,11 +519,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.applications.transfer.v1.QueryDenomTracesResponse.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.applications.transfer.v1.QueryDenomTracesResponse.toObject(opt_includeInstance, this);
-  };
+proto.ibc.applications.transfer.v1.QueryDenomTracesResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.applications.transfer.v1.QueryDenomTracesResponse.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -501,31 +533,32 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.applications.transfer.v1.QueryDenomTracesResponse.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        denomTracesList: jspb.Message.toObjectList(msg.getDenomTracesList(),
-          ibc_applications_transfer_v1_transfer_pb.DenomTrace.toObject, includeInstance),
-        pagination: (f = msg.getPagination()) && cosmos_base_query_v1beta1_pagination_pb.PageResponse.toObject(includeInstance, f),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.applications.transfer.v1.QueryDenomTracesResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    denomTracesList: jspb.Message.toObjectList(msg.getDenomTracesList(),
+    ibc_applications_transfer_v1_transfer_pb.DenomTrace.toObject, includeInstance),
+    pagination: (f = msg.getPagination()) && cosmos_base_query_v1beta1_pagination_pb.PageResponse.toObject(includeInstance, f)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.applications.transfer.v1.QueryDenomTracesResponse}
  */
-proto.ibc.applications.transfer.v1.QueryDenomTracesResponse.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.applications.transfer.v1.QueryDenomTracesResponse();
+proto.ibc.applications.transfer.v1.QueryDenomTracesResponse.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.applications.transfer.v1.QueryDenomTracesResponse;
   return proto.ibc.applications.transfer.v1.QueryDenomTracesResponse.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -534,40 +567,42 @@ proto.ibc.applications.transfer.v1.QueryDenomTracesResponse.deserializeBinary = 
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.applications.transfer.v1.QueryDenomTracesResponse}
  */
-proto.ibc.applications.transfer.v1.QueryDenomTracesResponse.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.applications.transfer.v1.QueryDenomTracesResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = new ibc_applications_transfer_v1_transfer_pb.DenomTrace();
-        reader.readMessage(value, ibc_applications_transfer_v1_transfer_pb.DenomTrace.deserializeBinaryFromReader);
-        msg.addDenomTraces(value);
-        break;
-      case 2:
-        var value = new cosmos_base_query_v1beta1_pagination_pb.PageResponse();
-        reader.readMessage(value, cosmos_base_query_v1beta1_pagination_pb.PageResponse.deserializeBinaryFromReader);
-        msg.setPagination(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = new ibc_applications_transfer_v1_transfer_pb.DenomTrace;
+      reader.readMessage(value,ibc_applications_transfer_v1_transfer_pb.DenomTrace.deserializeBinaryFromReader);
+      msg.addDenomTraces(value);
+      break;
+    case 2:
+      var value = new cosmos_base_query_v1beta1_pagination_pb.PageResponse;
+      reader.readMessage(value,cosmos_base_query_v1beta1_pagination_pb.PageResponse.deserializeBinaryFromReader);
+      msg.setPagination(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.applications.transfer.v1.QueryDenomTracesResponse.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.applications.transfer.v1.QueryDenomTracesResponse.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.applications.transfer.v1.QueryDenomTracesResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -576,14 +611,14 @@ proto.ibc.applications.transfer.v1.QueryDenomTracesResponse.prototype.serializeB
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.applications.transfer.v1.QueryDenomTracesResponse.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.applications.transfer.v1.QueryDenomTracesResponse.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getDenomTracesList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       1,
       f,
-      ibc_applications_transfer_v1_transfer_pb.DenomTrace.serializeBinaryToWriter,
+      ibc_applications_transfer_v1_transfer_pb.DenomTrace.serializeBinaryToWriter
     );
   }
   f = message.getPagination();
@@ -591,63 +626,73 @@ proto.ibc.applications.transfer.v1.QueryDenomTracesResponse.serializeBinaryToWri
     writer.writeMessage(
       2,
       f,
-      cosmos_base_query_v1beta1_pagination_pb.PageResponse.serializeBinaryToWriter,
+      cosmos_base_query_v1beta1_pagination_pb.PageResponse.serializeBinaryToWriter
     );
   }
 };
+
 
 /**
  * repeated DenomTrace denom_traces = 1;
  * @return {!Array<!proto.ibc.applications.transfer.v1.DenomTrace>}
  */
-proto.ibc.applications.transfer.v1.QueryDenomTracesResponse.prototype.getDenomTracesList = function () {
+proto.ibc.applications.transfer.v1.QueryDenomTracesResponse.prototype.getDenomTracesList = function() {
   return /** @type{!Array<!proto.ibc.applications.transfer.v1.DenomTrace>} */ (
     jspb.Message.getRepeatedWrapperField(this, ibc_applications_transfer_v1_transfer_pb.DenomTrace, 1));
 };
 
+
 /** @param {!Array<!proto.ibc.applications.transfer.v1.DenomTrace>} value */
-proto.ibc.applications.transfer.v1.QueryDenomTracesResponse.prototype.setDenomTracesList = function (value) {
+proto.ibc.applications.transfer.v1.QueryDenomTracesResponse.prototype.setDenomTracesList = function(value) {
   jspb.Message.setRepeatedWrapperField(this, 1, value);
 };
+
 
 /**
  * @param {!proto.ibc.applications.transfer.v1.DenomTrace=} opt_value
  * @param {number=} opt_index
  * @return {!proto.ibc.applications.transfer.v1.DenomTrace}
  */
-proto.ibc.applications.transfer.v1.QueryDenomTracesResponse.prototype.addDenomTraces = function (opt_value, opt_index) {
+proto.ibc.applications.transfer.v1.QueryDenomTracesResponse.prototype.addDenomTraces = function(opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.ibc.applications.transfer.v1.DenomTrace, opt_index);
 };
 
-proto.ibc.applications.transfer.v1.QueryDenomTracesResponse.prototype.clearDenomTracesList = function () {
+
+proto.ibc.applications.transfer.v1.QueryDenomTracesResponse.prototype.clearDenomTracesList = function() {
   this.setDenomTracesList([]);
 };
+
 
 /**
  * optional cosmos.base.query.v1beta1.PageResponse pagination = 2;
  * @return {?proto.cosmos.base.query.v1beta1.PageResponse}
  */
-proto.ibc.applications.transfer.v1.QueryDenomTracesResponse.prototype.getPagination = function () {
+proto.ibc.applications.transfer.v1.QueryDenomTracesResponse.prototype.getPagination = function() {
   return /** @type{?proto.cosmos.base.query.v1beta1.PageResponse} */ (
     jspb.Message.getWrapperField(this, cosmos_base_query_v1beta1_pagination_pb.PageResponse, 2));
 };
 
+
 /** @param {?proto.cosmos.base.query.v1beta1.PageResponse|undefined} value */
-proto.ibc.applications.transfer.v1.QueryDenomTracesResponse.prototype.setPagination = function (value) {
+proto.ibc.applications.transfer.v1.QueryDenomTracesResponse.prototype.setPagination = function(value) {
   jspb.Message.setWrapperField(this, 2, value);
 };
 
-proto.ibc.applications.transfer.v1.QueryDenomTracesResponse.prototype.clearPagination = function () {
+
+proto.ibc.applications.transfer.v1.QueryDenomTracesResponse.prototype.clearPagination = function() {
   this.setPagination(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.ibc.applications.transfer.v1.QueryDenomTracesResponse.prototype.hasPagination = function () {
+proto.ibc.applications.transfer.v1.QueryDenomTracesResponse.prototype.hasPagination = function() {
   return jspb.Message.getField(this, 2) != null;
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -659,13 +704,14 @@ proto.ibc.applications.transfer.v1.QueryDenomTracesResponse.prototype.hasPaginat
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.applications.transfer.v1.QueryParamsRequest = function (opt_data) {
+proto.ibc.applications.transfer.v1.QueryParamsRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.ibc.applications.transfer.v1.QueryParamsRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.ibc.applications.transfer.v1.QueryParamsRequest.displayName = 'proto.ibc.applications.transfer.v1.QueryParamsRequest';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -678,11 +724,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.applications.transfer.v1.QueryParamsRequest.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.applications.transfer.v1.QueryParamsRequest.toObject(opt_includeInstance, this);
-  };
+proto.ibc.applications.transfer.v1.QueryParamsRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.applications.transfer.v1.QueryParamsRequest.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -691,29 +738,30 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.applications.transfer.v1.QueryParamsRequest.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
+proto.ibc.applications.transfer.v1.QueryParamsRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
 
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.applications.transfer.v1.QueryParamsRequest}
  */
-proto.ibc.applications.transfer.v1.QueryParamsRequest.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.applications.transfer.v1.QueryParamsRequest();
+proto.ibc.applications.transfer.v1.QueryParamsRequest.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.applications.transfer.v1.QueryParamsRequest;
   return proto.ibc.applications.transfer.v1.QueryParamsRequest.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -722,30 +770,32 @@ proto.ibc.applications.transfer.v1.QueryParamsRequest.deserializeBinary = functi
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.applications.transfer.v1.QueryParamsRequest}
  */
-proto.ibc.applications.transfer.v1.QueryParamsRequest.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.applications.transfer.v1.QueryParamsRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      default:
-        reader.skipField();
-        break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.applications.transfer.v1.QueryParamsRequest.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.applications.transfer.v1.QueryParamsRequest.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.applications.transfer.v1.QueryParamsRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -754,9 +804,11 @@ proto.ibc.applications.transfer.v1.QueryParamsRequest.prototype.serializeBinary 
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.applications.transfer.v1.QueryParamsRequest.serializeBinaryToWriter = function (message, writer) {
-  const f;
+proto.ibc.applications.transfer.v1.QueryParamsRequest.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -768,13 +820,14 @@ proto.ibc.applications.transfer.v1.QueryParamsRequest.serializeBinaryToWriter = 
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ibc.applications.transfer.v1.QueryParamsResponse = function (opt_data) {
+proto.ibc.applications.transfer.v1.QueryParamsResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.ibc.applications.transfer.v1.QueryParamsResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.ibc.applications.transfer.v1.QueryParamsResponse.displayName = 'proto.ibc.applications.transfer.v1.QueryParamsResponse';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -787,11 +840,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.ibc.applications.transfer.v1.QueryParamsResponse.prototype.toObject = function (opt_includeInstance) {
-    return proto.ibc.applications.transfer.v1.QueryParamsResponse.toObject(opt_includeInstance, this);
-  };
+proto.ibc.applications.transfer.v1.QueryParamsResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.ibc.applications.transfer.v1.QueryParamsResponse.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -800,29 +854,30 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.ibc.applications.transfer.v1.QueryParamsResponse.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        params: (f = msg.getParams()) && ibc_applications_transfer_v1_transfer_pb.Params.toObject(includeInstance, f),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.ibc.applications.transfer.v1.QueryParamsResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    params: (f = msg.getParams()) && ibc_applications_transfer_v1_transfer_pb.Params.toObject(includeInstance, f)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ibc.applications.transfer.v1.QueryParamsResponse}
  */
-proto.ibc.applications.transfer.v1.QueryParamsResponse.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.ibc.applications.transfer.v1.QueryParamsResponse();
+proto.ibc.applications.transfer.v1.QueryParamsResponse.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.ibc.applications.transfer.v1.QueryParamsResponse;
   return proto.ibc.applications.transfer.v1.QueryParamsResponse.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -831,35 +886,37 @@ proto.ibc.applications.transfer.v1.QueryParamsResponse.deserializeBinary = funct
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.ibc.applications.transfer.v1.QueryParamsResponse}
  */
-proto.ibc.applications.transfer.v1.QueryParamsResponse.deserializeBinaryFromReader = function (msg, reader) {
+proto.ibc.applications.transfer.v1.QueryParamsResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = new ibc_applications_transfer_v1_transfer_pb.Params();
-        reader.readMessage(value, ibc_applications_transfer_v1_transfer_pb.Params.deserializeBinaryFromReader);
-        msg.setParams(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = new ibc_applications_transfer_v1_transfer_pb.Params;
+      reader.readMessage(value,ibc_applications_transfer_v1_transfer_pb.Params.deserializeBinaryFromReader);
+      msg.setParams(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ibc.applications.transfer.v1.QueryParamsResponse.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.ibc.applications.transfer.v1.QueryParamsResponse.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.ibc.applications.transfer.v1.QueryParamsResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -868,42 +925,47 @@ proto.ibc.applications.transfer.v1.QueryParamsResponse.prototype.serializeBinary
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ibc.applications.transfer.v1.QueryParamsResponse.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.ibc.applications.transfer.v1.QueryParamsResponse.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getParams();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      ibc_applications_transfer_v1_transfer_pb.Params.serializeBinaryToWriter,
+      ibc_applications_transfer_v1_transfer_pb.Params.serializeBinaryToWriter
     );
   }
 };
+
 
 /**
  * optional Params params = 1;
  * @return {?proto.ibc.applications.transfer.v1.Params}
  */
-proto.ibc.applications.transfer.v1.QueryParamsResponse.prototype.getParams = function () {
+proto.ibc.applications.transfer.v1.QueryParamsResponse.prototype.getParams = function() {
   return /** @type{?proto.ibc.applications.transfer.v1.Params} */ (
     jspb.Message.getWrapperField(this, ibc_applications_transfer_v1_transfer_pb.Params, 1));
 };
 
+
 /** @param {?proto.ibc.applications.transfer.v1.Params|undefined} value */
-proto.ibc.applications.transfer.v1.QueryParamsResponse.prototype.setParams = function (value) {
+proto.ibc.applications.transfer.v1.QueryParamsResponse.prototype.setParams = function(value) {
   jspb.Message.setWrapperField(this, 1, value);
 };
 
-proto.ibc.applications.transfer.v1.QueryParamsResponse.prototype.clearParams = function () {
+
+proto.ibc.applications.transfer.v1.QueryParamsResponse.prototype.clearParams = function() {
   this.setParams(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.ibc.applications.transfer.v1.QueryParamsResponse.prototype.hasParams = function () {
+proto.ibc.applications.transfer.v1.QueryParamsResponse.prototype.hasParams = function() {
   return jspb.Message.getField(this, 1) != null;
 };
+
 
 goog.object.extend(exports, proto.ibc.applications.transfer.v1);

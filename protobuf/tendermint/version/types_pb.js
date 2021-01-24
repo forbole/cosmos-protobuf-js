@@ -7,13 +7,11 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-const jspb = require('google-protobuf');
+var jspb = require('google-protobuf');
+var goog = jspb;
+var global = Function('return this')();
 
-const goog = jspb;
-const global = Function('return this')();
-
-const gogoproto_gogo_pb = require('../../gogoproto/gogo_pb.js');
-
+var gogoproto_gogo_pb = require('../../gogoproto/gogo_pb.js');
 goog.exportSymbol('proto.tendermint.version.App', null, global);
 goog.exportSymbol('proto.tendermint.version.Consensus', null, global);
 
@@ -27,13 +25,14 @@ goog.exportSymbol('proto.tendermint.version.Consensus', null, global);
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.version.App = function (opt_data) {
+proto.tendermint.version.App = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.tendermint.version.App, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.tendermint.version.App.displayName = 'proto.tendermint.version.App';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -46,11 +45,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.tendermint.version.App.prototype.toObject = function (opt_includeInstance) {
-    return proto.tendermint.version.App.toObject(opt_includeInstance, this);
-  };
+proto.tendermint.version.App.prototype.toObject = function(opt_includeInstance) {
+  return proto.tendermint.version.App.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -59,30 +59,31 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.tendermint.version.App.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        protocol: jspb.Message.getFieldWithDefault(msg, 1, 0),
-        software: jspb.Message.getFieldWithDefault(msg, 2, ''),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.tendermint.version.App.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    protocol: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    software: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.version.App}
  */
-proto.tendermint.version.App.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.tendermint.version.App();
+proto.tendermint.version.App.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.tendermint.version.App;
   return proto.tendermint.version.App.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -91,38 +92,40 @@ proto.tendermint.version.App.deserializeBinary = function (bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.version.App}
  */
-proto.tendermint.version.App.deserializeBinaryFromReader = function (msg, reader) {
+proto.tendermint.version.App.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {number} */ (reader.readUint64());
-        msg.setProtocol(value);
-        break;
-      case 2:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setSoftware(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setProtocol(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setSoftware(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.version.App.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.tendermint.version.App.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.tendermint.version.App.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -131,49 +134,55 @@ proto.tendermint.version.App.prototype.serializeBinary = function () {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.version.App.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.tendermint.version.App.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getProtocol();
   if (f !== 0) {
     writer.writeUint64(
       1,
-      f,
+      f
     );
   }
   f = message.getSoftware();
   if (f.length > 0) {
     writer.writeString(
       2,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * optional uint64 protocol = 1;
  * @return {number}
  */
-proto.tendermint.version.App.prototype.getProtocol = function () {
+proto.tendermint.version.App.prototype.getProtocol = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
+
 /** @param {number} value */
-proto.tendermint.version.App.prototype.setProtocol = function (value) {
+proto.tendermint.version.App.prototype.setProtocol = function(value) {
   jspb.Message.setProto3IntField(this, 1, value);
 };
+
 
 /**
  * optional string software = 2;
  * @return {string}
  */
-proto.tendermint.version.App.prototype.getSoftware = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
+proto.tendermint.version.App.prototype.getSoftware = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
+
 /** @param {string} value */
-proto.tendermint.version.App.prototype.setSoftware = function (value) {
+proto.tendermint.version.App.prototype.setSoftware = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -185,13 +194,14 @@ proto.tendermint.version.App.prototype.setSoftware = function (value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.version.Consensus = function (opt_data) {
+proto.tendermint.version.Consensus = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.tendermint.version.Consensus, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.tendermint.version.Consensus.displayName = 'proto.tendermint.version.Consensus';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -204,11 +214,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.tendermint.version.Consensus.prototype.toObject = function (opt_includeInstance) {
-    return proto.tendermint.version.Consensus.toObject(opt_includeInstance, this);
-  };
+proto.tendermint.version.Consensus.prototype.toObject = function(opt_includeInstance) {
+  return proto.tendermint.version.Consensus.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -217,30 +228,31 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.tendermint.version.Consensus.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        block: jspb.Message.getFieldWithDefault(msg, 1, 0),
-        app: jspb.Message.getFieldWithDefault(msg, 2, 0),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.tendermint.version.Consensus.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    block: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    app: jspb.Message.getFieldWithDefault(msg, 2, 0)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.version.Consensus}
  */
-proto.tendermint.version.Consensus.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.tendermint.version.Consensus();
+proto.tendermint.version.Consensus.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.tendermint.version.Consensus;
   return proto.tendermint.version.Consensus.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -249,38 +261,40 @@ proto.tendermint.version.Consensus.deserializeBinary = function (bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.version.Consensus}
  */
-proto.tendermint.version.Consensus.deserializeBinaryFromReader = function (msg, reader) {
+proto.tendermint.version.Consensus.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {number} */ (reader.readUint64());
-        msg.setBlock(value);
-        break;
-      case 2:
-        var value = /** @type {number} */ (reader.readUint64());
-        msg.setApp(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setBlock(value);
+      break;
+    case 2:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setApp(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.version.Consensus.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.tendermint.version.Consensus.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.tendermint.version.Consensus.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -289,48 +303,53 @@ proto.tendermint.version.Consensus.prototype.serializeBinary = function () {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.version.Consensus.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.tendermint.version.Consensus.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getBlock();
   if (f !== 0) {
     writer.writeUint64(
       1,
-      f,
+      f
     );
   }
   f = message.getApp();
   if (f !== 0) {
     writer.writeUint64(
       2,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * optional uint64 block = 1;
  * @return {number}
  */
-proto.tendermint.version.Consensus.prototype.getBlock = function () {
+proto.tendermint.version.Consensus.prototype.getBlock = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
+
 /** @param {number} value */
-proto.tendermint.version.Consensus.prototype.setBlock = function (value) {
+proto.tendermint.version.Consensus.prototype.setBlock = function(value) {
   jspb.Message.setProto3IntField(this, 1, value);
 };
+
 
 /**
  * optional uint64 app = 2;
  * @return {number}
  */
-proto.tendermint.version.Consensus.prototype.getApp = function () {
+proto.tendermint.version.Consensus.prototype.getApp = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
+
 /** @param {number} value */
-proto.tendermint.version.Consensus.prototype.setApp = function (value) {
+proto.tendermint.version.Consensus.prototype.setApp = function(value) {
   jspb.Message.setProto3IntField(this, 2, value);
 };
+
 
 goog.object.extend(exports, proto.tendermint.version);

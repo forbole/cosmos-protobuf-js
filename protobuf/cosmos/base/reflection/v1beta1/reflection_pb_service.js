@@ -1,31 +1,31 @@
 // package: cosmos.base.reflection.v1beta1
 // file: cosmos/base/reflection/v1beta1/reflection.proto
 
-const { grpc } = require('@improbable-eng/grpc-web');
-const cosmos_base_reflection_v1beta1_reflection_pb = require('./reflection_pb');
+var cosmos_base_reflection_v1beta1_reflection_pb = require("../../../../cosmos/base/reflection/v1beta1/reflection_pb");
+var grpc = require("@improbable-eng/grpc-web").grpc;
 
-const ReflectionService = (function () {
+var ReflectionService = (function () {
   function ReflectionService() {}
-  ReflectionService.serviceName = 'cosmos.base.reflection.v1beta1.ReflectionService';
+  ReflectionService.serviceName = "cosmos.base.reflection.v1beta1.ReflectionService";
   return ReflectionService;
 }());
 
 ReflectionService.ListAllInterfaces = {
-  methodName: 'ListAllInterfaces',
+  methodName: "ListAllInterfaces",
   service: ReflectionService,
   requestStream: false,
   responseStream: false,
   requestType: cosmos_base_reflection_v1beta1_reflection_pb.ListAllInterfacesRequest,
-  responseType: cosmos_base_reflection_v1beta1_reflection_pb.ListAllInterfacesResponse,
+  responseType: cosmos_base_reflection_v1beta1_reflection_pb.ListAllInterfacesResponse
 };
 
 ReflectionService.ListImplementations = {
-  methodName: 'ListImplementations',
+  methodName: "ListImplementations",
   service: ReflectionService,
   requestStream: false,
   responseStream: false,
   requestType: cosmos_base_reflection_v1beta1_reflection_pb.ListImplementationsRequest,
-  responseType: cosmos_base_reflection_v1beta1_reflection_pb.ListImplementationsResponse,
+  responseType: cosmos_base_reflection_v1beta1_reflection_pb.ListImplementationsResponse
 };
 
 exports.ReflectionService = ReflectionService;
@@ -39,16 +39,16 @@ ReflectionServiceClient.prototype.listAllInterfaces = function listAllInterfaces
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  const client = grpc.unary(ReflectionService.ListAllInterfaces, {
+  var client = grpc.unary(ReflectionService.ListAllInterfaces, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata,
+    metadata: metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd(response) {
+    onEnd: function (response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          const err = new Error(response.statusMessage);
+          var err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -56,13 +56,13 @@ ReflectionServiceClient.prototype.listAllInterfaces = function listAllInterfaces
           callback(null, response.message);
         }
       }
-    },
+    }
   });
   return {
-    cancel() {
+    cancel: function () {
       callback = null;
       client.close();
-    },
+    }
   };
 };
 
@@ -70,16 +70,16 @@ ReflectionServiceClient.prototype.listImplementations = function listImplementat
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  const client = grpc.unary(ReflectionService.ListImplementations, {
+  var client = grpc.unary(ReflectionService.ListImplementations, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata,
+    metadata: metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd(response) {
+    onEnd: function (response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          const err = new Error(response.statusMessage);
+          var err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -87,14 +87,15 @@ ReflectionServiceClient.prototype.listImplementations = function listImplementat
           callback(null, response.message);
         }
       }
-    },
+    }
   });
   return {
-    cancel() {
+    cancel: function () {
       callback = null;
       client.close();
-    },
+    }
   };
 };
 
 exports.ReflectionServiceClient = ReflectionServiceClient;
+

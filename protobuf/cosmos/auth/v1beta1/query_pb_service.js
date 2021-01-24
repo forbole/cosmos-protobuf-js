@@ -1,31 +1,31 @@
 // package: cosmos.auth.v1beta1
 // file: cosmos/auth/v1beta1/query.proto
 
-const { grpc } = require('@improbable-eng/grpc-web');
-const cosmos_auth_v1beta1_query_pb = require('./query_pb');
+var cosmos_auth_v1beta1_query_pb = require("../../../cosmos/auth/v1beta1/query_pb");
+var grpc = require("@improbable-eng/grpc-web").grpc;
 
-const Query = (function () {
+var Query = (function () {
   function Query() {}
-  Query.serviceName = 'cosmos.auth.v1beta1.Query';
+  Query.serviceName = "cosmos.auth.v1beta1.Query";
   return Query;
 }());
 
 Query.Account = {
-  methodName: 'Account',
+  methodName: "Account",
   service: Query,
   requestStream: false,
   responseStream: false,
   requestType: cosmos_auth_v1beta1_query_pb.QueryAccountRequest,
-  responseType: cosmos_auth_v1beta1_query_pb.QueryAccountResponse,
+  responseType: cosmos_auth_v1beta1_query_pb.QueryAccountResponse
 };
 
 Query.Params = {
-  methodName: 'Params',
+  methodName: "Params",
   service: Query,
   requestStream: false,
   responseStream: false,
   requestType: cosmos_auth_v1beta1_query_pb.QueryParamsRequest,
-  responseType: cosmos_auth_v1beta1_query_pb.QueryParamsResponse,
+  responseType: cosmos_auth_v1beta1_query_pb.QueryParamsResponse
 };
 
 exports.Query = Query;
@@ -39,16 +39,16 @@ QueryClient.prototype.account = function account(requestMessage, metadata, callb
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  const client = grpc.unary(Query.Account, {
+  var client = grpc.unary(Query.Account, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata,
+    metadata: metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd(response) {
+    onEnd: function (response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          const err = new Error(response.statusMessage);
+          var err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -56,13 +56,13 @@ QueryClient.prototype.account = function account(requestMessage, metadata, callb
           callback(null, response.message);
         }
       }
-    },
+    }
   });
   return {
-    cancel() {
+    cancel: function () {
       callback = null;
       client.close();
-    },
+    }
   };
 };
 
@@ -70,16 +70,16 @@ QueryClient.prototype.params = function params(requestMessage, metadata, callbac
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  const client = grpc.unary(Query.Params, {
+  var client = grpc.unary(Query.Params, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata,
+    metadata: metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd(response) {
+    onEnd: function (response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          const err = new Error(response.statusMessage);
+          var err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -87,14 +87,15 @@ QueryClient.prototype.params = function params(requestMessage, metadata, callbac
           callback(null, response.message);
         }
       }
-    },
+    }
   });
   return {
-    cancel() {
+    cancel: function () {
       callback = null;
       client.close();
-    },
+    }
   };
 };
 
 exports.QueryClient = QueryClient;
+

@@ -7,10 +7,9 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-const jspb = require('google-protobuf');
-
-const goog = jspb;
-const global = Function('return this')();
+var jspb = require('google-protobuf');
+var goog = jspb;
+var global = Function('return this')();
 
 goog.exportSymbol('proto.google.api.LaunchStage', null, global);
 /**
@@ -24,7 +23,7 @@ proto.google.api.LaunchStage = {
   ALPHA: 2,
   BETA: 3,
   GA: 4,
-  DEPRECATED: 5,
+  DEPRECATED: 5
 };
 
 goog.object.extend(exports, proto.google.api);

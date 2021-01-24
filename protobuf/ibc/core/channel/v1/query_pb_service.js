@@ -1,130 +1,130 @@
 // package: ibc.core.channel.v1
 // file: ibc/core/channel/v1/query.proto
 
-const { grpc } = require('@improbable-eng/grpc-web');
-const ibc_core_channel_v1_query_pb = require('./query_pb');
+var ibc_core_channel_v1_query_pb = require("../../../../ibc/core/channel/v1/query_pb");
+var grpc = require("@improbable-eng/grpc-web").grpc;
 
-const Query = (function () {
+var Query = (function () {
   function Query() {}
-  Query.serviceName = 'ibc.core.channel.v1.Query';
+  Query.serviceName = "ibc.core.channel.v1.Query";
   return Query;
 }());
 
 Query.Channel = {
-  methodName: 'Channel',
+  methodName: "Channel",
   service: Query,
   requestStream: false,
   responseStream: false,
   requestType: ibc_core_channel_v1_query_pb.QueryChannelRequest,
-  responseType: ibc_core_channel_v1_query_pb.QueryChannelResponse,
+  responseType: ibc_core_channel_v1_query_pb.QueryChannelResponse
 };
 
 Query.Channels = {
-  methodName: 'Channels',
+  methodName: "Channels",
   service: Query,
   requestStream: false,
   responseStream: false,
   requestType: ibc_core_channel_v1_query_pb.QueryChannelsRequest,
-  responseType: ibc_core_channel_v1_query_pb.QueryChannelsResponse,
+  responseType: ibc_core_channel_v1_query_pb.QueryChannelsResponse
 };
 
 Query.ConnectionChannels = {
-  methodName: 'ConnectionChannels',
+  methodName: "ConnectionChannels",
   service: Query,
   requestStream: false,
   responseStream: false,
   requestType: ibc_core_channel_v1_query_pb.QueryConnectionChannelsRequest,
-  responseType: ibc_core_channel_v1_query_pb.QueryConnectionChannelsResponse,
+  responseType: ibc_core_channel_v1_query_pb.QueryConnectionChannelsResponse
 };
 
 Query.ChannelClientState = {
-  methodName: 'ChannelClientState',
+  methodName: "ChannelClientState",
   service: Query,
   requestStream: false,
   responseStream: false,
   requestType: ibc_core_channel_v1_query_pb.QueryChannelClientStateRequest,
-  responseType: ibc_core_channel_v1_query_pb.QueryChannelClientStateResponse,
+  responseType: ibc_core_channel_v1_query_pb.QueryChannelClientStateResponse
 };
 
 Query.ChannelConsensusState = {
-  methodName: 'ChannelConsensusState',
+  methodName: "ChannelConsensusState",
   service: Query,
   requestStream: false,
   responseStream: false,
   requestType: ibc_core_channel_v1_query_pb.QueryChannelConsensusStateRequest,
-  responseType: ibc_core_channel_v1_query_pb.QueryChannelConsensusStateResponse,
+  responseType: ibc_core_channel_v1_query_pb.QueryChannelConsensusStateResponse
 };
 
 Query.PacketCommitment = {
-  methodName: 'PacketCommitment',
+  methodName: "PacketCommitment",
   service: Query,
   requestStream: false,
   responseStream: false,
   requestType: ibc_core_channel_v1_query_pb.QueryPacketCommitmentRequest,
-  responseType: ibc_core_channel_v1_query_pb.QueryPacketCommitmentResponse,
+  responseType: ibc_core_channel_v1_query_pb.QueryPacketCommitmentResponse
 };
 
 Query.PacketCommitments = {
-  methodName: 'PacketCommitments',
+  methodName: "PacketCommitments",
   service: Query,
   requestStream: false,
   responseStream: false,
   requestType: ibc_core_channel_v1_query_pb.QueryPacketCommitmentsRequest,
-  responseType: ibc_core_channel_v1_query_pb.QueryPacketCommitmentsResponse,
+  responseType: ibc_core_channel_v1_query_pb.QueryPacketCommitmentsResponse
 };
 
 Query.PacketReceipt = {
-  methodName: 'PacketReceipt',
+  methodName: "PacketReceipt",
   service: Query,
   requestStream: false,
   responseStream: false,
   requestType: ibc_core_channel_v1_query_pb.QueryPacketReceiptRequest,
-  responseType: ibc_core_channel_v1_query_pb.QueryPacketReceiptResponse,
+  responseType: ibc_core_channel_v1_query_pb.QueryPacketReceiptResponse
 };
 
 Query.PacketAcknowledgement = {
-  methodName: 'PacketAcknowledgement',
+  methodName: "PacketAcknowledgement",
   service: Query,
   requestStream: false,
   responseStream: false,
   requestType: ibc_core_channel_v1_query_pb.QueryPacketAcknowledgementRequest,
-  responseType: ibc_core_channel_v1_query_pb.QueryPacketAcknowledgementResponse,
+  responseType: ibc_core_channel_v1_query_pb.QueryPacketAcknowledgementResponse
 };
 
 Query.PacketAcknowledgements = {
-  methodName: 'PacketAcknowledgements',
+  methodName: "PacketAcknowledgements",
   service: Query,
   requestStream: false,
   responseStream: false,
   requestType: ibc_core_channel_v1_query_pb.QueryPacketAcknowledgementsRequest,
-  responseType: ibc_core_channel_v1_query_pb.QueryPacketAcknowledgementsResponse,
+  responseType: ibc_core_channel_v1_query_pb.QueryPacketAcknowledgementsResponse
 };
 
 Query.UnreceivedPackets = {
-  methodName: 'UnreceivedPackets',
+  methodName: "UnreceivedPackets",
   service: Query,
   requestStream: false,
   responseStream: false,
   requestType: ibc_core_channel_v1_query_pb.QueryUnreceivedPacketsRequest,
-  responseType: ibc_core_channel_v1_query_pb.QueryUnreceivedPacketsResponse,
+  responseType: ibc_core_channel_v1_query_pb.QueryUnreceivedPacketsResponse
 };
 
 Query.UnreceivedAcks = {
-  methodName: 'UnreceivedAcks',
+  methodName: "UnreceivedAcks",
   service: Query,
   requestStream: false,
   responseStream: false,
   requestType: ibc_core_channel_v1_query_pb.QueryUnreceivedAcksRequest,
-  responseType: ibc_core_channel_v1_query_pb.QueryUnreceivedAcksResponse,
+  responseType: ibc_core_channel_v1_query_pb.QueryUnreceivedAcksResponse
 };
 
 Query.NextSequenceReceive = {
-  methodName: 'NextSequenceReceive',
+  methodName: "NextSequenceReceive",
   service: Query,
   requestStream: false,
   responseStream: false,
   requestType: ibc_core_channel_v1_query_pb.QueryNextSequenceReceiveRequest,
-  responseType: ibc_core_channel_v1_query_pb.QueryNextSequenceReceiveResponse,
+  responseType: ibc_core_channel_v1_query_pb.QueryNextSequenceReceiveResponse
 };
 
 exports.Query = Query;
@@ -138,16 +138,16 @@ QueryClient.prototype.channel = function channel(requestMessage, metadata, callb
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  const client = grpc.unary(Query.Channel, {
+  var client = grpc.unary(Query.Channel, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata,
+    metadata: metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd(response) {
+    onEnd: function (response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          const err = new Error(response.statusMessage);
+          var err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -155,13 +155,13 @@ QueryClient.prototype.channel = function channel(requestMessage, metadata, callb
           callback(null, response.message);
         }
       }
-    },
+    }
   });
   return {
-    cancel() {
+    cancel: function () {
       callback = null;
       client.close();
-    },
+    }
   };
 };
 
@@ -169,16 +169,16 @@ QueryClient.prototype.channels = function channels(requestMessage, metadata, cal
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  const client = grpc.unary(Query.Channels, {
+  var client = grpc.unary(Query.Channels, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata,
+    metadata: metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd(response) {
+    onEnd: function (response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          const err = new Error(response.statusMessage);
+          var err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -186,13 +186,13 @@ QueryClient.prototype.channels = function channels(requestMessage, metadata, cal
           callback(null, response.message);
         }
       }
-    },
+    }
   });
   return {
-    cancel() {
+    cancel: function () {
       callback = null;
       client.close();
-    },
+    }
   };
 };
 
@@ -200,16 +200,16 @@ QueryClient.prototype.connectionChannels = function connectionChannels(requestMe
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  const client = grpc.unary(Query.ConnectionChannels, {
+  var client = grpc.unary(Query.ConnectionChannels, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata,
+    metadata: metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd(response) {
+    onEnd: function (response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          const err = new Error(response.statusMessage);
+          var err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -217,13 +217,13 @@ QueryClient.prototype.connectionChannels = function connectionChannels(requestMe
           callback(null, response.message);
         }
       }
-    },
+    }
   });
   return {
-    cancel() {
+    cancel: function () {
       callback = null;
       client.close();
-    },
+    }
   };
 };
 
@@ -231,16 +231,16 @@ QueryClient.prototype.channelClientState = function channelClientState(requestMe
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  const client = grpc.unary(Query.ChannelClientState, {
+  var client = grpc.unary(Query.ChannelClientState, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata,
+    metadata: metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd(response) {
+    onEnd: function (response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          const err = new Error(response.statusMessage);
+          var err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -248,13 +248,13 @@ QueryClient.prototype.channelClientState = function channelClientState(requestMe
           callback(null, response.message);
         }
       }
-    },
+    }
   });
   return {
-    cancel() {
+    cancel: function () {
       callback = null;
       client.close();
-    },
+    }
   };
 };
 
@@ -262,16 +262,16 @@ QueryClient.prototype.channelConsensusState = function channelConsensusState(req
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  const client = grpc.unary(Query.ChannelConsensusState, {
+  var client = grpc.unary(Query.ChannelConsensusState, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata,
+    metadata: metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd(response) {
+    onEnd: function (response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          const err = new Error(response.statusMessage);
+          var err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -279,13 +279,13 @@ QueryClient.prototype.channelConsensusState = function channelConsensusState(req
           callback(null, response.message);
         }
       }
-    },
+    }
   });
   return {
-    cancel() {
+    cancel: function () {
       callback = null;
       client.close();
-    },
+    }
   };
 };
 
@@ -293,16 +293,16 @@ QueryClient.prototype.packetCommitment = function packetCommitment(requestMessag
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  const client = grpc.unary(Query.PacketCommitment, {
+  var client = grpc.unary(Query.PacketCommitment, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata,
+    metadata: metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd(response) {
+    onEnd: function (response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          const err = new Error(response.statusMessage);
+          var err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -310,13 +310,13 @@ QueryClient.prototype.packetCommitment = function packetCommitment(requestMessag
           callback(null, response.message);
         }
       }
-    },
+    }
   });
   return {
-    cancel() {
+    cancel: function () {
       callback = null;
       client.close();
-    },
+    }
   };
 };
 
@@ -324,16 +324,16 @@ QueryClient.prototype.packetCommitments = function packetCommitments(requestMess
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  const client = grpc.unary(Query.PacketCommitments, {
+  var client = grpc.unary(Query.PacketCommitments, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata,
+    metadata: metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd(response) {
+    onEnd: function (response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          const err = new Error(response.statusMessage);
+          var err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -341,13 +341,13 @@ QueryClient.prototype.packetCommitments = function packetCommitments(requestMess
           callback(null, response.message);
         }
       }
-    },
+    }
   });
   return {
-    cancel() {
+    cancel: function () {
       callback = null;
       client.close();
-    },
+    }
   };
 };
 
@@ -355,16 +355,16 @@ QueryClient.prototype.packetReceipt = function packetReceipt(requestMessage, met
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  const client = grpc.unary(Query.PacketReceipt, {
+  var client = grpc.unary(Query.PacketReceipt, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata,
+    metadata: metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd(response) {
+    onEnd: function (response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          const err = new Error(response.statusMessage);
+          var err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -372,13 +372,13 @@ QueryClient.prototype.packetReceipt = function packetReceipt(requestMessage, met
           callback(null, response.message);
         }
       }
-    },
+    }
   });
   return {
-    cancel() {
+    cancel: function () {
       callback = null;
       client.close();
-    },
+    }
   };
 };
 
@@ -386,16 +386,16 @@ QueryClient.prototype.packetAcknowledgement = function packetAcknowledgement(req
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  const client = grpc.unary(Query.PacketAcknowledgement, {
+  var client = grpc.unary(Query.PacketAcknowledgement, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata,
+    metadata: metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd(response) {
+    onEnd: function (response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          const err = new Error(response.statusMessage);
+          var err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -403,13 +403,13 @@ QueryClient.prototype.packetAcknowledgement = function packetAcknowledgement(req
           callback(null, response.message);
         }
       }
-    },
+    }
   });
   return {
-    cancel() {
+    cancel: function () {
       callback = null;
       client.close();
-    },
+    }
   };
 };
 
@@ -417,16 +417,16 @@ QueryClient.prototype.packetAcknowledgements = function packetAcknowledgements(r
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  const client = grpc.unary(Query.PacketAcknowledgements, {
+  var client = grpc.unary(Query.PacketAcknowledgements, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata,
+    metadata: metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd(response) {
+    onEnd: function (response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          const err = new Error(response.statusMessage);
+          var err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -434,13 +434,13 @@ QueryClient.prototype.packetAcknowledgements = function packetAcknowledgements(r
           callback(null, response.message);
         }
       }
-    },
+    }
   });
   return {
-    cancel() {
+    cancel: function () {
       callback = null;
       client.close();
-    },
+    }
   };
 };
 
@@ -448,16 +448,16 @@ QueryClient.prototype.unreceivedPackets = function unreceivedPackets(requestMess
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  const client = grpc.unary(Query.UnreceivedPackets, {
+  var client = grpc.unary(Query.UnreceivedPackets, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata,
+    metadata: metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd(response) {
+    onEnd: function (response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          const err = new Error(response.statusMessage);
+          var err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -465,13 +465,13 @@ QueryClient.prototype.unreceivedPackets = function unreceivedPackets(requestMess
           callback(null, response.message);
         }
       }
-    },
+    }
   });
   return {
-    cancel() {
+    cancel: function () {
       callback = null;
       client.close();
-    },
+    }
   };
 };
 
@@ -479,16 +479,16 @@ QueryClient.prototype.unreceivedAcks = function unreceivedAcks(requestMessage, m
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  const client = grpc.unary(Query.UnreceivedAcks, {
+  var client = grpc.unary(Query.UnreceivedAcks, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata,
+    metadata: metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd(response) {
+    onEnd: function (response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          const err = new Error(response.statusMessage);
+          var err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -496,13 +496,13 @@ QueryClient.prototype.unreceivedAcks = function unreceivedAcks(requestMessage, m
           callback(null, response.message);
         }
       }
-    },
+    }
   });
   return {
-    cancel() {
+    cancel: function () {
       callback = null;
       client.close();
-    },
+    }
   };
 };
 
@@ -510,16 +510,16 @@ QueryClient.prototype.nextSequenceReceive = function nextSequenceReceive(request
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  const client = grpc.unary(Query.NextSequenceReceive, {
+  var client = grpc.unary(Query.NextSequenceReceive, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata,
+    metadata: metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd(response) {
+    onEnd: function (response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          const err = new Error(response.statusMessage);
+          var err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -527,14 +527,15 @@ QueryClient.prototype.nextSequenceReceive = function nextSequenceReceive(request
           callback(null, response.message);
         }
       }
-    },
+    }
   });
   return {
-    cancel() {
+    cancel: function () {
       callback = null;
       client.close();
-    },
+    }
   };
 };
 
 exports.QueryClient = QueryClient;
+

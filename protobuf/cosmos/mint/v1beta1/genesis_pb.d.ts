@@ -2,6 +2,7 @@
 // file: cosmos/mint/v1beta1/genesis.proto
 
 import * as jspb from "google-protobuf";
+import * as gogoproto_gogo_pb from "../../../gogoproto/gogo_pb";
 import * as cosmos_mint_v1beta1_mint_pb from "../../../cosmos/mint/v1beta1/mint_pb";
 
 export class GenesisState extends jspb.Message {

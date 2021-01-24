@@ -7,13 +7,11 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-const jspb = require('google-protobuf');
+var jspb = require('google-protobuf');
+var goog = jspb;
+var global = Function('return this')();
 
-const goog = jspb;
-const global = Function('return this')();
-
-const gogoproto_gogo_pb = require('../../../../gogoproto/gogo_pb.js');
-
+var gogoproto_gogo_pb = require('../../../../gogoproto/gogo_pb.js');
 goog.exportSymbol('proto.cosmos.base.store.v1beta1.SnapshotIAVLItem', null, global);
 goog.exportSymbol('proto.cosmos.base.store.v1beta1.SnapshotItem', null, global);
 goog.exportSymbol('proto.cosmos.base.store.v1beta1.SnapshotStoreItem', null, global);
@@ -28,7 +26,7 @@ goog.exportSymbol('proto.cosmos.base.store.v1beta1.SnapshotStoreItem', null, glo
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.base.store.v1beta1.SnapshotItem = function (opt_data) {
+proto.cosmos.base.store.v1beta1.SnapshotItem = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, proto.cosmos.base.store.v1beta1.SnapshotItem.oneofGroups_);
 };
 goog.inherits(proto.cosmos.base.store.v1beta1.SnapshotItem, jspb.Message);
@@ -43,7 +41,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<!Array<number>>}
  * @const
  */
-proto.cosmos.base.store.v1beta1.SnapshotItem.oneofGroups_ = [[1, 2]];
+proto.cosmos.base.store.v1beta1.SnapshotItem.oneofGroups_ = [[1,2]];
 
 /**
  * @enum {number}
@@ -51,15 +49,17 @@ proto.cosmos.base.store.v1beta1.SnapshotItem.oneofGroups_ = [[1, 2]];
 proto.cosmos.base.store.v1beta1.SnapshotItem.ItemCase = {
   ITEM_NOT_SET: 0,
   STORE: 1,
-  IAVL: 2,
+  IAVL: 2
 };
 
 /**
  * @return {proto.cosmos.base.store.v1beta1.SnapshotItem.ItemCase}
  */
-proto.cosmos.base.store.v1beta1.SnapshotItem.prototype.getItemCase = function () {
+proto.cosmos.base.store.v1beta1.SnapshotItem.prototype.getItemCase = function() {
   return /** @type {proto.cosmos.base.store.v1beta1.SnapshotItem.ItemCase} */(jspb.Message.computeOneofCase(this, proto.cosmos.base.store.v1beta1.SnapshotItem.oneofGroups_[0]));
 };
+
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -72,11 +72,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.cosmos.base.store.v1beta1.SnapshotItem.prototype.toObject = function (opt_includeInstance) {
-    return proto.cosmos.base.store.v1beta1.SnapshotItem.toObject(opt_includeInstance, this);
-  };
+proto.cosmos.base.store.v1beta1.SnapshotItem.prototype.toObject = function(opt_includeInstance) {
+  return proto.cosmos.base.store.v1beta1.SnapshotItem.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -85,30 +86,31 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.cosmos.base.store.v1beta1.SnapshotItem.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        store: (f = msg.getStore()) && proto.cosmos.base.store.v1beta1.SnapshotStoreItem.toObject(includeInstance, f),
-        iavl: (f = msg.getIavl()) && proto.cosmos.base.store.v1beta1.SnapshotIAVLItem.toObject(includeInstance, f),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.cosmos.base.store.v1beta1.SnapshotItem.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    store: (f = msg.getStore()) && proto.cosmos.base.store.v1beta1.SnapshotStoreItem.toObject(includeInstance, f),
+    iavl: (f = msg.getIavl()) && proto.cosmos.base.store.v1beta1.SnapshotIAVLItem.toObject(includeInstance, f)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.base.store.v1beta1.SnapshotItem}
  */
-proto.cosmos.base.store.v1beta1.SnapshotItem.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.cosmos.base.store.v1beta1.SnapshotItem();
+proto.cosmos.base.store.v1beta1.SnapshotItem.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.cosmos.base.store.v1beta1.SnapshotItem;
   return proto.cosmos.base.store.v1beta1.SnapshotItem.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -117,40 +119,42 @@ proto.cosmos.base.store.v1beta1.SnapshotItem.deserializeBinary = function (bytes
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.base.store.v1beta1.SnapshotItem}
  */
-proto.cosmos.base.store.v1beta1.SnapshotItem.deserializeBinaryFromReader = function (msg, reader) {
+proto.cosmos.base.store.v1beta1.SnapshotItem.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = new proto.cosmos.base.store.v1beta1.SnapshotStoreItem();
-        reader.readMessage(value, proto.cosmos.base.store.v1beta1.SnapshotStoreItem.deserializeBinaryFromReader);
-        msg.setStore(value);
-        break;
-      case 2:
-        var value = new proto.cosmos.base.store.v1beta1.SnapshotIAVLItem();
-        reader.readMessage(value, proto.cosmos.base.store.v1beta1.SnapshotIAVLItem.deserializeBinaryFromReader);
-        msg.setIavl(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = new proto.cosmos.base.store.v1beta1.SnapshotStoreItem;
+      reader.readMessage(value,proto.cosmos.base.store.v1beta1.SnapshotStoreItem.deserializeBinaryFromReader);
+      msg.setStore(value);
+      break;
+    case 2:
+      var value = new proto.cosmos.base.store.v1beta1.SnapshotIAVLItem;
+      reader.readMessage(value,proto.cosmos.base.store.v1beta1.SnapshotIAVLItem.deserializeBinaryFromReader);
+      msg.setIavl(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.base.store.v1beta1.SnapshotItem.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.cosmos.base.store.v1beta1.SnapshotItem.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.cosmos.base.store.v1beta1.SnapshotItem.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -159,14 +163,14 @@ proto.cosmos.base.store.v1beta1.SnapshotItem.prototype.serializeBinary = functio
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.store.v1beta1.SnapshotItem.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.cosmos.base.store.v1beta1.SnapshotItem.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getStore();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.cosmos.base.store.v1beta1.SnapshotStoreItem.serializeBinaryToWriter,
+      proto.cosmos.base.store.v1beta1.SnapshotStoreItem.serializeBinaryToWriter
     );
   }
   f = message.getIavl();
@@ -174,62 +178,72 @@ proto.cosmos.base.store.v1beta1.SnapshotItem.serializeBinaryToWriter = function 
     writer.writeMessage(
       2,
       f,
-      proto.cosmos.base.store.v1beta1.SnapshotIAVLItem.serializeBinaryToWriter,
+      proto.cosmos.base.store.v1beta1.SnapshotIAVLItem.serializeBinaryToWriter
     );
   }
 };
+
 
 /**
  * optional SnapshotStoreItem store = 1;
  * @return {?proto.cosmos.base.store.v1beta1.SnapshotStoreItem}
  */
-proto.cosmos.base.store.v1beta1.SnapshotItem.prototype.getStore = function () {
+proto.cosmos.base.store.v1beta1.SnapshotItem.prototype.getStore = function() {
   return /** @type{?proto.cosmos.base.store.v1beta1.SnapshotStoreItem} */ (
     jspb.Message.getWrapperField(this, proto.cosmos.base.store.v1beta1.SnapshotStoreItem, 1));
 };
 
+
 /** @param {?proto.cosmos.base.store.v1beta1.SnapshotStoreItem|undefined} value */
-proto.cosmos.base.store.v1beta1.SnapshotItem.prototype.setStore = function (value) {
+proto.cosmos.base.store.v1beta1.SnapshotItem.prototype.setStore = function(value) {
   jspb.Message.setOneofWrapperField(this, 1, proto.cosmos.base.store.v1beta1.SnapshotItem.oneofGroups_[0], value);
 };
 
-proto.cosmos.base.store.v1beta1.SnapshotItem.prototype.clearStore = function () {
+
+proto.cosmos.base.store.v1beta1.SnapshotItem.prototype.clearStore = function() {
   this.setStore(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.cosmos.base.store.v1beta1.SnapshotItem.prototype.hasStore = function () {
+proto.cosmos.base.store.v1beta1.SnapshotItem.prototype.hasStore = function() {
   return jspb.Message.getField(this, 1) != null;
 };
+
 
 /**
  * optional SnapshotIAVLItem iavl = 2;
  * @return {?proto.cosmos.base.store.v1beta1.SnapshotIAVLItem}
  */
-proto.cosmos.base.store.v1beta1.SnapshotItem.prototype.getIavl = function () {
+proto.cosmos.base.store.v1beta1.SnapshotItem.prototype.getIavl = function() {
   return /** @type{?proto.cosmos.base.store.v1beta1.SnapshotIAVLItem} */ (
     jspb.Message.getWrapperField(this, proto.cosmos.base.store.v1beta1.SnapshotIAVLItem, 2));
 };
 
+
 /** @param {?proto.cosmos.base.store.v1beta1.SnapshotIAVLItem|undefined} value */
-proto.cosmos.base.store.v1beta1.SnapshotItem.prototype.setIavl = function (value) {
+proto.cosmos.base.store.v1beta1.SnapshotItem.prototype.setIavl = function(value) {
   jspb.Message.setOneofWrapperField(this, 2, proto.cosmos.base.store.v1beta1.SnapshotItem.oneofGroups_[0], value);
 };
 
-proto.cosmos.base.store.v1beta1.SnapshotItem.prototype.clearIavl = function () {
+
+proto.cosmos.base.store.v1beta1.SnapshotItem.prototype.clearIavl = function() {
   this.setIavl(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.cosmos.base.store.v1beta1.SnapshotItem.prototype.hasIavl = function () {
+proto.cosmos.base.store.v1beta1.SnapshotItem.prototype.hasIavl = function() {
   return jspb.Message.getField(this, 2) != null;
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -241,13 +255,14 @@ proto.cosmos.base.store.v1beta1.SnapshotItem.prototype.hasIavl = function () {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.base.store.v1beta1.SnapshotStoreItem = function (opt_data) {
+proto.cosmos.base.store.v1beta1.SnapshotStoreItem = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.base.store.v1beta1.SnapshotStoreItem, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.base.store.v1beta1.SnapshotStoreItem.displayName = 'proto.cosmos.base.store.v1beta1.SnapshotStoreItem';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -260,11 +275,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.cosmos.base.store.v1beta1.SnapshotStoreItem.prototype.toObject = function (opt_includeInstance) {
-    return proto.cosmos.base.store.v1beta1.SnapshotStoreItem.toObject(opt_includeInstance, this);
-  };
+proto.cosmos.base.store.v1beta1.SnapshotStoreItem.prototype.toObject = function(opt_includeInstance) {
+  return proto.cosmos.base.store.v1beta1.SnapshotStoreItem.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -273,29 +289,30 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.cosmos.base.store.v1beta1.SnapshotStoreItem.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        name: jspb.Message.getFieldWithDefault(msg, 1, ''),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.cosmos.base.store.v1beta1.SnapshotStoreItem.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    name: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.base.store.v1beta1.SnapshotStoreItem}
  */
-proto.cosmos.base.store.v1beta1.SnapshotStoreItem.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.cosmos.base.store.v1beta1.SnapshotStoreItem();
+proto.cosmos.base.store.v1beta1.SnapshotStoreItem.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.cosmos.base.store.v1beta1.SnapshotStoreItem;
   return proto.cosmos.base.store.v1beta1.SnapshotStoreItem.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -304,34 +321,36 @@ proto.cosmos.base.store.v1beta1.SnapshotStoreItem.deserializeBinary = function (
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.base.store.v1beta1.SnapshotStoreItem}
  */
-proto.cosmos.base.store.v1beta1.SnapshotStoreItem.deserializeBinaryFromReader = function (msg, reader) {
+proto.cosmos.base.store.v1beta1.SnapshotStoreItem.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setName(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setName(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.base.store.v1beta1.SnapshotStoreItem.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.cosmos.base.store.v1beta1.SnapshotStoreItem.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.cosmos.base.store.v1beta1.SnapshotStoreItem.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -340,29 +359,33 @@ proto.cosmos.base.store.v1beta1.SnapshotStoreItem.prototype.serializeBinary = fu
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.store.v1beta1.SnapshotStoreItem.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.cosmos.base.store.v1beta1.SnapshotStoreItem.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getName();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * optional string name = 1;
  * @return {string}
  */
-proto.cosmos.base.store.v1beta1.SnapshotStoreItem.prototype.getName = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.cosmos.base.store.v1beta1.SnapshotStoreItem.prototype.getName = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
+
 /** @param {string} value */
-proto.cosmos.base.store.v1beta1.SnapshotStoreItem.prototype.setName = function (value) {
+proto.cosmos.base.store.v1beta1.SnapshotStoreItem.prototype.setName = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -374,13 +397,14 @@ proto.cosmos.base.store.v1beta1.SnapshotStoreItem.prototype.setName = function (
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.base.store.v1beta1.SnapshotIAVLItem = function (opt_data) {
+proto.cosmos.base.store.v1beta1.SnapshotIAVLItem = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.base.store.v1beta1.SnapshotIAVLItem, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.base.store.v1beta1.SnapshotIAVLItem.displayName = 'proto.cosmos.base.store.v1beta1.SnapshotIAVLItem';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -393,11 +417,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.cosmos.base.store.v1beta1.SnapshotIAVLItem.prototype.toObject = function (opt_includeInstance) {
-    return proto.cosmos.base.store.v1beta1.SnapshotIAVLItem.toObject(opt_includeInstance, this);
-  };
+proto.cosmos.base.store.v1beta1.SnapshotIAVLItem.prototype.toObject = function(opt_includeInstance) {
+  return proto.cosmos.base.store.v1beta1.SnapshotIAVLItem.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -406,32 +431,33 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.cosmos.base.store.v1beta1.SnapshotIAVLItem.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        key: msg.getKey_asB64(),
-        value: msg.getValue_asB64(),
-        version: jspb.Message.getFieldWithDefault(msg, 3, 0),
-        height: jspb.Message.getFieldWithDefault(msg, 4, 0),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.cosmos.base.store.v1beta1.SnapshotIAVLItem.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    key: msg.getKey_asB64(),
+    value: msg.getValue_asB64(),
+    version: jspb.Message.getFieldWithDefault(msg, 3, 0),
+    height: jspb.Message.getFieldWithDefault(msg, 4, 0)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.base.store.v1beta1.SnapshotIAVLItem}
  */
-proto.cosmos.base.store.v1beta1.SnapshotIAVLItem.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.cosmos.base.store.v1beta1.SnapshotIAVLItem();
+proto.cosmos.base.store.v1beta1.SnapshotIAVLItem.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.cosmos.base.store.v1beta1.SnapshotIAVLItem;
   return proto.cosmos.base.store.v1beta1.SnapshotIAVLItem.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -440,46 +466,48 @@ proto.cosmos.base.store.v1beta1.SnapshotIAVLItem.deserializeBinary = function (b
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.base.store.v1beta1.SnapshotIAVLItem}
  */
-proto.cosmos.base.store.v1beta1.SnapshotIAVLItem.deserializeBinaryFromReader = function (msg, reader) {
+proto.cosmos.base.store.v1beta1.SnapshotIAVLItem.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setKey(value);
-        break;
-      case 2:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setValue(value);
-        break;
-      case 3:
-        var value = /** @type {number} */ (reader.readInt64());
-        msg.setVersion(value);
-        break;
-      case 4:
-        var value = /** @type {number} */ (reader.readInt32());
-        msg.setHeight(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setKey(value);
+      break;
+    case 2:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setValue(value);
+      break;
+    case 3:
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setVersion(value);
+      break;
+    case 4:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setHeight(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.base.store.v1beta1.SnapshotIAVLItem.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.cosmos.base.store.v1beta1.SnapshotIAVLItem.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.cosmos.base.store.v1beta1.SnapshotIAVLItem.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -488,56 +516,58 @@ proto.cosmos.base.store.v1beta1.SnapshotIAVLItem.prototype.serializeBinary = fun
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.store.v1beta1.SnapshotIAVLItem.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.cosmos.base.store.v1beta1.SnapshotIAVLItem.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getKey_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       1,
-      f,
+      f
     );
   }
   f = message.getValue_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       2,
-      f,
+      f
     );
   }
   f = message.getVersion();
   if (f !== 0) {
     writer.writeInt64(
       3,
-      f,
+      f
     );
   }
   f = message.getHeight();
   if (f !== 0) {
     writer.writeInt32(
       4,
-      f,
+      f
     );
   }
 };
 
+
 /**
  * optional bytes key = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.cosmos.base.store.v1beta1.SnapshotIAVLItem.prototype.getKey = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.cosmos.base.store.v1beta1.SnapshotIAVLItem.prototype.getKey = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
+
 
 /**
  * optional bytes key = 1;
  * This is a type-conversion wrapper around `getKey()`
  * @return {string}
  */
-proto.cosmos.base.store.v1beta1.SnapshotIAVLItem.prototype.getKey_asB64 = function () {
+proto.cosmos.base.store.v1beta1.SnapshotIAVLItem.prototype.getKey_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getKey(),
-  ));
+      this.getKey()));
 };
+
 
 /**
  * optional bytes key = 1;
@@ -546,35 +576,37 @@ proto.cosmos.base.store.v1beta1.SnapshotIAVLItem.prototype.getKey_asB64 = functi
  * This is a type-conversion wrapper around `getKey()`
  * @return {!Uint8Array}
  */
-proto.cosmos.base.store.v1beta1.SnapshotIAVLItem.prototype.getKey_asU8 = function () {
+proto.cosmos.base.store.v1beta1.SnapshotIAVLItem.prototype.getKey_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getKey(),
-  ));
+      this.getKey()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.cosmos.base.store.v1beta1.SnapshotIAVLItem.prototype.setKey = function (value) {
+proto.cosmos.base.store.v1beta1.SnapshotIAVLItem.prototype.setKey = function(value) {
   jspb.Message.setProto3BytesField(this, 1, value);
 };
 
+
 /**
  * optional bytes value = 2;
  * @return {!(string|Uint8Array)}
  */
-proto.cosmos.base.store.v1beta1.SnapshotIAVLItem.prototype.getValue = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
+proto.cosmos.base.store.v1beta1.SnapshotIAVLItem.prototype.getValue = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
+
 
 /**
  * optional bytes value = 2;
  * This is a type-conversion wrapper around `getValue()`
  * @return {string}
  */
-proto.cosmos.base.store.v1beta1.SnapshotIAVLItem.prototype.getValue_asB64 = function () {
+proto.cosmos.base.store.v1beta1.SnapshotIAVLItem.prototype.getValue_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getValue(),
-  ));
+      this.getValue()));
 };
+
 
 /**
  * optional bytes value = 2;
@@ -583,41 +615,46 @@ proto.cosmos.base.store.v1beta1.SnapshotIAVLItem.prototype.getValue_asB64 = func
  * This is a type-conversion wrapper around `getValue()`
  * @return {!Uint8Array}
  */
-proto.cosmos.base.store.v1beta1.SnapshotIAVLItem.prototype.getValue_asU8 = function () {
+proto.cosmos.base.store.v1beta1.SnapshotIAVLItem.prototype.getValue_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getValue(),
-  ));
+      this.getValue()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.cosmos.base.store.v1beta1.SnapshotIAVLItem.prototype.setValue = function (value) {
+proto.cosmos.base.store.v1beta1.SnapshotIAVLItem.prototype.setValue = function(value) {
   jspb.Message.setProto3BytesField(this, 2, value);
 };
+
 
 /**
  * optional int64 version = 3;
  * @return {number}
  */
-proto.cosmos.base.store.v1beta1.SnapshotIAVLItem.prototype.getVersion = function () {
+proto.cosmos.base.store.v1beta1.SnapshotIAVLItem.prototype.getVersion = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
+
 /** @param {number} value */
-proto.cosmos.base.store.v1beta1.SnapshotIAVLItem.prototype.setVersion = function (value) {
+proto.cosmos.base.store.v1beta1.SnapshotIAVLItem.prototype.setVersion = function(value) {
   jspb.Message.setProto3IntField(this, 3, value);
 };
+
 
 /**
  * optional int32 height = 4;
  * @return {number}
  */
-proto.cosmos.base.store.v1beta1.SnapshotIAVLItem.prototype.getHeight = function () {
+proto.cosmos.base.store.v1beta1.SnapshotIAVLItem.prototype.getHeight = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
 };
 
+
 /** @param {number} value */
-proto.cosmos.base.store.v1beta1.SnapshotIAVLItem.prototype.setHeight = function (value) {
+proto.cosmos.base.store.v1beta1.SnapshotIAVLItem.prototype.setHeight = function(value) {
   jspb.Message.setProto3IntField(this, 4, value);
 };
+
 
 goog.object.extend(exports, proto.cosmos.base.store.v1beta1);

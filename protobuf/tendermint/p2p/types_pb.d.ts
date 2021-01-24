@@ -2,6 +2,7 @@
 // file: tendermint/p2p/types.proto
 
 import * as jspb from "google-protobuf";
+import * as gogoproto_gogo_pb from "../../gogoproto/gogo_pb";
 
 export class NetAddress extends jspb.Message {
   getId(): string;

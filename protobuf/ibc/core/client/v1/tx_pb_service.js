@@ -1,49 +1,49 @@
 // package: ibc.core.client.v1
 // file: ibc/core/client/v1/tx.proto
 
-const { grpc } = require('@improbable-eng/grpc-web');
-const ibc_core_client_v1_tx_pb = require('./tx_pb');
+var ibc_core_client_v1_tx_pb = require("../../../../ibc/core/client/v1/tx_pb");
+var grpc = require("@improbable-eng/grpc-web").grpc;
 
-const Msg = (function () {
+var Msg = (function () {
   function Msg() {}
-  Msg.serviceName = 'ibc.core.client.v1.Msg';
+  Msg.serviceName = "ibc.core.client.v1.Msg";
   return Msg;
 }());
 
 Msg.CreateClient = {
-  methodName: 'CreateClient',
+  methodName: "CreateClient",
   service: Msg,
   requestStream: false,
   responseStream: false,
   requestType: ibc_core_client_v1_tx_pb.MsgCreateClient,
-  responseType: ibc_core_client_v1_tx_pb.MsgCreateClientResponse,
+  responseType: ibc_core_client_v1_tx_pb.MsgCreateClientResponse
 };
 
 Msg.UpdateClient = {
-  methodName: 'UpdateClient',
+  methodName: "UpdateClient",
   service: Msg,
   requestStream: false,
   responseStream: false,
   requestType: ibc_core_client_v1_tx_pb.MsgUpdateClient,
-  responseType: ibc_core_client_v1_tx_pb.MsgUpdateClientResponse,
+  responseType: ibc_core_client_v1_tx_pb.MsgUpdateClientResponse
 };
 
 Msg.UpgradeClient = {
-  methodName: 'UpgradeClient',
+  methodName: "UpgradeClient",
   service: Msg,
   requestStream: false,
   responseStream: false,
   requestType: ibc_core_client_v1_tx_pb.MsgUpgradeClient,
-  responseType: ibc_core_client_v1_tx_pb.MsgUpgradeClientResponse,
+  responseType: ibc_core_client_v1_tx_pb.MsgUpgradeClientResponse
 };
 
 Msg.SubmitMisbehaviour = {
-  methodName: 'SubmitMisbehaviour',
+  methodName: "SubmitMisbehaviour",
   service: Msg,
   requestStream: false,
   responseStream: false,
   requestType: ibc_core_client_v1_tx_pb.MsgSubmitMisbehaviour,
-  responseType: ibc_core_client_v1_tx_pb.MsgSubmitMisbehaviourResponse,
+  responseType: ibc_core_client_v1_tx_pb.MsgSubmitMisbehaviourResponse
 };
 
 exports.Msg = Msg;
@@ -57,16 +57,16 @@ MsgClient.prototype.createClient = function createClient(requestMessage, metadat
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  const client = grpc.unary(Msg.CreateClient, {
+  var client = grpc.unary(Msg.CreateClient, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata,
+    metadata: metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd(response) {
+    onEnd: function (response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          const err = new Error(response.statusMessage);
+          var err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -74,13 +74,13 @@ MsgClient.prototype.createClient = function createClient(requestMessage, metadat
           callback(null, response.message);
         }
       }
-    },
+    }
   });
   return {
-    cancel() {
+    cancel: function () {
       callback = null;
       client.close();
-    },
+    }
   };
 };
 
@@ -88,16 +88,16 @@ MsgClient.prototype.updateClient = function updateClient(requestMessage, metadat
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  const client = grpc.unary(Msg.UpdateClient, {
+  var client = grpc.unary(Msg.UpdateClient, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata,
+    metadata: metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd(response) {
+    onEnd: function (response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          const err = new Error(response.statusMessage);
+          var err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -105,13 +105,13 @@ MsgClient.prototype.updateClient = function updateClient(requestMessage, metadat
           callback(null, response.message);
         }
       }
-    },
+    }
   });
   return {
-    cancel() {
+    cancel: function () {
       callback = null;
       client.close();
-    },
+    }
   };
 };
 
@@ -119,16 +119,16 @@ MsgClient.prototype.upgradeClient = function upgradeClient(requestMessage, metad
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  const client = grpc.unary(Msg.UpgradeClient, {
+  var client = grpc.unary(Msg.UpgradeClient, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata,
+    metadata: metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd(response) {
+    onEnd: function (response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          const err = new Error(response.statusMessage);
+          var err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -136,13 +136,13 @@ MsgClient.prototype.upgradeClient = function upgradeClient(requestMessage, metad
           callback(null, response.message);
         }
       }
-    },
+    }
   });
   return {
-    cancel() {
+    cancel: function () {
       callback = null;
       client.close();
-    },
+    }
   };
 };
 
@@ -150,16 +150,16 @@ MsgClient.prototype.submitMisbehaviour = function submitMisbehaviour(requestMess
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  const client = grpc.unary(Msg.SubmitMisbehaviour, {
+  var client = grpc.unary(Msg.SubmitMisbehaviour, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata,
+    metadata: metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd(response) {
+    onEnd: function (response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          const err = new Error(response.statusMessage);
+          var err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -167,14 +167,15 @@ MsgClient.prototype.submitMisbehaviour = function submitMisbehaviour(requestMess
           callback(null, response.message);
         }
       }
-    },
+    }
   });
   return {
-    cancel() {
+    cancel: function () {
       callback = null;
       client.close();
-    },
+    }
   };
 };
 
 exports.MsgClient = MsgClient;
+

@@ -7,13 +7,11 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-const jspb = require('google-protobuf');
+var jspb = require('google-protobuf');
+var goog = jspb;
+var global = Function('return this')();
 
-const goog = jspb;
-const global = Function('return this')();
-
-const gogoproto_gogo_pb = require('../../gogoproto/gogo_pb.js');
-
+var gogoproto_gogo_pb = require('../../gogoproto/gogo_pb.js');
 goog.exportSymbol('proto.tendermint.p2p.DefaultNodeInfo', null, global);
 goog.exportSymbol('proto.tendermint.p2p.DefaultNodeInfoOther', null, global);
 goog.exportSymbol('proto.tendermint.p2p.NetAddress', null, global);
@@ -29,13 +27,14 @@ goog.exportSymbol('proto.tendermint.p2p.ProtocolVersion', null, global);
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.p2p.NetAddress = function (opt_data) {
+proto.tendermint.p2p.NetAddress = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.tendermint.p2p.NetAddress, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.tendermint.p2p.NetAddress.displayName = 'proto.tendermint.p2p.NetAddress';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -48,11 +47,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.tendermint.p2p.NetAddress.prototype.toObject = function (opt_includeInstance) {
-    return proto.tendermint.p2p.NetAddress.toObject(opt_includeInstance, this);
-  };
+proto.tendermint.p2p.NetAddress.prototype.toObject = function(opt_includeInstance) {
+  return proto.tendermint.p2p.NetAddress.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -61,31 +61,32 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.tendermint.p2p.NetAddress.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        id: jspb.Message.getFieldWithDefault(msg, 1, ''),
-        ip: jspb.Message.getFieldWithDefault(msg, 2, ''),
-        port: jspb.Message.getFieldWithDefault(msg, 3, 0),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.tendermint.p2p.NetAddress.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    id: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    ip: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    port: jspb.Message.getFieldWithDefault(msg, 3, 0)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.p2p.NetAddress}
  */
-proto.tendermint.p2p.NetAddress.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.tendermint.p2p.NetAddress();
+proto.tendermint.p2p.NetAddress.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.tendermint.p2p.NetAddress;
   return proto.tendermint.p2p.NetAddress.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -94,42 +95,44 @@ proto.tendermint.p2p.NetAddress.deserializeBinary = function (bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.p2p.NetAddress}
  */
-proto.tendermint.p2p.NetAddress.deserializeBinaryFromReader = function (msg, reader) {
+proto.tendermint.p2p.NetAddress.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setId(value);
-        break;
-      case 2:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setIp(value);
-        break;
-      case 3:
-        var value = /** @type {number} */ (reader.readUint32());
-        msg.setPort(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setId(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setIp(value);
+      break;
+    case 3:
+      var value = /** @type {number} */ (reader.readUint32());
+      msg.setPort(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.p2p.NetAddress.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.tendermint.p2p.NetAddress.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.tendermint.p2p.NetAddress.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -138,69 +141,77 @@ proto.tendermint.p2p.NetAddress.prototype.serializeBinary = function () {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.p2p.NetAddress.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.tendermint.p2p.NetAddress.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getId();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f,
+      f
     );
   }
   f = message.getIp();
   if (f.length > 0) {
     writer.writeString(
       2,
-      f,
+      f
     );
   }
   f = message.getPort();
   if (f !== 0) {
     writer.writeUint32(
       3,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * optional string id = 1;
  * @return {string}
  */
-proto.tendermint.p2p.NetAddress.prototype.getId = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.tendermint.p2p.NetAddress.prototype.getId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
+
 /** @param {string} value */
-proto.tendermint.p2p.NetAddress.prototype.setId = function (value) {
+proto.tendermint.p2p.NetAddress.prototype.setId = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
+
 
 /**
  * optional string ip = 2;
  * @return {string}
  */
-proto.tendermint.p2p.NetAddress.prototype.getIp = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
+proto.tendermint.p2p.NetAddress.prototype.getIp = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
+
 /** @param {string} value */
-proto.tendermint.p2p.NetAddress.prototype.setIp = function (value) {
+proto.tendermint.p2p.NetAddress.prototype.setIp = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
+
 
 /**
  * optional uint32 port = 3;
  * @return {number}
  */
-proto.tendermint.p2p.NetAddress.prototype.getPort = function () {
+proto.tendermint.p2p.NetAddress.prototype.getPort = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
+
 /** @param {number} value */
-proto.tendermint.p2p.NetAddress.prototype.setPort = function (value) {
+proto.tendermint.p2p.NetAddress.prototype.setPort = function(value) {
   jspb.Message.setProto3IntField(this, 3, value);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -212,13 +223,14 @@ proto.tendermint.p2p.NetAddress.prototype.setPort = function (value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.p2p.ProtocolVersion = function (opt_data) {
+proto.tendermint.p2p.ProtocolVersion = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.tendermint.p2p.ProtocolVersion, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.tendermint.p2p.ProtocolVersion.displayName = 'proto.tendermint.p2p.ProtocolVersion';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -231,11 +243,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.tendermint.p2p.ProtocolVersion.prototype.toObject = function (opt_includeInstance) {
-    return proto.tendermint.p2p.ProtocolVersion.toObject(opt_includeInstance, this);
-  };
+proto.tendermint.p2p.ProtocolVersion.prototype.toObject = function(opt_includeInstance) {
+  return proto.tendermint.p2p.ProtocolVersion.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -244,31 +257,32 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.tendermint.p2p.ProtocolVersion.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        p2p: jspb.Message.getFieldWithDefault(msg, 1, 0),
-        block: jspb.Message.getFieldWithDefault(msg, 2, 0),
-        app: jspb.Message.getFieldWithDefault(msg, 3, 0),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.tendermint.p2p.ProtocolVersion.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    p2p: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    block: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    app: jspb.Message.getFieldWithDefault(msg, 3, 0)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.p2p.ProtocolVersion}
  */
-proto.tendermint.p2p.ProtocolVersion.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.tendermint.p2p.ProtocolVersion();
+proto.tendermint.p2p.ProtocolVersion.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.tendermint.p2p.ProtocolVersion;
   return proto.tendermint.p2p.ProtocolVersion.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -277,42 +291,44 @@ proto.tendermint.p2p.ProtocolVersion.deserializeBinary = function (bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.p2p.ProtocolVersion}
  */
-proto.tendermint.p2p.ProtocolVersion.deserializeBinaryFromReader = function (msg, reader) {
+proto.tendermint.p2p.ProtocolVersion.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {number} */ (reader.readUint64());
-        msg.setP2p(value);
-        break;
-      case 2:
-        var value = /** @type {number} */ (reader.readUint64());
-        msg.setBlock(value);
-        break;
-      case 3:
-        var value = /** @type {number} */ (reader.readUint64());
-        msg.setApp(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setP2p(value);
+      break;
+    case 2:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setBlock(value);
+      break;
+    case 3:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setApp(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.p2p.ProtocolVersion.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.tendermint.p2p.ProtocolVersion.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.tendermint.p2p.ProtocolVersion.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -321,69 +337,77 @@ proto.tendermint.p2p.ProtocolVersion.prototype.serializeBinary = function () {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.p2p.ProtocolVersion.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.tendermint.p2p.ProtocolVersion.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getP2p();
   if (f !== 0) {
     writer.writeUint64(
       1,
-      f,
+      f
     );
   }
   f = message.getBlock();
   if (f !== 0) {
     writer.writeUint64(
       2,
-      f,
+      f
     );
   }
   f = message.getApp();
   if (f !== 0) {
     writer.writeUint64(
       3,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * optional uint64 p2p = 1;
  * @return {number}
  */
-proto.tendermint.p2p.ProtocolVersion.prototype.getP2p = function () {
+proto.tendermint.p2p.ProtocolVersion.prototype.getP2p = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
+
 /** @param {number} value */
-proto.tendermint.p2p.ProtocolVersion.prototype.setP2p = function (value) {
+proto.tendermint.p2p.ProtocolVersion.prototype.setP2p = function(value) {
   jspb.Message.setProto3IntField(this, 1, value);
 };
+
 
 /**
  * optional uint64 block = 2;
  * @return {number}
  */
-proto.tendermint.p2p.ProtocolVersion.prototype.getBlock = function () {
+proto.tendermint.p2p.ProtocolVersion.prototype.getBlock = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
+
 /** @param {number} value */
-proto.tendermint.p2p.ProtocolVersion.prototype.setBlock = function (value) {
+proto.tendermint.p2p.ProtocolVersion.prototype.setBlock = function(value) {
   jspb.Message.setProto3IntField(this, 2, value);
 };
+
 
 /**
  * optional uint64 app = 3;
  * @return {number}
  */
-proto.tendermint.p2p.ProtocolVersion.prototype.getApp = function () {
+proto.tendermint.p2p.ProtocolVersion.prototype.getApp = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
+
 /** @param {number} value */
-proto.tendermint.p2p.ProtocolVersion.prototype.setApp = function (value) {
+proto.tendermint.p2p.ProtocolVersion.prototype.setApp = function(value) {
   jspb.Message.setProto3IntField(this, 3, value);
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -395,13 +419,14 @@ proto.tendermint.p2p.ProtocolVersion.prototype.setApp = function (value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.p2p.DefaultNodeInfo = function (opt_data) {
+proto.tendermint.p2p.DefaultNodeInfo = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.tendermint.p2p.DefaultNodeInfo, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.tendermint.p2p.DefaultNodeInfo.displayName = 'proto.tendermint.p2p.DefaultNodeInfo';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -414,11 +439,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.tendermint.p2p.DefaultNodeInfo.prototype.toObject = function (opt_includeInstance) {
-    return proto.tendermint.p2p.DefaultNodeInfo.toObject(opt_includeInstance, this);
-  };
+proto.tendermint.p2p.DefaultNodeInfo.prototype.toObject = function(opt_includeInstance) {
+  return proto.tendermint.p2p.DefaultNodeInfo.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -427,36 +453,37 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.tendermint.p2p.DefaultNodeInfo.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        protocolVersion: (f = msg.getProtocolVersion()) && proto.tendermint.p2p.ProtocolVersion.toObject(includeInstance, f),
-        defaultNodeId: jspb.Message.getFieldWithDefault(msg, 2, ''),
-        listenAddr: jspb.Message.getFieldWithDefault(msg, 3, ''),
-        network: jspb.Message.getFieldWithDefault(msg, 4, ''),
-        version: jspb.Message.getFieldWithDefault(msg, 5, ''),
-        channels: msg.getChannels_asB64(),
-        moniker: jspb.Message.getFieldWithDefault(msg, 7, ''),
-        other: (f = msg.getOther()) && proto.tendermint.p2p.DefaultNodeInfoOther.toObject(includeInstance, f),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.tendermint.p2p.DefaultNodeInfo.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    protocolVersion: (f = msg.getProtocolVersion()) && proto.tendermint.p2p.ProtocolVersion.toObject(includeInstance, f),
+    defaultNodeId: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    listenAddr: jspb.Message.getFieldWithDefault(msg, 3, ""),
+    network: jspb.Message.getFieldWithDefault(msg, 4, ""),
+    version: jspb.Message.getFieldWithDefault(msg, 5, ""),
+    channels: msg.getChannels_asB64(),
+    moniker: jspb.Message.getFieldWithDefault(msg, 7, ""),
+    other: (f = msg.getOther()) && proto.tendermint.p2p.DefaultNodeInfoOther.toObject(includeInstance, f)
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.p2p.DefaultNodeInfo}
  */
-proto.tendermint.p2p.DefaultNodeInfo.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.tendermint.p2p.DefaultNodeInfo();
+proto.tendermint.p2p.DefaultNodeInfo.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.tendermint.p2p.DefaultNodeInfo;
   return proto.tendermint.p2p.DefaultNodeInfo.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -465,64 +492,66 @@ proto.tendermint.p2p.DefaultNodeInfo.deserializeBinary = function (bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.p2p.DefaultNodeInfo}
  */
-proto.tendermint.p2p.DefaultNodeInfo.deserializeBinaryFromReader = function (msg, reader) {
+proto.tendermint.p2p.DefaultNodeInfo.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = new proto.tendermint.p2p.ProtocolVersion();
-        reader.readMessage(value, proto.tendermint.p2p.ProtocolVersion.deserializeBinaryFromReader);
-        msg.setProtocolVersion(value);
-        break;
-      case 2:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setDefaultNodeId(value);
-        break;
-      case 3:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setListenAddr(value);
-        break;
-      case 4:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setNetwork(value);
-        break;
-      case 5:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setVersion(value);
-        break;
-      case 6:
-        var value = /** @type {!Uint8Array} */ (reader.readBytes());
-        msg.setChannels(value);
-        break;
-      case 7:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setMoniker(value);
-        break;
-      case 8:
-        var value = new proto.tendermint.p2p.DefaultNodeInfoOther();
-        reader.readMessage(value, proto.tendermint.p2p.DefaultNodeInfoOther.deserializeBinaryFromReader);
-        msg.setOther(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = new proto.tendermint.p2p.ProtocolVersion;
+      reader.readMessage(value,proto.tendermint.p2p.ProtocolVersion.deserializeBinaryFromReader);
+      msg.setProtocolVersion(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setDefaultNodeId(value);
+      break;
+    case 3:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setListenAddr(value);
+      break;
+    case 4:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setNetwork(value);
+      break;
+    case 5:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setVersion(value);
+      break;
+    case 6:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setChannels(value);
+      break;
+    case 7:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setMoniker(value);
+      break;
+    case 8:
+      var value = new proto.tendermint.p2p.DefaultNodeInfoOther;
+      reader.readMessage(value,proto.tendermint.p2p.DefaultNodeInfoOther.deserializeBinaryFromReader);
+      msg.setOther(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.p2p.DefaultNodeInfo.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.tendermint.p2p.DefaultNodeInfo.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.tendermint.p2p.DefaultNodeInfo.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -531,56 +560,56 @@ proto.tendermint.p2p.DefaultNodeInfo.prototype.serializeBinary = function () {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.p2p.DefaultNodeInfo.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.tendermint.p2p.DefaultNodeInfo.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getProtocolVersion();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.tendermint.p2p.ProtocolVersion.serializeBinaryToWriter,
+      proto.tendermint.p2p.ProtocolVersion.serializeBinaryToWriter
     );
   }
   f = message.getDefaultNodeId();
   if (f.length > 0) {
     writer.writeString(
       2,
-      f,
+      f
     );
   }
   f = message.getListenAddr();
   if (f.length > 0) {
     writer.writeString(
       3,
-      f,
+      f
     );
   }
   f = message.getNetwork();
   if (f.length > 0) {
     writer.writeString(
       4,
-      f,
+      f
     );
   }
   f = message.getVersion();
   if (f.length > 0) {
     writer.writeString(
       5,
-      f,
+      f
     );
   }
   f = message.getChannels_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       6,
-      f,
+      f
     );
   }
   f = message.getMoniker();
   if (f.length > 0) {
     writer.writeString(
       7,
-      f,
+      f
     );
   }
   f = message.getOther();
@@ -588,107 +617,121 @@ proto.tendermint.p2p.DefaultNodeInfo.serializeBinaryToWriter = function (message
     writer.writeMessage(
       8,
       f,
-      proto.tendermint.p2p.DefaultNodeInfoOther.serializeBinaryToWriter,
+      proto.tendermint.p2p.DefaultNodeInfoOther.serializeBinaryToWriter
     );
   }
 };
+
 
 /**
  * optional ProtocolVersion protocol_version = 1;
  * @return {?proto.tendermint.p2p.ProtocolVersion}
  */
-proto.tendermint.p2p.DefaultNodeInfo.prototype.getProtocolVersion = function () {
+proto.tendermint.p2p.DefaultNodeInfo.prototype.getProtocolVersion = function() {
   return /** @type{?proto.tendermint.p2p.ProtocolVersion} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.p2p.ProtocolVersion, 1));
 };
 
+
 /** @param {?proto.tendermint.p2p.ProtocolVersion|undefined} value */
-proto.tendermint.p2p.DefaultNodeInfo.prototype.setProtocolVersion = function (value) {
+proto.tendermint.p2p.DefaultNodeInfo.prototype.setProtocolVersion = function(value) {
   jspb.Message.setWrapperField(this, 1, value);
 };
 
-proto.tendermint.p2p.DefaultNodeInfo.prototype.clearProtocolVersion = function () {
+
+proto.tendermint.p2p.DefaultNodeInfo.prototype.clearProtocolVersion = function() {
   this.setProtocolVersion(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.p2p.DefaultNodeInfo.prototype.hasProtocolVersion = function () {
+proto.tendermint.p2p.DefaultNodeInfo.prototype.hasProtocolVersion = function() {
   return jspb.Message.getField(this, 1) != null;
 };
+
 
 /**
  * optional string default_node_id = 2;
  * @return {string}
  */
-proto.tendermint.p2p.DefaultNodeInfo.prototype.getDefaultNodeId = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
+proto.tendermint.p2p.DefaultNodeInfo.prototype.getDefaultNodeId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
+
 /** @param {string} value */
-proto.tendermint.p2p.DefaultNodeInfo.prototype.setDefaultNodeId = function (value) {
+proto.tendermint.p2p.DefaultNodeInfo.prototype.setDefaultNodeId = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
+
 
 /**
  * optional string listen_addr = 3;
  * @return {string}
  */
-proto.tendermint.p2p.DefaultNodeInfo.prototype.getListenAddr = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ''));
+proto.tendermint.p2p.DefaultNodeInfo.prototype.getListenAddr = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
+
 /** @param {string} value */
-proto.tendermint.p2p.DefaultNodeInfo.prototype.setListenAddr = function (value) {
+proto.tendermint.p2p.DefaultNodeInfo.prototype.setListenAddr = function(value) {
   jspb.Message.setProto3StringField(this, 3, value);
 };
+
 
 /**
  * optional string network = 4;
  * @return {string}
  */
-proto.tendermint.p2p.DefaultNodeInfo.prototype.getNetwork = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ''));
+proto.tendermint.p2p.DefaultNodeInfo.prototype.getNetwork = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
 };
 
+
 /** @param {string} value */
-proto.tendermint.p2p.DefaultNodeInfo.prototype.setNetwork = function (value) {
+proto.tendermint.p2p.DefaultNodeInfo.prototype.setNetwork = function(value) {
   jspb.Message.setProto3StringField(this, 4, value);
 };
+
 
 /**
  * optional string version = 5;
  * @return {string}
  */
-proto.tendermint.p2p.DefaultNodeInfo.prototype.getVersion = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ''));
+proto.tendermint.p2p.DefaultNodeInfo.prototype.getVersion = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
 };
 
+
 /** @param {string} value */
-proto.tendermint.p2p.DefaultNodeInfo.prototype.setVersion = function (value) {
+proto.tendermint.p2p.DefaultNodeInfo.prototype.setVersion = function(value) {
   jspb.Message.setProto3StringField(this, 5, value);
 };
+
 
 /**
  * optional bytes channels = 6;
  * @return {!(string|Uint8Array)}
  */
-proto.tendermint.p2p.DefaultNodeInfo.prototype.getChannels = function () {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 6, ''));
+proto.tendermint.p2p.DefaultNodeInfo.prototype.getChannels = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
 };
+
 
 /**
  * optional bytes channels = 6;
  * This is a type-conversion wrapper around `getChannels()`
  * @return {string}
  */
-proto.tendermint.p2p.DefaultNodeInfo.prototype.getChannels_asB64 = function () {
+proto.tendermint.p2p.DefaultNodeInfo.prototype.getChannels_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-    this.getChannels(),
-  ));
+      this.getChannels()));
 };
+
 
 /**
  * optional bytes channels = 6;
@@ -697,55 +740,63 @@ proto.tendermint.p2p.DefaultNodeInfo.prototype.getChannels_asB64 = function () {
  * This is a type-conversion wrapper around `getChannels()`
  * @return {!Uint8Array}
  */
-proto.tendermint.p2p.DefaultNodeInfo.prototype.getChannels_asU8 = function () {
+proto.tendermint.p2p.DefaultNodeInfo.prototype.getChannels_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-    this.getChannels(),
-  ));
+      this.getChannels()));
 };
 
+
 /** @param {!(string|Uint8Array)} value */
-proto.tendermint.p2p.DefaultNodeInfo.prototype.setChannels = function (value) {
+proto.tendermint.p2p.DefaultNodeInfo.prototype.setChannels = function(value) {
   jspb.Message.setProto3BytesField(this, 6, value);
 };
+
 
 /**
  * optional string moniker = 7;
  * @return {string}
  */
-proto.tendermint.p2p.DefaultNodeInfo.prototype.getMoniker = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 7, ''));
+proto.tendermint.p2p.DefaultNodeInfo.prototype.getMoniker = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 7, ""));
 };
 
+
 /** @param {string} value */
-proto.tendermint.p2p.DefaultNodeInfo.prototype.setMoniker = function (value) {
+proto.tendermint.p2p.DefaultNodeInfo.prototype.setMoniker = function(value) {
   jspb.Message.setProto3StringField(this, 7, value);
 };
+
 
 /**
  * optional DefaultNodeInfoOther other = 8;
  * @return {?proto.tendermint.p2p.DefaultNodeInfoOther}
  */
-proto.tendermint.p2p.DefaultNodeInfo.prototype.getOther = function () {
+proto.tendermint.p2p.DefaultNodeInfo.prototype.getOther = function() {
   return /** @type{?proto.tendermint.p2p.DefaultNodeInfoOther} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.p2p.DefaultNodeInfoOther, 8));
 };
 
+
 /** @param {?proto.tendermint.p2p.DefaultNodeInfoOther|undefined} value */
-proto.tendermint.p2p.DefaultNodeInfo.prototype.setOther = function (value) {
+proto.tendermint.p2p.DefaultNodeInfo.prototype.setOther = function(value) {
   jspb.Message.setWrapperField(this, 8, value);
 };
 
-proto.tendermint.p2p.DefaultNodeInfo.prototype.clearOther = function () {
+
+proto.tendermint.p2p.DefaultNodeInfo.prototype.clearOther = function() {
   this.setOther(undefined);
 };
+
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.p2p.DefaultNodeInfo.prototype.hasOther = function () {
+proto.tendermint.p2p.DefaultNodeInfo.prototype.hasOther = function() {
   return jspb.Message.getField(this, 8) != null;
 };
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -757,13 +808,14 @@ proto.tendermint.p2p.DefaultNodeInfo.prototype.hasOther = function () {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.p2p.DefaultNodeInfoOther = function (opt_data) {
+proto.tendermint.p2p.DefaultNodeInfoOther = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.tendermint.p2p.DefaultNodeInfoOther, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.tendermint.p2p.DefaultNodeInfoOther.displayName = 'proto.tendermint.p2p.DefaultNodeInfoOther';
 }
+
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -776,11 +828,12 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-  proto.tendermint.p2p.DefaultNodeInfoOther.prototype.toObject = function (opt_includeInstance) {
-    return proto.tendermint.p2p.DefaultNodeInfoOther.toObject(opt_includeInstance, this);
-  };
+proto.tendermint.p2p.DefaultNodeInfoOther.prototype.toObject = function(opt_includeInstance) {
+  return proto.tendermint.p2p.DefaultNodeInfoOther.toObject(opt_includeInstance, this);
+};
 
-  /**
+
+/**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -789,30 +842,31 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-  proto.tendermint.p2p.DefaultNodeInfoOther.toObject = function (includeInstance, msg) {
-    let f; const
-      obj = {
-        txIndex: jspb.Message.getFieldWithDefault(msg, 1, ''),
-        rpcAddress: jspb.Message.getFieldWithDefault(msg, 2, ''),
-      };
-
-    if (includeInstance) {
-      obj.$jspbMessageInstance = msg;
-    }
-    return obj;
+proto.tendermint.p2p.DefaultNodeInfoOther.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    txIndex: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    rpcAddress: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
 }
+
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.p2p.DefaultNodeInfoOther}
  */
-proto.tendermint.p2p.DefaultNodeInfoOther.deserializeBinary = function (bytes) {
-  const reader = new jspb.BinaryReader(bytes);
-  const msg = new proto.tendermint.p2p.DefaultNodeInfoOther();
+proto.tendermint.p2p.DefaultNodeInfoOther.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.tendermint.p2p.DefaultNodeInfoOther;
   return proto.tendermint.p2p.DefaultNodeInfoOther.deserializeBinaryFromReader(msg, reader);
 };
+
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -821,38 +875,40 @@ proto.tendermint.p2p.DefaultNodeInfoOther.deserializeBinary = function (bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.p2p.DefaultNodeInfoOther}
  */
-proto.tendermint.p2p.DefaultNodeInfoOther.deserializeBinaryFromReader = function (msg, reader) {
+proto.tendermint.p2p.DefaultNodeInfoOther.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    const field = reader.getFieldNumber();
+    var field = reader.getFieldNumber();
     switch (field) {
-      case 1:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setTxIndex(value);
-        break;
-      case 2:
-        var value = /** @type {string} */ (reader.readString());
-        msg.setRpcAddress(value);
-        break;
-      default:
-        reader.skipField();
-        break;
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setTxIndex(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setRpcAddress(value);
+      break;
+    default:
+      reader.skipField();
+      break;
     }
   }
   return msg;
 };
 
+
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.p2p.DefaultNodeInfoOther.prototype.serializeBinary = function () {
-  const writer = new jspb.BinaryWriter();
+proto.tendermint.p2p.DefaultNodeInfoOther.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
   proto.tendermint.p2p.DefaultNodeInfoOther.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
+
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -861,48 +917,53 @@ proto.tendermint.p2p.DefaultNodeInfoOther.prototype.serializeBinary = function (
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.p2p.DefaultNodeInfoOther.serializeBinaryToWriter = function (message, writer) {
-  let f;
+proto.tendermint.p2p.DefaultNodeInfoOther.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
   f = message.getTxIndex();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f,
+      f
     );
   }
   f = message.getRpcAddress();
   if (f.length > 0) {
     writer.writeString(
       2,
-      f,
+      f
     );
   }
 };
+
 
 /**
  * optional string tx_index = 1;
  * @return {string}
  */
-proto.tendermint.p2p.DefaultNodeInfoOther.prototype.getTxIndex = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
+proto.tendermint.p2p.DefaultNodeInfoOther.prototype.getTxIndex = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
+
 /** @param {string} value */
-proto.tendermint.p2p.DefaultNodeInfoOther.prototype.setTxIndex = function (value) {
+proto.tendermint.p2p.DefaultNodeInfoOther.prototype.setTxIndex = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
+
 
 /**
  * optional string rpc_address = 2;
  * @return {string}
  */
-proto.tendermint.p2p.DefaultNodeInfoOther.prototype.getRpcAddress = function () {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
+proto.tendermint.p2p.DefaultNodeInfoOther.prototype.getRpcAddress = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
+
 /** @param {string} value */
-proto.tendermint.p2p.DefaultNodeInfoOther.prototype.setRpcAddress = function (value) {
+proto.tendermint.p2p.DefaultNodeInfoOther.prototype.setRpcAddress = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
+
 
 goog.object.extend(exports, proto.tendermint.p2p);
