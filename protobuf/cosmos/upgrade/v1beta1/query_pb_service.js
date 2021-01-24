@@ -1,40 +1,40 @@
 // package: cosmos.upgrade.v1beta1
 // file: cosmos/upgrade/v1beta1/query.proto
 
-var cosmos_upgrade_v1beta1_query_pb = require("../../../cosmos/upgrade/v1beta1/query_pb");
-var grpc = require("@improbable-eng/grpc-web").grpc;
+const { grpc } = require('@improbable-eng/grpc-web');
+const cosmos_upgrade_v1beta1_query_pb = require('./query_pb');
 
-var Query = (function () {
+const Query = (function () {
   function Query() {}
-  Query.serviceName = "cosmos.upgrade.v1beta1.Query";
+  Query.serviceName = 'cosmos.upgrade.v1beta1.Query';
   return Query;
 }());
 
 Query.CurrentPlan = {
-  methodName: "CurrentPlan",
+  methodName: 'CurrentPlan',
   service: Query,
   requestStream: false,
   responseStream: false,
   requestType: cosmos_upgrade_v1beta1_query_pb.QueryCurrentPlanRequest,
-  responseType: cosmos_upgrade_v1beta1_query_pb.QueryCurrentPlanResponse
+  responseType: cosmos_upgrade_v1beta1_query_pb.QueryCurrentPlanResponse,
 };
 
 Query.AppliedPlan = {
-  methodName: "AppliedPlan",
+  methodName: 'AppliedPlan',
   service: Query,
   requestStream: false,
   responseStream: false,
   requestType: cosmos_upgrade_v1beta1_query_pb.QueryAppliedPlanRequest,
-  responseType: cosmos_upgrade_v1beta1_query_pb.QueryAppliedPlanResponse
+  responseType: cosmos_upgrade_v1beta1_query_pb.QueryAppliedPlanResponse,
 };
 
 Query.UpgradedConsensusState = {
-  methodName: "UpgradedConsensusState",
+  methodName: 'UpgradedConsensusState',
   service: Query,
   requestStream: false,
   responseStream: false,
   requestType: cosmos_upgrade_v1beta1_query_pb.QueryUpgradedConsensusStateRequest,
-  responseType: cosmos_upgrade_v1beta1_query_pb.QueryUpgradedConsensusStateResponse
+  responseType: cosmos_upgrade_v1beta1_query_pb.QueryUpgradedConsensusStateResponse,
 };
 
 exports.Query = Query;
@@ -48,16 +48,16 @@ QueryClient.prototype.currentPlan = function currentPlan(requestMessage, metadat
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(Query.CurrentPlan, {
+  const client = grpc.unary(Query.CurrentPlan, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata: metadata,
+    metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd: function (response) {
+    onEnd(response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          var err = new Error(response.statusMessage);
+          const err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -65,13 +65,13 @@ QueryClient.prototype.currentPlan = function currentPlan(requestMessage, metadat
           callback(null, response.message);
         }
       }
-    }
+    },
   });
   return {
-    cancel: function () {
+    cancel() {
       callback = null;
       client.close();
-    }
+    },
   };
 };
 
@@ -79,16 +79,16 @@ QueryClient.prototype.appliedPlan = function appliedPlan(requestMessage, metadat
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(Query.AppliedPlan, {
+  const client = grpc.unary(Query.AppliedPlan, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata: metadata,
+    metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd: function (response) {
+    onEnd(response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          var err = new Error(response.statusMessage);
+          const err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -96,13 +96,13 @@ QueryClient.prototype.appliedPlan = function appliedPlan(requestMessage, metadat
           callback(null, response.message);
         }
       }
-    }
+    },
   });
   return {
-    cancel: function () {
+    cancel() {
       callback = null;
       client.close();
-    }
+    },
   };
 };
 
@@ -110,16 +110,16 @@ QueryClient.prototype.upgradedConsensusState = function upgradedConsensusState(r
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(Query.UpgradedConsensusState, {
+  const client = grpc.unary(Query.UpgradedConsensusState, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata: metadata,
+    metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd: function (response) {
+    onEnd(response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          var err = new Error(response.statusMessage);
+          const err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -127,15 +127,14 @@ QueryClient.prototype.upgradedConsensusState = function upgradedConsensusState(r
           callback(null, response.message);
         }
       }
-    }
+    },
   });
   return {
-    cancel: function () {
+    cancel() {
       callback = null;
       client.close();
-    }
+    },
   };
 };
 
 exports.QueryClient = QueryClient;
-

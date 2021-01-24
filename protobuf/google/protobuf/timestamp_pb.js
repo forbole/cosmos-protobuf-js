@@ -7,9 +7,10 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-var jspb = require('google-protobuf');
-var goog = jspb;
-var global = Function('return this')();
+const jspb = require('google-protobuf');
+
+const goog = jspb;
+const global = Function('return this')();
 
 goog.exportSymbol('proto.google.protobuf.Timestamp', null, global);
 
@@ -23,14 +24,13 @@ goog.exportSymbol('proto.google.protobuf.Timestamp', null, global);
  * @extends {jspb.Message}
  * @constructor
  */
-proto.google.protobuf.Timestamp = function(opt_data) {
+proto.google.protobuf.Timestamp = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.google.protobuf.Timestamp, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.google.protobuf.Timestamp.displayName = 'proto.google.protobuf.Timestamp';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -43,12 +43,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.google.protobuf.Timestamp.prototype.toObject = function(opt_includeInstance) {
-  return proto.google.protobuf.Timestamp.toObject(opt_includeInstance, this);
-};
+  proto.google.protobuf.Timestamp.prototype.toObject = function (opt_includeInstance) {
+    return proto.google.protobuf.Timestamp.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -57,31 +56,30 @@ proto.google.protobuf.Timestamp.prototype.toObject = function(opt_includeInstanc
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.google.protobuf.Timestamp.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    seconds: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    nanos: jspb.Message.getFieldWithDefault(msg, 2, 0)
+  proto.google.protobuf.Timestamp.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        seconds: jspb.Message.getFieldWithDefault(msg, 1, 0),
+        nanos: jspb.Message.getFieldWithDefault(msg, 2, 0),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.google.protobuf.Timestamp}
  */
-proto.google.protobuf.Timestamp.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.google.protobuf.Timestamp;
+proto.google.protobuf.Timestamp.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.google.protobuf.Timestamp();
   return proto.google.protobuf.Timestamp.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -90,40 +88,38 @@ proto.google.protobuf.Timestamp.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.google.protobuf.Timestamp}
  */
-proto.google.protobuf.Timestamp.deserializeBinaryFromReader = function(msg, reader) {
+proto.google.protobuf.Timestamp.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setSeconds(value);
-      break;
-    case 2:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setNanos(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setSeconds(value);
+        break;
+      case 2:
+        var value = /** @type {number} */ (reader.readInt32());
+        msg.setNanos(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.google.protobuf.Timestamp.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.google.protobuf.Timestamp.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.google.protobuf.Timestamp.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -132,54 +128,49 @@ proto.google.protobuf.Timestamp.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.google.protobuf.Timestamp.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.google.protobuf.Timestamp.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getSeconds();
   if (f !== 0) {
     writer.writeInt64(
       1,
-      f
+      f,
     );
   }
   f = message.getNanos();
   if (f !== 0) {
     writer.writeInt32(
       2,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional int64 seconds = 1;
  * @return {number}
  */
-proto.google.protobuf.Timestamp.prototype.getSeconds = function() {
+proto.google.protobuf.Timestamp.prototype.getSeconds = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
-
 /** @param {number} value */
-proto.google.protobuf.Timestamp.prototype.setSeconds = function(value) {
+proto.google.protobuf.Timestamp.prototype.setSeconds = function (value) {
   jspb.Message.setProto3IntField(this, 1, value);
 };
-
 
 /**
  * optional int32 nanos = 2;
  * @return {number}
  */
-proto.google.protobuf.Timestamp.prototype.getNanos = function() {
+proto.google.protobuf.Timestamp.prototype.getNanos = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
-
 /** @param {number} value */
-proto.google.protobuf.Timestamp.prototype.setNanos = function(value) {
+proto.google.protobuf.Timestamp.prototype.setNanos = function (value) {
   jspb.Message.setProto3IntField(this, 2, value);
 };
-
 
 goog.object.extend(exports, proto.google.protobuf);
 /* This code will be inserted into generated code for
@@ -189,19 +180,18 @@ goog.object.extend(exports, proto.google.protobuf);
  * Returns a JavaScript 'Date' object corresponding to this Timestamp.
  * @return {!Date}
  */
-proto.google.protobuf.Timestamp.prototype.toDate = function() {
-  var seconds = this.getSeconds();
-  var nanos = this.getNanos();
+proto.google.protobuf.Timestamp.prototype.toDate = function () {
+  const seconds = this.getSeconds();
+  const nanos = this.getNanos();
 
   return new Date((seconds * 1000) + (nanos / 1000000));
 };
-
 
 /**
  * Sets the value of this Timestamp object to be the given Date.
  * @param {!Date} value The value to set.
  */
-proto.google.protobuf.Timestamp.prototype.fromDate = function(value) {
+proto.google.protobuf.Timestamp.prototype.fromDate = function (value) {
   this.setSeconds(Math.floor(value.getTime() / 1000));
   this.setNanos(value.getMilliseconds() * 1000000);
 };

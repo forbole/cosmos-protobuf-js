@@ -7,11 +7,13 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-var jspb = require('google-protobuf');
-var goog = jspb;
-var global = Function('return this')();
+const jspb = require('google-protobuf');
 
-var gogoproto_gogo_pb = require('../../../../gogoproto/gogo_pb.js');
+const goog = jspb;
+const global = Function('return this')();
+
+const gogoproto_gogo_pb = require('../../../../gogoproto/gogo_pb.js');
+
 goog.exportSymbol('proto.cosmos.crypto.multisig.v1beta1.CompactBitArray', null, global);
 goog.exportSymbol('proto.cosmos.crypto.multisig.v1beta1.MultiSignature', null, global);
 
@@ -25,7 +27,7 @@ goog.exportSymbol('proto.cosmos.crypto.multisig.v1beta1.MultiSignature', null, g
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.crypto.multisig.v1beta1.MultiSignature = function(opt_data) {
+proto.cosmos.crypto.multisig.v1beta1.MultiSignature = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.cosmos.crypto.multisig.v1beta1.MultiSignature.repeatedFields_, null);
 };
 goog.inherits(proto.cosmos.crypto.multisig.v1beta1.MultiSignature, jspb.Message);
@@ -39,8 +41,6 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.cosmos.crypto.multisig.v1beta1.MultiSignature.repeatedFields_ = [1];
 
-
-
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -52,12 +52,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.crypto.multisig.v1beta1.MultiSignature.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.crypto.multisig.v1beta1.MultiSignature.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.crypto.multisig.v1beta1.MultiSignature.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.crypto.multisig.v1beta1.MultiSignature.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -66,30 +65,29 @@ proto.cosmos.crypto.multisig.v1beta1.MultiSignature.prototype.toObject = functio
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.crypto.multisig.v1beta1.MultiSignature.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    signaturesList: msg.getSignaturesList_asB64()
+  proto.cosmos.crypto.multisig.v1beta1.MultiSignature.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        signaturesList: msg.getSignaturesList_asB64(),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.crypto.multisig.v1beta1.MultiSignature}
  */
-proto.cosmos.crypto.multisig.v1beta1.MultiSignature.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.crypto.multisig.v1beta1.MultiSignature;
+proto.cosmos.crypto.multisig.v1beta1.MultiSignature.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.crypto.multisig.v1beta1.MultiSignature();
   return proto.cosmos.crypto.multisig.v1beta1.MultiSignature.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -98,36 +96,34 @@ proto.cosmos.crypto.multisig.v1beta1.MultiSignature.deserializeBinary = function
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.crypto.multisig.v1beta1.MultiSignature}
  */
-proto.cosmos.crypto.multisig.v1beta1.MultiSignature.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.crypto.multisig.v1beta1.MultiSignature.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.addSignatures(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.addSignatures(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.crypto.multisig.v1beta1.MultiSignature.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.crypto.multisig.v1beta1.MultiSignature.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.crypto.multisig.v1beta1.MultiSignature.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -136,37 +132,35 @@ proto.cosmos.crypto.multisig.v1beta1.MultiSignature.prototype.serializeBinary = 
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.crypto.multisig.v1beta1.MultiSignature.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.crypto.multisig.v1beta1.MultiSignature.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getSignaturesList_asU8();
   if (f.length > 0) {
     writer.writeRepeatedBytes(
       1,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * repeated bytes signatures = 1;
  * @return {!(Array<!Uint8Array>|Array<string>)}
  */
-proto.cosmos.crypto.multisig.v1beta1.MultiSignature.prototype.getSignaturesList = function() {
+proto.cosmos.crypto.multisig.v1beta1.MultiSignature.prototype.getSignaturesList = function () {
   return /** @type {!(Array<!Uint8Array>|Array<string>)} */ (jspb.Message.getRepeatedField(this, 1));
 };
-
 
 /**
  * repeated bytes signatures = 1;
  * This is a type-conversion wrapper around `getSignaturesList()`
  * @return {!Array<string>}
  */
-proto.cosmos.crypto.multisig.v1beta1.MultiSignature.prototype.getSignaturesList_asB64 = function() {
+proto.cosmos.crypto.multisig.v1beta1.MultiSignature.prototype.getSignaturesList_asB64 = function () {
   return /** @type {!Array<string>} */ (jspb.Message.bytesListAsB64(
-      this.getSignaturesList()));
+    this.getSignaturesList(),
+  ));
 };
-
 
 /**
  * repeated bytes signatures = 1;
@@ -175,32 +169,28 @@ proto.cosmos.crypto.multisig.v1beta1.MultiSignature.prototype.getSignaturesList_
  * This is a type-conversion wrapper around `getSignaturesList()`
  * @return {!Array<!Uint8Array>}
  */
-proto.cosmos.crypto.multisig.v1beta1.MultiSignature.prototype.getSignaturesList_asU8 = function() {
+proto.cosmos.crypto.multisig.v1beta1.MultiSignature.prototype.getSignaturesList_asU8 = function () {
   return /** @type {!Array<!Uint8Array>} */ (jspb.Message.bytesListAsU8(
-      this.getSignaturesList()));
+    this.getSignaturesList(),
+  ));
 };
-
 
 /** @param {!(Array<!Uint8Array>|Array<string>)} value */
-proto.cosmos.crypto.multisig.v1beta1.MultiSignature.prototype.setSignaturesList = function(value) {
+proto.cosmos.crypto.multisig.v1beta1.MultiSignature.prototype.setSignaturesList = function (value) {
   jspb.Message.setField(this, 1, value || []);
 };
-
 
 /**
  * @param {!(string|Uint8Array)} value
  * @param {number=} opt_index
  */
-proto.cosmos.crypto.multisig.v1beta1.MultiSignature.prototype.addSignatures = function(value, opt_index) {
+proto.cosmos.crypto.multisig.v1beta1.MultiSignature.prototype.addSignatures = function (value, opt_index) {
   jspb.Message.addToRepeatedField(this, 1, value, opt_index);
 };
 
-
-proto.cosmos.crypto.multisig.v1beta1.MultiSignature.prototype.clearSignaturesList = function() {
+proto.cosmos.crypto.multisig.v1beta1.MultiSignature.prototype.clearSignaturesList = function () {
   this.setSignaturesList([]);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -212,14 +202,13 @@ proto.cosmos.crypto.multisig.v1beta1.MultiSignature.prototype.clearSignaturesLis
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.crypto.multisig.v1beta1.CompactBitArray = function(opt_data) {
+proto.cosmos.crypto.multisig.v1beta1.CompactBitArray = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.crypto.multisig.v1beta1.CompactBitArray, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.crypto.multisig.v1beta1.CompactBitArray.displayName = 'proto.cosmos.crypto.multisig.v1beta1.CompactBitArray';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -232,12 +221,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.crypto.multisig.v1beta1.CompactBitArray.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.crypto.multisig.v1beta1.CompactBitArray.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.crypto.multisig.v1beta1.CompactBitArray.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.crypto.multisig.v1beta1.CompactBitArray.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -246,31 +234,30 @@ proto.cosmos.crypto.multisig.v1beta1.CompactBitArray.prototype.toObject = functi
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.crypto.multisig.v1beta1.CompactBitArray.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    extraBitsStored: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    elems: msg.getElems_asB64()
+  proto.cosmos.crypto.multisig.v1beta1.CompactBitArray.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        extraBitsStored: jspb.Message.getFieldWithDefault(msg, 1, 0),
+        elems: msg.getElems_asB64(),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.crypto.multisig.v1beta1.CompactBitArray}
  */
-proto.cosmos.crypto.multisig.v1beta1.CompactBitArray.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.crypto.multisig.v1beta1.CompactBitArray;
+proto.cosmos.crypto.multisig.v1beta1.CompactBitArray.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.crypto.multisig.v1beta1.CompactBitArray();
   return proto.cosmos.crypto.multisig.v1beta1.CompactBitArray.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -279,40 +266,38 @@ proto.cosmos.crypto.multisig.v1beta1.CompactBitArray.deserializeBinary = functio
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.crypto.multisig.v1beta1.CompactBitArray}
  */
-proto.cosmos.crypto.multisig.v1beta1.CompactBitArray.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.crypto.multisig.v1beta1.CompactBitArray.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {number} */ (reader.readUint32());
-      msg.setExtraBitsStored(value);
-      break;
-    case 2:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setElems(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {number} */ (reader.readUint32());
+        msg.setExtraBitsStored(value);
+        break;
+      case 2:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.setElems(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.crypto.multisig.v1beta1.CompactBitArray.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.crypto.multisig.v1beta1.CompactBitArray.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.crypto.multisig.v1beta1.CompactBitArray.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -321,59 +306,55 @@ proto.cosmos.crypto.multisig.v1beta1.CompactBitArray.prototype.serializeBinary =
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.crypto.multisig.v1beta1.CompactBitArray.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.crypto.multisig.v1beta1.CompactBitArray.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getExtraBitsStored();
   if (f !== 0) {
     writer.writeUint32(
       1,
-      f
+      f,
     );
   }
   f = message.getElems_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       2,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional uint32 extra_bits_stored = 1;
  * @return {number}
  */
-proto.cosmos.crypto.multisig.v1beta1.CompactBitArray.prototype.getExtraBitsStored = function() {
+proto.cosmos.crypto.multisig.v1beta1.CompactBitArray.prototype.getExtraBitsStored = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
-
 /** @param {number} value */
-proto.cosmos.crypto.multisig.v1beta1.CompactBitArray.prototype.setExtraBitsStored = function(value) {
+proto.cosmos.crypto.multisig.v1beta1.CompactBitArray.prototype.setExtraBitsStored = function (value) {
   jspb.Message.setProto3IntField(this, 1, value);
 };
-
 
 /**
  * optional bytes elems = 2;
  * @return {!(string|Uint8Array)}
  */
-proto.cosmos.crypto.multisig.v1beta1.CompactBitArray.prototype.getElems = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+proto.cosmos.crypto.multisig.v1beta1.CompactBitArray.prototype.getElems = function () {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
 };
-
 
 /**
  * optional bytes elems = 2;
  * This is a type-conversion wrapper around `getElems()`
  * @return {string}
  */
-proto.cosmos.crypto.multisig.v1beta1.CompactBitArray.prototype.getElems_asB64 = function() {
+proto.cosmos.crypto.multisig.v1beta1.CompactBitArray.prototype.getElems_asB64 = function () {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getElems()));
+    this.getElems(),
+  ));
 };
-
 
 /**
  * optional bytes elems = 2;
@@ -382,16 +363,15 @@ proto.cosmos.crypto.multisig.v1beta1.CompactBitArray.prototype.getElems_asB64 = 
  * This is a type-conversion wrapper around `getElems()`
  * @return {!Uint8Array}
  */
-proto.cosmos.crypto.multisig.v1beta1.CompactBitArray.prototype.getElems_asU8 = function() {
+proto.cosmos.crypto.multisig.v1beta1.CompactBitArray.prototype.getElems_asU8 = function () {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getElems()));
+    this.getElems(),
+  ));
 };
-
 
 /** @param {!(string|Uint8Array)} value */
-proto.cosmos.crypto.multisig.v1beta1.CompactBitArray.prototype.setElems = function(value) {
+proto.cosmos.crypto.multisig.v1beta1.CompactBitArray.prototype.setElems = function (value) {
   jspb.Message.setProto3BytesField(this, 2, value);
 };
-
 
 goog.object.extend(exports, proto.cosmos.crypto.multisig.v1beta1);

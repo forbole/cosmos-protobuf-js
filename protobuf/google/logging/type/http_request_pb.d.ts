@@ -3,7 +3,6 @@
 
 import * as jspb from "google-protobuf";
 import * as google_protobuf_duration_pb from "google-protobuf/google/protobuf/duration_pb";
-import * as google_api_annotations_pb from "../../../google/api/annotations_pb";
 
 export class HttpRequest extends jspb.Message {
   getRequestMethod(): string;

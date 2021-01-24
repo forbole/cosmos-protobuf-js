@@ -2,7 +2,6 @@
 // file: cosmos/params/v1beta1/params.proto
 
 import * as jspb from "google-protobuf";
-import * as gogoproto_gogo_pb from "../../../gogoproto/gogo_pb";
 
 export class ParameterChangeProposal extends jspb.Message {
   getTitle(): string;

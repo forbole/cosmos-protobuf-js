@@ -2,7 +2,6 @@
 // file: tendermint/types/params.proto
 
 import * as jspb from "google-protobuf";
-import * as gogoproto_gogo_pb from "../../gogoproto/gogo_pb";
 import * as google_protobuf_duration_pb from "google-protobuf/google/protobuf/duration_pb";
 
 export class ConsensusParams extends jspb.Message {

@@ -3,7 +3,6 @@
 
 import * as jspb from "google-protobuf";
 import * as google_protobuf_any_pb from "google-protobuf/google/protobuf/any_pb";
-import * as google_api_annotations_pb from "../../../google/api/annotations_pb";
 import * as cosmos_upgrade_v1beta1_upgrade_pb from "../../../cosmos/upgrade/v1beta1/upgrade_pb";
 
 export class QueryCurrentPlanRequest extends jspb.Message {

@@ -7,9 +7,10 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-var jspb = require('google-protobuf');
-var goog = jspb;
-var global = Function('return this')();
+const jspb = require('google-protobuf');
+
+const goog = jspb;
+const global = Function('return this')();
 
 goog.exportSymbol('proto.google.protobuf.Empty', null, global);
 
@@ -23,14 +24,13 @@ goog.exportSymbol('proto.google.protobuf.Empty', null, global);
  * @extends {jspb.Message}
  * @constructor
  */
-proto.google.protobuf.Empty = function(opt_data) {
+proto.google.protobuf.Empty = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.google.protobuf.Empty, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.google.protobuf.Empty.displayName = 'proto.google.protobuf.Empty';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -43,12 +43,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.google.protobuf.Empty.prototype.toObject = function(opt_includeInstance) {
-  return proto.google.protobuf.Empty.toObject(opt_includeInstance, this);
-};
+  proto.google.protobuf.Empty.prototype.toObject = function (opt_includeInstance) {
+    return proto.google.protobuf.Empty.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -57,30 +56,29 @@ proto.google.protobuf.Empty.prototype.toObject = function(opt_includeInstance) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.google.protobuf.Empty.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  proto.google.protobuf.Empty.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
 
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.google.protobuf.Empty}
  */
-proto.google.protobuf.Empty.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.google.protobuf.Empty;
+proto.google.protobuf.Empty.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.google.protobuf.Empty();
   return proto.google.protobuf.Empty.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -89,32 +87,30 @@ proto.google.protobuf.Empty.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.google.protobuf.Empty}
  */
-proto.google.protobuf.Empty.deserializeBinaryFromReader = function(msg, reader) {
+proto.google.protobuf.Empty.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    default:
-      reader.skipField();
-      break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.google.protobuf.Empty.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.google.protobuf.Empty.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.google.protobuf.Empty.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -123,9 +119,8 @@ proto.google.protobuf.Empty.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.google.protobuf.Empty.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.google.protobuf.Empty.serializeBinaryToWriter = function (message, writer) {
+  const f;
 };
-
 
 goog.object.extend(exports, proto.google.protobuf);

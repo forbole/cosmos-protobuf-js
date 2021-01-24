@@ -2,9 +2,7 @@
 // file: cosmos/evidence/v1beta1/tx.proto
 
 import * as jspb from "google-protobuf";
-import * as gogoproto_gogo_pb from "../../../gogoproto/gogo_pb";
 import * as google_protobuf_any_pb from "google-protobuf/google/protobuf/any_pb";
-import * as cosmos_proto_cosmos_pb from "../../../cosmos_proto/cosmos_pb";
 
 export class MsgSubmitEvidence extends jspb.Message {
   getSubmitter(): string;

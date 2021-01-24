@@ -2,7 +2,6 @@
 // file: cosmos/base/kv/v1beta1/kv.proto
 
 import * as jspb from "google-protobuf";
-import * as gogoproto_gogo_pb from "../../../../gogoproto/gogo_pb";
 
 export class Pairs extends jspb.Message {
   clearPairsList(): void;

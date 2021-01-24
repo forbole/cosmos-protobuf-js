@@ -2,11 +2,8 @@
 // file: cosmos/auth/v1beta1/query.proto
 
 import * as jspb from "google-protobuf";
-import * as gogoproto_gogo_pb from "../../../gogoproto/gogo_pb";
 import * as google_protobuf_any_pb from "google-protobuf/google/protobuf/any_pb";
-import * as google_api_annotations_pb from "../../../google/api/annotations_pb";
 import * as cosmos_auth_v1beta1_auth_pb from "../../../cosmos/auth/v1beta1/auth_pb";
-import * as cosmos_proto_cosmos_pb from "../../../cosmos_proto/cosmos_pb";
 
 export class QueryAccountRequest extends jspb.Message {
   getAddress(): string;

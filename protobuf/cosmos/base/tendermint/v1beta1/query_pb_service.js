@@ -1,67 +1,67 @@
 // package: cosmos.base.tendermint.v1beta1
 // file: cosmos/base/tendermint/v1beta1/query.proto
 
-var cosmos_base_tendermint_v1beta1_query_pb = require("../../../../cosmos/base/tendermint/v1beta1/query_pb");
-var grpc = require("@improbable-eng/grpc-web").grpc;
+const { grpc } = require('@improbable-eng/grpc-web');
+const cosmos_base_tendermint_v1beta1_query_pb = require('./query_pb');
 
-var Service = (function () {
+const Service = (function () {
   function Service() {}
-  Service.serviceName = "cosmos.base.tendermint.v1beta1.Service";
+  Service.serviceName = 'cosmos.base.tendermint.v1beta1.Service';
   return Service;
 }());
 
 Service.GetNodeInfo = {
-  methodName: "GetNodeInfo",
+  methodName: 'GetNodeInfo',
   service: Service,
   requestStream: false,
   responseStream: false,
   requestType: cosmos_base_tendermint_v1beta1_query_pb.GetNodeInfoRequest,
-  responseType: cosmos_base_tendermint_v1beta1_query_pb.GetNodeInfoResponse
+  responseType: cosmos_base_tendermint_v1beta1_query_pb.GetNodeInfoResponse,
 };
 
 Service.GetSyncing = {
-  methodName: "GetSyncing",
+  methodName: 'GetSyncing',
   service: Service,
   requestStream: false,
   responseStream: false,
   requestType: cosmos_base_tendermint_v1beta1_query_pb.GetSyncingRequest,
-  responseType: cosmos_base_tendermint_v1beta1_query_pb.GetSyncingResponse
+  responseType: cosmos_base_tendermint_v1beta1_query_pb.GetSyncingResponse,
 };
 
 Service.GetLatestBlock = {
-  methodName: "GetLatestBlock",
+  methodName: 'GetLatestBlock',
   service: Service,
   requestStream: false,
   responseStream: false,
   requestType: cosmos_base_tendermint_v1beta1_query_pb.GetLatestBlockRequest,
-  responseType: cosmos_base_tendermint_v1beta1_query_pb.GetLatestBlockResponse
+  responseType: cosmos_base_tendermint_v1beta1_query_pb.GetLatestBlockResponse,
 };
 
 Service.GetBlockByHeight = {
-  methodName: "GetBlockByHeight",
+  methodName: 'GetBlockByHeight',
   service: Service,
   requestStream: false,
   responseStream: false,
   requestType: cosmos_base_tendermint_v1beta1_query_pb.GetBlockByHeightRequest,
-  responseType: cosmos_base_tendermint_v1beta1_query_pb.GetBlockByHeightResponse
+  responseType: cosmos_base_tendermint_v1beta1_query_pb.GetBlockByHeightResponse,
 };
 
 Service.GetLatestValidatorSet = {
-  methodName: "GetLatestValidatorSet",
+  methodName: 'GetLatestValidatorSet',
   service: Service,
   requestStream: false,
   responseStream: false,
   requestType: cosmos_base_tendermint_v1beta1_query_pb.GetLatestValidatorSetRequest,
-  responseType: cosmos_base_tendermint_v1beta1_query_pb.GetLatestValidatorSetResponse
+  responseType: cosmos_base_tendermint_v1beta1_query_pb.GetLatestValidatorSetResponse,
 };
 
 Service.GetValidatorSetByHeight = {
-  methodName: "GetValidatorSetByHeight",
+  methodName: 'GetValidatorSetByHeight',
   service: Service,
   requestStream: false,
   responseStream: false,
   requestType: cosmos_base_tendermint_v1beta1_query_pb.GetValidatorSetByHeightRequest,
-  responseType: cosmos_base_tendermint_v1beta1_query_pb.GetValidatorSetByHeightResponse
+  responseType: cosmos_base_tendermint_v1beta1_query_pb.GetValidatorSetByHeightResponse,
 };
 
 exports.Service = Service;
@@ -75,16 +75,16 @@ ServiceClient.prototype.getNodeInfo = function getNodeInfo(requestMessage, metad
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(Service.GetNodeInfo, {
+  const client = grpc.unary(Service.GetNodeInfo, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata: metadata,
+    metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd: function (response) {
+    onEnd(response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          var err = new Error(response.statusMessage);
+          const err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -92,13 +92,13 @@ ServiceClient.prototype.getNodeInfo = function getNodeInfo(requestMessage, metad
           callback(null, response.message);
         }
       }
-    }
+    },
   });
   return {
-    cancel: function () {
+    cancel() {
       callback = null;
       client.close();
-    }
+    },
   };
 };
 
@@ -106,16 +106,16 @@ ServiceClient.prototype.getSyncing = function getSyncing(requestMessage, metadat
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(Service.GetSyncing, {
+  const client = grpc.unary(Service.GetSyncing, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata: metadata,
+    metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd: function (response) {
+    onEnd(response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          var err = new Error(response.statusMessage);
+          const err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -123,13 +123,13 @@ ServiceClient.prototype.getSyncing = function getSyncing(requestMessage, metadat
           callback(null, response.message);
         }
       }
-    }
+    },
   });
   return {
-    cancel: function () {
+    cancel() {
       callback = null;
       client.close();
-    }
+    },
   };
 };
 
@@ -137,16 +137,16 @@ ServiceClient.prototype.getLatestBlock = function getLatestBlock(requestMessage,
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(Service.GetLatestBlock, {
+  const client = grpc.unary(Service.GetLatestBlock, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata: metadata,
+    metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd: function (response) {
+    onEnd(response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          var err = new Error(response.statusMessage);
+          const err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -154,13 +154,13 @@ ServiceClient.prototype.getLatestBlock = function getLatestBlock(requestMessage,
           callback(null, response.message);
         }
       }
-    }
+    },
   });
   return {
-    cancel: function () {
+    cancel() {
       callback = null;
       client.close();
-    }
+    },
   };
 };
 
@@ -168,16 +168,16 @@ ServiceClient.prototype.getBlockByHeight = function getBlockByHeight(requestMess
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(Service.GetBlockByHeight, {
+  const client = grpc.unary(Service.GetBlockByHeight, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata: metadata,
+    metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd: function (response) {
+    onEnd(response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          var err = new Error(response.statusMessage);
+          const err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -185,13 +185,13 @@ ServiceClient.prototype.getBlockByHeight = function getBlockByHeight(requestMess
           callback(null, response.message);
         }
       }
-    }
+    },
   });
   return {
-    cancel: function () {
+    cancel() {
       callback = null;
       client.close();
-    }
+    },
   };
 };
 
@@ -199,16 +199,16 @@ ServiceClient.prototype.getLatestValidatorSet = function getLatestValidatorSet(r
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(Service.GetLatestValidatorSet, {
+  const client = grpc.unary(Service.GetLatestValidatorSet, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata: metadata,
+    metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd: function (response) {
+    onEnd(response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          var err = new Error(response.statusMessage);
+          const err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -216,13 +216,13 @@ ServiceClient.prototype.getLatestValidatorSet = function getLatestValidatorSet(r
           callback(null, response.message);
         }
       }
-    }
+    },
   });
   return {
-    cancel: function () {
+    cancel() {
       callback = null;
       client.close();
-    }
+    },
   };
 };
 
@@ -230,16 +230,16 @@ ServiceClient.prototype.getValidatorSetByHeight = function getValidatorSetByHeig
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(Service.GetValidatorSetByHeight, {
+  const client = grpc.unary(Service.GetValidatorSetByHeight, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata: metadata,
+    metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd: function (response) {
+    onEnd(response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          var err = new Error(response.statusMessage);
+          const err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -247,15 +247,14 @@ ServiceClient.prototype.getValidatorSetByHeight = function getValidatorSetByHeig
           callback(null, response.message);
         }
       }
-    }
+    },
   });
   return {
-    cancel: function () {
+    cancel() {
       callback = null;
       client.close();
-    }
+    },
   };
 };
 
 exports.ServiceClient = ServiceClient;
-

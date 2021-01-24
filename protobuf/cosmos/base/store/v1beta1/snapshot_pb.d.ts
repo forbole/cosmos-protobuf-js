@@ -2,7 +2,6 @@
 // file: cosmos/base/store/v1beta1/snapshot.proto
 
 import * as jspb from "google-protobuf";
-import * as gogoproto_gogo_pb from "../../../../gogoproto/gogo_pb";
 
 export class SnapshotItem extends jspb.Message {
   hasStore(): boolean;

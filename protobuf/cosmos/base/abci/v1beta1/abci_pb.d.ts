@@ -2,7 +2,6 @@
 // file: cosmos/base/abci/v1beta1/abci.proto
 
 import * as jspb from "google-protobuf";
-import * as gogoproto_gogo_pb from "../../../../gogoproto/gogo_pb";
 import * as tendermint_abci_types_pb from "../../../../tendermint/abci/types_pb";
 import * as google_protobuf_any_pb from "google-protobuf/google/protobuf/any_pb";
 

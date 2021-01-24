@@ -7,16 +7,18 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-var jspb = require('google-protobuf');
-var goog = jspb;
-var global = Function('return this')();
+const jspb = require('google-protobuf');
 
-var tendermint_crypto_proof_pb = require('../../tendermint/crypto/proof_pb.js');
-var tendermint_types_types_pb = require('../../tendermint/types/types_pb.js');
-var tendermint_crypto_keys_pb = require('../../tendermint/crypto/keys_pb.js');
-var tendermint_types_params_pb = require('../../tendermint/types/params_pb.js');
-var google_protobuf_timestamp_pb = require('google-protobuf/google/protobuf/timestamp_pb.js');
-var gogoproto_gogo_pb = require('../../gogoproto/gogo_pb.js');
+const goog = jspb;
+const global = Function('return this')();
+
+const google_protobuf_timestamp_pb = require('google-protobuf/google/protobuf/timestamp_pb.js');
+const tendermint_crypto_proof_pb = require('../crypto/proof_pb.js');
+const tendermint_types_types_pb = require('../types/types_pb.js');
+const tendermint_crypto_keys_pb = require('../crypto/keys_pb.js');
+const tendermint_types_params_pb = require('../types/params_pb.js');
+const gogoproto_gogo_pb = require('../../gogoproto/gogo_pb.js');
+
 goog.exportSymbol('proto.tendermint.abci.BlockParams', null, global);
 goog.exportSymbol('proto.tendermint.abci.CheckTxType', null, global);
 goog.exportSymbol('proto.tendermint.abci.ConsensusParams', null, global);
@@ -76,7 +78,7 @@ goog.exportSymbol('proto.tendermint.abci.VoteInfo', null, global);
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.abci.Request = function(opt_data) {
+proto.tendermint.abci.Request = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, proto.tendermint.abci.Request.oneofGroups_);
 };
 goog.inherits(proto.tendermint.abci.Request, jspb.Message);
@@ -91,7 +93,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<!Array<number>>}
  * @const
  */
-proto.tendermint.abci.Request.oneofGroups_ = [[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]];
+proto.tendermint.abci.Request.oneofGroups_ = [[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]];
 
 /**
  * @enum {number}
@@ -112,17 +114,15 @@ proto.tendermint.abci.Request.ValueCase = {
   LIST_SNAPSHOTS: 12,
   OFFER_SNAPSHOT: 13,
   LOAD_SNAPSHOT_CHUNK: 14,
-  APPLY_SNAPSHOT_CHUNK: 15
+  APPLY_SNAPSHOT_CHUNK: 15,
 };
 
 /**
  * @return {proto.tendermint.abci.Request.ValueCase}
  */
-proto.tendermint.abci.Request.prototype.getValueCase = function() {
+proto.tendermint.abci.Request.prototype.getValueCase = function () {
   return /** @type {proto.tendermint.abci.Request.ValueCase} */(jspb.Message.computeOneofCase(this, proto.tendermint.abci.Request.oneofGroups_[0]));
 };
-
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -135,12 +135,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.tendermint.abci.Request.prototype.toObject = function(opt_includeInstance) {
-  return proto.tendermint.abci.Request.toObject(opt_includeInstance, this);
-};
+  proto.tendermint.abci.Request.prototype.toObject = function (opt_includeInstance) {
+    return proto.tendermint.abci.Request.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -149,44 +148,43 @@ proto.tendermint.abci.Request.prototype.toObject = function(opt_includeInstance)
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.Request.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    echo: (f = msg.getEcho()) && proto.tendermint.abci.RequestEcho.toObject(includeInstance, f),
-    flush: (f = msg.getFlush()) && proto.tendermint.abci.RequestFlush.toObject(includeInstance, f),
-    info: (f = msg.getInfo()) && proto.tendermint.abci.RequestInfo.toObject(includeInstance, f),
-    setOption: (f = msg.getSetOption()) && proto.tendermint.abci.RequestSetOption.toObject(includeInstance, f),
-    initChain: (f = msg.getInitChain()) && proto.tendermint.abci.RequestInitChain.toObject(includeInstance, f),
-    query: (f = msg.getQuery()) && proto.tendermint.abci.RequestQuery.toObject(includeInstance, f),
-    beginBlock: (f = msg.getBeginBlock()) && proto.tendermint.abci.RequestBeginBlock.toObject(includeInstance, f),
-    checkTx: (f = msg.getCheckTx()) && proto.tendermint.abci.RequestCheckTx.toObject(includeInstance, f),
-    deliverTx: (f = msg.getDeliverTx()) && proto.tendermint.abci.RequestDeliverTx.toObject(includeInstance, f),
-    endBlock: (f = msg.getEndBlock()) && proto.tendermint.abci.RequestEndBlock.toObject(includeInstance, f),
-    commit: (f = msg.getCommit()) && proto.tendermint.abci.RequestCommit.toObject(includeInstance, f),
-    listSnapshots: (f = msg.getListSnapshots()) && proto.tendermint.abci.RequestListSnapshots.toObject(includeInstance, f),
-    offerSnapshot: (f = msg.getOfferSnapshot()) && proto.tendermint.abci.RequestOfferSnapshot.toObject(includeInstance, f),
-    loadSnapshotChunk: (f = msg.getLoadSnapshotChunk()) && proto.tendermint.abci.RequestLoadSnapshotChunk.toObject(includeInstance, f),
-    applySnapshotChunk: (f = msg.getApplySnapshotChunk()) && proto.tendermint.abci.RequestApplySnapshotChunk.toObject(includeInstance, f)
+  proto.tendermint.abci.Request.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        echo: (f = msg.getEcho()) && proto.tendermint.abci.RequestEcho.toObject(includeInstance, f),
+        flush: (f = msg.getFlush()) && proto.tendermint.abci.RequestFlush.toObject(includeInstance, f),
+        info: (f = msg.getInfo()) && proto.tendermint.abci.RequestInfo.toObject(includeInstance, f),
+        setOption: (f = msg.getSetOption()) && proto.tendermint.abci.RequestSetOption.toObject(includeInstance, f),
+        initChain: (f = msg.getInitChain()) && proto.tendermint.abci.RequestInitChain.toObject(includeInstance, f),
+        query: (f = msg.getQuery()) && proto.tendermint.abci.RequestQuery.toObject(includeInstance, f),
+        beginBlock: (f = msg.getBeginBlock()) && proto.tendermint.abci.RequestBeginBlock.toObject(includeInstance, f),
+        checkTx: (f = msg.getCheckTx()) && proto.tendermint.abci.RequestCheckTx.toObject(includeInstance, f),
+        deliverTx: (f = msg.getDeliverTx()) && proto.tendermint.abci.RequestDeliverTx.toObject(includeInstance, f),
+        endBlock: (f = msg.getEndBlock()) && proto.tendermint.abci.RequestEndBlock.toObject(includeInstance, f),
+        commit: (f = msg.getCommit()) && proto.tendermint.abci.RequestCommit.toObject(includeInstance, f),
+        listSnapshots: (f = msg.getListSnapshots()) && proto.tendermint.abci.RequestListSnapshots.toObject(includeInstance, f),
+        offerSnapshot: (f = msg.getOfferSnapshot()) && proto.tendermint.abci.RequestOfferSnapshot.toObject(includeInstance, f),
+        loadSnapshotChunk: (f = msg.getLoadSnapshotChunk()) && proto.tendermint.abci.RequestLoadSnapshotChunk.toObject(includeInstance, f),
+        applySnapshotChunk: (f = msg.getApplySnapshotChunk()) && proto.tendermint.abci.RequestApplySnapshotChunk.toObject(includeInstance, f),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.abci.Request}
  */
-proto.tendermint.abci.Request.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.tendermint.abci.Request;
+proto.tendermint.abci.Request.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.tendermint.abci.Request();
   return proto.tendermint.abci.Request.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -195,107 +193,105 @@ proto.tendermint.abci.Request.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.abci.Request}
  */
-proto.tendermint.abci.Request.deserializeBinaryFromReader = function(msg, reader) {
+proto.tendermint.abci.Request.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = new proto.tendermint.abci.RequestEcho;
-      reader.readMessage(value,proto.tendermint.abci.RequestEcho.deserializeBinaryFromReader);
-      msg.setEcho(value);
-      break;
-    case 2:
-      var value = new proto.tendermint.abci.RequestFlush;
-      reader.readMessage(value,proto.tendermint.abci.RequestFlush.deserializeBinaryFromReader);
-      msg.setFlush(value);
-      break;
-    case 3:
-      var value = new proto.tendermint.abci.RequestInfo;
-      reader.readMessage(value,proto.tendermint.abci.RequestInfo.deserializeBinaryFromReader);
-      msg.setInfo(value);
-      break;
-    case 4:
-      var value = new proto.tendermint.abci.RequestSetOption;
-      reader.readMessage(value,proto.tendermint.abci.RequestSetOption.deserializeBinaryFromReader);
-      msg.setSetOption(value);
-      break;
-    case 5:
-      var value = new proto.tendermint.abci.RequestInitChain;
-      reader.readMessage(value,proto.tendermint.abci.RequestInitChain.deserializeBinaryFromReader);
-      msg.setInitChain(value);
-      break;
-    case 6:
-      var value = new proto.tendermint.abci.RequestQuery;
-      reader.readMessage(value,proto.tendermint.abci.RequestQuery.deserializeBinaryFromReader);
-      msg.setQuery(value);
-      break;
-    case 7:
-      var value = new proto.tendermint.abci.RequestBeginBlock;
-      reader.readMessage(value,proto.tendermint.abci.RequestBeginBlock.deserializeBinaryFromReader);
-      msg.setBeginBlock(value);
-      break;
-    case 8:
-      var value = new proto.tendermint.abci.RequestCheckTx;
-      reader.readMessage(value,proto.tendermint.abci.RequestCheckTx.deserializeBinaryFromReader);
-      msg.setCheckTx(value);
-      break;
-    case 9:
-      var value = new proto.tendermint.abci.RequestDeliverTx;
-      reader.readMessage(value,proto.tendermint.abci.RequestDeliverTx.deserializeBinaryFromReader);
-      msg.setDeliverTx(value);
-      break;
-    case 10:
-      var value = new proto.tendermint.abci.RequestEndBlock;
-      reader.readMessage(value,proto.tendermint.abci.RequestEndBlock.deserializeBinaryFromReader);
-      msg.setEndBlock(value);
-      break;
-    case 11:
-      var value = new proto.tendermint.abci.RequestCommit;
-      reader.readMessage(value,proto.tendermint.abci.RequestCommit.deserializeBinaryFromReader);
-      msg.setCommit(value);
-      break;
-    case 12:
-      var value = new proto.tendermint.abci.RequestListSnapshots;
-      reader.readMessage(value,proto.tendermint.abci.RequestListSnapshots.deserializeBinaryFromReader);
-      msg.setListSnapshots(value);
-      break;
-    case 13:
-      var value = new proto.tendermint.abci.RequestOfferSnapshot;
-      reader.readMessage(value,proto.tendermint.abci.RequestOfferSnapshot.deserializeBinaryFromReader);
-      msg.setOfferSnapshot(value);
-      break;
-    case 14:
-      var value = new proto.tendermint.abci.RequestLoadSnapshotChunk;
-      reader.readMessage(value,proto.tendermint.abci.RequestLoadSnapshotChunk.deserializeBinaryFromReader);
-      msg.setLoadSnapshotChunk(value);
-      break;
-    case 15:
-      var value = new proto.tendermint.abci.RequestApplySnapshotChunk;
-      reader.readMessage(value,proto.tendermint.abci.RequestApplySnapshotChunk.deserializeBinaryFromReader);
-      msg.setApplySnapshotChunk(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = new proto.tendermint.abci.RequestEcho();
+        reader.readMessage(value, proto.tendermint.abci.RequestEcho.deserializeBinaryFromReader);
+        msg.setEcho(value);
+        break;
+      case 2:
+        var value = new proto.tendermint.abci.RequestFlush();
+        reader.readMessage(value, proto.tendermint.abci.RequestFlush.deserializeBinaryFromReader);
+        msg.setFlush(value);
+        break;
+      case 3:
+        var value = new proto.tendermint.abci.RequestInfo();
+        reader.readMessage(value, proto.tendermint.abci.RequestInfo.deserializeBinaryFromReader);
+        msg.setInfo(value);
+        break;
+      case 4:
+        var value = new proto.tendermint.abci.RequestSetOption();
+        reader.readMessage(value, proto.tendermint.abci.RequestSetOption.deserializeBinaryFromReader);
+        msg.setSetOption(value);
+        break;
+      case 5:
+        var value = new proto.tendermint.abci.RequestInitChain();
+        reader.readMessage(value, proto.tendermint.abci.RequestInitChain.deserializeBinaryFromReader);
+        msg.setInitChain(value);
+        break;
+      case 6:
+        var value = new proto.tendermint.abci.RequestQuery();
+        reader.readMessage(value, proto.tendermint.abci.RequestQuery.deserializeBinaryFromReader);
+        msg.setQuery(value);
+        break;
+      case 7:
+        var value = new proto.tendermint.abci.RequestBeginBlock();
+        reader.readMessage(value, proto.tendermint.abci.RequestBeginBlock.deserializeBinaryFromReader);
+        msg.setBeginBlock(value);
+        break;
+      case 8:
+        var value = new proto.tendermint.abci.RequestCheckTx();
+        reader.readMessage(value, proto.tendermint.abci.RequestCheckTx.deserializeBinaryFromReader);
+        msg.setCheckTx(value);
+        break;
+      case 9:
+        var value = new proto.tendermint.abci.RequestDeliverTx();
+        reader.readMessage(value, proto.tendermint.abci.RequestDeliverTx.deserializeBinaryFromReader);
+        msg.setDeliverTx(value);
+        break;
+      case 10:
+        var value = new proto.tendermint.abci.RequestEndBlock();
+        reader.readMessage(value, proto.tendermint.abci.RequestEndBlock.deserializeBinaryFromReader);
+        msg.setEndBlock(value);
+        break;
+      case 11:
+        var value = new proto.tendermint.abci.RequestCommit();
+        reader.readMessage(value, proto.tendermint.abci.RequestCommit.deserializeBinaryFromReader);
+        msg.setCommit(value);
+        break;
+      case 12:
+        var value = new proto.tendermint.abci.RequestListSnapshots();
+        reader.readMessage(value, proto.tendermint.abci.RequestListSnapshots.deserializeBinaryFromReader);
+        msg.setListSnapshots(value);
+        break;
+      case 13:
+        var value = new proto.tendermint.abci.RequestOfferSnapshot();
+        reader.readMessage(value, proto.tendermint.abci.RequestOfferSnapshot.deserializeBinaryFromReader);
+        msg.setOfferSnapshot(value);
+        break;
+      case 14:
+        var value = new proto.tendermint.abci.RequestLoadSnapshotChunk();
+        reader.readMessage(value, proto.tendermint.abci.RequestLoadSnapshotChunk.deserializeBinaryFromReader);
+        msg.setLoadSnapshotChunk(value);
+        break;
+      case 15:
+        var value = new proto.tendermint.abci.RequestApplySnapshotChunk();
+        reader.readMessage(value, proto.tendermint.abci.RequestApplySnapshotChunk.deserializeBinaryFromReader);
+        msg.setApplySnapshotChunk(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.Request.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.tendermint.abci.Request.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.tendermint.abci.Request.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -304,14 +300,14 @@ proto.tendermint.abci.Request.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.Request.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.tendermint.abci.Request.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getEcho();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.tendermint.abci.RequestEcho.serializeBinaryToWriter
+      proto.tendermint.abci.RequestEcho.serializeBinaryToWriter,
     );
   }
   f = message.getFlush();
@@ -319,7 +315,7 @@ proto.tendermint.abci.Request.serializeBinaryToWriter = function(message, writer
     writer.writeMessage(
       2,
       f,
-      proto.tendermint.abci.RequestFlush.serializeBinaryToWriter
+      proto.tendermint.abci.RequestFlush.serializeBinaryToWriter,
     );
   }
   f = message.getInfo();
@@ -327,7 +323,7 @@ proto.tendermint.abci.Request.serializeBinaryToWriter = function(message, writer
     writer.writeMessage(
       3,
       f,
-      proto.tendermint.abci.RequestInfo.serializeBinaryToWriter
+      proto.tendermint.abci.RequestInfo.serializeBinaryToWriter,
     );
   }
   f = message.getSetOption();
@@ -335,7 +331,7 @@ proto.tendermint.abci.Request.serializeBinaryToWriter = function(message, writer
     writer.writeMessage(
       4,
       f,
-      proto.tendermint.abci.RequestSetOption.serializeBinaryToWriter
+      proto.tendermint.abci.RequestSetOption.serializeBinaryToWriter,
     );
   }
   f = message.getInitChain();
@@ -343,7 +339,7 @@ proto.tendermint.abci.Request.serializeBinaryToWriter = function(message, writer
     writer.writeMessage(
       5,
       f,
-      proto.tendermint.abci.RequestInitChain.serializeBinaryToWriter
+      proto.tendermint.abci.RequestInitChain.serializeBinaryToWriter,
     );
   }
   f = message.getQuery();
@@ -351,7 +347,7 @@ proto.tendermint.abci.Request.serializeBinaryToWriter = function(message, writer
     writer.writeMessage(
       6,
       f,
-      proto.tendermint.abci.RequestQuery.serializeBinaryToWriter
+      proto.tendermint.abci.RequestQuery.serializeBinaryToWriter,
     );
   }
   f = message.getBeginBlock();
@@ -359,7 +355,7 @@ proto.tendermint.abci.Request.serializeBinaryToWriter = function(message, writer
     writer.writeMessage(
       7,
       f,
-      proto.tendermint.abci.RequestBeginBlock.serializeBinaryToWriter
+      proto.tendermint.abci.RequestBeginBlock.serializeBinaryToWriter,
     );
   }
   f = message.getCheckTx();
@@ -367,7 +363,7 @@ proto.tendermint.abci.Request.serializeBinaryToWriter = function(message, writer
     writer.writeMessage(
       8,
       f,
-      proto.tendermint.abci.RequestCheckTx.serializeBinaryToWriter
+      proto.tendermint.abci.RequestCheckTx.serializeBinaryToWriter,
     );
   }
   f = message.getDeliverTx();
@@ -375,7 +371,7 @@ proto.tendermint.abci.Request.serializeBinaryToWriter = function(message, writer
     writer.writeMessage(
       9,
       f,
-      proto.tendermint.abci.RequestDeliverTx.serializeBinaryToWriter
+      proto.tendermint.abci.RequestDeliverTx.serializeBinaryToWriter,
     );
   }
   f = message.getEndBlock();
@@ -383,7 +379,7 @@ proto.tendermint.abci.Request.serializeBinaryToWriter = function(message, writer
     writer.writeMessage(
       10,
       f,
-      proto.tendermint.abci.RequestEndBlock.serializeBinaryToWriter
+      proto.tendermint.abci.RequestEndBlock.serializeBinaryToWriter,
     );
   }
   f = message.getCommit();
@@ -391,7 +387,7 @@ proto.tendermint.abci.Request.serializeBinaryToWriter = function(message, writer
     writer.writeMessage(
       11,
       f,
-      proto.tendermint.abci.RequestCommit.serializeBinaryToWriter
+      proto.tendermint.abci.RequestCommit.serializeBinaryToWriter,
     );
   }
   f = message.getListSnapshots();
@@ -399,7 +395,7 @@ proto.tendermint.abci.Request.serializeBinaryToWriter = function(message, writer
     writer.writeMessage(
       12,
       f,
-      proto.tendermint.abci.RequestListSnapshots.serializeBinaryToWriter
+      proto.tendermint.abci.RequestListSnapshots.serializeBinaryToWriter,
     );
   }
   f = message.getOfferSnapshot();
@@ -407,7 +403,7 @@ proto.tendermint.abci.Request.serializeBinaryToWriter = function(message, writer
     writer.writeMessage(
       13,
       f,
-      proto.tendermint.abci.RequestOfferSnapshot.serializeBinaryToWriter
+      proto.tendermint.abci.RequestOfferSnapshot.serializeBinaryToWriter,
     );
   }
   f = message.getLoadSnapshotChunk();
@@ -415,7 +411,7 @@ proto.tendermint.abci.Request.serializeBinaryToWriter = function(message, writer
     writer.writeMessage(
       14,
       f,
-      proto.tendermint.abci.RequestLoadSnapshotChunk.serializeBinaryToWriter
+      proto.tendermint.abci.RequestLoadSnapshotChunk.serializeBinaryToWriter,
     );
   }
   f = message.getApplySnapshotChunk();
@@ -423,462 +419,400 @@ proto.tendermint.abci.Request.serializeBinaryToWriter = function(message, writer
     writer.writeMessage(
       15,
       f,
-      proto.tendermint.abci.RequestApplySnapshotChunk.serializeBinaryToWriter
+      proto.tendermint.abci.RequestApplySnapshotChunk.serializeBinaryToWriter,
     );
   }
 };
-
 
 /**
  * optional RequestEcho echo = 1;
  * @return {?proto.tendermint.abci.RequestEcho}
  */
-proto.tendermint.abci.Request.prototype.getEcho = function() {
+proto.tendermint.abci.Request.prototype.getEcho = function () {
   return /** @type{?proto.tendermint.abci.RequestEcho} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.abci.RequestEcho, 1));
 };
 
-
 /** @param {?proto.tendermint.abci.RequestEcho|undefined} value */
-proto.tendermint.abci.Request.prototype.setEcho = function(value) {
+proto.tendermint.abci.Request.prototype.setEcho = function (value) {
   jspb.Message.setOneofWrapperField(this, 1, proto.tendermint.abci.Request.oneofGroups_[0], value);
 };
 
-
-proto.tendermint.abci.Request.prototype.clearEcho = function() {
+proto.tendermint.abci.Request.prototype.clearEcho = function () {
   this.setEcho(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.abci.Request.prototype.hasEcho = function() {
+proto.tendermint.abci.Request.prototype.hasEcho = function () {
   return jspb.Message.getField(this, 1) != null;
 };
-
 
 /**
  * optional RequestFlush flush = 2;
  * @return {?proto.tendermint.abci.RequestFlush}
  */
-proto.tendermint.abci.Request.prototype.getFlush = function() {
+proto.tendermint.abci.Request.prototype.getFlush = function () {
   return /** @type{?proto.tendermint.abci.RequestFlush} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.abci.RequestFlush, 2));
 };
 
-
 /** @param {?proto.tendermint.abci.RequestFlush|undefined} value */
-proto.tendermint.abci.Request.prototype.setFlush = function(value) {
+proto.tendermint.abci.Request.prototype.setFlush = function (value) {
   jspb.Message.setOneofWrapperField(this, 2, proto.tendermint.abci.Request.oneofGroups_[0], value);
 };
 
-
-proto.tendermint.abci.Request.prototype.clearFlush = function() {
+proto.tendermint.abci.Request.prototype.clearFlush = function () {
   this.setFlush(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.abci.Request.prototype.hasFlush = function() {
+proto.tendermint.abci.Request.prototype.hasFlush = function () {
   return jspb.Message.getField(this, 2) != null;
 };
-
 
 /**
  * optional RequestInfo info = 3;
  * @return {?proto.tendermint.abci.RequestInfo}
  */
-proto.tendermint.abci.Request.prototype.getInfo = function() {
+proto.tendermint.abci.Request.prototype.getInfo = function () {
   return /** @type{?proto.tendermint.abci.RequestInfo} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.abci.RequestInfo, 3));
 };
 
-
 /** @param {?proto.tendermint.abci.RequestInfo|undefined} value */
-proto.tendermint.abci.Request.prototype.setInfo = function(value) {
+proto.tendermint.abci.Request.prototype.setInfo = function (value) {
   jspb.Message.setOneofWrapperField(this, 3, proto.tendermint.abci.Request.oneofGroups_[0], value);
 };
 
-
-proto.tendermint.abci.Request.prototype.clearInfo = function() {
+proto.tendermint.abci.Request.prototype.clearInfo = function () {
   this.setInfo(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.abci.Request.prototype.hasInfo = function() {
+proto.tendermint.abci.Request.prototype.hasInfo = function () {
   return jspb.Message.getField(this, 3) != null;
 };
-
 
 /**
  * optional RequestSetOption set_option = 4;
  * @return {?proto.tendermint.abci.RequestSetOption}
  */
-proto.tendermint.abci.Request.prototype.getSetOption = function() {
+proto.tendermint.abci.Request.prototype.getSetOption = function () {
   return /** @type{?proto.tendermint.abci.RequestSetOption} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.abci.RequestSetOption, 4));
 };
 
-
 /** @param {?proto.tendermint.abci.RequestSetOption|undefined} value */
-proto.tendermint.abci.Request.prototype.setSetOption = function(value) {
+proto.tendermint.abci.Request.prototype.setSetOption = function (value) {
   jspb.Message.setOneofWrapperField(this, 4, proto.tendermint.abci.Request.oneofGroups_[0], value);
 };
 
-
-proto.tendermint.abci.Request.prototype.clearSetOption = function() {
+proto.tendermint.abci.Request.prototype.clearSetOption = function () {
   this.setSetOption(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.abci.Request.prototype.hasSetOption = function() {
+proto.tendermint.abci.Request.prototype.hasSetOption = function () {
   return jspb.Message.getField(this, 4) != null;
 };
-
 
 /**
  * optional RequestInitChain init_chain = 5;
  * @return {?proto.tendermint.abci.RequestInitChain}
  */
-proto.tendermint.abci.Request.prototype.getInitChain = function() {
+proto.tendermint.abci.Request.prototype.getInitChain = function () {
   return /** @type{?proto.tendermint.abci.RequestInitChain} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.abci.RequestInitChain, 5));
 };
 
-
 /** @param {?proto.tendermint.abci.RequestInitChain|undefined} value */
-proto.tendermint.abci.Request.prototype.setInitChain = function(value) {
+proto.tendermint.abci.Request.prototype.setInitChain = function (value) {
   jspb.Message.setOneofWrapperField(this, 5, proto.tendermint.abci.Request.oneofGroups_[0], value);
 };
 
-
-proto.tendermint.abci.Request.prototype.clearInitChain = function() {
+proto.tendermint.abci.Request.prototype.clearInitChain = function () {
   this.setInitChain(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.abci.Request.prototype.hasInitChain = function() {
+proto.tendermint.abci.Request.prototype.hasInitChain = function () {
   return jspb.Message.getField(this, 5) != null;
 };
-
 
 /**
  * optional RequestQuery query = 6;
  * @return {?proto.tendermint.abci.RequestQuery}
  */
-proto.tendermint.abci.Request.prototype.getQuery = function() {
+proto.tendermint.abci.Request.prototype.getQuery = function () {
   return /** @type{?proto.tendermint.abci.RequestQuery} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.abci.RequestQuery, 6));
 };
 
-
 /** @param {?proto.tendermint.abci.RequestQuery|undefined} value */
-proto.tendermint.abci.Request.prototype.setQuery = function(value) {
+proto.tendermint.abci.Request.prototype.setQuery = function (value) {
   jspb.Message.setOneofWrapperField(this, 6, proto.tendermint.abci.Request.oneofGroups_[0], value);
 };
 
-
-proto.tendermint.abci.Request.prototype.clearQuery = function() {
+proto.tendermint.abci.Request.prototype.clearQuery = function () {
   this.setQuery(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.abci.Request.prototype.hasQuery = function() {
+proto.tendermint.abci.Request.prototype.hasQuery = function () {
   return jspb.Message.getField(this, 6) != null;
 };
-
 
 /**
  * optional RequestBeginBlock begin_block = 7;
  * @return {?proto.tendermint.abci.RequestBeginBlock}
  */
-proto.tendermint.abci.Request.prototype.getBeginBlock = function() {
+proto.tendermint.abci.Request.prototype.getBeginBlock = function () {
   return /** @type{?proto.tendermint.abci.RequestBeginBlock} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.abci.RequestBeginBlock, 7));
 };
 
-
 /** @param {?proto.tendermint.abci.RequestBeginBlock|undefined} value */
-proto.tendermint.abci.Request.prototype.setBeginBlock = function(value) {
+proto.tendermint.abci.Request.prototype.setBeginBlock = function (value) {
   jspb.Message.setOneofWrapperField(this, 7, proto.tendermint.abci.Request.oneofGroups_[0], value);
 };
 
-
-proto.tendermint.abci.Request.prototype.clearBeginBlock = function() {
+proto.tendermint.abci.Request.prototype.clearBeginBlock = function () {
   this.setBeginBlock(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.abci.Request.prototype.hasBeginBlock = function() {
+proto.tendermint.abci.Request.prototype.hasBeginBlock = function () {
   return jspb.Message.getField(this, 7) != null;
 };
-
 
 /**
  * optional RequestCheckTx check_tx = 8;
  * @return {?proto.tendermint.abci.RequestCheckTx}
  */
-proto.tendermint.abci.Request.prototype.getCheckTx = function() {
+proto.tendermint.abci.Request.prototype.getCheckTx = function () {
   return /** @type{?proto.tendermint.abci.RequestCheckTx} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.abci.RequestCheckTx, 8));
 };
 
-
 /** @param {?proto.tendermint.abci.RequestCheckTx|undefined} value */
-proto.tendermint.abci.Request.prototype.setCheckTx = function(value) {
+proto.tendermint.abci.Request.prototype.setCheckTx = function (value) {
   jspb.Message.setOneofWrapperField(this, 8, proto.tendermint.abci.Request.oneofGroups_[0], value);
 };
 
-
-proto.tendermint.abci.Request.prototype.clearCheckTx = function() {
+proto.tendermint.abci.Request.prototype.clearCheckTx = function () {
   this.setCheckTx(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.abci.Request.prototype.hasCheckTx = function() {
+proto.tendermint.abci.Request.prototype.hasCheckTx = function () {
   return jspb.Message.getField(this, 8) != null;
 };
-
 
 /**
  * optional RequestDeliverTx deliver_tx = 9;
  * @return {?proto.tendermint.abci.RequestDeliverTx}
  */
-proto.tendermint.abci.Request.prototype.getDeliverTx = function() {
+proto.tendermint.abci.Request.prototype.getDeliverTx = function () {
   return /** @type{?proto.tendermint.abci.RequestDeliverTx} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.abci.RequestDeliverTx, 9));
 };
 
-
 /** @param {?proto.tendermint.abci.RequestDeliverTx|undefined} value */
-proto.tendermint.abci.Request.prototype.setDeliverTx = function(value) {
+proto.tendermint.abci.Request.prototype.setDeliverTx = function (value) {
   jspb.Message.setOneofWrapperField(this, 9, proto.tendermint.abci.Request.oneofGroups_[0], value);
 };
 
-
-proto.tendermint.abci.Request.prototype.clearDeliverTx = function() {
+proto.tendermint.abci.Request.prototype.clearDeliverTx = function () {
   this.setDeliverTx(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.abci.Request.prototype.hasDeliverTx = function() {
+proto.tendermint.abci.Request.prototype.hasDeliverTx = function () {
   return jspb.Message.getField(this, 9) != null;
 };
-
 
 /**
  * optional RequestEndBlock end_block = 10;
  * @return {?proto.tendermint.abci.RequestEndBlock}
  */
-proto.tendermint.abci.Request.prototype.getEndBlock = function() {
+proto.tendermint.abci.Request.prototype.getEndBlock = function () {
   return /** @type{?proto.tendermint.abci.RequestEndBlock} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.abci.RequestEndBlock, 10));
 };
 
-
 /** @param {?proto.tendermint.abci.RequestEndBlock|undefined} value */
-proto.tendermint.abci.Request.prototype.setEndBlock = function(value) {
+proto.tendermint.abci.Request.prototype.setEndBlock = function (value) {
   jspb.Message.setOneofWrapperField(this, 10, proto.tendermint.abci.Request.oneofGroups_[0], value);
 };
 
-
-proto.tendermint.abci.Request.prototype.clearEndBlock = function() {
+proto.tendermint.abci.Request.prototype.clearEndBlock = function () {
   this.setEndBlock(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.abci.Request.prototype.hasEndBlock = function() {
+proto.tendermint.abci.Request.prototype.hasEndBlock = function () {
   return jspb.Message.getField(this, 10) != null;
 };
-
 
 /**
  * optional RequestCommit commit = 11;
  * @return {?proto.tendermint.abci.RequestCommit}
  */
-proto.tendermint.abci.Request.prototype.getCommit = function() {
+proto.tendermint.abci.Request.prototype.getCommit = function () {
   return /** @type{?proto.tendermint.abci.RequestCommit} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.abci.RequestCommit, 11));
 };
 
-
 /** @param {?proto.tendermint.abci.RequestCommit|undefined} value */
-proto.tendermint.abci.Request.prototype.setCommit = function(value) {
+proto.tendermint.abci.Request.prototype.setCommit = function (value) {
   jspb.Message.setOneofWrapperField(this, 11, proto.tendermint.abci.Request.oneofGroups_[0], value);
 };
 
-
-proto.tendermint.abci.Request.prototype.clearCommit = function() {
+proto.tendermint.abci.Request.prototype.clearCommit = function () {
   this.setCommit(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.abci.Request.prototype.hasCommit = function() {
+proto.tendermint.abci.Request.prototype.hasCommit = function () {
   return jspb.Message.getField(this, 11) != null;
 };
-
 
 /**
  * optional RequestListSnapshots list_snapshots = 12;
  * @return {?proto.tendermint.abci.RequestListSnapshots}
  */
-proto.tendermint.abci.Request.prototype.getListSnapshots = function() {
+proto.tendermint.abci.Request.prototype.getListSnapshots = function () {
   return /** @type{?proto.tendermint.abci.RequestListSnapshots} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.abci.RequestListSnapshots, 12));
 };
 
-
 /** @param {?proto.tendermint.abci.RequestListSnapshots|undefined} value */
-proto.tendermint.abci.Request.prototype.setListSnapshots = function(value) {
+proto.tendermint.abci.Request.prototype.setListSnapshots = function (value) {
   jspb.Message.setOneofWrapperField(this, 12, proto.tendermint.abci.Request.oneofGroups_[0], value);
 };
 
-
-proto.tendermint.abci.Request.prototype.clearListSnapshots = function() {
+proto.tendermint.abci.Request.prototype.clearListSnapshots = function () {
   this.setListSnapshots(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.abci.Request.prototype.hasListSnapshots = function() {
+proto.tendermint.abci.Request.prototype.hasListSnapshots = function () {
   return jspb.Message.getField(this, 12) != null;
 };
-
 
 /**
  * optional RequestOfferSnapshot offer_snapshot = 13;
  * @return {?proto.tendermint.abci.RequestOfferSnapshot}
  */
-proto.tendermint.abci.Request.prototype.getOfferSnapshot = function() {
+proto.tendermint.abci.Request.prototype.getOfferSnapshot = function () {
   return /** @type{?proto.tendermint.abci.RequestOfferSnapshot} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.abci.RequestOfferSnapshot, 13));
 };
 
-
 /** @param {?proto.tendermint.abci.RequestOfferSnapshot|undefined} value */
-proto.tendermint.abci.Request.prototype.setOfferSnapshot = function(value) {
+proto.tendermint.abci.Request.prototype.setOfferSnapshot = function (value) {
   jspb.Message.setOneofWrapperField(this, 13, proto.tendermint.abci.Request.oneofGroups_[0], value);
 };
 
-
-proto.tendermint.abci.Request.prototype.clearOfferSnapshot = function() {
+proto.tendermint.abci.Request.prototype.clearOfferSnapshot = function () {
   this.setOfferSnapshot(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.abci.Request.prototype.hasOfferSnapshot = function() {
+proto.tendermint.abci.Request.prototype.hasOfferSnapshot = function () {
   return jspb.Message.getField(this, 13) != null;
 };
-
 
 /**
  * optional RequestLoadSnapshotChunk load_snapshot_chunk = 14;
  * @return {?proto.tendermint.abci.RequestLoadSnapshotChunk}
  */
-proto.tendermint.abci.Request.prototype.getLoadSnapshotChunk = function() {
+proto.tendermint.abci.Request.prototype.getLoadSnapshotChunk = function () {
   return /** @type{?proto.tendermint.abci.RequestLoadSnapshotChunk} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.abci.RequestLoadSnapshotChunk, 14));
 };
 
-
 /** @param {?proto.tendermint.abci.RequestLoadSnapshotChunk|undefined} value */
-proto.tendermint.abci.Request.prototype.setLoadSnapshotChunk = function(value) {
+proto.tendermint.abci.Request.prototype.setLoadSnapshotChunk = function (value) {
   jspb.Message.setOneofWrapperField(this, 14, proto.tendermint.abci.Request.oneofGroups_[0], value);
 };
 
-
-proto.tendermint.abci.Request.prototype.clearLoadSnapshotChunk = function() {
+proto.tendermint.abci.Request.prototype.clearLoadSnapshotChunk = function () {
   this.setLoadSnapshotChunk(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.abci.Request.prototype.hasLoadSnapshotChunk = function() {
+proto.tendermint.abci.Request.prototype.hasLoadSnapshotChunk = function () {
   return jspb.Message.getField(this, 14) != null;
 };
-
 
 /**
  * optional RequestApplySnapshotChunk apply_snapshot_chunk = 15;
  * @return {?proto.tendermint.abci.RequestApplySnapshotChunk}
  */
-proto.tendermint.abci.Request.prototype.getApplySnapshotChunk = function() {
+proto.tendermint.abci.Request.prototype.getApplySnapshotChunk = function () {
   return /** @type{?proto.tendermint.abci.RequestApplySnapshotChunk} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.abci.RequestApplySnapshotChunk, 15));
 };
 
-
 /** @param {?proto.tendermint.abci.RequestApplySnapshotChunk|undefined} value */
-proto.tendermint.abci.Request.prototype.setApplySnapshotChunk = function(value) {
+proto.tendermint.abci.Request.prototype.setApplySnapshotChunk = function (value) {
   jspb.Message.setOneofWrapperField(this, 15, proto.tendermint.abci.Request.oneofGroups_[0], value);
 };
 
-
-proto.tendermint.abci.Request.prototype.clearApplySnapshotChunk = function() {
+proto.tendermint.abci.Request.prototype.clearApplySnapshotChunk = function () {
   this.setApplySnapshotChunk(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.abci.Request.prototype.hasApplySnapshotChunk = function() {
+proto.tendermint.abci.Request.prototype.hasApplySnapshotChunk = function () {
   return jspb.Message.getField(this, 15) != null;
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -890,14 +824,13 @@ proto.tendermint.abci.Request.prototype.hasApplySnapshotChunk = function() {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.abci.RequestEcho = function(opt_data) {
+proto.tendermint.abci.RequestEcho = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.tendermint.abci.RequestEcho, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.tendermint.abci.RequestEcho.displayName = 'proto.tendermint.abci.RequestEcho';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -910,12 +843,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.tendermint.abci.RequestEcho.prototype.toObject = function(opt_includeInstance) {
-  return proto.tendermint.abci.RequestEcho.toObject(opt_includeInstance, this);
-};
+  proto.tendermint.abci.RequestEcho.prototype.toObject = function (opt_includeInstance) {
+    return proto.tendermint.abci.RequestEcho.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -924,30 +856,29 @@ proto.tendermint.abci.RequestEcho.prototype.toObject = function(opt_includeInsta
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.RequestEcho.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    message: jspb.Message.getFieldWithDefault(msg, 1, "")
+  proto.tendermint.abci.RequestEcho.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        message: jspb.Message.getFieldWithDefault(msg, 1, ''),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.abci.RequestEcho}
  */
-proto.tendermint.abci.RequestEcho.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.tendermint.abci.RequestEcho;
+proto.tendermint.abci.RequestEcho.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.tendermint.abci.RequestEcho();
   return proto.tendermint.abci.RequestEcho.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -956,36 +887,34 @@ proto.tendermint.abci.RequestEcho.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.abci.RequestEcho}
  */
-proto.tendermint.abci.RequestEcho.deserializeBinaryFromReader = function(msg, reader) {
+proto.tendermint.abci.RequestEcho.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setMessage(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setMessage(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.RequestEcho.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.tendermint.abci.RequestEcho.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.tendermint.abci.RequestEcho.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -994,33 +923,29 @@ proto.tendermint.abci.RequestEcho.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.RequestEcho.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.tendermint.abci.RequestEcho.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getMessage();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional string message = 1;
  * @return {string}
  */
-proto.tendermint.abci.RequestEcho.prototype.getMessage = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.tendermint.abci.RequestEcho.prototype.getMessage = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
 };
-
 
 /** @param {string} value */
-proto.tendermint.abci.RequestEcho.prototype.setMessage = function(value) {
+proto.tendermint.abci.RequestEcho.prototype.setMessage = function (value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -1032,14 +957,13 @@ proto.tendermint.abci.RequestEcho.prototype.setMessage = function(value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.abci.RequestFlush = function(opt_data) {
+proto.tendermint.abci.RequestFlush = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.tendermint.abci.RequestFlush, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.tendermint.abci.RequestFlush.displayName = 'proto.tendermint.abci.RequestFlush';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -1052,12 +976,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.tendermint.abci.RequestFlush.prototype.toObject = function(opt_includeInstance) {
-  return proto.tendermint.abci.RequestFlush.toObject(opt_includeInstance, this);
-};
+  proto.tendermint.abci.RequestFlush.prototype.toObject = function (opt_includeInstance) {
+    return proto.tendermint.abci.RequestFlush.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -1066,30 +989,29 @@ proto.tendermint.abci.RequestFlush.prototype.toObject = function(opt_includeInst
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.RequestFlush.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  proto.tendermint.abci.RequestFlush.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
 
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.abci.RequestFlush}
  */
-proto.tendermint.abci.RequestFlush.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.tendermint.abci.RequestFlush;
+proto.tendermint.abci.RequestFlush.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.tendermint.abci.RequestFlush();
   return proto.tendermint.abci.RequestFlush.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -1098,32 +1020,30 @@ proto.tendermint.abci.RequestFlush.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.abci.RequestFlush}
  */
-proto.tendermint.abci.RequestFlush.deserializeBinaryFromReader = function(msg, reader) {
+proto.tendermint.abci.RequestFlush.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    default:
-      reader.skipField();
-      break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.RequestFlush.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.tendermint.abci.RequestFlush.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.tendermint.abci.RequestFlush.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -1132,11 +1052,9 @@ proto.tendermint.abci.RequestFlush.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.RequestFlush.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.tendermint.abci.RequestFlush.serializeBinaryToWriter = function (message, writer) {
+  const f;
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -1148,14 +1066,13 @@ proto.tendermint.abci.RequestFlush.serializeBinaryToWriter = function(message, w
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.abci.RequestInfo = function(opt_data) {
+proto.tendermint.abci.RequestInfo = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.tendermint.abci.RequestInfo, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.tendermint.abci.RequestInfo.displayName = 'proto.tendermint.abci.RequestInfo';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -1168,12 +1085,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.tendermint.abci.RequestInfo.prototype.toObject = function(opt_includeInstance) {
-  return proto.tendermint.abci.RequestInfo.toObject(opt_includeInstance, this);
-};
+  proto.tendermint.abci.RequestInfo.prototype.toObject = function (opt_includeInstance) {
+    return proto.tendermint.abci.RequestInfo.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -1182,32 +1098,31 @@ proto.tendermint.abci.RequestInfo.prototype.toObject = function(opt_includeInsta
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.RequestInfo.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    version: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    blockVersion: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    p2pVersion: jspb.Message.getFieldWithDefault(msg, 3, 0)
+  proto.tendermint.abci.RequestInfo.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        version: jspb.Message.getFieldWithDefault(msg, 1, ''),
+        blockVersion: jspb.Message.getFieldWithDefault(msg, 2, 0),
+        p2pVersion: jspb.Message.getFieldWithDefault(msg, 3, 0),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.abci.RequestInfo}
  */
-proto.tendermint.abci.RequestInfo.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.tendermint.abci.RequestInfo;
+proto.tendermint.abci.RequestInfo.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.tendermint.abci.RequestInfo();
   return proto.tendermint.abci.RequestInfo.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -1216,44 +1131,42 @@ proto.tendermint.abci.RequestInfo.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.abci.RequestInfo}
  */
-proto.tendermint.abci.RequestInfo.deserializeBinaryFromReader = function(msg, reader) {
+proto.tendermint.abci.RequestInfo.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setVersion(value);
-      break;
-    case 2:
-      var value = /** @type {number} */ (reader.readUint64());
-      msg.setBlockVersion(value);
-      break;
-    case 3:
-      var value = /** @type {number} */ (reader.readUint64());
-      msg.setP2pVersion(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setVersion(value);
+        break;
+      case 2:
+        var value = /** @type {number} */ (reader.readUint64());
+        msg.setBlockVersion(value);
+        break;
+      case 3:
+        var value = /** @type {number} */ (reader.readUint64());
+        msg.setP2pVersion(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.RequestInfo.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.tendermint.abci.RequestInfo.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.tendermint.abci.RequestInfo.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -1262,77 +1175,69 @@ proto.tendermint.abci.RequestInfo.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.RequestInfo.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.tendermint.abci.RequestInfo.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getVersion();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f
+      f,
     );
   }
   f = message.getBlockVersion();
   if (f !== 0) {
     writer.writeUint64(
       2,
-      f
+      f,
     );
   }
   f = message.getP2pVersion();
   if (f !== 0) {
     writer.writeUint64(
       3,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional string version = 1;
  * @return {string}
  */
-proto.tendermint.abci.RequestInfo.prototype.getVersion = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.tendermint.abci.RequestInfo.prototype.getVersion = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
 };
-
 
 /** @param {string} value */
-proto.tendermint.abci.RequestInfo.prototype.setVersion = function(value) {
+proto.tendermint.abci.RequestInfo.prototype.setVersion = function (value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
-
 
 /**
  * optional uint64 block_version = 2;
  * @return {number}
  */
-proto.tendermint.abci.RequestInfo.prototype.getBlockVersion = function() {
+proto.tendermint.abci.RequestInfo.prototype.getBlockVersion = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
-
 /** @param {number} value */
-proto.tendermint.abci.RequestInfo.prototype.setBlockVersion = function(value) {
+proto.tendermint.abci.RequestInfo.prototype.setBlockVersion = function (value) {
   jspb.Message.setProto3IntField(this, 2, value);
 };
-
 
 /**
  * optional uint64 p2p_version = 3;
  * @return {number}
  */
-proto.tendermint.abci.RequestInfo.prototype.getP2pVersion = function() {
+proto.tendermint.abci.RequestInfo.prototype.getP2pVersion = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
-
 /** @param {number} value */
-proto.tendermint.abci.RequestInfo.prototype.setP2pVersion = function(value) {
+proto.tendermint.abci.RequestInfo.prototype.setP2pVersion = function (value) {
   jspb.Message.setProto3IntField(this, 3, value);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -1344,14 +1249,13 @@ proto.tendermint.abci.RequestInfo.prototype.setP2pVersion = function(value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.abci.RequestSetOption = function(opt_data) {
+proto.tendermint.abci.RequestSetOption = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.tendermint.abci.RequestSetOption, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.tendermint.abci.RequestSetOption.displayName = 'proto.tendermint.abci.RequestSetOption';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -1364,12 +1268,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.tendermint.abci.RequestSetOption.prototype.toObject = function(opt_includeInstance) {
-  return proto.tendermint.abci.RequestSetOption.toObject(opt_includeInstance, this);
-};
+  proto.tendermint.abci.RequestSetOption.prototype.toObject = function (opt_includeInstance) {
+    return proto.tendermint.abci.RequestSetOption.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -1378,31 +1281,30 @@ proto.tendermint.abci.RequestSetOption.prototype.toObject = function(opt_include
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.RequestSetOption.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    key: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    value: jspb.Message.getFieldWithDefault(msg, 2, "")
+  proto.tendermint.abci.RequestSetOption.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        key: jspb.Message.getFieldWithDefault(msg, 1, ''),
+        value: jspb.Message.getFieldWithDefault(msg, 2, ''),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.abci.RequestSetOption}
  */
-proto.tendermint.abci.RequestSetOption.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.tendermint.abci.RequestSetOption;
+proto.tendermint.abci.RequestSetOption.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.tendermint.abci.RequestSetOption();
   return proto.tendermint.abci.RequestSetOption.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -1411,40 +1313,38 @@ proto.tendermint.abci.RequestSetOption.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.abci.RequestSetOption}
  */
-proto.tendermint.abci.RequestSetOption.deserializeBinaryFromReader = function(msg, reader) {
+proto.tendermint.abci.RequestSetOption.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setKey(value);
-      break;
-    case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setValue(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setKey(value);
+        break;
+      case 2:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setValue(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.RequestSetOption.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.tendermint.abci.RequestSetOption.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.tendermint.abci.RequestSetOption.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -1453,55 +1353,49 @@ proto.tendermint.abci.RequestSetOption.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.RequestSetOption.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.tendermint.abci.RequestSetOption.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getKey();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f
+      f,
     );
   }
   f = message.getValue();
   if (f.length > 0) {
     writer.writeString(
       2,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional string key = 1;
  * @return {string}
  */
-proto.tendermint.abci.RequestSetOption.prototype.getKey = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.tendermint.abci.RequestSetOption.prototype.getKey = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
 };
-
 
 /** @param {string} value */
-proto.tendermint.abci.RequestSetOption.prototype.setKey = function(value) {
+proto.tendermint.abci.RequestSetOption.prototype.setKey = function (value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
-
 
 /**
  * optional string value = 2;
  * @return {string}
  */
-proto.tendermint.abci.RequestSetOption.prototype.getValue = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+proto.tendermint.abci.RequestSetOption.prototype.getValue = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
 };
-
 
 /** @param {string} value */
-proto.tendermint.abci.RequestSetOption.prototype.setValue = function(value) {
+proto.tendermint.abci.RequestSetOption.prototype.setValue = function (value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -1513,7 +1407,7 @@ proto.tendermint.abci.RequestSetOption.prototype.setValue = function(value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.abci.RequestInitChain = function(opt_data) {
+proto.tendermint.abci.RequestInitChain = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.tendermint.abci.RequestInitChain.repeatedFields_, null);
 };
 goog.inherits(proto.tendermint.abci.RequestInitChain, jspb.Message);
@@ -1527,8 +1421,6 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.tendermint.abci.RequestInitChain.repeatedFields_ = [4];
 
-
-
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -1540,12 +1432,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.tendermint.abci.RequestInitChain.prototype.toObject = function(opt_includeInstance) {
-  return proto.tendermint.abci.RequestInitChain.toObject(opt_includeInstance, this);
-};
+  proto.tendermint.abci.RequestInitChain.prototype.toObject = function (opt_includeInstance) {
+    return proto.tendermint.abci.RequestInitChain.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -1554,36 +1445,35 @@ proto.tendermint.abci.RequestInitChain.prototype.toObject = function(opt_include
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.RequestInitChain.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    time: (f = msg.getTime()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
-    chainId: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    consensusParams: (f = msg.getConsensusParams()) && proto.tendermint.abci.ConsensusParams.toObject(includeInstance, f),
-    validatorsList: jspb.Message.toObjectList(msg.getValidatorsList(),
-    proto.tendermint.abci.ValidatorUpdate.toObject, includeInstance),
-    appStateBytes: msg.getAppStateBytes_asB64(),
-    initialHeight: jspb.Message.getFieldWithDefault(msg, 6, 0)
+  proto.tendermint.abci.RequestInitChain.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        time: (f = msg.getTime()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
+        chainId: jspb.Message.getFieldWithDefault(msg, 2, ''),
+        consensusParams: (f = msg.getConsensusParams()) && proto.tendermint.abci.ConsensusParams.toObject(includeInstance, f),
+        validatorsList: jspb.Message.toObjectList(msg.getValidatorsList(),
+          proto.tendermint.abci.ValidatorUpdate.toObject, includeInstance),
+        appStateBytes: msg.getAppStateBytes_asB64(),
+        initialHeight: jspb.Message.getFieldWithDefault(msg, 6, 0),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.abci.RequestInitChain}
  */
-proto.tendermint.abci.RequestInitChain.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.tendermint.abci.RequestInitChain;
+proto.tendermint.abci.RequestInitChain.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.tendermint.abci.RequestInitChain();
   return proto.tendermint.abci.RequestInitChain.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -1592,59 +1482,57 @@ proto.tendermint.abci.RequestInitChain.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.abci.RequestInitChain}
  */
-proto.tendermint.abci.RequestInitChain.deserializeBinaryFromReader = function(msg, reader) {
+proto.tendermint.abci.RequestInitChain.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = new google_protobuf_timestamp_pb.Timestamp;
-      reader.readMessage(value,google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
-      msg.setTime(value);
-      break;
-    case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setChainId(value);
-      break;
-    case 3:
-      var value = new proto.tendermint.abci.ConsensusParams;
-      reader.readMessage(value,proto.tendermint.abci.ConsensusParams.deserializeBinaryFromReader);
-      msg.setConsensusParams(value);
-      break;
-    case 4:
-      var value = new proto.tendermint.abci.ValidatorUpdate;
-      reader.readMessage(value,proto.tendermint.abci.ValidatorUpdate.deserializeBinaryFromReader);
-      msg.addValidators(value);
-      break;
-    case 5:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setAppStateBytes(value);
-      break;
-    case 6:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setInitialHeight(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = new google_protobuf_timestamp_pb.Timestamp();
+        reader.readMessage(value, google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
+        msg.setTime(value);
+        break;
+      case 2:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setChainId(value);
+        break;
+      case 3:
+        var value = new proto.tendermint.abci.ConsensusParams();
+        reader.readMessage(value, proto.tendermint.abci.ConsensusParams.deserializeBinaryFromReader);
+        msg.setConsensusParams(value);
+        break;
+      case 4:
+        var value = new proto.tendermint.abci.ValidatorUpdate();
+        reader.readMessage(value, proto.tendermint.abci.ValidatorUpdate.deserializeBinaryFromReader);
+        msg.addValidators(value);
+        break;
+      case 5:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.setAppStateBytes(value);
+        break;
+      case 6:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setInitialHeight(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.RequestInitChain.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.tendermint.abci.RequestInitChain.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.tendermint.abci.RequestInitChain.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -1653,21 +1541,21 @@ proto.tendermint.abci.RequestInitChain.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.RequestInitChain.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.tendermint.abci.RequestInitChain.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getTime();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter
+      google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter,
     );
   }
   f = message.getChainId();
   if (f.length > 0) {
     writer.writeString(
       2,
-      f
+      f,
     );
   }
   f = message.getConsensusParams();
@@ -1675,7 +1563,7 @@ proto.tendermint.abci.RequestInitChain.serializeBinaryToWriter = function(messag
     writer.writeMessage(
       3,
       f,
-      proto.tendermint.abci.ConsensusParams.serializeBinaryToWriter
+      proto.tendermint.abci.ConsensusParams.serializeBinaryToWriter,
     );
   }
   f = message.getValidatorsList();
@@ -1683,151 +1571,135 @@ proto.tendermint.abci.RequestInitChain.serializeBinaryToWriter = function(messag
     writer.writeRepeatedMessage(
       4,
       f,
-      proto.tendermint.abci.ValidatorUpdate.serializeBinaryToWriter
+      proto.tendermint.abci.ValidatorUpdate.serializeBinaryToWriter,
     );
   }
   f = message.getAppStateBytes_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       5,
-      f
+      f,
     );
   }
   f = message.getInitialHeight();
   if (f !== 0) {
     writer.writeInt64(
       6,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional google.protobuf.Timestamp time = 1;
  * @return {?proto.google.protobuf.Timestamp}
  */
-proto.tendermint.abci.RequestInitChain.prototype.getTime = function() {
+proto.tendermint.abci.RequestInitChain.prototype.getTime = function () {
   return /** @type{?proto.google.protobuf.Timestamp} */ (
     jspb.Message.getWrapperField(this, google_protobuf_timestamp_pb.Timestamp, 1));
 };
 
-
 /** @param {?proto.google.protobuf.Timestamp|undefined} value */
-proto.tendermint.abci.RequestInitChain.prototype.setTime = function(value) {
+proto.tendermint.abci.RequestInitChain.prototype.setTime = function (value) {
   jspb.Message.setWrapperField(this, 1, value);
 };
 
-
-proto.tendermint.abci.RequestInitChain.prototype.clearTime = function() {
+proto.tendermint.abci.RequestInitChain.prototype.clearTime = function () {
   this.setTime(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.abci.RequestInitChain.prototype.hasTime = function() {
+proto.tendermint.abci.RequestInitChain.prototype.hasTime = function () {
   return jspb.Message.getField(this, 1) != null;
 };
-
 
 /**
  * optional string chain_id = 2;
  * @return {string}
  */
-proto.tendermint.abci.RequestInitChain.prototype.getChainId = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+proto.tendermint.abci.RequestInitChain.prototype.getChainId = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
 };
-
 
 /** @param {string} value */
-proto.tendermint.abci.RequestInitChain.prototype.setChainId = function(value) {
+proto.tendermint.abci.RequestInitChain.prototype.setChainId = function (value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
-
 
 /**
  * optional ConsensusParams consensus_params = 3;
  * @return {?proto.tendermint.abci.ConsensusParams}
  */
-proto.tendermint.abci.RequestInitChain.prototype.getConsensusParams = function() {
+proto.tendermint.abci.RequestInitChain.prototype.getConsensusParams = function () {
   return /** @type{?proto.tendermint.abci.ConsensusParams} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.abci.ConsensusParams, 3));
 };
 
-
 /** @param {?proto.tendermint.abci.ConsensusParams|undefined} value */
-proto.tendermint.abci.RequestInitChain.prototype.setConsensusParams = function(value) {
+proto.tendermint.abci.RequestInitChain.prototype.setConsensusParams = function (value) {
   jspb.Message.setWrapperField(this, 3, value);
 };
 
-
-proto.tendermint.abci.RequestInitChain.prototype.clearConsensusParams = function() {
+proto.tendermint.abci.RequestInitChain.prototype.clearConsensusParams = function () {
   this.setConsensusParams(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.abci.RequestInitChain.prototype.hasConsensusParams = function() {
+proto.tendermint.abci.RequestInitChain.prototype.hasConsensusParams = function () {
   return jspb.Message.getField(this, 3) != null;
 };
-
 
 /**
  * repeated ValidatorUpdate validators = 4;
  * @return {!Array<!proto.tendermint.abci.ValidatorUpdate>}
  */
-proto.tendermint.abci.RequestInitChain.prototype.getValidatorsList = function() {
+proto.tendermint.abci.RequestInitChain.prototype.getValidatorsList = function () {
   return /** @type{!Array<!proto.tendermint.abci.ValidatorUpdate>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.tendermint.abci.ValidatorUpdate, 4));
 };
 
-
 /** @param {!Array<!proto.tendermint.abci.ValidatorUpdate>} value */
-proto.tendermint.abci.RequestInitChain.prototype.setValidatorsList = function(value) {
+proto.tendermint.abci.RequestInitChain.prototype.setValidatorsList = function (value) {
   jspb.Message.setRepeatedWrapperField(this, 4, value);
 };
-
 
 /**
  * @param {!proto.tendermint.abci.ValidatorUpdate=} opt_value
  * @param {number=} opt_index
  * @return {!proto.tendermint.abci.ValidatorUpdate}
  */
-proto.tendermint.abci.RequestInitChain.prototype.addValidators = function(opt_value, opt_index) {
+proto.tendermint.abci.RequestInitChain.prototype.addValidators = function (opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 4, opt_value, proto.tendermint.abci.ValidatorUpdate, opt_index);
 };
 
-
-proto.tendermint.abci.RequestInitChain.prototype.clearValidatorsList = function() {
+proto.tendermint.abci.RequestInitChain.prototype.clearValidatorsList = function () {
   this.setValidatorsList([]);
 };
-
 
 /**
  * optional bytes app_state_bytes = 5;
  * @return {!(string|Uint8Array)}
  */
-proto.tendermint.abci.RequestInitChain.prototype.getAppStateBytes = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
+proto.tendermint.abci.RequestInitChain.prototype.getAppStateBytes = function () {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 5, ''));
 };
-
 
 /**
  * optional bytes app_state_bytes = 5;
  * This is a type-conversion wrapper around `getAppStateBytes()`
  * @return {string}
  */
-proto.tendermint.abci.RequestInitChain.prototype.getAppStateBytes_asB64 = function() {
+proto.tendermint.abci.RequestInitChain.prototype.getAppStateBytes_asB64 = function () {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getAppStateBytes()));
+    this.getAppStateBytes(),
+  ));
 };
-
 
 /**
  * optional bytes app_state_bytes = 5;
@@ -1836,33 +1708,29 @@ proto.tendermint.abci.RequestInitChain.prototype.getAppStateBytes_asB64 = functi
  * This is a type-conversion wrapper around `getAppStateBytes()`
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.RequestInitChain.prototype.getAppStateBytes_asU8 = function() {
+proto.tendermint.abci.RequestInitChain.prototype.getAppStateBytes_asU8 = function () {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getAppStateBytes()));
+    this.getAppStateBytes(),
+  ));
 };
-
 
 /** @param {!(string|Uint8Array)} value */
-proto.tendermint.abci.RequestInitChain.prototype.setAppStateBytes = function(value) {
+proto.tendermint.abci.RequestInitChain.prototype.setAppStateBytes = function (value) {
   jspb.Message.setProto3BytesField(this, 5, value);
 };
-
 
 /**
  * optional int64 initial_height = 6;
  * @return {number}
  */
-proto.tendermint.abci.RequestInitChain.prototype.getInitialHeight = function() {
+proto.tendermint.abci.RequestInitChain.prototype.getInitialHeight = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
 };
 
-
 /** @param {number} value */
-proto.tendermint.abci.RequestInitChain.prototype.setInitialHeight = function(value) {
+proto.tendermint.abci.RequestInitChain.prototype.setInitialHeight = function (value) {
   jspb.Message.setProto3IntField(this, 6, value);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -1874,14 +1742,13 @@ proto.tendermint.abci.RequestInitChain.prototype.setInitialHeight = function(val
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.abci.RequestQuery = function(opt_data) {
+proto.tendermint.abci.RequestQuery = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.tendermint.abci.RequestQuery, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.tendermint.abci.RequestQuery.displayName = 'proto.tendermint.abci.RequestQuery';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -1894,12 +1761,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.tendermint.abci.RequestQuery.prototype.toObject = function(opt_includeInstance) {
-  return proto.tendermint.abci.RequestQuery.toObject(opt_includeInstance, this);
-};
+  proto.tendermint.abci.RequestQuery.prototype.toObject = function (opt_includeInstance) {
+    return proto.tendermint.abci.RequestQuery.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -1908,33 +1774,32 @@ proto.tendermint.abci.RequestQuery.prototype.toObject = function(opt_includeInst
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.RequestQuery.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    data: msg.getData_asB64(),
-    path: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    height: jspb.Message.getFieldWithDefault(msg, 3, 0),
-    prove: jspb.Message.getFieldWithDefault(msg, 4, false)
+  proto.tendermint.abci.RequestQuery.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        data: msg.getData_asB64(),
+        path: jspb.Message.getFieldWithDefault(msg, 2, ''),
+        height: jspb.Message.getFieldWithDefault(msg, 3, 0),
+        prove: jspb.Message.getFieldWithDefault(msg, 4, false),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.abci.RequestQuery}
  */
-proto.tendermint.abci.RequestQuery.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.tendermint.abci.RequestQuery;
+proto.tendermint.abci.RequestQuery.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.tendermint.abci.RequestQuery();
   return proto.tendermint.abci.RequestQuery.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -1943,48 +1808,46 @@ proto.tendermint.abci.RequestQuery.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.abci.RequestQuery}
  */
-proto.tendermint.abci.RequestQuery.deserializeBinaryFromReader = function(msg, reader) {
+proto.tendermint.abci.RequestQuery.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setData(value);
-      break;
-    case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setPath(value);
-      break;
-    case 3:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setHeight(value);
-      break;
-    case 4:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setProve(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.setData(value);
+        break;
+      case 2:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setPath(value);
+        break;
+      case 3:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setHeight(value);
+        break;
+      case 4:
+        var value = /** @type {boolean} */ (reader.readBool());
+        msg.setProve(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.RequestQuery.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.tendermint.abci.RequestQuery.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.tendermint.abci.RequestQuery.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -1993,58 +1856,56 @@ proto.tendermint.abci.RequestQuery.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.RequestQuery.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.tendermint.abci.RequestQuery.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getData_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       1,
-      f
+      f,
     );
   }
   f = message.getPath();
   if (f.length > 0) {
     writer.writeString(
       2,
-      f
+      f,
     );
   }
   f = message.getHeight();
   if (f !== 0) {
     writer.writeInt64(
       3,
-      f
+      f,
     );
   }
   f = message.getProve();
   if (f) {
     writer.writeBool(
       4,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional bytes data = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.tendermint.abci.RequestQuery.prototype.getData = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.tendermint.abci.RequestQuery.prototype.getData = function () {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
 };
-
 
 /**
  * optional bytes data = 1;
  * This is a type-conversion wrapper around `getData()`
  * @return {string}
  */
-proto.tendermint.abci.RequestQuery.prototype.getData_asB64 = function() {
+proto.tendermint.abci.RequestQuery.prototype.getData_asB64 = function () {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getData()));
+    this.getData(),
+  ));
 };
-
 
 /**
  * optional bytes data = 1;
@@ -2053,47 +1914,42 @@ proto.tendermint.abci.RequestQuery.prototype.getData_asB64 = function() {
  * This is a type-conversion wrapper around `getData()`
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.RequestQuery.prototype.getData_asU8 = function() {
+proto.tendermint.abci.RequestQuery.prototype.getData_asU8 = function () {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getData()));
+    this.getData(),
+  ));
 };
-
 
 /** @param {!(string|Uint8Array)} value */
-proto.tendermint.abci.RequestQuery.prototype.setData = function(value) {
+proto.tendermint.abci.RequestQuery.prototype.setData = function (value) {
   jspb.Message.setProto3BytesField(this, 1, value);
 };
-
 
 /**
  * optional string path = 2;
  * @return {string}
  */
-proto.tendermint.abci.RequestQuery.prototype.getPath = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+proto.tendermint.abci.RequestQuery.prototype.getPath = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
 };
-
 
 /** @param {string} value */
-proto.tendermint.abci.RequestQuery.prototype.setPath = function(value) {
+proto.tendermint.abci.RequestQuery.prototype.setPath = function (value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
-
 
 /**
  * optional int64 height = 3;
  * @return {number}
  */
-proto.tendermint.abci.RequestQuery.prototype.getHeight = function() {
+proto.tendermint.abci.RequestQuery.prototype.getHeight = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
-
 /** @param {number} value */
-proto.tendermint.abci.RequestQuery.prototype.setHeight = function(value) {
+proto.tendermint.abci.RequestQuery.prototype.setHeight = function (value) {
   jspb.Message.setProto3IntField(this, 3, value);
 };
-
 
 /**
  * optional bool prove = 4;
@@ -2101,17 +1957,14 @@ proto.tendermint.abci.RequestQuery.prototype.setHeight = function(value) {
  * You should avoid comparisons like {@code val === true/false} in those cases.
  * @return {boolean}
  */
-proto.tendermint.abci.RequestQuery.prototype.getProve = function() {
+proto.tendermint.abci.RequestQuery.prototype.getProve = function () {
   return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 4, false));
 };
 
-
 /** @param {boolean} value */
-proto.tendermint.abci.RequestQuery.prototype.setProve = function(value) {
+proto.tendermint.abci.RequestQuery.prototype.setProve = function (value) {
   jspb.Message.setProto3BooleanField(this, 4, value);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -2123,7 +1976,7 @@ proto.tendermint.abci.RequestQuery.prototype.setProve = function(value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.abci.RequestBeginBlock = function(opt_data) {
+proto.tendermint.abci.RequestBeginBlock = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.tendermint.abci.RequestBeginBlock.repeatedFields_, null);
 };
 goog.inherits(proto.tendermint.abci.RequestBeginBlock, jspb.Message);
@@ -2137,8 +1990,6 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.tendermint.abci.RequestBeginBlock.repeatedFields_ = [4];
 
-
-
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -2150,12 +2001,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.tendermint.abci.RequestBeginBlock.prototype.toObject = function(opt_includeInstance) {
-  return proto.tendermint.abci.RequestBeginBlock.toObject(opt_includeInstance, this);
-};
+  proto.tendermint.abci.RequestBeginBlock.prototype.toObject = function (opt_includeInstance) {
+    return proto.tendermint.abci.RequestBeginBlock.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -2164,34 +2014,33 @@ proto.tendermint.abci.RequestBeginBlock.prototype.toObject = function(opt_includ
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.RequestBeginBlock.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    hash: msg.getHash_asB64(),
-    header: (f = msg.getHeader()) && tendermint_types_types_pb.Header.toObject(includeInstance, f),
-    lastCommitInfo: (f = msg.getLastCommitInfo()) && proto.tendermint.abci.LastCommitInfo.toObject(includeInstance, f),
-    byzantineValidatorsList: jspb.Message.toObjectList(msg.getByzantineValidatorsList(),
-    proto.tendermint.abci.Evidence.toObject, includeInstance)
+  proto.tendermint.abci.RequestBeginBlock.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        hash: msg.getHash_asB64(),
+        header: (f = msg.getHeader()) && tendermint_types_types_pb.Header.toObject(includeInstance, f),
+        lastCommitInfo: (f = msg.getLastCommitInfo()) && proto.tendermint.abci.LastCommitInfo.toObject(includeInstance, f),
+        byzantineValidatorsList: jspb.Message.toObjectList(msg.getByzantineValidatorsList(),
+          proto.tendermint.abci.Evidence.toObject, includeInstance),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.abci.RequestBeginBlock}
  */
-proto.tendermint.abci.RequestBeginBlock.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.tendermint.abci.RequestBeginBlock;
+proto.tendermint.abci.RequestBeginBlock.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.tendermint.abci.RequestBeginBlock();
   return proto.tendermint.abci.RequestBeginBlock.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -2200,51 +2049,49 @@ proto.tendermint.abci.RequestBeginBlock.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.abci.RequestBeginBlock}
  */
-proto.tendermint.abci.RequestBeginBlock.deserializeBinaryFromReader = function(msg, reader) {
+proto.tendermint.abci.RequestBeginBlock.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setHash(value);
-      break;
-    case 2:
-      var value = new tendermint_types_types_pb.Header;
-      reader.readMessage(value,tendermint_types_types_pb.Header.deserializeBinaryFromReader);
-      msg.setHeader(value);
-      break;
-    case 3:
-      var value = new proto.tendermint.abci.LastCommitInfo;
-      reader.readMessage(value,proto.tendermint.abci.LastCommitInfo.deserializeBinaryFromReader);
-      msg.setLastCommitInfo(value);
-      break;
-    case 4:
-      var value = new proto.tendermint.abci.Evidence;
-      reader.readMessage(value,proto.tendermint.abci.Evidence.deserializeBinaryFromReader);
-      msg.addByzantineValidators(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.setHash(value);
+        break;
+      case 2:
+        var value = new tendermint_types_types_pb.Header();
+        reader.readMessage(value, tendermint_types_types_pb.Header.deserializeBinaryFromReader);
+        msg.setHeader(value);
+        break;
+      case 3:
+        var value = new proto.tendermint.abci.LastCommitInfo();
+        reader.readMessage(value, proto.tendermint.abci.LastCommitInfo.deserializeBinaryFromReader);
+        msg.setLastCommitInfo(value);
+        break;
+      case 4:
+        var value = new proto.tendermint.abci.Evidence();
+        reader.readMessage(value, proto.tendermint.abci.Evidence.deserializeBinaryFromReader);
+        msg.addByzantineValidators(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.RequestBeginBlock.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.tendermint.abci.RequestBeginBlock.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.tendermint.abci.RequestBeginBlock.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -2253,13 +2100,13 @@ proto.tendermint.abci.RequestBeginBlock.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.RequestBeginBlock.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.tendermint.abci.RequestBeginBlock.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getHash_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       1,
-      f
+      f,
     );
   }
   f = message.getHeader();
@@ -2267,7 +2114,7 @@ proto.tendermint.abci.RequestBeginBlock.serializeBinaryToWriter = function(messa
     writer.writeMessage(
       2,
       f,
-      tendermint_types_types_pb.Header.serializeBinaryToWriter
+      tendermint_types_types_pb.Header.serializeBinaryToWriter,
     );
   }
   f = message.getLastCommitInfo();
@@ -2275,7 +2122,7 @@ proto.tendermint.abci.RequestBeginBlock.serializeBinaryToWriter = function(messa
     writer.writeMessage(
       3,
       f,
-      proto.tendermint.abci.LastCommitInfo.serializeBinaryToWriter
+      proto.tendermint.abci.LastCommitInfo.serializeBinaryToWriter,
     );
   }
   f = message.getByzantineValidatorsList();
@@ -2283,31 +2130,29 @@ proto.tendermint.abci.RequestBeginBlock.serializeBinaryToWriter = function(messa
     writer.writeRepeatedMessage(
       4,
       f,
-      proto.tendermint.abci.Evidence.serializeBinaryToWriter
+      proto.tendermint.abci.Evidence.serializeBinaryToWriter,
     );
   }
 };
-
 
 /**
  * optional bytes hash = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.tendermint.abci.RequestBeginBlock.prototype.getHash = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.tendermint.abci.RequestBeginBlock.prototype.getHash = function () {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
 };
-
 
 /**
  * optional bytes hash = 1;
  * This is a type-conversion wrapper around `getHash()`
  * @return {string}
  */
-proto.tendermint.abci.RequestBeginBlock.prototype.getHash_asB64 = function() {
+proto.tendermint.abci.RequestBeginBlock.prototype.getHash_asB64 = function () {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getHash()));
+    this.getHash(),
+  ));
 };
-
 
 /**
  * optional bytes hash = 1;
@@ -2316,109 +2161,95 @@ proto.tendermint.abci.RequestBeginBlock.prototype.getHash_asB64 = function() {
  * This is a type-conversion wrapper around `getHash()`
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.RequestBeginBlock.prototype.getHash_asU8 = function() {
+proto.tendermint.abci.RequestBeginBlock.prototype.getHash_asU8 = function () {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getHash()));
+    this.getHash(),
+  ));
 };
-
 
 /** @param {!(string|Uint8Array)} value */
-proto.tendermint.abci.RequestBeginBlock.prototype.setHash = function(value) {
+proto.tendermint.abci.RequestBeginBlock.prototype.setHash = function (value) {
   jspb.Message.setProto3BytesField(this, 1, value);
 };
-
 
 /**
  * optional tendermint.types.Header header = 2;
  * @return {?proto.tendermint.types.Header}
  */
-proto.tendermint.abci.RequestBeginBlock.prototype.getHeader = function() {
+proto.tendermint.abci.RequestBeginBlock.prototype.getHeader = function () {
   return /** @type{?proto.tendermint.types.Header} */ (
     jspb.Message.getWrapperField(this, tendermint_types_types_pb.Header, 2));
 };
 
-
 /** @param {?proto.tendermint.types.Header|undefined} value */
-proto.tendermint.abci.RequestBeginBlock.prototype.setHeader = function(value) {
+proto.tendermint.abci.RequestBeginBlock.prototype.setHeader = function (value) {
   jspb.Message.setWrapperField(this, 2, value);
 };
 
-
-proto.tendermint.abci.RequestBeginBlock.prototype.clearHeader = function() {
+proto.tendermint.abci.RequestBeginBlock.prototype.clearHeader = function () {
   this.setHeader(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.abci.RequestBeginBlock.prototype.hasHeader = function() {
+proto.tendermint.abci.RequestBeginBlock.prototype.hasHeader = function () {
   return jspb.Message.getField(this, 2) != null;
 };
-
 
 /**
  * optional LastCommitInfo last_commit_info = 3;
  * @return {?proto.tendermint.abci.LastCommitInfo}
  */
-proto.tendermint.abci.RequestBeginBlock.prototype.getLastCommitInfo = function() {
+proto.tendermint.abci.RequestBeginBlock.prototype.getLastCommitInfo = function () {
   return /** @type{?proto.tendermint.abci.LastCommitInfo} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.abci.LastCommitInfo, 3));
 };
 
-
 /** @param {?proto.tendermint.abci.LastCommitInfo|undefined} value */
-proto.tendermint.abci.RequestBeginBlock.prototype.setLastCommitInfo = function(value) {
+proto.tendermint.abci.RequestBeginBlock.prototype.setLastCommitInfo = function (value) {
   jspb.Message.setWrapperField(this, 3, value);
 };
 
-
-proto.tendermint.abci.RequestBeginBlock.prototype.clearLastCommitInfo = function() {
+proto.tendermint.abci.RequestBeginBlock.prototype.clearLastCommitInfo = function () {
   this.setLastCommitInfo(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.abci.RequestBeginBlock.prototype.hasLastCommitInfo = function() {
+proto.tendermint.abci.RequestBeginBlock.prototype.hasLastCommitInfo = function () {
   return jspb.Message.getField(this, 3) != null;
 };
-
 
 /**
  * repeated Evidence byzantine_validators = 4;
  * @return {!Array<!proto.tendermint.abci.Evidence>}
  */
-proto.tendermint.abci.RequestBeginBlock.prototype.getByzantineValidatorsList = function() {
+proto.tendermint.abci.RequestBeginBlock.prototype.getByzantineValidatorsList = function () {
   return /** @type{!Array<!proto.tendermint.abci.Evidence>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.tendermint.abci.Evidence, 4));
 };
 
-
 /** @param {!Array<!proto.tendermint.abci.Evidence>} value */
-proto.tendermint.abci.RequestBeginBlock.prototype.setByzantineValidatorsList = function(value) {
+proto.tendermint.abci.RequestBeginBlock.prototype.setByzantineValidatorsList = function (value) {
   jspb.Message.setRepeatedWrapperField(this, 4, value);
 };
-
 
 /**
  * @param {!proto.tendermint.abci.Evidence=} opt_value
  * @param {number=} opt_index
  * @return {!proto.tendermint.abci.Evidence}
  */
-proto.tendermint.abci.RequestBeginBlock.prototype.addByzantineValidators = function(opt_value, opt_index) {
+proto.tendermint.abci.RequestBeginBlock.prototype.addByzantineValidators = function (opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 4, opt_value, proto.tendermint.abci.Evidence, opt_index);
 };
 
-
-proto.tendermint.abci.RequestBeginBlock.prototype.clearByzantineValidatorsList = function() {
+proto.tendermint.abci.RequestBeginBlock.prototype.clearByzantineValidatorsList = function () {
   this.setByzantineValidatorsList([]);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -2430,14 +2261,13 @@ proto.tendermint.abci.RequestBeginBlock.prototype.clearByzantineValidatorsList =
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.abci.RequestCheckTx = function(opt_data) {
+proto.tendermint.abci.RequestCheckTx = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.tendermint.abci.RequestCheckTx, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.tendermint.abci.RequestCheckTx.displayName = 'proto.tendermint.abci.RequestCheckTx';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -2450,12 +2280,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.tendermint.abci.RequestCheckTx.prototype.toObject = function(opt_includeInstance) {
-  return proto.tendermint.abci.RequestCheckTx.toObject(opt_includeInstance, this);
-};
+  proto.tendermint.abci.RequestCheckTx.prototype.toObject = function (opt_includeInstance) {
+    return proto.tendermint.abci.RequestCheckTx.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -2464,31 +2293,30 @@ proto.tendermint.abci.RequestCheckTx.prototype.toObject = function(opt_includeIn
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.RequestCheckTx.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    tx: msg.getTx_asB64(),
-    type: jspb.Message.getFieldWithDefault(msg, 2, 0)
+  proto.tendermint.abci.RequestCheckTx.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        tx: msg.getTx_asB64(),
+        type: jspb.Message.getFieldWithDefault(msg, 2, 0),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.abci.RequestCheckTx}
  */
-proto.tendermint.abci.RequestCheckTx.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.tendermint.abci.RequestCheckTx;
+proto.tendermint.abci.RequestCheckTx.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.tendermint.abci.RequestCheckTx();
   return proto.tendermint.abci.RequestCheckTx.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -2497,40 +2325,38 @@ proto.tendermint.abci.RequestCheckTx.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.abci.RequestCheckTx}
  */
-proto.tendermint.abci.RequestCheckTx.deserializeBinaryFromReader = function(msg, reader) {
+proto.tendermint.abci.RequestCheckTx.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setTx(value);
-      break;
-    case 2:
-      var value = /** @type {!proto.tendermint.abci.CheckTxType} */ (reader.readEnum());
-      msg.setType(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.setTx(value);
+        break;
+      case 2:
+        var value = /** @type {!proto.tendermint.abci.CheckTxType} */ (reader.readEnum());
+        msg.setType(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.RequestCheckTx.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.tendermint.abci.RequestCheckTx.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.tendermint.abci.RequestCheckTx.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -2539,44 +2365,42 @@ proto.tendermint.abci.RequestCheckTx.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.RequestCheckTx.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.tendermint.abci.RequestCheckTx.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getTx_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       1,
-      f
+      f,
     );
   }
   f = message.getType();
   if (f !== 0.0) {
     writer.writeEnum(
       2,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional bytes tx = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.tendermint.abci.RequestCheckTx.prototype.getTx = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.tendermint.abci.RequestCheckTx.prototype.getTx = function () {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
 };
-
 
 /**
  * optional bytes tx = 1;
  * This is a type-conversion wrapper around `getTx()`
  * @return {string}
  */
-proto.tendermint.abci.RequestCheckTx.prototype.getTx_asB64 = function() {
+proto.tendermint.abci.RequestCheckTx.prototype.getTx_asB64 = function () {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getTx()));
+    this.getTx(),
+  ));
 };
-
 
 /**
  * optional bytes tx = 1;
@@ -2585,33 +2409,29 @@ proto.tendermint.abci.RequestCheckTx.prototype.getTx_asB64 = function() {
  * This is a type-conversion wrapper around `getTx()`
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.RequestCheckTx.prototype.getTx_asU8 = function() {
+proto.tendermint.abci.RequestCheckTx.prototype.getTx_asU8 = function () {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getTx()));
+    this.getTx(),
+  ));
 };
-
 
 /** @param {!(string|Uint8Array)} value */
-proto.tendermint.abci.RequestCheckTx.prototype.setTx = function(value) {
+proto.tendermint.abci.RequestCheckTx.prototype.setTx = function (value) {
   jspb.Message.setProto3BytesField(this, 1, value);
 };
-
 
 /**
  * optional CheckTxType type = 2;
  * @return {!proto.tendermint.abci.CheckTxType}
  */
-proto.tendermint.abci.RequestCheckTx.prototype.getType = function() {
+proto.tendermint.abci.RequestCheckTx.prototype.getType = function () {
   return /** @type {!proto.tendermint.abci.CheckTxType} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
-
 /** @param {!proto.tendermint.abci.CheckTxType} value */
-proto.tendermint.abci.RequestCheckTx.prototype.setType = function(value) {
+proto.tendermint.abci.RequestCheckTx.prototype.setType = function (value) {
   jspb.Message.setProto3EnumField(this, 2, value);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -2623,14 +2443,13 @@ proto.tendermint.abci.RequestCheckTx.prototype.setType = function(value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.abci.RequestDeliverTx = function(opt_data) {
+proto.tendermint.abci.RequestDeliverTx = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.tendermint.abci.RequestDeliverTx, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.tendermint.abci.RequestDeliverTx.displayName = 'proto.tendermint.abci.RequestDeliverTx';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -2643,12 +2462,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.tendermint.abci.RequestDeliverTx.prototype.toObject = function(opt_includeInstance) {
-  return proto.tendermint.abci.RequestDeliverTx.toObject(opt_includeInstance, this);
-};
+  proto.tendermint.abci.RequestDeliverTx.prototype.toObject = function (opt_includeInstance) {
+    return proto.tendermint.abci.RequestDeliverTx.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -2657,30 +2475,29 @@ proto.tendermint.abci.RequestDeliverTx.prototype.toObject = function(opt_include
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.RequestDeliverTx.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    tx: msg.getTx_asB64()
+  proto.tendermint.abci.RequestDeliverTx.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        tx: msg.getTx_asB64(),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.abci.RequestDeliverTx}
  */
-proto.tendermint.abci.RequestDeliverTx.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.tendermint.abci.RequestDeliverTx;
+proto.tendermint.abci.RequestDeliverTx.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.tendermint.abci.RequestDeliverTx();
   return proto.tendermint.abci.RequestDeliverTx.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -2689,36 +2506,34 @@ proto.tendermint.abci.RequestDeliverTx.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.abci.RequestDeliverTx}
  */
-proto.tendermint.abci.RequestDeliverTx.deserializeBinaryFromReader = function(msg, reader) {
+proto.tendermint.abci.RequestDeliverTx.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setTx(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.setTx(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.RequestDeliverTx.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.tendermint.abci.RequestDeliverTx.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.tendermint.abci.RequestDeliverTx.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -2727,37 +2542,35 @@ proto.tendermint.abci.RequestDeliverTx.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.RequestDeliverTx.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.tendermint.abci.RequestDeliverTx.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getTx_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       1,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional bytes tx = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.tendermint.abci.RequestDeliverTx.prototype.getTx = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.tendermint.abci.RequestDeliverTx.prototype.getTx = function () {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
 };
-
 
 /**
  * optional bytes tx = 1;
  * This is a type-conversion wrapper around `getTx()`
  * @return {string}
  */
-proto.tendermint.abci.RequestDeliverTx.prototype.getTx_asB64 = function() {
+proto.tendermint.abci.RequestDeliverTx.prototype.getTx_asB64 = function () {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getTx()));
+    this.getTx(),
+  ));
 };
-
 
 /**
  * optional bytes tx = 1;
@@ -2766,18 +2579,16 @@ proto.tendermint.abci.RequestDeliverTx.prototype.getTx_asB64 = function() {
  * This is a type-conversion wrapper around `getTx()`
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.RequestDeliverTx.prototype.getTx_asU8 = function() {
+proto.tendermint.abci.RequestDeliverTx.prototype.getTx_asU8 = function () {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getTx()));
+    this.getTx(),
+  ));
 };
-
 
 /** @param {!(string|Uint8Array)} value */
-proto.tendermint.abci.RequestDeliverTx.prototype.setTx = function(value) {
+proto.tendermint.abci.RequestDeliverTx.prototype.setTx = function (value) {
   jspb.Message.setProto3BytesField(this, 1, value);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -2789,14 +2600,13 @@ proto.tendermint.abci.RequestDeliverTx.prototype.setTx = function(value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.abci.RequestEndBlock = function(opt_data) {
+proto.tendermint.abci.RequestEndBlock = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.tendermint.abci.RequestEndBlock, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.tendermint.abci.RequestEndBlock.displayName = 'proto.tendermint.abci.RequestEndBlock';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -2809,12 +2619,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.tendermint.abci.RequestEndBlock.prototype.toObject = function(opt_includeInstance) {
-  return proto.tendermint.abci.RequestEndBlock.toObject(opt_includeInstance, this);
-};
+  proto.tendermint.abci.RequestEndBlock.prototype.toObject = function (opt_includeInstance) {
+    return proto.tendermint.abci.RequestEndBlock.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -2823,30 +2632,29 @@ proto.tendermint.abci.RequestEndBlock.prototype.toObject = function(opt_includeI
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.RequestEndBlock.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    height: jspb.Message.getFieldWithDefault(msg, 1, 0)
+  proto.tendermint.abci.RequestEndBlock.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        height: jspb.Message.getFieldWithDefault(msg, 1, 0),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.abci.RequestEndBlock}
  */
-proto.tendermint.abci.RequestEndBlock.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.tendermint.abci.RequestEndBlock;
+proto.tendermint.abci.RequestEndBlock.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.tendermint.abci.RequestEndBlock();
   return proto.tendermint.abci.RequestEndBlock.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -2855,36 +2663,34 @@ proto.tendermint.abci.RequestEndBlock.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.abci.RequestEndBlock}
  */
-proto.tendermint.abci.RequestEndBlock.deserializeBinaryFromReader = function(msg, reader) {
+proto.tendermint.abci.RequestEndBlock.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setHeight(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setHeight(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.RequestEndBlock.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.tendermint.abci.RequestEndBlock.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.tendermint.abci.RequestEndBlock.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -2893,33 +2699,29 @@ proto.tendermint.abci.RequestEndBlock.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.RequestEndBlock.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.tendermint.abci.RequestEndBlock.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getHeight();
   if (f !== 0) {
     writer.writeInt64(
       1,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional int64 height = 1;
  * @return {number}
  */
-proto.tendermint.abci.RequestEndBlock.prototype.getHeight = function() {
+proto.tendermint.abci.RequestEndBlock.prototype.getHeight = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
-
 /** @param {number} value */
-proto.tendermint.abci.RequestEndBlock.prototype.setHeight = function(value) {
+proto.tendermint.abci.RequestEndBlock.prototype.setHeight = function (value) {
   jspb.Message.setProto3IntField(this, 1, value);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -2931,14 +2733,13 @@ proto.tendermint.abci.RequestEndBlock.prototype.setHeight = function(value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.abci.RequestCommit = function(opt_data) {
+proto.tendermint.abci.RequestCommit = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.tendermint.abci.RequestCommit, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.tendermint.abci.RequestCommit.displayName = 'proto.tendermint.abci.RequestCommit';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -2951,12 +2752,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.tendermint.abci.RequestCommit.prototype.toObject = function(opt_includeInstance) {
-  return proto.tendermint.abci.RequestCommit.toObject(opt_includeInstance, this);
-};
+  proto.tendermint.abci.RequestCommit.prototype.toObject = function (opt_includeInstance) {
+    return proto.tendermint.abci.RequestCommit.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -2965,30 +2765,29 @@ proto.tendermint.abci.RequestCommit.prototype.toObject = function(opt_includeIns
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.RequestCommit.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  proto.tendermint.abci.RequestCommit.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
 
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.abci.RequestCommit}
  */
-proto.tendermint.abci.RequestCommit.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.tendermint.abci.RequestCommit;
+proto.tendermint.abci.RequestCommit.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.tendermint.abci.RequestCommit();
   return proto.tendermint.abci.RequestCommit.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -2997,32 +2796,30 @@ proto.tendermint.abci.RequestCommit.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.abci.RequestCommit}
  */
-proto.tendermint.abci.RequestCommit.deserializeBinaryFromReader = function(msg, reader) {
+proto.tendermint.abci.RequestCommit.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    default:
-      reader.skipField();
-      break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.RequestCommit.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.tendermint.abci.RequestCommit.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.tendermint.abci.RequestCommit.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -3031,11 +2828,9 @@ proto.tendermint.abci.RequestCommit.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.RequestCommit.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.tendermint.abci.RequestCommit.serializeBinaryToWriter = function (message, writer) {
+  const f;
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -3047,14 +2842,13 @@ proto.tendermint.abci.RequestCommit.serializeBinaryToWriter = function(message, 
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.abci.RequestListSnapshots = function(opt_data) {
+proto.tendermint.abci.RequestListSnapshots = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.tendermint.abci.RequestListSnapshots, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.tendermint.abci.RequestListSnapshots.displayName = 'proto.tendermint.abci.RequestListSnapshots';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -3067,12 +2861,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.tendermint.abci.RequestListSnapshots.prototype.toObject = function(opt_includeInstance) {
-  return proto.tendermint.abci.RequestListSnapshots.toObject(opt_includeInstance, this);
-};
+  proto.tendermint.abci.RequestListSnapshots.prototype.toObject = function (opt_includeInstance) {
+    return proto.tendermint.abci.RequestListSnapshots.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -3081,30 +2874,29 @@ proto.tendermint.abci.RequestListSnapshots.prototype.toObject = function(opt_inc
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.RequestListSnapshots.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  proto.tendermint.abci.RequestListSnapshots.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
 
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.abci.RequestListSnapshots}
  */
-proto.tendermint.abci.RequestListSnapshots.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.tendermint.abci.RequestListSnapshots;
+proto.tendermint.abci.RequestListSnapshots.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.tendermint.abci.RequestListSnapshots();
   return proto.tendermint.abci.RequestListSnapshots.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -3113,32 +2905,30 @@ proto.tendermint.abci.RequestListSnapshots.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.abci.RequestListSnapshots}
  */
-proto.tendermint.abci.RequestListSnapshots.deserializeBinaryFromReader = function(msg, reader) {
+proto.tendermint.abci.RequestListSnapshots.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    default:
-      reader.skipField();
-      break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.RequestListSnapshots.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.tendermint.abci.RequestListSnapshots.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.tendermint.abci.RequestListSnapshots.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -3147,11 +2937,9 @@ proto.tendermint.abci.RequestListSnapshots.prototype.serializeBinary = function(
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.RequestListSnapshots.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.tendermint.abci.RequestListSnapshots.serializeBinaryToWriter = function (message, writer) {
+  const f;
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -3163,14 +2951,13 @@ proto.tendermint.abci.RequestListSnapshots.serializeBinaryToWriter = function(me
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.abci.RequestOfferSnapshot = function(opt_data) {
+proto.tendermint.abci.RequestOfferSnapshot = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.tendermint.abci.RequestOfferSnapshot, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.tendermint.abci.RequestOfferSnapshot.displayName = 'proto.tendermint.abci.RequestOfferSnapshot';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -3183,12 +2970,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.tendermint.abci.RequestOfferSnapshot.prototype.toObject = function(opt_includeInstance) {
-  return proto.tendermint.abci.RequestOfferSnapshot.toObject(opt_includeInstance, this);
-};
+  proto.tendermint.abci.RequestOfferSnapshot.prototype.toObject = function (opt_includeInstance) {
+    return proto.tendermint.abci.RequestOfferSnapshot.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -3197,31 +2983,30 @@ proto.tendermint.abci.RequestOfferSnapshot.prototype.toObject = function(opt_inc
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.RequestOfferSnapshot.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    snapshot: (f = msg.getSnapshot()) && proto.tendermint.abci.Snapshot.toObject(includeInstance, f),
-    appHash: msg.getAppHash_asB64()
+  proto.tendermint.abci.RequestOfferSnapshot.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        snapshot: (f = msg.getSnapshot()) && proto.tendermint.abci.Snapshot.toObject(includeInstance, f),
+        appHash: msg.getAppHash_asB64(),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.abci.RequestOfferSnapshot}
  */
-proto.tendermint.abci.RequestOfferSnapshot.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.tendermint.abci.RequestOfferSnapshot;
+proto.tendermint.abci.RequestOfferSnapshot.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.tendermint.abci.RequestOfferSnapshot();
   return proto.tendermint.abci.RequestOfferSnapshot.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -3230,41 +3015,39 @@ proto.tendermint.abci.RequestOfferSnapshot.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.abci.RequestOfferSnapshot}
  */
-proto.tendermint.abci.RequestOfferSnapshot.deserializeBinaryFromReader = function(msg, reader) {
+proto.tendermint.abci.RequestOfferSnapshot.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = new proto.tendermint.abci.Snapshot;
-      reader.readMessage(value,proto.tendermint.abci.Snapshot.deserializeBinaryFromReader);
-      msg.setSnapshot(value);
-      break;
-    case 2:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setAppHash(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = new proto.tendermint.abci.Snapshot();
+        reader.readMessage(value, proto.tendermint.abci.Snapshot.deserializeBinaryFromReader);
+        msg.setSnapshot(value);
+        break;
+      case 2:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.setAppHash(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.RequestOfferSnapshot.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.tendermint.abci.RequestOfferSnapshot.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.tendermint.abci.RequestOfferSnapshot.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -3273,75 +3056,69 @@ proto.tendermint.abci.RequestOfferSnapshot.prototype.serializeBinary = function(
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.RequestOfferSnapshot.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.tendermint.abci.RequestOfferSnapshot.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getSnapshot();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.tendermint.abci.Snapshot.serializeBinaryToWriter
+      proto.tendermint.abci.Snapshot.serializeBinaryToWriter,
     );
   }
   f = message.getAppHash_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       2,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional Snapshot snapshot = 1;
  * @return {?proto.tendermint.abci.Snapshot}
  */
-proto.tendermint.abci.RequestOfferSnapshot.prototype.getSnapshot = function() {
+proto.tendermint.abci.RequestOfferSnapshot.prototype.getSnapshot = function () {
   return /** @type{?proto.tendermint.abci.Snapshot} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.abci.Snapshot, 1));
 };
 
-
 /** @param {?proto.tendermint.abci.Snapshot|undefined} value */
-proto.tendermint.abci.RequestOfferSnapshot.prototype.setSnapshot = function(value) {
+proto.tendermint.abci.RequestOfferSnapshot.prototype.setSnapshot = function (value) {
   jspb.Message.setWrapperField(this, 1, value);
 };
 
-
-proto.tendermint.abci.RequestOfferSnapshot.prototype.clearSnapshot = function() {
+proto.tendermint.abci.RequestOfferSnapshot.prototype.clearSnapshot = function () {
   this.setSnapshot(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.abci.RequestOfferSnapshot.prototype.hasSnapshot = function() {
+proto.tendermint.abci.RequestOfferSnapshot.prototype.hasSnapshot = function () {
   return jspb.Message.getField(this, 1) != null;
 };
-
 
 /**
  * optional bytes app_hash = 2;
  * @return {!(string|Uint8Array)}
  */
-proto.tendermint.abci.RequestOfferSnapshot.prototype.getAppHash = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+proto.tendermint.abci.RequestOfferSnapshot.prototype.getAppHash = function () {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
 };
-
 
 /**
  * optional bytes app_hash = 2;
  * This is a type-conversion wrapper around `getAppHash()`
  * @return {string}
  */
-proto.tendermint.abci.RequestOfferSnapshot.prototype.getAppHash_asB64 = function() {
+proto.tendermint.abci.RequestOfferSnapshot.prototype.getAppHash_asB64 = function () {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getAppHash()));
+    this.getAppHash(),
+  ));
 };
-
 
 /**
  * optional bytes app_hash = 2;
@@ -3350,18 +3127,16 @@ proto.tendermint.abci.RequestOfferSnapshot.prototype.getAppHash_asB64 = function
  * This is a type-conversion wrapper around `getAppHash()`
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.RequestOfferSnapshot.prototype.getAppHash_asU8 = function() {
+proto.tendermint.abci.RequestOfferSnapshot.prototype.getAppHash_asU8 = function () {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getAppHash()));
+    this.getAppHash(),
+  ));
 };
-
 
 /** @param {!(string|Uint8Array)} value */
-proto.tendermint.abci.RequestOfferSnapshot.prototype.setAppHash = function(value) {
+proto.tendermint.abci.RequestOfferSnapshot.prototype.setAppHash = function (value) {
   jspb.Message.setProto3BytesField(this, 2, value);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -3373,14 +3148,13 @@ proto.tendermint.abci.RequestOfferSnapshot.prototype.setAppHash = function(value
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.abci.RequestLoadSnapshotChunk = function(opt_data) {
+proto.tendermint.abci.RequestLoadSnapshotChunk = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.tendermint.abci.RequestLoadSnapshotChunk, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.tendermint.abci.RequestLoadSnapshotChunk.displayName = 'proto.tendermint.abci.RequestLoadSnapshotChunk';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -3393,12 +3167,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.tendermint.abci.RequestLoadSnapshotChunk.prototype.toObject = function(opt_includeInstance) {
-  return proto.tendermint.abci.RequestLoadSnapshotChunk.toObject(opt_includeInstance, this);
-};
+  proto.tendermint.abci.RequestLoadSnapshotChunk.prototype.toObject = function (opt_includeInstance) {
+    return proto.tendermint.abci.RequestLoadSnapshotChunk.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -3407,32 +3180,31 @@ proto.tendermint.abci.RequestLoadSnapshotChunk.prototype.toObject = function(opt
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.RequestLoadSnapshotChunk.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    height: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    format: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    chunk: jspb.Message.getFieldWithDefault(msg, 3, 0)
+  proto.tendermint.abci.RequestLoadSnapshotChunk.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        height: jspb.Message.getFieldWithDefault(msg, 1, 0),
+        format: jspb.Message.getFieldWithDefault(msg, 2, 0),
+        chunk: jspb.Message.getFieldWithDefault(msg, 3, 0),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.abci.RequestLoadSnapshotChunk}
  */
-proto.tendermint.abci.RequestLoadSnapshotChunk.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.tendermint.abci.RequestLoadSnapshotChunk;
+proto.tendermint.abci.RequestLoadSnapshotChunk.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.tendermint.abci.RequestLoadSnapshotChunk();
   return proto.tendermint.abci.RequestLoadSnapshotChunk.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -3441,44 +3213,42 @@ proto.tendermint.abci.RequestLoadSnapshotChunk.deserializeBinary = function(byte
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.abci.RequestLoadSnapshotChunk}
  */
-proto.tendermint.abci.RequestLoadSnapshotChunk.deserializeBinaryFromReader = function(msg, reader) {
+proto.tendermint.abci.RequestLoadSnapshotChunk.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {number} */ (reader.readUint64());
-      msg.setHeight(value);
-      break;
-    case 2:
-      var value = /** @type {number} */ (reader.readUint32());
-      msg.setFormat(value);
-      break;
-    case 3:
-      var value = /** @type {number} */ (reader.readUint32());
-      msg.setChunk(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {number} */ (reader.readUint64());
+        msg.setHeight(value);
+        break;
+      case 2:
+        var value = /** @type {number} */ (reader.readUint32());
+        msg.setFormat(value);
+        break;
+      case 3:
+        var value = /** @type {number} */ (reader.readUint32());
+        msg.setChunk(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.RequestLoadSnapshotChunk.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.tendermint.abci.RequestLoadSnapshotChunk.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.tendermint.abci.RequestLoadSnapshotChunk.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -3487,77 +3257,69 @@ proto.tendermint.abci.RequestLoadSnapshotChunk.prototype.serializeBinary = funct
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.RequestLoadSnapshotChunk.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.tendermint.abci.RequestLoadSnapshotChunk.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getHeight();
   if (f !== 0) {
     writer.writeUint64(
       1,
-      f
+      f,
     );
   }
   f = message.getFormat();
   if (f !== 0) {
     writer.writeUint32(
       2,
-      f
+      f,
     );
   }
   f = message.getChunk();
   if (f !== 0) {
     writer.writeUint32(
       3,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional uint64 height = 1;
  * @return {number}
  */
-proto.tendermint.abci.RequestLoadSnapshotChunk.prototype.getHeight = function() {
+proto.tendermint.abci.RequestLoadSnapshotChunk.prototype.getHeight = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
-
 /** @param {number} value */
-proto.tendermint.abci.RequestLoadSnapshotChunk.prototype.setHeight = function(value) {
+proto.tendermint.abci.RequestLoadSnapshotChunk.prototype.setHeight = function (value) {
   jspb.Message.setProto3IntField(this, 1, value);
 };
-
 
 /**
  * optional uint32 format = 2;
  * @return {number}
  */
-proto.tendermint.abci.RequestLoadSnapshotChunk.prototype.getFormat = function() {
+proto.tendermint.abci.RequestLoadSnapshotChunk.prototype.getFormat = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
-
 /** @param {number} value */
-proto.tendermint.abci.RequestLoadSnapshotChunk.prototype.setFormat = function(value) {
+proto.tendermint.abci.RequestLoadSnapshotChunk.prototype.setFormat = function (value) {
   jspb.Message.setProto3IntField(this, 2, value);
 };
-
 
 /**
  * optional uint32 chunk = 3;
  * @return {number}
  */
-proto.tendermint.abci.RequestLoadSnapshotChunk.prototype.getChunk = function() {
+proto.tendermint.abci.RequestLoadSnapshotChunk.prototype.getChunk = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
-
 /** @param {number} value */
-proto.tendermint.abci.RequestLoadSnapshotChunk.prototype.setChunk = function(value) {
+proto.tendermint.abci.RequestLoadSnapshotChunk.prototype.setChunk = function (value) {
   jspb.Message.setProto3IntField(this, 3, value);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -3569,14 +3331,13 @@ proto.tendermint.abci.RequestLoadSnapshotChunk.prototype.setChunk = function(val
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.abci.RequestApplySnapshotChunk = function(opt_data) {
+proto.tendermint.abci.RequestApplySnapshotChunk = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.tendermint.abci.RequestApplySnapshotChunk, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.tendermint.abci.RequestApplySnapshotChunk.displayName = 'proto.tendermint.abci.RequestApplySnapshotChunk';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -3589,12 +3350,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.tendermint.abci.RequestApplySnapshotChunk.prototype.toObject = function(opt_includeInstance) {
-  return proto.tendermint.abci.RequestApplySnapshotChunk.toObject(opt_includeInstance, this);
-};
+  proto.tendermint.abci.RequestApplySnapshotChunk.prototype.toObject = function (opt_includeInstance) {
+    return proto.tendermint.abci.RequestApplySnapshotChunk.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -3603,32 +3363,31 @@ proto.tendermint.abci.RequestApplySnapshotChunk.prototype.toObject = function(op
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.RequestApplySnapshotChunk.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    index: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    chunk: msg.getChunk_asB64(),
-    sender: jspb.Message.getFieldWithDefault(msg, 3, "")
+  proto.tendermint.abci.RequestApplySnapshotChunk.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        index: jspb.Message.getFieldWithDefault(msg, 1, 0),
+        chunk: msg.getChunk_asB64(),
+        sender: jspb.Message.getFieldWithDefault(msg, 3, ''),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.abci.RequestApplySnapshotChunk}
  */
-proto.tendermint.abci.RequestApplySnapshotChunk.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.tendermint.abci.RequestApplySnapshotChunk;
+proto.tendermint.abci.RequestApplySnapshotChunk.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.tendermint.abci.RequestApplySnapshotChunk();
   return proto.tendermint.abci.RequestApplySnapshotChunk.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -3637,44 +3396,42 @@ proto.tendermint.abci.RequestApplySnapshotChunk.deserializeBinary = function(byt
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.abci.RequestApplySnapshotChunk}
  */
-proto.tendermint.abci.RequestApplySnapshotChunk.deserializeBinaryFromReader = function(msg, reader) {
+proto.tendermint.abci.RequestApplySnapshotChunk.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {number} */ (reader.readUint32());
-      msg.setIndex(value);
-      break;
-    case 2:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setChunk(value);
-      break;
-    case 3:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setSender(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {number} */ (reader.readUint32());
+        msg.setIndex(value);
+        break;
+      case 2:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.setChunk(value);
+        break;
+      case 3:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setSender(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.RequestApplySnapshotChunk.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.tendermint.abci.RequestApplySnapshotChunk.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.tendermint.abci.RequestApplySnapshotChunk.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -3683,66 +3440,62 @@ proto.tendermint.abci.RequestApplySnapshotChunk.prototype.serializeBinary = func
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.RequestApplySnapshotChunk.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.tendermint.abci.RequestApplySnapshotChunk.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getIndex();
   if (f !== 0) {
     writer.writeUint32(
       1,
-      f
+      f,
     );
   }
   f = message.getChunk_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       2,
-      f
+      f,
     );
   }
   f = message.getSender();
   if (f.length > 0) {
     writer.writeString(
       3,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional uint32 index = 1;
  * @return {number}
  */
-proto.tendermint.abci.RequestApplySnapshotChunk.prototype.getIndex = function() {
+proto.tendermint.abci.RequestApplySnapshotChunk.prototype.getIndex = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
-
 /** @param {number} value */
-proto.tendermint.abci.RequestApplySnapshotChunk.prototype.setIndex = function(value) {
+proto.tendermint.abci.RequestApplySnapshotChunk.prototype.setIndex = function (value) {
   jspb.Message.setProto3IntField(this, 1, value);
 };
-
 
 /**
  * optional bytes chunk = 2;
  * @return {!(string|Uint8Array)}
  */
-proto.tendermint.abci.RequestApplySnapshotChunk.prototype.getChunk = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+proto.tendermint.abci.RequestApplySnapshotChunk.prototype.getChunk = function () {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
 };
-
 
 /**
  * optional bytes chunk = 2;
  * This is a type-conversion wrapper around `getChunk()`
  * @return {string}
  */
-proto.tendermint.abci.RequestApplySnapshotChunk.prototype.getChunk_asB64 = function() {
+proto.tendermint.abci.RequestApplySnapshotChunk.prototype.getChunk_asB64 = function () {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getChunk()));
+    this.getChunk(),
+  ));
 };
-
 
 /**
  * optional bytes chunk = 2;
@@ -3751,33 +3504,29 @@ proto.tendermint.abci.RequestApplySnapshotChunk.prototype.getChunk_asB64 = funct
  * This is a type-conversion wrapper around `getChunk()`
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.RequestApplySnapshotChunk.prototype.getChunk_asU8 = function() {
+proto.tendermint.abci.RequestApplySnapshotChunk.prototype.getChunk_asU8 = function () {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getChunk()));
+    this.getChunk(),
+  ));
 };
-
 
 /** @param {!(string|Uint8Array)} value */
-proto.tendermint.abci.RequestApplySnapshotChunk.prototype.setChunk = function(value) {
+proto.tendermint.abci.RequestApplySnapshotChunk.prototype.setChunk = function (value) {
   jspb.Message.setProto3BytesField(this, 2, value);
 };
-
 
 /**
  * optional string sender = 3;
  * @return {string}
  */
-proto.tendermint.abci.RequestApplySnapshotChunk.prototype.getSender = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+proto.tendermint.abci.RequestApplySnapshotChunk.prototype.getSender = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ''));
 };
-
 
 /** @param {string} value */
-proto.tendermint.abci.RequestApplySnapshotChunk.prototype.setSender = function(value) {
+proto.tendermint.abci.RequestApplySnapshotChunk.prototype.setSender = function (value) {
   jspb.Message.setProto3StringField(this, 3, value);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -3789,7 +3538,7 @@ proto.tendermint.abci.RequestApplySnapshotChunk.prototype.setSender = function(v
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.abci.Response = function(opt_data) {
+proto.tendermint.abci.Response = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, proto.tendermint.abci.Response.oneofGroups_);
 };
 goog.inherits(proto.tendermint.abci.Response, jspb.Message);
@@ -3804,7 +3553,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<!Array<number>>}
  * @const
  */
-proto.tendermint.abci.Response.oneofGroups_ = [[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]];
+proto.tendermint.abci.Response.oneofGroups_ = [[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]];
 
 /**
  * @enum {number}
@@ -3826,17 +3575,15 @@ proto.tendermint.abci.Response.ValueCase = {
   LIST_SNAPSHOTS: 13,
   OFFER_SNAPSHOT: 14,
   LOAD_SNAPSHOT_CHUNK: 15,
-  APPLY_SNAPSHOT_CHUNK: 16
+  APPLY_SNAPSHOT_CHUNK: 16,
 };
 
 /**
  * @return {proto.tendermint.abci.Response.ValueCase}
  */
-proto.tendermint.abci.Response.prototype.getValueCase = function() {
+proto.tendermint.abci.Response.prototype.getValueCase = function () {
   return /** @type {proto.tendermint.abci.Response.ValueCase} */(jspb.Message.computeOneofCase(this, proto.tendermint.abci.Response.oneofGroups_[0]));
 };
-
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -3849,12 +3596,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.tendermint.abci.Response.prototype.toObject = function(opt_includeInstance) {
-  return proto.tendermint.abci.Response.toObject(opt_includeInstance, this);
-};
+  proto.tendermint.abci.Response.prototype.toObject = function (opt_includeInstance) {
+    return proto.tendermint.abci.Response.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -3863,45 +3609,44 @@ proto.tendermint.abci.Response.prototype.toObject = function(opt_includeInstance
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.Response.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    exception: (f = msg.getException()) && proto.tendermint.abci.ResponseException.toObject(includeInstance, f),
-    echo: (f = msg.getEcho()) && proto.tendermint.abci.ResponseEcho.toObject(includeInstance, f),
-    flush: (f = msg.getFlush()) && proto.tendermint.abci.ResponseFlush.toObject(includeInstance, f),
-    info: (f = msg.getInfo()) && proto.tendermint.abci.ResponseInfo.toObject(includeInstance, f),
-    setOption: (f = msg.getSetOption()) && proto.tendermint.abci.ResponseSetOption.toObject(includeInstance, f),
-    initChain: (f = msg.getInitChain()) && proto.tendermint.abci.ResponseInitChain.toObject(includeInstance, f),
-    query: (f = msg.getQuery()) && proto.tendermint.abci.ResponseQuery.toObject(includeInstance, f),
-    beginBlock: (f = msg.getBeginBlock()) && proto.tendermint.abci.ResponseBeginBlock.toObject(includeInstance, f),
-    checkTx: (f = msg.getCheckTx()) && proto.tendermint.abci.ResponseCheckTx.toObject(includeInstance, f),
-    deliverTx: (f = msg.getDeliverTx()) && proto.tendermint.abci.ResponseDeliverTx.toObject(includeInstance, f),
-    endBlock: (f = msg.getEndBlock()) && proto.tendermint.abci.ResponseEndBlock.toObject(includeInstance, f),
-    commit: (f = msg.getCommit()) && proto.tendermint.abci.ResponseCommit.toObject(includeInstance, f),
-    listSnapshots: (f = msg.getListSnapshots()) && proto.tendermint.abci.ResponseListSnapshots.toObject(includeInstance, f),
-    offerSnapshot: (f = msg.getOfferSnapshot()) && proto.tendermint.abci.ResponseOfferSnapshot.toObject(includeInstance, f),
-    loadSnapshotChunk: (f = msg.getLoadSnapshotChunk()) && proto.tendermint.abci.ResponseLoadSnapshotChunk.toObject(includeInstance, f),
-    applySnapshotChunk: (f = msg.getApplySnapshotChunk()) && proto.tendermint.abci.ResponseApplySnapshotChunk.toObject(includeInstance, f)
+  proto.tendermint.abci.Response.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        exception: (f = msg.getException()) && proto.tendermint.abci.ResponseException.toObject(includeInstance, f),
+        echo: (f = msg.getEcho()) && proto.tendermint.abci.ResponseEcho.toObject(includeInstance, f),
+        flush: (f = msg.getFlush()) && proto.tendermint.abci.ResponseFlush.toObject(includeInstance, f),
+        info: (f = msg.getInfo()) && proto.tendermint.abci.ResponseInfo.toObject(includeInstance, f),
+        setOption: (f = msg.getSetOption()) && proto.tendermint.abci.ResponseSetOption.toObject(includeInstance, f),
+        initChain: (f = msg.getInitChain()) && proto.tendermint.abci.ResponseInitChain.toObject(includeInstance, f),
+        query: (f = msg.getQuery()) && proto.tendermint.abci.ResponseQuery.toObject(includeInstance, f),
+        beginBlock: (f = msg.getBeginBlock()) && proto.tendermint.abci.ResponseBeginBlock.toObject(includeInstance, f),
+        checkTx: (f = msg.getCheckTx()) && proto.tendermint.abci.ResponseCheckTx.toObject(includeInstance, f),
+        deliverTx: (f = msg.getDeliverTx()) && proto.tendermint.abci.ResponseDeliverTx.toObject(includeInstance, f),
+        endBlock: (f = msg.getEndBlock()) && proto.tendermint.abci.ResponseEndBlock.toObject(includeInstance, f),
+        commit: (f = msg.getCommit()) && proto.tendermint.abci.ResponseCommit.toObject(includeInstance, f),
+        listSnapshots: (f = msg.getListSnapshots()) && proto.tendermint.abci.ResponseListSnapshots.toObject(includeInstance, f),
+        offerSnapshot: (f = msg.getOfferSnapshot()) && proto.tendermint.abci.ResponseOfferSnapshot.toObject(includeInstance, f),
+        loadSnapshotChunk: (f = msg.getLoadSnapshotChunk()) && proto.tendermint.abci.ResponseLoadSnapshotChunk.toObject(includeInstance, f),
+        applySnapshotChunk: (f = msg.getApplySnapshotChunk()) && proto.tendermint.abci.ResponseApplySnapshotChunk.toObject(includeInstance, f),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.abci.Response}
  */
-proto.tendermint.abci.Response.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.tendermint.abci.Response;
+proto.tendermint.abci.Response.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.tendermint.abci.Response();
   return proto.tendermint.abci.Response.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -3910,112 +3655,110 @@ proto.tendermint.abci.Response.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.abci.Response}
  */
-proto.tendermint.abci.Response.deserializeBinaryFromReader = function(msg, reader) {
+proto.tendermint.abci.Response.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = new proto.tendermint.abci.ResponseException;
-      reader.readMessage(value,proto.tendermint.abci.ResponseException.deserializeBinaryFromReader);
-      msg.setException(value);
-      break;
-    case 2:
-      var value = new proto.tendermint.abci.ResponseEcho;
-      reader.readMessage(value,proto.tendermint.abci.ResponseEcho.deserializeBinaryFromReader);
-      msg.setEcho(value);
-      break;
-    case 3:
-      var value = new proto.tendermint.abci.ResponseFlush;
-      reader.readMessage(value,proto.tendermint.abci.ResponseFlush.deserializeBinaryFromReader);
-      msg.setFlush(value);
-      break;
-    case 4:
-      var value = new proto.tendermint.abci.ResponseInfo;
-      reader.readMessage(value,proto.tendermint.abci.ResponseInfo.deserializeBinaryFromReader);
-      msg.setInfo(value);
-      break;
-    case 5:
-      var value = new proto.tendermint.abci.ResponseSetOption;
-      reader.readMessage(value,proto.tendermint.abci.ResponseSetOption.deserializeBinaryFromReader);
-      msg.setSetOption(value);
-      break;
-    case 6:
-      var value = new proto.tendermint.abci.ResponseInitChain;
-      reader.readMessage(value,proto.tendermint.abci.ResponseInitChain.deserializeBinaryFromReader);
-      msg.setInitChain(value);
-      break;
-    case 7:
-      var value = new proto.tendermint.abci.ResponseQuery;
-      reader.readMessage(value,proto.tendermint.abci.ResponseQuery.deserializeBinaryFromReader);
-      msg.setQuery(value);
-      break;
-    case 8:
-      var value = new proto.tendermint.abci.ResponseBeginBlock;
-      reader.readMessage(value,proto.tendermint.abci.ResponseBeginBlock.deserializeBinaryFromReader);
-      msg.setBeginBlock(value);
-      break;
-    case 9:
-      var value = new proto.tendermint.abci.ResponseCheckTx;
-      reader.readMessage(value,proto.tendermint.abci.ResponseCheckTx.deserializeBinaryFromReader);
-      msg.setCheckTx(value);
-      break;
-    case 10:
-      var value = new proto.tendermint.abci.ResponseDeliverTx;
-      reader.readMessage(value,proto.tendermint.abci.ResponseDeliverTx.deserializeBinaryFromReader);
-      msg.setDeliverTx(value);
-      break;
-    case 11:
-      var value = new proto.tendermint.abci.ResponseEndBlock;
-      reader.readMessage(value,proto.tendermint.abci.ResponseEndBlock.deserializeBinaryFromReader);
-      msg.setEndBlock(value);
-      break;
-    case 12:
-      var value = new proto.tendermint.abci.ResponseCommit;
-      reader.readMessage(value,proto.tendermint.abci.ResponseCommit.deserializeBinaryFromReader);
-      msg.setCommit(value);
-      break;
-    case 13:
-      var value = new proto.tendermint.abci.ResponseListSnapshots;
-      reader.readMessage(value,proto.tendermint.abci.ResponseListSnapshots.deserializeBinaryFromReader);
-      msg.setListSnapshots(value);
-      break;
-    case 14:
-      var value = new proto.tendermint.abci.ResponseOfferSnapshot;
-      reader.readMessage(value,proto.tendermint.abci.ResponseOfferSnapshot.deserializeBinaryFromReader);
-      msg.setOfferSnapshot(value);
-      break;
-    case 15:
-      var value = new proto.tendermint.abci.ResponseLoadSnapshotChunk;
-      reader.readMessage(value,proto.tendermint.abci.ResponseLoadSnapshotChunk.deserializeBinaryFromReader);
-      msg.setLoadSnapshotChunk(value);
-      break;
-    case 16:
-      var value = new proto.tendermint.abci.ResponseApplySnapshotChunk;
-      reader.readMessage(value,proto.tendermint.abci.ResponseApplySnapshotChunk.deserializeBinaryFromReader);
-      msg.setApplySnapshotChunk(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = new proto.tendermint.abci.ResponseException();
+        reader.readMessage(value, proto.tendermint.abci.ResponseException.deserializeBinaryFromReader);
+        msg.setException(value);
+        break;
+      case 2:
+        var value = new proto.tendermint.abci.ResponseEcho();
+        reader.readMessage(value, proto.tendermint.abci.ResponseEcho.deserializeBinaryFromReader);
+        msg.setEcho(value);
+        break;
+      case 3:
+        var value = new proto.tendermint.abci.ResponseFlush();
+        reader.readMessage(value, proto.tendermint.abci.ResponseFlush.deserializeBinaryFromReader);
+        msg.setFlush(value);
+        break;
+      case 4:
+        var value = new proto.tendermint.abci.ResponseInfo();
+        reader.readMessage(value, proto.tendermint.abci.ResponseInfo.deserializeBinaryFromReader);
+        msg.setInfo(value);
+        break;
+      case 5:
+        var value = new proto.tendermint.abci.ResponseSetOption();
+        reader.readMessage(value, proto.tendermint.abci.ResponseSetOption.deserializeBinaryFromReader);
+        msg.setSetOption(value);
+        break;
+      case 6:
+        var value = new proto.tendermint.abci.ResponseInitChain();
+        reader.readMessage(value, proto.tendermint.abci.ResponseInitChain.deserializeBinaryFromReader);
+        msg.setInitChain(value);
+        break;
+      case 7:
+        var value = new proto.tendermint.abci.ResponseQuery();
+        reader.readMessage(value, proto.tendermint.abci.ResponseQuery.deserializeBinaryFromReader);
+        msg.setQuery(value);
+        break;
+      case 8:
+        var value = new proto.tendermint.abci.ResponseBeginBlock();
+        reader.readMessage(value, proto.tendermint.abci.ResponseBeginBlock.deserializeBinaryFromReader);
+        msg.setBeginBlock(value);
+        break;
+      case 9:
+        var value = new proto.tendermint.abci.ResponseCheckTx();
+        reader.readMessage(value, proto.tendermint.abci.ResponseCheckTx.deserializeBinaryFromReader);
+        msg.setCheckTx(value);
+        break;
+      case 10:
+        var value = new proto.tendermint.abci.ResponseDeliverTx();
+        reader.readMessage(value, proto.tendermint.abci.ResponseDeliverTx.deserializeBinaryFromReader);
+        msg.setDeliverTx(value);
+        break;
+      case 11:
+        var value = new proto.tendermint.abci.ResponseEndBlock();
+        reader.readMessage(value, proto.tendermint.abci.ResponseEndBlock.deserializeBinaryFromReader);
+        msg.setEndBlock(value);
+        break;
+      case 12:
+        var value = new proto.tendermint.abci.ResponseCommit();
+        reader.readMessage(value, proto.tendermint.abci.ResponseCommit.deserializeBinaryFromReader);
+        msg.setCommit(value);
+        break;
+      case 13:
+        var value = new proto.tendermint.abci.ResponseListSnapshots();
+        reader.readMessage(value, proto.tendermint.abci.ResponseListSnapshots.deserializeBinaryFromReader);
+        msg.setListSnapshots(value);
+        break;
+      case 14:
+        var value = new proto.tendermint.abci.ResponseOfferSnapshot();
+        reader.readMessage(value, proto.tendermint.abci.ResponseOfferSnapshot.deserializeBinaryFromReader);
+        msg.setOfferSnapshot(value);
+        break;
+      case 15:
+        var value = new proto.tendermint.abci.ResponseLoadSnapshotChunk();
+        reader.readMessage(value, proto.tendermint.abci.ResponseLoadSnapshotChunk.deserializeBinaryFromReader);
+        msg.setLoadSnapshotChunk(value);
+        break;
+      case 16:
+        var value = new proto.tendermint.abci.ResponseApplySnapshotChunk();
+        reader.readMessage(value, proto.tendermint.abci.ResponseApplySnapshotChunk.deserializeBinaryFromReader);
+        msg.setApplySnapshotChunk(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.Response.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.tendermint.abci.Response.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.tendermint.abci.Response.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -4024,14 +3767,14 @@ proto.tendermint.abci.Response.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.Response.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.tendermint.abci.Response.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getException();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.tendermint.abci.ResponseException.serializeBinaryToWriter
+      proto.tendermint.abci.ResponseException.serializeBinaryToWriter,
     );
   }
   f = message.getEcho();
@@ -4039,7 +3782,7 @@ proto.tendermint.abci.Response.serializeBinaryToWriter = function(message, write
     writer.writeMessage(
       2,
       f,
-      proto.tendermint.abci.ResponseEcho.serializeBinaryToWriter
+      proto.tendermint.abci.ResponseEcho.serializeBinaryToWriter,
     );
   }
   f = message.getFlush();
@@ -4047,7 +3790,7 @@ proto.tendermint.abci.Response.serializeBinaryToWriter = function(message, write
     writer.writeMessage(
       3,
       f,
-      proto.tendermint.abci.ResponseFlush.serializeBinaryToWriter
+      proto.tendermint.abci.ResponseFlush.serializeBinaryToWriter,
     );
   }
   f = message.getInfo();
@@ -4055,7 +3798,7 @@ proto.tendermint.abci.Response.serializeBinaryToWriter = function(message, write
     writer.writeMessage(
       4,
       f,
-      proto.tendermint.abci.ResponseInfo.serializeBinaryToWriter
+      proto.tendermint.abci.ResponseInfo.serializeBinaryToWriter,
     );
   }
   f = message.getSetOption();
@@ -4063,7 +3806,7 @@ proto.tendermint.abci.Response.serializeBinaryToWriter = function(message, write
     writer.writeMessage(
       5,
       f,
-      proto.tendermint.abci.ResponseSetOption.serializeBinaryToWriter
+      proto.tendermint.abci.ResponseSetOption.serializeBinaryToWriter,
     );
   }
   f = message.getInitChain();
@@ -4071,7 +3814,7 @@ proto.tendermint.abci.Response.serializeBinaryToWriter = function(message, write
     writer.writeMessage(
       6,
       f,
-      proto.tendermint.abci.ResponseInitChain.serializeBinaryToWriter
+      proto.tendermint.abci.ResponseInitChain.serializeBinaryToWriter,
     );
   }
   f = message.getQuery();
@@ -4079,7 +3822,7 @@ proto.tendermint.abci.Response.serializeBinaryToWriter = function(message, write
     writer.writeMessage(
       7,
       f,
-      proto.tendermint.abci.ResponseQuery.serializeBinaryToWriter
+      proto.tendermint.abci.ResponseQuery.serializeBinaryToWriter,
     );
   }
   f = message.getBeginBlock();
@@ -4087,7 +3830,7 @@ proto.tendermint.abci.Response.serializeBinaryToWriter = function(message, write
     writer.writeMessage(
       8,
       f,
-      proto.tendermint.abci.ResponseBeginBlock.serializeBinaryToWriter
+      proto.tendermint.abci.ResponseBeginBlock.serializeBinaryToWriter,
     );
   }
   f = message.getCheckTx();
@@ -4095,7 +3838,7 @@ proto.tendermint.abci.Response.serializeBinaryToWriter = function(message, write
     writer.writeMessage(
       9,
       f,
-      proto.tendermint.abci.ResponseCheckTx.serializeBinaryToWriter
+      proto.tendermint.abci.ResponseCheckTx.serializeBinaryToWriter,
     );
   }
   f = message.getDeliverTx();
@@ -4103,7 +3846,7 @@ proto.tendermint.abci.Response.serializeBinaryToWriter = function(message, write
     writer.writeMessage(
       10,
       f,
-      proto.tendermint.abci.ResponseDeliverTx.serializeBinaryToWriter
+      proto.tendermint.abci.ResponseDeliverTx.serializeBinaryToWriter,
     );
   }
   f = message.getEndBlock();
@@ -4111,7 +3854,7 @@ proto.tendermint.abci.Response.serializeBinaryToWriter = function(message, write
     writer.writeMessage(
       11,
       f,
-      proto.tendermint.abci.ResponseEndBlock.serializeBinaryToWriter
+      proto.tendermint.abci.ResponseEndBlock.serializeBinaryToWriter,
     );
   }
   f = message.getCommit();
@@ -4119,7 +3862,7 @@ proto.tendermint.abci.Response.serializeBinaryToWriter = function(message, write
     writer.writeMessage(
       12,
       f,
-      proto.tendermint.abci.ResponseCommit.serializeBinaryToWriter
+      proto.tendermint.abci.ResponseCommit.serializeBinaryToWriter,
     );
   }
   f = message.getListSnapshots();
@@ -4127,7 +3870,7 @@ proto.tendermint.abci.Response.serializeBinaryToWriter = function(message, write
     writer.writeMessage(
       13,
       f,
-      proto.tendermint.abci.ResponseListSnapshots.serializeBinaryToWriter
+      proto.tendermint.abci.ResponseListSnapshots.serializeBinaryToWriter,
     );
   }
   f = message.getOfferSnapshot();
@@ -4135,7 +3878,7 @@ proto.tendermint.abci.Response.serializeBinaryToWriter = function(message, write
     writer.writeMessage(
       14,
       f,
-      proto.tendermint.abci.ResponseOfferSnapshot.serializeBinaryToWriter
+      proto.tendermint.abci.ResponseOfferSnapshot.serializeBinaryToWriter,
     );
   }
   f = message.getLoadSnapshotChunk();
@@ -4143,7 +3886,7 @@ proto.tendermint.abci.Response.serializeBinaryToWriter = function(message, write
     writer.writeMessage(
       15,
       f,
-      proto.tendermint.abci.ResponseLoadSnapshotChunk.serializeBinaryToWriter
+      proto.tendermint.abci.ResponseLoadSnapshotChunk.serializeBinaryToWriter,
     );
   }
   f = message.getApplySnapshotChunk();
@@ -4151,492 +3894,426 @@ proto.tendermint.abci.Response.serializeBinaryToWriter = function(message, write
     writer.writeMessage(
       16,
       f,
-      proto.tendermint.abci.ResponseApplySnapshotChunk.serializeBinaryToWriter
+      proto.tendermint.abci.ResponseApplySnapshotChunk.serializeBinaryToWriter,
     );
   }
 };
-
 
 /**
  * optional ResponseException exception = 1;
  * @return {?proto.tendermint.abci.ResponseException}
  */
-proto.tendermint.abci.Response.prototype.getException = function() {
+proto.tendermint.abci.Response.prototype.getException = function () {
   return /** @type{?proto.tendermint.abci.ResponseException} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.abci.ResponseException, 1));
 };
 
-
 /** @param {?proto.tendermint.abci.ResponseException|undefined} value */
-proto.tendermint.abci.Response.prototype.setException = function(value) {
+proto.tendermint.abci.Response.prototype.setException = function (value) {
   jspb.Message.setOneofWrapperField(this, 1, proto.tendermint.abci.Response.oneofGroups_[0], value);
 };
 
-
-proto.tendermint.abci.Response.prototype.clearException = function() {
+proto.tendermint.abci.Response.prototype.clearException = function () {
   this.setException(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.abci.Response.prototype.hasException = function() {
+proto.tendermint.abci.Response.prototype.hasException = function () {
   return jspb.Message.getField(this, 1) != null;
 };
-
 
 /**
  * optional ResponseEcho echo = 2;
  * @return {?proto.tendermint.abci.ResponseEcho}
  */
-proto.tendermint.abci.Response.prototype.getEcho = function() {
+proto.tendermint.abci.Response.prototype.getEcho = function () {
   return /** @type{?proto.tendermint.abci.ResponseEcho} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.abci.ResponseEcho, 2));
 };
 
-
 /** @param {?proto.tendermint.abci.ResponseEcho|undefined} value */
-proto.tendermint.abci.Response.prototype.setEcho = function(value) {
+proto.tendermint.abci.Response.prototype.setEcho = function (value) {
   jspb.Message.setOneofWrapperField(this, 2, proto.tendermint.abci.Response.oneofGroups_[0], value);
 };
 
-
-proto.tendermint.abci.Response.prototype.clearEcho = function() {
+proto.tendermint.abci.Response.prototype.clearEcho = function () {
   this.setEcho(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.abci.Response.prototype.hasEcho = function() {
+proto.tendermint.abci.Response.prototype.hasEcho = function () {
   return jspb.Message.getField(this, 2) != null;
 };
-
 
 /**
  * optional ResponseFlush flush = 3;
  * @return {?proto.tendermint.abci.ResponseFlush}
  */
-proto.tendermint.abci.Response.prototype.getFlush = function() {
+proto.tendermint.abci.Response.prototype.getFlush = function () {
   return /** @type{?proto.tendermint.abci.ResponseFlush} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.abci.ResponseFlush, 3));
 };
 
-
 /** @param {?proto.tendermint.abci.ResponseFlush|undefined} value */
-proto.tendermint.abci.Response.prototype.setFlush = function(value) {
+proto.tendermint.abci.Response.prototype.setFlush = function (value) {
   jspb.Message.setOneofWrapperField(this, 3, proto.tendermint.abci.Response.oneofGroups_[0], value);
 };
 
-
-proto.tendermint.abci.Response.prototype.clearFlush = function() {
+proto.tendermint.abci.Response.prototype.clearFlush = function () {
   this.setFlush(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.abci.Response.prototype.hasFlush = function() {
+proto.tendermint.abci.Response.prototype.hasFlush = function () {
   return jspb.Message.getField(this, 3) != null;
 };
-
 
 /**
  * optional ResponseInfo info = 4;
  * @return {?proto.tendermint.abci.ResponseInfo}
  */
-proto.tendermint.abci.Response.prototype.getInfo = function() {
+proto.tendermint.abci.Response.prototype.getInfo = function () {
   return /** @type{?proto.tendermint.abci.ResponseInfo} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.abci.ResponseInfo, 4));
 };
 
-
 /** @param {?proto.tendermint.abci.ResponseInfo|undefined} value */
-proto.tendermint.abci.Response.prototype.setInfo = function(value) {
+proto.tendermint.abci.Response.prototype.setInfo = function (value) {
   jspb.Message.setOneofWrapperField(this, 4, proto.tendermint.abci.Response.oneofGroups_[0], value);
 };
 
-
-proto.tendermint.abci.Response.prototype.clearInfo = function() {
+proto.tendermint.abci.Response.prototype.clearInfo = function () {
   this.setInfo(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.abci.Response.prototype.hasInfo = function() {
+proto.tendermint.abci.Response.prototype.hasInfo = function () {
   return jspb.Message.getField(this, 4) != null;
 };
-
 
 /**
  * optional ResponseSetOption set_option = 5;
  * @return {?proto.tendermint.abci.ResponseSetOption}
  */
-proto.tendermint.abci.Response.prototype.getSetOption = function() {
+proto.tendermint.abci.Response.prototype.getSetOption = function () {
   return /** @type{?proto.tendermint.abci.ResponseSetOption} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.abci.ResponseSetOption, 5));
 };
 
-
 /** @param {?proto.tendermint.abci.ResponseSetOption|undefined} value */
-proto.tendermint.abci.Response.prototype.setSetOption = function(value) {
+proto.tendermint.abci.Response.prototype.setSetOption = function (value) {
   jspb.Message.setOneofWrapperField(this, 5, proto.tendermint.abci.Response.oneofGroups_[0], value);
 };
 
-
-proto.tendermint.abci.Response.prototype.clearSetOption = function() {
+proto.tendermint.abci.Response.prototype.clearSetOption = function () {
   this.setSetOption(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.abci.Response.prototype.hasSetOption = function() {
+proto.tendermint.abci.Response.prototype.hasSetOption = function () {
   return jspb.Message.getField(this, 5) != null;
 };
-
 
 /**
  * optional ResponseInitChain init_chain = 6;
  * @return {?proto.tendermint.abci.ResponseInitChain}
  */
-proto.tendermint.abci.Response.prototype.getInitChain = function() {
+proto.tendermint.abci.Response.prototype.getInitChain = function () {
   return /** @type{?proto.tendermint.abci.ResponseInitChain} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.abci.ResponseInitChain, 6));
 };
 
-
 /** @param {?proto.tendermint.abci.ResponseInitChain|undefined} value */
-proto.tendermint.abci.Response.prototype.setInitChain = function(value) {
+proto.tendermint.abci.Response.prototype.setInitChain = function (value) {
   jspb.Message.setOneofWrapperField(this, 6, proto.tendermint.abci.Response.oneofGroups_[0], value);
 };
 
-
-proto.tendermint.abci.Response.prototype.clearInitChain = function() {
+proto.tendermint.abci.Response.prototype.clearInitChain = function () {
   this.setInitChain(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.abci.Response.prototype.hasInitChain = function() {
+proto.tendermint.abci.Response.prototype.hasInitChain = function () {
   return jspb.Message.getField(this, 6) != null;
 };
-
 
 /**
  * optional ResponseQuery query = 7;
  * @return {?proto.tendermint.abci.ResponseQuery}
  */
-proto.tendermint.abci.Response.prototype.getQuery = function() {
+proto.tendermint.abci.Response.prototype.getQuery = function () {
   return /** @type{?proto.tendermint.abci.ResponseQuery} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.abci.ResponseQuery, 7));
 };
 
-
 /** @param {?proto.tendermint.abci.ResponseQuery|undefined} value */
-proto.tendermint.abci.Response.prototype.setQuery = function(value) {
+proto.tendermint.abci.Response.prototype.setQuery = function (value) {
   jspb.Message.setOneofWrapperField(this, 7, proto.tendermint.abci.Response.oneofGroups_[0], value);
 };
 
-
-proto.tendermint.abci.Response.prototype.clearQuery = function() {
+proto.tendermint.abci.Response.prototype.clearQuery = function () {
   this.setQuery(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.abci.Response.prototype.hasQuery = function() {
+proto.tendermint.abci.Response.prototype.hasQuery = function () {
   return jspb.Message.getField(this, 7) != null;
 };
-
 
 /**
  * optional ResponseBeginBlock begin_block = 8;
  * @return {?proto.tendermint.abci.ResponseBeginBlock}
  */
-proto.tendermint.abci.Response.prototype.getBeginBlock = function() {
+proto.tendermint.abci.Response.prototype.getBeginBlock = function () {
   return /** @type{?proto.tendermint.abci.ResponseBeginBlock} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.abci.ResponseBeginBlock, 8));
 };
 
-
 /** @param {?proto.tendermint.abci.ResponseBeginBlock|undefined} value */
-proto.tendermint.abci.Response.prototype.setBeginBlock = function(value) {
+proto.tendermint.abci.Response.prototype.setBeginBlock = function (value) {
   jspb.Message.setOneofWrapperField(this, 8, proto.tendermint.abci.Response.oneofGroups_[0], value);
 };
 
-
-proto.tendermint.abci.Response.prototype.clearBeginBlock = function() {
+proto.tendermint.abci.Response.prototype.clearBeginBlock = function () {
   this.setBeginBlock(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.abci.Response.prototype.hasBeginBlock = function() {
+proto.tendermint.abci.Response.prototype.hasBeginBlock = function () {
   return jspb.Message.getField(this, 8) != null;
 };
-
 
 /**
  * optional ResponseCheckTx check_tx = 9;
  * @return {?proto.tendermint.abci.ResponseCheckTx}
  */
-proto.tendermint.abci.Response.prototype.getCheckTx = function() {
+proto.tendermint.abci.Response.prototype.getCheckTx = function () {
   return /** @type{?proto.tendermint.abci.ResponseCheckTx} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.abci.ResponseCheckTx, 9));
 };
 
-
 /** @param {?proto.tendermint.abci.ResponseCheckTx|undefined} value */
-proto.tendermint.abci.Response.prototype.setCheckTx = function(value) {
+proto.tendermint.abci.Response.prototype.setCheckTx = function (value) {
   jspb.Message.setOneofWrapperField(this, 9, proto.tendermint.abci.Response.oneofGroups_[0], value);
 };
 
-
-proto.tendermint.abci.Response.prototype.clearCheckTx = function() {
+proto.tendermint.abci.Response.prototype.clearCheckTx = function () {
   this.setCheckTx(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.abci.Response.prototype.hasCheckTx = function() {
+proto.tendermint.abci.Response.prototype.hasCheckTx = function () {
   return jspb.Message.getField(this, 9) != null;
 };
-
 
 /**
  * optional ResponseDeliverTx deliver_tx = 10;
  * @return {?proto.tendermint.abci.ResponseDeliverTx}
  */
-proto.tendermint.abci.Response.prototype.getDeliverTx = function() {
+proto.tendermint.abci.Response.prototype.getDeliverTx = function () {
   return /** @type{?proto.tendermint.abci.ResponseDeliverTx} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.abci.ResponseDeliverTx, 10));
 };
 
-
 /** @param {?proto.tendermint.abci.ResponseDeliverTx|undefined} value */
-proto.tendermint.abci.Response.prototype.setDeliverTx = function(value) {
+proto.tendermint.abci.Response.prototype.setDeliverTx = function (value) {
   jspb.Message.setOneofWrapperField(this, 10, proto.tendermint.abci.Response.oneofGroups_[0], value);
 };
 
-
-proto.tendermint.abci.Response.prototype.clearDeliverTx = function() {
+proto.tendermint.abci.Response.prototype.clearDeliverTx = function () {
   this.setDeliverTx(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.abci.Response.prototype.hasDeliverTx = function() {
+proto.tendermint.abci.Response.prototype.hasDeliverTx = function () {
   return jspb.Message.getField(this, 10) != null;
 };
-
 
 /**
  * optional ResponseEndBlock end_block = 11;
  * @return {?proto.tendermint.abci.ResponseEndBlock}
  */
-proto.tendermint.abci.Response.prototype.getEndBlock = function() {
+proto.tendermint.abci.Response.prototype.getEndBlock = function () {
   return /** @type{?proto.tendermint.abci.ResponseEndBlock} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.abci.ResponseEndBlock, 11));
 };
 
-
 /** @param {?proto.tendermint.abci.ResponseEndBlock|undefined} value */
-proto.tendermint.abci.Response.prototype.setEndBlock = function(value) {
+proto.tendermint.abci.Response.prototype.setEndBlock = function (value) {
   jspb.Message.setOneofWrapperField(this, 11, proto.tendermint.abci.Response.oneofGroups_[0], value);
 };
 
-
-proto.tendermint.abci.Response.prototype.clearEndBlock = function() {
+proto.tendermint.abci.Response.prototype.clearEndBlock = function () {
   this.setEndBlock(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.abci.Response.prototype.hasEndBlock = function() {
+proto.tendermint.abci.Response.prototype.hasEndBlock = function () {
   return jspb.Message.getField(this, 11) != null;
 };
-
 
 /**
  * optional ResponseCommit commit = 12;
  * @return {?proto.tendermint.abci.ResponseCommit}
  */
-proto.tendermint.abci.Response.prototype.getCommit = function() {
+proto.tendermint.abci.Response.prototype.getCommit = function () {
   return /** @type{?proto.tendermint.abci.ResponseCommit} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.abci.ResponseCommit, 12));
 };
 
-
 /** @param {?proto.tendermint.abci.ResponseCommit|undefined} value */
-proto.tendermint.abci.Response.prototype.setCommit = function(value) {
+proto.tendermint.abci.Response.prototype.setCommit = function (value) {
   jspb.Message.setOneofWrapperField(this, 12, proto.tendermint.abci.Response.oneofGroups_[0], value);
 };
 
-
-proto.tendermint.abci.Response.prototype.clearCommit = function() {
+proto.tendermint.abci.Response.prototype.clearCommit = function () {
   this.setCommit(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.abci.Response.prototype.hasCommit = function() {
+proto.tendermint.abci.Response.prototype.hasCommit = function () {
   return jspb.Message.getField(this, 12) != null;
 };
-
 
 /**
  * optional ResponseListSnapshots list_snapshots = 13;
  * @return {?proto.tendermint.abci.ResponseListSnapshots}
  */
-proto.tendermint.abci.Response.prototype.getListSnapshots = function() {
+proto.tendermint.abci.Response.prototype.getListSnapshots = function () {
   return /** @type{?proto.tendermint.abci.ResponseListSnapshots} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.abci.ResponseListSnapshots, 13));
 };
 
-
 /** @param {?proto.tendermint.abci.ResponseListSnapshots|undefined} value */
-proto.tendermint.abci.Response.prototype.setListSnapshots = function(value) {
+proto.tendermint.abci.Response.prototype.setListSnapshots = function (value) {
   jspb.Message.setOneofWrapperField(this, 13, proto.tendermint.abci.Response.oneofGroups_[0], value);
 };
 
-
-proto.tendermint.abci.Response.prototype.clearListSnapshots = function() {
+proto.tendermint.abci.Response.prototype.clearListSnapshots = function () {
   this.setListSnapshots(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.abci.Response.prototype.hasListSnapshots = function() {
+proto.tendermint.abci.Response.prototype.hasListSnapshots = function () {
   return jspb.Message.getField(this, 13) != null;
 };
-
 
 /**
  * optional ResponseOfferSnapshot offer_snapshot = 14;
  * @return {?proto.tendermint.abci.ResponseOfferSnapshot}
  */
-proto.tendermint.abci.Response.prototype.getOfferSnapshot = function() {
+proto.tendermint.abci.Response.prototype.getOfferSnapshot = function () {
   return /** @type{?proto.tendermint.abci.ResponseOfferSnapshot} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.abci.ResponseOfferSnapshot, 14));
 };
 
-
 /** @param {?proto.tendermint.abci.ResponseOfferSnapshot|undefined} value */
-proto.tendermint.abci.Response.prototype.setOfferSnapshot = function(value) {
+proto.tendermint.abci.Response.prototype.setOfferSnapshot = function (value) {
   jspb.Message.setOneofWrapperField(this, 14, proto.tendermint.abci.Response.oneofGroups_[0], value);
 };
 
-
-proto.tendermint.abci.Response.prototype.clearOfferSnapshot = function() {
+proto.tendermint.abci.Response.prototype.clearOfferSnapshot = function () {
   this.setOfferSnapshot(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.abci.Response.prototype.hasOfferSnapshot = function() {
+proto.tendermint.abci.Response.prototype.hasOfferSnapshot = function () {
   return jspb.Message.getField(this, 14) != null;
 };
-
 
 /**
  * optional ResponseLoadSnapshotChunk load_snapshot_chunk = 15;
  * @return {?proto.tendermint.abci.ResponseLoadSnapshotChunk}
  */
-proto.tendermint.abci.Response.prototype.getLoadSnapshotChunk = function() {
+proto.tendermint.abci.Response.prototype.getLoadSnapshotChunk = function () {
   return /** @type{?proto.tendermint.abci.ResponseLoadSnapshotChunk} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.abci.ResponseLoadSnapshotChunk, 15));
 };
 
-
 /** @param {?proto.tendermint.abci.ResponseLoadSnapshotChunk|undefined} value */
-proto.tendermint.abci.Response.prototype.setLoadSnapshotChunk = function(value) {
+proto.tendermint.abci.Response.prototype.setLoadSnapshotChunk = function (value) {
   jspb.Message.setOneofWrapperField(this, 15, proto.tendermint.abci.Response.oneofGroups_[0], value);
 };
 
-
-proto.tendermint.abci.Response.prototype.clearLoadSnapshotChunk = function() {
+proto.tendermint.abci.Response.prototype.clearLoadSnapshotChunk = function () {
   this.setLoadSnapshotChunk(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.abci.Response.prototype.hasLoadSnapshotChunk = function() {
+proto.tendermint.abci.Response.prototype.hasLoadSnapshotChunk = function () {
   return jspb.Message.getField(this, 15) != null;
 };
-
 
 /**
  * optional ResponseApplySnapshotChunk apply_snapshot_chunk = 16;
  * @return {?proto.tendermint.abci.ResponseApplySnapshotChunk}
  */
-proto.tendermint.abci.Response.prototype.getApplySnapshotChunk = function() {
+proto.tendermint.abci.Response.prototype.getApplySnapshotChunk = function () {
   return /** @type{?proto.tendermint.abci.ResponseApplySnapshotChunk} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.abci.ResponseApplySnapshotChunk, 16));
 };
 
-
 /** @param {?proto.tendermint.abci.ResponseApplySnapshotChunk|undefined} value */
-proto.tendermint.abci.Response.prototype.setApplySnapshotChunk = function(value) {
+proto.tendermint.abci.Response.prototype.setApplySnapshotChunk = function (value) {
   jspb.Message.setOneofWrapperField(this, 16, proto.tendermint.abci.Response.oneofGroups_[0], value);
 };
 
-
-proto.tendermint.abci.Response.prototype.clearApplySnapshotChunk = function() {
+proto.tendermint.abci.Response.prototype.clearApplySnapshotChunk = function () {
   this.setApplySnapshotChunk(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.abci.Response.prototype.hasApplySnapshotChunk = function() {
+proto.tendermint.abci.Response.prototype.hasApplySnapshotChunk = function () {
   return jspb.Message.getField(this, 16) != null;
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -4648,14 +4325,13 @@ proto.tendermint.abci.Response.prototype.hasApplySnapshotChunk = function() {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.abci.ResponseException = function(opt_data) {
+proto.tendermint.abci.ResponseException = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.tendermint.abci.ResponseException, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.tendermint.abci.ResponseException.displayName = 'proto.tendermint.abci.ResponseException';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -4668,12 +4344,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.tendermint.abci.ResponseException.prototype.toObject = function(opt_includeInstance) {
-  return proto.tendermint.abci.ResponseException.toObject(opt_includeInstance, this);
-};
+  proto.tendermint.abci.ResponseException.prototype.toObject = function (opt_includeInstance) {
+    return proto.tendermint.abci.ResponseException.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -4682,30 +4357,29 @@ proto.tendermint.abci.ResponseException.prototype.toObject = function(opt_includ
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.ResponseException.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    error: jspb.Message.getFieldWithDefault(msg, 1, "")
+  proto.tendermint.abci.ResponseException.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        error: jspb.Message.getFieldWithDefault(msg, 1, ''),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.abci.ResponseException}
  */
-proto.tendermint.abci.ResponseException.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.tendermint.abci.ResponseException;
+proto.tendermint.abci.ResponseException.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.tendermint.abci.ResponseException();
   return proto.tendermint.abci.ResponseException.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -4714,36 +4388,34 @@ proto.tendermint.abci.ResponseException.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.abci.ResponseException}
  */
-proto.tendermint.abci.ResponseException.deserializeBinaryFromReader = function(msg, reader) {
+proto.tendermint.abci.ResponseException.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setError(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setError(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.ResponseException.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.tendermint.abci.ResponseException.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.tendermint.abci.ResponseException.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -4752,33 +4424,29 @@ proto.tendermint.abci.ResponseException.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.ResponseException.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.tendermint.abci.ResponseException.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getError();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional string error = 1;
  * @return {string}
  */
-proto.tendermint.abci.ResponseException.prototype.getError = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.tendermint.abci.ResponseException.prototype.getError = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
 };
-
 
 /** @param {string} value */
-proto.tendermint.abci.ResponseException.prototype.setError = function(value) {
+proto.tendermint.abci.ResponseException.prototype.setError = function (value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -4790,14 +4458,13 @@ proto.tendermint.abci.ResponseException.prototype.setError = function(value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.abci.ResponseEcho = function(opt_data) {
+proto.tendermint.abci.ResponseEcho = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.tendermint.abci.ResponseEcho, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.tendermint.abci.ResponseEcho.displayName = 'proto.tendermint.abci.ResponseEcho';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -4810,12 +4477,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.tendermint.abci.ResponseEcho.prototype.toObject = function(opt_includeInstance) {
-  return proto.tendermint.abci.ResponseEcho.toObject(opt_includeInstance, this);
-};
+  proto.tendermint.abci.ResponseEcho.prototype.toObject = function (opt_includeInstance) {
+    return proto.tendermint.abci.ResponseEcho.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -4824,30 +4490,29 @@ proto.tendermint.abci.ResponseEcho.prototype.toObject = function(opt_includeInst
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.ResponseEcho.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    message: jspb.Message.getFieldWithDefault(msg, 1, "")
+  proto.tendermint.abci.ResponseEcho.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        message: jspb.Message.getFieldWithDefault(msg, 1, ''),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.abci.ResponseEcho}
  */
-proto.tendermint.abci.ResponseEcho.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.tendermint.abci.ResponseEcho;
+proto.tendermint.abci.ResponseEcho.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.tendermint.abci.ResponseEcho();
   return proto.tendermint.abci.ResponseEcho.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -4856,36 +4521,34 @@ proto.tendermint.abci.ResponseEcho.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.abci.ResponseEcho}
  */
-proto.tendermint.abci.ResponseEcho.deserializeBinaryFromReader = function(msg, reader) {
+proto.tendermint.abci.ResponseEcho.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setMessage(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setMessage(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.ResponseEcho.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.tendermint.abci.ResponseEcho.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.tendermint.abci.ResponseEcho.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -4894,33 +4557,29 @@ proto.tendermint.abci.ResponseEcho.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.ResponseEcho.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.tendermint.abci.ResponseEcho.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getMessage();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional string message = 1;
  * @return {string}
  */
-proto.tendermint.abci.ResponseEcho.prototype.getMessage = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.tendermint.abci.ResponseEcho.prototype.getMessage = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
 };
-
 
 /** @param {string} value */
-proto.tendermint.abci.ResponseEcho.prototype.setMessage = function(value) {
+proto.tendermint.abci.ResponseEcho.prototype.setMessage = function (value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -4932,14 +4591,13 @@ proto.tendermint.abci.ResponseEcho.prototype.setMessage = function(value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.abci.ResponseFlush = function(opt_data) {
+proto.tendermint.abci.ResponseFlush = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.tendermint.abci.ResponseFlush, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.tendermint.abci.ResponseFlush.displayName = 'proto.tendermint.abci.ResponseFlush';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -4952,12 +4610,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.tendermint.abci.ResponseFlush.prototype.toObject = function(opt_includeInstance) {
-  return proto.tendermint.abci.ResponseFlush.toObject(opt_includeInstance, this);
-};
+  proto.tendermint.abci.ResponseFlush.prototype.toObject = function (opt_includeInstance) {
+    return proto.tendermint.abci.ResponseFlush.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -4966,30 +4623,29 @@ proto.tendermint.abci.ResponseFlush.prototype.toObject = function(opt_includeIns
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.ResponseFlush.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  proto.tendermint.abci.ResponseFlush.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
 
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.abci.ResponseFlush}
  */
-proto.tendermint.abci.ResponseFlush.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.tendermint.abci.ResponseFlush;
+proto.tendermint.abci.ResponseFlush.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.tendermint.abci.ResponseFlush();
   return proto.tendermint.abci.ResponseFlush.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -4998,32 +4654,30 @@ proto.tendermint.abci.ResponseFlush.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.abci.ResponseFlush}
  */
-proto.tendermint.abci.ResponseFlush.deserializeBinaryFromReader = function(msg, reader) {
+proto.tendermint.abci.ResponseFlush.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    default:
-      reader.skipField();
-      break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.ResponseFlush.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.tendermint.abci.ResponseFlush.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.tendermint.abci.ResponseFlush.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -5032,11 +4686,9 @@ proto.tendermint.abci.ResponseFlush.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.ResponseFlush.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.tendermint.abci.ResponseFlush.serializeBinaryToWriter = function (message, writer) {
+  const f;
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -5048,14 +4700,13 @@ proto.tendermint.abci.ResponseFlush.serializeBinaryToWriter = function(message, 
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.abci.ResponseInfo = function(opt_data) {
+proto.tendermint.abci.ResponseInfo = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.tendermint.abci.ResponseInfo, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.tendermint.abci.ResponseInfo.displayName = 'proto.tendermint.abci.ResponseInfo';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -5068,12 +4719,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.tendermint.abci.ResponseInfo.prototype.toObject = function(opt_includeInstance) {
-  return proto.tendermint.abci.ResponseInfo.toObject(opt_includeInstance, this);
-};
+  proto.tendermint.abci.ResponseInfo.prototype.toObject = function (opt_includeInstance) {
+    return proto.tendermint.abci.ResponseInfo.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -5082,34 +4732,33 @@ proto.tendermint.abci.ResponseInfo.prototype.toObject = function(opt_includeInst
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.ResponseInfo.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    data: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    version: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    appVersion: jspb.Message.getFieldWithDefault(msg, 3, 0),
-    lastBlockHeight: jspb.Message.getFieldWithDefault(msg, 4, 0),
-    lastBlockAppHash: msg.getLastBlockAppHash_asB64()
+  proto.tendermint.abci.ResponseInfo.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        data: jspb.Message.getFieldWithDefault(msg, 1, ''),
+        version: jspb.Message.getFieldWithDefault(msg, 2, ''),
+        appVersion: jspb.Message.getFieldWithDefault(msg, 3, 0),
+        lastBlockHeight: jspb.Message.getFieldWithDefault(msg, 4, 0),
+        lastBlockAppHash: msg.getLastBlockAppHash_asB64(),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.abci.ResponseInfo}
  */
-proto.tendermint.abci.ResponseInfo.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.tendermint.abci.ResponseInfo;
+proto.tendermint.abci.ResponseInfo.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.tendermint.abci.ResponseInfo();
   return proto.tendermint.abci.ResponseInfo.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -5118,52 +4767,50 @@ proto.tendermint.abci.ResponseInfo.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.abci.ResponseInfo}
  */
-proto.tendermint.abci.ResponseInfo.deserializeBinaryFromReader = function(msg, reader) {
+proto.tendermint.abci.ResponseInfo.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setData(value);
-      break;
-    case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setVersion(value);
-      break;
-    case 3:
-      var value = /** @type {number} */ (reader.readUint64());
-      msg.setAppVersion(value);
-      break;
-    case 4:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setLastBlockHeight(value);
-      break;
-    case 5:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setLastBlockAppHash(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setData(value);
+        break;
+      case 2:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setVersion(value);
+        break;
+      case 3:
+        var value = /** @type {number} */ (reader.readUint64());
+        msg.setAppVersion(value);
+        break;
+      case 4:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setLastBlockHeight(value);
+        break;
+      case 5:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.setLastBlockAppHash(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.ResponseInfo.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.tendermint.abci.ResponseInfo.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.tendermint.abci.ResponseInfo.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -5172,125 +4819,115 @@ proto.tendermint.abci.ResponseInfo.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.ResponseInfo.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.tendermint.abci.ResponseInfo.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getData();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f
+      f,
     );
   }
   f = message.getVersion();
   if (f.length > 0) {
     writer.writeString(
       2,
-      f
+      f,
     );
   }
   f = message.getAppVersion();
   if (f !== 0) {
     writer.writeUint64(
       3,
-      f
+      f,
     );
   }
   f = message.getLastBlockHeight();
   if (f !== 0) {
     writer.writeInt64(
       4,
-      f
+      f,
     );
   }
   f = message.getLastBlockAppHash_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       5,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional string data = 1;
  * @return {string}
  */
-proto.tendermint.abci.ResponseInfo.prototype.getData = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.tendermint.abci.ResponseInfo.prototype.getData = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
 };
-
 
 /** @param {string} value */
-proto.tendermint.abci.ResponseInfo.prototype.setData = function(value) {
+proto.tendermint.abci.ResponseInfo.prototype.setData = function (value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
-
 
 /**
  * optional string version = 2;
  * @return {string}
  */
-proto.tendermint.abci.ResponseInfo.prototype.getVersion = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+proto.tendermint.abci.ResponseInfo.prototype.getVersion = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
 };
-
 
 /** @param {string} value */
-proto.tendermint.abci.ResponseInfo.prototype.setVersion = function(value) {
+proto.tendermint.abci.ResponseInfo.prototype.setVersion = function (value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
-
 
 /**
  * optional uint64 app_version = 3;
  * @return {number}
  */
-proto.tendermint.abci.ResponseInfo.prototype.getAppVersion = function() {
+proto.tendermint.abci.ResponseInfo.prototype.getAppVersion = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
-
 /** @param {number} value */
-proto.tendermint.abci.ResponseInfo.prototype.setAppVersion = function(value) {
+proto.tendermint.abci.ResponseInfo.prototype.setAppVersion = function (value) {
   jspb.Message.setProto3IntField(this, 3, value);
 };
-
 
 /**
  * optional int64 last_block_height = 4;
  * @return {number}
  */
-proto.tendermint.abci.ResponseInfo.prototype.getLastBlockHeight = function() {
+proto.tendermint.abci.ResponseInfo.prototype.getLastBlockHeight = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
 };
 
-
 /** @param {number} value */
-proto.tendermint.abci.ResponseInfo.prototype.setLastBlockHeight = function(value) {
+proto.tendermint.abci.ResponseInfo.prototype.setLastBlockHeight = function (value) {
   jspb.Message.setProto3IntField(this, 4, value);
 };
-
 
 /**
  * optional bytes last_block_app_hash = 5;
  * @return {!(string|Uint8Array)}
  */
-proto.tendermint.abci.ResponseInfo.prototype.getLastBlockAppHash = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
+proto.tendermint.abci.ResponseInfo.prototype.getLastBlockAppHash = function () {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 5, ''));
 };
-
 
 /**
  * optional bytes last_block_app_hash = 5;
  * This is a type-conversion wrapper around `getLastBlockAppHash()`
  * @return {string}
  */
-proto.tendermint.abci.ResponseInfo.prototype.getLastBlockAppHash_asB64 = function() {
+proto.tendermint.abci.ResponseInfo.prototype.getLastBlockAppHash_asB64 = function () {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getLastBlockAppHash()));
+    this.getLastBlockAppHash(),
+  ));
 };
-
 
 /**
  * optional bytes last_block_app_hash = 5;
@@ -5299,18 +4936,16 @@ proto.tendermint.abci.ResponseInfo.prototype.getLastBlockAppHash_asB64 = functio
  * This is a type-conversion wrapper around `getLastBlockAppHash()`
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.ResponseInfo.prototype.getLastBlockAppHash_asU8 = function() {
+proto.tendermint.abci.ResponseInfo.prototype.getLastBlockAppHash_asU8 = function () {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getLastBlockAppHash()));
+    this.getLastBlockAppHash(),
+  ));
 };
-
 
 /** @param {!(string|Uint8Array)} value */
-proto.tendermint.abci.ResponseInfo.prototype.setLastBlockAppHash = function(value) {
+proto.tendermint.abci.ResponseInfo.prototype.setLastBlockAppHash = function (value) {
   jspb.Message.setProto3BytesField(this, 5, value);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -5322,14 +4957,13 @@ proto.tendermint.abci.ResponseInfo.prototype.setLastBlockAppHash = function(valu
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.abci.ResponseSetOption = function(opt_data) {
+proto.tendermint.abci.ResponseSetOption = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.tendermint.abci.ResponseSetOption, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.tendermint.abci.ResponseSetOption.displayName = 'proto.tendermint.abci.ResponseSetOption';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -5342,12 +4976,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.tendermint.abci.ResponseSetOption.prototype.toObject = function(opt_includeInstance) {
-  return proto.tendermint.abci.ResponseSetOption.toObject(opt_includeInstance, this);
-};
+  proto.tendermint.abci.ResponseSetOption.prototype.toObject = function (opt_includeInstance) {
+    return proto.tendermint.abci.ResponseSetOption.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -5356,32 +4989,31 @@ proto.tendermint.abci.ResponseSetOption.prototype.toObject = function(opt_includ
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.ResponseSetOption.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    code: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    log: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    info: jspb.Message.getFieldWithDefault(msg, 4, "")
+  proto.tendermint.abci.ResponseSetOption.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        code: jspb.Message.getFieldWithDefault(msg, 1, 0),
+        log: jspb.Message.getFieldWithDefault(msg, 3, ''),
+        info: jspb.Message.getFieldWithDefault(msg, 4, ''),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.abci.ResponseSetOption}
  */
-proto.tendermint.abci.ResponseSetOption.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.tendermint.abci.ResponseSetOption;
+proto.tendermint.abci.ResponseSetOption.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.tendermint.abci.ResponseSetOption();
   return proto.tendermint.abci.ResponseSetOption.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -5390,44 +5022,42 @@ proto.tendermint.abci.ResponseSetOption.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.abci.ResponseSetOption}
  */
-proto.tendermint.abci.ResponseSetOption.deserializeBinaryFromReader = function(msg, reader) {
+proto.tendermint.abci.ResponseSetOption.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {number} */ (reader.readUint32());
-      msg.setCode(value);
-      break;
-    case 3:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setLog(value);
-      break;
-    case 4:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setInfo(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {number} */ (reader.readUint32());
+        msg.setCode(value);
+        break;
+      case 3:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setLog(value);
+        break;
+      case 4:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setInfo(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.ResponseSetOption.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.tendermint.abci.ResponseSetOption.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.tendermint.abci.ResponseSetOption.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -5436,77 +5066,69 @@ proto.tendermint.abci.ResponseSetOption.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.ResponseSetOption.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.tendermint.abci.ResponseSetOption.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getCode();
   if (f !== 0) {
     writer.writeUint32(
       1,
-      f
+      f,
     );
   }
   f = message.getLog();
   if (f.length > 0) {
     writer.writeString(
       3,
-      f
+      f,
     );
   }
   f = message.getInfo();
   if (f.length > 0) {
     writer.writeString(
       4,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional uint32 code = 1;
  * @return {number}
  */
-proto.tendermint.abci.ResponseSetOption.prototype.getCode = function() {
+proto.tendermint.abci.ResponseSetOption.prototype.getCode = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
-
 /** @param {number} value */
-proto.tendermint.abci.ResponseSetOption.prototype.setCode = function(value) {
+proto.tendermint.abci.ResponseSetOption.prototype.setCode = function (value) {
   jspb.Message.setProto3IntField(this, 1, value);
 };
-
 
 /**
  * optional string log = 3;
  * @return {string}
  */
-proto.tendermint.abci.ResponseSetOption.prototype.getLog = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+proto.tendermint.abci.ResponseSetOption.prototype.getLog = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ''));
 };
-
 
 /** @param {string} value */
-proto.tendermint.abci.ResponseSetOption.prototype.setLog = function(value) {
+proto.tendermint.abci.ResponseSetOption.prototype.setLog = function (value) {
   jspb.Message.setProto3StringField(this, 3, value);
 };
-
 
 /**
  * optional string info = 4;
  * @return {string}
  */
-proto.tendermint.abci.ResponseSetOption.prototype.getInfo = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+proto.tendermint.abci.ResponseSetOption.prototype.getInfo = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ''));
 };
-
 
 /** @param {string} value */
-proto.tendermint.abci.ResponseSetOption.prototype.setInfo = function(value) {
+proto.tendermint.abci.ResponseSetOption.prototype.setInfo = function (value) {
   jspb.Message.setProto3StringField(this, 4, value);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -5518,7 +5140,7 @@ proto.tendermint.abci.ResponseSetOption.prototype.setInfo = function(value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.abci.ResponseInitChain = function(opt_data) {
+proto.tendermint.abci.ResponseInitChain = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.tendermint.abci.ResponseInitChain.repeatedFields_, null);
 };
 goog.inherits(proto.tendermint.abci.ResponseInitChain, jspb.Message);
@@ -5532,8 +5154,6 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.tendermint.abci.ResponseInitChain.repeatedFields_ = [2];
 
-
-
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -5545,12 +5165,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.tendermint.abci.ResponseInitChain.prototype.toObject = function(opt_includeInstance) {
-  return proto.tendermint.abci.ResponseInitChain.toObject(opt_includeInstance, this);
-};
+  proto.tendermint.abci.ResponseInitChain.prototype.toObject = function (opt_includeInstance) {
+    return proto.tendermint.abci.ResponseInitChain.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -5559,33 +5178,32 @@ proto.tendermint.abci.ResponseInitChain.prototype.toObject = function(opt_includ
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.ResponseInitChain.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    consensusParams: (f = msg.getConsensusParams()) && proto.tendermint.abci.ConsensusParams.toObject(includeInstance, f),
-    validatorsList: jspb.Message.toObjectList(msg.getValidatorsList(),
-    proto.tendermint.abci.ValidatorUpdate.toObject, includeInstance),
-    appHash: msg.getAppHash_asB64()
+  proto.tendermint.abci.ResponseInitChain.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        consensusParams: (f = msg.getConsensusParams()) && proto.tendermint.abci.ConsensusParams.toObject(includeInstance, f),
+        validatorsList: jspb.Message.toObjectList(msg.getValidatorsList(),
+          proto.tendermint.abci.ValidatorUpdate.toObject, includeInstance),
+        appHash: msg.getAppHash_asB64(),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.abci.ResponseInitChain}
  */
-proto.tendermint.abci.ResponseInitChain.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.tendermint.abci.ResponseInitChain;
+proto.tendermint.abci.ResponseInitChain.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.tendermint.abci.ResponseInitChain();
   return proto.tendermint.abci.ResponseInitChain.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -5594,46 +5212,44 @@ proto.tendermint.abci.ResponseInitChain.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.abci.ResponseInitChain}
  */
-proto.tendermint.abci.ResponseInitChain.deserializeBinaryFromReader = function(msg, reader) {
+proto.tendermint.abci.ResponseInitChain.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = new proto.tendermint.abci.ConsensusParams;
-      reader.readMessage(value,proto.tendermint.abci.ConsensusParams.deserializeBinaryFromReader);
-      msg.setConsensusParams(value);
-      break;
-    case 2:
-      var value = new proto.tendermint.abci.ValidatorUpdate;
-      reader.readMessage(value,proto.tendermint.abci.ValidatorUpdate.deserializeBinaryFromReader);
-      msg.addValidators(value);
-      break;
-    case 3:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setAppHash(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = new proto.tendermint.abci.ConsensusParams();
+        reader.readMessage(value, proto.tendermint.abci.ConsensusParams.deserializeBinaryFromReader);
+        msg.setConsensusParams(value);
+        break;
+      case 2:
+        var value = new proto.tendermint.abci.ValidatorUpdate();
+        reader.readMessage(value, proto.tendermint.abci.ValidatorUpdate.deserializeBinaryFromReader);
+        msg.addValidators(value);
+        break;
+      case 3:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.setAppHash(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.ResponseInitChain.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.tendermint.abci.ResponseInitChain.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.tendermint.abci.ResponseInitChain.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -5642,14 +5258,14 @@ proto.tendermint.abci.ResponseInitChain.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.ResponseInitChain.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.tendermint.abci.ResponseInitChain.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getConsensusParams();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.tendermint.abci.ConsensusParams.serializeBinaryToWriter
+      proto.tendermint.abci.ConsensusParams.serializeBinaryToWriter,
     );
   }
   f = message.getValidatorsList();
@@ -5657,99 +5273,89 @@ proto.tendermint.abci.ResponseInitChain.serializeBinaryToWriter = function(messa
     writer.writeRepeatedMessage(
       2,
       f,
-      proto.tendermint.abci.ValidatorUpdate.serializeBinaryToWriter
+      proto.tendermint.abci.ValidatorUpdate.serializeBinaryToWriter,
     );
   }
   f = message.getAppHash_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       3,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional ConsensusParams consensus_params = 1;
  * @return {?proto.tendermint.abci.ConsensusParams}
  */
-proto.tendermint.abci.ResponseInitChain.prototype.getConsensusParams = function() {
+proto.tendermint.abci.ResponseInitChain.prototype.getConsensusParams = function () {
   return /** @type{?proto.tendermint.abci.ConsensusParams} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.abci.ConsensusParams, 1));
 };
 
-
 /** @param {?proto.tendermint.abci.ConsensusParams|undefined} value */
-proto.tendermint.abci.ResponseInitChain.prototype.setConsensusParams = function(value) {
+proto.tendermint.abci.ResponseInitChain.prototype.setConsensusParams = function (value) {
   jspb.Message.setWrapperField(this, 1, value);
 };
 
-
-proto.tendermint.abci.ResponseInitChain.prototype.clearConsensusParams = function() {
+proto.tendermint.abci.ResponseInitChain.prototype.clearConsensusParams = function () {
   this.setConsensusParams(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.abci.ResponseInitChain.prototype.hasConsensusParams = function() {
+proto.tendermint.abci.ResponseInitChain.prototype.hasConsensusParams = function () {
   return jspb.Message.getField(this, 1) != null;
 };
-
 
 /**
  * repeated ValidatorUpdate validators = 2;
  * @return {!Array<!proto.tendermint.abci.ValidatorUpdate>}
  */
-proto.tendermint.abci.ResponseInitChain.prototype.getValidatorsList = function() {
+proto.tendermint.abci.ResponseInitChain.prototype.getValidatorsList = function () {
   return /** @type{!Array<!proto.tendermint.abci.ValidatorUpdate>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.tendermint.abci.ValidatorUpdate, 2));
 };
 
-
 /** @param {!Array<!proto.tendermint.abci.ValidatorUpdate>} value */
-proto.tendermint.abci.ResponseInitChain.prototype.setValidatorsList = function(value) {
+proto.tendermint.abci.ResponseInitChain.prototype.setValidatorsList = function (value) {
   jspb.Message.setRepeatedWrapperField(this, 2, value);
 };
-
 
 /**
  * @param {!proto.tendermint.abci.ValidatorUpdate=} opt_value
  * @param {number=} opt_index
  * @return {!proto.tendermint.abci.ValidatorUpdate}
  */
-proto.tendermint.abci.ResponseInitChain.prototype.addValidators = function(opt_value, opt_index) {
+proto.tendermint.abci.ResponseInitChain.prototype.addValidators = function (opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.tendermint.abci.ValidatorUpdate, opt_index);
 };
 
-
-proto.tendermint.abci.ResponseInitChain.prototype.clearValidatorsList = function() {
+proto.tendermint.abci.ResponseInitChain.prototype.clearValidatorsList = function () {
   this.setValidatorsList([]);
 };
-
 
 /**
  * optional bytes app_hash = 3;
  * @return {!(string|Uint8Array)}
  */
-proto.tendermint.abci.ResponseInitChain.prototype.getAppHash = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+proto.tendermint.abci.ResponseInitChain.prototype.getAppHash = function () {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 3, ''));
 };
-
 
 /**
  * optional bytes app_hash = 3;
  * This is a type-conversion wrapper around `getAppHash()`
  * @return {string}
  */
-proto.tendermint.abci.ResponseInitChain.prototype.getAppHash_asB64 = function() {
+proto.tendermint.abci.ResponseInitChain.prototype.getAppHash_asB64 = function () {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getAppHash()));
+    this.getAppHash(),
+  ));
 };
-
 
 /**
  * optional bytes app_hash = 3;
@@ -5758,18 +5364,16 @@ proto.tendermint.abci.ResponseInitChain.prototype.getAppHash_asB64 = function() 
  * This is a type-conversion wrapper around `getAppHash()`
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.ResponseInitChain.prototype.getAppHash_asU8 = function() {
+proto.tendermint.abci.ResponseInitChain.prototype.getAppHash_asU8 = function () {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getAppHash()));
+    this.getAppHash(),
+  ));
 };
-
 
 /** @param {!(string|Uint8Array)} value */
-proto.tendermint.abci.ResponseInitChain.prototype.setAppHash = function(value) {
+proto.tendermint.abci.ResponseInitChain.prototype.setAppHash = function (value) {
   jspb.Message.setProto3BytesField(this, 3, value);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -5781,14 +5385,13 @@ proto.tendermint.abci.ResponseInitChain.prototype.setAppHash = function(value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.abci.ResponseQuery = function(opt_data) {
+proto.tendermint.abci.ResponseQuery = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.tendermint.abci.ResponseQuery, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.tendermint.abci.ResponseQuery.displayName = 'proto.tendermint.abci.ResponseQuery';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -5801,12 +5404,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.tendermint.abci.ResponseQuery.prototype.toObject = function(opt_includeInstance) {
-  return proto.tendermint.abci.ResponseQuery.toObject(opt_includeInstance, this);
-};
+  proto.tendermint.abci.ResponseQuery.prototype.toObject = function (opt_includeInstance) {
+    return proto.tendermint.abci.ResponseQuery.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -5815,38 +5417,37 @@ proto.tendermint.abci.ResponseQuery.prototype.toObject = function(opt_includeIns
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.ResponseQuery.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    code: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    log: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    info: jspb.Message.getFieldWithDefault(msg, 4, ""),
-    index: jspb.Message.getFieldWithDefault(msg, 5, 0),
-    key: msg.getKey_asB64(),
-    value: msg.getValue_asB64(),
-    proofOps: (f = msg.getProofOps()) && tendermint_crypto_proof_pb.ProofOps.toObject(includeInstance, f),
-    height: jspb.Message.getFieldWithDefault(msg, 9, 0),
-    codespace: jspb.Message.getFieldWithDefault(msg, 10, "")
+  proto.tendermint.abci.ResponseQuery.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        code: jspb.Message.getFieldWithDefault(msg, 1, 0),
+        log: jspb.Message.getFieldWithDefault(msg, 3, ''),
+        info: jspb.Message.getFieldWithDefault(msg, 4, ''),
+        index: jspb.Message.getFieldWithDefault(msg, 5, 0),
+        key: msg.getKey_asB64(),
+        value: msg.getValue_asB64(),
+        proofOps: (f = msg.getProofOps()) && tendermint_crypto_proof_pb.ProofOps.toObject(includeInstance, f),
+        height: jspb.Message.getFieldWithDefault(msg, 9, 0),
+        codespace: jspb.Message.getFieldWithDefault(msg, 10, ''),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.abci.ResponseQuery}
  */
-proto.tendermint.abci.ResponseQuery.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.tendermint.abci.ResponseQuery;
+proto.tendermint.abci.ResponseQuery.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.tendermint.abci.ResponseQuery();
   return proto.tendermint.abci.ResponseQuery.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -5855,69 +5456,67 @@ proto.tendermint.abci.ResponseQuery.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.abci.ResponseQuery}
  */
-proto.tendermint.abci.ResponseQuery.deserializeBinaryFromReader = function(msg, reader) {
+proto.tendermint.abci.ResponseQuery.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {number} */ (reader.readUint32());
-      msg.setCode(value);
-      break;
-    case 3:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setLog(value);
-      break;
-    case 4:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setInfo(value);
-      break;
-    case 5:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setIndex(value);
-      break;
-    case 6:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setKey(value);
-      break;
-    case 7:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setValue(value);
-      break;
-    case 8:
-      var value = new tendermint_crypto_proof_pb.ProofOps;
-      reader.readMessage(value,tendermint_crypto_proof_pb.ProofOps.deserializeBinaryFromReader);
-      msg.setProofOps(value);
-      break;
-    case 9:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setHeight(value);
-      break;
-    case 10:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setCodespace(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {number} */ (reader.readUint32());
+        msg.setCode(value);
+        break;
+      case 3:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setLog(value);
+        break;
+      case 4:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setInfo(value);
+        break;
+      case 5:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setIndex(value);
+        break;
+      case 6:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.setKey(value);
+        break;
+      case 7:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.setValue(value);
+        break;
+      case 8:
+        var value = new tendermint_crypto_proof_pb.ProofOps();
+        reader.readMessage(value, tendermint_crypto_proof_pb.ProofOps.deserializeBinaryFromReader);
+        msg.setProofOps(value);
+        break;
+      case 9:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setHeight(value);
+        break;
+      case 10:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setCodespace(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.ResponseQuery.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.tendermint.abci.ResponseQuery.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.tendermint.abci.ResponseQuery.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -5926,48 +5525,48 @@ proto.tendermint.abci.ResponseQuery.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.ResponseQuery.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.tendermint.abci.ResponseQuery.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getCode();
   if (f !== 0) {
     writer.writeUint32(
       1,
-      f
+      f,
     );
   }
   f = message.getLog();
   if (f.length > 0) {
     writer.writeString(
       3,
-      f
+      f,
     );
   }
   f = message.getInfo();
   if (f.length > 0) {
     writer.writeString(
       4,
-      f
+      f,
     );
   }
   f = message.getIndex();
   if (f !== 0) {
     writer.writeInt64(
       5,
-      f
+      f,
     );
   }
   f = message.getKey_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       6,
-      f
+      f,
     );
   }
   f = message.getValue_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       7,
-      f
+      f,
     );
   }
   f = message.getProofOps();
@@ -5975,105 +5574,95 @@ proto.tendermint.abci.ResponseQuery.serializeBinaryToWriter = function(message, 
     writer.writeMessage(
       8,
       f,
-      tendermint_crypto_proof_pb.ProofOps.serializeBinaryToWriter
+      tendermint_crypto_proof_pb.ProofOps.serializeBinaryToWriter,
     );
   }
   f = message.getHeight();
   if (f !== 0) {
     writer.writeInt64(
       9,
-      f
+      f,
     );
   }
   f = message.getCodespace();
   if (f.length > 0) {
     writer.writeString(
       10,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional uint32 code = 1;
  * @return {number}
  */
-proto.tendermint.abci.ResponseQuery.prototype.getCode = function() {
+proto.tendermint.abci.ResponseQuery.prototype.getCode = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
-
 /** @param {number} value */
-proto.tendermint.abci.ResponseQuery.prototype.setCode = function(value) {
+proto.tendermint.abci.ResponseQuery.prototype.setCode = function (value) {
   jspb.Message.setProto3IntField(this, 1, value);
 };
-
 
 /**
  * optional string log = 3;
  * @return {string}
  */
-proto.tendermint.abci.ResponseQuery.prototype.getLog = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+proto.tendermint.abci.ResponseQuery.prototype.getLog = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ''));
 };
-
 
 /** @param {string} value */
-proto.tendermint.abci.ResponseQuery.prototype.setLog = function(value) {
+proto.tendermint.abci.ResponseQuery.prototype.setLog = function (value) {
   jspb.Message.setProto3StringField(this, 3, value);
 };
-
 
 /**
  * optional string info = 4;
  * @return {string}
  */
-proto.tendermint.abci.ResponseQuery.prototype.getInfo = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+proto.tendermint.abci.ResponseQuery.prototype.getInfo = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ''));
 };
-
 
 /** @param {string} value */
-proto.tendermint.abci.ResponseQuery.prototype.setInfo = function(value) {
+proto.tendermint.abci.ResponseQuery.prototype.setInfo = function (value) {
   jspb.Message.setProto3StringField(this, 4, value);
 };
-
 
 /**
  * optional int64 index = 5;
  * @return {number}
  */
-proto.tendermint.abci.ResponseQuery.prototype.getIndex = function() {
+proto.tendermint.abci.ResponseQuery.prototype.getIndex = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
 };
 
-
 /** @param {number} value */
-proto.tendermint.abci.ResponseQuery.prototype.setIndex = function(value) {
+proto.tendermint.abci.ResponseQuery.prototype.setIndex = function (value) {
   jspb.Message.setProto3IntField(this, 5, value);
 };
 
-
 /**
  * optional bytes key = 6;
  * @return {!(string|Uint8Array)}
  */
-proto.tendermint.abci.ResponseQuery.prototype.getKey = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
+proto.tendermint.abci.ResponseQuery.prototype.getKey = function () {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 6, ''));
 };
-
 
 /**
  * optional bytes key = 6;
  * This is a type-conversion wrapper around `getKey()`
  * @return {string}
  */
-proto.tendermint.abci.ResponseQuery.prototype.getKey_asB64 = function() {
+proto.tendermint.abci.ResponseQuery.prototype.getKey_asB64 = function () {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getKey()));
+    this.getKey(),
+  ));
 };
-
 
 /**
  * optional bytes key = 6;
@@ -6082,37 +5671,35 @@ proto.tendermint.abci.ResponseQuery.prototype.getKey_asB64 = function() {
  * This is a type-conversion wrapper around `getKey()`
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.ResponseQuery.prototype.getKey_asU8 = function() {
+proto.tendermint.abci.ResponseQuery.prototype.getKey_asU8 = function () {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getKey()));
+    this.getKey(),
+  ));
 };
 
-
 /** @param {!(string|Uint8Array)} value */
-proto.tendermint.abci.ResponseQuery.prototype.setKey = function(value) {
+proto.tendermint.abci.ResponseQuery.prototype.setKey = function (value) {
   jspb.Message.setProto3BytesField(this, 6, value);
 };
 
-
 /**
  * optional bytes value = 7;
  * @return {!(string|Uint8Array)}
  */
-proto.tendermint.abci.ResponseQuery.prototype.getValue = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 7, ""));
+proto.tendermint.abci.ResponseQuery.prototype.getValue = function () {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 7, ''));
 };
-
 
 /**
  * optional bytes value = 7;
  * This is a type-conversion wrapper around `getValue()`
  * @return {string}
  */
-proto.tendermint.abci.ResponseQuery.prototype.getValue_asB64 = function() {
+proto.tendermint.abci.ResponseQuery.prototype.getValue_asB64 = function () {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getValue()));
+    this.getValue(),
+  ));
 };
-
 
 /**
  * optional bytes value = 7;
@@ -6121,78 +5708,68 @@ proto.tendermint.abci.ResponseQuery.prototype.getValue_asB64 = function() {
  * This is a type-conversion wrapper around `getValue()`
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.ResponseQuery.prototype.getValue_asU8 = function() {
+proto.tendermint.abci.ResponseQuery.prototype.getValue_asU8 = function () {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getValue()));
+    this.getValue(),
+  ));
 };
-
 
 /** @param {!(string|Uint8Array)} value */
-proto.tendermint.abci.ResponseQuery.prototype.setValue = function(value) {
+proto.tendermint.abci.ResponseQuery.prototype.setValue = function (value) {
   jspb.Message.setProto3BytesField(this, 7, value);
 };
-
 
 /**
  * optional tendermint.crypto.ProofOps proof_ops = 8;
  * @return {?proto.tendermint.crypto.ProofOps}
  */
-proto.tendermint.abci.ResponseQuery.prototype.getProofOps = function() {
+proto.tendermint.abci.ResponseQuery.prototype.getProofOps = function () {
   return /** @type{?proto.tendermint.crypto.ProofOps} */ (
     jspb.Message.getWrapperField(this, tendermint_crypto_proof_pb.ProofOps, 8));
 };
 
-
 /** @param {?proto.tendermint.crypto.ProofOps|undefined} value */
-proto.tendermint.abci.ResponseQuery.prototype.setProofOps = function(value) {
+proto.tendermint.abci.ResponseQuery.prototype.setProofOps = function (value) {
   jspb.Message.setWrapperField(this, 8, value);
 };
 
-
-proto.tendermint.abci.ResponseQuery.prototype.clearProofOps = function() {
+proto.tendermint.abci.ResponseQuery.prototype.clearProofOps = function () {
   this.setProofOps(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.abci.ResponseQuery.prototype.hasProofOps = function() {
+proto.tendermint.abci.ResponseQuery.prototype.hasProofOps = function () {
   return jspb.Message.getField(this, 8) != null;
 };
-
 
 /**
  * optional int64 height = 9;
  * @return {number}
  */
-proto.tendermint.abci.ResponseQuery.prototype.getHeight = function() {
+proto.tendermint.abci.ResponseQuery.prototype.getHeight = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 9, 0));
 };
 
-
 /** @param {number} value */
-proto.tendermint.abci.ResponseQuery.prototype.setHeight = function(value) {
+proto.tendermint.abci.ResponseQuery.prototype.setHeight = function (value) {
   jspb.Message.setProto3IntField(this, 9, value);
 };
-
 
 /**
  * optional string codespace = 10;
  * @return {string}
  */
-proto.tendermint.abci.ResponseQuery.prototype.getCodespace = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 10, ""));
+proto.tendermint.abci.ResponseQuery.prototype.getCodespace = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 10, ''));
 };
-
 
 /** @param {string} value */
-proto.tendermint.abci.ResponseQuery.prototype.setCodespace = function(value) {
+proto.tendermint.abci.ResponseQuery.prototype.setCodespace = function (value) {
   jspb.Message.setProto3StringField(this, 10, value);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -6204,7 +5781,7 @@ proto.tendermint.abci.ResponseQuery.prototype.setCodespace = function(value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.abci.ResponseBeginBlock = function(opt_data) {
+proto.tendermint.abci.ResponseBeginBlock = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.tendermint.abci.ResponseBeginBlock.repeatedFields_, null);
 };
 goog.inherits(proto.tendermint.abci.ResponseBeginBlock, jspb.Message);
@@ -6218,8 +5795,6 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.tendermint.abci.ResponseBeginBlock.repeatedFields_ = [1];
 
-
-
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -6231,12 +5806,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.tendermint.abci.ResponseBeginBlock.prototype.toObject = function(opt_includeInstance) {
-  return proto.tendermint.abci.ResponseBeginBlock.toObject(opt_includeInstance, this);
-};
+  proto.tendermint.abci.ResponseBeginBlock.prototype.toObject = function (opt_includeInstance) {
+    return proto.tendermint.abci.ResponseBeginBlock.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -6245,31 +5819,30 @@ proto.tendermint.abci.ResponseBeginBlock.prototype.toObject = function(opt_inclu
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.ResponseBeginBlock.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    eventsList: jspb.Message.toObjectList(msg.getEventsList(),
-    proto.tendermint.abci.Event.toObject, includeInstance)
+  proto.tendermint.abci.ResponseBeginBlock.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        eventsList: jspb.Message.toObjectList(msg.getEventsList(),
+          proto.tendermint.abci.Event.toObject, includeInstance),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.abci.ResponseBeginBlock}
  */
-proto.tendermint.abci.ResponseBeginBlock.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.tendermint.abci.ResponseBeginBlock;
+proto.tendermint.abci.ResponseBeginBlock.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.tendermint.abci.ResponseBeginBlock();
   return proto.tendermint.abci.ResponseBeginBlock.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -6278,37 +5851,35 @@ proto.tendermint.abci.ResponseBeginBlock.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.abci.ResponseBeginBlock}
  */
-proto.tendermint.abci.ResponseBeginBlock.deserializeBinaryFromReader = function(msg, reader) {
+proto.tendermint.abci.ResponseBeginBlock.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = new proto.tendermint.abci.Event;
-      reader.readMessage(value,proto.tendermint.abci.Event.deserializeBinaryFromReader);
-      msg.addEvents(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = new proto.tendermint.abci.Event();
+        reader.readMessage(value, proto.tendermint.abci.Event.deserializeBinaryFromReader);
+        msg.addEvents(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.ResponseBeginBlock.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.tendermint.abci.ResponseBeginBlock.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.tendermint.abci.ResponseBeginBlock.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -6317,50 +5888,44 @@ proto.tendermint.abci.ResponseBeginBlock.prototype.serializeBinary = function() 
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.ResponseBeginBlock.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.tendermint.abci.ResponseBeginBlock.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getEventsList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       1,
       f,
-      proto.tendermint.abci.Event.serializeBinaryToWriter
+      proto.tendermint.abci.Event.serializeBinaryToWriter,
     );
   }
 };
-
 
 /**
  * repeated Event events = 1;
  * @return {!Array<!proto.tendermint.abci.Event>}
  */
-proto.tendermint.abci.ResponseBeginBlock.prototype.getEventsList = function() {
+proto.tendermint.abci.ResponseBeginBlock.prototype.getEventsList = function () {
   return /** @type{!Array<!proto.tendermint.abci.Event>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.tendermint.abci.Event, 1));
 };
 
-
 /** @param {!Array<!proto.tendermint.abci.Event>} value */
-proto.tendermint.abci.ResponseBeginBlock.prototype.setEventsList = function(value) {
+proto.tendermint.abci.ResponseBeginBlock.prototype.setEventsList = function (value) {
   jspb.Message.setRepeatedWrapperField(this, 1, value);
 };
-
 
 /**
  * @param {!proto.tendermint.abci.Event=} opt_value
  * @param {number=} opt_index
  * @return {!proto.tendermint.abci.Event}
  */
-proto.tendermint.abci.ResponseBeginBlock.prototype.addEvents = function(opt_value, opt_index) {
+proto.tendermint.abci.ResponseBeginBlock.prototype.addEvents = function (opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.tendermint.abci.Event, opt_index);
 };
 
-
-proto.tendermint.abci.ResponseBeginBlock.prototype.clearEventsList = function() {
+proto.tendermint.abci.ResponseBeginBlock.prototype.clearEventsList = function () {
   this.setEventsList([]);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -6372,7 +5937,7 @@ proto.tendermint.abci.ResponseBeginBlock.prototype.clearEventsList = function() 
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.abci.ResponseCheckTx = function(opt_data) {
+proto.tendermint.abci.ResponseCheckTx = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.tendermint.abci.ResponseCheckTx.repeatedFields_, null);
 };
 goog.inherits(proto.tendermint.abci.ResponseCheckTx, jspb.Message);
@@ -6386,8 +5951,6 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.tendermint.abci.ResponseCheckTx.repeatedFields_ = [7];
 
-
-
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -6399,12 +5962,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.tendermint.abci.ResponseCheckTx.prototype.toObject = function(opt_includeInstance) {
-  return proto.tendermint.abci.ResponseCheckTx.toObject(opt_includeInstance, this);
-};
+  proto.tendermint.abci.ResponseCheckTx.prototype.toObject = function (opt_includeInstance) {
+    return proto.tendermint.abci.ResponseCheckTx.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -6413,38 +5975,37 @@ proto.tendermint.abci.ResponseCheckTx.prototype.toObject = function(opt_includeI
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.ResponseCheckTx.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    code: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    data: msg.getData_asB64(),
-    log: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    info: jspb.Message.getFieldWithDefault(msg, 4, ""),
-    gasWanted: jspb.Message.getFieldWithDefault(msg, 5, 0),
-    gasUsed: jspb.Message.getFieldWithDefault(msg, 6, 0),
-    eventsList: jspb.Message.toObjectList(msg.getEventsList(),
-    proto.tendermint.abci.Event.toObject, includeInstance),
-    codespace: jspb.Message.getFieldWithDefault(msg, 8, "")
+  proto.tendermint.abci.ResponseCheckTx.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        code: jspb.Message.getFieldWithDefault(msg, 1, 0),
+        data: msg.getData_asB64(),
+        log: jspb.Message.getFieldWithDefault(msg, 3, ''),
+        info: jspb.Message.getFieldWithDefault(msg, 4, ''),
+        gasWanted: jspb.Message.getFieldWithDefault(msg, 5, 0),
+        gasUsed: jspb.Message.getFieldWithDefault(msg, 6, 0),
+        eventsList: jspb.Message.toObjectList(msg.getEventsList(),
+          proto.tendermint.abci.Event.toObject, includeInstance),
+        codespace: jspb.Message.getFieldWithDefault(msg, 8, ''),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.abci.ResponseCheckTx}
  */
-proto.tendermint.abci.ResponseCheckTx.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.tendermint.abci.ResponseCheckTx;
+proto.tendermint.abci.ResponseCheckTx.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.tendermint.abci.ResponseCheckTx();
   return proto.tendermint.abci.ResponseCheckTx.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -6453,65 +6014,63 @@ proto.tendermint.abci.ResponseCheckTx.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.abci.ResponseCheckTx}
  */
-proto.tendermint.abci.ResponseCheckTx.deserializeBinaryFromReader = function(msg, reader) {
+proto.tendermint.abci.ResponseCheckTx.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {number} */ (reader.readUint32());
-      msg.setCode(value);
-      break;
-    case 2:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setData(value);
-      break;
-    case 3:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setLog(value);
-      break;
-    case 4:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setInfo(value);
-      break;
-    case 5:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setGasWanted(value);
-      break;
-    case 6:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setGasUsed(value);
-      break;
-    case 7:
-      var value = new proto.tendermint.abci.Event;
-      reader.readMessage(value,proto.tendermint.abci.Event.deserializeBinaryFromReader);
-      msg.addEvents(value);
-      break;
-    case 8:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setCodespace(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {number} */ (reader.readUint32());
+        msg.setCode(value);
+        break;
+      case 2:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.setData(value);
+        break;
+      case 3:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setLog(value);
+        break;
+      case 4:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setInfo(value);
+        break;
+      case 5:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setGasWanted(value);
+        break;
+      case 6:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setGasUsed(value);
+        break;
+      case 7:
+        var value = new proto.tendermint.abci.Event();
+        reader.readMessage(value, proto.tendermint.abci.Event.deserializeBinaryFromReader);
+        msg.addEvents(value);
+        break;
+      case 8:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setCodespace(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.ResponseCheckTx.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.tendermint.abci.ResponseCheckTx.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.tendermint.abci.ResponseCheckTx.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -6520,48 +6079,48 @@ proto.tendermint.abci.ResponseCheckTx.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.ResponseCheckTx.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.tendermint.abci.ResponseCheckTx.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getCode();
   if (f !== 0) {
     writer.writeUint32(
       1,
-      f
+      f,
     );
   }
   f = message.getData_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       2,
-      f
+      f,
     );
   }
   f = message.getLog();
   if (f.length > 0) {
     writer.writeString(
       3,
-      f
+      f,
     );
   }
   f = message.getInfo();
   if (f.length > 0) {
     writer.writeString(
       4,
-      f
+      f,
     );
   }
   f = message.getGasWanted();
   if (f !== 0) {
     writer.writeInt64(
       5,
-      f
+      f,
     );
   }
   f = message.getGasUsed();
   if (f !== 0) {
     writer.writeInt64(
       6,
-      f
+      f,
     );
   }
   f = message.getEventsList();
@@ -6569,53 +6128,49 @@ proto.tendermint.abci.ResponseCheckTx.serializeBinaryToWriter = function(message
     writer.writeRepeatedMessage(
       7,
       f,
-      proto.tendermint.abci.Event.serializeBinaryToWriter
+      proto.tendermint.abci.Event.serializeBinaryToWriter,
     );
   }
   f = message.getCodespace();
   if (f.length > 0) {
     writer.writeString(
       8,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional uint32 code = 1;
  * @return {number}
  */
-proto.tendermint.abci.ResponseCheckTx.prototype.getCode = function() {
+proto.tendermint.abci.ResponseCheckTx.prototype.getCode = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
-
 /** @param {number} value */
-proto.tendermint.abci.ResponseCheckTx.prototype.setCode = function(value) {
+proto.tendermint.abci.ResponseCheckTx.prototype.setCode = function (value) {
   jspb.Message.setProto3IntField(this, 1, value);
 };
-
 
 /**
  * optional bytes data = 2;
  * @return {!(string|Uint8Array)}
  */
-proto.tendermint.abci.ResponseCheckTx.prototype.getData = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+proto.tendermint.abci.ResponseCheckTx.prototype.getData = function () {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
 };
-
 
 /**
  * optional bytes data = 2;
  * This is a type-conversion wrapper around `getData()`
  * @return {string}
  */
-proto.tendermint.abci.ResponseCheckTx.prototype.getData_asB64 = function() {
+proto.tendermint.abci.ResponseCheckTx.prototype.getData_asB64 = function () {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getData()));
+    this.getData(),
+  ));
 };
-
 
 /**
  * optional bytes data = 2;
@@ -6624,124 +6179,108 @@ proto.tendermint.abci.ResponseCheckTx.prototype.getData_asB64 = function() {
  * This is a type-conversion wrapper around `getData()`
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.ResponseCheckTx.prototype.getData_asU8 = function() {
+proto.tendermint.abci.ResponseCheckTx.prototype.getData_asU8 = function () {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getData()));
+    this.getData(),
+  ));
 };
-
 
 /** @param {!(string|Uint8Array)} value */
-proto.tendermint.abci.ResponseCheckTx.prototype.setData = function(value) {
+proto.tendermint.abci.ResponseCheckTx.prototype.setData = function (value) {
   jspb.Message.setProto3BytesField(this, 2, value);
 };
-
 
 /**
  * optional string log = 3;
  * @return {string}
  */
-proto.tendermint.abci.ResponseCheckTx.prototype.getLog = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+proto.tendermint.abci.ResponseCheckTx.prototype.getLog = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ''));
 };
-
 
 /** @param {string} value */
-proto.tendermint.abci.ResponseCheckTx.prototype.setLog = function(value) {
+proto.tendermint.abci.ResponseCheckTx.prototype.setLog = function (value) {
   jspb.Message.setProto3StringField(this, 3, value);
 };
-
 
 /**
  * optional string info = 4;
  * @return {string}
  */
-proto.tendermint.abci.ResponseCheckTx.prototype.getInfo = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+proto.tendermint.abci.ResponseCheckTx.prototype.getInfo = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ''));
 };
-
 
 /** @param {string} value */
-proto.tendermint.abci.ResponseCheckTx.prototype.setInfo = function(value) {
+proto.tendermint.abci.ResponseCheckTx.prototype.setInfo = function (value) {
   jspb.Message.setProto3StringField(this, 4, value);
 };
-
 
 /**
  * optional int64 gas_wanted = 5;
  * @return {number}
  */
-proto.tendermint.abci.ResponseCheckTx.prototype.getGasWanted = function() {
+proto.tendermint.abci.ResponseCheckTx.prototype.getGasWanted = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
 };
 
-
 /** @param {number} value */
-proto.tendermint.abci.ResponseCheckTx.prototype.setGasWanted = function(value) {
+proto.tendermint.abci.ResponseCheckTx.prototype.setGasWanted = function (value) {
   jspb.Message.setProto3IntField(this, 5, value);
 };
-
 
 /**
  * optional int64 gas_used = 6;
  * @return {number}
  */
-proto.tendermint.abci.ResponseCheckTx.prototype.getGasUsed = function() {
+proto.tendermint.abci.ResponseCheckTx.prototype.getGasUsed = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
 };
 
-
 /** @param {number} value */
-proto.tendermint.abci.ResponseCheckTx.prototype.setGasUsed = function(value) {
+proto.tendermint.abci.ResponseCheckTx.prototype.setGasUsed = function (value) {
   jspb.Message.setProto3IntField(this, 6, value);
 };
-
 
 /**
  * repeated Event events = 7;
  * @return {!Array<!proto.tendermint.abci.Event>}
  */
-proto.tendermint.abci.ResponseCheckTx.prototype.getEventsList = function() {
+proto.tendermint.abci.ResponseCheckTx.prototype.getEventsList = function () {
   return /** @type{!Array<!proto.tendermint.abci.Event>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.tendermint.abci.Event, 7));
 };
 
-
 /** @param {!Array<!proto.tendermint.abci.Event>} value */
-proto.tendermint.abci.ResponseCheckTx.prototype.setEventsList = function(value) {
+proto.tendermint.abci.ResponseCheckTx.prototype.setEventsList = function (value) {
   jspb.Message.setRepeatedWrapperField(this, 7, value);
 };
-
 
 /**
  * @param {!proto.tendermint.abci.Event=} opt_value
  * @param {number=} opt_index
  * @return {!proto.tendermint.abci.Event}
  */
-proto.tendermint.abci.ResponseCheckTx.prototype.addEvents = function(opt_value, opt_index) {
+proto.tendermint.abci.ResponseCheckTx.prototype.addEvents = function (opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 7, opt_value, proto.tendermint.abci.Event, opt_index);
 };
 
-
-proto.tendermint.abci.ResponseCheckTx.prototype.clearEventsList = function() {
+proto.tendermint.abci.ResponseCheckTx.prototype.clearEventsList = function () {
   this.setEventsList([]);
 };
-
 
 /**
  * optional string codespace = 8;
  * @return {string}
  */
-proto.tendermint.abci.ResponseCheckTx.prototype.getCodespace = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 8, ""));
+proto.tendermint.abci.ResponseCheckTx.prototype.getCodespace = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 8, ''));
 };
-
 
 /** @param {string} value */
-proto.tendermint.abci.ResponseCheckTx.prototype.setCodespace = function(value) {
+proto.tendermint.abci.ResponseCheckTx.prototype.setCodespace = function (value) {
   jspb.Message.setProto3StringField(this, 8, value);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -6753,7 +6292,7 @@ proto.tendermint.abci.ResponseCheckTx.prototype.setCodespace = function(value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.abci.ResponseDeliverTx = function(opt_data) {
+proto.tendermint.abci.ResponseDeliverTx = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.tendermint.abci.ResponseDeliverTx.repeatedFields_, null);
 };
 goog.inherits(proto.tendermint.abci.ResponseDeliverTx, jspb.Message);
@@ -6767,8 +6306,6 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.tendermint.abci.ResponseDeliverTx.repeatedFields_ = [7];
 
-
-
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -6780,12 +6317,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.tendermint.abci.ResponseDeliverTx.prototype.toObject = function(opt_includeInstance) {
-  return proto.tendermint.abci.ResponseDeliverTx.toObject(opt_includeInstance, this);
-};
+  proto.tendermint.abci.ResponseDeliverTx.prototype.toObject = function (opt_includeInstance) {
+    return proto.tendermint.abci.ResponseDeliverTx.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -6794,38 +6330,37 @@ proto.tendermint.abci.ResponseDeliverTx.prototype.toObject = function(opt_includ
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.ResponseDeliverTx.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    code: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    data: msg.getData_asB64(),
-    log: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    info: jspb.Message.getFieldWithDefault(msg, 4, ""),
-    gasWanted: jspb.Message.getFieldWithDefault(msg, 5, 0),
-    gasUsed: jspb.Message.getFieldWithDefault(msg, 6, 0),
-    eventsList: jspb.Message.toObjectList(msg.getEventsList(),
-    proto.tendermint.abci.Event.toObject, includeInstance),
-    codespace: jspb.Message.getFieldWithDefault(msg, 8, "")
+  proto.tendermint.abci.ResponseDeliverTx.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        code: jspb.Message.getFieldWithDefault(msg, 1, 0),
+        data: msg.getData_asB64(),
+        log: jspb.Message.getFieldWithDefault(msg, 3, ''),
+        info: jspb.Message.getFieldWithDefault(msg, 4, ''),
+        gasWanted: jspb.Message.getFieldWithDefault(msg, 5, 0),
+        gasUsed: jspb.Message.getFieldWithDefault(msg, 6, 0),
+        eventsList: jspb.Message.toObjectList(msg.getEventsList(),
+          proto.tendermint.abci.Event.toObject, includeInstance),
+        codespace: jspb.Message.getFieldWithDefault(msg, 8, ''),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.abci.ResponseDeliverTx}
  */
-proto.tendermint.abci.ResponseDeliverTx.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.tendermint.abci.ResponseDeliverTx;
+proto.tendermint.abci.ResponseDeliverTx.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.tendermint.abci.ResponseDeliverTx();
   return proto.tendermint.abci.ResponseDeliverTx.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -6834,65 +6369,63 @@ proto.tendermint.abci.ResponseDeliverTx.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.abci.ResponseDeliverTx}
  */
-proto.tendermint.abci.ResponseDeliverTx.deserializeBinaryFromReader = function(msg, reader) {
+proto.tendermint.abci.ResponseDeliverTx.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {number} */ (reader.readUint32());
-      msg.setCode(value);
-      break;
-    case 2:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setData(value);
-      break;
-    case 3:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setLog(value);
-      break;
-    case 4:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setInfo(value);
-      break;
-    case 5:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setGasWanted(value);
-      break;
-    case 6:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setGasUsed(value);
-      break;
-    case 7:
-      var value = new proto.tendermint.abci.Event;
-      reader.readMessage(value,proto.tendermint.abci.Event.deserializeBinaryFromReader);
-      msg.addEvents(value);
-      break;
-    case 8:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setCodespace(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {number} */ (reader.readUint32());
+        msg.setCode(value);
+        break;
+      case 2:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.setData(value);
+        break;
+      case 3:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setLog(value);
+        break;
+      case 4:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setInfo(value);
+        break;
+      case 5:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setGasWanted(value);
+        break;
+      case 6:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setGasUsed(value);
+        break;
+      case 7:
+        var value = new proto.tendermint.abci.Event();
+        reader.readMessage(value, proto.tendermint.abci.Event.deserializeBinaryFromReader);
+        msg.addEvents(value);
+        break;
+      case 8:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setCodespace(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.ResponseDeliverTx.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.tendermint.abci.ResponseDeliverTx.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.tendermint.abci.ResponseDeliverTx.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -6901,48 +6434,48 @@ proto.tendermint.abci.ResponseDeliverTx.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.ResponseDeliverTx.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.tendermint.abci.ResponseDeliverTx.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getCode();
   if (f !== 0) {
     writer.writeUint32(
       1,
-      f
+      f,
     );
   }
   f = message.getData_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       2,
-      f
+      f,
     );
   }
   f = message.getLog();
   if (f.length > 0) {
     writer.writeString(
       3,
-      f
+      f,
     );
   }
   f = message.getInfo();
   if (f.length > 0) {
     writer.writeString(
       4,
-      f
+      f,
     );
   }
   f = message.getGasWanted();
   if (f !== 0) {
     writer.writeInt64(
       5,
-      f
+      f,
     );
   }
   f = message.getGasUsed();
   if (f !== 0) {
     writer.writeInt64(
       6,
-      f
+      f,
     );
   }
   f = message.getEventsList();
@@ -6950,53 +6483,49 @@ proto.tendermint.abci.ResponseDeliverTx.serializeBinaryToWriter = function(messa
     writer.writeRepeatedMessage(
       7,
       f,
-      proto.tendermint.abci.Event.serializeBinaryToWriter
+      proto.tendermint.abci.Event.serializeBinaryToWriter,
     );
   }
   f = message.getCodespace();
   if (f.length > 0) {
     writer.writeString(
       8,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional uint32 code = 1;
  * @return {number}
  */
-proto.tendermint.abci.ResponseDeliverTx.prototype.getCode = function() {
+proto.tendermint.abci.ResponseDeliverTx.prototype.getCode = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
-
 /** @param {number} value */
-proto.tendermint.abci.ResponseDeliverTx.prototype.setCode = function(value) {
+proto.tendermint.abci.ResponseDeliverTx.prototype.setCode = function (value) {
   jspb.Message.setProto3IntField(this, 1, value);
 };
-
 
 /**
  * optional bytes data = 2;
  * @return {!(string|Uint8Array)}
  */
-proto.tendermint.abci.ResponseDeliverTx.prototype.getData = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+proto.tendermint.abci.ResponseDeliverTx.prototype.getData = function () {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
 };
-
 
 /**
  * optional bytes data = 2;
  * This is a type-conversion wrapper around `getData()`
  * @return {string}
  */
-proto.tendermint.abci.ResponseDeliverTx.prototype.getData_asB64 = function() {
+proto.tendermint.abci.ResponseDeliverTx.prototype.getData_asB64 = function () {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getData()));
+    this.getData(),
+  ));
 };
-
 
 /**
  * optional bytes data = 2;
@@ -7005,124 +6534,108 @@ proto.tendermint.abci.ResponseDeliverTx.prototype.getData_asB64 = function() {
  * This is a type-conversion wrapper around `getData()`
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.ResponseDeliverTx.prototype.getData_asU8 = function() {
+proto.tendermint.abci.ResponseDeliverTx.prototype.getData_asU8 = function () {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getData()));
+    this.getData(),
+  ));
 };
-
 
 /** @param {!(string|Uint8Array)} value */
-proto.tendermint.abci.ResponseDeliverTx.prototype.setData = function(value) {
+proto.tendermint.abci.ResponseDeliverTx.prototype.setData = function (value) {
   jspb.Message.setProto3BytesField(this, 2, value);
 };
-
 
 /**
  * optional string log = 3;
  * @return {string}
  */
-proto.tendermint.abci.ResponseDeliverTx.prototype.getLog = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+proto.tendermint.abci.ResponseDeliverTx.prototype.getLog = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ''));
 };
-
 
 /** @param {string} value */
-proto.tendermint.abci.ResponseDeliverTx.prototype.setLog = function(value) {
+proto.tendermint.abci.ResponseDeliverTx.prototype.setLog = function (value) {
   jspb.Message.setProto3StringField(this, 3, value);
 };
-
 
 /**
  * optional string info = 4;
  * @return {string}
  */
-proto.tendermint.abci.ResponseDeliverTx.prototype.getInfo = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+proto.tendermint.abci.ResponseDeliverTx.prototype.getInfo = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ''));
 };
-
 
 /** @param {string} value */
-proto.tendermint.abci.ResponseDeliverTx.prototype.setInfo = function(value) {
+proto.tendermint.abci.ResponseDeliverTx.prototype.setInfo = function (value) {
   jspb.Message.setProto3StringField(this, 4, value);
 };
-
 
 /**
  * optional int64 gas_wanted = 5;
  * @return {number}
  */
-proto.tendermint.abci.ResponseDeliverTx.prototype.getGasWanted = function() {
+proto.tendermint.abci.ResponseDeliverTx.prototype.getGasWanted = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
 };
 
-
 /** @param {number} value */
-proto.tendermint.abci.ResponseDeliverTx.prototype.setGasWanted = function(value) {
+proto.tendermint.abci.ResponseDeliverTx.prototype.setGasWanted = function (value) {
   jspb.Message.setProto3IntField(this, 5, value);
 };
-
 
 /**
  * optional int64 gas_used = 6;
  * @return {number}
  */
-proto.tendermint.abci.ResponseDeliverTx.prototype.getGasUsed = function() {
+proto.tendermint.abci.ResponseDeliverTx.prototype.getGasUsed = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
 };
 
-
 /** @param {number} value */
-proto.tendermint.abci.ResponseDeliverTx.prototype.setGasUsed = function(value) {
+proto.tendermint.abci.ResponseDeliverTx.prototype.setGasUsed = function (value) {
   jspb.Message.setProto3IntField(this, 6, value);
 };
-
 
 /**
  * repeated Event events = 7;
  * @return {!Array<!proto.tendermint.abci.Event>}
  */
-proto.tendermint.abci.ResponseDeliverTx.prototype.getEventsList = function() {
+proto.tendermint.abci.ResponseDeliverTx.prototype.getEventsList = function () {
   return /** @type{!Array<!proto.tendermint.abci.Event>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.tendermint.abci.Event, 7));
 };
 
-
 /** @param {!Array<!proto.tendermint.abci.Event>} value */
-proto.tendermint.abci.ResponseDeliverTx.prototype.setEventsList = function(value) {
+proto.tendermint.abci.ResponseDeliverTx.prototype.setEventsList = function (value) {
   jspb.Message.setRepeatedWrapperField(this, 7, value);
 };
-
 
 /**
  * @param {!proto.tendermint.abci.Event=} opt_value
  * @param {number=} opt_index
  * @return {!proto.tendermint.abci.Event}
  */
-proto.tendermint.abci.ResponseDeliverTx.prototype.addEvents = function(opt_value, opt_index) {
+proto.tendermint.abci.ResponseDeliverTx.prototype.addEvents = function (opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 7, opt_value, proto.tendermint.abci.Event, opt_index);
 };
 
-
-proto.tendermint.abci.ResponseDeliverTx.prototype.clearEventsList = function() {
+proto.tendermint.abci.ResponseDeliverTx.prototype.clearEventsList = function () {
   this.setEventsList([]);
 };
-
 
 /**
  * optional string codespace = 8;
  * @return {string}
  */
-proto.tendermint.abci.ResponseDeliverTx.prototype.getCodespace = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 8, ""));
+proto.tendermint.abci.ResponseDeliverTx.prototype.getCodespace = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 8, ''));
 };
-
 
 /** @param {string} value */
-proto.tendermint.abci.ResponseDeliverTx.prototype.setCodespace = function(value) {
+proto.tendermint.abci.ResponseDeliverTx.prototype.setCodespace = function (value) {
   jspb.Message.setProto3StringField(this, 8, value);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -7134,7 +6647,7 @@ proto.tendermint.abci.ResponseDeliverTx.prototype.setCodespace = function(value)
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.abci.ResponseEndBlock = function(opt_data) {
+proto.tendermint.abci.ResponseEndBlock = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.tendermint.abci.ResponseEndBlock.repeatedFields_, null);
 };
 goog.inherits(proto.tendermint.abci.ResponseEndBlock, jspb.Message);
@@ -7146,9 +6659,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.tendermint.abci.ResponseEndBlock.repeatedFields_ = [1,3];
-
-
+proto.tendermint.abci.ResponseEndBlock.repeatedFields_ = [1, 3];
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -7161,12 +6672,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.tendermint.abci.ResponseEndBlock.prototype.toObject = function(opt_includeInstance) {
-  return proto.tendermint.abci.ResponseEndBlock.toObject(opt_includeInstance, this);
-};
+  proto.tendermint.abci.ResponseEndBlock.prototype.toObject = function (opt_includeInstance) {
+    return proto.tendermint.abci.ResponseEndBlock.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -7175,34 +6685,33 @@ proto.tendermint.abci.ResponseEndBlock.prototype.toObject = function(opt_include
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.ResponseEndBlock.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    validatorUpdatesList: jspb.Message.toObjectList(msg.getValidatorUpdatesList(),
-    proto.tendermint.abci.ValidatorUpdate.toObject, includeInstance),
-    consensusParamUpdates: (f = msg.getConsensusParamUpdates()) && proto.tendermint.abci.ConsensusParams.toObject(includeInstance, f),
-    eventsList: jspb.Message.toObjectList(msg.getEventsList(),
-    proto.tendermint.abci.Event.toObject, includeInstance)
+  proto.tendermint.abci.ResponseEndBlock.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        validatorUpdatesList: jspb.Message.toObjectList(msg.getValidatorUpdatesList(),
+          proto.tendermint.abci.ValidatorUpdate.toObject, includeInstance),
+        consensusParamUpdates: (f = msg.getConsensusParamUpdates()) && proto.tendermint.abci.ConsensusParams.toObject(includeInstance, f),
+        eventsList: jspb.Message.toObjectList(msg.getEventsList(),
+          proto.tendermint.abci.Event.toObject, includeInstance),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.abci.ResponseEndBlock}
  */
-proto.tendermint.abci.ResponseEndBlock.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.tendermint.abci.ResponseEndBlock;
+proto.tendermint.abci.ResponseEndBlock.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.tendermint.abci.ResponseEndBlock();
   return proto.tendermint.abci.ResponseEndBlock.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -7211,47 +6720,45 @@ proto.tendermint.abci.ResponseEndBlock.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.abci.ResponseEndBlock}
  */
-proto.tendermint.abci.ResponseEndBlock.deserializeBinaryFromReader = function(msg, reader) {
+proto.tendermint.abci.ResponseEndBlock.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = new proto.tendermint.abci.ValidatorUpdate;
-      reader.readMessage(value,proto.tendermint.abci.ValidatorUpdate.deserializeBinaryFromReader);
-      msg.addValidatorUpdates(value);
-      break;
-    case 2:
-      var value = new proto.tendermint.abci.ConsensusParams;
-      reader.readMessage(value,proto.tendermint.abci.ConsensusParams.deserializeBinaryFromReader);
-      msg.setConsensusParamUpdates(value);
-      break;
-    case 3:
-      var value = new proto.tendermint.abci.Event;
-      reader.readMessage(value,proto.tendermint.abci.Event.deserializeBinaryFromReader);
-      msg.addEvents(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = new proto.tendermint.abci.ValidatorUpdate();
+        reader.readMessage(value, proto.tendermint.abci.ValidatorUpdate.deserializeBinaryFromReader);
+        msg.addValidatorUpdates(value);
+        break;
+      case 2:
+        var value = new proto.tendermint.abci.ConsensusParams();
+        reader.readMessage(value, proto.tendermint.abci.ConsensusParams.deserializeBinaryFromReader);
+        msg.setConsensusParamUpdates(value);
+        break;
+      case 3:
+        var value = new proto.tendermint.abci.Event();
+        reader.readMessage(value, proto.tendermint.abci.Event.deserializeBinaryFromReader);
+        msg.addEvents(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.ResponseEndBlock.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.tendermint.abci.ResponseEndBlock.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.tendermint.abci.ResponseEndBlock.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -7260,14 +6767,14 @@ proto.tendermint.abci.ResponseEndBlock.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.ResponseEndBlock.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.tendermint.abci.ResponseEndBlock.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getValidatorUpdatesList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       1,
       f,
-      proto.tendermint.abci.ValidatorUpdate.serializeBinaryToWriter
+      proto.tendermint.abci.ValidatorUpdate.serializeBinaryToWriter,
     );
   }
   f = message.getConsensusParamUpdates();
@@ -7275,7 +6782,7 @@ proto.tendermint.abci.ResponseEndBlock.serializeBinaryToWriter = function(messag
     writer.writeMessage(
       2,
       f,
-      proto.tendermint.abci.ConsensusParams.serializeBinaryToWriter
+      proto.tendermint.abci.ConsensusParams.serializeBinaryToWriter,
     );
   }
   f = message.getEventsList();
@@ -7283,104 +6790,90 @@ proto.tendermint.abci.ResponseEndBlock.serializeBinaryToWriter = function(messag
     writer.writeRepeatedMessage(
       3,
       f,
-      proto.tendermint.abci.Event.serializeBinaryToWriter
+      proto.tendermint.abci.Event.serializeBinaryToWriter,
     );
   }
 };
-
 
 /**
  * repeated ValidatorUpdate validator_updates = 1;
  * @return {!Array<!proto.tendermint.abci.ValidatorUpdate>}
  */
-proto.tendermint.abci.ResponseEndBlock.prototype.getValidatorUpdatesList = function() {
+proto.tendermint.abci.ResponseEndBlock.prototype.getValidatorUpdatesList = function () {
   return /** @type{!Array<!proto.tendermint.abci.ValidatorUpdate>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.tendermint.abci.ValidatorUpdate, 1));
 };
 
-
 /** @param {!Array<!proto.tendermint.abci.ValidatorUpdate>} value */
-proto.tendermint.abci.ResponseEndBlock.prototype.setValidatorUpdatesList = function(value) {
+proto.tendermint.abci.ResponseEndBlock.prototype.setValidatorUpdatesList = function (value) {
   jspb.Message.setRepeatedWrapperField(this, 1, value);
 };
-
 
 /**
  * @param {!proto.tendermint.abci.ValidatorUpdate=} opt_value
  * @param {number=} opt_index
  * @return {!proto.tendermint.abci.ValidatorUpdate}
  */
-proto.tendermint.abci.ResponseEndBlock.prototype.addValidatorUpdates = function(opt_value, opt_index) {
+proto.tendermint.abci.ResponseEndBlock.prototype.addValidatorUpdates = function (opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.tendermint.abci.ValidatorUpdate, opt_index);
 };
 
-
-proto.tendermint.abci.ResponseEndBlock.prototype.clearValidatorUpdatesList = function() {
+proto.tendermint.abci.ResponseEndBlock.prototype.clearValidatorUpdatesList = function () {
   this.setValidatorUpdatesList([]);
 };
-
 
 /**
  * optional ConsensusParams consensus_param_updates = 2;
  * @return {?proto.tendermint.abci.ConsensusParams}
  */
-proto.tendermint.abci.ResponseEndBlock.prototype.getConsensusParamUpdates = function() {
+proto.tendermint.abci.ResponseEndBlock.prototype.getConsensusParamUpdates = function () {
   return /** @type{?proto.tendermint.abci.ConsensusParams} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.abci.ConsensusParams, 2));
 };
 
-
 /** @param {?proto.tendermint.abci.ConsensusParams|undefined} value */
-proto.tendermint.abci.ResponseEndBlock.prototype.setConsensusParamUpdates = function(value) {
+proto.tendermint.abci.ResponseEndBlock.prototype.setConsensusParamUpdates = function (value) {
   jspb.Message.setWrapperField(this, 2, value);
 };
 
-
-proto.tendermint.abci.ResponseEndBlock.prototype.clearConsensusParamUpdates = function() {
+proto.tendermint.abci.ResponseEndBlock.prototype.clearConsensusParamUpdates = function () {
   this.setConsensusParamUpdates(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.abci.ResponseEndBlock.prototype.hasConsensusParamUpdates = function() {
+proto.tendermint.abci.ResponseEndBlock.prototype.hasConsensusParamUpdates = function () {
   return jspb.Message.getField(this, 2) != null;
 };
-
 
 /**
  * repeated Event events = 3;
  * @return {!Array<!proto.tendermint.abci.Event>}
  */
-proto.tendermint.abci.ResponseEndBlock.prototype.getEventsList = function() {
+proto.tendermint.abci.ResponseEndBlock.prototype.getEventsList = function () {
   return /** @type{!Array<!proto.tendermint.abci.Event>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.tendermint.abci.Event, 3));
 };
 
-
 /** @param {!Array<!proto.tendermint.abci.Event>} value */
-proto.tendermint.abci.ResponseEndBlock.prototype.setEventsList = function(value) {
+proto.tendermint.abci.ResponseEndBlock.prototype.setEventsList = function (value) {
   jspb.Message.setRepeatedWrapperField(this, 3, value);
 };
-
 
 /**
  * @param {!proto.tendermint.abci.Event=} opt_value
  * @param {number=} opt_index
  * @return {!proto.tendermint.abci.Event}
  */
-proto.tendermint.abci.ResponseEndBlock.prototype.addEvents = function(opt_value, opt_index) {
+proto.tendermint.abci.ResponseEndBlock.prototype.addEvents = function (opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 3, opt_value, proto.tendermint.abci.Event, opt_index);
 };
 
-
-proto.tendermint.abci.ResponseEndBlock.prototype.clearEventsList = function() {
+proto.tendermint.abci.ResponseEndBlock.prototype.clearEventsList = function () {
   this.setEventsList([]);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -7392,14 +6885,13 @@ proto.tendermint.abci.ResponseEndBlock.prototype.clearEventsList = function() {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.abci.ResponseCommit = function(opt_data) {
+proto.tendermint.abci.ResponseCommit = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.tendermint.abci.ResponseCommit, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.tendermint.abci.ResponseCommit.displayName = 'proto.tendermint.abci.ResponseCommit';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -7412,12 +6904,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.tendermint.abci.ResponseCommit.prototype.toObject = function(opt_includeInstance) {
-  return proto.tendermint.abci.ResponseCommit.toObject(opt_includeInstance, this);
-};
+  proto.tendermint.abci.ResponseCommit.prototype.toObject = function (opt_includeInstance) {
+    return proto.tendermint.abci.ResponseCommit.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -7426,31 +6917,30 @@ proto.tendermint.abci.ResponseCommit.prototype.toObject = function(opt_includeIn
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.ResponseCommit.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    data: msg.getData_asB64(),
-    retainHeight: jspb.Message.getFieldWithDefault(msg, 3, 0)
+  proto.tendermint.abci.ResponseCommit.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        data: msg.getData_asB64(),
+        retainHeight: jspb.Message.getFieldWithDefault(msg, 3, 0),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.abci.ResponseCommit}
  */
-proto.tendermint.abci.ResponseCommit.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.tendermint.abci.ResponseCommit;
+proto.tendermint.abci.ResponseCommit.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.tendermint.abci.ResponseCommit();
   return proto.tendermint.abci.ResponseCommit.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -7459,40 +6949,38 @@ proto.tendermint.abci.ResponseCommit.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.abci.ResponseCommit}
  */
-proto.tendermint.abci.ResponseCommit.deserializeBinaryFromReader = function(msg, reader) {
+proto.tendermint.abci.ResponseCommit.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 2:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setData(value);
-      break;
-    case 3:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setRetainHeight(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 2:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.setData(value);
+        break;
+      case 3:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setRetainHeight(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.ResponseCommit.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.tendermint.abci.ResponseCommit.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.tendermint.abci.ResponseCommit.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -7501,44 +6989,42 @@ proto.tendermint.abci.ResponseCommit.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.ResponseCommit.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.tendermint.abci.ResponseCommit.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getData_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       2,
-      f
+      f,
     );
   }
   f = message.getRetainHeight();
   if (f !== 0) {
     writer.writeInt64(
       3,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional bytes data = 2;
  * @return {!(string|Uint8Array)}
  */
-proto.tendermint.abci.ResponseCommit.prototype.getData = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+proto.tendermint.abci.ResponseCommit.prototype.getData = function () {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
 };
-
 
 /**
  * optional bytes data = 2;
  * This is a type-conversion wrapper around `getData()`
  * @return {string}
  */
-proto.tendermint.abci.ResponseCommit.prototype.getData_asB64 = function() {
+proto.tendermint.abci.ResponseCommit.prototype.getData_asB64 = function () {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getData()));
+    this.getData(),
+  ));
 };
-
 
 /**
  * optional bytes data = 2;
@@ -7547,33 +7033,29 @@ proto.tendermint.abci.ResponseCommit.prototype.getData_asB64 = function() {
  * This is a type-conversion wrapper around `getData()`
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.ResponseCommit.prototype.getData_asU8 = function() {
+proto.tendermint.abci.ResponseCommit.prototype.getData_asU8 = function () {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getData()));
+    this.getData(),
+  ));
 };
-
 
 /** @param {!(string|Uint8Array)} value */
-proto.tendermint.abci.ResponseCommit.prototype.setData = function(value) {
+proto.tendermint.abci.ResponseCommit.prototype.setData = function (value) {
   jspb.Message.setProto3BytesField(this, 2, value);
 };
-
 
 /**
  * optional int64 retain_height = 3;
  * @return {number}
  */
-proto.tendermint.abci.ResponseCommit.prototype.getRetainHeight = function() {
+proto.tendermint.abci.ResponseCommit.prototype.getRetainHeight = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
-
 /** @param {number} value */
-proto.tendermint.abci.ResponseCommit.prototype.setRetainHeight = function(value) {
+proto.tendermint.abci.ResponseCommit.prototype.setRetainHeight = function (value) {
   jspb.Message.setProto3IntField(this, 3, value);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -7585,7 +7067,7 @@ proto.tendermint.abci.ResponseCommit.prototype.setRetainHeight = function(value)
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.abci.ResponseListSnapshots = function(opt_data) {
+proto.tendermint.abci.ResponseListSnapshots = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.tendermint.abci.ResponseListSnapshots.repeatedFields_, null);
 };
 goog.inherits(proto.tendermint.abci.ResponseListSnapshots, jspb.Message);
@@ -7599,8 +7081,6 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.tendermint.abci.ResponseListSnapshots.repeatedFields_ = [1];
 
-
-
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -7612,12 +7092,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.tendermint.abci.ResponseListSnapshots.prototype.toObject = function(opt_includeInstance) {
-  return proto.tendermint.abci.ResponseListSnapshots.toObject(opt_includeInstance, this);
-};
+  proto.tendermint.abci.ResponseListSnapshots.prototype.toObject = function (opt_includeInstance) {
+    return proto.tendermint.abci.ResponseListSnapshots.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -7626,31 +7105,30 @@ proto.tendermint.abci.ResponseListSnapshots.prototype.toObject = function(opt_in
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.ResponseListSnapshots.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    snapshotsList: jspb.Message.toObjectList(msg.getSnapshotsList(),
-    proto.tendermint.abci.Snapshot.toObject, includeInstance)
+  proto.tendermint.abci.ResponseListSnapshots.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        snapshotsList: jspb.Message.toObjectList(msg.getSnapshotsList(),
+          proto.tendermint.abci.Snapshot.toObject, includeInstance),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.abci.ResponseListSnapshots}
  */
-proto.tendermint.abci.ResponseListSnapshots.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.tendermint.abci.ResponseListSnapshots;
+proto.tendermint.abci.ResponseListSnapshots.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.tendermint.abci.ResponseListSnapshots();
   return proto.tendermint.abci.ResponseListSnapshots.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -7659,37 +7137,35 @@ proto.tendermint.abci.ResponseListSnapshots.deserializeBinary = function(bytes) 
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.abci.ResponseListSnapshots}
  */
-proto.tendermint.abci.ResponseListSnapshots.deserializeBinaryFromReader = function(msg, reader) {
+proto.tendermint.abci.ResponseListSnapshots.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = new proto.tendermint.abci.Snapshot;
-      reader.readMessage(value,proto.tendermint.abci.Snapshot.deserializeBinaryFromReader);
-      msg.addSnapshots(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = new proto.tendermint.abci.Snapshot();
+        reader.readMessage(value, proto.tendermint.abci.Snapshot.deserializeBinaryFromReader);
+        msg.addSnapshots(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.ResponseListSnapshots.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.tendermint.abci.ResponseListSnapshots.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.tendermint.abci.ResponseListSnapshots.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -7698,50 +7174,44 @@ proto.tendermint.abci.ResponseListSnapshots.prototype.serializeBinary = function
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.ResponseListSnapshots.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.tendermint.abci.ResponseListSnapshots.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getSnapshotsList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       1,
       f,
-      proto.tendermint.abci.Snapshot.serializeBinaryToWriter
+      proto.tendermint.abci.Snapshot.serializeBinaryToWriter,
     );
   }
 };
-
 
 /**
  * repeated Snapshot snapshots = 1;
  * @return {!Array<!proto.tendermint.abci.Snapshot>}
  */
-proto.tendermint.abci.ResponseListSnapshots.prototype.getSnapshotsList = function() {
+proto.tendermint.abci.ResponseListSnapshots.prototype.getSnapshotsList = function () {
   return /** @type{!Array<!proto.tendermint.abci.Snapshot>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.tendermint.abci.Snapshot, 1));
 };
 
-
 /** @param {!Array<!proto.tendermint.abci.Snapshot>} value */
-proto.tendermint.abci.ResponseListSnapshots.prototype.setSnapshotsList = function(value) {
+proto.tendermint.abci.ResponseListSnapshots.prototype.setSnapshotsList = function (value) {
   jspb.Message.setRepeatedWrapperField(this, 1, value);
 };
-
 
 /**
  * @param {!proto.tendermint.abci.Snapshot=} opt_value
  * @param {number=} opt_index
  * @return {!proto.tendermint.abci.Snapshot}
  */
-proto.tendermint.abci.ResponseListSnapshots.prototype.addSnapshots = function(opt_value, opt_index) {
+proto.tendermint.abci.ResponseListSnapshots.prototype.addSnapshots = function (opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.tendermint.abci.Snapshot, opt_index);
 };
 
-
-proto.tendermint.abci.ResponseListSnapshots.prototype.clearSnapshotsList = function() {
+proto.tendermint.abci.ResponseListSnapshots.prototype.clearSnapshotsList = function () {
   this.setSnapshotsList([]);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -7753,14 +7223,13 @@ proto.tendermint.abci.ResponseListSnapshots.prototype.clearSnapshotsList = funct
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.abci.ResponseOfferSnapshot = function(opt_data) {
+proto.tendermint.abci.ResponseOfferSnapshot = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.tendermint.abci.ResponseOfferSnapshot, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.tendermint.abci.ResponseOfferSnapshot.displayName = 'proto.tendermint.abci.ResponseOfferSnapshot';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -7773,12 +7242,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.tendermint.abci.ResponseOfferSnapshot.prototype.toObject = function(opt_includeInstance) {
-  return proto.tendermint.abci.ResponseOfferSnapshot.toObject(opt_includeInstance, this);
-};
+  proto.tendermint.abci.ResponseOfferSnapshot.prototype.toObject = function (opt_includeInstance) {
+    return proto.tendermint.abci.ResponseOfferSnapshot.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -7787,30 +7255,29 @@ proto.tendermint.abci.ResponseOfferSnapshot.prototype.toObject = function(opt_in
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.ResponseOfferSnapshot.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    result: jspb.Message.getFieldWithDefault(msg, 1, 0)
+  proto.tendermint.abci.ResponseOfferSnapshot.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        result: jspb.Message.getFieldWithDefault(msg, 1, 0),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.abci.ResponseOfferSnapshot}
  */
-proto.tendermint.abci.ResponseOfferSnapshot.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.tendermint.abci.ResponseOfferSnapshot;
+proto.tendermint.abci.ResponseOfferSnapshot.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.tendermint.abci.ResponseOfferSnapshot();
   return proto.tendermint.abci.ResponseOfferSnapshot.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -7819,36 +7286,34 @@ proto.tendermint.abci.ResponseOfferSnapshot.deserializeBinary = function(bytes) 
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.abci.ResponseOfferSnapshot}
  */
-proto.tendermint.abci.ResponseOfferSnapshot.deserializeBinaryFromReader = function(msg, reader) {
+proto.tendermint.abci.ResponseOfferSnapshot.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {!proto.tendermint.abci.ResponseOfferSnapshot.Result} */ (reader.readEnum());
-      msg.setResult(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {!proto.tendermint.abci.ResponseOfferSnapshot.Result} */ (reader.readEnum());
+        msg.setResult(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.ResponseOfferSnapshot.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.tendermint.abci.ResponseOfferSnapshot.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.tendermint.abci.ResponseOfferSnapshot.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -7857,17 +7322,16 @@ proto.tendermint.abci.ResponseOfferSnapshot.prototype.serializeBinary = function
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.ResponseOfferSnapshot.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.tendermint.abci.ResponseOfferSnapshot.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getResult();
   if (f !== 0.0) {
     writer.writeEnum(
       1,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * @enum {number}
@@ -7878,24 +7342,21 @@ proto.tendermint.abci.ResponseOfferSnapshot.Result = {
   ABORT: 2,
   REJECT: 3,
   REJECT_FORMAT: 4,
-  REJECT_SENDER: 5
+  REJECT_SENDER: 5,
 };
 
 /**
  * optional Result result = 1;
  * @return {!proto.tendermint.abci.ResponseOfferSnapshot.Result}
  */
-proto.tendermint.abci.ResponseOfferSnapshot.prototype.getResult = function() {
+proto.tendermint.abci.ResponseOfferSnapshot.prototype.getResult = function () {
   return /** @type {!proto.tendermint.abci.ResponseOfferSnapshot.Result} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
-
 /** @param {!proto.tendermint.abci.ResponseOfferSnapshot.Result} value */
-proto.tendermint.abci.ResponseOfferSnapshot.prototype.setResult = function(value) {
+proto.tendermint.abci.ResponseOfferSnapshot.prototype.setResult = function (value) {
   jspb.Message.setProto3EnumField(this, 1, value);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -7907,14 +7368,13 @@ proto.tendermint.abci.ResponseOfferSnapshot.prototype.setResult = function(value
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.abci.ResponseLoadSnapshotChunk = function(opt_data) {
+proto.tendermint.abci.ResponseLoadSnapshotChunk = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.tendermint.abci.ResponseLoadSnapshotChunk, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.tendermint.abci.ResponseLoadSnapshotChunk.displayName = 'proto.tendermint.abci.ResponseLoadSnapshotChunk';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -7927,12 +7387,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.tendermint.abci.ResponseLoadSnapshotChunk.prototype.toObject = function(opt_includeInstance) {
-  return proto.tendermint.abci.ResponseLoadSnapshotChunk.toObject(opt_includeInstance, this);
-};
+  proto.tendermint.abci.ResponseLoadSnapshotChunk.prototype.toObject = function (opt_includeInstance) {
+    return proto.tendermint.abci.ResponseLoadSnapshotChunk.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -7941,30 +7400,29 @@ proto.tendermint.abci.ResponseLoadSnapshotChunk.prototype.toObject = function(op
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.ResponseLoadSnapshotChunk.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    chunk: msg.getChunk_asB64()
+  proto.tendermint.abci.ResponseLoadSnapshotChunk.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        chunk: msg.getChunk_asB64(),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.abci.ResponseLoadSnapshotChunk}
  */
-proto.tendermint.abci.ResponseLoadSnapshotChunk.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.tendermint.abci.ResponseLoadSnapshotChunk;
+proto.tendermint.abci.ResponseLoadSnapshotChunk.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.tendermint.abci.ResponseLoadSnapshotChunk();
   return proto.tendermint.abci.ResponseLoadSnapshotChunk.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -7973,36 +7431,34 @@ proto.tendermint.abci.ResponseLoadSnapshotChunk.deserializeBinary = function(byt
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.abci.ResponseLoadSnapshotChunk}
  */
-proto.tendermint.abci.ResponseLoadSnapshotChunk.deserializeBinaryFromReader = function(msg, reader) {
+proto.tendermint.abci.ResponseLoadSnapshotChunk.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setChunk(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.setChunk(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.ResponseLoadSnapshotChunk.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.tendermint.abci.ResponseLoadSnapshotChunk.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.tendermint.abci.ResponseLoadSnapshotChunk.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -8011,37 +7467,35 @@ proto.tendermint.abci.ResponseLoadSnapshotChunk.prototype.serializeBinary = func
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.ResponseLoadSnapshotChunk.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.tendermint.abci.ResponseLoadSnapshotChunk.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getChunk_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       1,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional bytes chunk = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.tendermint.abci.ResponseLoadSnapshotChunk.prototype.getChunk = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.tendermint.abci.ResponseLoadSnapshotChunk.prototype.getChunk = function () {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
 };
-
 
 /**
  * optional bytes chunk = 1;
  * This is a type-conversion wrapper around `getChunk()`
  * @return {string}
  */
-proto.tendermint.abci.ResponseLoadSnapshotChunk.prototype.getChunk_asB64 = function() {
+proto.tendermint.abci.ResponseLoadSnapshotChunk.prototype.getChunk_asB64 = function () {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getChunk()));
+    this.getChunk(),
+  ));
 };
-
 
 /**
  * optional bytes chunk = 1;
@@ -8050,18 +7504,16 @@ proto.tendermint.abci.ResponseLoadSnapshotChunk.prototype.getChunk_asB64 = funct
  * This is a type-conversion wrapper around `getChunk()`
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.ResponseLoadSnapshotChunk.prototype.getChunk_asU8 = function() {
+proto.tendermint.abci.ResponseLoadSnapshotChunk.prototype.getChunk_asU8 = function () {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getChunk()));
+    this.getChunk(),
+  ));
 };
-
 
 /** @param {!(string|Uint8Array)} value */
-proto.tendermint.abci.ResponseLoadSnapshotChunk.prototype.setChunk = function(value) {
+proto.tendermint.abci.ResponseLoadSnapshotChunk.prototype.setChunk = function (value) {
   jspb.Message.setProto3BytesField(this, 1, value);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -8073,7 +7525,7 @@ proto.tendermint.abci.ResponseLoadSnapshotChunk.prototype.setChunk = function(va
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.abci.ResponseApplySnapshotChunk = function(opt_data) {
+proto.tendermint.abci.ResponseApplySnapshotChunk = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.tendermint.abci.ResponseApplySnapshotChunk.repeatedFields_, null);
 };
 goog.inherits(proto.tendermint.abci.ResponseApplySnapshotChunk, jspb.Message);
@@ -8085,9 +7537,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.tendermint.abci.ResponseApplySnapshotChunk.repeatedFields_ = [2,3];
-
-
+proto.tendermint.abci.ResponseApplySnapshotChunk.repeatedFields_ = [2, 3];
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -8100,12 +7550,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.tendermint.abci.ResponseApplySnapshotChunk.prototype.toObject = function(opt_includeInstance) {
-  return proto.tendermint.abci.ResponseApplySnapshotChunk.toObject(opt_includeInstance, this);
-};
+  proto.tendermint.abci.ResponseApplySnapshotChunk.prototype.toObject = function (opt_includeInstance) {
+    return proto.tendermint.abci.ResponseApplySnapshotChunk.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -8114,32 +7563,31 @@ proto.tendermint.abci.ResponseApplySnapshotChunk.prototype.toObject = function(o
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.ResponseApplySnapshotChunk.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    result: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    refetchChunksList: jspb.Message.getRepeatedField(msg, 2),
-    rejectSendersList: jspb.Message.getRepeatedField(msg, 3)
+  proto.tendermint.abci.ResponseApplySnapshotChunk.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        result: jspb.Message.getFieldWithDefault(msg, 1, 0),
+        refetchChunksList: jspb.Message.getRepeatedField(msg, 2),
+        rejectSendersList: jspb.Message.getRepeatedField(msg, 3),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.abci.ResponseApplySnapshotChunk}
  */
-proto.tendermint.abci.ResponseApplySnapshotChunk.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.tendermint.abci.ResponseApplySnapshotChunk;
+proto.tendermint.abci.ResponseApplySnapshotChunk.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.tendermint.abci.ResponseApplySnapshotChunk();
   return proto.tendermint.abci.ResponseApplySnapshotChunk.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -8148,44 +7596,42 @@ proto.tendermint.abci.ResponseApplySnapshotChunk.deserializeBinary = function(by
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.abci.ResponseApplySnapshotChunk}
  */
-proto.tendermint.abci.ResponseApplySnapshotChunk.deserializeBinaryFromReader = function(msg, reader) {
+proto.tendermint.abci.ResponseApplySnapshotChunk.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {!proto.tendermint.abci.ResponseApplySnapshotChunk.Result} */ (reader.readEnum());
-      msg.setResult(value);
-      break;
-    case 2:
-      var value = /** @type {!Array<number>} */ (reader.readPackedUint32());
-      msg.setRefetchChunksList(value);
-      break;
-    case 3:
-      var value = /** @type {string} */ (reader.readString());
-      msg.addRejectSenders(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {!proto.tendermint.abci.ResponseApplySnapshotChunk.Result} */ (reader.readEnum());
+        msg.setResult(value);
+        break;
+      case 2:
+        var value = /** @type {!Array<number>} */ (reader.readPackedUint32());
+        msg.setRefetchChunksList(value);
+        break;
+      case 3:
+        var value = /** @type {string} */ (reader.readString());
+        msg.addRejectSenders(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.ResponseApplySnapshotChunk.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.tendermint.abci.ResponseApplySnapshotChunk.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.tendermint.abci.ResponseApplySnapshotChunk.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -8194,31 +7640,30 @@ proto.tendermint.abci.ResponseApplySnapshotChunk.prototype.serializeBinary = fun
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.ResponseApplySnapshotChunk.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.tendermint.abci.ResponseApplySnapshotChunk.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getResult();
   if (f !== 0.0) {
     writer.writeEnum(
       1,
-      f
+      f,
     );
   }
   f = message.getRefetchChunksList();
   if (f.length > 0) {
     writer.writePackedUint32(
       2,
-      f
+      f,
     );
   }
   f = message.getRejectSendersList();
   if (f.length > 0) {
     writer.writeRepeatedString(
       3,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * @enum {number}
@@ -8229,82 +7674,71 @@ proto.tendermint.abci.ResponseApplySnapshotChunk.Result = {
   ABORT: 2,
   RETRY: 3,
   RETRY_SNAPSHOT: 4,
-  REJECT_SNAPSHOT: 5
+  REJECT_SNAPSHOT: 5,
 };
 
 /**
  * optional Result result = 1;
  * @return {!proto.tendermint.abci.ResponseApplySnapshotChunk.Result}
  */
-proto.tendermint.abci.ResponseApplySnapshotChunk.prototype.getResult = function() {
+proto.tendermint.abci.ResponseApplySnapshotChunk.prototype.getResult = function () {
   return /** @type {!proto.tendermint.abci.ResponseApplySnapshotChunk.Result} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
-
 /** @param {!proto.tendermint.abci.ResponseApplySnapshotChunk.Result} value */
-proto.tendermint.abci.ResponseApplySnapshotChunk.prototype.setResult = function(value) {
+proto.tendermint.abci.ResponseApplySnapshotChunk.prototype.setResult = function (value) {
   jspb.Message.setProto3EnumField(this, 1, value);
 };
-
 
 /**
  * repeated uint32 refetch_chunks = 2;
  * @return {!Array<number>}
  */
-proto.tendermint.abci.ResponseApplySnapshotChunk.prototype.getRefetchChunksList = function() {
+proto.tendermint.abci.ResponseApplySnapshotChunk.prototype.getRefetchChunksList = function () {
   return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 2));
 };
 
-
 /** @param {!Array<number>} value */
-proto.tendermint.abci.ResponseApplySnapshotChunk.prototype.setRefetchChunksList = function(value) {
+proto.tendermint.abci.ResponseApplySnapshotChunk.prototype.setRefetchChunksList = function (value) {
   jspb.Message.setField(this, 2, value || []);
 };
-
 
 /**
  * @param {!number} value
  * @param {number=} opt_index
  */
-proto.tendermint.abci.ResponseApplySnapshotChunk.prototype.addRefetchChunks = function(value, opt_index) {
+proto.tendermint.abci.ResponseApplySnapshotChunk.prototype.addRefetchChunks = function (value, opt_index) {
   jspb.Message.addToRepeatedField(this, 2, value, opt_index);
 };
 
-
-proto.tendermint.abci.ResponseApplySnapshotChunk.prototype.clearRefetchChunksList = function() {
+proto.tendermint.abci.ResponseApplySnapshotChunk.prototype.clearRefetchChunksList = function () {
   this.setRefetchChunksList([]);
 };
-
 
 /**
  * repeated string reject_senders = 3;
  * @return {!Array<string>}
  */
-proto.tendermint.abci.ResponseApplySnapshotChunk.prototype.getRejectSendersList = function() {
+proto.tendermint.abci.ResponseApplySnapshotChunk.prototype.getRejectSendersList = function () {
   return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 3));
 };
 
-
 /** @param {!Array<string>} value */
-proto.tendermint.abci.ResponseApplySnapshotChunk.prototype.setRejectSendersList = function(value) {
+proto.tendermint.abci.ResponseApplySnapshotChunk.prototype.setRejectSendersList = function (value) {
   jspb.Message.setField(this, 3, value || []);
 };
-
 
 /**
  * @param {!string} value
  * @param {number=} opt_index
  */
-proto.tendermint.abci.ResponseApplySnapshotChunk.prototype.addRejectSenders = function(value, opt_index) {
+proto.tendermint.abci.ResponseApplySnapshotChunk.prototype.addRejectSenders = function (value, opt_index) {
   jspb.Message.addToRepeatedField(this, 3, value, opt_index);
 };
 
-
-proto.tendermint.abci.ResponseApplySnapshotChunk.prototype.clearRejectSendersList = function() {
+proto.tendermint.abci.ResponseApplySnapshotChunk.prototype.clearRejectSendersList = function () {
   this.setRejectSendersList([]);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -8316,14 +7750,13 @@ proto.tendermint.abci.ResponseApplySnapshotChunk.prototype.clearRejectSendersLis
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.abci.ConsensusParams = function(opt_data) {
+proto.tendermint.abci.ConsensusParams = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.tendermint.abci.ConsensusParams, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.tendermint.abci.ConsensusParams.displayName = 'proto.tendermint.abci.ConsensusParams';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -8336,12 +7769,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.tendermint.abci.ConsensusParams.prototype.toObject = function(opt_includeInstance) {
-  return proto.tendermint.abci.ConsensusParams.toObject(opt_includeInstance, this);
-};
+  proto.tendermint.abci.ConsensusParams.prototype.toObject = function (opt_includeInstance) {
+    return proto.tendermint.abci.ConsensusParams.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -8350,33 +7782,32 @@ proto.tendermint.abci.ConsensusParams.prototype.toObject = function(opt_includeI
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.ConsensusParams.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    block: (f = msg.getBlock()) && proto.tendermint.abci.BlockParams.toObject(includeInstance, f),
-    evidence: (f = msg.getEvidence()) && tendermint_types_params_pb.EvidenceParams.toObject(includeInstance, f),
-    validator: (f = msg.getValidator()) && tendermint_types_params_pb.ValidatorParams.toObject(includeInstance, f),
-    version: (f = msg.getVersion()) && tendermint_types_params_pb.VersionParams.toObject(includeInstance, f)
+  proto.tendermint.abci.ConsensusParams.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        block: (f = msg.getBlock()) && proto.tendermint.abci.BlockParams.toObject(includeInstance, f),
+        evidence: (f = msg.getEvidence()) && tendermint_types_params_pb.EvidenceParams.toObject(includeInstance, f),
+        validator: (f = msg.getValidator()) && tendermint_types_params_pb.ValidatorParams.toObject(includeInstance, f),
+        version: (f = msg.getVersion()) && tendermint_types_params_pb.VersionParams.toObject(includeInstance, f),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.abci.ConsensusParams}
  */
-proto.tendermint.abci.ConsensusParams.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.tendermint.abci.ConsensusParams;
+proto.tendermint.abci.ConsensusParams.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.tendermint.abci.ConsensusParams();
   return proto.tendermint.abci.ConsensusParams.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -8385,52 +7816,50 @@ proto.tendermint.abci.ConsensusParams.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.abci.ConsensusParams}
  */
-proto.tendermint.abci.ConsensusParams.deserializeBinaryFromReader = function(msg, reader) {
+proto.tendermint.abci.ConsensusParams.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = new proto.tendermint.abci.BlockParams;
-      reader.readMessage(value,proto.tendermint.abci.BlockParams.deserializeBinaryFromReader);
-      msg.setBlock(value);
-      break;
-    case 2:
-      var value = new tendermint_types_params_pb.EvidenceParams;
-      reader.readMessage(value,tendermint_types_params_pb.EvidenceParams.deserializeBinaryFromReader);
-      msg.setEvidence(value);
-      break;
-    case 3:
-      var value = new tendermint_types_params_pb.ValidatorParams;
-      reader.readMessage(value,tendermint_types_params_pb.ValidatorParams.deserializeBinaryFromReader);
-      msg.setValidator(value);
-      break;
-    case 4:
-      var value = new tendermint_types_params_pb.VersionParams;
-      reader.readMessage(value,tendermint_types_params_pb.VersionParams.deserializeBinaryFromReader);
-      msg.setVersion(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = new proto.tendermint.abci.BlockParams();
+        reader.readMessage(value, proto.tendermint.abci.BlockParams.deserializeBinaryFromReader);
+        msg.setBlock(value);
+        break;
+      case 2:
+        var value = new tendermint_types_params_pb.EvidenceParams();
+        reader.readMessage(value, tendermint_types_params_pb.EvidenceParams.deserializeBinaryFromReader);
+        msg.setEvidence(value);
+        break;
+      case 3:
+        var value = new tendermint_types_params_pb.ValidatorParams();
+        reader.readMessage(value, tendermint_types_params_pb.ValidatorParams.deserializeBinaryFromReader);
+        msg.setValidator(value);
+        break;
+      case 4:
+        var value = new tendermint_types_params_pb.VersionParams();
+        reader.readMessage(value, tendermint_types_params_pb.VersionParams.deserializeBinaryFromReader);
+        msg.setVersion(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.ConsensusParams.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.tendermint.abci.ConsensusParams.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.tendermint.abci.ConsensusParams.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -8439,14 +7868,14 @@ proto.tendermint.abci.ConsensusParams.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.ConsensusParams.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.tendermint.abci.ConsensusParams.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getBlock();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.tendermint.abci.BlockParams.serializeBinaryToWriter
+      proto.tendermint.abci.BlockParams.serializeBinaryToWriter,
     );
   }
   f = message.getEvidence();
@@ -8454,7 +7883,7 @@ proto.tendermint.abci.ConsensusParams.serializeBinaryToWriter = function(message
     writer.writeMessage(
       2,
       f,
-      tendermint_types_params_pb.EvidenceParams.serializeBinaryToWriter
+      tendermint_types_params_pb.EvidenceParams.serializeBinaryToWriter,
     );
   }
   f = message.getValidator();
@@ -8462,7 +7891,7 @@ proto.tendermint.abci.ConsensusParams.serializeBinaryToWriter = function(message
     writer.writeMessage(
       3,
       f,
-      tendermint_types_params_pb.ValidatorParams.serializeBinaryToWriter
+      tendermint_types_params_pb.ValidatorParams.serializeBinaryToWriter,
     );
   }
   f = message.getVersion();
@@ -8470,132 +7899,114 @@ proto.tendermint.abci.ConsensusParams.serializeBinaryToWriter = function(message
     writer.writeMessage(
       4,
       f,
-      tendermint_types_params_pb.VersionParams.serializeBinaryToWriter
+      tendermint_types_params_pb.VersionParams.serializeBinaryToWriter,
     );
   }
 };
-
 
 /**
  * optional BlockParams block = 1;
  * @return {?proto.tendermint.abci.BlockParams}
  */
-proto.tendermint.abci.ConsensusParams.prototype.getBlock = function() {
+proto.tendermint.abci.ConsensusParams.prototype.getBlock = function () {
   return /** @type{?proto.tendermint.abci.BlockParams} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.abci.BlockParams, 1));
 };
 
-
 /** @param {?proto.tendermint.abci.BlockParams|undefined} value */
-proto.tendermint.abci.ConsensusParams.prototype.setBlock = function(value) {
+proto.tendermint.abci.ConsensusParams.prototype.setBlock = function (value) {
   jspb.Message.setWrapperField(this, 1, value);
 };
 
-
-proto.tendermint.abci.ConsensusParams.prototype.clearBlock = function() {
+proto.tendermint.abci.ConsensusParams.prototype.clearBlock = function () {
   this.setBlock(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.abci.ConsensusParams.prototype.hasBlock = function() {
+proto.tendermint.abci.ConsensusParams.prototype.hasBlock = function () {
   return jspb.Message.getField(this, 1) != null;
 };
-
 
 /**
  * optional tendermint.types.EvidenceParams evidence = 2;
  * @return {?proto.tendermint.types.EvidenceParams}
  */
-proto.tendermint.abci.ConsensusParams.prototype.getEvidence = function() {
+proto.tendermint.abci.ConsensusParams.prototype.getEvidence = function () {
   return /** @type{?proto.tendermint.types.EvidenceParams} */ (
     jspb.Message.getWrapperField(this, tendermint_types_params_pb.EvidenceParams, 2));
 };
 
-
 /** @param {?proto.tendermint.types.EvidenceParams|undefined} value */
-proto.tendermint.abci.ConsensusParams.prototype.setEvidence = function(value) {
+proto.tendermint.abci.ConsensusParams.prototype.setEvidence = function (value) {
   jspb.Message.setWrapperField(this, 2, value);
 };
 
-
-proto.tendermint.abci.ConsensusParams.prototype.clearEvidence = function() {
+proto.tendermint.abci.ConsensusParams.prototype.clearEvidence = function () {
   this.setEvidence(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.abci.ConsensusParams.prototype.hasEvidence = function() {
+proto.tendermint.abci.ConsensusParams.prototype.hasEvidence = function () {
   return jspb.Message.getField(this, 2) != null;
 };
-
 
 /**
  * optional tendermint.types.ValidatorParams validator = 3;
  * @return {?proto.tendermint.types.ValidatorParams}
  */
-proto.tendermint.abci.ConsensusParams.prototype.getValidator = function() {
+proto.tendermint.abci.ConsensusParams.prototype.getValidator = function () {
   return /** @type{?proto.tendermint.types.ValidatorParams} */ (
     jspb.Message.getWrapperField(this, tendermint_types_params_pb.ValidatorParams, 3));
 };
 
-
 /** @param {?proto.tendermint.types.ValidatorParams|undefined} value */
-proto.tendermint.abci.ConsensusParams.prototype.setValidator = function(value) {
+proto.tendermint.abci.ConsensusParams.prototype.setValidator = function (value) {
   jspb.Message.setWrapperField(this, 3, value);
 };
 
-
-proto.tendermint.abci.ConsensusParams.prototype.clearValidator = function() {
+proto.tendermint.abci.ConsensusParams.prototype.clearValidator = function () {
   this.setValidator(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.abci.ConsensusParams.prototype.hasValidator = function() {
+proto.tendermint.abci.ConsensusParams.prototype.hasValidator = function () {
   return jspb.Message.getField(this, 3) != null;
 };
-
 
 /**
  * optional tendermint.types.VersionParams version = 4;
  * @return {?proto.tendermint.types.VersionParams}
  */
-proto.tendermint.abci.ConsensusParams.prototype.getVersion = function() {
+proto.tendermint.abci.ConsensusParams.prototype.getVersion = function () {
   return /** @type{?proto.tendermint.types.VersionParams} */ (
     jspb.Message.getWrapperField(this, tendermint_types_params_pb.VersionParams, 4));
 };
 
-
 /** @param {?proto.tendermint.types.VersionParams|undefined} value */
-proto.tendermint.abci.ConsensusParams.prototype.setVersion = function(value) {
+proto.tendermint.abci.ConsensusParams.prototype.setVersion = function (value) {
   jspb.Message.setWrapperField(this, 4, value);
 };
 
-
-proto.tendermint.abci.ConsensusParams.prototype.clearVersion = function() {
+proto.tendermint.abci.ConsensusParams.prototype.clearVersion = function () {
   this.setVersion(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.abci.ConsensusParams.prototype.hasVersion = function() {
+proto.tendermint.abci.ConsensusParams.prototype.hasVersion = function () {
   return jspb.Message.getField(this, 4) != null;
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -8607,14 +8018,13 @@ proto.tendermint.abci.ConsensusParams.prototype.hasVersion = function() {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.abci.BlockParams = function(opt_data) {
+proto.tendermint.abci.BlockParams = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.tendermint.abci.BlockParams, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.tendermint.abci.BlockParams.displayName = 'proto.tendermint.abci.BlockParams';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -8627,12 +8037,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.tendermint.abci.BlockParams.prototype.toObject = function(opt_includeInstance) {
-  return proto.tendermint.abci.BlockParams.toObject(opt_includeInstance, this);
-};
+  proto.tendermint.abci.BlockParams.prototype.toObject = function (opt_includeInstance) {
+    return proto.tendermint.abci.BlockParams.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -8641,31 +8050,30 @@ proto.tendermint.abci.BlockParams.prototype.toObject = function(opt_includeInsta
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.BlockParams.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    maxBytes: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    maxGas: jspb.Message.getFieldWithDefault(msg, 2, 0)
+  proto.tendermint.abci.BlockParams.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        maxBytes: jspb.Message.getFieldWithDefault(msg, 1, 0),
+        maxGas: jspb.Message.getFieldWithDefault(msg, 2, 0),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.abci.BlockParams}
  */
-proto.tendermint.abci.BlockParams.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.tendermint.abci.BlockParams;
+proto.tendermint.abci.BlockParams.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.tendermint.abci.BlockParams();
   return proto.tendermint.abci.BlockParams.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -8674,40 +8082,38 @@ proto.tendermint.abci.BlockParams.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.abci.BlockParams}
  */
-proto.tendermint.abci.BlockParams.deserializeBinaryFromReader = function(msg, reader) {
+proto.tendermint.abci.BlockParams.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setMaxBytes(value);
-      break;
-    case 2:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setMaxGas(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setMaxBytes(value);
+        break;
+      case 2:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setMaxGas(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.BlockParams.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.tendermint.abci.BlockParams.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.tendermint.abci.BlockParams.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -8716,55 +8122,49 @@ proto.tendermint.abci.BlockParams.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.BlockParams.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.tendermint.abci.BlockParams.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getMaxBytes();
   if (f !== 0) {
     writer.writeInt64(
       1,
-      f
+      f,
     );
   }
   f = message.getMaxGas();
   if (f !== 0) {
     writer.writeInt64(
       2,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional int64 max_bytes = 1;
  * @return {number}
  */
-proto.tendermint.abci.BlockParams.prototype.getMaxBytes = function() {
+proto.tendermint.abci.BlockParams.prototype.getMaxBytes = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
-
 /** @param {number} value */
-proto.tendermint.abci.BlockParams.prototype.setMaxBytes = function(value) {
+proto.tendermint.abci.BlockParams.prototype.setMaxBytes = function (value) {
   jspb.Message.setProto3IntField(this, 1, value);
 };
-
 
 /**
  * optional int64 max_gas = 2;
  * @return {number}
  */
-proto.tendermint.abci.BlockParams.prototype.getMaxGas = function() {
+proto.tendermint.abci.BlockParams.prototype.getMaxGas = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
-
 /** @param {number} value */
-proto.tendermint.abci.BlockParams.prototype.setMaxGas = function(value) {
+proto.tendermint.abci.BlockParams.prototype.setMaxGas = function (value) {
   jspb.Message.setProto3IntField(this, 2, value);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -8776,7 +8176,7 @@ proto.tendermint.abci.BlockParams.prototype.setMaxGas = function(value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.abci.LastCommitInfo = function(opt_data) {
+proto.tendermint.abci.LastCommitInfo = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.tendermint.abci.LastCommitInfo.repeatedFields_, null);
 };
 goog.inherits(proto.tendermint.abci.LastCommitInfo, jspb.Message);
@@ -8790,8 +8190,6 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.tendermint.abci.LastCommitInfo.repeatedFields_ = [2];
 
-
-
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -8803,12 +8201,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.tendermint.abci.LastCommitInfo.prototype.toObject = function(opt_includeInstance) {
-  return proto.tendermint.abci.LastCommitInfo.toObject(opt_includeInstance, this);
-};
+  proto.tendermint.abci.LastCommitInfo.prototype.toObject = function (opt_includeInstance) {
+    return proto.tendermint.abci.LastCommitInfo.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -8817,32 +8214,31 @@ proto.tendermint.abci.LastCommitInfo.prototype.toObject = function(opt_includeIn
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.LastCommitInfo.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    round: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    votesList: jspb.Message.toObjectList(msg.getVotesList(),
-    proto.tendermint.abci.VoteInfo.toObject, includeInstance)
+  proto.tendermint.abci.LastCommitInfo.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        round: jspb.Message.getFieldWithDefault(msg, 1, 0),
+        votesList: jspb.Message.toObjectList(msg.getVotesList(),
+          proto.tendermint.abci.VoteInfo.toObject, includeInstance),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.abci.LastCommitInfo}
  */
-proto.tendermint.abci.LastCommitInfo.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.tendermint.abci.LastCommitInfo;
+proto.tendermint.abci.LastCommitInfo.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.tendermint.abci.LastCommitInfo();
   return proto.tendermint.abci.LastCommitInfo.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -8851,41 +8247,39 @@ proto.tendermint.abci.LastCommitInfo.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.abci.LastCommitInfo}
  */
-proto.tendermint.abci.LastCommitInfo.deserializeBinaryFromReader = function(msg, reader) {
+proto.tendermint.abci.LastCommitInfo.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setRound(value);
-      break;
-    case 2:
-      var value = new proto.tendermint.abci.VoteInfo;
-      reader.readMessage(value,proto.tendermint.abci.VoteInfo.deserializeBinaryFromReader);
-      msg.addVotes(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {number} */ (reader.readInt32());
+        msg.setRound(value);
+        break;
+      case 2:
+        var value = new proto.tendermint.abci.VoteInfo();
+        reader.readMessage(value, proto.tendermint.abci.VoteInfo.deserializeBinaryFromReader);
+        msg.addVotes(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.LastCommitInfo.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.tendermint.abci.LastCommitInfo.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.tendermint.abci.LastCommitInfo.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -8894,13 +8288,13 @@ proto.tendermint.abci.LastCommitInfo.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.LastCommitInfo.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.tendermint.abci.LastCommitInfo.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getRound();
   if (f !== 0) {
     writer.writeInt32(
       1,
-      f
+      f,
     );
   }
   f = message.getVotesList();
@@ -8908,58 +8302,50 @@ proto.tendermint.abci.LastCommitInfo.serializeBinaryToWriter = function(message,
     writer.writeRepeatedMessage(
       2,
       f,
-      proto.tendermint.abci.VoteInfo.serializeBinaryToWriter
+      proto.tendermint.abci.VoteInfo.serializeBinaryToWriter,
     );
   }
 };
-
 
 /**
  * optional int32 round = 1;
  * @return {number}
  */
-proto.tendermint.abci.LastCommitInfo.prototype.getRound = function() {
+proto.tendermint.abci.LastCommitInfo.prototype.getRound = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
-
 /** @param {number} value */
-proto.tendermint.abci.LastCommitInfo.prototype.setRound = function(value) {
+proto.tendermint.abci.LastCommitInfo.prototype.setRound = function (value) {
   jspb.Message.setProto3IntField(this, 1, value);
 };
-
 
 /**
  * repeated VoteInfo votes = 2;
  * @return {!Array<!proto.tendermint.abci.VoteInfo>}
  */
-proto.tendermint.abci.LastCommitInfo.prototype.getVotesList = function() {
+proto.tendermint.abci.LastCommitInfo.prototype.getVotesList = function () {
   return /** @type{!Array<!proto.tendermint.abci.VoteInfo>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.tendermint.abci.VoteInfo, 2));
 };
 
-
 /** @param {!Array<!proto.tendermint.abci.VoteInfo>} value */
-proto.tendermint.abci.LastCommitInfo.prototype.setVotesList = function(value) {
+proto.tendermint.abci.LastCommitInfo.prototype.setVotesList = function (value) {
   jspb.Message.setRepeatedWrapperField(this, 2, value);
 };
-
 
 /**
  * @param {!proto.tendermint.abci.VoteInfo=} opt_value
  * @param {number=} opt_index
  * @return {!proto.tendermint.abci.VoteInfo}
  */
-proto.tendermint.abci.LastCommitInfo.prototype.addVotes = function(opt_value, opt_index) {
+proto.tendermint.abci.LastCommitInfo.prototype.addVotes = function (opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.tendermint.abci.VoteInfo, opt_index);
 };
 
-
-proto.tendermint.abci.LastCommitInfo.prototype.clearVotesList = function() {
+proto.tendermint.abci.LastCommitInfo.prototype.clearVotesList = function () {
   this.setVotesList([]);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -8971,7 +8357,7 @@ proto.tendermint.abci.LastCommitInfo.prototype.clearVotesList = function() {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.abci.Event = function(opt_data) {
+proto.tendermint.abci.Event = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.tendermint.abci.Event.repeatedFields_, null);
 };
 goog.inherits(proto.tendermint.abci.Event, jspb.Message);
@@ -8985,8 +8371,6 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.tendermint.abci.Event.repeatedFields_ = [2];
 
-
-
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -8998,12 +8382,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.tendermint.abci.Event.prototype.toObject = function(opt_includeInstance) {
-  return proto.tendermint.abci.Event.toObject(opt_includeInstance, this);
-};
+  proto.tendermint.abci.Event.prototype.toObject = function (opt_includeInstance) {
+    return proto.tendermint.abci.Event.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -9012,32 +8395,31 @@ proto.tendermint.abci.Event.prototype.toObject = function(opt_includeInstance) {
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.Event.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    type: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    attributesList: jspb.Message.toObjectList(msg.getAttributesList(),
-    proto.tendermint.abci.EventAttribute.toObject, includeInstance)
+  proto.tendermint.abci.Event.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        type: jspb.Message.getFieldWithDefault(msg, 1, ''),
+        attributesList: jspb.Message.toObjectList(msg.getAttributesList(),
+          proto.tendermint.abci.EventAttribute.toObject, includeInstance),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.abci.Event}
  */
-proto.tendermint.abci.Event.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.tendermint.abci.Event;
+proto.tendermint.abci.Event.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.tendermint.abci.Event();
   return proto.tendermint.abci.Event.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -9046,41 +8428,39 @@ proto.tendermint.abci.Event.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.abci.Event}
  */
-proto.tendermint.abci.Event.deserializeBinaryFromReader = function(msg, reader) {
+proto.tendermint.abci.Event.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setType(value);
-      break;
-    case 2:
-      var value = new proto.tendermint.abci.EventAttribute;
-      reader.readMessage(value,proto.tendermint.abci.EventAttribute.deserializeBinaryFromReader);
-      msg.addAttributes(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setType(value);
+        break;
+      case 2:
+        var value = new proto.tendermint.abci.EventAttribute();
+        reader.readMessage(value, proto.tendermint.abci.EventAttribute.deserializeBinaryFromReader);
+        msg.addAttributes(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.Event.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.tendermint.abci.Event.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.tendermint.abci.Event.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -9089,13 +8469,13 @@ proto.tendermint.abci.Event.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.Event.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.tendermint.abci.Event.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getType();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f
+      f,
     );
   }
   f = message.getAttributesList();
@@ -9103,58 +8483,50 @@ proto.tendermint.abci.Event.serializeBinaryToWriter = function(message, writer) 
     writer.writeRepeatedMessage(
       2,
       f,
-      proto.tendermint.abci.EventAttribute.serializeBinaryToWriter
+      proto.tendermint.abci.EventAttribute.serializeBinaryToWriter,
     );
   }
 };
-
 
 /**
  * optional string type = 1;
  * @return {string}
  */
-proto.tendermint.abci.Event.prototype.getType = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.tendermint.abci.Event.prototype.getType = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
 };
-
 
 /** @param {string} value */
-proto.tendermint.abci.Event.prototype.setType = function(value) {
+proto.tendermint.abci.Event.prototype.setType = function (value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
-
 
 /**
  * repeated EventAttribute attributes = 2;
  * @return {!Array<!proto.tendermint.abci.EventAttribute>}
  */
-proto.tendermint.abci.Event.prototype.getAttributesList = function() {
+proto.tendermint.abci.Event.prototype.getAttributesList = function () {
   return /** @type{!Array<!proto.tendermint.abci.EventAttribute>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.tendermint.abci.EventAttribute, 2));
 };
 
-
 /** @param {!Array<!proto.tendermint.abci.EventAttribute>} value */
-proto.tendermint.abci.Event.prototype.setAttributesList = function(value) {
+proto.tendermint.abci.Event.prototype.setAttributesList = function (value) {
   jspb.Message.setRepeatedWrapperField(this, 2, value);
 };
-
 
 /**
  * @param {!proto.tendermint.abci.EventAttribute=} opt_value
  * @param {number=} opt_index
  * @return {!proto.tendermint.abci.EventAttribute}
  */
-proto.tendermint.abci.Event.prototype.addAttributes = function(opt_value, opt_index) {
+proto.tendermint.abci.Event.prototype.addAttributes = function (opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.tendermint.abci.EventAttribute, opt_index);
 };
 
-
-proto.tendermint.abci.Event.prototype.clearAttributesList = function() {
+proto.tendermint.abci.Event.prototype.clearAttributesList = function () {
   this.setAttributesList([]);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -9166,14 +8538,13 @@ proto.tendermint.abci.Event.prototype.clearAttributesList = function() {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.abci.EventAttribute = function(opt_data) {
+proto.tendermint.abci.EventAttribute = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.tendermint.abci.EventAttribute, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.tendermint.abci.EventAttribute.displayName = 'proto.tendermint.abci.EventAttribute';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -9186,12 +8557,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.tendermint.abci.EventAttribute.prototype.toObject = function(opt_includeInstance) {
-  return proto.tendermint.abci.EventAttribute.toObject(opt_includeInstance, this);
-};
+  proto.tendermint.abci.EventAttribute.prototype.toObject = function (opt_includeInstance) {
+    return proto.tendermint.abci.EventAttribute.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -9200,32 +8570,31 @@ proto.tendermint.abci.EventAttribute.prototype.toObject = function(opt_includeIn
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.EventAttribute.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    key: msg.getKey_asB64(),
-    value: msg.getValue_asB64(),
-    index: jspb.Message.getFieldWithDefault(msg, 3, false)
+  proto.tendermint.abci.EventAttribute.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        key: msg.getKey_asB64(),
+        value: msg.getValue_asB64(),
+        index: jspb.Message.getFieldWithDefault(msg, 3, false),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.abci.EventAttribute}
  */
-proto.tendermint.abci.EventAttribute.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.tendermint.abci.EventAttribute;
+proto.tendermint.abci.EventAttribute.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.tendermint.abci.EventAttribute();
   return proto.tendermint.abci.EventAttribute.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -9234,44 +8603,42 @@ proto.tendermint.abci.EventAttribute.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.abci.EventAttribute}
  */
-proto.tendermint.abci.EventAttribute.deserializeBinaryFromReader = function(msg, reader) {
+proto.tendermint.abci.EventAttribute.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setKey(value);
-      break;
-    case 2:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setValue(value);
-      break;
-    case 3:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setIndex(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.setKey(value);
+        break;
+      case 2:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.setValue(value);
+        break;
+      case 3:
+        var value = /** @type {boolean} */ (reader.readBool());
+        msg.setIndex(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.EventAttribute.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.tendermint.abci.EventAttribute.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.tendermint.abci.EventAttribute.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -9280,51 +8647,49 @@ proto.tendermint.abci.EventAttribute.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.EventAttribute.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.tendermint.abci.EventAttribute.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getKey_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       1,
-      f
+      f,
     );
   }
   f = message.getValue_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       2,
-      f
+      f,
     );
   }
   f = message.getIndex();
   if (f) {
     writer.writeBool(
       3,
-      f
+      f,
     );
   }
 };
 
-
 /**
  * optional bytes key = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.tendermint.abci.EventAttribute.prototype.getKey = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.tendermint.abci.EventAttribute.prototype.getKey = function () {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
 };
-
 
 /**
  * optional bytes key = 1;
  * This is a type-conversion wrapper around `getKey()`
  * @return {string}
  */
-proto.tendermint.abci.EventAttribute.prototype.getKey_asB64 = function() {
+proto.tendermint.abci.EventAttribute.prototype.getKey_asB64 = function () {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getKey()));
+    this.getKey(),
+  ));
 };
-
 
 /**
  * optional bytes key = 1;
@@ -9333,37 +8698,35 @@ proto.tendermint.abci.EventAttribute.prototype.getKey_asB64 = function() {
  * This is a type-conversion wrapper around `getKey()`
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.EventAttribute.prototype.getKey_asU8 = function() {
+proto.tendermint.abci.EventAttribute.prototype.getKey_asU8 = function () {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getKey()));
+    this.getKey(),
+  ));
 };
 
-
 /** @param {!(string|Uint8Array)} value */
-proto.tendermint.abci.EventAttribute.prototype.setKey = function(value) {
+proto.tendermint.abci.EventAttribute.prototype.setKey = function (value) {
   jspb.Message.setProto3BytesField(this, 1, value);
 };
 
-
 /**
  * optional bytes value = 2;
  * @return {!(string|Uint8Array)}
  */
-proto.tendermint.abci.EventAttribute.prototype.getValue = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+proto.tendermint.abci.EventAttribute.prototype.getValue = function () {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
 };
-
 
 /**
  * optional bytes value = 2;
  * This is a type-conversion wrapper around `getValue()`
  * @return {string}
  */
-proto.tendermint.abci.EventAttribute.prototype.getValue_asB64 = function() {
+proto.tendermint.abci.EventAttribute.prototype.getValue_asB64 = function () {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getValue()));
+    this.getValue(),
+  ));
 };
-
 
 /**
  * optional bytes value = 2;
@@ -9372,17 +8735,16 @@ proto.tendermint.abci.EventAttribute.prototype.getValue_asB64 = function() {
  * This is a type-conversion wrapper around `getValue()`
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.EventAttribute.prototype.getValue_asU8 = function() {
+proto.tendermint.abci.EventAttribute.prototype.getValue_asU8 = function () {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getValue()));
+    this.getValue(),
+  ));
 };
-
 
 /** @param {!(string|Uint8Array)} value */
-proto.tendermint.abci.EventAttribute.prototype.setValue = function(value) {
+proto.tendermint.abci.EventAttribute.prototype.setValue = function (value) {
   jspb.Message.setProto3BytesField(this, 2, value);
 };
-
 
 /**
  * optional bool index = 3;
@@ -9390,17 +8752,14 @@ proto.tendermint.abci.EventAttribute.prototype.setValue = function(value) {
  * You should avoid comparisons like {@code val === true/false} in those cases.
  * @return {boolean}
  */
-proto.tendermint.abci.EventAttribute.prototype.getIndex = function() {
+proto.tendermint.abci.EventAttribute.prototype.getIndex = function () {
   return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 3, false));
 };
 
-
 /** @param {boolean} value */
-proto.tendermint.abci.EventAttribute.prototype.setIndex = function(value) {
+proto.tendermint.abci.EventAttribute.prototype.setIndex = function (value) {
   jspb.Message.setProto3BooleanField(this, 3, value);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -9412,14 +8771,13 @@ proto.tendermint.abci.EventAttribute.prototype.setIndex = function(value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.abci.TxResult = function(opt_data) {
+proto.tendermint.abci.TxResult = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.tendermint.abci.TxResult, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.tendermint.abci.TxResult.displayName = 'proto.tendermint.abci.TxResult';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -9432,12 +8790,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.tendermint.abci.TxResult.prototype.toObject = function(opt_includeInstance) {
-  return proto.tendermint.abci.TxResult.toObject(opt_includeInstance, this);
-};
+  proto.tendermint.abci.TxResult.prototype.toObject = function (opt_includeInstance) {
+    return proto.tendermint.abci.TxResult.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -9446,33 +8803,32 @@ proto.tendermint.abci.TxResult.prototype.toObject = function(opt_includeInstance
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.TxResult.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    height: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    index: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    tx: msg.getTx_asB64(),
-    result: (f = msg.getResult()) && proto.tendermint.abci.ResponseDeliverTx.toObject(includeInstance, f)
+  proto.tendermint.abci.TxResult.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        height: jspb.Message.getFieldWithDefault(msg, 1, 0),
+        index: jspb.Message.getFieldWithDefault(msg, 2, 0),
+        tx: msg.getTx_asB64(),
+        result: (f = msg.getResult()) && proto.tendermint.abci.ResponseDeliverTx.toObject(includeInstance, f),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.abci.TxResult}
  */
-proto.tendermint.abci.TxResult.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.tendermint.abci.TxResult;
+proto.tendermint.abci.TxResult.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.tendermint.abci.TxResult();
   return proto.tendermint.abci.TxResult.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -9481,49 +8837,47 @@ proto.tendermint.abci.TxResult.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.abci.TxResult}
  */
-proto.tendermint.abci.TxResult.deserializeBinaryFromReader = function(msg, reader) {
+proto.tendermint.abci.TxResult.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setHeight(value);
-      break;
-    case 2:
-      var value = /** @type {number} */ (reader.readUint32());
-      msg.setIndex(value);
-      break;
-    case 3:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setTx(value);
-      break;
-    case 4:
-      var value = new proto.tendermint.abci.ResponseDeliverTx;
-      reader.readMessage(value,proto.tendermint.abci.ResponseDeliverTx.deserializeBinaryFromReader);
-      msg.setResult(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setHeight(value);
+        break;
+      case 2:
+        var value = /** @type {number} */ (reader.readUint32());
+        msg.setIndex(value);
+        break;
+      case 3:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.setTx(value);
+        break;
+      case 4:
+        var value = new proto.tendermint.abci.ResponseDeliverTx();
+        reader.readMessage(value, proto.tendermint.abci.ResponseDeliverTx.deserializeBinaryFromReader);
+        msg.setResult(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.TxResult.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.tendermint.abci.TxResult.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.tendermint.abci.TxResult.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -9532,27 +8886,27 @@ proto.tendermint.abci.TxResult.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.TxResult.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.tendermint.abci.TxResult.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getHeight();
   if (f !== 0) {
     writer.writeInt64(
       1,
-      f
+      f,
     );
   }
   f = message.getIndex();
   if (f !== 0) {
     writer.writeUint32(
       2,
-      f
+      f,
     );
   }
   f = message.getTx_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       3,
-      f
+      f,
     );
   }
   f = message.getResult();
@@ -9560,61 +8914,55 @@ proto.tendermint.abci.TxResult.serializeBinaryToWriter = function(message, write
     writer.writeMessage(
       4,
       f,
-      proto.tendermint.abci.ResponseDeliverTx.serializeBinaryToWriter
+      proto.tendermint.abci.ResponseDeliverTx.serializeBinaryToWriter,
     );
   }
 };
-
 
 /**
  * optional int64 height = 1;
  * @return {number}
  */
-proto.tendermint.abci.TxResult.prototype.getHeight = function() {
+proto.tendermint.abci.TxResult.prototype.getHeight = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
-
 /** @param {number} value */
-proto.tendermint.abci.TxResult.prototype.setHeight = function(value) {
+proto.tendermint.abci.TxResult.prototype.setHeight = function (value) {
   jspb.Message.setProto3IntField(this, 1, value);
 };
-
 
 /**
  * optional uint32 index = 2;
  * @return {number}
  */
-proto.tendermint.abci.TxResult.prototype.getIndex = function() {
+proto.tendermint.abci.TxResult.prototype.getIndex = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
-
 /** @param {number} value */
-proto.tendermint.abci.TxResult.prototype.setIndex = function(value) {
+proto.tendermint.abci.TxResult.prototype.setIndex = function (value) {
   jspb.Message.setProto3IntField(this, 2, value);
 };
-
 
 /**
  * optional bytes tx = 3;
  * @return {!(string|Uint8Array)}
  */
-proto.tendermint.abci.TxResult.prototype.getTx = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+proto.tendermint.abci.TxResult.prototype.getTx = function () {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 3, ''));
 };
-
 
 /**
  * optional bytes tx = 3;
  * This is a type-conversion wrapper around `getTx()`
  * @return {string}
  */
-proto.tendermint.abci.TxResult.prototype.getTx_asB64 = function() {
+proto.tendermint.abci.TxResult.prototype.getTx_asB64 = function () {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getTx()));
+    this.getTx(),
+  ));
 };
-
 
 /**
  * optional bytes tx = 3;
@@ -9623,48 +8971,42 @@ proto.tendermint.abci.TxResult.prototype.getTx_asB64 = function() {
  * This is a type-conversion wrapper around `getTx()`
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.TxResult.prototype.getTx_asU8 = function() {
+proto.tendermint.abci.TxResult.prototype.getTx_asU8 = function () {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getTx()));
+    this.getTx(),
+  ));
 };
-
 
 /** @param {!(string|Uint8Array)} value */
-proto.tendermint.abci.TxResult.prototype.setTx = function(value) {
+proto.tendermint.abci.TxResult.prototype.setTx = function (value) {
   jspb.Message.setProto3BytesField(this, 3, value);
 };
-
 
 /**
  * optional ResponseDeliverTx result = 4;
  * @return {?proto.tendermint.abci.ResponseDeliverTx}
  */
-proto.tendermint.abci.TxResult.prototype.getResult = function() {
+proto.tendermint.abci.TxResult.prototype.getResult = function () {
   return /** @type{?proto.tendermint.abci.ResponseDeliverTx} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.abci.ResponseDeliverTx, 4));
 };
 
-
 /** @param {?proto.tendermint.abci.ResponseDeliverTx|undefined} value */
-proto.tendermint.abci.TxResult.prototype.setResult = function(value) {
+proto.tendermint.abci.TxResult.prototype.setResult = function (value) {
   jspb.Message.setWrapperField(this, 4, value);
 };
 
-
-proto.tendermint.abci.TxResult.prototype.clearResult = function() {
+proto.tendermint.abci.TxResult.prototype.clearResult = function () {
   this.setResult(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.abci.TxResult.prototype.hasResult = function() {
+proto.tendermint.abci.TxResult.prototype.hasResult = function () {
   return jspb.Message.getField(this, 4) != null;
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -9676,14 +9018,13 @@ proto.tendermint.abci.TxResult.prototype.hasResult = function() {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.abci.Validator = function(opt_data) {
+proto.tendermint.abci.Validator = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.tendermint.abci.Validator, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.tendermint.abci.Validator.displayName = 'proto.tendermint.abci.Validator';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -9696,12 +9037,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.tendermint.abci.Validator.prototype.toObject = function(opt_includeInstance) {
-  return proto.tendermint.abci.Validator.toObject(opt_includeInstance, this);
-};
+  proto.tendermint.abci.Validator.prototype.toObject = function (opt_includeInstance) {
+    return proto.tendermint.abci.Validator.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -9710,31 +9050,30 @@ proto.tendermint.abci.Validator.prototype.toObject = function(opt_includeInstanc
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.Validator.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    address: msg.getAddress_asB64(),
-    power: jspb.Message.getFieldWithDefault(msg, 3, 0)
+  proto.tendermint.abci.Validator.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        address: msg.getAddress_asB64(),
+        power: jspb.Message.getFieldWithDefault(msg, 3, 0),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.abci.Validator}
  */
-proto.tendermint.abci.Validator.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.tendermint.abci.Validator;
+proto.tendermint.abci.Validator.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.tendermint.abci.Validator();
   return proto.tendermint.abci.Validator.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -9743,40 +9082,38 @@ proto.tendermint.abci.Validator.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.abci.Validator}
  */
-proto.tendermint.abci.Validator.deserializeBinaryFromReader = function(msg, reader) {
+proto.tendermint.abci.Validator.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setAddress(value);
-      break;
-    case 3:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setPower(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.setAddress(value);
+        break;
+      case 3:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setPower(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.Validator.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.tendermint.abci.Validator.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.tendermint.abci.Validator.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -9785,44 +9122,42 @@ proto.tendermint.abci.Validator.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.Validator.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.tendermint.abci.Validator.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getAddress_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       1,
-      f
+      f,
     );
   }
   f = message.getPower();
   if (f !== 0) {
     writer.writeInt64(
       3,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional bytes address = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.tendermint.abci.Validator.prototype.getAddress = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.tendermint.abci.Validator.prototype.getAddress = function () {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
 };
-
 
 /**
  * optional bytes address = 1;
  * This is a type-conversion wrapper around `getAddress()`
  * @return {string}
  */
-proto.tendermint.abci.Validator.prototype.getAddress_asB64 = function() {
+proto.tendermint.abci.Validator.prototype.getAddress_asB64 = function () {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getAddress()));
+    this.getAddress(),
+  ));
 };
-
 
 /**
  * optional bytes address = 1;
@@ -9831,33 +9166,29 @@ proto.tendermint.abci.Validator.prototype.getAddress_asB64 = function() {
  * This is a type-conversion wrapper around `getAddress()`
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.Validator.prototype.getAddress_asU8 = function() {
+proto.tendermint.abci.Validator.prototype.getAddress_asU8 = function () {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getAddress()));
+    this.getAddress(),
+  ));
 };
-
 
 /** @param {!(string|Uint8Array)} value */
-proto.tendermint.abci.Validator.prototype.setAddress = function(value) {
+proto.tendermint.abci.Validator.prototype.setAddress = function (value) {
   jspb.Message.setProto3BytesField(this, 1, value);
 };
-
 
 /**
  * optional int64 power = 3;
  * @return {number}
  */
-proto.tendermint.abci.Validator.prototype.getPower = function() {
+proto.tendermint.abci.Validator.prototype.getPower = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
-
 /** @param {number} value */
-proto.tendermint.abci.Validator.prototype.setPower = function(value) {
+proto.tendermint.abci.Validator.prototype.setPower = function (value) {
   jspb.Message.setProto3IntField(this, 3, value);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -9869,14 +9200,13 @@ proto.tendermint.abci.Validator.prototype.setPower = function(value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.abci.ValidatorUpdate = function(opt_data) {
+proto.tendermint.abci.ValidatorUpdate = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.tendermint.abci.ValidatorUpdate, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.tendermint.abci.ValidatorUpdate.displayName = 'proto.tendermint.abci.ValidatorUpdate';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -9889,12 +9219,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.tendermint.abci.ValidatorUpdate.prototype.toObject = function(opt_includeInstance) {
-  return proto.tendermint.abci.ValidatorUpdate.toObject(opt_includeInstance, this);
-};
+  proto.tendermint.abci.ValidatorUpdate.prototype.toObject = function (opt_includeInstance) {
+    return proto.tendermint.abci.ValidatorUpdate.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -9903,31 +9232,30 @@ proto.tendermint.abci.ValidatorUpdate.prototype.toObject = function(opt_includeI
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.ValidatorUpdate.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    pubKey: (f = msg.getPubKey()) && tendermint_crypto_keys_pb.PublicKey.toObject(includeInstance, f),
-    power: jspb.Message.getFieldWithDefault(msg, 2, 0)
+  proto.tendermint.abci.ValidatorUpdate.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        pubKey: (f = msg.getPubKey()) && tendermint_crypto_keys_pb.PublicKey.toObject(includeInstance, f),
+        power: jspb.Message.getFieldWithDefault(msg, 2, 0),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.abci.ValidatorUpdate}
  */
-proto.tendermint.abci.ValidatorUpdate.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.tendermint.abci.ValidatorUpdate;
+proto.tendermint.abci.ValidatorUpdate.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.tendermint.abci.ValidatorUpdate();
   return proto.tendermint.abci.ValidatorUpdate.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -9936,41 +9264,39 @@ proto.tendermint.abci.ValidatorUpdate.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.abci.ValidatorUpdate}
  */
-proto.tendermint.abci.ValidatorUpdate.deserializeBinaryFromReader = function(msg, reader) {
+proto.tendermint.abci.ValidatorUpdate.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = new tendermint_crypto_keys_pb.PublicKey;
-      reader.readMessage(value,tendermint_crypto_keys_pb.PublicKey.deserializeBinaryFromReader);
-      msg.setPubKey(value);
-      break;
-    case 2:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setPower(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = new tendermint_crypto_keys_pb.PublicKey();
+        reader.readMessage(value, tendermint_crypto_keys_pb.PublicKey.deserializeBinaryFromReader);
+        msg.setPubKey(value);
+        break;
+      case 2:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setPower(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.ValidatorUpdate.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.tendermint.abci.ValidatorUpdate.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.tendermint.abci.ValidatorUpdate.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -9979,71 +9305,63 @@ proto.tendermint.abci.ValidatorUpdate.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.ValidatorUpdate.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.tendermint.abci.ValidatorUpdate.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getPubKey();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      tendermint_crypto_keys_pb.PublicKey.serializeBinaryToWriter
+      tendermint_crypto_keys_pb.PublicKey.serializeBinaryToWriter,
     );
   }
   f = message.getPower();
   if (f !== 0) {
     writer.writeInt64(
       2,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional tendermint.crypto.PublicKey pub_key = 1;
  * @return {?proto.tendermint.crypto.PublicKey}
  */
-proto.tendermint.abci.ValidatorUpdate.prototype.getPubKey = function() {
+proto.tendermint.abci.ValidatorUpdate.prototype.getPubKey = function () {
   return /** @type{?proto.tendermint.crypto.PublicKey} */ (
     jspb.Message.getWrapperField(this, tendermint_crypto_keys_pb.PublicKey, 1));
 };
 
-
 /** @param {?proto.tendermint.crypto.PublicKey|undefined} value */
-proto.tendermint.abci.ValidatorUpdate.prototype.setPubKey = function(value) {
+proto.tendermint.abci.ValidatorUpdate.prototype.setPubKey = function (value) {
   jspb.Message.setWrapperField(this, 1, value);
 };
 
-
-proto.tendermint.abci.ValidatorUpdate.prototype.clearPubKey = function() {
+proto.tendermint.abci.ValidatorUpdate.prototype.clearPubKey = function () {
   this.setPubKey(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.abci.ValidatorUpdate.prototype.hasPubKey = function() {
+proto.tendermint.abci.ValidatorUpdate.prototype.hasPubKey = function () {
   return jspb.Message.getField(this, 1) != null;
 };
-
 
 /**
  * optional int64 power = 2;
  * @return {number}
  */
-proto.tendermint.abci.ValidatorUpdate.prototype.getPower = function() {
+proto.tendermint.abci.ValidatorUpdate.prototype.getPower = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
-
 /** @param {number} value */
-proto.tendermint.abci.ValidatorUpdate.prototype.setPower = function(value) {
+proto.tendermint.abci.ValidatorUpdate.prototype.setPower = function (value) {
   jspb.Message.setProto3IntField(this, 2, value);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -10055,14 +9373,13 @@ proto.tendermint.abci.ValidatorUpdate.prototype.setPower = function(value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.abci.VoteInfo = function(opt_data) {
+proto.tendermint.abci.VoteInfo = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.tendermint.abci.VoteInfo, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.tendermint.abci.VoteInfo.displayName = 'proto.tendermint.abci.VoteInfo';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -10075,12 +9392,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.tendermint.abci.VoteInfo.prototype.toObject = function(opt_includeInstance) {
-  return proto.tendermint.abci.VoteInfo.toObject(opt_includeInstance, this);
-};
+  proto.tendermint.abci.VoteInfo.prototype.toObject = function (opt_includeInstance) {
+    return proto.tendermint.abci.VoteInfo.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -10089,31 +9405,30 @@ proto.tendermint.abci.VoteInfo.prototype.toObject = function(opt_includeInstance
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.VoteInfo.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    validator: (f = msg.getValidator()) && proto.tendermint.abci.Validator.toObject(includeInstance, f),
-    signedLastBlock: jspb.Message.getFieldWithDefault(msg, 2, false)
+  proto.tendermint.abci.VoteInfo.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        validator: (f = msg.getValidator()) && proto.tendermint.abci.Validator.toObject(includeInstance, f),
+        signedLastBlock: jspb.Message.getFieldWithDefault(msg, 2, false),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.abci.VoteInfo}
  */
-proto.tendermint.abci.VoteInfo.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.tendermint.abci.VoteInfo;
+proto.tendermint.abci.VoteInfo.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.tendermint.abci.VoteInfo();
   return proto.tendermint.abci.VoteInfo.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -10122,41 +9437,39 @@ proto.tendermint.abci.VoteInfo.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.abci.VoteInfo}
  */
-proto.tendermint.abci.VoteInfo.deserializeBinaryFromReader = function(msg, reader) {
+proto.tendermint.abci.VoteInfo.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = new proto.tendermint.abci.Validator;
-      reader.readMessage(value,proto.tendermint.abci.Validator.deserializeBinaryFromReader);
-      msg.setValidator(value);
-      break;
-    case 2:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setSignedLastBlock(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = new proto.tendermint.abci.Validator();
+        reader.readMessage(value, proto.tendermint.abci.Validator.deserializeBinaryFromReader);
+        msg.setValidator(value);
+        break;
+      case 2:
+        var value = /** @type {boolean} */ (reader.readBool());
+        msg.setSignedLastBlock(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.VoteInfo.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.tendermint.abci.VoteInfo.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.tendermint.abci.VoteInfo.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -10165,55 +9478,50 @@ proto.tendermint.abci.VoteInfo.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.VoteInfo.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.tendermint.abci.VoteInfo.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getValidator();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.tendermint.abci.Validator.serializeBinaryToWriter
+      proto.tendermint.abci.Validator.serializeBinaryToWriter,
     );
   }
   f = message.getSignedLastBlock();
   if (f) {
     writer.writeBool(
       2,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional Validator validator = 1;
  * @return {?proto.tendermint.abci.Validator}
  */
-proto.tendermint.abci.VoteInfo.prototype.getValidator = function() {
+proto.tendermint.abci.VoteInfo.prototype.getValidator = function () {
   return /** @type{?proto.tendermint.abci.Validator} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.abci.Validator, 1));
 };
 
-
 /** @param {?proto.tendermint.abci.Validator|undefined} value */
-proto.tendermint.abci.VoteInfo.prototype.setValidator = function(value) {
+proto.tendermint.abci.VoteInfo.prototype.setValidator = function (value) {
   jspb.Message.setWrapperField(this, 1, value);
 };
 
-
-proto.tendermint.abci.VoteInfo.prototype.clearValidator = function() {
+proto.tendermint.abci.VoteInfo.prototype.clearValidator = function () {
   this.setValidator(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.abci.VoteInfo.prototype.hasValidator = function() {
+proto.tendermint.abci.VoteInfo.prototype.hasValidator = function () {
   return jspb.Message.getField(this, 1) != null;
 };
-
 
 /**
  * optional bool signed_last_block = 2;
@@ -10221,17 +9529,14 @@ proto.tendermint.abci.VoteInfo.prototype.hasValidator = function() {
  * You should avoid comparisons like {@code val === true/false} in those cases.
  * @return {boolean}
  */
-proto.tendermint.abci.VoteInfo.prototype.getSignedLastBlock = function() {
+proto.tendermint.abci.VoteInfo.prototype.getSignedLastBlock = function () {
   return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 2, false));
 };
 
-
 /** @param {boolean} value */
-proto.tendermint.abci.VoteInfo.prototype.setSignedLastBlock = function(value) {
+proto.tendermint.abci.VoteInfo.prototype.setSignedLastBlock = function (value) {
   jspb.Message.setProto3BooleanField(this, 2, value);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -10243,14 +9548,13 @@ proto.tendermint.abci.VoteInfo.prototype.setSignedLastBlock = function(value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.abci.Evidence = function(opt_data) {
+proto.tendermint.abci.Evidence = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.tendermint.abci.Evidence, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.tendermint.abci.Evidence.displayName = 'proto.tendermint.abci.Evidence';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -10263,12 +9567,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.tendermint.abci.Evidence.prototype.toObject = function(opt_includeInstance) {
-  return proto.tendermint.abci.Evidence.toObject(opt_includeInstance, this);
-};
+  proto.tendermint.abci.Evidence.prototype.toObject = function (opt_includeInstance) {
+    return proto.tendermint.abci.Evidence.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -10277,34 +9580,33 @@ proto.tendermint.abci.Evidence.prototype.toObject = function(opt_includeInstance
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.Evidence.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    type: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    validator: (f = msg.getValidator()) && proto.tendermint.abci.Validator.toObject(includeInstance, f),
-    height: jspb.Message.getFieldWithDefault(msg, 3, 0),
-    time: (f = msg.getTime()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
-    totalVotingPower: jspb.Message.getFieldWithDefault(msg, 5, 0)
+  proto.tendermint.abci.Evidence.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        type: jspb.Message.getFieldWithDefault(msg, 1, 0),
+        validator: (f = msg.getValidator()) && proto.tendermint.abci.Validator.toObject(includeInstance, f),
+        height: jspb.Message.getFieldWithDefault(msg, 3, 0),
+        time: (f = msg.getTime()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
+        totalVotingPower: jspb.Message.getFieldWithDefault(msg, 5, 0),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.abci.Evidence}
  */
-proto.tendermint.abci.Evidence.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.tendermint.abci.Evidence;
+proto.tendermint.abci.Evidence.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.tendermint.abci.Evidence();
   return proto.tendermint.abci.Evidence.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -10313,54 +9615,52 @@ proto.tendermint.abci.Evidence.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.abci.Evidence}
  */
-proto.tendermint.abci.Evidence.deserializeBinaryFromReader = function(msg, reader) {
+proto.tendermint.abci.Evidence.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {!proto.tendermint.abci.EvidenceType} */ (reader.readEnum());
-      msg.setType(value);
-      break;
-    case 2:
-      var value = new proto.tendermint.abci.Validator;
-      reader.readMessage(value,proto.tendermint.abci.Validator.deserializeBinaryFromReader);
-      msg.setValidator(value);
-      break;
-    case 3:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setHeight(value);
-      break;
-    case 4:
-      var value = new google_protobuf_timestamp_pb.Timestamp;
-      reader.readMessage(value,google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
-      msg.setTime(value);
-      break;
-    case 5:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setTotalVotingPower(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {!proto.tendermint.abci.EvidenceType} */ (reader.readEnum());
+        msg.setType(value);
+        break;
+      case 2:
+        var value = new proto.tendermint.abci.Validator();
+        reader.readMessage(value, proto.tendermint.abci.Validator.deserializeBinaryFromReader);
+        msg.setValidator(value);
+        break;
+      case 3:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setHeight(value);
+        break;
+      case 4:
+        var value = new google_protobuf_timestamp_pb.Timestamp();
+        reader.readMessage(value, google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
+        msg.setTime(value);
+        break;
+      case 5:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setTotalVotingPower(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.Evidence.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.tendermint.abci.Evidence.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.tendermint.abci.Evidence.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -10369,13 +9669,13 @@ proto.tendermint.abci.Evidence.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.Evidence.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.tendermint.abci.Evidence.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getType();
   if (f !== 0.0) {
     writer.writeEnum(
       1,
-      f
+      f,
     );
   }
   f = message.getValidator();
@@ -10383,14 +9683,14 @@ proto.tendermint.abci.Evidence.serializeBinaryToWriter = function(message, write
     writer.writeMessage(
       2,
       f,
-      proto.tendermint.abci.Validator.serializeBinaryToWriter
+      proto.tendermint.abci.Validator.serializeBinaryToWriter,
     );
   }
   f = message.getHeight();
   if (f !== 0) {
     writer.writeInt64(
       3,
-      f
+      f,
     );
   }
   f = message.getTime();
@@ -10398,124 +9698,108 @@ proto.tendermint.abci.Evidence.serializeBinaryToWriter = function(message, write
     writer.writeMessage(
       4,
       f,
-      google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter
+      google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter,
     );
   }
   f = message.getTotalVotingPower();
   if (f !== 0) {
     writer.writeInt64(
       5,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional EvidenceType type = 1;
  * @return {!proto.tendermint.abci.EvidenceType}
  */
-proto.tendermint.abci.Evidence.prototype.getType = function() {
+proto.tendermint.abci.Evidence.prototype.getType = function () {
   return /** @type {!proto.tendermint.abci.EvidenceType} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
-
 /** @param {!proto.tendermint.abci.EvidenceType} value */
-proto.tendermint.abci.Evidence.prototype.setType = function(value) {
+proto.tendermint.abci.Evidence.prototype.setType = function (value) {
   jspb.Message.setProto3EnumField(this, 1, value);
 };
-
 
 /**
  * optional Validator validator = 2;
  * @return {?proto.tendermint.abci.Validator}
  */
-proto.tendermint.abci.Evidence.prototype.getValidator = function() {
+proto.tendermint.abci.Evidence.prototype.getValidator = function () {
   return /** @type{?proto.tendermint.abci.Validator} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.abci.Validator, 2));
 };
 
-
 /** @param {?proto.tendermint.abci.Validator|undefined} value */
-proto.tendermint.abci.Evidence.prototype.setValidator = function(value) {
+proto.tendermint.abci.Evidence.prototype.setValidator = function (value) {
   jspb.Message.setWrapperField(this, 2, value);
 };
 
-
-proto.tendermint.abci.Evidence.prototype.clearValidator = function() {
+proto.tendermint.abci.Evidence.prototype.clearValidator = function () {
   this.setValidator(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.abci.Evidence.prototype.hasValidator = function() {
+proto.tendermint.abci.Evidence.prototype.hasValidator = function () {
   return jspb.Message.getField(this, 2) != null;
 };
-
 
 /**
  * optional int64 height = 3;
  * @return {number}
  */
-proto.tendermint.abci.Evidence.prototype.getHeight = function() {
+proto.tendermint.abci.Evidence.prototype.getHeight = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
-
 /** @param {number} value */
-proto.tendermint.abci.Evidence.prototype.setHeight = function(value) {
+proto.tendermint.abci.Evidence.prototype.setHeight = function (value) {
   jspb.Message.setProto3IntField(this, 3, value);
 };
-
 
 /**
  * optional google.protobuf.Timestamp time = 4;
  * @return {?proto.google.protobuf.Timestamp}
  */
-proto.tendermint.abci.Evidence.prototype.getTime = function() {
+proto.tendermint.abci.Evidence.prototype.getTime = function () {
   return /** @type{?proto.google.protobuf.Timestamp} */ (
     jspb.Message.getWrapperField(this, google_protobuf_timestamp_pb.Timestamp, 4));
 };
 
-
 /** @param {?proto.google.protobuf.Timestamp|undefined} value */
-proto.tendermint.abci.Evidence.prototype.setTime = function(value) {
+proto.tendermint.abci.Evidence.prototype.setTime = function (value) {
   jspb.Message.setWrapperField(this, 4, value);
 };
 
-
-proto.tendermint.abci.Evidence.prototype.clearTime = function() {
+proto.tendermint.abci.Evidence.prototype.clearTime = function () {
   this.setTime(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.abci.Evidence.prototype.hasTime = function() {
+proto.tendermint.abci.Evidence.prototype.hasTime = function () {
   return jspb.Message.getField(this, 4) != null;
 };
-
 
 /**
  * optional int64 total_voting_power = 5;
  * @return {number}
  */
-proto.tendermint.abci.Evidence.prototype.getTotalVotingPower = function() {
+proto.tendermint.abci.Evidence.prototype.getTotalVotingPower = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
 };
 
-
 /** @param {number} value */
-proto.tendermint.abci.Evidence.prototype.setTotalVotingPower = function(value) {
+proto.tendermint.abci.Evidence.prototype.setTotalVotingPower = function (value) {
   jspb.Message.setProto3IntField(this, 5, value);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -10527,14 +9811,13 @@ proto.tendermint.abci.Evidence.prototype.setTotalVotingPower = function(value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.abci.Snapshot = function(opt_data) {
+proto.tendermint.abci.Snapshot = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.tendermint.abci.Snapshot, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.tendermint.abci.Snapshot.displayName = 'proto.tendermint.abci.Snapshot';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -10547,12 +9830,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.tendermint.abci.Snapshot.prototype.toObject = function(opt_includeInstance) {
-  return proto.tendermint.abci.Snapshot.toObject(opt_includeInstance, this);
-};
+  proto.tendermint.abci.Snapshot.prototype.toObject = function (opt_includeInstance) {
+    return proto.tendermint.abci.Snapshot.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -10561,34 +9843,33 @@ proto.tendermint.abci.Snapshot.prototype.toObject = function(opt_includeInstance
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.Snapshot.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    height: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    format: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    chunks: jspb.Message.getFieldWithDefault(msg, 3, 0),
-    hash: msg.getHash_asB64(),
-    metadata: msg.getMetadata_asB64()
+  proto.tendermint.abci.Snapshot.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        height: jspb.Message.getFieldWithDefault(msg, 1, 0),
+        format: jspb.Message.getFieldWithDefault(msg, 2, 0),
+        chunks: jspb.Message.getFieldWithDefault(msg, 3, 0),
+        hash: msg.getHash_asB64(),
+        metadata: msg.getMetadata_asB64(),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.abci.Snapshot}
  */
-proto.tendermint.abci.Snapshot.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.tendermint.abci.Snapshot;
+proto.tendermint.abci.Snapshot.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.tendermint.abci.Snapshot();
   return proto.tendermint.abci.Snapshot.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -10597,52 +9878,50 @@ proto.tendermint.abci.Snapshot.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.abci.Snapshot}
  */
-proto.tendermint.abci.Snapshot.deserializeBinaryFromReader = function(msg, reader) {
+proto.tendermint.abci.Snapshot.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {number} */ (reader.readUint64());
-      msg.setHeight(value);
-      break;
-    case 2:
-      var value = /** @type {number} */ (reader.readUint32());
-      msg.setFormat(value);
-      break;
-    case 3:
-      var value = /** @type {number} */ (reader.readUint32());
-      msg.setChunks(value);
-      break;
-    case 4:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setHash(value);
-      break;
-    case 5:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setMetadata(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {number} */ (reader.readUint64());
+        msg.setHeight(value);
+        break;
+      case 2:
+        var value = /** @type {number} */ (reader.readUint32());
+        msg.setFormat(value);
+        break;
+      case 3:
+        var value = /** @type {number} */ (reader.readUint32());
+        msg.setChunks(value);
+        break;
+      case 4:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.setHash(value);
+        break;
+      case 5:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.setMetadata(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.Snapshot.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.tendermint.abci.Snapshot.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.tendermint.abci.Snapshot.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -10651,110 +9930,102 @@ proto.tendermint.abci.Snapshot.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.abci.Snapshot.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.tendermint.abci.Snapshot.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getHeight();
   if (f !== 0) {
     writer.writeUint64(
       1,
-      f
+      f,
     );
   }
   f = message.getFormat();
   if (f !== 0) {
     writer.writeUint32(
       2,
-      f
+      f,
     );
   }
   f = message.getChunks();
   if (f !== 0) {
     writer.writeUint32(
       3,
-      f
+      f,
     );
   }
   f = message.getHash_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       4,
-      f
+      f,
     );
   }
   f = message.getMetadata_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       5,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional uint64 height = 1;
  * @return {number}
  */
-proto.tendermint.abci.Snapshot.prototype.getHeight = function() {
+proto.tendermint.abci.Snapshot.prototype.getHeight = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
-
 /** @param {number} value */
-proto.tendermint.abci.Snapshot.prototype.setHeight = function(value) {
+proto.tendermint.abci.Snapshot.prototype.setHeight = function (value) {
   jspb.Message.setProto3IntField(this, 1, value);
 };
-
 
 /**
  * optional uint32 format = 2;
  * @return {number}
  */
-proto.tendermint.abci.Snapshot.prototype.getFormat = function() {
+proto.tendermint.abci.Snapshot.prototype.getFormat = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
-
 /** @param {number} value */
-proto.tendermint.abci.Snapshot.prototype.setFormat = function(value) {
+proto.tendermint.abci.Snapshot.prototype.setFormat = function (value) {
   jspb.Message.setProto3IntField(this, 2, value);
 };
-
 
 /**
  * optional uint32 chunks = 3;
  * @return {number}
  */
-proto.tendermint.abci.Snapshot.prototype.getChunks = function() {
+proto.tendermint.abci.Snapshot.prototype.getChunks = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
-
 /** @param {number} value */
-proto.tendermint.abci.Snapshot.prototype.setChunks = function(value) {
+proto.tendermint.abci.Snapshot.prototype.setChunks = function (value) {
   jspb.Message.setProto3IntField(this, 3, value);
 };
 
-
 /**
  * optional bytes hash = 4;
  * @return {!(string|Uint8Array)}
  */
-proto.tendermint.abci.Snapshot.prototype.getHash = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+proto.tendermint.abci.Snapshot.prototype.getHash = function () {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 4, ''));
 };
-
 
 /**
  * optional bytes hash = 4;
  * This is a type-conversion wrapper around `getHash()`
  * @return {string}
  */
-proto.tendermint.abci.Snapshot.prototype.getHash_asB64 = function() {
+proto.tendermint.abci.Snapshot.prototype.getHash_asB64 = function () {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getHash()));
+    this.getHash(),
+  ));
 };
-
 
 /**
  * optional bytes hash = 4;
@@ -10763,37 +10034,35 @@ proto.tendermint.abci.Snapshot.prototype.getHash_asB64 = function() {
  * This is a type-conversion wrapper around `getHash()`
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.Snapshot.prototype.getHash_asU8 = function() {
+proto.tendermint.abci.Snapshot.prototype.getHash_asU8 = function () {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getHash()));
+    this.getHash(),
+  ));
 };
 
-
 /** @param {!(string|Uint8Array)} value */
-proto.tendermint.abci.Snapshot.prototype.setHash = function(value) {
+proto.tendermint.abci.Snapshot.prototype.setHash = function (value) {
   jspb.Message.setProto3BytesField(this, 4, value);
 };
 
-
 /**
  * optional bytes metadata = 5;
  * @return {!(string|Uint8Array)}
  */
-proto.tendermint.abci.Snapshot.prototype.getMetadata = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
+proto.tendermint.abci.Snapshot.prototype.getMetadata = function () {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 5, ''));
 };
-
 
 /**
  * optional bytes metadata = 5;
  * This is a type-conversion wrapper around `getMetadata()`
  * @return {string}
  */
-proto.tendermint.abci.Snapshot.prototype.getMetadata_asB64 = function() {
+proto.tendermint.abci.Snapshot.prototype.getMetadata_asB64 = function () {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getMetadata()));
+    this.getMetadata(),
+  ));
 };
-
 
 /**
  * optional bytes metadata = 5;
@@ -10802,24 +10071,23 @@ proto.tendermint.abci.Snapshot.prototype.getMetadata_asB64 = function() {
  * This is a type-conversion wrapper around `getMetadata()`
  * @return {!Uint8Array}
  */
-proto.tendermint.abci.Snapshot.prototype.getMetadata_asU8 = function() {
+proto.tendermint.abci.Snapshot.prototype.getMetadata_asU8 = function () {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getMetadata()));
+    this.getMetadata(),
+  ));
 };
-
 
 /** @param {!(string|Uint8Array)} value */
-proto.tendermint.abci.Snapshot.prototype.setMetadata = function(value) {
+proto.tendermint.abci.Snapshot.prototype.setMetadata = function (value) {
   jspb.Message.setProto3BytesField(this, 5, value);
 };
-
 
 /**
  * @enum {number}
  */
 proto.tendermint.abci.CheckTxType = {
   NEW: 0,
-  RECHECK: 1
+  RECHECK: 1,
 };
 
 /**
@@ -10828,7 +10096,7 @@ proto.tendermint.abci.CheckTxType = {
 proto.tendermint.abci.EvidenceType = {
   UNKNOWN: 0,
   DUPLICATE_VOTE: 1,
-  LIGHT_CLIENT_ATTACK: 2
+  LIGHT_CLIENT_ATTACK: 2,
 };
 
 goog.object.extend(exports, proto.tendermint.abci);

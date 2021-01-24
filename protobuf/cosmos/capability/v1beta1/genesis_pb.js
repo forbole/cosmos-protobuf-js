@@ -7,12 +7,14 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-var jspb = require('google-protobuf');
-var goog = jspb;
-var global = Function('return this')();
+const jspb = require('google-protobuf');
 
-var gogoproto_gogo_pb = require('../../../gogoproto/gogo_pb.js');
-var cosmos_capability_v1beta1_capability_pb = require('../../../cosmos/capability/v1beta1/capability_pb.js');
+const goog = jspb;
+const global = Function('return this')();
+
+const gogoproto_gogo_pb = require('../../../gogoproto/gogo_pb.js');
+const cosmos_capability_v1beta1_capability_pb = require('./capability_pb.js');
+
 goog.exportSymbol('proto.cosmos.capability.v1beta1.GenesisOwners', null, global);
 goog.exportSymbol('proto.cosmos.capability.v1beta1.GenesisState', null, global);
 
@@ -26,14 +28,13 @@ goog.exportSymbol('proto.cosmos.capability.v1beta1.GenesisState', null, global);
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.capability.v1beta1.GenesisOwners = function(opt_data) {
+proto.cosmos.capability.v1beta1.GenesisOwners = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.capability.v1beta1.GenesisOwners, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.capability.v1beta1.GenesisOwners.displayName = 'proto.cosmos.capability.v1beta1.GenesisOwners';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -46,12 +47,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.capability.v1beta1.GenesisOwners.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.capability.v1beta1.GenesisOwners.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.capability.v1beta1.GenesisOwners.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.capability.v1beta1.GenesisOwners.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -60,31 +60,30 @@ proto.cosmos.capability.v1beta1.GenesisOwners.prototype.toObject = function(opt_
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.capability.v1beta1.GenesisOwners.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    index: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    indexOwners: (f = msg.getIndexOwners()) && cosmos_capability_v1beta1_capability_pb.CapabilityOwners.toObject(includeInstance, f)
+  proto.cosmos.capability.v1beta1.GenesisOwners.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        index: jspb.Message.getFieldWithDefault(msg, 1, 0),
+        indexOwners: (f = msg.getIndexOwners()) && cosmos_capability_v1beta1_capability_pb.CapabilityOwners.toObject(includeInstance, f),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.capability.v1beta1.GenesisOwners}
  */
-proto.cosmos.capability.v1beta1.GenesisOwners.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.capability.v1beta1.GenesisOwners;
+proto.cosmos.capability.v1beta1.GenesisOwners.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.capability.v1beta1.GenesisOwners();
   return proto.cosmos.capability.v1beta1.GenesisOwners.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -93,41 +92,39 @@ proto.cosmos.capability.v1beta1.GenesisOwners.deserializeBinary = function(bytes
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.capability.v1beta1.GenesisOwners}
  */
-proto.cosmos.capability.v1beta1.GenesisOwners.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.capability.v1beta1.GenesisOwners.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {number} */ (reader.readUint64());
-      msg.setIndex(value);
-      break;
-    case 2:
-      var value = new cosmos_capability_v1beta1_capability_pb.CapabilityOwners;
-      reader.readMessage(value,cosmos_capability_v1beta1_capability_pb.CapabilityOwners.deserializeBinaryFromReader);
-      msg.setIndexOwners(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {number} */ (reader.readUint64());
+        msg.setIndex(value);
+        break;
+      case 2:
+        var value = new cosmos_capability_v1beta1_capability_pb.CapabilityOwners();
+        reader.readMessage(value, cosmos_capability_v1beta1_capability_pb.CapabilityOwners.deserializeBinaryFromReader);
+        msg.setIndexOwners(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.capability.v1beta1.GenesisOwners.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.capability.v1beta1.GenesisOwners.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.capability.v1beta1.GenesisOwners.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -136,13 +133,13 @@ proto.cosmos.capability.v1beta1.GenesisOwners.prototype.serializeBinary = functi
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.capability.v1beta1.GenesisOwners.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.capability.v1beta1.GenesisOwners.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getIndex();
   if (f !== 0) {
     writer.writeUint64(
       1,
-      f
+      f,
     );
   }
   f = message.getIndexOwners();
@@ -150,57 +147,49 @@ proto.cosmos.capability.v1beta1.GenesisOwners.serializeBinaryToWriter = function
     writer.writeMessage(
       2,
       f,
-      cosmos_capability_v1beta1_capability_pb.CapabilityOwners.serializeBinaryToWriter
+      cosmos_capability_v1beta1_capability_pb.CapabilityOwners.serializeBinaryToWriter,
     );
   }
 };
-
 
 /**
  * optional uint64 index = 1;
  * @return {number}
  */
-proto.cosmos.capability.v1beta1.GenesisOwners.prototype.getIndex = function() {
+proto.cosmos.capability.v1beta1.GenesisOwners.prototype.getIndex = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
-
 /** @param {number} value */
-proto.cosmos.capability.v1beta1.GenesisOwners.prototype.setIndex = function(value) {
+proto.cosmos.capability.v1beta1.GenesisOwners.prototype.setIndex = function (value) {
   jspb.Message.setProto3IntField(this, 1, value);
 };
-
 
 /**
  * optional CapabilityOwners index_owners = 2;
  * @return {?proto.cosmos.capability.v1beta1.CapabilityOwners}
  */
-proto.cosmos.capability.v1beta1.GenesisOwners.prototype.getIndexOwners = function() {
+proto.cosmos.capability.v1beta1.GenesisOwners.prototype.getIndexOwners = function () {
   return /** @type{?proto.cosmos.capability.v1beta1.CapabilityOwners} */ (
     jspb.Message.getWrapperField(this, cosmos_capability_v1beta1_capability_pb.CapabilityOwners, 2));
 };
 
-
 /** @param {?proto.cosmos.capability.v1beta1.CapabilityOwners|undefined} value */
-proto.cosmos.capability.v1beta1.GenesisOwners.prototype.setIndexOwners = function(value) {
+proto.cosmos.capability.v1beta1.GenesisOwners.prototype.setIndexOwners = function (value) {
   jspb.Message.setWrapperField(this, 2, value);
 };
 
-
-proto.cosmos.capability.v1beta1.GenesisOwners.prototype.clearIndexOwners = function() {
+proto.cosmos.capability.v1beta1.GenesisOwners.prototype.clearIndexOwners = function () {
   this.setIndexOwners(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.cosmos.capability.v1beta1.GenesisOwners.prototype.hasIndexOwners = function() {
+proto.cosmos.capability.v1beta1.GenesisOwners.prototype.hasIndexOwners = function () {
   return jspb.Message.getField(this, 2) != null;
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -212,7 +201,7 @@ proto.cosmos.capability.v1beta1.GenesisOwners.prototype.hasIndexOwners = functio
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.capability.v1beta1.GenesisState = function(opt_data) {
+proto.cosmos.capability.v1beta1.GenesisState = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.cosmos.capability.v1beta1.GenesisState.repeatedFields_, null);
 };
 goog.inherits(proto.cosmos.capability.v1beta1.GenesisState, jspb.Message);
@@ -226,8 +215,6 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.cosmos.capability.v1beta1.GenesisState.repeatedFields_ = [2];
 
-
-
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -239,12 +226,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.capability.v1beta1.GenesisState.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.capability.v1beta1.GenesisState.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.capability.v1beta1.GenesisState.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.capability.v1beta1.GenesisState.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -253,32 +239,31 @@ proto.cosmos.capability.v1beta1.GenesisState.prototype.toObject = function(opt_i
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.capability.v1beta1.GenesisState.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    index: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    ownersList: jspb.Message.toObjectList(msg.getOwnersList(),
-    proto.cosmos.capability.v1beta1.GenesisOwners.toObject, includeInstance)
+  proto.cosmos.capability.v1beta1.GenesisState.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        index: jspb.Message.getFieldWithDefault(msg, 1, 0),
+        ownersList: jspb.Message.toObjectList(msg.getOwnersList(),
+          proto.cosmos.capability.v1beta1.GenesisOwners.toObject, includeInstance),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.capability.v1beta1.GenesisState}
  */
-proto.cosmos.capability.v1beta1.GenesisState.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.capability.v1beta1.GenesisState;
+proto.cosmos.capability.v1beta1.GenesisState.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.capability.v1beta1.GenesisState();
   return proto.cosmos.capability.v1beta1.GenesisState.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -287,41 +272,39 @@ proto.cosmos.capability.v1beta1.GenesisState.deserializeBinary = function(bytes)
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.capability.v1beta1.GenesisState}
  */
-proto.cosmos.capability.v1beta1.GenesisState.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.capability.v1beta1.GenesisState.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {number} */ (reader.readUint64());
-      msg.setIndex(value);
-      break;
-    case 2:
-      var value = new proto.cosmos.capability.v1beta1.GenesisOwners;
-      reader.readMessage(value,proto.cosmos.capability.v1beta1.GenesisOwners.deserializeBinaryFromReader);
-      msg.addOwners(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {number} */ (reader.readUint64());
+        msg.setIndex(value);
+        break;
+      case 2:
+        var value = new proto.cosmos.capability.v1beta1.GenesisOwners();
+        reader.readMessage(value, proto.cosmos.capability.v1beta1.GenesisOwners.deserializeBinaryFromReader);
+        msg.addOwners(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.capability.v1beta1.GenesisState.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.capability.v1beta1.GenesisState.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.capability.v1beta1.GenesisState.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -330,13 +313,13 @@ proto.cosmos.capability.v1beta1.GenesisState.prototype.serializeBinary = functio
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.capability.v1beta1.GenesisState.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.capability.v1beta1.GenesisState.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getIndex();
   if (f !== 0) {
     writer.writeUint64(
       1,
-      f
+      f,
     );
   }
   f = message.getOwnersList();
@@ -344,56 +327,49 @@ proto.cosmos.capability.v1beta1.GenesisState.serializeBinaryToWriter = function(
     writer.writeRepeatedMessage(
       2,
       f,
-      proto.cosmos.capability.v1beta1.GenesisOwners.serializeBinaryToWriter
+      proto.cosmos.capability.v1beta1.GenesisOwners.serializeBinaryToWriter,
     );
   }
 };
-
 
 /**
  * optional uint64 index = 1;
  * @return {number}
  */
-proto.cosmos.capability.v1beta1.GenesisState.prototype.getIndex = function() {
+proto.cosmos.capability.v1beta1.GenesisState.prototype.getIndex = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
-
 /** @param {number} value */
-proto.cosmos.capability.v1beta1.GenesisState.prototype.setIndex = function(value) {
+proto.cosmos.capability.v1beta1.GenesisState.prototype.setIndex = function (value) {
   jspb.Message.setProto3IntField(this, 1, value);
 };
-
 
 /**
  * repeated GenesisOwners owners = 2;
  * @return {!Array<!proto.cosmos.capability.v1beta1.GenesisOwners>}
  */
-proto.cosmos.capability.v1beta1.GenesisState.prototype.getOwnersList = function() {
+proto.cosmos.capability.v1beta1.GenesisState.prototype.getOwnersList = function () {
   return /** @type{!Array<!proto.cosmos.capability.v1beta1.GenesisOwners>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.cosmos.capability.v1beta1.GenesisOwners, 2));
 };
 
-
 /** @param {!Array<!proto.cosmos.capability.v1beta1.GenesisOwners>} value */
-proto.cosmos.capability.v1beta1.GenesisState.prototype.setOwnersList = function(value) {
+proto.cosmos.capability.v1beta1.GenesisState.prototype.setOwnersList = function (value) {
   jspb.Message.setRepeatedWrapperField(this, 2, value);
 };
-
 
 /**
  * @param {!proto.cosmos.capability.v1beta1.GenesisOwners=} opt_value
  * @param {number=} opt_index
  * @return {!proto.cosmos.capability.v1beta1.GenesisOwners}
  */
-proto.cosmos.capability.v1beta1.GenesisState.prototype.addOwners = function(opt_value, opt_index) {
+proto.cosmos.capability.v1beta1.GenesisState.prototype.addOwners = function (opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.cosmos.capability.v1beta1.GenesisOwners, opt_index);
 };
 
-
-proto.cosmos.capability.v1beta1.GenesisState.prototype.clearOwnersList = function() {
+proto.cosmos.capability.v1beta1.GenesisState.prototype.clearOwnersList = function () {
   this.setOwnersList([]);
 };
-
 
 goog.object.extend(exports, proto.cosmos.capability.v1beta1);

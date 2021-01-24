@@ -2,7 +2,6 @@
 // file: cosmos/crypto/multisig/keys.proto
 
 import * as jspb from "google-protobuf";
-import * as gogoproto_gogo_pb from "../../../gogoproto/gogo_pb";
 import * as google_protobuf_any_pb from "google-protobuf/google/protobuf/any_pb";
 
 export class LegacyAminoPubKey extends jspb.Message {

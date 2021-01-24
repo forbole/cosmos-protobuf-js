@@ -7,11 +7,13 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-var jspb = require('google-protobuf');
-var goog = jspb;
-var global = Function('return this')();
+const jspb = require('google-protobuf');
 
-var google_api_annotations_pb = require('../../../google/api/annotations_pb.js');
+const goog = jspb;
+const global = Function('return this')();
+
+const google_api_annotations_pb = require('../../../google/api/annotations_pb.js');
+
 goog.exportSymbol('proto.google.logging.type.LogSeverity', null, global);
 /**
  * @enum {number}
@@ -25,7 +27,7 @@ proto.google.logging.type.LogSeverity = {
   ERROR: 500,
   CRITICAL: 600,
   ALERT: 700,
-  EMERGENCY: 800
+  EMERGENCY: 800,
 };
 
 goog.object.extend(exports, proto.google.logging.type);

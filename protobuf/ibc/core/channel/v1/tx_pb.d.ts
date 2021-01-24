@@ -2,7 +2,6 @@
 // file: ibc/core/channel/v1/tx.proto
 
 import * as jspb from "google-protobuf";
-import * as gogoproto_gogo_pb from "../../../../gogoproto/gogo_pb";
 import * as ibc_core_client_v1_client_pb from "../../../../ibc/core/client/v1/client_pb";
 import * as ibc_core_channel_v1_channel_pb from "../../../../ibc/core/channel/v1/channel_pb";
 

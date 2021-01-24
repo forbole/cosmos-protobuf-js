@@ -2,7 +2,6 @@
 // file: cosmos/distribution/v1beta1/genesis.proto
 
 import * as jspb from "google-protobuf";
-import * as gogoproto_gogo_pb from "../../../gogoproto/gogo_pb";
 import * as cosmos_base_v1beta1_coin_pb from "../../../cosmos/base/v1beta1/coin_pb";
 import * as cosmos_distribution_v1beta1_distribution_pb from "../../../cosmos/distribution/v1beta1/distribution_pb";
 

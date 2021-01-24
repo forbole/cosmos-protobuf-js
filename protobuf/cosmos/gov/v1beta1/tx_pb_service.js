@@ -1,40 +1,40 @@
 // package: cosmos.gov.v1beta1
 // file: cosmos/gov/v1beta1/tx.proto
 
-var cosmos_gov_v1beta1_tx_pb = require("../../../cosmos/gov/v1beta1/tx_pb");
-var grpc = require("@improbable-eng/grpc-web").grpc;
+const { grpc } = require('@improbable-eng/grpc-web');
+const cosmos_gov_v1beta1_tx_pb = require('./tx_pb');
 
-var Msg = (function () {
+const Msg = (function () {
   function Msg() {}
-  Msg.serviceName = "cosmos.gov.v1beta1.Msg";
+  Msg.serviceName = 'cosmos.gov.v1beta1.Msg';
   return Msg;
 }());
 
 Msg.SubmitProposal = {
-  methodName: "SubmitProposal",
+  methodName: 'SubmitProposal',
   service: Msg,
   requestStream: false,
   responseStream: false,
   requestType: cosmos_gov_v1beta1_tx_pb.MsgSubmitProposal,
-  responseType: cosmos_gov_v1beta1_tx_pb.MsgSubmitProposalResponse
+  responseType: cosmos_gov_v1beta1_tx_pb.MsgSubmitProposalResponse,
 };
 
 Msg.Vote = {
-  methodName: "Vote",
+  methodName: 'Vote',
   service: Msg,
   requestStream: false,
   responseStream: false,
   requestType: cosmos_gov_v1beta1_tx_pb.MsgVote,
-  responseType: cosmos_gov_v1beta1_tx_pb.MsgVoteResponse
+  responseType: cosmos_gov_v1beta1_tx_pb.MsgVoteResponse,
 };
 
 Msg.Deposit = {
-  methodName: "Deposit",
+  methodName: 'Deposit',
   service: Msg,
   requestStream: false,
   responseStream: false,
   requestType: cosmos_gov_v1beta1_tx_pb.MsgDeposit,
-  responseType: cosmos_gov_v1beta1_tx_pb.MsgDepositResponse
+  responseType: cosmos_gov_v1beta1_tx_pb.MsgDepositResponse,
 };
 
 exports.Msg = Msg;
@@ -48,16 +48,16 @@ MsgClient.prototype.submitProposal = function submitProposal(requestMessage, met
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(Msg.SubmitProposal, {
+  const client = grpc.unary(Msg.SubmitProposal, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata: metadata,
+    metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd: function (response) {
+    onEnd(response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          var err = new Error(response.statusMessage);
+          const err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -65,13 +65,13 @@ MsgClient.prototype.submitProposal = function submitProposal(requestMessage, met
           callback(null, response.message);
         }
       }
-    }
+    },
   });
   return {
-    cancel: function () {
+    cancel() {
       callback = null;
       client.close();
-    }
+    },
   };
 };
 
@@ -79,16 +79,16 @@ MsgClient.prototype.vote = function vote(requestMessage, metadata, callback) {
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(Msg.Vote, {
+  const client = grpc.unary(Msg.Vote, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata: metadata,
+    metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd: function (response) {
+    onEnd(response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          var err = new Error(response.statusMessage);
+          const err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -96,13 +96,13 @@ MsgClient.prototype.vote = function vote(requestMessage, metadata, callback) {
           callback(null, response.message);
         }
       }
-    }
+    },
   });
   return {
-    cancel: function () {
+    cancel() {
       callback = null;
       client.close();
-    }
+    },
   };
 };
 
@@ -110,16 +110,16 @@ MsgClient.prototype.deposit = function deposit(requestMessage, metadata, callbac
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(Msg.Deposit, {
+  const client = grpc.unary(Msg.Deposit, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata: metadata,
+    metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd: function (response) {
+    onEnd(response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          var err = new Error(response.statusMessage);
+          const err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -127,15 +127,14 @@ MsgClient.prototype.deposit = function deposit(requestMessage, metadata, callbac
           callback(null, response.message);
         }
       }
-    }
+    },
   });
   return {
-    cancel: function () {
+    cancel() {
       callback = null;
       client.close();
-    }
+    },
   };
 };
 
 exports.MsgClient = MsgClient;
-

@@ -2,8 +2,6 @@
 // file: cosmos/mint/v1beta1/query.proto
 
 import * as jspb from "google-protobuf";
-import * as gogoproto_gogo_pb from "../../../gogoproto/gogo_pb";
-import * as google_api_annotations_pb from "../../../google/api/annotations_pb";
 import * as cosmos_mint_v1beta1_mint_pb from "../../../cosmos/mint/v1beta1/mint_pb";
 
 export class QueryParamsRequest extends jspb.Message {

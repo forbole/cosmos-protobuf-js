@@ -2,10 +2,8 @@
 // file: cosmos/tx/v1beta1/service.proto
 
 import * as jspb from "google-protobuf";
-import * as google_api_annotations_pb from "../../../google/api/annotations_pb";
 import * as cosmos_base_abci_v1beta1_abci_pb from "../../../cosmos/base/abci/v1beta1/abci_pb";
 import * as cosmos_tx_v1beta1_tx_pb from "../../../cosmos/tx/v1beta1/tx_pb";
-import * as gogoproto_gogo_pb from "../../../gogoproto/gogo_pb";
 import * as cosmos_base_query_v1beta1_pagination_pb from "../../../cosmos/base/query/v1beta1/pagination_pb";
 
 export class GetTxsEventRequest extends jspb.Message {

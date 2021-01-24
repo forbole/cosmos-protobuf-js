@@ -7,12 +7,14 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-var jspb = require('google-protobuf');
-var goog = jspb;
-var global = Function('return this')();
+const jspb = require('google-protobuf');
 
-var gogoproto_gogo_pb = require('../../../gogoproto/gogo_pb.js');
-var cosmos_base_v1beta1_coin_pb = require('../../../cosmos/base/v1beta1/coin_pb.js');
+const goog = jspb;
+const global = Function('return this')();
+
+const gogoproto_gogo_pb = require('../../../gogoproto/gogo_pb.js');
+const cosmos_base_v1beta1_coin_pb = require('../../base/v1beta1/coin_pb.js');
+
 goog.exportSymbol('proto.cosmos.crisis.v1beta1.GenesisState', null, global);
 
 /**
@@ -25,14 +27,13 @@ goog.exportSymbol('proto.cosmos.crisis.v1beta1.GenesisState', null, global);
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.crisis.v1beta1.GenesisState = function(opt_data) {
+proto.cosmos.crisis.v1beta1.GenesisState = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.crisis.v1beta1.GenesisState, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.crisis.v1beta1.GenesisState.displayName = 'proto.cosmos.crisis.v1beta1.GenesisState';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -45,12 +46,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.crisis.v1beta1.GenesisState.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.crisis.v1beta1.GenesisState.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.crisis.v1beta1.GenesisState.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.crisis.v1beta1.GenesisState.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -59,30 +59,29 @@ proto.cosmos.crisis.v1beta1.GenesisState.prototype.toObject = function(opt_inclu
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.crisis.v1beta1.GenesisState.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    constantFee: (f = msg.getConstantFee()) && cosmos_base_v1beta1_coin_pb.Coin.toObject(includeInstance, f)
+  proto.cosmos.crisis.v1beta1.GenesisState.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        constantFee: (f = msg.getConstantFee()) && cosmos_base_v1beta1_coin_pb.Coin.toObject(includeInstance, f),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.crisis.v1beta1.GenesisState}
  */
-proto.cosmos.crisis.v1beta1.GenesisState.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.crisis.v1beta1.GenesisState;
+proto.cosmos.crisis.v1beta1.GenesisState.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.crisis.v1beta1.GenesisState();
   return proto.cosmos.crisis.v1beta1.GenesisState.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -91,37 +90,35 @@ proto.cosmos.crisis.v1beta1.GenesisState.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.crisis.v1beta1.GenesisState}
  */
-proto.cosmos.crisis.v1beta1.GenesisState.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.crisis.v1beta1.GenesisState.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 3:
-      var value = new cosmos_base_v1beta1_coin_pb.Coin;
-      reader.readMessage(value,cosmos_base_v1beta1_coin_pb.Coin.deserializeBinaryFromReader);
-      msg.setConstantFee(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 3:
+        var value = new cosmos_base_v1beta1_coin_pb.Coin();
+        reader.readMessage(value, cosmos_base_v1beta1_coin_pb.Coin.deserializeBinaryFromReader);
+        msg.setConstantFee(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.crisis.v1beta1.GenesisState.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.crisis.v1beta1.GenesisState.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.crisis.v1beta1.GenesisState.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -130,47 +127,42 @@ proto.cosmos.crisis.v1beta1.GenesisState.prototype.serializeBinary = function() 
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.crisis.v1beta1.GenesisState.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.crisis.v1beta1.GenesisState.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getConstantFee();
   if (f != null) {
     writer.writeMessage(
       3,
       f,
-      cosmos_base_v1beta1_coin_pb.Coin.serializeBinaryToWriter
+      cosmos_base_v1beta1_coin_pb.Coin.serializeBinaryToWriter,
     );
   }
 };
-
 
 /**
  * optional cosmos.base.v1beta1.Coin constant_fee = 3;
  * @return {?proto.cosmos.base.v1beta1.Coin}
  */
-proto.cosmos.crisis.v1beta1.GenesisState.prototype.getConstantFee = function() {
+proto.cosmos.crisis.v1beta1.GenesisState.prototype.getConstantFee = function () {
   return /** @type{?proto.cosmos.base.v1beta1.Coin} */ (
     jspb.Message.getWrapperField(this, cosmos_base_v1beta1_coin_pb.Coin, 3));
 };
 
-
 /** @param {?proto.cosmos.base.v1beta1.Coin|undefined} value */
-proto.cosmos.crisis.v1beta1.GenesisState.prototype.setConstantFee = function(value) {
+proto.cosmos.crisis.v1beta1.GenesisState.prototype.setConstantFee = function (value) {
   jspb.Message.setWrapperField(this, 3, value);
 };
 
-
-proto.cosmos.crisis.v1beta1.GenesisState.prototype.clearConstantFee = function() {
+proto.cosmos.crisis.v1beta1.GenesisState.prototype.clearConstantFee = function () {
   this.setConstantFee(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.cosmos.crisis.v1beta1.GenesisState.prototype.hasConstantFee = function() {
+proto.cosmos.crisis.v1beta1.GenesisState.prototype.hasConstantFee = function () {
   return jspb.Message.getField(this, 3) != null;
 };
-
 
 goog.object.extend(exports, proto.cosmos.crisis.v1beta1);

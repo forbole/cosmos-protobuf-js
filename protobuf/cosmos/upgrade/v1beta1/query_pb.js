@@ -7,13 +7,15 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-var jspb = require('google-protobuf');
-var goog = jspb;
-var global = Function('return this')();
+const jspb = require('google-protobuf');
 
-var google_protobuf_any_pb = require('google-protobuf/google/protobuf/any_pb.js');
-var google_api_annotations_pb = require('../../../google/api/annotations_pb.js');
-var cosmos_upgrade_v1beta1_upgrade_pb = require('../../../cosmos/upgrade/v1beta1/upgrade_pb.js');
+const goog = jspb;
+const global = Function('return this')();
+
+const google_protobuf_any_pb = require('google-protobuf/google/protobuf/any_pb.js');
+const google_api_annotations_pb = require('../../../google/api/annotations_pb.js');
+const cosmos_upgrade_v1beta1_upgrade_pb = require('./upgrade_pb.js');
+
 goog.exportSymbol('proto.cosmos.upgrade.v1beta1.QueryAppliedPlanRequest', null, global);
 goog.exportSymbol('proto.cosmos.upgrade.v1beta1.QueryAppliedPlanResponse', null, global);
 goog.exportSymbol('proto.cosmos.upgrade.v1beta1.QueryCurrentPlanRequest', null, global);
@@ -31,14 +33,13 @@ goog.exportSymbol('proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateRespo
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.upgrade.v1beta1.QueryCurrentPlanRequest = function(opt_data) {
+proto.cosmos.upgrade.v1beta1.QueryCurrentPlanRequest = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.upgrade.v1beta1.QueryCurrentPlanRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.upgrade.v1beta1.QueryCurrentPlanRequest.displayName = 'proto.cosmos.upgrade.v1beta1.QueryCurrentPlanRequest';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -51,12 +52,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.upgrade.v1beta1.QueryCurrentPlanRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.upgrade.v1beta1.QueryCurrentPlanRequest.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.upgrade.v1beta1.QueryCurrentPlanRequest.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.upgrade.v1beta1.QueryCurrentPlanRequest.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -65,30 +65,29 @@ proto.cosmos.upgrade.v1beta1.QueryCurrentPlanRequest.prototype.toObject = functi
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.upgrade.v1beta1.QueryCurrentPlanRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  proto.cosmos.upgrade.v1beta1.QueryCurrentPlanRequest.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
 
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.upgrade.v1beta1.QueryCurrentPlanRequest}
  */
-proto.cosmos.upgrade.v1beta1.QueryCurrentPlanRequest.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.upgrade.v1beta1.QueryCurrentPlanRequest;
+proto.cosmos.upgrade.v1beta1.QueryCurrentPlanRequest.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.upgrade.v1beta1.QueryCurrentPlanRequest();
   return proto.cosmos.upgrade.v1beta1.QueryCurrentPlanRequest.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -97,32 +96,30 @@ proto.cosmos.upgrade.v1beta1.QueryCurrentPlanRequest.deserializeBinary = functio
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.upgrade.v1beta1.QueryCurrentPlanRequest}
  */
-proto.cosmos.upgrade.v1beta1.QueryCurrentPlanRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.upgrade.v1beta1.QueryCurrentPlanRequest.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    default:
-      reader.skipField();
-      break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.upgrade.v1beta1.QueryCurrentPlanRequest.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.upgrade.v1beta1.QueryCurrentPlanRequest.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.upgrade.v1beta1.QueryCurrentPlanRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -131,11 +128,9 @@ proto.cosmos.upgrade.v1beta1.QueryCurrentPlanRequest.prototype.serializeBinary =
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.upgrade.v1beta1.QueryCurrentPlanRequest.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.upgrade.v1beta1.QueryCurrentPlanRequest.serializeBinaryToWriter = function (message, writer) {
+  const f;
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -147,14 +142,13 @@ proto.cosmos.upgrade.v1beta1.QueryCurrentPlanRequest.serializeBinaryToWriter = f
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.upgrade.v1beta1.QueryCurrentPlanResponse = function(opt_data) {
+proto.cosmos.upgrade.v1beta1.QueryCurrentPlanResponse = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.upgrade.v1beta1.QueryCurrentPlanResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.upgrade.v1beta1.QueryCurrentPlanResponse.displayName = 'proto.cosmos.upgrade.v1beta1.QueryCurrentPlanResponse';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -167,12 +161,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.upgrade.v1beta1.QueryCurrentPlanResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.upgrade.v1beta1.QueryCurrentPlanResponse.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.upgrade.v1beta1.QueryCurrentPlanResponse.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.upgrade.v1beta1.QueryCurrentPlanResponse.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -181,30 +174,29 @@ proto.cosmos.upgrade.v1beta1.QueryCurrentPlanResponse.prototype.toObject = funct
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.upgrade.v1beta1.QueryCurrentPlanResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    plan: (f = msg.getPlan()) && cosmos_upgrade_v1beta1_upgrade_pb.Plan.toObject(includeInstance, f)
+  proto.cosmos.upgrade.v1beta1.QueryCurrentPlanResponse.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        plan: (f = msg.getPlan()) && cosmos_upgrade_v1beta1_upgrade_pb.Plan.toObject(includeInstance, f),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.upgrade.v1beta1.QueryCurrentPlanResponse}
  */
-proto.cosmos.upgrade.v1beta1.QueryCurrentPlanResponse.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.upgrade.v1beta1.QueryCurrentPlanResponse;
+proto.cosmos.upgrade.v1beta1.QueryCurrentPlanResponse.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.upgrade.v1beta1.QueryCurrentPlanResponse();
   return proto.cosmos.upgrade.v1beta1.QueryCurrentPlanResponse.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -213,37 +205,35 @@ proto.cosmos.upgrade.v1beta1.QueryCurrentPlanResponse.deserializeBinary = functi
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.upgrade.v1beta1.QueryCurrentPlanResponse}
  */
-proto.cosmos.upgrade.v1beta1.QueryCurrentPlanResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.upgrade.v1beta1.QueryCurrentPlanResponse.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = new cosmos_upgrade_v1beta1_upgrade_pb.Plan;
-      reader.readMessage(value,cosmos_upgrade_v1beta1_upgrade_pb.Plan.deserializeBinaryFromReader);
-      msg.setPlan(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = new cosmos_upgrade_v1beta1_upgrade_pb.Plan();
+        reader.readMessage(value, cosmos_upgrade_v1beta1_upgrade_pb.Plan.deserializeBinaryFromReader);
+        msg.setPlan(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.upgrade.v1beta1.QueryCurrentPlanResponse.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.upgrade.v1beta1.QueryCurrentPlanResponse.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.upgrade.v1beta1.QueryCurrentPlanResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -252,49 +242,43 @@ proto.cosmos.upgrade.v1beta1.QueryCurrentPlanResponse.prototype.serializeBinary 
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.upgrade.v1beta1.QueryCurrentPlanResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.upgrade.v1beta1.QueryCurrentPlanResponse.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getPlan();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      cosmos_upgrade_v1beta1_upgrade_pb.Plan.serializeBinaryToWriter
+      cosmos_upgrade_v1beta1_upgrade_pb.Plan.serializeBinaryToWriter,
     );
   }
 };
-
 
 /**
  * optional Plan plan = 1;
  * @return {?proto.cosmos.upgrade.v1beta1.Plan}
  */
-proto.cosmos.upgrade.v1beta1.QueryCurrentPlanResponse.prototype.getPlan = function() {
+proto.cosmos.upgrade.v1beta1.QueryCurrentPlanResponse.prototype.getPlan = function () {
   return /** @type{?proto.cosmos.upgrade.v1beta1.Plan} */ (
     jspb.Message.getWrapperField(this, cosmos_upgrade_v1beta1_upgrade_pb.Plan, 1));
 };
 
-
 /** @param {?proto.cosmos.upgrade.v1beta1.Plan|undefined} value */
-proto.cosmos.upgrade.v1beta1.QueryCurrentPlanResponse.prototype.setPlan = function(value) {
+proto.cosmos.upgrade.v1beta1.QueryCurrentPlanResponse.prototype.setPlan = function (value) {
   jspb.Message.setWrapperField(this, 1, value);
 };
 
-
-proto.cosmos.upgrade.v1beta1.QueryCurrentPlanResponse.prototype.clearPlan = function() {
+proto.cosmos.upgrade.v1beta1.QueryCurrentPlanResponse.prototype.clearPlan = function () {
   this.setPlan(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.cosmos.upgrade.v1beta1.QueryCurrentPlanResponse.prototype.hasPlan = function() {
+proto.cosmos.upgrade.v1beta1.QueryCurrentPlanResponse.prototype.hasPlan = function () {
   return jspb.Message.getField(this, 1) != null;
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -306,14 +290,13 @@ proto.cosmos.upgrade.v1beta1.QueryCurrentPlanResponse.prototype.hasPlan = functi
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.upgrade.v1beta1.QueryAppliedPlanRequest = function(opt_data) {
+proto.cosmos.upgrade.v1beta1.QueryAppliedPlanRequest = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.upgrade.v1beta1.QueryAppliedPlanRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.upgrade.v1beta1.QueryAppliedPlanRequest.displayName = 'proto.cosmos.upgrade.v1beta1.QueryAppliedPlanRequest';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -326,12 +309,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.upgrade.v1beta1.QueryAppliedPlanRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.upgrade.v1beta1.QueryAppliedPlanRequest.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.upgrade.v1beta1.QueryAppliedPlanRequest.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.upgrade.v1beta1.QueryAppliedPlanRequest.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -340,30 +322,29 @@ proto.cosmos.upgrade.v1beta1.QueryAppliedPlanRequest.prototype.toObject = functi
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.upgrade.v1beta1.QueryAppliedPlanRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    name: jspb.Message.getFieldWithDefault(msg, 1, "")
+  proto.cosmos.upgrade.v1beta1.QueryAppliedPlanRequest.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        name: jspb.Message.getFieldWithDefault(msg, 1, ''),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.upgrade.v1beta1.QueryAppliedPlanRequest}
  */
-proto.cosmos.upgrade.v1beta1.QueryAppliedPlanRequest.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.upgrade.v1beta1.QueryAppliedPlanRequest;
+proto.cosmos.upgrade.v1beta1.QueryAppliedPlanRequest.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.upgrade.v1beta1.QueryAppliedPlanRequest();
   return proto.cosmos.upgrade.v1beta1.QueryAppliedPlanRequest.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -372,36 +353,34 @@ proto.cosmos.upgrade.v1beta1.QueryAppliedPlanRequest.deserializeBinary = functio
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.upgrade.v1beta1.QueryAppliedPlanRequest}
  */
-proto.cosmos.upgrade.v1beta1.QueryAppliedPlanRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.upgrade.v1beta1.QueryAppliedPlanRequest.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setName(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setName(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.upgrade.v1beta1.QueryAppliedPlanRequest.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.upgrade.v1beta1.QueryAppliedPlanRequest.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.upgrade.v1beta1.QueryAppliedPlanRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -410,33 +389,29 @@ proto.cosmos.upgrade.v1beta1.QueryAppliedPlanRequest.prototype.serializeBinary =
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.upgrade.v1beta1.QueryAppliedPlanRequest.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.upgrade.v1beta1.QueryAppliedPlanRequest.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getName();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional string name = 1;
  * @return {string}
  */
-proto.cosmos.upgrade.v1beta1.QueryAppliedPlanRequest.prototype.getName = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.cosmos.upgrade.v1beta1.QueryAppliedPlanRequest.prototype.getName = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
 };
-
 
 /** @param {string} value */
-proto.cosmos.upgrade.v1beta1.QueryAppliedPlanRequest.prototype.setName = function(value) {
+proto.cosmos.upgrade.v1beta1.QueryAppliedPlanRequest.prototype.setName = function (value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -448,14 +423,13 @@ proto.cosmos.upgrade.v1beta1.QueryAppliedPlanRequest.prototype.setName = functio
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.upgrade.v1beta1.QueryAppliedPlanResponse = function(opt_data) {
+proto.cosmos.upgrade.v1beta1.QueryAppliedPlanResponse = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.upgrade.v1beta1.QueryAppliedPlanResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.upgrade.v1beta1.QueryAppliedPlanResponse.displayName = 'proto.cosmos.upgrade.v1beta1.QueryAppliedPlanResponse';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -468,12 +442,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.upgrade.v1beta1.QueryAppliedPlanResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.upgrade.v1beta1.QueryAppliedPlanResponse.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.upgrade.v1beta1.QueryAppliedPlanResponse.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.upgrade.v1beta1.QueryAppliedPlanResponse.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -482,30 +455,29 @@ proto.cosmos.upgrade.v1beta1.QueryAppliedPlanResponse.prototype.toObject = funct
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.upgrade.v1beta1.QueryAppliedPlanResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    height: jspb.Message.getFieldWithDefault(msg, 1, 0)
+  proto.cosmos.upgrade.v1beta1.QueryAppliedPlanResponse.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        height: jspb.Message.getFieldWithDefault(msg, 1, 0),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.upgrade.v1beta1.QueryAppliedPlanResponse}
  */
-proto.cosmos.upgrade.v1beta1.QueryAppliedPlanResponse.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.upgrade.v1beta1.QueryAppliedPlanResponse;
+proto.cosmos.upgrade.v1beta1.QueryAppliedPlanResponse.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.upgrade.v1beta1.QueryAppliedPlanResponse();
   return proto.cosmos.upgrade.v1beta1.QueryAppliedPlanResponse.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -514,36 +486,34 @@ proto.cosmos.upgrade.v1beta1.QueryAppliedPlanResponse.deserializeBinary = functi
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.upgrade.v1beta1.QueryAppliedPlanResponse}
  */
-proto.cosmos.upgrade.v1beta1.QueryAppliedPlanResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.upgrade.v1beta1.QueryAppliedPlanResponse.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setHeight(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setHeight(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.upgrade.v1beta1.QueryAppliedPlanResponse.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.upgrade.v1beta1.QueryAppliedPlanResponse.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.upgrade.v1beta1.QueryAppliedPlanResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -552,33 +522,29 @@ proto.cosmos.upgrade.v1beta1.QueryAppliedPlanResponse.prototype.serializeBinary 
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.upgrade.v1beta1.QueryAppliedPlanResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.upgrade.v1beta1.QueryAppliedPlanResponse.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getHeight();
   if (f !== 0) {
     writer.writeInt64(
       1,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional int64 height = 1;
  * @return {number}
  */
-proto.cosmos.upgrade.v1beta1.QueryAppliedPlanResponse.prototype.getHeight = function() {
+proto.cosmos.upgrade.v1beta1.QueryAppliedPlanResponse.prototype.getHeight = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
-
 /** @param {number} value */
-proto.cosmos.upgrade.v1beta1.QueryAppliedPlanResponse.prototype.setHeight = function(value) {
+proto.cosmos.upgrade.v1beta1.QueryAppliedPlanResponse.prototype.setHeight = function (value) {
   jspb.Message.setProto3IntField(this, 1, value);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -590,14 +556,13 @@ proto.cosmos.upgrade.v1beta1.QueryAppliedPlanResponse.prototype.setHeight = func
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateRequest = function(opt_data) {
+proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateRequest = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateRequest.displayName = 'proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateRequest';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -610,12 +575,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateRequest.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateRequest.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateRequest.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -624,30 +588,29 @@ proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateRequest.prototype.toObje
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    lastHeight: jspb.Message.getFieldWithDefault(msg, 1, 0)
+  proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateRequest.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        lastHeight: jspb.Message.getFieldWithDefault(msg, 1, 0),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateRequest}
  */
-proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateRequest.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateRequest;
+proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateRequest.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateRequest();
   return proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateRequest.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -656,36 +619,34 @@ proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateRequest.deserializeBinar
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateRequest}
  */
-proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateRequest.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setLastHeight(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setLastHeight(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateRequest.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateRequest.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -694,33 +655,29 @@ proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateRequest.prototype.serial
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateRequest.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateRequest.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getLastHeight();
   if (f !== 0) {
     writer.writeInt64(
       1,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional int64 last_height = 1;
  * @return {number}
  */
-proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateRequest.prototype.getLastHeight = function() {
+proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateRequest.prototype.getLastHeight = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
-
 /** @param {number} value */
-proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateRequest.prototype.setLastHeight = function(value) {
+proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateRequest.prototype.setLastHeight = function (value) {
   jspb.Message.setProto3IntField(this, 1, value);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -732,14 +689,13 @@ proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateRequest.prototype.setLas
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateResponse = function(opt_data) {
+proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateResponse = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateResponse.displayName = 'proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateResponse';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -752,12 +708,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateResponse.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateResponse.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateResponse.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -766,30 +721,29 @@ proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateResponse.prototype.toObj
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    upgradedConsensusState: (f = msg.getUpgradedConsensusState()) && google_protobuf_any_pb.Any.toObject(includeInstance, f)
+  proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateResponse.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        upgradedConsensusState: (f = msg.getUpgradedConsensusState()) && google_protobuf_any_pb.Any.toObject(includeInstance, f),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateResponse}
  */
-proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateResponse.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateResponse;
+proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateResponse.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateResponse();
   return proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateResponse.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -798,37 +752,35 @@ proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateResponse.deserializeBina
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateResponse}
  */
-proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateResponse.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = new google_protobuf_any_pb.Any;
-      reader.readMessage(value,google_protobuf_any_pb.Any.deserializeBinaryFromReader);
-      msg.setUpgradedConsensusState(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = new google_protobuf_any_pb.Any();
+        reader.readMessage(value, google_protobuf_any_pb.Any.deserializeBinaryFromReader);
+        msg.setUpgradedConsensusState(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateResponse.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateResponse.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -837,47 +789,42 @@ proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateResponse.prototype.seria
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateResponse.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getUpgradedConsensusState();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      google_protobuf_any_pb.Any.serializeBinaryToWriter
+      google_protobuf_any_pb.Any.serializeBinaryToWriter,
     );
   }
 };
-
 
 /**
  * optional google.protobuf.Any upgraded_consensus_state = 1;
  * @return {?proto.google.protobuf.Any}
  */
-proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateResponse.prototype.getUpgradedConsensusState = function() {
+proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateResponse.prototype.getUpgradedConsensusState = function () {
   return /** @type{?proto.google.protobuf.Any} */ (
     jspb.Message.getWrapperField(this, google_protobuf_any_pb.Any, 1));
 };
 
-
 /** @param {?proto.google.protobuf.Any|undefined} value */
-proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateResponse.prototype.setUpgradedConsensusState = function(value) {
+proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateResponse.prototype.setUpgradedConsensusState = function (value) {
   jspb.Message.setWrapperField(this, 1, value);
 };
 
-
-proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateResponse.prototype.clearUpgradedConsensusState = function() {
+proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateResponse.prototype.clearUpgradedConsensusState = function () {
   this.setUpgradedConsensusState(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateResponse.prototype.hasUpgradedConsensusState = function() {
+proto.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateResponse.prototype.hasUpgradedConsensusState = function () {
   return jspb.Message.getField(this, 1) != null;
 };
-
 
 goog.object.extend(exports, proto.cosmos.upgrade.v1beta1);

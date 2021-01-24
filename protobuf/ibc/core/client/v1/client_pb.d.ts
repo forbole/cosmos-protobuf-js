@@ -2,7 +2,6 @@
 // file: ibc/core/client/v1/client.proto
 
 import * as jspb from "google-protobuf";
-import * as gogoproto_gogo_pb from "../../../../gogoproto/gogo_pb";
 import * as google_protobuf_any_pb from "google-protobuf/google/protobuf/any_pb";
 
 export class IdentifiedClientState extends jspb.Message {

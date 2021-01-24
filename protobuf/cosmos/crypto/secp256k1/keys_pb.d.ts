@@ -2,7 +2,6 @@
 // file: cosmos/crypto/secp256k1/keys.proto
 
 import * as jspb from "google-protobuf";
-import * as gogoproto_gogo_pb from "../../../gogoproto/gogo_pb";
 
 export class PubKey extends jspb.Message {
   getKey(): Uint8Array | string;

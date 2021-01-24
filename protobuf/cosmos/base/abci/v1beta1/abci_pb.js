@@ -7,13 +7,14 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-var jspb = require('google-protobuf');
-var goog = jspb;
-var global = Function('return this')();
+const jspb = require('google-protobuf');
 
-var gogoproto_gogo_pb = require('../../../../gogoproto/gogo_pb.js');
-var tendermint_abci_types_pb = require('../../../../tendermint/abci/types_pb.js');
-var google_protobuf_any_pb = require('google-protobuf/google/protobuf/any_pb.js');
+const goog = jspb;
+const global = Function('return this')();
+
+const google_protobuf_any_pb = require('google-protobuf/google/protobuf/any_pb.js');
+const tendermint_abci_types_pb = require('../../../../tendermint/abci/types_pb.js');
+
 goog.exportSymbol('proto.cosmos.base.abci.v1beta1.ABCIMessageLog', null, global);
 goog.exportSymbol('proto.cosmos.base.abci.v1beta1.Attribute', null, global);
 goog.exportSymbol('proto.cosmos.base.abci.v1beta1.GasInfo', null, global);
@@ -35,7 +36,7 @@ goog.exportSymbol('proto.cosmos.base.abci.v1beta1.TxResponse', null, global);
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.base.abci.v1beta1.TxResponse = function(opt_data) {
+proto.cosmos.base.abci.v1beta1.TxResponse = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.cosmos.base.abci.v1beta1.TxResponse.repeatedFields_, null);
 };
 goog.inherits(proto.cosmos.base.abci.v1beta1.TxResponse, jspb.Message);
@@ -49,8 +50,6 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.cosmos.base.abci.v1beta1.TxResponse.repeatedFields_ = [7];
 
-
-
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -62,12 +61,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.base.abci.v1beta1.TxResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.base.abci.v1beta1.TxResponse.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.base.abci.v1beta1.TxResponse.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.base.abci.v1beta1.TxResponse.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -76,42 +74,41 @@ proto.cosmos.base.abci.v1beta1.TxResponse.prototype.toObject = function(opt_incl
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.abci.v1beta1.TxResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    height: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    txhash: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    codespace: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    code: jspb.Message.getFieldWithDefault(msg, 4, 0),
-    data: jspb.Message.getFieldWithDefault(msg, 5, ""),
-    rawLog: jspb.Message.getFieldWithDefault(msg, 6, ""),
-    logsList: jspb.Message.toObjectList(msg.getLogsList(),
-    proto.cosmos.base.abci.v1beta1.ABCIMessageLog.toObject, includeInstance),
-    info: jspb.Message.getFieldWithDefault(msg, 8, ""),
-    gasWanted: jspb.Message.getFieldWithDefault(msg, 9, 0),
-    gasUsed: jspb.Message.getFieldWithDefault(msg, 10, 0),
-    tx: (f = msg.getTx()) && google_protobuf_any_pb.Any.toObject(includeInstance, f),
-    timestamp: jspb.Message.getFieldWithDefault(msg, 12, "")
+  proto.cosmos.base.abci.v1beta1.TxResponse.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        height: jspb.Message.getFieldWithDefault(msg, 1, 0),
+        txhash: jspb.Message.getFieldWithDefault(msg, 2, ''),
+        codespace: jspb.Message.getFieldWithDefault(msg, 3, ''),
+        code: jspb.Message.getFieldWithDefault(msg, 4, 0),
+        data: jspb.Message.getFieldWithDefault(msg, 5, ''),
+        rawLog: jspb.Message.getFieldWithDefault(msg, 6, ''),
+        logsList: jspb.Message.toObjectList(msg.getLogsList(),
+          proto.cosmos.base.abci.v1beta1.ABCIMessageLog.toObject, includeInstance),
+        info: jspb.Message.getFieldWithDefault(msg, 8, ''),
+        gasWanted: jspb.Message.getFieldWithDefault(msg, 9, 0),
+        gasUsed: jspb.Message.getFieldWithDefault(msg, 10, 0),
+        tx: (f = msg.getTx()) && google_protobuf_any_pb.Any.toObject(includeInstance, f),
+        timestamp: jspb.Message.getFieldWithDefault(msg, 12, ''),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.base.abci.v1beta1.TxResponse}
  */
-proto.cosmos.base.abci.v1beta1.TxResponse.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.base.abci.v1beta1.TxResponse;
+proto.cosmos.base.abci.v1beta1.TxResponse.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.base.abci.v1beta1.TxResponse();
   return proto.cosmos.base.abci.v1beta1.TxResponse.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -120,82 +117,80 @@ proto.cosmos.base.abci.v1beta1.TxResponse.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.base.abci.v1beta1.TxResponse}
  */
-proto.cosmos.base.abci.v1beta1.TxResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.base.abci.v1beta1.TxResponse.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setHeight(value);
-      break;
-    case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setTxhash(value);
-      break;
-    case 3:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setCodespace(value);
-      break;
-    case 4:
-      var value = /** @type {number} */ (reader.readUint32());
-      msg.setCode(value);
-      break;
-    case 5:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setData(value);
-      break;
-    case 6:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setRawLog(value);
-      break;
-    case 7:
-      var value = new proto.cosmos.base.abci.v1beta1.ABCIMessageLog;
-      reader.readMessage(value,proto.cosmos.base.abci.v1beta1.ABCIMessageLog.deserializeBinaryFromReader);
-      msg.addLogs(value);
-      break;
-    case 8:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setInfo(value);
-      break;
-    case 9:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setGasWanted(value);
-      break;
-    case 10:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setGasUsed(value);
-      break;
-    case 11:
-      var value = new google_protobuf_any_pb.Any;
-      reader.readMessage(value,google_protobuf_any_pb.Any.deserializeBinaryFromReader);
-      msg.setTx(value);
-      break;
-    case 12:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setTimestamp(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setHeight(value);
+        break;
+      case 2:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setTxhash(value);
+        break;
+      case 3:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setCodespace(value);
+        break;
+      case 4:
+        var value = /** @type {number} */ (reader.readUint32());
+        msg.setCode(value);
+        break;
+      case 5:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setData(value);
+        break;
+      case 6:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setRawLog(value);
+        break;
+      case 7:
+        var value = new proto.cosmos.base.abci.v1beta1.ABCIMessageLog();
+        reader.readMessage(value, proto.cosmos.base.abci.v1beta1.ABCIMessageLog.deserializeBinaryFromReader);
+        msg.addLogs(value);
+        break;
+      case 8:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setInfo(value);
+        break;
+      case 9:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setGasWanted(value);
+        break;
+      case 10:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setGasUsed(value);
+        break;
+      case 11:
+        var value = new google_protobuf_any_pb.Any();
+        reader.readMessage(value, google_protobuf_any_pb.Any.deserializeBinaryFromReader);
+        msg.setTx(value);
+        break;
+      case 12:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setTimestamp(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.base.abci.v1beta1.TxResponse.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.base.abci.v1beta1.TxResponse.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.base.abci.v1beta1.TxResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -204,48 +199,48 @@ proto.cosmos.base.abci.v1beta1.TxResponse.prototype.serializeBinary = function()
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.abci.v1beta1.TxResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.base.abci.v1beta1.TxResponse.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getHeight();
   if (f !== 0) {
     writer.writeInt64(
       1,
-      f
+      f,
     );
   }
   f = message.getTxhash();
   if (f.length > 0) {
     writer.writeString(
       2,
-      f
+      f,
     );
   }
   f = message.getCodespace();
   if (f.length > 0) {
     writer.writeString(
       3,
-      f
+      f,
     );
   }
   f = message.getCode();
   if (f !== 0) {
     writer.writeUint32(
       4,
-      f
+      f,
     );
   }
   f = message.getData();
   if (f.length > 0) {
     writer.writeString(
       5,
-      f
+      f,
     );
   }
   f = message.getRawLog();
   if (f.length > 0) {
     writer.writeString(
       6,
-      f
+      f,
     );
   }
   f = message.getLogsList();
@@ -253,28 +248,28 @@ proto.cosmos.base.abci.v1beta1.TxResponse.serializeBinaryToWriter = function(mes
     writer.writeRepeatedMessage(
       7,
       f,
-      proto.cosmos.base.abci.v1beta1.ABCIMessageLog.serializeBinaryToWriter
+      proto.cosmos.base.abci.v1beta1.ABCIMessageLog.serializeBinaryToWriter,
     );
   }
   f = message.getInfo();
   if (f.length > 0) {
     writer.writeString(
       8,
-      f
+      f,
     );
   }
   f = message.getGasWanted();
   if (f !== 0) {
     writer.writeInt64(
       9,
-      f
+      f,
     );
   }
   f = message.getGasUsed();
   if (f !== 0) {
     writer.writeInt64(
       10,
-      f
+      f,
     );
   }
   f = message.getTx();
@@ -282,230 +277,200 @@ proto.cosmos.base.abci.v1beta1.TxResponse.serializeBinaryToWriter = function(mes
     writer.writeMessage(
       11,
       f,
-      google_protobuf_any_pb.Any.serializeBinaryToWriter
+      google_protobuf_any_pb.Any.serializeBinaryToWriter,
     );
   }
   f = message.getTimestamp();
   if (f.length > 0) {
     writer.writeString(
       12,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional int64 height = 1;
  * @return {number}
  */
-proto.cosmos.base.abci.v1beta1.TxResponse.prototype.getHeight = function() {
+proto.cosmos.base.abci.v1beta1.TxResponse.prototype.getHeight = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
-
 /** @param {number} value */
-proto.cosmos.base.abci.v1beta1.TxResponse.prototype.setHeight = function(value) {
+proto.cosmos.base.abci.v1beta1.TxResponse.prototype.setHeight = function (value) {
   jspb.Message.setProto3IntField(this, 1, value);
 };
-
 
 /**
  * optional string txhash = 2;
  * @return {string}
  */
-proto.cosmos.base.abci.v1beta1.TxResponse.prototype.getTxhash = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+proto.cosmos.base.abci.v1beta1.TxResponse.prototype.getTxhash = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
 };
-
 
 /** @param {string} value */
-proto.cosmos.base.abci.v1beta1.TxResponse.prototype.setTxhash = function(value) {
+proto.cosmos.base.abci.v1beta1.TxResponse.prototype.setTxhash = function (value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
-
 
 /**
  * optional string codespace = 3;
  * @return {string}
  */
-proto.cosmos.base.abci.v1beta1.TxResponse.prototype.getCodespace = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+proto.cosmos.base.abci.v1beta1.TxResponse.prototype.getCodespace = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ''));
 };
-
 
 /** @param {string} value */
-proto.cosmos.base.abci.v1beta1.TxResponse.prototype.setCodespace = function(value) {
+proto.cosmos.base.abci.v1beta1.TxResponse.prototype.setCodespace = function (value) {
   jspb.Message.setProto3StringField(this, 3, value);
 };
-
 
 /**
  * optional uint32 code = 4;
  * @return {number}
  */
-proto.cosmos.base.abci.v1beta1.TxResponse.prototype.getCode = function() {
+proto.cosmos.base.abci.v1beta1.TxResponse.prototype.getCode = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
 };
 
-
 /** @param {number} value */
-proto.cosmos.base.abci.v1beta1.TxResponse.prototype.setCode = function(value) {
+proto.cosmos.base.abci.v1beta1.TxResponse.prototype.setCode = function (value) {
   jspb.Message.setProto3IntField(this, 4, value);
 };
-
 
 /**
  * optional string data = 5;
  * @return {string}
  */
-proto.cosmos.base.abci.v1beta1.TxResponse.prototype.getData = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
+proto.cosmos.base.abci.v1beta1.TxResponse.prototype.getData = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ''));
 };
-
 
 /** @param {string} value */
-proto.cosmos.base.abci.v1beta1.TxResponse.prototype.setData = function(value) {
+proto.cosmos.base.abci.v1beta1.TxResponse.prototype.setData = function (value) {
   jspb.Message.setProto3StringField(this, 5, value);
 };
-
 
 /**
  * optional string raw_log = 6;
  * @return {string}
  */
-proto.cosmos.base.abci.v1beta1.TxResponse.prototype.getRawLog = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
+proto.cosmos.base.abci.v1beta1.TxResponse.prototype.getRawLog = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ''));
 };
-
 
 /** @param {string} value */
-proto.cosmos.base.abci.v1beta1.TxResponse.prototype.setRawLog = function(value) {
+proto.cosmos.base.abci.v1beta1.TxResponse.prototype.setRawLog = function (value) {
   jspb.Message.setProto3StringField(this, 6, value);
 };
-
 
 /**
  * repeated ABCIMessageLog logs = 7;
  * @return {!Array<!proto.cosmos.base.abci.v1beta1.ABCIMessageLog>}
  */
-proto.cosmos.base.abci.v1beta1.TxResponse.prototype.getLogsList = function() {
+proto.cosmos.base.abci.v1beta1.TxResponse.prototype.getLogsList = function () {
   return /** @type{!Array<!proto.cosmos.base.abci.v1beta1.ABCIMessageLog>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.cosmos.base.abci.v1beta1.ABCIMessageLog, 7));
 };
 
-
 /** @param {!Array<!proto.cosmos.base.abci.v1beta1.ABCIMessageLog>} value */
-proto.cosmos.base.abci.v1beta1.TxResponse.prototype.setLogsList = function(value) {
+proto.cosmos.base.abci.v1beta1.TxResponse.prototype.setLogsList = function (value) {
   jspb.Message.setRepeatedWrapperField(this, 7, value);
 };
-
 
 /**
  * @param {!proto.cosmos.base.abci.v1beta1.ABCIMessageLog=} opt_value
  * @param {number=} opt_index
  * @return {!proto.cosmos.base.abci.v1beta1.ABCIMessageLog}
  */
-proto.cosmos.base.abci.v1beta1.TxResponse.prototype.addLogs = function(opt_value, opt_index) {
+proto.cosmos.base.abci.v1beta1.TxResponse.prototype.addLogs = function (opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 7, opt_value, proto.cosmos.base.abci.v1beta1.ABCIMessageLog, opt_index);
 };
 
-
-proto.cosmos.base.abci.v1beta1.TxResponse.prototype.clearLogsList = function() {
+proto.cosmos.base.abci.v1beta1.TxResponse.prototype.clearLogsList = function () {
   this.setLogsList([]);
 };
-
 
 /**
  * optional string info = 8;
  * @return {string}
  */
-proto.cosmos.base.abci.v1beta1.TxResponse.prototype.getInfo = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 8, ""));
+proto.cosmos.base.abci.v1beta1.TxResponse.prototype.getInfo = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 8, ''));
 };
-
 
 /** @param {string} value */
-proto.cosmos.base.abci.v1beta1.TxResponse.prototype.setInfo = function(value) {
+proto.cosmos.base.abci.v1beta1.TxResponse.prototype.setInfo = function (value) {
   jspb.Message.setProto3StringField(this, 8, value);
 };
-
 
 /**
  * optional int64 gas_wanted = 9;
  * @return {number}
  */
-proto.cosmos.base.abci.v1beta1.TxResponse.prototype.getGasWanted = function() {
+proto.cosmos.base.abci.v1beta1.TxResponse.prototype.getGasWanted = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 9, 0));
 };
 
-
 /** @param {number} value */
-proto.cosmos.base.abci.v1beta1.TxResponse.prototype.setGasWanted = function(value) {
+proto.cosmos.base.abci.v1beta1.TxResponse.prototype.setGasWanted = function (value) {
   jspb.Message.setProto3IntField(this, 9, value);
 };
-
 
 /**
  * optional int64 gas_used = 10;
  * @return {number}
  */
-proto.cosmos.base.abci.v1beta1.TxResponse.prototype.getGasUsed = function() {
+proto.cosmos.base.abci.v1beta1.TxResponse.prototype.getGasUsed = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 10, 0));
 };
 
-
 /** @param {number} value */
-proto.cosmos.base.abci.v1beta1.TxResponse.prototype.setGasUsed = function(value) {
+proto.cosmos.base.abci.v1beta1.TxResponse.prototype.setGasUsed = function (value) {
   jspb.Message.setProto3IntField(this, 10, value);
 };
-
 
 /**
  * optional google.protobuf.Any tx = 11;
  * @return {?proto.google.protobuf.Any}
  */
-proto.cosmos.base.abci.v1beta1.TxResponse.prototype.getTx = function() {
+proto.cosmos.base.abci.v1beta1.TxResponse.prototype.getTx = function () {
   return /** @type{?proto.google.protobuf.Any} */ (
     jspb.Message.getWrapperField(this, google_protobuf_any_pb.Any, 11));
 };
 
-
 /** @param {?proto.google.protobuf.Any|undefined} value */
-proto.cosmos.base.abci.v1beta1.TxResponse.prototype.setTx = function(value) {
+proto.cosmos.base.abci.v1beta1.TxResponse.prototype.setTx = function (value) {
   jspb.Message.setWrapperField(this, 11, value);
 };
 
-
-proto.cosmos.base.abci.v1beta1.TxResponse.prototype.clearTx = function() {
+proto.cosmos.base.abci.v1beta1.TxResponse.prototype.clearTx = function () {
   this.setTx(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.cosmos.base.abci.v1beta1.TxResponse.prototype.hasTx = function() {
+proto.cosmos.base.abci.v1beta1.TxResponse.prototype.hasTx = function () {
   return jspb.Message.getField(this, 11) != null;
 };
-
 
 /**
  * optional string timestamp = 12;
  * @return {string}
  */
-proto.cosmos.base.abci.v1beta1.TxResponse.prototype.getTimestamp = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 12, ""));
+proto.cosmos.base.abci.v1beta1.TxResponse.prototype.getTimestamp = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 12, ''));
 };
-
 
 /** @param {string} value */
-proto.cosmos.base.abci.v1beta1.TxResponse.prototype.setTimestamp = function(value) {
+proto.cosmos.base.abci.v1beta1.TxResponse.prototype.setTimestamp = function (value) {
   jspb.Message.setProto3StringField(this, 12, value);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -517,7 +482,7 @@ proto.cosmos.base.abci.v1beta1.TxResponse.prototype.setTimestamp = function(valu
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.base.abci.v1beta1.ABCIMessageLog = function(opt_data) {
+proto.cosmos.base.abci.v1beta1.ABCIMessageLog = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.cosmos.base.abci.v1beta1.ABCIMessageLog.repeatedFields_, null);
 };
 goog.inherits(proto.cosmos.base.abci.v1beta1.ABCIMessageLog, jspb.Message);
@@ -531,8 +496,6 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.cosmos.base.abci.v1beta1.ABCIMessageLog.repeatedFields_ = [3];
 
-
-
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -544,12 +507,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.base.abci.v1beta1.ABCIMessageLog.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.base.abci.v1beta1.ABCIMessageLog.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.base.abci.v1beta1.ABCIMessageLog.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.base.abci.v1beta1.ABCIMessageLog.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -558,33 +520,32 @@ proto.cosmos.base.abci.v1beta1.ABCIMessageLog.prototype.toObject = function(opt_
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.abci.v1beta1.ABCIMessageLog.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    msgIndex: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    log: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    eventsList: jspb.Message.toObjectList(msg.getEventsList(),
-    proto.cosmos.base.abci.v1beta1.StringEvent.toObject, includeInstance)
+  proto.cosmos.base.abci.v1beta1.ABCIMessageLog.toObject = function (includeInstance, msg) {
+ const
+      obj = {
+        msgIndex: jspb.Message.getFieldWithDefault(msg, 1, 0),
+        log: jspb.Message.getFieldWithDefault(msg, 2, ''),
+        eventsList: jspb.Message.toObjectList(msg.getEventsList(),
+          proto.cosmos.base.abci.v1beta1.StringEvent.toObject, includeInstance),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.base.abci.v1beta1.ABCIMessageLog}
  */
-proto.cosmos.base.abci.v1beta1.ABCIMessageLog.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.base.abci.v1beta1.ABCIMessageLog;
+proto.cosmos.base.abci.v1beta1.ABCIMessageLog.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.base.abci.v1beta1.ABCIMessageLog();
   return proto.cosmos.base.abci.v1beta1.ABCIMessageLog.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -593,45 +554,43 @@ proto.cosmos.base.abci.v1beta1.ABCIMessageLog.deserializeBinary = function(bytes
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.base.abci.v1beta1.ABCIMessageLog}
  */
-proto.cosmos.base.abci.v1beta1.ABCIMessageLog.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.base.abci.v1beta1.ABCIMessageLog.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {number} */ (reader.readUint32());
-      msg.setMsgIndex(value);
-      break;
-    case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setLog(value);
-      break;
-    case 3:
-      var value = new proto.cosmos.base.abci.v1beta1.StringEvent;
-      reader.readMessage(value,proto.cosmos.base.abci.v1beta1.StringEvent.deserializeBinaryFromReader);
-      msg.addEvents(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {number} */ (reader.readUint32());
+        msg.setMsgIndex(value);
+        break;
+      case 2:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setLog(value);
+        break;
+      case 3:
+        var value = new proto.cosmos.base.abci.v1beta1.StringEvent();
+        reader.readMessage(value, proto.cosmos.base.abci.v1beta1.StringEvent.deserializeBinaryFromReader);
+        msg.addEvents(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.base.abci.v1beta1.ABCIMessageLog.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.base.abci.v1beta1.ABCIMessageLog.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.base.abci.v1beta1.ABCIMessageLog.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -640,20 +599,20 @@ proto.cosmos.base.abci.v1beta1.ABCIMessageLog.prototype.serializeBinary = functi
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.abci.v1beta1.ABCIMessageLog.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.base.abci.v1beta1.ABCIMessageLog.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getMsgIndex();
   if (f !== 0) {
     writer.writeUint32(
       1,
-      f
+      f,
     );
   }
   f = message.getLog();
   if (f.length > 0) {
     writer.writeString(
       2,
-      f
+      f,
     );
   }
   f = message.getEventsList();
@@ -661,73 +620,63 @@ proto.cosmos.base.abci.v1beta1.ABCIMessageLog.serializeBinaryToWriter = function
     writer.writeRepeatedMessage(
       3,
       f,
-      proto.cosmos.base.abci.v1beta1.StringEvent.serializeBinaryToWriter
+      proto.cosmos.base.abci.v1beta1.StringEvent.serializeBinaryToWriter,
     );
   }
 };
-
 
 /**
  * optional uint32 msg_index = 1;
  * @return {number}
  */
-proto.cosmos.base.abci.v1beta1.ABCIMessageLog.prototype.getMsgIndex = function() {
+proto.cosmos.base.abci.v1beta1.ABCIMessageLog.prototype.getMsgIndex = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
-
 /** @param {number} value */
-proto.cosmos.base.abci.v1beta1.ABCIMessageLog.prototype.setMsgIndex = function(value) {
+proto.cosmos.base.abci.v1beta1.ABCIMessageLog.prototype.setMsgIndex = function (value) {
   jspb.Message.setProto3IntField(this, 1, value);
 };
-
 
 /**
  * optional string log = 2;
  * @return {string}
  */
-proto.cosmos.base.abci.v1beta1.ABCIMessageLog.prototype.getLog = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+proto.cosmos.base.abci.v1beta1.ABCIMessageLog.prototype.getLog = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
 };
-
 
 /** @param {string} value */
-proto.cosmos.base.abci.v1beta1.ABCIMessageLog.prototype.setLog = function(value) {
+proto.cosmos.base.abci.v1beta1.ABCIMessageLog.prototype.setLog = function (value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
-
 
 /**
  * repeated StringEvent events = 3;
  * @return {!Array<!proto.cosmos.base.abci.v1beta1.StringEvent>}
  */
-proto.cosmos.base.abci.v1beta1.ABCIMessageLog.prototype.getEventsList = function() {
+proto.cosmos.base.abci.v1beta1.ABCIMessageLog.prototype.getEventsList = function () {
   return /** @type{!Array<!proto.cosmos.base.abci.v1beta1.StringEvent>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.cosmos.base.abci.v1beta1.StringEvent, 3));
 };
 
-
 /** @param {!Array<!proto.cosmos.base.abci.v1beta1.StringEvent>} value */
-proto.cosmos.base.abci.v1beta1.ABCIMessageLog.prototype.setEventsList = function(value) {
+proto.cosmos.base.abci.v1beta1.ABCIMessageLog.prototype.setEventsList = function (value) {
   jspb.Message.setRepeatedWrapperField(this, 3, value);
 };
-
 
 /**
  * @param {!proto.cosmos.base.abci.v1beta1.StringEvent=} opt_value
  * @param {number=} opt_index
  * @return {!proto.cosmos.base.abci.v1beta1.StringEvent}
  */
-proto.cosmos.base.abci.v1beta1.ABCIMessageLog.prototype.addEvents = function(opt_value, opt_index) {
+proto.cosmos.base.abci.v1beta1.ABCIMessageLog.prototype.addEvents = function (opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 3, opt_value, proto.cosmos.base.abci.v1beta1.StringEvent, opt_index);
 };
 
-
-proto.cosmos.base.abci.v1beta1.ABCIMessageLog.prototype.clearEventsList = function() {
+proto.cosmos.base.abci.v1beta1.ABCIMessageLog.prototype.clearEventsList = function () {
   this.setEventsList([]);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -739,7 +688,7 @@ proto.cosmos.base.abci.v1beta1.ABCIMessageLog.prototype.clearEventsList = functi
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.base.abci.v1beta1.StringEvent = function(opt_data) {
+proto.cosmos.base.abci.v1beta1.StringEvent = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.cosmos.base.abci.v1beta1.StringEvent.repeatedFields_, null);
 };
 goog.inherits(proto.cosmos.base.abci.v1beta1.StringEvent, jspb.Message);
@@ -753,8 +702,6 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.cosmos.base.abci.v1beta1.StringEvent.repeatedFields_ = [2];
 
-
-
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -766,12 +713,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.base.abci.v1beta1.StringEvent.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.base.abci.v1beta1.StringEvent.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.base.abci.v1beta1.StringEvent.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.base.abci.v1beta1.StringEvent.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -780,32 +726,31 @@ proto.cosmos.base.abci.v1beta1.StringEvent.prototype.toObject = function(opt_inc
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.abci.v1beta1.StringEvent.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    type: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    attributesList: jspb.Message.toObjectList(msg.getAttributesList(),
-    proto.cosmos.base.abci.v1beta1.Attribute.toObject, includeInstance)
+  proto.cosmos.base.abci.v1beta1.StringEvent.toObject = function (includeInstance, msg) {
+ const
+      obj = {
+        type: jspb.Message.getFieldWithDefault(msg, 1, ''),
+        attributesList: jspb.Message.toObjectList(msg.getAttributesList(),
+          proto.cosmos.base.abci.v1beta1.Attribute.toObject, includeInstance),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.base.abci.v1beta1.StringEvent}
  */
-proto.cosmos.base.abci.v1beta1.StringEvent.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.base.abci.v1beta1.StringEvent;
+proto.cosmos.base.abci.v1beta1.StringEvent.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.base.abci.v1beta1.StringEvent();
   return proto.cosmos.base.abci.v1beta1.StringEvent.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -814,41 +759,39 @@ proto.cosmos.base.abci.v1beta1.StringEvent.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.base.abci.v1beta1.StringEvent}
  */
-proto.cosmos.base.abci.v1beta1.StringEvent.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.base.abci.v1beta1.StringEvent.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setType(value);
-      break;
-    case 2:
-      var value = new proto.cosmos.base.abci.v1beta1.Attribute;
-      reader.readMessage(value,proto.cosmos.base.abci.v1beta1.Attribute.deserializeBinaryFromReader);
-      msg.addAttributes(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setType(value);
+        break;
+      case 2:
+        var value = new proto.cosmos.base.abci.v1beta1.Attribute();
+        reader.readMessage(value, proto.cosmos.base.abci.v1beta1.Attribute.deserializeBinaryFromReader);
+        msg.addAttributes(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.base.abci.v1beta1.StringEvent.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.base.abci.v1beta1.StringEvent.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.base.abci.v1beta1.StringEvent.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -857,13 +800,13 @@ proto.cosmos.base.abci.v1beta1.StringEvent.prototype.serializeBinary = function(
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.abci.v1beta1.StringEvent.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.base.abci.v1beta1.StringEvent.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getType();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f
+      f,
     );
   }
   f = message.getAttributesList();
@@ -871,58 +814,50 @@ proto.cosmos.base.abci.v1beta1.StringEvent.serializeBinaryToWriter = function(me
     writer.writeRepeatedMessage(
       2,
       f,
-      proto.cosmos.base.abci.v1beta1.Attribute.serializeBinaryToWriter
+      proto.cosmos.base.abci.v1beta1.Attribute.serializeBinaryToWriter,
     );
   }
 };
-
 
 /**
  * optional string type = 1;
  * @return {string}
  */
-proto.cosmos.base.abci.v1beta1.StringEvent.prototype.getType = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.cosmos.base.abci.v1beta1.StringEvent.prototype.getType = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
 };
-
 
 /** @param {string} value */
-proto.cosmos.base.abci.v1beta1.StringEvent.prototype.setType = function(value) {
+proto.cosmos.base.abci.v1beta1.StringEvent.prototype.setType = function (value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
-
 
 /**
  * repeated Attribute attributes = 2;
  * @return {!Array<!proto.cosmos.base.abci.v1beta1.Attribute>}
  */
-proto.cosmos.base.abci.v1beta1.StringEvent.prototype.getAttributesList = function() {
+proto.cosmos.base.abci.v1beta1.StringEvent.prototype.getAttributesList = function () {
   return /** @type{!Array<!proto.cosmos.base.abci.v1beta1.Attribute>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.cosmos.base.abci.v1beta1.Attribute, 2));
 };
 
-
 /** @param {!Array<!proto.cosmos.base.abci.v1beta1.Attribute>} value */
-proto.cosmos.base.abci.v1beta1.StringEvent.prototype.setAttributesList = function(value) {
+proto.cosmos.base.abci.v1beta1.StringEvent.prototype.setAttributesList = function (value) {
   jspb.Message.setRepeatedWrapperField(this, 2, value);
 };
-
 
 /**
  * @param {!proto.cosmos.base.abci.v1beta1.Attribute=} opt_value
  * @param {number=} opt_index
  * @return {!proto.cosmos.base.abci.v1beta1.Attribute}
  */
-proto.cosmos.base.abci.v1beta1.StringEvent.prototype.addAttributes = function(opt_value, opt_index) {
+proto.cosmos.base.abci.v1beta1.StringEvent.prototype.addAttributes = function (opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.cosmos.base.abci.v1beta1.Attribute, opt_index);
 };
 
-
-proto.cosmos.base.abci.v1beta1.StringEvent.prototype.clearAttributesList = function() {
+proto.cosmos.base.abci.v1beta1.StringEvent.prototype.clearAttributesList = function () {
   this.setAttributesList([]);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -934,14 +869,13 @@ proto.cosmos.base.abci.v1beta1.StringEvent.prototype.clearAttributesList = funct
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.base.abci.v1beta1.Attribute = function(opt_data) {
+proto.cosmos.base.abci.v1beta1.Attribute = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.base.abci.v1beta1.Attribute, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.base.abci.v1beta1.Attribute.displayName = 'proto.cosmos.base.abci.v1beta1.Attribute';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -954,12 +888,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.base.abci.v1beta1.Attribute.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.base.abci.v1beta1.Attribute.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.base.abci.v1beta1.Attribute.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.base.abci.v1beta1.Attribute.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -968,31 +901,30 @@ proto.cosmos.base.abci.v1beta1.Attribute.prototype.toObject = function(opt_inclu
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.abci.v1beta1.Attribute.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    key: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    value: jspb.Message.getFieldWithDefault(msg, 2, "")
+  proto.cosmos.base.abci.v1beta1.Attribute.toObject = function (includeInstance, msg) {
+ const
+      obj = {
+        key: jspb.Message.getFieldWithDefault(msg, 1, ''),
+        value: jspb.Message.getFieldWithDefault(msg, 2, ''),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.base.abci.v1beta1.Attribute}
  */
-proto.cosmos.base.abci.v1beta1.Attribute.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.base.abci.v1beta1.Attribute;
+proto.cosmos.base.abci.v1beta1.Attribute.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.base.abci.v1beta1.Attribute();
   return proto.cosmos.base.abci.v1beta1.Attribute.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -1001,40 +933,38 @@ proto.cosmos.base.abci.v1beta1.Attribute.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.base.abci.v1beta1.Attribute}
  */
-proto.cosmos.base.abci.v1beta1.Attribute.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.base.abci.v1beta1.Attribute.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setKey(value);
-      break;
-    case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setValue(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setKey(value);
+        break;
+      case 2:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setValue(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.base.abci.v1beta1.Attribute.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.base.abci.v1beta1.Attribute.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.base.abci.v1beta1.Attribute.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -1043,55 +973,49 @@ proto.cosmos.base.abci.v1beta1.Attribute.prototype.serializeBinary = function() 
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.abci.v1beta1.Attribute.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.base.abci.v1beta1.Attribute.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getKey();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f
+      f,
     );
   }
   f = message.getValue();
   if (f.length > 0) {
     writer.writeString(
       2,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional string key = 1;
  * @return {string}
  */
-proto.cosmos.base.abci.v1beta1.Attribute.prototype.getKey = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.cosmos.base.abci.v1beta1.Attribute.prototype.getKey = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
 };
-
 
 /** @param {string} value */
-proto.cosmos.base.abci.v1beta1.Attribute.prototype.setKey = function(value) {
+proto.cosmos.base.abci.v1beta1.Attribute.prototype.setKey = function (value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
-
 
 /**
  * optional string value = 2;
  * @return {string}
  */
-proto.cosmos.base.abci.v1beta1.Attribute.prototype.getValue = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+proto.cosmos.base.abci.v1beta1.Attribute.prototype.getValue = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
 };
-
 
 /** @param {string} value */
-proto.cosmos.base.abci.v1beta1.Attribute.prototype.setValue = function(value) {
+proto.cosmos.base.abci.v1beta1.Attribute.prototype.setValue = function (value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -1103,14 +1027,13 @@ proto.cosmos.base.abci.v1beta1.Attribute.prototype.setValue = function(value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.base.abci.v1beta1.GasInfo = function(opt_data) {
+proto.cosmos.base.abci.v1beta1.GasInfo = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.base.abci.v1beta1.GasInfo, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.base.abci.v1beta1.GasInfo.displayName = 'proto.cosmos.base.abci.v1beta1.GasInfo';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -1123,12 +1046,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.base.abci.v1beta1.GasInfo.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.base.abci.v1beta1.GasInfo.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.base.abci.v1beta1.GasInfo.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.base.abci.v1beta1.GasInfo.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -1137,31 +1059,30 @@ proto.cosmos.base.abci.v1beta1.GasInfo.prototype.toObject = function(opt_include
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.abci.v1beta1.GasInfo.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    gasWanted: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    gasUsed: jspb.Message.getFieldWithDefault(msg, 2, 0)
+  proto.cosmos.base.abci.v1beta1.GasInfo.toObject = function (includeInstance, msg) {
+ const
+      obj = {
+        gasWanted: jspb.Message.getFieldWithDefault(msg, 1, 0),
+        gasUsed: jspb.Message.getFieldWithDefault(msg, 2, 0),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.base.abci.v1beta1.GasInfo}
  */
-proto.cosmos.base.abci.v1beta1.GasInfo.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.base.abci.v1beta1.GasInfo;
+proto.cosmos.base.abci.v1beta1.GasInfo.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.base.abci.v1beta1.GasInfo();
   return proto.cosmos.base.abci.v1beta1.GasInfo.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -1170,40 +1091,38 @@ proto.cosmos.base.abci.v1beta1.GasInfo.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.base.abci.v1beta1.GasInfo}
  */
-proto.cosmos.base.abci.v1beta1.GasInfo.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.base.abci.v1beta1.GasInfo.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {number} */ (reader.readUint64());
-      msg.setGasWanted(value);
-      break;
-    case 2:
-      var value = /** @type {number} */ (reader.readUint64());
-      msg.setGasUsed(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {number} */ (reader.readUint64());
+        msg.setGasWanted(value);
+        break;
+      case 2:
+        var value = /** @type {number} */ (reader.readUint64());
+        msg.setGasUsed(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.base.abci.v1beta1.GasInfo.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.base.abci.v1beta1.GasInfo.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.base.abci.v1beta1.GasInfo.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -1212,55 +1131,49 @@ proto.cosmos.base.abci.v1beta1.GasInfo.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.abci.v1beta1.GasInfo.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.base.abci.v1beta1.GasInfo.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getGasWanted();
   if (f !== 0) {
     writer.writeUint64(
       1,
-      f
+      f,
     );
   }
   f = message.getGasUsed();
   if (f !== 0) {
     writer.writeUint64(
       2,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional uint64 gas_wanted = 1;
  * @return {number}
  */
-proto.cosmos.base.abci.v1beta1.GasInfo.prototype.getGasWanted = function() {
+proto.cosmos.base.abci.v1beta1.GasInfo.prototype.getGasWanted = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
-
 /** @param {number} value */
-proto.cosmos.base.abci.v1beta1.GasInfo.prototype.setGasWanted = function(value) {
+proto.cosmos.base.abci.v1beta1.GasInfo.prototype.setGasWanted = function (value) {
   jspb.Message.setProto3IntField(this, 1, value);
 };
-
 
 /**
  * optional uint64 gas_used = 2;
  * @return {number}
  */
-proto.cosmos.base.abci.v1beta1.GasInfo.prototype.getGasUsed = function() {
+proto.cosmos.base.abci.v1beta1.GasInfo.prototype.getGasUsed = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
-
 /** @param {number} value */
-proto.cosmos.base.abci.v1beta1.GasInfo.prototype.setGasUsed = function(value) {
+proto.cosmos.base.abci.v1beta1.GasInfo.prototype.setGasUsed = function (value) {
   jspb.Message.setProto3IntField(this, 2, value);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -1272,7 +1185,7 @@ proto.cosmos.base.abci.v1beta1.GasInfo.prototype.setGasUsed = function(value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.base.abci.v1beta1.Result = function(opt_data) {
+proto.cosmos.base.abci.v1beta1.Result = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.cosmos.base.abci.v1beta1.Result.repeatedFields_, null);
 };
 goog.inherits(proto.cosmos.base.abci.v1beta1.Result, jspb.Message);
@@ -1286,8 +1199,6 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.cosmos.base.abci.v1beta1.Result.repeatedFields_ = [3];
 
-
-
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -1299,12 +1210,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.base.abci.v1beta1.Result.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.base.abci.v1beta1.Result.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.base.abci.v1beta1.Result.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.base.abci.v1beta1.Result.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -1313,33 +1223,32 @@ proto.cosmos.base.abci.v1beta1.Result.prototype.toObject = function(opt_includeI
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.abci.v1beta1.Result.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    data: msg.getData_asB64(),
-    log: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    eventsList: jspb.Message.toObjectList(msg.getEventsList(),
-    tendermint_abci_types_pb.Event.toObject, includeInstance)
+  proto.cosmos.base.abci.v1beta1.Result.toObject = function (includeInstance, msg) {
+ const
+      obj = {
+        data: msg.getData_asB64(),
+        log: jspb.Message.getFieldWithDefault(msg, 2, ''),
+        eventsList: jspb.Message.toObjectList(msg.getEventsList(),
+          tendermint_abci_types_pb.Event.toObject, includeInstance),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.base.abci.v1beta1.Result}
  */
-proto.cosmos.base.abci.v1beta1.Result.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.base.abci.v1beta1.Result;
+proto.cosmos.base.abci.v1beta1.Result.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.base.abci.v1beta1.Result();
   return proto.cosmos.base.abci.v1beta1.Result.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -1348,45 +1257,43 @@ proto.cosmos.base.abci.v1beta1.Result.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.base.abci.v1beta1.Result}
  */
-proto.cosmos.base.abci.v1beta1.Result.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.base.abci.v1beta1.Result.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setData(value);
-      break;
-    case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setLog(value);
-      break;
-    case 3:
-      var value = new tendermint_abci_types_pb.Event;
-      reader.readMessage(value,tendermint_abci_types_pb.Event.deserializeBinaryFromReader);
-      msg.addEvents(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.setData(value);
+        break;
+      case 2:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setLog(value);
+        break;
+      case 3:
+        var value = new tendermint_abci_types_pb.Event();
+        reader.readMessage(value, tendermint_abci_types_pb.Event.deserializeBinaryFromReader);
+        msg.addEvents(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.base.abci.v1beta1.Result.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.base.abci.v1beta1.Result.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.base.abci.v1beta1.Result.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -1395,20 +1302,20 @@ proto.cosmos.base.abci.v1beta1.Result.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.abci.v1beta1.Result.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.base.abci.v1beta1.Result.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getData_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       1,
-      f
+      f,
     );
   }
   f = message.getLog();
   if (f.length > 0) {
     writer.writeString(
       2,
-      f
+      f,
     );
   }
   f = message.getEventsList();
@@ -1416,31 +1323,29 @@ proto.cosmos.base.abci.v1beta1.Result.serializeBinaryToWriter = function(message
     writer.writeRepeatedMessage(
       3,
       f,
-      tendermint_abci_types_pb.Event.serializeBinaryToWriter
+      tendermint_abci_types_pb.Event.serializeBinaryToWriter,
     );
   }
 };
-
 
 /**
  * optional bytes data = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.cosmos.base.abci.v1beta1.Result.prototype.getData = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.cosmos.base.abci.v1beta1.Result.prototype.getData = function () {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
 };
-
 
 /**
  * optional bytes data = 1;
  * This is a type-conversion wrapper around `getData()`
  * @return {string}
  */
-proto.cosmos.base.abci.v1beta1.Result.prototype.getData_asB64 = function() {
+proto.cosmos.base.abci.v1beta1.Result.prototype.getData_asB64 = function () {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getData()));
+    this.getData(),
+  ));
 };
-
 
 /**
  * optional bytes data = 1;
@@ -1449,64 +1354,56 @@ proto.cosmos.base.abci.v1beta1.Result.prototype.getData_asB64 = function() {
  * This is a type-conversion wrapper around `getData()`
  * @return {!Uint8Array}
  */
-proto.cosmos.base.abci.v1beta1.Result.prototype.getData_asU8 = function() {
+proto.cosmos.base.abci.v1beta1.Result.prototype.getData_asU8 = function () {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getData()));
+    this.getData(),
+  ));
 };
-
 
 /** @param {!(string|Uint8Array)} value */
-proto.cosmos.base.abci.v1beta1.Result.prototype.setData = function(value) {
+proto.cosmos.base.abci.v1beta1.Result.prototype.setData = function (value) {
   jspb.Message.setProto3BytesField(this, 1, value);
 };
-
 
 /**
  * optional string log = 2;
  * @return {string}
  */
-proto.cosmos.base.abci.v1beta1.Result.prototype.getLog = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+proto.cosmos.base.abci.v1beta1.Result.prototype.getLog = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
 };
-
 
 /** @param {string} value */
-proto.cosmos.base.abci.v1beta1.Result.prototype.setLog = function(value) {
+proto.cosmos.base.abci.v1beta1.Result.prototype.setLog = function (value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
-
 
 /**
  * repeated tendermint.abci.Event events = 3;
  * @return {!Array<!proto.tendermint.abci.Event>}
  */
-proto.cosmos.base.abci.v1beta1.Result.prototype.getEventsList = function() {
+proto.cosmos.base.abci.v1beta1.Result.prototype.getEventsList = function () {
   return /** @type{!Array<!proto.tendermint.abci.Event>} */ (
     jspb.Message.getRepeatedWrapperField(this, tendermint_abci_types_pb.Event, 3));
 };
 
-
 /** @param {!Array<!proto.tendermint.abci.Event>} value */
-proto.cosmos.base.abci.v1beta1.Result.prototype.setEventsList = function(value) {
+proto.cosmos.base.abci.v1beta1.Result.prototype.setEventsList = function (value) {
   jspb.Message.setRepeatedWrapperField(this, 3, value);
 };
-
 
 /**
  * @param {!proto.tendermint.abci.Event=} opt_value
  * @param {number=} opt_index
  * @return {!proto.tendermint.abci.Event}
  */
-proto.cosmos.base.abci.v1beta1.Result.prototype.addEvents = function(opt_value, opt_index) {
+proto.cosmos.base.abci.v1beta1.Result.prototype.addEvents = function (opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 3, opt_value, proto.tendermint.abci.Event, opt_index);
 };
 
-
-proto.cosmos.base.abci.v1beta1.Result.prototype.clearEventsList = function() {
+proto.cosmos.base.abci.v1beta1.Result.prototype.clearEventsList = function () {
   this.setEventsList([]);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -1518,14 +1415,13 @@ proto.cosmos.base.abci.v1beta1.Result.prototype.clearEventsList = function() {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.base.abci.v1beta1.SimulationResponse = function(opt_data) {
+proto.cosmos.base.abci.v1beta1.SimulationResponse = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.base.abci.v1beta1.SimulationResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.base.abci.v1beta1.SimulationResponse.displayName = 'proto.cosmos.base.abci.v1beta1.SimulationResponse';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -1538,12 +1434,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.base.abci.v1beta1.SimulationResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.base.abci.v1beta1.SimulationResponse.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.base.abci.v1beta1.SimulationResponse.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.base.abci.v1beta1.SimulationResponse.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -1552,31 +1447,30 @@ proto.cosmos.base.abci.v1beta1.SimulationResponse.prototype.toObject = function(
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.abci.v1beta1.SimulationResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    gasInfo: (f = msg.getGasInfo()) && proto.cosmos.base.abci.v1beta1.GasInfo.toObject(includeInstance, f),
-    result: (f = msg.getResult()) && proto.cosmos.base.abci.v1beta1.Result.toObject(includeInstance, f)
+  proto.cosmos.base.abci.v1beta1.SimulationResponse.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        gasInfo: (f = msg.getGasInfo()) && proto.cosmos.base.abci.v1beta1.GasInfo.toObject(includeInstance, f),
+        result: (f = msg.getResult()) && proto.cosmos.base.abci.v1beta1.Result.toObject(includeInstance, f),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.base.abci.v1beta1.SimulationResponse}
  */
-proto.cosmos.base.abci.v1beta1.SimulationResponse.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.base.abci.v1beta1.SimulationResponse;
+proto.cosmos.base.abci.v1beta1.SimulationResponse.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.base.abci.v1beta1.SimulationResponse();
   return proto.cosmos.base.abci.v1beta1.SimulationResponse.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -1585,42 +1479,40 @@ proto.cosmos.base.abci.v1beta1.SimulationResponse.deserializeBinary = function(b
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.base.abci.v1beta1.SimulationResponse}
  */
-proto.cosmos.base.abci.v1beta1.SimulationResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.base.abci.v1beta1.SimulationResponse.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = new proto.cosmos.base.abci.v1beta1.GasInfo;
-      reader.readMessage(value,proto.cosmos.base.abci.v1beta1.GasInfo.deserializeBinaryFromReader);
-      msg.setGasInfo(value);
-      break;
-    case 2:
-      var value = new proto.cosmos.base.abci.v1beta1.Result;
-      reader.readMessage(value,proto.cosmos.base.abci.v1beta1.Result.deserializeBinaryFromReader);
-      msg.setResult(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = new proto.cosmos.base.abci.v1beta1.GasInfo();
+        reader.readMessage(value, proto.cosmos.base.abci.v1beta1.GasInfo.deserializeBinaryFromReader);
+        msg.setGasInfo(value);
+        break;
+      case 2:
+        var value = new proto.cosmos.base.abci.v1beta1.Result();
+        reader.readMessage(value, proto.cosmos.base.abci.v1beta1.Result.deserializeBinaryFromReader);
+        msg.setResult(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.base.abci.v1beta1.SimulationResponse.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.base.abci.v1beta1.SimulationResponse.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.base.abci.v1beta1.SimulationResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -1629,14 +1521,14 @@ proto.cosmos.base.abci.v1beta1.SimulationResponse.prototype.serializeBinary = fu
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.abci.v1beta1.SimulationResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.base.abci.v1beta1.SimulationResponse.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getGasInfo();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.cosmos.base.abci.v1beta1.GasInfo.serializeBinaryToWriter
+      proto.cosmos.base.abci.v1beta1.GasInfo.serializeBinaryToWriter,
     );
   }
   f = message.getResult();
@@ -1644,72 +1536,62 @@ proto.cosmos.base.abci.v1beta1.SimulationResponse.serializeBinaryToWriter = func
     writer.writeMessage(
       2,
       f,
-      proto.cosmos.base.abci.v1beta1.Result.serializeBinaryToWriter
+      proto.cosmos.base.abci.v1beta1.Result.serializeBinaryToWriter,
     );
   }
 };
-
 
 /**
  * optional GasInfo gas_info = 1;
  * @return {?proto.cosmos.base.abci.v1beta1.GasInfo}
  */
-proto.cosmos.base.abci.v1beta1.SimulationResponse.prototype.getGasInfo = function() {
+proto.cosmos.base.abci.v1beta1.SimulationResponse.prototype.getGasInfo = function () {
   return /** @type{?proto.cosmos.base.abci.v1beta1.GasInfo} */ (
     jspb.Message.getWrapperField(this, proto.cosmos.base.abci.v1beta1.GasInfo, 1));
 };
 
-
 /** @param {?proto.cosmos.base.abci.v1beta1.GasInfo|undefined} value */
-proto.cosmos.base.abci.v1beta1.SimulationResponse.prototype.setGasInfo = function(value) {
+proto.cosmos.base.abci.v1beta1.SimulationResponse.prototype.setGasInfo = function (value) {
   jspb.Message.setWrapperField(this, 1, value);
 };
 
-
-proto.cosmos.base.abci.v1beta1.SimulationResponse.prototype.clearGasInfo = function() {
+proto.cosmos.base.abci.v1beta1.SimulationResponse.prototype.clearGasInfo = function () {
   this.setGasInfo(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.cosmos.base.abci.v1beta1.SimulationResponse.prototype.hasGasInfo = function() {
+proto.cosmos.base.abci.v1beta1.SimulationResponse.prototype.hasGasInfo = function () {
   return jspb.Message.getField(this, 1) != null;
 };
-
 
 /**
  * optional Result result = 2;
  * @return {?proto.cosmos.base.abci.v1beta1.Result}
  */
-proto.cosmos.base.abci.v1beta1.SimulationResponse.prototype.getResult = function() {
+proto.cosmos.base.abci.v1beta1.SimulationResponse.prototype.getResult = function () {
   return /** @type{?proto.cosmos.base.abci.v1beta1.Result} */ (
     jspb.Message.getWrapperField(this, proto.cosmos.base.abci.v1beta1.Result, 2));
 };
 
-
 /** @param {?proto.cosmos.base.abci.v1beta1.Result|undefined} value */
-proto.cosmos.base.abci.v1beta1.SimulationResponse.prototype.setResult = function(value) {
+proto.cosmos.base.abci.v1beta1.SimulationResponse.prototype.setResult = function (value) {
   jspb.Message.setWrapperField(this, 2, value);
 };
 
-
-proto.cosmos.base.abci.v1beta1.SimulationResponse.prototype.clearResult = function() {
+proto.cosmos.base.abci.v1beta1.SimulationResponse.prototype.clearResult = function () {
   this.setResult(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.cosmos.base.abci.v1beta1.SimulationResponse.prototype.hasResult = function() {
+proto.cosmos.base.abci.v1beta1.SimulationResponse.prototype.hasResult = function () {
   return jspb.Message.getField(this, 2) != null;
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -1721,14 +1603,13 @@ proto.cosmos.base.abci.v1beta1.SimulationResponse.prototype.hasResult = function
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.base.abci.v1beta1.MsgData = function(opt_data) {
+proto.cosmos.base.abci.v1beta1.MsgData = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.base.abci.v1beta1.MsgData, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.base.abci.v1beta1.MsgData.displayName = 'proto.cosmos.base.abci.v1beta1.MsgData';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -1741,12 +1622,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.base.abci.v1beta1.MsgData.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.base.abci.v1beta1.MsgData.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.base.abci.v1beta1.MsgData.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.base.abci.v1beta1.MsgData.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -1755,31 +1635,30 @@ proto.cosmos.base.abci.v1beta1.MsgData.prototype.toObject = function(opt_include
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.abci.v1beta1.MsgData.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    msgType: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    data: msg.getData_asB64()
+  proto.cosmos.base.abci.v1beta1.MsgData.toObject = function (includeInstance, msg) {
+ const
+      obj = {
+        msgType: jspb.Message.getFieldWithDefault(msg, 1, ''),
+        data: msg.getData_asB64(),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.base.abci.v1beta1.MsgData}
  */
-proto.cosmos.base.abci.v1beta1.MsgData.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.base.abci.v1beta1.MsgData;
+proto.cosmos.base.abci.v1beta1.MsgData.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.base.abci.v1beta1.MsgData();
   return proto.cosmos.base.abci.v1beta1.MsgData.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -1788,40 +1667,38 @@ proto.cosmos.base.abci.v1beta1.MsgData.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.base.abci.v1beta1.MsgData}
  */
-proto.cosmos.base.abci.v1beta1.MsgData.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.base.abci.v1beta1.MsgData.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setMsgType(value);
-      break;
-    case 2:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setData(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setMsgType(value);
+        break;
+      case 2:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.setData(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.base.abci.v1beta1.MsgData.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.base.abci.v1beta1.MsgData.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.base.abci.v1beta1.MsgData.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -1830,59 +1707,55 @@ proto.cosmos.base.abci.v1beta1.MsgData.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.abci.v1beta1.MsgData.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.base.abci.v1beta1.MsgData.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getMsgType();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f
+      f,
     );
   }
   f = message.getData_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       2,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional string msg_type = 1;
  * @return {string}
  */
-proto.cosmos.base.abci.v1beta1.MsgData.prototype.getMsgType = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.cosmos.base.abci.v1beta1.MsgData.prototype.getMsgType = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
 };
-
 
 /** @param {string} value */
-proto.cosmos.base.abci.v1beta1.MsgData.prototype.setMsgType = function(value) {
+proto.cosmos.base.abci.v1beta1.MsgData.prototype.setMsgType = function (value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
-
 
 /**
  * optional bytes data = 2;
  * @return {!(string|Uint8Array)}
  */
-proto.cosmos.base.abci.v1beta1.MsgData.prototype.getData = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+proto.cosmos.base.abci.v1beta1.MsgData.prototype.getData = function () {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
 };
-
 
 /**
  * optional bytes data = 2;
  * This is a type-conversion wrapper around `getData()`
  * @return {string}
  */
-proto.cosmos.base.abci.v1beta1.MsgData.prototype.getData_asB64 = function() {
+proto.cosmos.base.abci.v1beta1.MsgData.prototype.getData_asB64 = function () {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getData()));
+    this.getData(),
+  ));
 };
-
 
 /**
  * optional bytes data = 2;
@@ -1891,18 +1764,16 @@ proto.cosmos.base.abci.v1beta1.MsgData.prototype.getData_asB64 = function() {
  * This is a type-conversion wrapper around `getData()`
  * @return {!Uint8Array}
  */
-proto.cosmos.base.abci.v1beta1.MsgData.prototype.getData_asU8 = function() {
+proto.cosmos.base.abci.v1beta1.MsgData.prototype.getData_asU8 = function () {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getData()));
+    this.getData(),
+  ));
 };
-
 
 /** @param {!(string|Uint8Array)} value */
-proto.cosmos.base.abci.v1beta1.MsgData.prototype.setData = function(value) {
+proto.cosmos.base.abci.v1beta1.MsgData.prototype.setData = function (value) {
   jspb.Message.setProto3BytesField(this, 2, value);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -1914,7 +1785,7 @@ proto.cosmos.base.abci.v1beta1.MsgData.prototype.setData = function(value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.base.abci.v1beta1.TxMsgData = function(opt_data) {
+proto.cosmos.base.abci.v1beta1.TxMsgData = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.cosmos.base.abci.v1beta1.TxMsgData.repeatedFields_, null);
 };
 goog.inherits(proto.cosmos.base.abci.v1beta1.TxMsgData, jspb.Message);
@@ -1928,8 +1799,6 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.cosmos.base.abci.v1beta1.TxMsgData.repeatedFields_ = [1];
 
-
-
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -1941,12 +1810,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.base.abci.v1beta1.TxMsgData.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.base.abci.v1beta1.TxMsgData.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.base.abci.v1beta1.TxMsgData.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.base.abci.v1beta1.TxMsgData.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -1955,31 +1823,30 @@ proto.cosmos.base.abci.v1beta1.TxMsgData.prototype.toObject = function(opt_inclu
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.abci.v1beta1.TxMsgData.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    dataList: jspb.Message.toObjectList(msg.getDataList(),
-    proto.cosmos.base.abci.v1beta1.MsgData.toObject, includeInstance)
+  proto.cosmos.base.abci.v1beta1.TxMsgData.toObject = function (includeInstance, msg) {
+ const
+      obj = {
+        dataList: jspb.Message.toObjectList(msg.getDataList(),
+          proto.cosmos.base.abci.v1beta1.MsgData.toObject, includeInstance),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.base.abci.v1beta1.TxMsgData}
  */
-proto.cosmos.base.abci.v1beta1.TxMsgData.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.base.abci.v1beta1.TxMsgData;
+proto.cosmos.base.abci.v1beta1.TxMsgData.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.base.abci.v1beta1.TxMsgData();
   return proto.cosmos.base.abci.v1beta1.TxMsgData.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -1988,37 +1855,35 @@ proto.cosmos.base.abci.v1beta1.TxMsgData.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.base.abci.v1beta1.TxMsgData}
  */
-proto.cosmos.base.abci.v1beta1.TxMsgData.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.base.abci.v1beta1.TxMsgData.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = new proto.cosmos.base.abci.v1beta1.MsgData;
-      reader.readMessage(value,proto.cosmos.base.abci.v1beta1.MsgData.deserializeBinaryFromReader);
-      msg.addData(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = new proto.cosmos.base.abci.v1beta1.MsgData();
+        reader.readMessage(value, proto.cosmos.base.abci.v1beta1.MsgData.deserializeBinaryFromReader);
+        msg.addData(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.base.abci.v1beta1.TxMsgData.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.base.abci.v1beta1.TxMsgData.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.base.abci.v1beta1.TxMsgData.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -2027,50 +1892,44 @@ proto.cosmos.base.abci.v1beta1.TxMsgData.prototype.serializeBinary = function() 
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.abci.v1beta1.TxMsgData.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.base.abci.v1beta1.TxMsgData.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getDataList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       1,
       f,
-      proto.cosmos.base.abci.v1beta1.MsgData.serializeBinaryToWriter
+      proto.cosmos.base.abci.v1beta1.MsgData.serializeBinaryToWriter,
     );
   }
 };
-
 
 /**
  * repeated MsgData data = 1;
  * @return {!Array<!proto.cosmos.base.abci.v1beta1.MsgData>}
  */
-proto.cosmos.base.abci.v1beta1.TxMsgData.prototype.getDataList = function() {
+proto.cosmos.base.abci.v1beta1.TxMsgData.prototype.getDataList = function () {
   return /** @type{!Array<!proto.cosmos.base.abci.v1beta1.MsgData>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.cosmos.base.abci.v1beta1.MsgData, 1));
 };
 
-
 /** @param {!Array<!proto.cosmos.base.abci.v1beta1.MsgData>} value */
-proto.cosmos.base.abci.v1beta1.TxMsgData.prototype.setDataList = function(value) {
+proto.cosmos.base.abci.v1beta1.TxMsgData.prototype.setDataList = function (value) {
   jspb.Message.setRepeatedWrapperField(this, 1, value);
 };
-
 
 /**
  * @param {!proto.cosmos.base.abci.v1beta1.MsgData=} opt_value
  * @param {number=} opt_index
  * @return {!proto.cosmos.base.abci.v1beta1.MsgData}
  */
-proto.cosmos.base.abci.v1beta1.TxMsgData.prototype.addData = function(opt_value, opt_index) {
+proto.cosmos.base.abci.v1beta1.TxMsgData.prototype.addData = function (opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.cosmos.base.abci.v1beta1.MsgData, opt_index);
 };
 
-
-proto.cosmos.base.abci.v1beta1.TxMsgData.prototype.clearDataList = function() {
+proto.cosmos.base.abci.v1beta1.TxMsgData.prototype.clearDataList = function () {
   this.setDataList([]);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -2082,7 +1941,7 @@ proto.cosmos.base.abci.v1beta1.TxMsgData.prototype.clearDataList = function() {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.base.abci.v1beta1.SearchTxsResult = function(opt_data) {
+proto.cosmos.base.abci.v1beta1.SearchTxsResult = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.cosmos.base.abci.v1beta1.SearchTxsResult.repeatedFields_, null);
 };
 goog.inherits(proto.cosmos.base.abci.v1beta1.SearchTxsResult, jspb.Message);
@@ -2096,8 +1955,6 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.cosmos.base.abci.v1beta1.SearchTxsResult.repeatedFields_ = [6];
 
-
-
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -2109,12 +1966,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.base.abci.v1beta1.SearchTxsResult.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.base.abci.v1beta1.SearchTxsResult.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.base.abci.v1beta1.SearchTxsResult.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.base.abci.v1beta1.SearchTxsResult.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -2123,36 +1979,35 @@ proto.cosmos.base.abci.v1beta1.SearchTxsResult.prototype.toObject = function(opt
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.abci.v1beta1.SearchTxsResult.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    totalCount: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    count: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    pageNumber: jspb.Message.getFieldWithDefault(msg, 3, 0),
-    pageTotal: jspb.Message.getFieldWithDefault(msg, 4, 0),
-    limit: jspb.Message.getFieldWithDefault(msg, 5, 0),
-    txsList: jspb.Message.toObjectList(msg.getTxsList(),
-    proto.cosmos.base.abci.v1beta1.TxResponse.toObject, includeInstance)
+  proto.cosmos.base.abci.v1beta1.SearchTxsResult.toObject = function (includeInstance, msg) {
+ const
+      obj = {
+        totalCount: jspb.Message.getFieldWithDefault(msg, 1, 0),
+        count: jspb.Message.getFieldWithDefault(msg, 2, 0),
+        pageNumber: jspb.Message.getFieldWithDefault(msg, 3, 0),
+        pageTotal: jspb.Message.getFieldWithDefault(msg, 4, 0),
+        limit: jspb.Message.getFieldWithDefault(msg, 5, 0),
+        txsList: jspb.Message.toObjectList(msg.getTxsList(),
+          proto.cosmos.base.abci.v1beta1.TxResponse.toObject, includeInstance),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.base.abci.v1beta1.SearchTxsResult}
  */
-proto.cosmos.base.abci.v1beta1.SearchTxsResult.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.base.abci.v1beta1.SearchTxsResult;
+proto.cosmos.base.abci.v1beta1.SearchTxsResult.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.base.abci.v1beta1.SearchTxsResult();
   return proto.cosmos.base.abci.v1beta1.SearchTxsResult.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -2161,57 +2016,55 @@ proto.cosmos.base.abci.v1beta1.SearchTxsResult.deserializeBinary = function(byte
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.base.abci.v1beta1.SearchTxsResult}
  */
-proto.cosmos.base.abci.v1beta1.SearchTxsResult.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.base.abci.v1beta1.SearchTxsResult.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {number} */ (reader.readUint64());
-      msg.setTotalCount(value);
-      break;
-    case 2:
-      var value = /** @type {number} */ (reader.readUint64());
-      msg.setCount(value);
-      break;
-    case 3:
-      var value = /** @type {number} */ (reader.readUint64());
-      msg.setPageNumber(value);
-      break;
-    case 4:
-      var value = /** @type {number} */ (reader.readUint64());
-      msg.setPageTotal(value);
-      break;
-    case 5:
-      var value = /** @type {number} */ (reader.readUint64());
-      msg.setLimit(value);
-      break;
-    case 6:
-      var value = new proto.cosmos.base.abci.v1beta1.TxResponse;
-      reader.readMessage(value,proto.cosmos.base.abci.v1beta1.TxResponse.deserializeBinaryFromReader);
-      msg.addTxs(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {number} */ (reader.readUint64());
+        msg.setTotalCount(value);
+        break;
+      case 2:
+        var value = /** @type {number} */ (reader.readUint64());
+        msg.setCount(value);
+        break;
+      case 3:
+        var value = /** @type {number} */ (reader.readUint64());
+        msg.setPageNumber(value);
+        break;
+      case 4:
+        var value = /** @type {number} */ (reader.readUint64());
+        msg.setPageTotal(value);
+        break;
+      case 5:
+        var value = /** @type {number} */ (reader.readUint64());
+        msg.setLimit(value);
+        break;
+      case 6:
+        var value = new proto.cosmos.base.abci.v1beta1.TxResponse();
+        reader.readMessage(value, proto.cosmos.base.abci.v1beta1.TxResponse.deserializeBinaryFromReader);
+        msg.addTxs(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.base.abci.v1beta1.SearchTxsResult.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.base.abci.v1beta1.SearchTxsResult.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.base.abci.v1beta1.SearchTxsResult.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -2220,41 +2073,41 @@ proto.cosmos.base.abci.v1beta1.SearchTxsResult.prototype.serializeBinary = funct
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.abci.v1beta1.SearchTxsResult.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.base.abci.v1beta1.SearchTxsResult.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getTotalCount();
   if (f !== 0) {
     writer.writeUint64(
       1,
-      f
+      f,
     );
   }
   f = message.getCount();
   if (f !== 0) {
     writer.writeUint64(
       2,
-      f
+      f,
     );
   }
   f = message.getPageNumber();
   if (f !== 0) {
     writer.writeUint64(
       3,
-      f
+      f,
     );
   }
   f = message.getPageTotal();
   if (f !== 0) {
     writer.writeUint64(
       4,
-      f
+      f,
     );
   }
   f = message.getLimit();
   if (f !== 0) {
     writer.writeUint64(
       5,
-      f
+      f,
     );
   }
   f = message.getTxsList();
@@ -2262,116 +2115,101 @@ proto.cosmos.base.abci.v1beta1.SearchTxsResult.serializeBinaryToWriter = functio
     writer.writeRepeatedMessage(
       6,
       f,
-      proto.cosmos.base.abci.v1beta1.TxResponse.serializeBinaryToWriter
+      proto.cosmos.base.abci.v1beta1.TxResponse.serializeBinaryToWriter,
     );
   }
 };
-
 
 /**
  * optional uint64 total_count = 1;
  * @return {number}
  */
-proto.cosmos.base.abci.v1beta1.SearchTxsResult.prototype.getTotalCount = function() {
+proto.cosmos.base.abci.v1beta1.SearchTxsResult.prototype.getTotalCount = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
-
 /** @param {number} value */
-proto.cosmos.base.abci.v1beta1.SearchTxsResult.prototype.setTotalCount = function(value) {
+proto.cosmos.base.abci.v1beta1.SearchTxsResult.prototype.setTotalCount = function (value) {
   jspb.Message.setProto3IntField(this, 1, value);
 };
-
 
 /**
  * optional uint64 count = 2;
  * @return {number}
  */
-proto.cosmos.base.abci.v1beta1.SearchTxsResult.prototype.getCount = function() {
+proto.cosmos.base.abci.v1beta1.SearchTxsResult.prototype.getCount = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
-
 /** @param {number} value */
-proto.cosmos.base.abci.v1beta1.SearchTxsResult.prototype.setCount = function(value) {
+proto.cosmos.base.abci.v1beta1.SearchTxsResult.prototype.setCount = function (value) {
   jspb.Message.setProto3IntField(this, 2, value);
 };
-
 
 /**
  * optional uint64 page_number = 3;
  * @return {number}
  */
-proto.cosmos.base.abci.v1beta1.SearchTxsResult.prototype.getPageNumber = function() {
+proto.cosmos.base.abci.v1beta1.SearchTxsResult.prototype.getPageNumber = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
-
 /** @param {number} value */
-proto.cosmos.base.abci.v1beta1.SearchTxsResult.prototype.setPageNumber = function(value) {
+proto.cosmos.base.abci.v1beta1.SearchTxsResult.prototype.setPageNumber = function (value) {
   jspb.Message.setProto3IntField(this, 3, value);
 };
-
 
 /**
  * optional uint64 page_total = 4;
  * @return {number}
  */
-proto.cosmos.base.abci.v1beta1.SearchTxsResult.prototype.getPageTotal = function() {
+proto.cosmos.base.abci.v1beta1.SearchTxsResult.prototype.getPageTotal = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
 };
 
-
 /** @param {number} value */
-proto.cosmos.base.abci.v1beta1.SearchTxsResult.prototype.setPageTotal = function(value) {
+proto.cosmos.base.abci.v1beta1.SearchTxsResult.prototype.setPageTotal = function (value) {
   jspb.Message.setProto3IntField(this, 4, value);
 };
-
 
 /**
  * optional uint64 limit = 5;
  * @return {number}
  */
-proto.cosmos.base.abci.v1beta1.SearchTxsResult.prototype.getLimit = function() {
+proto.cosmos.base.abci.v1beta1.SearchTxsResult.prototype.getLimit = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
 };
 
-
 /** @param {number} value */
-proto.cosmos.base.abci.v1beta1.SearchTxsResult.prototype.setLimit = function(value) {
+proto.cosmos.base.abci.v1beta1.SearchTxsResult.prototype.setLimit = function (value) {
   jspb.Message.setProto3IntField(this, 5, value);
 };
-
 
 /**
  * repeated TxResponse txs = 6;
  * @return {!Array<!proto.cosmos.base.abci.v1beta1.TxResponse>}
  */
-proto.cosmos.base.abci.v1beta1.SearchTxsResult.prototype.getTxsList = function() {
+proto.cosmos.base.abci.v1beta1.SearchTxsResult.prototype.getTxsList = function () {
   return /** @type{!Array<!proto.cosmos.base.abci.v1beta1.TxResponse>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.cosmos.base.abci.v1beta1.TxResponse, 6));
 };
 
-
 /** @param {!Array<!proto.cosmos.base.abci.v1beta1.TxResponse>} value */
-proto.cosmos.base.abci.v1beta1.SearchTxsResult.prototype.setTxsList = function(value) {
+proto.cosmos.base.abci.v1beta1.SearchTxsResult.prototype.setTxsList = function (value) {
   jspb.Message.setRepeatedWrapperField(this, 6, value);
 };
-
 
 /**
  * @param {!proto.cosmos.base.abci.v1beta1.TxResponse=} opt_value
  * @param {number=} opt_index
  * @return {!proto.cosmos.base.abci.v1beta1.TxResponse}
  */
-proto.cosmos.base.abci.v1beta1.SearchTxsResult.prototype.addTxs = function(opt_value, opt_index) {
+proto.cosmos.base.abci.v1beta1.SearchTxsResult.prototype.addTxs = function (opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 6, opt_value, proto.cosmos.base.abci.v1beta1.TxResponse, opt_index);
 };
 
-
-proto.cosmos.base.abci.v1beta1.SearchTxsResult.prototype.clearTxsList = function() {
+proto.cosmos.base.abci.v1beta1.SearchTxsResult.prototype.clearTxsList = function () {
   this.setTxsList([]);
 };
-
 
 goog.object.extend(exports, proto.cosmos.base.abci.v1beta1);

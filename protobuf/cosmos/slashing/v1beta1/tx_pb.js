@@ -7,11 +7,13 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-var jspb = require('google-protobuf');
-var goog = jspb;
-var global = Function('return this')();
+const jspb = require('google-protobuf');
 
-var gogoproto_gogo_pb = require('../../../gogoproto/gogo_pb.js');
+const goog = jspb;
+const global = Function('return this')();
+
+const gogoproto_gogo_pb = require('../../../gogoproto/gogo_pb.js');
+
 goog.exportSymbol('proto.cosmos.slashing.v1beta1.MsgUnjail', null, global);
 goog.exportSymbol('proto.cosmos.slashing.v1beta1.MsgUnjailResponse', null, global);
 
@@ -25,14 +27,13 @@ goog.exportSymbol('proto.cosmos.slashing.v1beta1.MsgUnjailResponse', null, globa
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.slashing.v1beta1.MsgUnjail = function(opt_data) {
+proto.cosmos.slashing.v1beta1.MsgUnjail = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.slashing.v1beta1.MsgUnjail, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.slashing.v1beta1.MsgUnjail.displayName = 'proto.cosmos.slashing.v1beta1.MsgUnjail';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -45,12 +46,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.slashing.v1beta1.MsgUnjail.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.slashing.v1beta1.MsgUnjail.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.slashing.v1beta1.MsgUnjail.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.slashing.v1beta1.MsgUnjail.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -59,30 +59,29 @@ proto.cosmos.slashing.v1beta1.MsgUnjail.prototype.toObject = function(opt_includ
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.slashing.v1beta1.MsgUnjail.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    validatorAddr: jspb.Message.getFieldWithDefault(msg, 1, "")
+  proto.cosmos.slashing.v1beta1.MsgUnjail.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        validatorAddr: jspb.Message.getFieldWithDefault(msg, 1, ''),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.slashing.v1beta1.MsgUnjail}
  */
-proto.cosmos.slashing.v1beta1.MsgUnjail.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.slashing.v1beta1.MsgUnjail;
+proto.cosmos.slashing.v1beta1.MsgUnjail.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.slashing.v1beta1.MsgUnjail();
   return proto.cosmos.slashing.v1beta1.MsgUnjail.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -91,36 +90,34 @@ proto.cosmos.slashing.v1beta1.MsgUnjail.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.slashing.v1beta1.MsgUnjail}
  */
-proto.cosmos.slashing.v1beta1.MsgUnjail.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.slashing.v1beta1.MsgUnjail.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setValidatorAddr(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setValidatorAddr(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.slashing.v1beta1.MsgUnjail.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.slashing.v1beta1.MsgUnjail.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.slashing.v1beta1.MsgUnjail.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -129,33 +126,29 @@ proto.cosmos.slashing.v1beta1.MsgUnjail.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.slashing.v1beta1.MsgUnjail.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.slashing.v1beta1.MsgUnjail.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getValidatorAddr();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional string validator_addr = 1;
  * @return {string}
  */
-proto.cosmos.slashing.v1beta1.MsgUnjail.prototype.getValidatorAddr = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.cosmos.slashing.v1beta1.MsgUnjail.prototype.getValidatorAddr = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
 };
-
 
 /** @param {string} value */
-proto.cosmos.slashing.v1beta1.MsgUnjail.prototype.setValidatorAddr = function(value) {
+proto.cosmos.slashing.v1beta1.MsgUnjail.prototype.setValidatorAddr = function (value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -167,14 +160,13 @@ proto.cosmos.slashing.v1beta1.MsgUnjail.prototype.setValidatorAddr = function(va
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.slashing.v1beta1.MsgUnjailResponse = function(opt_data) {
+proto.cosmos.slashing.v1beta1.MsgUnjailResponse = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.slashing.v1beta1.MsgUnjailResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.slashing.v1beta1.MsgUnjailResponse.displayName = 'proto.cosmos.slashing.v1beta1.MsgUnjailResponse';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -187,12 +179,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.slashing.v1beta1.MsgUnjailResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.slashing.v1beta1.MsgUnjailResponse.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.slashing.v1beta1.MsgUnjailResponse.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.slashing.v1beta1.MsgUnjailResponse.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -201,30 +192,29 @@ proto.cosmos.slashing.v1beta1.MsgUnjailResponse.prototype.toObject = function(op
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.slashing.v1beta1.MsgUnjailResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  proto.cosmos.slashing.v1beta1.MsgUnjailResponse.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
 
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.slashing.v1beta1.MsgUnjailResponse}
  */
-proto.cosmos.slashing.v1beta1.MsgUnjailResponse.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.slashing.v1beta1.MsgUnjailResponse;
+proto.cosmos.slashing.v1beta1.MsgUnjailResponse.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.slashing.v1beta1.MsgUnjailResponse();
   return proto.cosmos.slashing.v1beta1.MsgUnjailResponse.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -233,32 +223,30 @@ proto.cosmos.slashing.v1beta1.MsgUnjailResponse.deserializeBinary = function(byt
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.slashing.v1beta1.MsgUnjailResponse}
  */
-proto.cosmos.slashing.v1beta1.MsgUnjailResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.slashing.v1beta1.MsgUnjailResponse.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    default:
-      reader.skipField();
-      break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.slashing.v1beta1.MsgUnjailResponse.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.slashing.v1beta1.MsgUnjailResponse.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.slashing.v1beta1.MsgUnjailResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -267,9 +255,8 @@ proto.cosmos.slashing.v1beta1.MsgUnjailResponse.prototype.serializeBinary = func
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.slashing.v1beta1.MsgUnjailResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.slashing.v1beta1.MsgUnjailResponse.serializeBinaryToWriter = function (message, writer) {
+  const f;
 };
-
 
 goog.object.extend(exports, proto.cosmos.slashing.v1beta1);

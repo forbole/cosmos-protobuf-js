@@ -2,7 +2,6 @@
 // file: tendermint/crypto/proof.proto
 
 import * as jspb from "google-protobuf";
-import * as gogoproto_gogo_pb from "../../gogoproto/gogo_pb";
 
 export class Proof extends jspb.Message {
   getTotal(): number;

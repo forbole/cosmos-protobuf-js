@@ -2,7 +2,6 @@
 // file: cosmos/capability/v1beta1/capability.proto
 
 import * as jspb from "google-protobuf";
-import * as gogoproto_gogo_pb from "../../../gogoproto/gogo_pb";
 
 export class Capability extends jspb.Message {
   getIndex(): number;

@@ -9,7 +9,6 @@ import * as google_protobuf_duration_pb from "google-protobuf/google/protobuf/du
 import * as google_protobuf_timestamp_pb from "google-protobuf/google/protobuf/timestamp_pb";
 import * as ibc_core_client_v1_client_pb from "../../../../ibc/core/client/v1/client_pb";
 import * as ibc_core_commitment_v1_commitment_pb from "../../../../ibc/core/commitment/v1/commitment_pb";
-import * as gogoproto_gogo_pb from "../../../../gogoproto/gogo_pb";
 
 export class ClientState extends jspb.Message {
   getChainId(): string;

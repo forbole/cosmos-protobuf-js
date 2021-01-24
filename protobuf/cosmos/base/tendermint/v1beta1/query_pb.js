@@ -7,17 +7,19 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-var jspb = require('google-protobuf');
-var goog = jspb;
-var global = Function('return this')();
+const jspb = require('google-protobuf');
 
-var gogoproto_gogo_pb = require('../../../../gogoproto/gogo_pb.js');
-var google_protobuf_any_pb = require('google-protobuf/google/protobuf/any_pb.js');
-var google_api_annotations_pb = require('../../../../google/api/annotations_pb.js');
-var tendermint_p2p_types_pb = require('../../../../tendermint/p2p/types_pb.js');
-var tendermint_types_block_pb = require('../../../../tendermint/types/block_pb.js');
-var tendermint_types_types_pb = require('../../../../tendermint/types/types_pb.js');
-var cosmos_base_query_v1beta1_pagination_pb = require('../../../../cosmos/base/query/v1beta1/pagination_pb.js');
+const goog = jspb;
+const global = Function('return this')();
+
+const google_protobuf_any_pb = require('google-protobuf/google/protobuf/any_pb.js');
+const gogoproto_gogo_pb = require('../../../../gogoproto/gogo_pb.js');
+const google_api_annotations_pb = require('../../../../google/api/annotations_pb.js');
+const tendermint_p2p_types_pb = require('../../../../tendermint/p2p/types_pb.js');
+const tendermint_types_block_pb = require('../../../../tendermint/types/block_pb.js');
+const tendermint_types_types_pb = require('../../../../tendermint/types/types_pb.js');
+const cosmos_base_query_v1beta1_pagination_pb = require('../../query/v1beta1/pagination_pb.js');
+
 goog.exportSymbol('proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightRequest', null, global);
 goog.exportSymbol('proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse', null, global);
 goog.exportSymbol('proto.cosmos.base.tendermint.v1beta1.GetLatestBlockRequest', null, global);
@@ -44,14 +46,13 @@ goog.exportSymbol('proto.cosmos.base.tendermint.v1beta1.VersionInfo', null, glob
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest = function(opt_data) {
+proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest.displayName = 'proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -64,12 +65,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -78,31 +78,30 @@ proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest.prototype.to
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    height: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    pagination: (f = msg.getPagination()) && cosmos_base_query_v1beta1_pagination_pb.PageRequest.toObject(includeInstance, f)
+  proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        height: jspb.Message.getFieldWithDefault(msg, 1, 0),
+        pagination: (f = msg.getPagination()) && cosmos_base_query_v1beta1_pagination_pb.PageRequest.toObject(includeInstance, f),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest}
  */
-proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest;
+proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest();
   return proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -111,41 +110,39 @@ proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest.deserializeB
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest}
  */
-proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setHeight(value);
-      break;
-    case 2:
-      var value = new cosmos_base_query_v1beta1_pagination_pb.PageRequest;
-      reader.readMessage(value,cosmos_base_query_v1beta1_pagination_pb.PageRequest.deserializeBinaryFromReader);
-      msg.setPagination(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setHeight(value);
+        break;
+      case 2:
+        var value = new cosmos_base_query_v1beta1_pagination_pb.PageRequest();
+        reader.readMessage(value, cosmos_base_query_v1beta1_pagination_pb.PageRequest.deserializeBinaryFromReader);
+        msg.setPagination(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -154,13 +151,13 @@ proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest.prototype.se
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getHeight();
   if (f !== 0) {
     writer.writeInt64(
       1,
-      f
+      f,
     );
   }
   f = message.getPagination();
@@ -168,57 +165,49 @@ proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest.serializeBin
     writer.writeMessage(
       2,
       f,
-      cosmos_base_query_v1beta1_pagination_pb.PageRequest.serializeBinaryToWriter
+      cosmos_base_query_v1beta1_pagination_pb.PageRequest.serializeBinaryToWriter,
     );
   }
 };
-
 
 /**
  * optional int64 height = 1;
  * @return {number}
  */
-proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest.prototype.getHeight = function() {
+proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest.prototype.getHeight = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
-
 /** @param {number} value */
-proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest.prototype.setHeight = function(value) {
+proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest.prototype.setHeight = function (value) {
   jspb.Message.setProto3IntField(this, 1, value);
 };
-
 
 /**
  * optional cosmos.base.query.v1beta1.PageRequest pagination = 2;
  * @return {?proto.cosmos.base.query.v1beta1.PageRequest}
  */
-proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest.prototype.getPagination = function() {
+proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest.prototype.getPagination = function () {
   return /** @type{?proto.cosmos.base.query.v1beta1.PageRequest} */ (
     jspb.Message.getWrapperField(this, cosmos_base_query_v1beta1_pagination_pb.PageRequest, 2));
 };
 
-
 /** @param {?proto.cosmos.base.query.v1beta1.PageRequest|undefined} value */
-proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest.prototype.setPagination = function(value) {
+proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest.prototype.setPagination = function (value) {
   jspb.Message.setWrapperField(this, 2, value);
 };
 
-
-proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest.prototype.clearPagination = function() {
+proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest.prototype.clearPagination = function () {
   this.setPagination(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest.prototype.hasPagination = function() {
+proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest.prototype.hasPagination = function () {
   return jspb.Message.getField(this, 2) != null;
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -230,7 +219,7 @@ proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest.prototype.ha
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse = function(opt_data) {
+proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse.repeatedFields_, null);
 };
 goog.inherits(proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse, jspb.Message);
@@ -244,8 +233,6 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse.repeatedFields_ = [2];
 
-
-
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -257,12 +244,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -271,33 +257,32 @@ proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse.prototype.t
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    blockHeight: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    validatorsList: jspb.Message.toObjectList(msg.getValidatorsList(),
-    proto.cosmos.base.tendermint.v1beta1.Validator.toObject, includeInstance),
-    pagination: (f = msg.getPagination()) && cosmos_base_query_v1beta1_pagination_pb.PageResponse.toObject(includeInstance, f)
+  proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        blockHeight: jspb.Message.getFieldWithDefault(msg, 1, 0),
+        validatorsList: jspb.Message.toObjectList(msg.getValidatorsList(),
+          proto.cosmos.base.tendermint.v1beta1.Validator.toObject, includeInstance),
+        pagination: (f = msg.getPagination()) && cosmos_base_query_v1beta1_pagination_pb.PageResponse.toObject(includeInstance, f),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse}
  */
-proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse;
+proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse();
   return proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -306,46 +291,44 @@ proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse.deserialize
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse}
  */
-proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setBlockHeight(value);
-      break;
-    case 2:
-      var value = new proto.cosmos.base.tendermint.v1beta1.Validator;
-      reader.readMessage(value,proto.cosmos.base.tendermint.v1beta1.Validator.deserializeBinaryFromReader);
-      msg.addValidators(value);
-      break;
-    case 3:
-      var value = new cosmos_base_query_v1beta1_pagination_pb.PageResponse;
-      reader.readMessage(value,cosmos_base_query_v1beta1_pagination_pb.PageResponse.deserializeBinaryFromReader);
-      msg.setPagination(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setBlockHeight(value);
+        break;
+      case 2:
+        var value = new proto.cosmos.base.tendermint.v1beta1.Validator();
+        reader.readMessage(value, proto.cosmos.base.tendermint.v1beta1.Validator.deserializeBinaryFromReader);
+        msg.addValidators(value);
+        break;
+      case 3:
+        var value = new cosmos_base_query_v1beta1_pagination_pb.PageResponse();
+        reader.readMessage(value, cosmos_base_query_v1beta1_pagination_pb.PageResponse.deserializeBinaryFromReader);
+        msg.setPagination(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -354,13 +337,13 @@ proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse.prototype.s
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getBlockHeight();
   if (f !== 0) {
     writer.writeInt64(
       1,
-      f
+      f,
     );
   }
   f = message.getValidatorsList();
@@ -368,7 +351,7 @@ proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse.serializeBi
     writer.writeRepeatedMessage(
       2,
       f,
-      proto.cosmos.base.tendermint.v1beta1.Validator.serializeBinaryToWriter
+      proto.cosmos.base.tendermint.v1beta1.Validator.serializeBinaryToWriter,
     );
   }
   f = message.getPagination();
@@ -376,88 +359,76 @@ proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse.serializeBi
     writer.writeMessage(
       3,
       f,
-      cosmos_base_query_v1beta1_pagination_pb.PageResponse.serializeBinaryToWriter
+      cosmos_base_query_v1beta1_pagination_pb.PageResponse.serializeBinaryToWriter,
     );
   }
 };
-
 
 /**
  * optional int64 block_height = 1;
  * @return {number}
  */
-proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse.prototype.getBlockHeight = function() {
+proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse.prototype.getBlockHeight = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
-
 /** @param {number} value */
-proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse.prototype.setBlockHeight = function(value) {
+proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse.prototype.setBlockHeight = function (value) {
   jspb.Message.setProto3IntField(this, 1, value);
 };
-
 
 /**
  * repeated Validator validators = 2;
  * @return {!Array<!proto.cosmos.base.tendermint.v1beta1.Validator>}
  */
-proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse.prototype.getValidatorsList = function() {
+proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse.prototype.getValidatorsList = function () {
   return /** @type{!Array<!proto.cosmos.base.tendermint.v1beta1.Validator>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.cosmos.base.tendermint.v1beta1.Validator, 2));
 };
 
-
 /** @param {!Array<!proto.cosmos.base.tendermint.v1beta1.Validator>} value */
-proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse.prototype.setValidatorsList = function(value) {
+proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse.prototype.setValidatorsList = function (value) {
   jspb.Message.setRepeatedWrapperField(this, 2, value);
 };
-
 
 /**
  * @param {!proto.cosmos.base.tendermint.v1beta1.Validator=} opt_value
  * @param {number=} opt_index
  * @return {!proto.cosmos.base.tendermint.v1beta1.Validator}
  */
-proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse.prototype.addValidators = function(opt_value, opt_index) {
+proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse.prototype.addValidators = function (opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.cosmos.base.tendermint.v1beta1.Validator, opt_index);
 };
 
-
-proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse.prototype.clearValidatorsList = function() {
+proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse.prototype.clearValidatorsList = function () {
   this.setValidatorsList([]);
 };
-
 
 /**
  * optional cosmos.base.query.v1beta1.PageResponse pagination = 3;
  * @return {?proto.cosmos.base.query.v1beta1.PageResponse}
  */
-proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse.prototype.getPagination = function() {
+proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse.prototype.getPagination = function () {
   return /** @type{?proto.cosmos.base.query.v1beta1.PageResponse} */ (
     jspb.Message.getWrapperField(this, cosmos_base_query_v1beta1_pagination_pb.PageResponse, 3));
 };
 
-
 /** @param {?proto.cosmos.base.query.v1beta1.PageResponse|undefined} value */
-proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse.prototype.setPagination = function(value) {
+proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse.prototype.setPagination = function (value) {
   jspb.Message.setWrapperField(this, 3, value);
 };
 
-
-proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse.prototype.clearPagination = function() {
+proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse.prototype.clearPagination = function () {
   this.setPagination(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse.prototype.hasPagination = function() {
+proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse.prototype.hasPagination = function () {
   return jspb.Message.getField(this, 3) != null;
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -469,14 +440,13 @@ proto.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse.prototype.h
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetRequest = function(opt_data) {
+proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetRequest = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetRequest.displayName = 'proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetRequest';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -489,12 +459,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetRequest.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetRequest.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetRequest.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -503,30 +472,29 @@ proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetRequest.prototype.toOb
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    pagination: (f = msg.getPagination()) && cosmos_base_query_v1beta1_pagination_pb.PageRequest.toObject(includeInstance, f)
+  proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetRequest.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        pagination: (f = msg.getPagination()) && cosmos_base_query_v1beta1_pagination_pb.PageRequest.toObject(includeInstance, f),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetRequest}
  */
-proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetRequest.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetRequest;
+proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetRequest.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetRequest();
   return proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetRequest.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -535,37 +503,35 @@ proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetRequest.deserializeBin
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetRequest}
  */
-proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetRequest.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = new cosmos_base_query_v1beta1_pagination_pb.PageRequest;
-      reader.readMessage(value,cosmos_base_query_v1beta1_pagination_pb.PageRequest.deserializeBinaryFromReader);
-      msg.setPagination(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = new cosmos_base_query_v1beta1_pagination_pb.PageRequest();
+        reader.readMessage(value, cosmos_base_query_v1beta1_pagination_pb.PageRequest.deserializeBinaryFromReader);
+        msg.setPagination(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetRequest.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetRequest.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -574,49 +540,43 @@ proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetRequest.prototype.seri
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetRequest.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetRequest.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getPagination();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      cosmos_base_query_v1beta1_pagination_pb.PageRequest.serializeBinaryToWriter
+      cosmos_base_query_v1beta1_pagination_pb.PageRequest.serializeBinaryToWriter,
     );
   }
 };
-
 
 /**
  * optional cosmos.base.query.v1beta1.PageRequest pagination = 1;
  * @return {?proto.cosmos.base.query.v1beta1.PageRequest}
  */
-proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetRequest.prototype.getPagination = function() {
+proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetRequest.prototype.getPagination = function () {
   return /** @type{?proto.cosmos.base.query.v1beta1.PageRequest} */ (
     jspb.Message.getWrapperField(this, cosmos_base_query_v1beta1_pagination_pb.PageRequest, 1));
 };
 
-
 /** @param {?proto.cosmos.base.query.v1beta1.PageRequest|undefined} value */
-proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetRequest.prototype.setPagination = function(value) {
+proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetRequest.prototype.setPagination = function (value) {
   jspb.Message.setWrapperField(this, 1, value);
 };
 
-
-proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetRequest.prototype.clearPagination = function() {
+proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetRequest.prototype.clearPagination = function () {
   this.setPagination(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetRequest.prototype.hasPagination = function() {
+proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetRequest.prototype.hasPagination = function () {
   return jspb.Message.getField(this, 1) != null;
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -628,7 +588,7 @@ proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetRequest.prototype.hasP
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse = function(opt_data) {
+proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse.repeatedFields_, null);
 };
 goog.inherits(proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse, jspb.Message);
@@ -642,8 +602,6 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse.repeatedFields_ = [2];
 
-
-
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -655,12 +613,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -669,33 +626,32 @@ proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse.prototype.toO
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    blockHeight: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    validatorsList: jspb.Message.toObjectList(msg.getValidatorsList(),
-    proto.cosmos.base.tendermint.v1beta1.Validator.toObject, includeInstance),
-    pagination: (f = msg.getPagination()) && cosmos_base_query_v1beta1_pagination_pb.PageResponse.toObject(includeInstance, f)
+  proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        blockHeight: jspb.Message.getFieldWithDefault(msg, 1, 0),
+        validatorsList: jspb.Message.toObjectList(msg.getValidatorsList(),
+          proto.cosmos.base.tendermint.v1beta1.Validator.toObject, includeInstance),
+        pagination: (f = msg.getPagination()) && cosmos_base_query_v1beta1_pagination_pb.PageResponse.toObject(includeInstance, f),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse}
  */
-proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse;
+proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse();
   return proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -704,46 +660,44 @@ proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse.deserializeBi
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse}
  */
-proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setBlockHeight(value);
-      break;
-    case 2:
-      var value = new proto.cosmos.base.tendermint.v1beta1.Validator;
-      reader.readMessage(value,proto.cosmos.base.tendermint.v1beta1.Validator.deserializeBinaryFromReader);
-      msg.addValidators(value);
-      break;
-    case 3:
-      var value = new cosmos_base_query_v1beta1_pagination_pb.PageResponse;
-      reader.readMessage(value,cosmos_base_query_v1beta1_pagination_pb.PageResponse.deserializeBinaryFromReader);
-      msg.setPagination(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setBlockHeight(value);
+        break;
+      case 2:
+        var value = new proto.cosmos.base.tendermint.v1beta1.Validator();
+        reader.readMessage(value, proto.cosmos.base.tendermint.v1beta1.Validator.deserializeBinaryFromReader);
+        msg.addValidators(value);
+        break;
+      case 3:
+        var value = new cosmos_base_query_v1beta1_pagination_pb.PageResponse();
+        reader.readMessage(value, cosmos_base_query_v1beta1_pagination_pb.PageResponse.deserializeBinaryFromReader);
+        msg.setPagination(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -752,13 +706,13 @@ proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse.prototype.ser
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getBlockHeight();
   if (f !== 0) {
     writer.writeInt64(
       1,
-      f
+      f,
     );
   }
   f = message.getValidatorsList();
@@ -766,7 +720,7 @@ proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse.serializeBina
     writer.writeRepeatedMessage(
       2,
       f,
-      proto.cosmos.base.tendermint.v1beta1.Validator.serializeBinaryToWriter
+      proto.cosmos.base.tendermint.v1beta1.Validator.serializeBinaryToWriter,
     );
   }
   f = message.getPagination();
@@ -774,88 +728,76 @@ proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse.serializeBina
     writer.writeMessage(
       3,
       f,
-      cosmos_base_query_v1beta1_pagination_pb.PageResponse.serializeBinaryToWriter
+      cosmos_base_query_v1beta1_pagination_pb.PageResponse.serializeBinaryToWriter,
     );
   }
 };
-
 
 /**
  * optional int64 block_height = 1;
  * @return {number}
  */
-proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse.prototype.getBlockHeight = function() {
+proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse.prototype.getBlockHeight = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
-
 /** @param {number} value */
-proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse.prototype.setBlockHeight = function(value) {
+proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse.prototype.setBlockHeight = function (value) {
   jspb.Message.setProto3IntField(this, 1, value);
 };
-
 
 /**
  * repeated Validator validators = 2;
  * @return {!Array<!proto.cosmos.base.tendermint.v1beta1.Validator>}
  */
-proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse.prototype.getValidatorsList = function() {
+proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse.prototype.getValidatorsList = function () {
   return /** @type{!Array<!proto.cosmos.base.tendermint.v1beta1.Validator>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.cosmos.base.tendermint.v1beta1.Validator, 2));
 };
 
-
 /** @param {!Array<!proto.cosmos.base.tendermint.v1beta1.Validator>} value */
-proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse.prototype.setValidatorsList = function(value) {
+proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse.prototype.setValidatorsList = function (value) {
   jspb.Message.setRepeatedWrapperField(this, 2, value);
 };
-
 
 /**
  * @param {!proto.cosmos.base.tendermint.v1beta1.Validator=} opt_value
  * @param {number=} opt_index
  * @return {!proto.cosmos.base.tendermint.v1beta1.Validator}
  */
-proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse.prototype.addValidators = function(opt_value, opt_index) {
+proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse.prototype.addValidators = function (opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.cosmos.base.tendermint.v1beta1.Validator, opt_index);
 };
 
-
-proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse.prototype.clearValidatorsList = function() {
+proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse.prototype.clearValidatorsList = function () {
   this.setValidatorsList([]);
 };
-
 
 /**
  * optional cosmos.base.query.v1beta1.PageResponse pagination = 3;
  * @return {?proto.cosmos.base.query.v1beta1.PageResponse}
  */
-proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse.prototype.getPagination = function() {
+proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse.prototype.getPagination = function () {
   return /** @type{?proto.cosmos.base.query.v1beta1.PageResponse} */ (
     jspb.Message.getWrapperField(this, cosmos_base_query_v1beta1_pagination_pb.PageResponse, 3));
 };
 
-
 /** @param {?proto.cosmos.base.query.v1beta1.PageResponse|undefined} value */
-proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse.prototype.setPagination = function(value) {
+proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse.prototype.setPagination = function (value) {
   jspb.Message.setWrapperField(this, 3, value);
 };
 
-
-proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse.prototype.clearPagination = function() {
+proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse.prototype.clearPagination = function () {
   this.setPagination(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse.prototype.hasPagination = function() {
+proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse.prototype.hasPagination = function () {
   return jspb.Message.getField(this, 3) != null;
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -867,14 +809,13 @@ proto.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse.prototype.has
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.base.tendermint.v1beta1.Validator = function(opt_data) {
+proto.cosmos.base.tendermint.v1beta1.Validator = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.base.tendermint.v1beta1.Validator, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.base.tendermint.v1beta1.Validator.displayName = 'proto.cosmos.base.tendermint.v1beta1.Validator';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -887,12 +828,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.base.tendermint.v1beta1.Validator.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.base.tendermint.v1beta1.Validator.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.base.tendermint.v1beta1.Validator.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.base.tendermint.v1beta1.Validator.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -901,33 +841,32 @@ proto.cosmos.base.tendermint.v1beta1.Validator.prototype.toObject = function(opt
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.tendermint.v1beta1.Validator.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    address: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    pubKey: (f = msg.getPubKey()) && google_protobuf_any_pb.Any.toObject(includeInstance, f),
-    votingPower: jspb.Message.getFieldWithDefault(msg, 3, 0),
-    proposerPriority: jspb.Message.getFieldWithDefault(msg, 4, 0)
+  proto.cosmos.base.tendermint.v1beta1.Validator.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        address: jspb.Message.getFieldWithDefault(msg, 1, ''),
+        pubKey: (f = msg.getPubKey()) && google_protobuf_any_pb.Any.toObject(includeInstance, f),
+        votingPower: jspb.Message.getFieldWithDefault(msg, 3, 0),
+        proposerPriority: jspb.Message.getFieldWithDefault(msg, 4, 0),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.base.tendermint.v1beta1.Validator}
  */
-proto.cosmos.base.tendermint.v1beta1.Validator.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.base.tendermint.v1beta1.Validator;
+proto.cosmos.base.tendermint.v1beta1.Validator.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.base.tendermint.v1beta1.Validator();
   return proto.cosmos.base.tendermint.v1beta1.Validator.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -936,49 +875,47 @@ proto.cosmos.base.tendermint.v1beta1.Validator.deserializeBinary = function(byte
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.base.tendermint.v1beta1.Validator}
  */
-proto.cosmos.base.tendermint.v1beta1.Validator.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.base.tendermint.v1beta1.Validator.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setAddress(value);
-      break;
-    case 2:
-      var value = new google_protobuf_any_pb.Any;
-      reader.readMessage(value,google_protobuf_any_pb.Any.deserializeBinaryFromReader);
-      msg.setPubKey(value);
-      break;
-    case 3:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setVotingPower(value);
-      break;
-    case 4:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setProposerPriority(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setAddress(value);
+        break;
+      case 2:
+        var value = new google_protobuf_any_pb.Any();
+        reader.readMessage(value, google_protobuf_any_pb.Any.deserializeBinaryFromReader);
+        msg.setPubKey(value);
+        break;
+      case 3:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setVotingPower(value);
+        break;
+      case 4:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setProposerPriority(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.base.tendermint.v1beta1.Validator.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.base.tendermint.v1beta1.Validator.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.base.tendermint.v1beta1.Validator.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -987,13 +924,13 @@ proto.cosmos.base.tendermint.v1beta1.Validator.prototype.serializeBinary = funct
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.tendermint.v1beta1.Validator.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.base.tendermint.v1beta1.Validator.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getAddress();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f
+      f,
     );
   }
   f = message.getPubKey();
@@ -1001,101 +938,89 @@ proto.cosmos.base.tendermint.v1beta1.Validator.serializeBinaryToWriter = functio
     writer.writeMessage(
       2,
       f,
-      google_protobuf_any_pb.Any.serializeBinaryToWriter
+      google_protobuf_any_pb.Any.serializeBinaryToWriter,
     );
   }
   f = message.getVotingPower();
   if (f !== 0) {
     writer.writeInt64(
       3,
-      f
+      f,
     );
   }
   f = message.getProposerPriority();
   if (f !== 0) {
     writer.writeInt64(
       4,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional string address = 1;
  * @return {string}
  */
-proto.cosmos.base.tendermint.v1beta1.Validator.prototype.getAddress = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.cosmos.base.tendermint.v1beta1.Validator.prototype.getAddress = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
 };
-
 
 /** @param {string} value */
-proto.cosmos.base.tendermint.v1beta1.Validator.prototype.setAddress = function(value) {
+proto.cosmos.base.tendermint.v1beta1.Validator.prototype.setAddress = function (value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
-
 
 /**
  * optional google.protobuf.Any pub_key = 2;
  * @return {?proto.google.protobuf.Any}
  */
-proto.cosmos.base.tendermint.v1beta1.Validator.prototype.getPubKey = function() {
+proto.cosmos.base.tendermint.v1beta1.Validator.prototype.getPubKey = function () {
   return /** @type{?proto.google.protobuf.Any} */ (
     jspb.Message.getWrapperField(this, google_protobuf_any_pb.Any, 2));
 };
 
-
 /** @param {?proto.google.protobuf.Any|undefined} value */
-proto.cosmos.base.tendermint.v1beta1.Validator.prototype.setPubKey = function(value) {
+proto.cosmos.base.tendermint.v1beta1.Validator.prototype.setPubKey = function (value) {
   jspb.Message.setWrapperField(this, 2, value);
 };
 
-
-proto.cosmos.base.tendermint.v1beta1.Validator.prototype.clearPubKey = function() {
+proto.cosmos.base.tendermint.v1beta1.Validator.prototype.clearPubKey = function () {
   this.setPubKey(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.cosmos.base.tendermint.v1beta1.Validator.prototype.hasPubKey = function() {
+proto.cosmos.base.tendermint.v1beta1.Validator.prototype.hasPubKey = function () {
   return jspb.Message.getField(this, 2) != null;
 };
-
 
 /**
  * optional int64 voting_power = 3;
  * @return {number}
  */
-proto.cosmos.base.tendermint.v1beta1.Validator.prototype.getVotingPower = function() {
+proto.cosmos.base.tendermint.v1beta1.Validator.prototype.getVotingPower = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
-
 /** @param {number} value */
-proto.cosmos.base.tendermint.v1beta1.Validator.prototype.setVotingPower = function(value) {
+proto.cosmos.base.tendermint.v1beta1.Validator.prototype.setVotingPower = function (value) {
   jspb.Message.setProto3IntField(this, 3, value);
 };
-
 
 /**
  * optional int64 proposer_priority = 4;
  * @return {number}
  */
-proto.cosmos.base.tendermint.v1beta1.Validator.prototype.getProposerPriority = function() {
+proto.cosmos.base.tendermint.v1beta1.Validator.prototype.getProposerPriority = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
 };
 
-
 /** @param {number} value */
-proto.cosmos.base.tendermint.v1beta1.Validator.prototype.setProposerPriority = function(value) {
+proto.cosmos.base.tendermint.v1beta1.Validator.prototype.setProposerPriority = function (value) {
   jspb.Message.setProto3IntField(this, 4, value);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -1107,14 +1032,13 @@ proto.cosmos.base.tendermint.v1beta1.Validator.prototype.setProposerPriority = f
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightRequest = function(opt_data) {
+proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightRequest = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightRequest.displayName = 'proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightRequest';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -1127,12 +1051,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightRequest.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightRequest.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightRequest.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -1141,30 +1064,29 @@ proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightRequest.prototype.toObject 
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    height: jspb.Message.getFieldWithDefault(msg, 1, 0)
+  proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightRequest.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        height: jspb.Message.getFieldWithDefault(msg, 1, 0),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightRequest}
  */
-proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightRequest.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightRequest;
+proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightRequest.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightRequest();
   return proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightRequest.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -1173,36 +1095,34 @@ proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightRequest.deserializeBinary =
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightRequest}
  */
-proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightRequest.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setHeight(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setHeight(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightRequest.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightRequest.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -1211,33 +1131,29 @@ proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightRequest.prototype.serialize
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightRequest.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightRequest.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getHeight();
   if (f !== 0) {
     writer.writeInt64(
       1,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional int64 height = 1;
  * @return {number}
  */
-proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightRequest.prototype.getHeight = function() {
+proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightRequest.prototype.getHeight = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
-
 /** @param {number} value */
-proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightRequest.prototype.setHeight = function(value) {
+proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightRequest.prototype.setHeight = function (value) {
   jspb.Message.setProto3IntField(this, 1, value);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -1249,14 +1165,13 @@ proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightRequest.prototype.setHeight
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse = function(opt_data) {
+proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse.displayName = 'proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -1269,12 +1184,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -1283,31 +1197,30 @@ proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse.prototype.toObject
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    blockId: (f = msg.getBlockId()) && tendermint_types_types_pb.BlockID.toObject(includeInstance, f),
-    block: (f = msg.getBlock()) && tendermint_types_block_pb.Block.toObject(includeInstance, f)
+  proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        blockId: (f = msg.getBlockId()) && tendermint_types_types_pb.BlockID.toObject(includeInstance, f),
+        block: (f = msg.getBlock()) && tendermint_types_block_pb.Block.toObject(includeInstance, f),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse}
  */
-proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse;
+proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse();
   return proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -1316,42 +1229,40 @@ proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse.deserializeBinary 
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse}
  */
-proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = new tendermint_types_types_pb.BlockID;
-      reader.readMessage(value,tendermint_types_types_pb.BlockID.deserializeBinaryFromReader);
-      msg.setBlockId(value);
-      break;
-    case 2:
-      var value = new tendermint_types_block_pb.Block;
-      reader.readMessage(value,tendermint_types_block_pb.Block.deserializeBinaryFromReader);
-      msg.setBlock(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = new tendermint_types_types_pb.BlockID();
+        reader.readMessage(value, tendermint_types_types_pb.BlockID.deserializeBinaryFromReader);
+        msg.setBlockId(value);
+        break;
+      case 2:
+        var value = new tendermint_types_block_pb.Block();
+        reader.readMessage(value, tendermint_types_block_pb.Block.deserializeBinaryFromReader);
+        msg.setBlock(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -1360,14 +1271,14 @@ proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse.prototype.serializ
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getBlockId();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      tendermint_types_types_pb.BlockID.serializeBinaryToWriter
+      tendermint_types_types_pb.BlockID.serializeBinaryToWriter,
     );
   }
   f = message.getBlock();
@@ -1375,72 +1286,62 @@ proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse.serializeBinaryToW
     writer.writeMessage(
       2,
       f,
-      tendermint_types_block_pb.Block.serializeBinaryToWriter
+      tendermint_types_block_pb.Block.serializeBinaryToWriter,
     );
   }
 };
-
 
 /**
  * optional tendermint.types.BlockID block_id = 1;
  * @return {?proto.tendermint.types.BlockID}
  */
-proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse.prototype.getBlockId = function() {
+proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse.prototype.getBlockId = function () {
   return /** @type{?proto.tendermint.types.BlockID} */ (
     jspb.Message.getWrapperField(this, tendermint_types_types_pb.BlockID, 1));
 };
 
-
 /** @param {?proto.tendermint.types.BlockID|undefined} value */
-proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse.prototype.setBlockId = function(value) {
+proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse.prototype.setBlockId = function (value) {
   jspb.Message.setWrapperField(this, 1, value);
 };
 
-
-proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse.prototype.clearBlockId = function() {
+proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse.prototype.clearBlockId = function () {
   this.setBlockId(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse.prototype.hasBlockId = function() {
+proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse.prototype.hasBlockId = function () {
   return jspb.Message.getField(this, 1) != null;
 };
-
 
 /**
  * optional tendermint.types.Block block = 2;
  * @return {?proto.tendermint.types.Block}
  */
-proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse.prototype.getBlock = function() {
+proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse.prototype.getBlock = function () {
   return /** @type{?proto.tendermint.types.Block} */ (
     jspb.Message.getWrapperField(this, tendermint_types_block_pb.Block, 2));
 };
 
-
 /** @param {?proto.tendermint.types.Block|undefined} value */
-proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse.prototype.setBlock = function(value) {
+proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse.prototype.setBlock = function (value) {
   jspb.Message.setWrapperField(this, 2, value);
 };
 
-
-proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse.prototype.clearBlock = function() {
+proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse.prototype.clearBlock = function () {
   this.setBlock(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse.prototype.hasBlock = function() {
+proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse.prototype.hasBlock = function () {
   return jspb.Message.getField(this, 2) != null;
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -1452,14 +1353,13 @@ proto.cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse.prototype.hasBlock
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.base.tendermint.v1beta1.GetLatestBlockRequest = function(opt_data) {
+proto.cosmos.base.tendermint.v1beta1.GetLatestBlockRequest = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.base.tendermint.v1beta1.GetLatestBlockRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.base.tendermint.v1beta1.GetLatestBlockRequest.displayName = 'proto.cosmos.base.tendermint.v1beta1.GetLatestBlockRequest';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -1472,12 +1372,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.base.tendermint.v1beta1.GetLatestBlockRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.base.tendermint.v1beta1.GetLatestBlockRequest.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.base.tendermint.v1beta1.GetLatestBlockRequest.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.base.tendermint.v1beta1.GetLatestBlockRequest.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -1486,30 +1385,29 @@ proto.cosmos.base.tendermint.v1beta1.GetLatestBlockRequest.prototype.toObject = 
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.tendermint.v1beta1.GetLatestBlockRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  proto.cosmos.base.tendermint.v1beta1.GetLatestBlockRequest.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
 
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.base.tendermint.v1beta1.GetLatestBlockRequest}
  */
-proto.cosmos.base.tendermint.v1beta1.GetLatestBlockRequest.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.base.tendermint.v1beta1.GetLatestBlockRequest;
+proto.cosmos.base.tendermint.v1beta1.GetLatestBlockRequest.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.base.tendermint.v1beta1.GetLatestBlockRequest();
   return proto.cosmos.base.tendermint.v1beta1.GetLatestBlockRequest.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -1518,32 +1416,30 @@ proto.cosmos.base.tendermint.v1beta1.GetLatestBlockRequest.deserializeBinary = f
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.base.tendermint.v1beta1.GetLatestBlockRequest}
  */
-proto.cosmos.base.tendermint.v1beta1.GetLatestBlockRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.base.tendermint.v1beta1.GetLatestBlockRequest.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    default:
-      reader.skipField();
-      break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.base.tendermint.v1beta1.GetLatestBlockRequest.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.base.tendermint.v1beta1.GetLatestBlockRequest.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.base.tendermint.v1beta1.GetLatestBlockRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -1552,11 +1448,9 @@ proto.cosmos.base.tendermint.v1beta1.GetLatestBlockRequest.prototype.serializeBi
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.tendermint.v1beta1.GetLatestBlockRequest.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.base.tendermint.v1beta1.GetLatestBlockRequest.serializeBinaryToWriter = function (message, writer) {
+  const f;
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -1568,14 +1462,13 @@ proto.cosmos.base.tendermint.v1beta1.GetLatestBlockRequest.serializeBinaryToWrit
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.base.tendermint.v1beta1.GetLatestBlockResponse = function(opt_data) {
+proto.cosmos.base.tendermint.v1beta1.GetLatestBlockResponse = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.base.tendermint.v1beta1.GetLatestBlockResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.base.tendermint.v1beta1.GetLatestBlockResponse.displayName = 'proto.cosmos.base.tendermint.v1beta1.GetLatestBlockResponse';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -1588,12 +1481,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.base.tendermint.v1beta1.GetLatestBlockResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.base.tendermint.v1beta1.GetLatestBlockResponse.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.base.tendermint.v1beta1.GetLatestBlockResponse.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.base.tendermint.v1beta1.GetLatestBlockResponse.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -1602,31 +1494,30 @@ proto.cosmos.base.tendermint.v1beta1.GetLatestBlockResponse.prototype.toObject =
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.tendermint.v1beta1.GetLatestBlockResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    blockId: (f = msg.getBlockId()) && tendermint_types_types_pb.BlockID.toObject(includeInstance, f),
-    block: (f = msg.getBlock()) && tendermint_types_block_pb.Block.toObject(includeInstance, f)
+  proto.cosmos.base.tendermint.v1beta1.GetLatestBlockResponse.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        blockId: (f = msg.getBlockId()) && tendermint_types_types_pb.BlockID.toObject(includeInstance, f),
+        block: (f = msg.getBlock()) && tendermint_types_block_pb.Block.toObject(includeInstance, f),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.base.tendermint.v1beta1.GetLatestBlockResponse}
  */
-proto.cosmos.base.tendermint.v1beta1.GetLatestBlockResponse.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.base.tendermint.v1beta1.GetLatestBlockResponse;
+proto.cosmos.base.tendermint.v1beta1.GetLatestBlockResponse.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.base.tendermint.v1beta1.GetLatestBlockResponse();
   return proto.cosmos.base.tendermint.v1beta1.GetLatestBlockResponse.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -1635,42 +1526,40 @@ proto.cosmos.base.tendermint.v1beta1.GetLatestBlockResponse.deserializeBinary = 
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.base.tendermint.v1beta1.GetLatestBlockResponse}
  */
-proto.cosmos.base.tendermint.v1beta1.GetLatestBlockResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.base.tendermint.v1beta1.GetLatestBlockResponse.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = new tendermint_types_types_pb.BlockID;
-      reader.readMessage(value,tendermint_types_types_pb.BlockID.deserializeBinaryFromReader);
-      msg.setBlockId(value);
-      break;
-    case 2:
-      var value = new tendermint_types_block_pb.Block;
-      reader.readMessage(value,tendermint_types_block_pb.Block.deserializeBinaryFromReader);
-      msg.setBlock(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = new tendermint_types_types_pb.BlockID();
+        reader.readMessage(value, tendermint_types_types_pb.BlockID.deserializeBinaryFromReader);
+        msg.setBlockId(value);
+        break;
+      case 2:
+        var value = new tendermint_types_block_pb.Block();
+        reader.readMessage(value, tendermint_types_block_pb.Block.deserializeBinaryFromReader);
+        msg.setBlock(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.base.tendermint.v1beta1.GetLatestBlockResponse.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.base.tendermint.v1beta1.GetLatestBlockResponse.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.base.tendermint.v1beta1.GetLatestBlockResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -1679,14 +1568,14 @@ proto.cosmos.base.tendermint.v1beta1.GetLatestBlockResponse.prototype.serializeB
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.tendermint.v1beta1.GetLatestBlockResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.base.tendermint.v1beta1.GetLatestBlockResponse.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getBlockId();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      tendermint_types_types_pb.BlockID.serializeBinaryToWriter
+      tendermint_types_types_pb.BlockID.serializeBinaryToWriter,
     );
   }
   f = message.getBlock();
@@ -1694,72 +1583,62 @@ proto.cosmos.base.tendermint.v1beta1.GetLatestBlockResponse.serializeBinaryToWri
     writer.writeMessage(
       2,
       f,
-      tendermint_types_block_pb.Block.serializeBinaryToWriter
+      tendermint_types_block_pb.Block.serializeBinaryToWriter,
     );
   }
 };
-
 
 /**
  * optional tendermint.types.BlockID block_id = 1;
  * @return {?proto.tendermint.types.BlockID}
  */
-proto.cosmos.base.tendermint.v1beta1.GetLatestBlockResponse.prototype.getBlockId = function() {
+proto.cosmos.base.tendermint.v1beta1.GetLatestBlockResponse.prototype.getBlockId = function () {
   return /** @type{?proto.tendermint.types.BlockID} */ (
     jspb.Message.getWrapperField(this, tendermint_types_types_pb.BlockID, 1));
 };
 
-
 /** @param {?proto.tendermint.types.BlockID|undefined} value */
-proto.cosmos.base.tendermint.v1beta1.GetLatestBlockResponse.prototype.setBlockId = function(value) {
+proto.cosmos.base.tendermint.v1beta1.GetLatestBlockResponse.prototype.setBlockId = function (value) {
   jspb.Message.setWrapperField(this, 1, value);
 };
 
-
-proto.cosmos.base.tendermint.v1beta1.GetLatestBlockResponse.prototype.clearBlockId = function() {
+proto.cosmos.base.tendermint.v1beta1.GetLatestBlockResponse.prototype.clearBlockId = function () {
   this.setBlockId(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.cosmos.base.tendermint.v1beta1.GetLatestBlockResponse.prototype.hasBlockId = function() {
+proto.cosmos.base.tendermint.v1beta1.GetLatestBlockResponse.prototype.hasBlockId = function () {
   return jspb.Message.getField(this, 1) != null;
 };
-
 
 /**
  * optional tendermint.types.Block block = 2;
  * @return {?proto.tendermint.types.Block}
  */
-proto.cosmos.base.tendermint.v1beta1.GetLatestBlockResponse.prototype.getBlock = function() {
+proto.cosmos.base.tendermint.v1beta1.GetLatestBlockResponse.prototype.getBlock = function () {
   return /** @type{?proto.tendermint.types.Block} */ (
     jspb.Message.getWrapperField(this, tendermint_types_block_pb.Block, 2));
 };
 
-
 /** @param {?proto.tendermint.types.Block|undefined} value */
-proto.cosmos.base.tendermint.v1beta1.GetLatestBlockResponse.prototype.setBlock = function(value) {
+proto.cosmos.base.tendermint.v1beta1.GetLatestBlockResponse.prototype.setBlock = function (value) {
   jspb.Message.setWrapperField(this, 2, value);
 };
 
-
-proto.cosmos.base.tendermint.v1beta1.GetLatestBlockResponse.prototype.clearBlock = function() {
+proto.cosmos.base.tendermint.v1beta1.GetLatestBlockResponse.prototype.clearBlock = function () {
   this.setBlock(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.cosmos.base.tendermint.v1beta1.GetLatestBlockResponse.prototype.hasBlock = function() {
+proto.cosmos.base.tendermint.v1beta1.GetLatestBlockResponse.prototype.hasBlock = function () {
   return jspb.Message.getField(this, 2) != null;
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -1771,14 +1650,13 @@ proto.cosmos.base.tendermint.v1beta1.GetLatestBlockResponse.prototype.hasBlock =
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.base.tendermint.v1beta1.GetSyncingRequest = function(opt_data) {
+proto.cosmos.base.tendermint.v1beta1.GetSyncingRequest = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.base.tendermint.v1beta1.GetSyncingRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.base.tendermint.v1beta1.GetSyncingRequest.displayName = 'proto.cosmos.base.tendermint.v1beta1.GetSyncingRequest';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -1791,12 +1669,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.base.tendermint.v1beta1.GetSyncingRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.base.tendermint.v1beta1.GetSyncingRequest.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.base.tendermint.v1beta1.GetSyncingRequest.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.base.tendermint.v1beta1.GetSyncingRequest.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -1805,30 +1682,29 @@ proto.cosmos.base.tendermint.v1beta1.GetSyncingRequest.prototype.toObject = func
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.tendermint.v1beta1.GetSyncingRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  proto.cosmos.base.tendermint.v1beta1.GetSyncingRequest.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
 
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.base.tendermint.v1beta1.GetSyncingRequest}
  */
-proto.cosmos.base.tendermint.v1beta1.GetSyncingRequest.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.base.tendermint.v1beta1.GetSyncingRequest;
+proto.cosmos.base.tendermint.v1beta1.GetSyncingRequest.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.base.tendermint.v1beta1.GetSyncingRequest();
   return proto.cosmos.base.tendermint.v1beta1.GetSyncingRequest.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -1837,32 +1713,30 @@ proto.cosmos.base.tendermint.v1beta1.GetSyncingRequest.deserializeBinary = funct
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.base.tendermint.v1beta1.GetSyncingRequest}
  */
-proto.cosmos.base.tendermint.v1beta1.GetSyncingRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.base.tendermint.v1beta1.GetSyncingRequest.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    default:
-      reader.skipField();
-      break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.base.tendermint.v1beta1.GetSyncingRequest.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.base.tendermint.v1beta1.GetSyncingRequest.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.base.tendermint.v1beta1.GetSyncingRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -1871,11 +1745,9 @@ proto.cosmos.base.tendermint.v1beta1.GetSyncingRequest.prototype.serializeBinary
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.tendermint.v1beta1.GetSyncingRequest.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.base.tendermint.v1beta1.GetSyncingRequest.serializeBinaryToWriter = function (message, writer) {
+  const f;
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -1887,14 +1759,13 @@ proto.cosmos.base.tendermint.v1beta1.GetSyncingRequest.serializeBinaryToWriter =
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.base.tendermint.v1beta1.GetSyncingResponse = function(opt_data) {
+proto.cosmos.base.tendermint.v1beta1.GetSyncingResponse = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.base.tendermint.v1beta1.GetSyncingResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.base.tendermint.v1beta1.GetSyncingResponse.displayName = 'proto.cosmos.base.tendermint.v1beta1.GetSyncingResponse';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -1907,12 +1778,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.base.tendermint.v1beta1.GetSyncingResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.base.tendermint.v1beta1.GetSyncingResponse.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.base.tendermint.v1beta1.GetSyncingResponse.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.base.tendermint.v1beta1.GetSyncingResponse.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -1921,30 +1791,29 @@ proto.cosmos.base.tendermint.v1beta1.GetSyncingResponse.prototype.toObject = fun
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.tendermint.v1beta1.GetSyncingResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    syncing: jspb.Message.getFieldWithDefault(msg, 1, false)
+  proto.cosmos.base.tendermint.v1beta1.GetSyncingResponse.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        syncing: jspb.Message.getFieldWithDefault(msg, 1, false),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.base.tendermint.v1beta1.GetSyncingResponse}
  */
-proto.cosmos.base.tendermint.v1beta1.GetSyncingResponse.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.base.tendermint.v1beta1.GetSyncingResponse;
+proto.cosmos.base.tendermint.v1beta1.GetSyncingResponse.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.base.tendermint.v1beta1.GetSyncingResponse();
   return proto.cosmos.base.tendermint.v1beta1.GetSyncingResponse.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -1953,36 +1822,34 @@ proto.cosmos.base.tendermint.v1beta1.GetSyncingResponse.deserializeBinary = func
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.base.tendermint.v1beta1.GetSyncingResponse}
  */
-proto.cosmos.base.tendermint.v1beta1.GetSyncingResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.base.tendermint.v1beta1.GetSyncingResponse.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setSyncing(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {boolean} */ (reader.readBool());
+        msg.setSyncing(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.base.tendermint.v1beta1.GetSyncingResponse.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.base.tendermint.v1beta1.GetSyncingResponse.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.base.tendermint.v1beta1.GetSyncingResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -1991,17 +1858,16 @@ proto.cosmos.base.tendermint.v1beta1.GetSyncingResponse.prototype.serializeBinar
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.tendermint.v1beta1.GetSyncingResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.base.tendermint.v1beta1.GetSyncingResponse.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getSyncing();
   if (f) {
     writer.writeBool(
       1,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional bool syncing = 1;
@@ -2009,17 +1875,14 @@ proto.cosmos.base.tendermint.v1beta1.GetSyncingResponse.serializeBinaryToWriter 
  * You should avoid comparisons like {@code val === true/false} in those cases.
  * @return {boolean}
  */
-proto.cosmos.base.tendermint.v1beta1.GetSyncingResponse.prototype.getSyncing = function() {
+proto.cosmos.base.tendermint.v1beta1.GetSyncingResponse.prototype.getSyncing = function () {
   return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 1, false));
 };
 
-
 /** @param {boolean} value */
-proto.cosmos.base.tendermint.v1beta1.GetSyncingResponse.prototype.setSyncing = function(value) {
+proto.cosmos.base.tendermint.v1beta1.GetSyncingResponse.prototype.setSyncing = function (value) {
   jspb.Message.setProto3BooleanField(this, 1, value);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -2031,14 +1894,13 @@ proto.cosmos.base.tendermint.v1beta1.GetSyncingResponse.prototype.setSyncing = f
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.base.tendermint.v1beta1.GetNodeInfoRequest = function(opt_data) {
+proto.cosmos.base.tendermint.v1beta1.GetNodeInfoRequest = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.base.tendermint.v1beta1.GetNodeInfoRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.base.tendermint.v1beta1.GetNodeInfoRequest.displayName = 'proto.cosmos.base.tendermint.v1beta1.GetNodeInfoRequest';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -2051,12 +1913,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.base.tendermint.v1beta1.GetNodeInfoRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.base.tendermint.v1beta1.GetNodeInfoRequest.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.base.tendermint.v1beta1.GetNodeInfoRequest.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.base.tendermint.v1beta1.GetNodeInfoRequest.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -2065,30 +1926,29 @@ proto.cosmos.base.tendermint.v1beta1.GetNodeInfoRequest.prototype.toObject = fun
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.tendermint.v1beta1.GetNodeInfoRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  proto.cosmos.base.tendermint.v1beta1.GetNodeInfoRequest.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
 
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.base.tendermint.v1beta1.GetNodeInfoRequest}
  */
-proto.cosmos.base.tendermint.v1beta1.GetNodeInfoRequest.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.base.tendermint.v1beta1.GetNodeInfoRequest;
+proto.cosmos.base.tendermint.v1beta1.GetNodeInfoRequest.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.base.tendermint.v1beta1.GetNodeInfoRequest();
   return proto.cosmos.base.tendermint.v1beta1.GetNodeInfoRequest.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -2097,32 +1957,30 @@ proto.cosmos.base.tendermint.v1beta1.GetNodeInfoRequest.deserializeBinary = func
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.base.tendermint.v1beta1.GetNodeInfoRequest}
  */
-proto.cosmos.base.tendermint.v1beta1.GetNodeInfoRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.base.tendermint.v1beta1.GetNodeInfoRequest.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    default:
-      reader.skipField();
-      break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.base.tendermint.v1beta1.GetNodeInfoRequest.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.base.tendermint.v1beta1.GetNodeInfoRequest.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.base.tendermint.v1beta1.GetNodeInfoRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -2131,11 +1989,9 @@ proto.cosmos.base.tendermint.v1beta1.GetNodeInfoRequest.prototype.serializeBinar
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.tendermint.v1beta1.GetNodeInfoRequest.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.base.tendermint.v1beta1.GetNodeInfoRequest.serializeBinaryToWriter = function (message, writer) {
+  const f;
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -2147,14 +2003,13 @@ proto.cosmos.base.tendermint.v1beta1.GetNodeInfoRequest.serializeBinaryToWriter 
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.base.tendermint.v1beta1.GetNodeInfoResponse = function(opt_data) {
+proto.cosmos.base.tendermint.v1beta1.GetNodeInfoResponse = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.base.tendermint.v1beta1.GetNodeInfoResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.base.tendermint.v1beta1.GetNodeInfoResponse.displayName = 'proto.cosmos.base.tendermint.v1beta1.GetNodeInfoResponse';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -2167,12 +2022,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.base.tendermint.v1beta1.GetNodeInfoResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.base.tendermint.v1beta1.GetNodeInfoResponse.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.base.tendermint.v1beta1.GetNodeInfoResponse.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.base.tendermint.v1beta1.GetNodeInfoResponse.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -2181,31 +2035,30 @@ proto.cosmos.base.tendermint.v1beta1.GetNodeInfoResponse.prototype.toObject = fu
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.tendermint.v1beta1.GetNodeInfoResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    defaultNodeInfo: (f = msg.getDefaultNodeInfo()) && tendermint_p2p_types_pb.DefaultNodeInfo.toObject(includeInstance, f),
-    applicationVersion: (f = msg.getApplicationVersion()) && proto.cosmos.base.tendermint.v1beta1.VersionInfo.toObject(includeInstance, f)
+  proto.cosmos.base.tendermint.v1beta1.GetNodeInfoResponse.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        defaultNodeInfo: (f = msg.getDefaultNodeInfo()) && tendermint_p2p_types_pb.DefaultNodeInfo.toObject(includeInstance, f),
+        applicationVersion: (f = msg.getApplicationVersion()) && proto.cosmos.base.tendermint.v1beta1.VersionInfo.toObject(includeInstance, f),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.base.tendermint.v1beta1.GetNodeInfoResponse}
  */
-proto.cosmos.base.tendermint.v1beta1.GetNodeInfoResponse.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.base.tendermint.v1beta1.GetNodeInfoResponse;
+proto.cosmos.base.tendermint.v1beta1.GetNodeInfoResponse.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.base.tendermint.v1beta1.GetNodeInfoResponse();
   return proto.cosmos.base.tendermint.v1beta1.GetNodeInfoResponse.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -2214,42 +2067,40 @@ proto.cosmos.base.tendermint.v1beta1.GetNodeInfoResponse.deserializeBinary = fun
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.base.tendermint.v1beta1.GetNodeInfoResponse}
  */
-proto.cosmos.base.tendermint.v1beta1.GetNodeInfoResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.base.tendermint.v1beta1.GetNodeInfoResponse.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = new tendermint_p2p_types_pb.DefaultNodeInfo;
-      reader.readMessage(value,tendermint_p2p_types_pb.DefaultNodeInfo.deserializeBinaryFromReader);
-      msg.setDefaultNodeInfo(value);
-      break;
-    case 2:
-      var value = new proto.cosmos.base.tendermint.v1beta1.VersionInfo;
-      reader.readMessage(value,proto.cosmos.base.tendermint.v1beta1.VersionInfo.deserializeBinaryFromReader);
-      msg.setApplicationVersion(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = new tendermint_p2p_types_pb.DefaultNodeInfo();
+        reader.readMessage(value, tendermint_p2p_types_pb.DefaultNodeInfo.deserializeBinaryFromReader);
+        msg.setDefaultNodeInfo(value);
+        break;
+      case 2:
+        var value = new proto.cosmos.base.tendermint.v1beta1.VersionInfo();
+        reader.readMessage(value, proto.cosmos.base.tendermint.v1beta1.VersionInfo.deserializeBinaryFromReader);
+        msg.setApplicationVersion(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.base.tendermint.v1beta1.GetNodeInfoResponse.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.base.tendermint.v1beta1.GetNodeInfoResponse.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.base.tendermint.v1beta1.GetNodeInfoResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -2258,14 +2109,14 @@ proto.cosmos.base.tendermint.v1beta1.GetNodeInfoResponse.prototype.serializeBina
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.tendermint.v1beta1.GetNodeInfoResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.base.tendermint.v1beta1.GetNodeInfoResponse.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getDefaultNodeInfo();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      tendermint_p2p_types_pb.DefaultNodeInfo.serializeBinaryToWriter
+      tendermint_p2p_types_pb.DefaultNodeInfo.serializeBinaryToWriter,
     );
   }
   f = message.getApplicationVersion();
@@ -2273,72 +2124,62 @@ proto.cosmos.base.tendermint.v1beta1.GetNodeInfoResponse.serializeBinaryToWriter
     writer.writeMessage(
       2,
       f,
-      proto.cosmos.base.tendermint.v1beta1.VersionInfo.serializeBinaryToWriter
+      proto.cosmos.base.tendermint.v1beta1.VersionInfo.serializeBinaryToWriter,
     );
   }
 };
-
 
 /**
  * optional tendermint.p2p.DefaultNodeInfo default_node_info = 1;
  * @return {?proto.tendermint.p2p.DefaultNodeInfo}
  */
-proto.cosmos.base.tendermint.v1beta1.GetNodeInfoResponse.prototype.getDefaultNodeInfo = function() {
+proto.cosmos.base.tendermint.v1beta1.GetNodeInfoResponse.prototype.getDefaultNodeInfo = function () {
   return /** @type{?proto.tendermint.p2p.DefaultNodeInfo} */ (
     jspb.Message.getWrapperField(this, tendermint_p2p_types_pb.DefaultNodeInfo, 1));
 };
 
-
 /** @param {?proto.tendermint.p2p.DefaultNodeInfo|undefined} value */
-proto.cosmos.base.tendermint.v1beta1.GetNodeInfoResponse.prototype.setDefaultNodeInfo = function(value) {
+proto.cosmos.base.tendermint.v1beta1.GetNodeInfoResponse.prototype.setDefaultNodeInfo = function (value) {
   jspb.Message.setWrapperField(this, 1, value);
 };
 
-
-proto.cosmos.base.tendermint.v1beta1.GetNodeInfoResponse.prototype.clearDefaultNodeInfo = function() {
+proto.cosmos.base.tendermint.v1beta1.GetNodeInfoResponse.prototype.clearDefaultNodeInfo = function () {
   this.setDefaultNodeInfo(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.cosmos.base.tendermint.v1beta1.GetNodeInfoResponse.prototype.hasDefaultNodeInfo = function() {
+proto.cosmos.base.tendermint.v1beta1.GetNodeInfoResponse.prototype.hasDefaultNodeInfo = function () {
   return jspb.Message.getField(this, 1) != null;
 };
-
 
 /**
  * optional VersionInfo application_version = 2;
  * @return {?proto.cosmos.base.tendermint.v1beta1.VersionInfo}
  */
-proto.cosmos.base.tendermint.v1beta1.GetNodeInfoResponse.prototype.getApplicationVersion = function() {
+proto.cosmos.base.tendermint.v1beta1.GetNodeInfoResponse.prototype.getApplicationVersion = function () {
   return /** @type{?proto.cosmos.base.tendermint.v1beta1.VersionInfo} */ (
     jspb.Message.getWrapperField(this, proto.cosmos.base.tendermint.v1beta1.VersionInfo, 2));
 };
 
-
 /** @param {?proto.cosmos.base.tendermint.v1beta1.VersionInfo|undefined} value */
-proto.cosmos.base.tendermint.v1beta1.GetNodeInfoResponse.prototype.setApplicationVersion = function(value) {
+proto.cosmos.base.tendermint.v1beta1.GetNodeInfoResponse.prototype.setApplicationVersion = function (value) {
   jspb.Message.setWrapperField(this, 2, value);
 };
 
-
-proto.cosmos.base.tendermint.v1beta1.GetNodeInfoResponse.prototype.clearApplicationVersion = function() {
+proto.cosmos.base.tendermint.v1beta1.GetNodeInfoResponse.prototype.clearApplicationVersion = function () {
   this.setApplicationVersion(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.cosmos.base.tendermint.v1beta1.GetNodeInfoResponse.prototype.hasApplicationVersion = function() {
+proto.cosmos.base.tendermint.v1beta1.GetNodeInfoResponse.prototype.hasApplicationVersion = function () {
   return jspb.Message.getField(this, 2) != null;
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -2350,7 +2191,7 @@ proto.cosmos.base.tendermint.v1beta1.GetNodeInfoResponse.prototype.hasApplicatio
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.base.tendermint.v1beta1.VersionInfo = function(opt_data) {
+proto.cosmos.base.tendermint.v1beta1.VersionInfo = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.cosmos.base.tendermint.v1beta1.VersionInfo.repeatedFields_, null);
 };
 goog.inherits(proto.cosmos.base.tendermint.v1beta1.VersionInfo, jspb.Message);
@@ -2364,8 +2205,6 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.cosmos.base.tendermint.v1beta1.VersionInfo.repeatedFields_ = [7];
 
-
-
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -2377,12 +2216,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.base.tendermint.v1beta1.VersionInfo.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.base.tendermint.v1beta1.VersionInfo.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.base.tendermint.v1beta1.VersionInfo.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.base.tendermint.v1beta1.VersionInfo.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -2391,37 +2229,36 @@ proto.cosmos.base.tendermint.v1beta1.VersionInfo.prototype.toObject = function(o
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.tendermint.v1beta1.VersionInfo.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    name: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    appName: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    version: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    gitCommit: jspb.Message.getFieldWithDefault(msg, 4, ""),
-    buildTags: jspb.Message.getFieldWithDefault(msg, 5, ""),
-    goVersion: jspb.Message.getFieldWithDefault(msg, 6, ""),
-    buildDepsList: jspb.Message.toObjectList(msg.getBuildDepsList(),
-    proto.cosmos.base.tendermint.v1beta1.Module.toObject, includeInstance)
+  proto.cosmos.base.tendermint.v1beta1.VersionInfo.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        name: jspb.Message.getFieldWithDefault(msg, 1, ''),
+        appName: jspb.Message.getFieldWithDefault(msg, 2, ''),
+        version: jspb.Message.getFieldWithDefault(msg, 3, ''),
+        gitCommit: jspb.Message.getFieldWithDefault(msg, 4, ''),
+        buildTags: jspb.Message.getFieldWithDefault(msg, 5, ''),
+        goVersion: jspb.Message.getFieldWithDefault(msg, 6, ''),
+        buildDepsList: jspb.Message.toObjectList(msg.getBuildDepsList(),
+          proto.cosmos.base.tendermint.v1beta1.Module.toObject, includeInstance),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.base.tendermint.v1beta1.VersionInfo}
  */
-proto.cosmos.base.tendermint.v1beta1.VersionInfo.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.base.tendermint.v1beta1.VersionInfo;
+proto.cosmos.base.tendermint.v1beta1.VersionInfo.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.base.tendermint.v1beta1.VersionInfo();
   return proto.cosmos.base.tendermint.v1beta1.VersionInfo.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -2430,61 +2267,59 @@ proto.cosmos.base.tendermint.v1beta1.VersionInfo.deserializeBinary = function(by
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.base.tendermint.v1beta1.VersionInfo}
  */
-proto.cosmos.base.tendermint.v1beta1.VersionInfo.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.base.tendermint.v1beta1.VersionInfo.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setName(value);
-      break;
-    case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setAppName(value);
-      break;
-    case 3:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setVersion(value);
-      break;
-    case 4:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setGitCommit(value);
-      break;
-    case 5:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setBuildTags(value);
-      break;
-    case 6:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setGoVersion(value);
-      break;
-    case 7:
-      var value = new proto.cosmos.base.tendermint.v1beta1.Module;
-      reader.readMessage(value,proto.cosmos.base.tendermint.v1beta1.Module.deserializeBinaryFromReader);
-      msg.addBuildDeps(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setName(value);
+        break;
+      case 2:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setAppName(value);
+        break;
+      case 3:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setVersion(value);
+        break;
+      case 4:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setGitCommit(value);
+        break;
+      case 5:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setBuildTags(value);
+        break;
+      case 6:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setGoVersion(value);
+        break;
+      case 7:
+        var value = new proto.cosmos.base.tendermint.v1beta1.Module();
+        reader.readMessage(value, proto.cosmos.base.tendermint.v1beta1.Module.deserializeBinaryFromReader);
+        msg.addBuildDeps(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.base.tendermint.v1beta1.VersionInfo.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.base.tendermint.v1beta1.VersionInfo.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.base.tendermint.v1beta1.VersionInfo.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -2493,48 +2328,48 @@ proto.cosmos.base.tendermint.v1beta1.VersionInfo.prototype.serializeBinary = fun
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.tendermint.v1beta1.VersionInfo.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.base.tendermint.v1beta1.VersionInfo.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getName();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f
+      f,
     );
   }
   f = message.getAppName();
   if (f.length > 0) {
     writer.writeString(
       2,
-      f
+      f,
     );
   }
   f = message.getVersion();
   if (f.length > 0) {
     writer.writeString(
       3,
-      f
+      f,
     );
   }
   f = message.getGitCommit();
   if (f.length > 0) {
     writer.writeString(
       4,
-      f
+      f,
     );
   }
   f = message.getBuildTags();
   if (f.length > 0) {
     writer.writeString(
       5,
-      f
+      f,
     );
   }
   f = message.getGoVersion();
   if (f.length > 0) {
     writer.writeString(
       6,
-      f
+      f,
     );
   }
   f = message.getBuildDepsList();
@@ -2542,133 +2377,115 @@ proto.cosmos.base.tendermint.v1beta1.VersionInfo.serializeBinaryToWriter = funct
     writer.writeRepeatedMessage(
       7,
       f,
-      proto.cosmos.base.tendermint.v1beta1.Module.serializeBinaryToWriter
+      proto.cosmos.base.tendermint.v1beta1.Module.serializeBinaryToWriter,
     );
   }
 };
-
 
 /**
  * optional string name = 1;
  * @return {string}
  */
-proto.cosmos.base.tendermint.v1beta1.VersionInfo.prototype.getName = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.cosmos.base.tendermint.v1beta1.VersionInfo.prototype.getName = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
 };
-
 
 /** @param {string} value */
-proto.cosmos.base.tendermint.v1beta1.VersionInfo.prototype.setName = function(value) {
+proto.cosmos.base.tendermint.v1beta1.VersionInfo.prototype.setName = function (value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
-
 
 /**
  * optional string app_name = 2;
  * @return {string}
  */
-proto.cosmos.base.tendermint.v1beta1.VersionInfo.prototype.getAppName = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+proto.cosmos.base.tendermint.v1beta1.VersionInfo.prototype.getAppName = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
 };
-
 
 /** @param {string} value */
-proto.cosmos.base.tendermint.v1beta1.VersionInfo.prototype.setAppName = function(value) {
+proto.cosmos.base.tendermint.v1beta1.VersionInfo.prototype.setAppName = function (value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
-
 
 /**
  * optional string version = 3;
  * @return {string}
  */
-proto.cosmos.base.tendermint.v1beta1.VersionInfo.prototype.getVersion = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+proto.cosmos.base.tendermint.v1beta1.VersionInfo.prototype.getVersion = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ''));
 };
-
 
 /** @param {string} value */
-proto.cosmos.base.tendermint.v1beta1.VersionInfo.prototype.setVersion = function(value) {
+proto.cosmos.base.tendermint.v1beta1.VersionInfo.prototype.setVersion = function (value) {
   jspb.Message.setProto3StringField(this, 3, value);
 };
-
 
 /**
  * optional string git_commit = 4;
  * @return {string}
  */
-proto.cosmos.base.tendermint.v1beta1.VersionInfo.prototype.getGitCommit = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+proto.cosmos.base.tendermint.v1beta1.VersionInfo.prototype.getGitCommit = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ''));
 };
-
 
 /** @param {string} value */
-proto.cosmos.base.tendermint.v1beta1.VersionInfo.prototype.setGitCommit = function(value) {
+proto.cosmos.base.tendermint.v1beta1.VersionInfo.prototype.setGitCommit = function (value) {
   jspb.Message.setProto3StringField(this, 4, value);
 };
-
 
 /**
  * optional string build_tags = 5;
  * @return {string}
  */
-proto.cosmos.base.tendermint.v1beta1.VersionInfo.prototype.getBuildTags = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
+proto.cosmos.base.tendermint.v1beta1.VersionInfo.prototype.getBuildTags = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ''));
 };
-
 
 /** @param {string} value */
-proto.cosmos.base.tendermint.v1beta1.VersionInfo.prototype.setBuildTags = function(value) {
+proto.cosmos.base.tendermint.v1beta1.VersionInfo.prototype.setBuildTags = function (value) {
   jspb.Message.setProto3StringField(this, 5, value);
 };
-
 
 /**
  * optional string go_version = 6;
  * @return {string}
  */
-proto.cosmos.base.tendermint.v1beta1.VersionInfo.prototype.getGoVersion = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
+proto.cosmos.base.tendermint.v1beta1.VersionInfo.prototype.getGoVersion = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ''));
 };
-
 
 /** @param {string} value */
-proto.cosmos.base.tendermint.v1beta1.VersionInfo.prototype.setGoVersion = function(value) {
+proto.cosmos.base.tendermint.v1beta1.VersionInfo.prototype.setGoVersion = function (value) {
   jspb.Message.setProto3StringField(this, 6, value);
 };
-
 
 /**
  * repeated Module build_deps = 7;
  * @return {!Array<!proto.cosmos.base.tendermint.v1beta1.Module>}
  */
-proto.cosmos.base.tendermint.v1beta1.VersionInfo.prototype.getBuildDepsList = function() {
+proto.cosmos.base.tendermint.v1beta1.VersionInfo.prototype.getBuildDepsList = function () {
   return /** @type{!Array<!proto.cosmos.base.tendermint.v1beta1.Module>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.cosmos.base.tendermint.v1beta1.Module, 7));
 };
 
-
 /** @param {!Array<!proto.cosmos.base.tendermint.v1beta1.Module>} value */
-proto.cosmos.base.tendermint.v1beta1.VersionInfo.prototype.setBuildDepsList = function(value) {
+proto.cosmos.base.tendermint.v1beta1.VersionInfo.prototype.setBuildDepsList = function (value) {
   jspb.Message.setRepeatedWrapperField(this, 7, value);
 };
-
 
 /**
  * @param {!proto.cosmos.base.tendermint.v1beta1.Module=} opt_value
  * @param {number=} opt_index
  * @return {!proto.cosmos.base.tendermint.v1beta1.Module}
  */
-proto.cosmos.base.tendermint.v1beta1.VersionInfo.prototype.addBuildDeps = function(opt_value, opt_index) {
+proto.cosmos.base.tendermint.v1beta1.VersionInfo.prototype.addBuildDeps = function (opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 7, opt_value, proto.cosmos.base.tendermint.v1beta1.Module, opt_index);
 };
 
-
-proto.cosmos.base.tendermint.v1beta1.VersionInfo.prototype.clearBuildDepsList = function() {
+proto.cosmos.base.tendermint.v1beta1.VersionInfo.prototype.clearBuildDepsList = function () {
   this.setBuildDepsList([]);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -2680,14 +2497,13 @@ proto.cosmos.base.tendermint.v1beta1.VersionInfo.prototype.clearBuildDepsList = 
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.base.tendermint.v1beta1.Module = function(opt_data) {
+proto.cosmos.base.tendermint.v1beta1.Module = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.base.tendermint.v1beta1.Module, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.base.tendermint.v1beta1.Module.displayName = 'proto.cosmos.base.tendermint.v1beta1.Module';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -2700,12 +2516,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.base.tendermint.v1beta1.Module.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.base.tendermint.v1beta1.Module.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.base.tendermint.v1beta1.Module.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.base.tendermint.v1beta1.Module.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -2714,32 +2529,31 @@ proto.cosmos.base.tendermint.v1beta1.Module.prototype.toObject = function(opt_in
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.tendermint.v1beta1.Module.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    path: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    version: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    sum: jspb.Message.getFieldWithDefault(msg, 3, "")
+  proto.cosmos.base.tendermint.v1beta1.Module.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        path: jspb.Message.getFieldWithDefault(msg, 1, ''),
+        version: jspb.Message.getFieldWithDefault(msg, 2, ''),
+        sum: jspb.Message.getFieldWithDefault(msg, 3, ''),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.base.tendermint.v1beta1.Module}
  */
-proto.cosmos.base.tendermint.v1beta1.Module.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.base.tendermint.v1beta1.Module;
+proto.cosmos.base.tendermint.v1beta1.Module.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.base.tendermint.v1beta1.Module();
   return proto.cosmos.base.tendermint.v1beta1.Module.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -2748,44 +2562,42 @@ proto.cosmos.base.tendermint.v1beta1.Module.deserializeBinary = function(bytes) 
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.base.tendermint.v1beta1.Module}
  */
-proto.cosmos.base.tendermint.v1beta1.Module.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.base.tendermint.v1beta1.Module.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setPath(value);
-      break;
-    case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setVersion(value);
-      break;
-    case 3:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setSum(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setPath(value);
+        break;
+      case 2:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setVersion(value);
+        break;
+      case 3:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setSum(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.base.tendermint.v1beta1.Module.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.base.tendermint.v1beta1.Module.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.base.tendermint.v1beta1.Module.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -2794,75 +2606,68 @@ proto.cosmos.base.tendermint.v1beta1.Module.prototype.serializeBinary = function
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.tendermint.v1beta1.Module.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.base.tendermint.v1beta1.Module.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getPath();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f
+      f,
     );
   }
   f = message.getVersion();
   if (f.length > 0) {
     writer.writeString(
       2,
-      f
+      f,
     );
   }
   f = message.getSum();
   if (f.length > 0) {
     writer.writeString(
       3,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional string path = 1;
  * @return {string}
  */
-proto.cosmos.base.tendermint.v1beta1.Module.prototype.getPath = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.cosmos.base.tendermint.v1beta1.Module.prototype.getPath = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
 };
-
 
 /** @param {string} value */
-proto.cosmos.base.tendermint.v1beta1.Module.prototype.setPath = function(value) {
+proto.cosmos.base.tendermint.v1beta1.Module.prototype.setPath = function (value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
-
 
 /**
  * optional string version = 2;
  * @return {string}
  */
-proto.cosmos.base.tendermint.v1beta1.Module.prototype.getVersion = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+proto.cosmos.base.tendermint.v1beta1.Module.prototype.getVersion = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
 };
-
 
 /** @param {string} value */
-proto.cosmos.base.tendermint.v1beta1.Module.prototype.setVersion = function(value) {
+proto.cosmos.base.tendermint.v1beta1.Module.prototype.setVersion = function (value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
-
 
 /**
  * optional string sum = 3;
  * @return {string}
  */
-proto.cosmos.base.tendermint.v1beta1.Module.prototype.getSum = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+proto.cosmos.base.tendermint.v1beta1.Module.prototype.getSum = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ''));
 };
-
 
 /** @param {string} value */
-proto.cosmos.base.tendermint.v1beta1.Module.prototype.setSum = function(value) {
+proto.cosmos.base.tendermint.v1beta1.Module.prototype.setSum = function (value) {
   jspb.Message.setProto3StringField(this, 3, value);
 };
-
 
 goog.object.extend(exports, proto.cosmos.base.tendermint.v1beta1);

@@ -2,7 +2,6 @@
 // file: ibc/core/channel/v1/channel.proto
 
 import * as jspb from "google-protobuf";
-import * as gogoproto_gogo_pb from "../../../../gogoproto/gogo_pb";
 import * as ibc_core_client_v1_client_pb from "../../../../ibc/core/client/v1/client_pb";
 
 export class Channel extends jspb.Message {

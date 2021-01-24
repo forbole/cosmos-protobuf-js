@@ -7,13 +7,15 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-var jspb = require('google-protobuf');
-var goog = jspb;
-var global = Function('return this')();
+const jspb = require('google-protobuf');
 
-var gogoproto_gogo_pb = require('../../../gogoproto/gogo_pb.js');
-var google_api_annotations_pb = require('../../../google/api/annotations_pb.js');
-var cosmos_params_v1beta1_params_pb = require('../../../cosmos/params/v1beta1/params_pb.js');
+const goog = jspb;
+const global = Function('return this')();
+
+const gogoproto_gogo_pb = require('../../../gogoproto/gogo_pb.js');
+const google_api_annotations_pb = require('../../../google/api/annotations_pb.js');
+const cosmos_params_v1beta1_params_pb = require('./params_pb.js');
+
 goog.exportSymbol('proto.cosmos.params.v1beta1.QueryParamsRequest', null, global);
 goog.exportSymbol('proto.cosmos.params.v1beta1.QueryParamsResponse', null, global);
 
@@ -27,14 +29,13 @@ goog.exportSymbol('proto.cosmos.params.v1beta1.QueryParamsResponse', null, globa
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.params.v1beta1.QueryParamsRequest = function(opt_data) {
+proto.cosmos.params.v1beta1.QueryParamsRequest = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.params.v1beta1.QueryParamsRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.params.v1beta1.QueryParamsRequest.displayName = 'proto.cosmos.params.v1beta1.QueryParamsRequest';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -47,12 +48,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.params.v1beta1.QueryParamsRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.params.v1beta1.QueryParamsRequest.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.params.v1beta1.QueryParamsRequest.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.params.v1beta1.QueryParamsRequest.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -61,31 +61,30 @@ proto.cosmos.params.v1beta1.QueryParamsRequest.prototype.toObject = function(opt
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.params.v1beta1.QueryParamsRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    subspace: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    key: jspb.Message.getFieldWithDefault(msg, 2, "")
+  proto.cosmos.params.v1beta1.QueryParamsRequest.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        subspace: jspb.Message.getFieldWithDefault(msg, 1, ''),
+        key: jspb.Message.getFieldWithDefault(msg, 2, ''),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.params.v1beta1.QueryParamsRequest}
  */
-proto.cosmos.params.v1beta1.QueryParamsRequest.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.params.v1beta1.QueryParamsRequest;
+proto.cosmos.params.v1beta1.QueryParamsRequest.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.params.v1beta1.QueryParamsRequest();
   return proto.cosmos.params.v1beta1.QueryParamsRequest.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -94,40 +93,38 @@ proto.cosmos.params.v1beta1.QueryParamsRequest.deserializeBinary = function(byte
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.params.v1beta1.QueryParamsRequest}
  */
-proto.cosmos.params.v1beta1.QueryParamsRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.params.v1beta1.QueryParamsRequest.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setSubspace(value);
-      break;
-    case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setKey(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setSubspace(value);
+        break;
+      case 2:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setKey(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.params.v1beta1.QueryParamsRequest.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.params.v1beta1.QueryParamsRequest.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.params.v1beta1.QueryParamsRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -136,55 +133,49 @@ proto.cosmos.params.v1beta1.QueryParamsRequest.prototype.serializeBinary = funct
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.params.v1beta1.QueryParamsRequest.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.params.v1beta1.QueryParamsRequest.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getSubspace();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f
+      f,
     );
   }
   f = message.getKey();
   if (f.length > 0) {
     writer.writeString(
       2,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional string subspace = 1;
  * @return {string}
  */
-proto.cosmos.params.v1beta1.QueryParamsRequest.prototype.getSubspace = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.cosmos.params.v1beta1.QueryParamsRequest.prototype.getSubspace = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
 };
-
 
 /** @param {string} value */
-proto.cosmos.params.v1beta1.QueryParamsRequest.prototype.setSubspace = function(value) {
+proto.cosmos.params.v1beta1.QueryParamsRequest.prototype.setSubspace = function (value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
-
 
 /**
  * optional string key = 2;
  * @return {string}
  */
-proto.cosmos.params.v1beta1.QueryParamsRequest.prototype.getKey = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+proto.cosmos.params.v1beta1.QueryParamsRequest.prototype.getKey = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
 };
-
 
 /** @param {string} value */
-proto.cosmos.params.v1beta1.QueryParamsRequest.prototype.setKey = function(value) {
+proto.cosmos.params.v1beta1.QueryParamsRequest.prototype.setKey = function (value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -196,14 +187,13 @@ proto.cosmos.params.v1beta1.QueryParamsRequest.prototype.setKey = function(value
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.params.v1beta1.QueryParamsResponse = function(opt_data) {
+proto.cosmos.params.v1beta1.QueryParamsResponse = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.params.v1beta1.QueryParamsResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.params.v1beta1.QueryParamsResponse.displayName = 'proto.cosmos.params.v1beta1.QueryParamsResponse';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -216,12 +206,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.params.v1beta1.QueryParamsResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.params.v1beta1.QueryParamsResponse.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.params.v1beta1.QueryParamsResponse.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.params.v1beta1.QueryParamsResponse.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -230,30 +219,29 @@ proto.cosmos.params.v1beta1.QueryParamsResponse.prototype.toObject = function(op
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.params.v1beta1.QueryParamsResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    param: (f = msg.getParam()) && cosmos_params_v1beta1_params_pb.ParamChange.toObject(includeInstance, f)
+  proto.cosmos.params.v1beta1.QueryParamsResponse.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        param: (f = msg.getParam()) && cosmos_params_v1beta1_params_pb.ParamChange.toObject(includeInstance, f),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.params.v1beta1.QueryParamsResponse}
  */
-proto.cosmos.params.v1beta1.QueryParamsResponse.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.params.v1beta1.QueryParamsResponse;
+proto.cosmos.params.v1beta1.QueryParamsResponse.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.params.v1beta1.QueryParamsResponse();
   return proto.cosmos.params.v1beta1.QueryParamsResponse.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -262,37 +250,35 @@ proto.cosmos.params.v1beta1.QueryParamsResponse.deserializeBinary = function(byt
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.params.v1beta1.QueryParamsResponse}
  */
-proto.cosmos.params.v1beta1.QueryParamsResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.params.v1beta1.QueryParamsResponse.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = new cosmos_params_v1beta1_params_pb.ParamChange;
-      reader.readMessage(value,cosmos_params_v1beta1_params_pb.ParamChange.deserializeBinaryFromReader);
-      msg.setParam(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = new cosmos_params_v1beta1_params_pb.ParamChange();
+        reader.readMessage(value, cosmos_params_v1beta1_params_pb.ParamChange.deserializeBinaryFromReader);
+        msg.setParam(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.params.v1beta1.QueryParamsResponse.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.params.v1beta1.QueryParamsResponse.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.params.v1beta1.QueryParamsResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -301,47 +287,42 @@ proto.cosmos.params.v1beta1.QueryParamsResponse.prototype.serializeBinary = func
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.params.v1beta1.QueryParamsResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.params.v1beta1.QueryParamsResponse.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getParam();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      cosmos_params_v1beta1_params_pb.ParamChange.serializeBinaryToWriter
+      cosmos_params_v1beta1_params_pb.ParamChange.serializeBinaryToWriter,
     );
   }
 };
-
 
 /**
  * optional ParamChange param = 1;
  * @return {?proto.cosmos.params.v1beta1.ParamChange}
  */
-proto.cosmos.params.v1beta1.QueryParamsResponse.prototype.getParam = function() {
+proto.cosmos.params.v1beta1.QueryParamsResponse.prototype.getParam = function () {
   return /** @type{?proto.cosmos.params.v1beta1.ParamChange} */ (
     jspb.Message.getWrapperField(this, cosmos_params_v1beta1_params_pb.ParamChange, 1));
 };
 
-
 /** @param {?proto.cosmos.params.v1beta1.ParamChange|undefined} value */
-proto.cosmos.params.v1beta1.QueryParamsResponse.prototype.setParam = function(value) {
+proto.cosmos.params.v1beta1.QueryParamsResponse.prototype.setParam = function (value) {
   jspb.Message.setWrapperField(this, 1, value);
 };
 
-
-proto.cosmos.params.v1beta1.QueryParamsResponse.prototype.clearParam = function() {
+proto.cosmos.params.v1beta1.QueryParamsResponse.prototype.clearParam = function () {
   this.setParam(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.cosmos.params.v1beta1.QueryParamsResponse.prototype.hasParam = function() {
+proto.cosmos.params.v1beta1.QueryParamsResponse.prototype.hasParam = function () {
   return jspb.Message.getField(this, 1) != null;
 };
-
 
 goog.object.extend(exports, proto.cosmos.params.v1beta1);

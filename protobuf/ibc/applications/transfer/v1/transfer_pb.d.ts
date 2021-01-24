@@ -2,7 +2,6 @@
 // file: ibc/applications/transfer/v1/transfer.proto
 
 import * as jspb from "google-protobuf";
-import * as gogoproto_gogo_pb from "../../../../gogoproto/gogo_pb";
 
 export class FungibleTokenPacketData extends jspb.Message {
   getDenom(): string;

@@ -2,7 +2,6 @@
 // file: cosmos/vesting/v1beta1/tx.proto
 
 import * as jspb from "google-protobuf";
-import * as gogoproto_gogo_pb from "../../../gogoproto/gogo_pb";
 import * as cosmos_base_v1beta1_coin_pb from "../../../cosmos/base/v1beta1/coin_pb";
 
 export class MsgCreateVestingAccount extends jspb.Message {

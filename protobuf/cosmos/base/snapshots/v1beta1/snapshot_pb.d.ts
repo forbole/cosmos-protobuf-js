@@ -2,7 +2,6 @@
 // file: cosmos/base/snapshots/v1beta1/snapshot.proto
 
 import * as jspb from "google-protobuf";
-import * as gogoproto_gogo_pb from "../../../../gogoproto/gogo_pb";
 
 export class Snapshot extends jspb.Message {
   getHeight(): number;

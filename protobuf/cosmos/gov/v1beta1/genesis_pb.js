@@ -7,12 +7,14 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-var jspb = require('google-protobuf');
-var goog = jspb;
-var global = Function('return this')();
+const jspb = require('google-protobuf');
 
-var gogoproto_gogo_pb = require('../../../gogoproto/gogo_pb.js');
-var cosmos_gov_v1beta1_gov_pb = require('../../../cosmos/gov/v1beta1/gov_pb.js');
+const goog = jspb;
+const global = Function('return this')();
+
+const gogoproto_gogo_pb = require('../../../gogoproto/gogo_pb.js');
+const cosmos_gov_v1beta1_gov_pb = require('./gov_pb.js');
+
 goog.exportSymbol('proto.cosmos.gov.v1beta1.GenesisState', null, global);
 
 /**
@@ -25,7 +27,7 @@ goog.exportSymbol('proto.cosmos.gov.v1beta1.GenesisState', null, global);
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.gov.v1beta1.GenesisState = function(opt_data) {
+proto.cosmos.gov.v1beta1.GenesisState = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.cosmos.gov.v1beta1.GenesisState.repeatedFields_, null);
 };
 goog.inherits(proto.cosmos.gov.v1beta1.GenesisState, jspb.Message);
@@ -37,9 +39,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.cosmos.gov.v1beta1.GenesisState.repeatedFields_ = [2,3,4];
-
-
+proto.cosmos.gov.v1beta1.GenesisState.repeatedFields_ = [2, 3, 4];
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -52,12 +52,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.gov.v1beta1.GenesisState.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.gov.v1beta1.GenesisState.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.gov.v1beta1.GenesisState.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.gov.v1beta1.GenesisState.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -66,39 +65,38 @@ proto.cosmos.gov.v1beta1.GenesisState.prototype.toObject = function(opt_includeI
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.gov.v1beta1.GenesisState.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    startingProposalId: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    depositsList: jspb.Message.toObjectList(msg.getDepositsList(),
-    cosmos_gov_v1beta1_gov_pb.Deposit.toObject, includeInstance),
-    votesList: jspb.Message.toObjectList(msg.getVotesList(),
-    cosmos_gov_v1beta1_gov_pb.Vote.toObject, includeInstance),
-    proposalsList: jspb.Message.toObjectList(msg.getProposalsList(),
-    cosmos_gov_v1beta1_gov_pb.Proposal.toObject, includeInstance),
-    depositParams: (f = msg.getDepositParams()) && cosmos_gov_v1beta1_gov_pb.DepositParams.toObject(includeInstance, f),
-    votingParams: (f = msg.getVotingParams()) && cosmos_gov_v1beta1_gov_pb.VotingParams.toObject(includeInstance, f),
-    tallyParams: (f = msg.getTallyParams()) && cosmos_gov_v1beta1_gov_pb.TallyParams.toObject(includeInstance, f)
+  proto.cosmos.gov.v1beta1.GenesisState.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        startingProposalId: jspb.Message.getFieldWithDefault(msg, 1, 0),
+        depositsList: jspb.Message.toObjectList(msg.getDepositsList(),
+          cosmos_gov_v1beta1_gov_pb.Deposit.toObject, includeInstance),
+        votesList: jspb.Message.toObjectList(msg.getVotesList(),
+          cosmos_gov_v1beta1_gov_pb.Vote.toObject, includeInstance),
+        proposalsList: jspb.Message.toObjectList(msg.getProposalsList(),
+          cosmos_gov_v1beta1_gov_pb.Proposal.toObject, includeInstance),
+        depositParams: (f = msg.getDepositParams()) && cosmos_gov_v1beta1_gov_pb.DepositParams.toObject(includeInstance, f),
+        votingParams: (f = msg.getVotingParams()) && cosmos_gov_v1beta1_gov_pb.VotingParams.toObject(includeInstance, f),
+        tallyParams: (f = msg.getTallyParams()) && cosmos_gov_v1beta1_gov_pb.TallyParams.toObject(includeInstance, f),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.gov.v1beta1.GenesisState}
  */
-proto.cosmos.gov.v1beta1.GenesisState.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.gov.v1beta1.GenesisState;
+proto.cosmos.gov.v1beta1.GenesisState.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.gov.v1beta1.GenesisState();
   return proto.cosmos.gov.v1beta1.GenesisState.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -107,66 +105,64 @@ proto.cosmos.gov.v1beta1.GenesisState.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.gov.v1beta1.GenesisState}
  */
-proto.cosmos.gov.v1beta1.GenesisState.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.gov.v1beta1.GenesisState.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {number} */ (reader.readUint64());
-      msg.setStartingProposalId(value);
-      break;
-    case 2:
-      var value = new cosmos_gov_v1beta1_gov_pb.Deposit;
-      reader.readMessage(value,cosmos_gov_v1beta1_gov_pb.Deposit.deserializeBinaryFromReader);
-      msg.addDeposits(value);
-      break;
-    case 3:
-      var value = new cosmos_gov_v1beta1_gov_pb.Vote;
-      reader.readMessage(value,cosmos_gov_v1beta1_gov_pb.Vote.deserializeBinaryFromReader);
-      msg.addVotes(value);
-      break;
-    case 4:
-      var value = new cosmos_gov_v1beta1_gov_pb.Proposal;
-      reader.readMessage(value,cosmos_gov_v1beta1_gov_pb.Proposal.deserializeBinaryFromReader);
-      msg.addProposals(value);
-      break;
-    case 5:
-      var value = new cosmos_gov_v1beta1_gov_pb.DepositParams;
-      reader.readMessage(value,cosmos_gov_v1beta1_gov_pb.DepositParams.deserializeBinaryFromReader);
-      msg.setDepositParams(value);
-      break;
-    case 6:
-      var value = new cosmos_gov_v1beta1_gov_pb.VotingParams;
-      reader.readMessage(value,cosmos_gov_v1beta1_gov_pb.VotingParams.deserializeBinaryFromReader);
-      msg.setVotingParams(value);
-      break;
-    case 7:
-      var value = new cosmos_gov_v1beta1_gov_pb.TallyParams;
-      reader.readMessage(value,cosmos_gov_v1beta1_gov_pb.TallyParams.deserializeBinaryFromReader);
-      msg.setTallyParams(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {number} */ (reader.readUint64());
+        msg.setStartingProposalId(value);
+        break;
+      case 2:
+        var value = new cosmos_gov_v1beta1_gov_pb.Deposit();
+        reader.readMessage(value, cosmos_gov_v1beta1_gov_pb.Deposit.deserializeBinaryFromReader);
+        msg.addDeposits(value);
+        break;
+      case 3:
+        var value = new cosmos_gov_v1beta1_gov_pb.Vote();
+        reader.readMessage(value, cosmos_gov_v1beta1_gov_pb.Vote.deserializeBinaryFromReader);
+        msg.addVotes(value);
+        break;
+      case 4:
+        var value = new cosmos_gov_v1beta1_gov_pb.Proposal();
+        reader.readMessage(value, cosmos_gov_v1beta1_gov_pb.Proposal.deserializeBinaryFromReader);
+        msg.addProposals(value);
+        break;
+      case 5:
+        var value = new cosmos_gov_v1beta1_gov_pb.DepositParams();
+        reader.readMessage(value, cosmos_gov_v1beta1_gov_pb.DepositParams.deserializeBinaryFromReader);
+        msg.setDepositParams(value);
+        break;
+      case 6:
+        var value = new cosmos_gov_v1beta1_gov_pb.VotingParams();
+        reader.readMessage(value, cosmos_gov_v1beta1_gov_pb.VotingParams.deserializeBinaryFromReader);
+        msg.setVotingParams(value);
+        break;
+      case 7:
+        var value = new cosmos_gov_v1beta1_gov_pb.TallyParams();
+        reader.readMessage(value, cosmos_gov_v1beta1_gov_pb.TallyParams.deserializeBinaryFromReader);
+        msg.setTallyParams(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.gov.v1beta1.GenesisState.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.gov.v1beta1.GenesisState.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.gov.v1beta1.GenesisState.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -175,13 +171,13 @@ proto.cosmos.gov.v1beta1.GenesisState.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.gov.v1beta1.GenesisState.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.gov.v1beta1.GenesisState.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getStartingProposalId();
   if (f !== 0) {
     writer.writeUint64(
       1,
-      f
+      f,
     );
   }
   f = message.getDepositsList();
@@ -189,7 +185,7 @@ proto.cosmos.gov.v1beta1.GenesisState.serializeBinaryToWriter = function(message
     writer.writeRepeatedMessage(
       2,
       f,
-      cosmos_gov_v1beta1_gov_pb.Deposit.serializeBinaryToWriter
+      cosmos_gov_v1beta1_gov_pb.Deposit.serializeBinaryToWriter,
     );
   }
   f = message.getVotesList();
@@ -197,7 +193,7 @@ proto.cosmos.gov.v1beta1.GenesisState.serializeBinaryToWriter = function(message
     writer.writeRepeatedMessage(
       3,
       f,
-      cosmos_gov_v1beta1_gov_pb.Vote.serializeBinaryToWriter
+      cosmos_gov_v1beta1_gov_pb.Vote.serializeBinaryToWriter,
     );
   }
   f = message.getProposalsList();
@@ -205,7 +201,7 @@ proto.cosmos.gov.v1beta1.GenesisState.serializeBinaryToWriter = function(message
     writer.writeRepeatedMessage(
       4,
       f,
-      cosmos_gov_v1beta1_gov_pb.Proposal.serializeBinaryToWriter
+      cosmos_gov_v1beta1_gov_pb.Proposal.serializeBinaryToWriter,
     );
   }
   f = message.getDepositParams();
@@ -213,7 +209,7 @@ proto.cosmos.gov.v1beta1.GenesisState.serializeBinaryToWriter = function(message
     writer.writeMessage(
       5,
       f,
-      cosmos_gov_v1beta1_gov_pb.DepositParams.serializeBinaryToWriter
+      cosmos_gov_v1beta1_gov_pb.DepositParams.serializeBinaryToWriter,
     );
   }
   f = message.getVotingParams();
@@ -221,7 +217,7 @@ proto.cosmos.gov.v1beta1.GenesisState.serializeBinaryToWriter = function(message
     writer.writeMessage(
       6,
       f,
-      cosmos_gov_v1beta1_gov_pb.VotingParams.serializeBinaryToWriter
+      cosmos_gov_v1beta1_gov_pb.VotingParams.serializeBinaryToWriter,
     );
   }
   f = message.getTallyParams();
@@ -229,208 +225,181 @@ proto.cosmos.gov.v1beta1.GenesisState.serializeBinaryToWriter = function(message
     writer.writeMessage(
       7,
       f,
-      cosmos_gov_v1beta1_gov_pb.TallyParams.serializeBinaryToWriter
+      cosmos_gov_v1beta1_gov_pb.TallyParams.serializeBinaryToWriter,
     );
   }
 };
-
 
 /**
  * optional uint64 starting_proposal_id = 1;
  * @return {number}
  */
-proto.cosmos.gov.v1beta1.GenesisState.prototype.getStartingProposalId = function() {
+proto.cosmos.gov.v1beta1.GenesisState.prototype.getStartingProposalId = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
-
 /** @param {number} value */
-proto.cosmos.gov.v1beta1.GenesisState.prototype.setStartingProposalId = function(value) {
+proto.cosmos.gov.v1beta1.GenesisState.prototype.setStartingProposalId = function (value) {
   jspb.Message.setProto3IntField(this, 1, value);
 };
-
 
 /**
  * repeated Deposit deposits = 2;
  * @return {!Array<!proto.cosmos.gov.v1beta1.Deposit>}
  */
-proto.cosmos.gov.v1beta1.GenesisState.prototype.getDepositsList = function() {
+proto.cosmos.gov.v1beta1.GenesisState.prototype.getDepositsList = function () {
   return /** @type{!Array<!proto.cosmos.gov.v1beta1.Deposit>} */ (
     jspb.Message.getRepeatedWrapperField(this, cosmos_gov_v1beta1_gov_pb.Deposit, 2));
 };
 
-
 /** @param {!Array<!proto.cosmos.gov.v1beta1.Deposit>} value */
-proto.cosmos.gov.v1beta1.GenesisState.prototype.setDepositsList = function(value) {
+proto.cosmos.gov.v1beta1.GenesisState.prototype.setDepositsList = function (value) {
   jspb.Message.setRepeatedWrapperField(this, 2, value);
 };
-
 
 /**
  * @param {!proto.cosmos.gov.v1beta1.Deposit=} opt_value
  * @param {number=} opt_index
  * @return {!proto.cosmos.gov.v1beta1.Deposit}
  */
-proto.cosmos.gov.v1beta1.GenesisState.prototype.addDeposits = function(opt_value, opt_index) {
+proto.cosmos.gov.v1beta1.GenesisState.prototype.addDeposits = function (opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.cosmos.gov.v1beta1.Deposit, opt_index);
 };
 
-
-proto.cosmos.gov.v1beta1.GenesisState.prototype.clearDepositsList = function() {
+proto.cosmos.gov.v1beta1.GenesisState.prototype.clearDepositsList = function () {
   this.setDepositsList([]);
 };
-
 
 /**
  * repeated Vote votes = 3;
  * @return {!Array<!proto.cosmos.gov.v1beta1.Vote>}
  */
-proto.cosmos.gov.v1beta1.GenesisState.prototype.getVotesList = function() {
+proto.cosmos.gov.v1beta1.GenesisState.prototype.getVotesList = function () {
   return /** @type{!Array<!proto.cosmos.gov.v1beta1.Vote>} */ (
     jspb.Message.getRepeatedWrapperField(this, cosmos_gov_v1beta1_gov_pb.Vote, 3));
 };
 
-
 /** @param {!Array<!proto.cosmos.gov.v1beta1.Vote>} value */
-proto.cosmos.gov.v1beta1.GenesisState.prototype.setVotesList = function(value) {
+proto.cosmos.gov.v1beta1.GenesisState.prototype.setVotesList = function (value) {
   jspb.Message.setRepeatedWrapperField(this, 3, value);
 };
-
 
 /**
  * @param {!proto.cosmos.gov.v1beta1.Vote=} opt_value
  * @param {number=} opt_index
  * @return {!proto.cosmos.gov.v1beta1.Vote}
  */
-proto.cosmos.gov.v1beta1.GenesisState.prototype.addVotes = function(opt_value, opt_index) {
+proto.cosmos.gov.v1beta1.GenesisState.prototype.addVotes = function (opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 3, opt_value, proto.cosmos.gov.v1beta1.Vote, opt_index);
 };
 
-
-proto.cosmos.gov.v1beta1.GenesisState.prototype.clearVotesList = function() {
+proto.cosmos.gov.v1beta1.GenesisState.prototype.clearVotesList = function () {
   this.setVotesList([]);
 };
-
 
 /**
  * repeated Proposal proposals = 4;
  * @return {!Array<!proto.cosmos.gov.v1beta1.Proposal>}
  */
-proto.cosmos.gov.v1beta1.GenesisState.prototype.getProposalsList = function() {
+proto.cosmos.gov.v1beta1.GenesisState.prototype.getProposalsList = function () {
   return /** @type{!Array<!proto.cosmos.gov.v1beta1.Proposal>} */ (
     jspb.Message.getRepeatedWrapperField(this, cosmos_gov_v1beta1_gov_pb.Proposal, 4));
 };
 
-
 /** @param {!Array<!proto.cosmos.gov.v1beta1.Proposal>} value */
-proto.cosmos.gov.v1beta1.GenesisState.prototype.setProposalsList = function(value) {
+proto.cosmos.gov.v1beta1.GenesisState.prototype.setProposalsList = function (value) {
   jspb.Message.setRepeatedWrapperField(this, 4, value);
 };
-
 
 /**
  * @param {!proto.cosmos.gov.v1beta1.Proposal=} opt_value
  * @param {number=} opt_index
  * @return {!proto.cosmos.gov.v1beta1.Proposal}
  */
-proto.cosmos.gov.v1beta1.GenesisState.prototype.addProposals = function(opt_value, opt_index) {
+proto.cosmos.gov.v1beta1.GenesisState.prototype.addProposals = function (opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 4, opt_value, proto.cosmos.gov.v1beta1.Proposal, opt_index);
 };
 
-
-proto.cosmos.gov.v1beta1.GenesisState.prototype.clearProposalsList = function() {
+proto.cosmos.gov.v1beta1.GenesisState.prototype.clearProposalsList = function () {
   this.setProposalsList([]);
 };
-
 
 /**
  * optional DepositParams deposit_params = 5;
  * @return {?proto.cosmos.gov.v1beta1.DepositParams}
  */
-proto.cosmos.gov.v1beta1.GenesisState.prototype.getDepositParams = function() {
+proto.cosmos.gov.v1beta1.GenesisState.prototype.getDepositParams = function () {
   return /** @type{?proto.cosmos.gov.v1beta1.DepositParams} */ (
     jspb.Message.getWrapperField(this, cosmos_gov_v1beta1_gov_pb.DepositParams, 5));
 };
 
-
 /** @param {?proto.cosmos.gov.v1beta1.DepositParams|undefined} value */
-proto.cosmos.gov.v1beta1.GenesisState.prototype.setDepositParams = function(value) {
+proto.cosmos.gov.v1beta1.GenesisState.prototype.setDepositParams = function (value) {
   jspb.Message.setWrapperField(this, 5, value);
 };
 
-
-proto.cosmos.gov.v1beta1.GenesisState.prototype.clearDepositParams = function() {
+proto.cosmos.gov.v1beta1.GenesisState.prototype.clearDepositParams = function () {
   this.setDepositParams(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.cosmos.gov.v1beta1.GenesisState.prototype.hasDepositParams = function() {
+proto.cosmos.gov.v1beta1.GenesisState.prototype.hasDepositParams = function () {
   return jspb.Message.getField(this, 5) != null;
 };
-
 
 /**
  * optional VotingParams voting_params = 6;
  * @return {?proto.cosmos.gov.v1beta1.VotingParams}
  */
-proto.cosmos.gov.v1beta1.GenesisState.prototype.getVotingParams = function() {
+proto.cosmos.gov.v1beta1.GenesisState.prototype.getVotingParams = function () {
   return /** @type{?proto.cosmos.gov.v1beta1.VotingParams} */ (
     jspb.Message.getWrapperField(this, cosmos_gov_v1beta1_gov_pb.VotingParams, 6));
 };
 
-
 /** @param {?proto.cosmos.gov.v1beta1.VotingParams|undefined} value */
-proto.cosmos.gov.v1beta1.GenesisState.prototype.setVotingParams = function(value) {
+proto.cosmos.gov.v1beta1.GenesisState.prototype.setVotingParams = function (value) {
   jspb.Message.setWrapperField(this, 6, value);
 };
 
-
-proto.cosmos.gov.v1beta1.GenesisState.prototype.clearVotingParams = function() {
+proto.cosmos.gov.v1beta1.GenesisState.prototype.clearVotingParams = function () {
   this.setVotingParams(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.cosmos.gov.v1beta1.GenesisState.prototype.hasVotingParams = function() {
+proto.cosmos.gov.v1beta1.GenesisState.prototype.hasVotingParams = function () {
   return jspb.Message.getField(this, 6) != null;
 };
-
 
 /**
  * optional TallyParams tally_params = 7;
  * @return {?proto.cosmos.gov.v1beta1.TallyParams}
  */
-proto.cosmos.gov.v1beta1.GenesisState.prototype.getTallyParams = function() {
+proto.cosmos.gov.v1beta1.GenesisState.prototype.getTallyParams = function () {
   return /** @type{?proto.cosmos.gov.v1beta1.TallyParams} */ (
     jspb.Message.getWrapperField(this, cosmos_gov_v1beta1_gov_pb.TallyParams, 7));
 };
 
-
 /** @param {?proto.cosmos.gov.v1beta1.TallyParams|undefined} value */
-proto.cosmos.gov.v1beta1.GenesisState.prototype.setTallyParams = function(value) {
+proto.cosmos.gov.v1beta1.GenesisState.prototype.setTallyParams = function (value) {
   jspb.Message.setWrapperField(this, 7, value);
 };
 
-
-proto.cosmos.gov.v1beta1.GenesisState.prototype.clearTallyParams = function() {
+proto.cosmos.gov.v1beta1.GenesisState.prototype.clearTallyParams = function () {
   this.setTallyParams(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.cosmos.gov.v1beta1.GenesisState.prototype.hasTallyParams = function() {
+proto.cosmos.gov.v1beta1.GenesisState.prototype.hasTallyParams = function () {
   return jspb.Message.getField(this, 7) != null;
 };
-
 
 goog.object.extend(exports, proto.cosmos.gov.v1beta1);

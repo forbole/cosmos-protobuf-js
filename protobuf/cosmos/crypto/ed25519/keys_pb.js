@@ -7,11 +7,13 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-var jspb = require('google-protobuf');
-var goog = jspb;
-var global = Function('return this')();
+const jspb = require('google-protobuf');
 
-var gogoproto_gogo_pb = require('../../../gogoproto/gogo_pb.js');
+const goog = jspb;
+const global = Function('return this')();
+
+const gogoproto_gogo_pb = require('../../../gogoproto/gogo_pb.js');
+
 goog.exportSymbol('proto.cosmos.crypto.ed25519.PrivKey', null, global);
 goog.exportSymbol('proto.cosmos.crypto.ed25519.PubKey', null, global);
 
@@ -25,14 +27,13 @@ goog.exportSymbol('proto.cosmos.crypto.ed25519.PubKey', null, global);
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.crypto.ed25519.PubKey = function(opt_data) {
+proto.cosmos.crypto.ed25519.PubKey = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.crypto.ed25519.PubKey, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.crypto.ed25519.PubKey.displayName = 'proto.cosmos.crypto.ed25519.PubKey';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -45,12 +46,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.crypto.ed25519.PubKey.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.crypto.ed25519.PubKey.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.crypto.ed25519.PubKey.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.crypto.ed25519.PubKey.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -59,30 +59,29 @@ proto.cosmos.crypto.ed25519.PubKey.prototype.toObject = function(opt_includeInst
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.crypto.ed25519.PubKey.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    key: msg.getKey_asB64()
+  proto.cosmos.crypto.ed25519.PubKey.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        key: msg.getKey_asB64(),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.crypto.ed25519.PubKey}
  */
-proto.cosmos.crypto.ed25519.PubKey.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.crypto.ed25519.PubKey;
+proto.cosmos.crypto.ed25519.PubKey.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.crypto.ed25519.PubKey();
   return proto.cosmos.crypto.ed25519.PubKey.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -91,36 +90,34 @@ proto.cosmos.crypto.ed25519.PubKey.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.crypto.ed25519.PubKey}
  */
-proto.cosmos.crypto.ed25519.PubKey.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.crypto.ed25519.PubKey.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setKey(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.setKey(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.crypto.ed25519.PubKey.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.crypto.ed25519.PubKey.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.crypto.ed25519.PubKey.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -129,37 +126,35 @@ proto.cosmos.crypto.ed25519.PubKey.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.crypto.ed25519.PubKey.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.crypto.ed25519.PubKey.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getKey_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       1,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional bytes key = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.cosmos.crypto.ed25519.PubKey.prototype.getKey = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.cosmos.crypto.ed25519.PubKey.prototype.getKey = function () {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
 };
-
 
 /**
  * optional bytes key = 1;
  * This is a type-conversion wrapper around `getKey()`
  * @return {string}
  */
-proto.cosmos.crypto.ed25519.PubKey.prototype.getKey_asB64 = function() {
+proto.cosmos.crypto.ed25519.PubKey.prototype.getKey_asB64 = function () {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getKey()));
+    this.getKey(),
+  ));
 };
-
 
 /**
  * optional bytes key = 1;
@@ -168,18 +163,16 @@ proto.cosmos.crypto.ed25519.PubKey.prototype.getKey_asB64 = function() {
  * This is a type-conversion wrapper around `getKey()`
  * @return {!Uint8Array}
  */
-proto.cosmos.crypto.ed25519.PubKey.prototype.getKey_asU8 = function() {
+proto.cosmos.crypto.ed25519.PubKey.prototype.getKey_asU8 = function () {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getKey()));
+    this.getKey(),
+  ));
 };
-
 
 /** @param {!(string|Uint8Array)} value */
-proto.cosmos.crypto.ed25519.PubKey.prototype.setKey = function(value) {
+proto.cosmos.crypto.ed25519.PubKey.prototype.setKey = function (value) {
   jspb.Message.setProto3BytesField(this, 1, value);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -191,14 +184,13 @@ proto.cosmos.crypto.ed25519.PubKey.prototype.setKey = function(value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.crypto.ed25519.PrivKey = function(opt_data) {
+proto.cosmos.crypto.ed25519.PrivKey = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.crypto.ed25519.PrivKey, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.crypto.ed25519.PrivKey.displayName = 'proto.cosmos.crypto.ed25519.PrivKey';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -211,12 +203,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.crypto.ed25519.PrivKey.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.crypto.ed25519.PrivKey.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.crypto.ed25519.PrivKey.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.crypto.ed25519.PrivKey.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -225,30 +216,29 @@ proto.cosmos.crypto.ed25519.PrivKey.prototype.toObject = function(opt_includeIns
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.crypto.ed25519.PrivKey.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    key: msg.getKey_asB64()
+  proto.cosmos.crypto.ed25519.PrivKey.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        key: msg.getKey_asB64(),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.crypto.ed25519.PrivKey}
  */
-proto.cosmos.crypto.ed25519.PrivKey.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.crypto.ed25519.PrivKey;
+proto.cosmos.crypto.ed25519.PrivKey.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.crypto.ed25519.PrivKey();
   return proto.cosmos.crypto.ed25519.PrivKey.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -257,36 +247,34 @@ proto.cosmos.crypto.ed25519.PrivKey.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.crypto.ed25519.PrivKey}
  */
-proto.cosmos.crypto.ed25519.PrivKey.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.crypto.ed25519.PrivKey.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setKey(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.setKey(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.crypto.ed25519.PrivKey.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.crypto.ed25519.PrivKey.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.crypto.ed25519.PrivKey.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -295,37 +283,35 @@ proto.cosmos.crypto.ed25519.PrivKey.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.crypto.ed25519.PrivKey.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.crypto.ed25519.PrivKey.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getKey_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       1,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional bytes key = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.cosmos.crypto.ed25519.PrivKey.prototype.getKey = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.cosmos.crypto.ed25519.PrivKey.prototype.getKey = function () {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
 };
-
 
 /**
  * optional bytes key = 1;
  * This is a type-conversion wrapper around `getKey()`
  * @return {string}
  */
-proto.cosmos.crypto.ed25519.PrivKey.prototype.getKey_asB64 = function() {
+proto.cosmos.crypto.ed25519.PrivKey.prototype.getKey_asB64 = function () {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getKey()));
+    this.getKey(),
+  ));
 };
-
 
 /**
  * optional bytes key = 1;
@@ -334,16 +320,15 @@ proto.cosmos.crypto.ed25519.PrivKey.prototype.getKey_asB64 = function() {
  * This is a type-conversion wrapper around `getKey()`
  * @return {!Uint8Array}
  */
-proto.cosmos.crypto.ed25519.PrivKey.prototype.getKey_asU8 = function() {
+proto.cosmos.crypto.ed25519.PrivKey.prototype.getKey_asU8 = function () {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getKey()));
+    this.getKey(),
+  ));
 };
-
 
 /** @param {!(string|Uint8Array)} value */
-proto.cosmos.crypto.ed25519.PrivKey.prototype.setKey = function(value) {
+proto.cosmos.crypto.ed25519.PrivKey.prototype.setKey = function (value) {
   jspb.Message.setProto3BytesField(this, 1, value);
 };
-
 
 goog.object.extend(exports, proto.cosmos.crypto.ed25519);

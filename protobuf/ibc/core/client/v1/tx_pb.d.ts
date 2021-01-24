@@ -2,9 +2,7 @@
 // file: ibc/core/client/v1/tx.proto
 
 import * as jspb from "google-protobuf";
-import * as gogoproto_gogo_pb from "../../../../gogoproto/gogo_pb";
 import * as google_protobuf_any_pb from "google-protobuf/google/protobuf/any_pb";
-import * as ibc_core_client_v1_client_pb from "../../../../ibc/core/client/v1/client_pb";
 
 export class MsgCreateClient extends jspb.Message {
   hasClientState(): boolean;

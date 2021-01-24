@@ -7,9 +7,10 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-var jspb = require('google-protobuf');
-var goog = jspb;
-var global = Function('return this')();
+const jspb = require('google-protobuf');
+
+const goog = jspb;
+const global = Function('return this')();
 
 goog.exportSymbol('proto.cosmos.base.query.v1beta1.PageRequest', null, global);
 goog.exportSymbol('proto.cosmos.base.query.v1beta1.PageResponse', null, global);
@@ -24,14 +25,13 @@ goog.exportSymbol('proto.cosmos.base.query.v1beta1.PageResponse', null, global);
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.base.query.v1beta1.PageRequest = function(opt_data) {
+proto.cosmos.base.query.v1beta1.PageRequest = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.base.query.v1beta1.PageRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.base.query.v1beta1.PageRequest.displayName = 'proto.cosmos.base.query.v1beta1.PageRequest';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -44,12 +44,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.base.query.v1beta1.PageRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.base.query.v1beta1.PageRequest.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.base.query.v1beta1.PageRequest.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.base.query.v1beta1.PageRequest.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -58,33 +57,32 @@ proto.cosmos.base.query.v1beta1.PageRequest.prototype.toObject = function(opt_in
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.query.v1beta1.PageRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    key: msg.getKey_asB64(),
-    offset: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    limit: jspb.Message.getFieldWithDefault(msg, 3, 0),
-    countTotal: jspb.Message.getFieldWithDefault(msg, 4, false)
+  proto.cosmos.base.query.v1beta1.PageRequest.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        key: msg.getKey_asB64(),
+        offset: jspb.Message.getFieldWithDefault(msg, 2, 0),
+        limit: jspb.Message.getFieldWithDefault(msg, 3, 0),
+        countTotal: jspb.Message.getFieldWithDefault(msg, 4, false),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.base.query.v1beta1.PageRequest}
  */
-proto.cosmos.base.query.v1beta1.PageRequest.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.base.query.v1beta1.PageRequest;
+proto.cosmos.base.query.v1beta1.PageRequest.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.base.query.v1beta1.PageRequest();
   return proto.cosmos.base.query.v1beta1.PageRequest.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -93,48 +91,46 @@ proto.cosmos.base.query.v1beta1.PageRequest.deserializeBinary = function(bytes) 
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.base.query.v1beta1.PageRequest}
  */
-proto.cosmos.base.query.v1beta1.PageRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.base.query.v1beta1.PageRequest.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setKey(value);
-      break;
-    case 2:
-      var value = /** @type {number} */ (reader.readUint64());
-      msg.setOffset(value);
-      break;
-    case 3:
-      var value = /** @type {number} */ (reader.readUint64());
-      msg.setLimit(value);
-      break;
-    case 4:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setCountTotal(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.setKey(value);
+        break;
+      case 2:
+        var value = /** @type {number} */ (reader.readUint64());
+        msg.setOffset(value);
+        break;
+      case 3:
+        var value = /** @type {number} */ (reader.readUint64());
+        msg.setLimit(value);
+        break;
+      case 4:
+        var value = /** @type {boolean} */ (reader.readBool());
+        msg.setCountTotal(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.base.query.v1beta1.PageRequest.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.base.query.v1beta1.PageRequest.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.base.query.v1beta1.PageRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -143,58 +139,56 @@ proto.cosmos.base.query.v1beta1.PageRequest.prototype.serializeBinary = function
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.query.v1beta1.PageRequest.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.base.query.v1beta1.PageRequest.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getKey_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       1,
-      f
+      f,
     );
   }
   f = message.getOffset();
   if (f !== 0) {
     writer.writeUint64(
       2,
-      f
+      f,
     );
   }
   f = message.getLimit();
   if (f !== 0) {
     writer.writeUint64(
       3,
-      f
+      f,
     );
   }
   f = message.getCountTotal();
   if (f) {
     writer.writeBool(
       4,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional bytes key = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.cosmos.base.query.v1beta1.PageRequest.prototype.getKey = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.cosmos.base.query.v1beta1.PageRequest.prototype.getKey = function () {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
 };
-
 
 /**
  * optional bytes key = 1;
  * This is a type-conversion wrapper around `getKey()`
  * @return {string}
  */
-proto.cosmos.base.query.v1beta1.PageRequest.prototype.getKey_asB64 = function() {
+proto.cosmos.base.query.v1beta1.PageRequest.prototype.getKey_asB64 = function () {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getKey()));
+    this.getKey(),
+  ));
 };
-
 
 /**
  * optional bytes key = 1;
@@ -203,47 +197,42 @@ proto.cosmos.base.query.v1beta1.PageRequest.prototype.getKey_asB64 = function() 
  * This is a type-conversion wrapper around `getKey()`
  * @return {!Uint8Array}
  */
-proto.cosmos.base.query.v1beta1.PageRequest.prototype.getKey_asU8 = function() {
+proto.cosmos.base.query.v1beta1.PageRequest.prototype.getKey_asU8 = function () {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getKey()));
+    this.getKey(),
+  ));
 };
-
 
 /** @param {!(string|Uint8Array)} value */
-proto.cosmos.base.query.v1beta1.PageRequest.prototype.setKey = function(value) {
+proto.cosmos.base.query.v1beta1.PageRequest.prototype.setKey = function (value) {
   jspb.Message.setProto3BytesField(this, 1, value);
 };
-
 
 /**
  * optional uint64 offset = 2;
  * @return {number}
  */
-proto.cosmos.base.query.v1beta1.PageRequest.prototype.getOffset = function() {
+proto.cosmos.base.query.v1beta1.PageRequest.prototype.getOffset = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
-
 /** @param {number} value */
-proto.cosmos.base.query.v1beta1.PageRequest.prototype.setOffset = function(value) {
+proto.cosmos.base.query.v1beta1.PageRequest.prototype.setOffset = function (value) {
   jspb.Message.setProto3IntField(this, 2, value);
 };
-
 
 /**
  * optional uint64 limit = 3;
  * @return {number}
  */
-proto.cosmos.base.query.v1beta1.PageRequest.prototype.getLimit = function() {
+proto.cosmos.base.query.v1beta1.PageRequest.prototype.getLimit = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
-
 /** @param {number} value */
-proto.cosmos.base.query.v1beta1.PageRequest.prototype.setLimit = function(value) {
+proto.cosmos.base.query.v1beta1.PageRequest.prototype.setLimit = function (value) {
   jspb.Message.setProto3IntField(this, 3, value);
 };
-
 
 /**
  * optional bool count_total = 4;
@@ -251,17 +240,14 @@ proto.cosmos.base.query.v1beta1.PageRequest.prototype.setLimit = function(value)
  * You should avoid comparisons like {@code val === true/false} in those cases.
  * @return {boolean}
  */
-proto.cosmos.base.query.v1beta1.PageRequest.prototype.getCountTotal = function() {
+proto.cosmos.base.query.v1beta1.PageRequest.prototype.getCountTotal = function () {
   return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 4, false));
 };
 
-
 /** @param {boolean} value */
-proto.cosmos.base.query.v1beta1.PageRequest.prototype.setCountTotal = function(value) {
+proto.cosmos.base.query.v1beta1.PageRequest.prototype.setCountTotal = function (value) {
   jspb.Message.setProto3BooleanField(this, 4, value);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -273,14 +259,13 @@ proto.cosmos.base.query.v1beta1.PageRequest.prototype.setCountTotal = function(v
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.base.query.v1beta1.PageResponse = function(opt_data) {
+proto.cosmos.base.query.v1beta1.PageResponse = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.base.query.v1beta1.PageResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.base.query.v1beta1.PageResponse.displayName = 'proto.cosmos.base.query.v1beta1.PageResponse';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -293,12 +278,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.base.query.v1beta1.PageResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.base.query.v1beta1.PageResponse.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.base.query.v1beta1.PageResponse.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.base.query.v1beta1.PageResponse.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -307,31 +291,30 @@ proto.cosmos.base.query.v1beta1.PageResponse.prototype.toObject = function(opt_i
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.query.v1beta1.PageResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    nextKey: msg.getNextKey_asB64(),
-    total: jspb.Message.getFieldWithDefault(msg, 2, 0)
+  proto.cosmos.base.query.v1beta1.PageResponse.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        nextKey: msg.getNextKey_asB64(),
+        total: jspb.Message.getFieldWithDefault(msg, 2, 0),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.base.query.v1beta1.PageResponse}
  */
-proto.cosmos.base.query.v1beta1.PageResponse.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.base.query.v1beta1.PageResponse;
+proto.cosmos.base.query.v1beta1.PageResponse.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.base.query.v1beta1.PageResponse();
   return proto.cosmos.base.query.v1beta1.PageResponse.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -340,40 +323,38 @@ proto.cosmos.base.query.v1beta1.PageResponse.deserializeBinary = function(bytes)
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.base.query.v1beta1.PageResponse}
  */
-proto.cosmos.base.query.v1beta1.PageResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.base.query.v1beta1.PageResponse.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setNextKey(value);
-      break;
-    case 2:
-      var value = /** @type {number} */ (reader.readUint64());
-      msg.setTotal(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.setNextKey(value);
+        break;
+      case 2:
+        var value = /** @type {number} */ (reader.readUint64());
+        msg.setTotal(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.base.query.v1beta1.PageResponse.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.base.query.v1beta1.PageResponse.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.base.query.v1beta1.PageResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -382,44 +363,42 @@ proto.cosmos.base.query.v1beta1.PageResponse.prototype.serializeBinary = functio
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.query.v1beta1.PageResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.base.query.v1beta1.PageResponse.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getNextKey_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       1,
-      f
+      f,
     );
   }
   f = message.getTotal();
   if (f !== 0) {
     writer.writeUint64(
       2,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional bytes next_key = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.cosmos.base.query.v1beta1.PageResponse.prototype.getNextKey = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.cosmos.base.query.v1beta1.PageResponse.prototype.getNextKey = function () {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
 };
-
 
 /**
  * optional bytes next_key = 1;
  * This is a type-conversion wrapper around `getNextKey()`
  * @return {string}
  */
-proto.cosmos.base.query.v1beta1.PageResponse.prototype.getNextKey_asB64 = function() {
+proto.cosmos.base.query.v1beta1.PageResponse.prototype.getNextKey_asB64 = function () {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getNextKey()));
+    this.getNextKey(),
+  ));
 };
-
 
 /**
  * optional bytes next_key = 1;
@@ -428,31 +407,28 @@ proto.cosmos.base.query.v1beta1.PageResponse.prototype.getNextKey_asB64 = functi
  * This is a type-conversion wrapper around `getNextKey()`
  * @return {!Uint8Array}
  */
-proto.cosmos.base.query.v1beta1.PageResponse.prototype.getNextKey_asU8 = function() {
+proto.cosmos.base.query.v1beta1.PageResponse.prototype.getNextKey_asU8 = function () {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getNextKey()));
+    this.getNextKey(),
+  ));
 };
-
 
 /** @param {!(string|Uint8Array)} value */
-proto.cosmos.base.query.v1beta1.PageResponse.prototype.setNextKey = function(value) {
+proto.cosmos.base.query.v1beta1.PageResponse.prototype.setNextKey = function (value) {
   jspb.Message.setProto3BytesField(this, 1, value);
 };
-
 
 /**
  * optional uint64 total = 2;
  * @return {number}
  */
-proto.cosmos.base.query.v1beta1.PageResponse.prototype.getTotal = function() {
+proto.cosmos.base.query.v1beta1.PageResponse.prototype.getTotal = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
-
 /** @param {number} value */
-proto.cosmos.base.query.v1beta1.PageResponse.prototype.setTotal = function(value) {
+proto.cosmos.base.query.v1beta1.PageResponse.prototype.setTotal = function (value) {
   jspb.Message.setProto3IntField(this, 2, value);
 };
-
 
 goog.object.extend(exports, proto.cosmos.base.query.v1beta1);

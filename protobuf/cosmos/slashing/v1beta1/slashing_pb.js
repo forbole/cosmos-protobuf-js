@@ -7,13 +7,15 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-var jspb = require('google-protobuf');
-var goog = jspb;
-var global = Function('return this')();
+const jspb = require('google-protobuf');
 
-var gogoproto_gogo_pb = require('../../../gogoproto/gogo_pb.js');
-var google_protobuf_duration_pb = require('google-protobuf/google/protobuf/duration_pb.js');
-var google_protobuf_timestamp_pb = require('google-protobuf/google/protobuf/timestamp_pb.js');
+const goog = jspb;
+const global = Function('return this')();
+
+const google_protobuf_duration_pb = require('google-protobuf/google/protobuf/duration_pb.js');
+const google_protobuf_timestamp_pb = require('google-protobuf/google/protobuf/timestamp_pb.js');
+const gogoproto_gogo_pb = require('../../../gogoproto/gogo_pb.js');
+
 goog.exportSymbol('proto.cosmos.slashing.v1beta1.Params', null, global);
 goog.exportSymbol('proto.cosmos.slashing.v1beta1.ValidatorSigningInfo', null, global);
 
@@ -27,14 +29,13 @@ goog.exportSymbol('proto.cosmos.slashing.v1beta1.ValidatorSigningInfo', null, gl
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.slashing.v1beta1.ValidatorSigningInfo = function(opt_data) {
+proto.cosmos.slashing.v1beta1.ValidatorSigningInfo = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.slashing.v1beta1.ValidatorSigningInfo, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.slashing.v1beta1.ValidatorSigningInfo.displayName = 'proto.cosmos.slashing.v1beta1.ValidatorSigningInfo';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -47,12 +48,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.slashing.v1beta1.ValidatorSigningInfo.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.slashing.v1beta1.ValidatorSigningInfo.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.slashing.v1beta1.ValidatorSigningInfo.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.slashing.v1beta1.ValidatorSigningInfo.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -61,35 +61,34 @@ proto.cosmos.slashing.v1beta1.ValidatorSigningInfo.prototype.toObject = function
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.slashing.v1beta1.ValidatorSigningInfo.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    address: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    startHeight: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    indexOffset: jspb.Message.getFieldWithDefault(msg, 3, 0),
-    jailedUntil: (f = msg.getJailedUntil()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
-    tombstoned: jspb.Message.getFieldWithDefault(msg, 5, false),
-    missedBlocksCounter: jspb.Message.getFieldWithDefault(msg, 6, 0)
+  proto.cosmos.slashing.v1beta1.ValidatorSigningInfo.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        address: jspb.Message.getFieldWithDefault(msg, 1, ''),
+        startHeight: jspb.Message.getFieldWithDefault(msg, 2, 0),
+        indexOffset: jspb.Message.getFieldWithDefault(msg, 3, 0),
+        jailedUntil: (f = msg.getJailedUntil()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
+        tombstoned: jspb.Message.getFieldWithDefault(msg, 5, false),
+        missedBlocksCounter: jspb.Message.getFieldWithDefault(msg, 6, 0),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.slashing.v1beta1.ValidatorSigningInfo}
  */
-proto.cosmos.slashing.v1beta1.ValidatorSigningInfo.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.slashing.v1beta1.ValidatorSigningInfo;
+proto.cosmos.slashing.v1beta1.ValidatorSigningInfo.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.slashing.v1beta1.ValidatorSigningInfo();
   return proto.cosmos.slashing.v1beta1.ValidatorSigningInfo.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -98,57 +97,55 @@ proto.cosmos.slashing.v1beta1.ValidatorSigningInfo.deserializeBinary = function(
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.slashing.v1beta1.ValidatorSigningInfo}
  */
-proto.cosmos.slashing.v1beta1.ValidatorSigningInfo.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.slashing.v1beta1.ValidatorSigningInfo.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setAddress(value);
-      break;
-    case 2:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setStartHeight(value);
-      break;
-    case 3:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setIndexOffset(value);
-      break;
-    case 4:
-      var value = new google_protobuf_timestamp_pb.Timestamp;
-      reader.readMessage(value,google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
-      msg.setJailedUntil(value);
-      break;
-    case 5:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setTombstoned(value);
-      break;
-    case 6:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setMissedBlocksCounter(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setAddress(value);
+        break;
+      case 2:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setStartHeight(value);
+        break;
+      case 3:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setIndexOffset(value);
+        break;
+      case 4:
+        var value = new google_protobuf_timestamp_pb.Timestamp();
+        reader.readMessage(value, google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
+        msg.setJailedUntil(value);
+        break;
+      case 5:
+        var value = /** @type {boolean} */ (reader.readBool());
+        msg.setTombstoned(value);
+        break;
+      case 6:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setMissedBlocksCounter(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.slashing.v1beta1.ValidatorSigningInfo.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.slashing.v1beta1.ValidatorSigningInfo.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.slashing.v1beta1.ValidatorSigningInfo.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -157,27 +154,27 @@ proto.cosmos.slashing.v1beta1.ValidatorSigningInfo.prototype.serializeBinary = f
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.slashing.v1beta1.ValidatorSigningInfo.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.slashing.v1beta1.ValidatorSigningInfo.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getAddress();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f
+      f,
     );
   }
   f = message.getStartHeight();
   if (f !== 0) {
     writer.writeInt64(
       2,
-      f
+      f,
     );
   }
   f = message.getIndexOffset();
   if (f !== 0) {
     writer.writeInt64(
       3,
-      f
+      f,
     );
   }
   f = message.getJailedUntil();
@@ -185,100 +182,89 @@ proto.cosmos.slashing.v1beta1.ValidatorSigningInfo.serializeBinaryToWriter = fun
     writer.writeMessage(
       4,
       f,
-      google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter
+      google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter,
     );
   }
   f = message.getTombstoned();
   if (f) {
     writer.writeBool(
       5,
-      f
+      f,
     );
   }
   f = message.getMissedBlocksCounter();
   if (f !== 0) {
     writer.writeInt64(
       6,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional string address = 1;
  * @return {string}
  */
-proto.cosmos.slashing.v1beta1.ValidatorSigningInfo.prototype.getAddress = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.cosmos.slashing.v1beta1.ValidatorSigningInfo.prototype.getAddress = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
 };
-
 
 /** @param {string} value */
-proto.cosmos.slashing.v1beta1.ValidatorSigningInfo.prototype.setAddress = function(value) {
+proto.cosmos.slashing.v1beta1.ValidatorSigningInfo.prototype.setAddress = function (value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
-
 
 /**
  * optional int64 start_height = 2;
  * @return {number}
  */
-proto.cosmos.slashing.v1beta1.ValidatorSigningInfo.prototype.getStartHeight = function() {
+proto.cosmos.slashing.v1beta1.ValidatorSigningInfo.prototype.getStartHeight = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
-
 /** @param {number} value */
-proto.cosmos.slashing.v1beta1.ValidatorSigningInfo.prototype.setStartHeight = function(value) {
+proto.cosmos.slashing.v1beta1.ValidatorSigningInfo.prototype.setStartHeight = function (value) {
   jspb.Message.setProto3IntField(this, 2, value);
 };
-
 
 /**
  * optional int64 index_offset = 3;
  * @return {number}
  */
-proto.cosmos.slashing.v1beta1.ValidatorSigningInfo.prototype.getIndexOffset = function() {
+proto.cosmos.slashing.v1beta1.ValidatorSigningInfo.prototype.getIndexOffset = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
-
 /** @param {number} value */
-proto.cosmos.slashing.v1beta1.ValidatorSigningInfo.prototype.setIndexOffset = function(value) {
+proto.cosmos.slashing.v1beta1.ValidatorSigningInfo.prototype.setIndexOffset = function (value) {
   jspb.Message.setProto3IntField(this, 3, value);
 };
-
 
 /**
  * optional google.protobuf.Timestamp jailed_until = 4;
  * @return {?proto.google.protobuf.Timestamp}
  */
-proto.cosmos.slashing.v1beta1.ValidatorSigningInfo.prototype.getJailedUntil = function() {
+proto.cosmos.slashing.v1beta1.ValidatorSigningInfo.prototype.getJailedUntil = function () {
   return /** @type{?proto.google.protobuf.Timestamp} */ (
     jspb.Message.getWrapperField(this, google_protobuf_timestamp_pb.Timestamp, 4));
 };
 
-
 /** @param {?proto.google.protobuf.Timestamp|undefined} value */
-proto.cosmos.slashing.v1beta1.ValidatorSigningInfo.prototype.setJailedUntil = function(value) {
+proto.cosmos.slashing.v1beta1.ValidatorSigningInfo.prototype.setJailedUntil = function (value) {
   jspb.Message.setWrapperField(this, 4, value);
 };
 
-
-proto.cosmos.slashing.v1beta1.ValidatorSigningInfo.prototype.clearJailedUntil = function() {
+proto.cosmos.slashing.v1beta1.ValidatorSigningInfo.prototype.clearJailedUntil = function () {
   this.setJailedUntil(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.cosmos.slashing.v1beta1.ValidatorSigningInfo.prototype.hasJailedUntil = function() {
+proto.cosmos.slashing.v1beta1.ValidatorSigningInfo.prototype.hasJailedUntil = function () {
   return jspb.Message.getField(this, 4) != null;
 };
-
 
 /**
  * optional bool tombstoned = 5;
@@ -286,32 +272,27 @@ proto.cosmos.slashing.v1beta1.ValidatorSigningInfo.prototype.hasJailedUntil = fu
  * You should avoid comparisons like {@code val === true/false} in those cases.
  * @return {boolean}
  */
-proto.cosmos.slashing.v1beta1.ValidatorSigningInfo.prototype.getTombstoned = function() {
+proto.cosmos.slashing.v1beta1.ValidatorSigningInfo.prototype.getTombstoned = function () {
   return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 5, false));
 };
 
-
 /** @param {boolean} value */
-proto.cosmos.slashing.v1beta1.ValidatorSigningInfo.prototype.setTombstoned = function(value) {
+proto.cosmos.slashing.v1beta1.ValidatorSigningInfo.prototype.setTombstoned = function (value) {
   jspb.Message.setProto3BooleanField(this, 5, value);
 };
-
 
 /**
  * optional int64 missed_blocks_counter = 6;
  * @return {number}
  */
-proto.cosmos.slashing.v1beta1.ValidatorSigningInfo.prototype.getMissedBlocksCounter = function() {
+proto.cosmos.slashing.v1beta1.ValidatorSigningInfo.prototype.getMissedBlocksCounter = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
 };
 
-
 /** @param {number} value */
-proto.cosmos.slashing.v1beta1.ValidatorSigningInfo.prototype.setMissedBlocksCounter = function(value) {
+proto.cosmos.slashing.v1beta1.ValidatorSigningInfo.prototype.setMissedBlocksCounter = function (value) {
   jspb.Message.setProto3IntField(this, 6, value);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -323,14 +304,13 @@ proto.cosmos.slashing.v1beta1.ValidatorSigningInfo.prototype.setMissedBlocksCoun
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.slashing.v1beta1.Params = function(opt_data) {
+proto.cosmos.slashing.v1beta1.Params = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.slashing.v1beta1.Params, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.slashing.v1beta1.Params.displayName = 'proto.cosmos.slashing.v1beta1.Params';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -343,12 +323,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.slashing.v1beta1.Params.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.slashing.v1beta1.Params.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.slashing.v1beta1.Params.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.slashing.v1beta1.Params.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -357,34 +336,33 @@ proto.cosmos.slashing.v1beta1.Params.prototype.toObject = function(opt_includeIn
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.slashing.v1beta1.Params.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    signedBlocksWindow: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    minSignedPerWindow: msg.getMinSignedPerWindow_asB64(),
-    downtimeJailDuration: (f = msg.getDowntimeJailDuration()) && google_protobuf_duration_pb.Duration.toObject(includeInstance, f),
-    slashFractionDoubleSign: msg.getSlashFractionDoubleSign_asB64(),
-    slashFractionDowntime: msg.getSlashFractionDowntime_asB64()
+  proto.cosmos.slashing.v1beta1.Params.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        signedBlocksWindow: jspb.Message.getFieldWithDefault(msg, 1, 0),
+        minSignedPerWindow: msg.getMinSignedPerWindow_asB64(),
+        downtimeJailDuration: (f = msg.getDowntimeJailDuration()) && google_protobuf_duration_pb.Duration.toObject(includeInstance, f),
+        slashFractionDoubleSign: msg.getSlashFractionDoubleSign_asB64(),
+        slashFractionDowntime: msg.getSlashFractionDowntime_asB64(),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.slashing.v1beta1.Params}
  */
-proto.cosmos.slashing.v1beta1.Params.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.slashing.v1beta1.Params;
+proto.cosmos.slashing.v1beta1.Params.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.slashing.v1beta1.Params();
   return proto.cosmos.slashing.v1beta1.Params.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -393,53 +371,51 @@ proto.cosmos.slashing.v1beta1.Params.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.slashing.v1beta1.Params}
  */
-proto.cosmos.slashing.v1beta1.Params.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.slashing.v1beta1.Params.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setSignedBlocksWindow(value);
-      break;
-    case 2:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setMinSignedPerWindow(value);
-      break;
-    case 3:
-      var value = new google_protobuf_duration_pb.Duration;
-      reader.readMessage(value,google_protobuf_duration_pb.Duration.deserializeBinaryFromReader);
-      msg.setDowntimeJailDuration(value);
-      break;
-    case 4:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setSlashFractionDoubleSign(value);
-      break;
-    case 5:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setSlashFractionDowntime(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setSignedBlocksWindow(value);
+        break;
+      case 2:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.setMinSignedPerWindow(value);
+        break;
+      case 3:
+        var value = new google_protobuf_duration_pb.Duration();
+        reader.readMessage(value, google_protobuf_duration_pb.Duration.deserializeBinaryFromReader);
+        msg.setDowntimeJailDuration(value);
+        break;
+      case 4:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.setSlashFractionDoubleSign(value);
+        break;
+      case 5:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.setSlashFractionDowntime(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.slashing.v1beta1.Params.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.slashing.v1beta1.Params.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.slashing.v1beta1.Params.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -448,20 +424,20 @@ proto.cosmos.slashing.v1beta1.Params.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.slashing.v1beta1.Params.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.slashing.v1beta1.Params.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getSignedBlocksWindow();
   if (f !== 0) {
     writer.writeInt64(
       1,
-      f
+      f,
     );
   }
   f = message.getMinSignedPerWindow_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       2,
-      f
+      f,
     );
   }
   f = message.getDowntimeJailDuration();
@@ -469,60 +445,56 @@ proto.cosmos.slashing.v1beta1.Params.serializeBinaryToWriter = function(message,
     writer.writeMessage(
       3,
       f,
-      google_protobuf_duration_pb.Duration.serializeBinaryToWriter
+      google_protobuf_duration_pb.Duration.serializeBinaryToWriter,
     );
   }
   f = message.getSlashFractionDoubleSign_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       4,
-      f
+      f,
     );
   }
   f = message.getSlashFractionDowntime_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       5,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional int64 signed_blocks_window = 1;
  * @return {number}
  */
-proto.cosmos.slashing.v1beta1.Params.prototype.getSignedBlocksWindow = function() {
+proto.cosmos.slashing.v1beta1.Params.prototype.getSignedBlocksWindow = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
-
 /** @param {number} value */
-proto.cosmos.slashing.v1beta1.Params.prototype.setSignedBlocksWindow = function(value) {
+proto.cosmos.slashing.v1beta1.Params.prototype.setSignedBlocksWindow = function (value) {
   jspb.Message.setProto3IntField(this, 1, value);
 };
-
 
 /**
  * optional bytes min_signed_per_window = 2;
  * @return {!(string|Uint8Array)}
  */
-proto.cosmos.slashing.v1beta1.Params.prototype.getMinSignedPerWindow = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+proto.cosmos.slashing.v1beta1.Params.prototype.getMinSignedPerWindow = function () {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
 };
-
 
 /**
  * optional bytes min_signed_per_window = 2;
  * This is a type-conversion wrapper around `getMinSignedPerWindow()`
  * @return {string}
  */
-proto.cosmos.slashing.v1beta1.Params.prototype.getMinSignedPerWindow_asB64 = function() {
+proto.cosmos.slashing.v1beta1.Params.prototype.getMinSignedPerWindow_asB64 = function () {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getMinSignedPerWindow()));
+    this.getMinSignedPerWindow(),
+  ));
 };
-
 
 /**
  * optional bytes min_signed_per_window = 2;
@@ -531,67 +503,61 @@ proto.cosmos.slashing.v1beta1.Params.prototype.getMinSignedPerWindow_asB64 = fun
  * This is a type-conversion wrapper around `getMinSignedPerWindow()`
  * @return {!Uint8Array}
  */
-proto.cosmos.slashing.v1beta1.Params.prototype.getMinSignedPerWindow_asU8 = function() {
+proto.cosmos.slashing.v1beta1.Params.prototype.getMinSignedPerWindow_asU8 = function () {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getMinSignedPerWindow()));
+    this.getMinSignedPerWindow(),
+  ));
 };
-
 
 /** @param {!(string|Uint8Array)} value */
-proto.cosmos.slashing.v1beta1.Params.prototype.setMinSignedPerWindow = function(value) {
+proto.cosmos.slashing.v1beta1.Params.prototype.setMinSignedPerWindow = function (value) {
   jspb.Message.setProto3BytesField(this, 2, value);
 };
-
 
 /**
  * optional google.protobuf.Duration downtime_jail_duration = 3;
  * @return {?proto.google.protobuf.Duration}
  */
-proto.cosmos.slashing.v1beta1.Params.prototype.getDowntimeJailDuration = function() {
+proto.cosmos.slashing.v1beta1.Params.prototype.getDowntimeJailDuration = function () {
   return /** @type{?proto.google.protobuf.Duration} */ (
     jspb.Message.getWrapperField(this, google_protobuf_duration_pb.Duration, 3));
 };
 
-
 /** @param {?proto.google.protobuf.Duration|undefined} value */
-proto.cosmos.slashing.v1beta1.Params.prototype.setDowntimeJailDuration = function(value) {
+proto.cosmos.slashing.v1beta1.Params.prototype.setDowntimeJailDuration = function (value) {
   jspb.Message.setWrapperField(this, 3, value);
 };
 
-
-proto.cosmos.slashing.v1beta1.Params.prototype.clearDowntimeJailDuration = function() {
+proto.cosmos.slashing.v1beta1.Params.prototype.clearDowntimeJailDuration = function () {
   this.setDowntimeJailDuration(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.cosmos.slashing.v1beta1.Params.prototype.hasDowntimeJailDuration = function() {
+proto.cosmos.slashing.v1beta1.Params.prototype.hasDowntimeJailDuration = function () {
   return jspb.Message.getField(this, 3) != null;
 };
 
-
 /**
  * optional bytes slash_fraction_double_sign = 4;
  * @return {!(string|Uint8Array)}
  */
-proto.cosmos.slashing.v1beta1.Params.prototype.getSlashFractionDoubleSign = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+proto.cosmos.slashing.v1beta1.Params.prototype.getSlashFractionDoubleSign = function () {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 4, ''));
 };
-
 
 /**
  * optional bytes slash_fraction_double_sign = 4;
  * This is a type-conversion wrapper around `getSlashFractionDoubleSign()`
  * @return {string}
  */
-proto.cosmos.slashing.v1beta1.Params.prototype.getSlashFractionDoubleSign_asB64 = function() {
+proto.cosmos.slashing.v1beta1.Params.prototype.getSlashFractionDoubleSign_asB64 = function () {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getSlashFractionDoubleSign()));
+    this.getSlashFractionDoubleSign(),
+  ));
 };
-
 
 /**
  * optional bytes slash_fraction_double_sign = 4;
@@ -600,37 +566,35 @@ proto.cosmos.slashing.v1beta1.Params.prototype.getSlashFractionDoubleSign_asB64 
  * This is a type-conversion wrapper around `getSlashFractionDoubleSign()`
  * @return {!Uint8Array}
  */
-proto.cosmos.slashing.v1beta1.Params.prototype.getSlashFractionDoubleSign_asU8 = function() {
+proto.cosmos.slashing.v1beta1.Params.prototype.getSlashFractionDoubleSign_asU8 = function () {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getSlashFractionDoubleSign()));
+    this.getSlashFractionDoubleSign(),
+  ));
 };
 
-
 /** @param {!(string|Uint8Array)} value */
-proto.cosmos.slashing.v1beta1.Params.prototype.setSlashFractionDoubleSign = function(value) {
+proto.cosmos.slashing.v1beta1.Params.prototype.setSlashFractionDoubleSign = function (value) {
   jspb.Message.setProto3BytesField(this, 4, value);
 };
 
-
 /**
  * optional bytes slash_fraction_downtime = 5;
  * @return {!(string|Uint8Array)}
  */
-proto.cosmos.slashing.v1beta1.Params.prototype.getSlashFractionDowntime = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
+proto.cosmos.slashing.v1beta1.Params.prototype.getSlashFractionDowntime = function () {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 5, ''));
 };
-
 
 /**
  * optional bytes slash_fraction_downtime = 5;
  * This is a type-conversion wrapper around `getSlashFractionDowntime()`
  * @return {string}
  */
-proto.cosmos.slashing.v1beta1.Params.prototype.getSlashFractionDowntime_asB64 = function() {
+proto.cosmos.slashing.v1beta1.Params.prototype.getSlashFractionDowntime_asB64 = function () {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getSlashFractionDowntime()));
+    this.getSlashFractionDowntime(),
+  ));
 };
-
 
 /**
  * optional bytes slash_fraction_downtime = 5;
@@ -639,16 +603,15 @@ proto.cosmos.slashing.v1beta1.Params.prototype.getSlashFractionDowntime_asB64 = 
  * This is a type-conversion wrapper around `getSlashFractionDowntime()`
  * @return {!Uint8Array}
  */
-proto.cosmos.slashing.v1beta1.Params.prototype.getSlashFractionDowntime_asU8 = function() {
+proto.cosmos.slashing.v1beta1.Params.prototype.getSlashFractionDowntime_asU8 = function () {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getSlashFractionDowntime()));
+    this.getSlashFractionDowntime(),
+  ));
 };
-
 
 /** @param {!(string|Uint8Array)} value */
-proto.cosmos.slashing.v1beta1.Params.prototype.setSlashFractionDowntime = function(value) {
+proto.cosmos.slashing.v1beta1.Params.prototype.setSlashFractionDowntime = function (value) {
   jspb.Message.setProto3BytesField(this, 5, value);
 };
-
 
 goog.object.extend(exports, proto.cosmos.slashing.v1beta1);

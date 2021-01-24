@@ -1,22 +1,22 @@
 // package: cosmos.params.v1beta1
 // file: cosmos/params/v1beta1/query.proto
 
-var cosmos_params_v1beta1_query_pb = require("../../../cosmos/params/v1beta1/query_pb");
-var grpc = require("@improbable-eng/grpc-web").grpc;
+const { grpc } = require('@improbable-eng/grpc-web');
+const cosmos_params_v1beta1_query_pb = require('./query_pb');
 
-var Query = (function () {
+const Query = (function () {
   function Query() {}
-  Query.serviceName = "cosmos.params.v1beta1.Query";
+  Query.serviceName = 'cosmos.params.v1beta1.Query';
   return Query;
 }());
 
 Query.Params = {
-  methodName: "Params",
+  methodName: 'Params',
   service: Query,
   requestStream: false,
   responseStream: false,
   requestType: cosmos_params_v1beta1_query_pb.QueryParamsRequest,
-  responseType: cosmos_params_v1beta1_query_pb.QueryParamsResponse
+  responseType: cosmos_params_v1beta1_query_pb.QueryParamsResponse,
 };
 
 exports.Query = Query;
@@ -30,16 +30,16 @@ QueryClient.prototype.params = function params(requestMessage, metadata, callbac
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(Query.Params, {
+  const client = grpc.unary(Query.Params, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata: metadata,
+    metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd: function (response) {
+    onEnd(response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          var err = new Error(response.statusMessage);
+          const err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -47,15 +47,14 @@ QueryClient.prototype.params = function params(requestMessage, metadata, callbac
           callback(null, response.message);
         }
       }
-    }
+    },
   });
   return {
-    cancel: function () {
+    cancel() {
       callback = null;
       client.close();
-    }
+    },
   };
 };
 
 exports.QueryClient = QueryClient;
-

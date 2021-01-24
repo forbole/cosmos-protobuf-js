@@ -1,31 +1,31 @@
 // package: cosmos.bank.v1beta1
 // file: cosmos/bank/v1beta1/tx.proto
 
-var cosmos_bank_v1beta1_tx_pb = require("../../../cosmos/bank/v1beta1/tx_pb");
-var grpc = require("@improbable-eng/grpc-web").grpc;
+const { grpc } = require('@improbable-eng/grpc-web');
+const cosmos_bank_v1beta1_tx_pb = require('./tx_pb');
 
-var Msg = (function () {
+const Msg = (function () {
   function Msg() {}
-  Msg.serviceName = "cosmos.bank.v1beta1.Msg";
+  Msg.serviceName = 'cosmos.bank.v1beta1.Msg';
   return Msg;
 }());
 
 Msg.Send = {
-  methodName: "Send",
+  methodName: 'Send',
   service: Msg,
   requestStream: false,
   responseStream: false,
   requestType: cosmos_bank_v1beta1_tx_pb.MsgSend,
-  responseType: cosmos_bank_v1beta1_tx_pb.MsgSendResponse
+  responseType: cosmos_bank_v1beta1_tx_pb.MsgSendResponse,
 };
 
 Msg.MultiSend = {
-  methodName: "MultiSend",
+  methodName: 'MultiSend',
   service: Msg,
   requestStream: false,
   responseStream: false,
   requestType: cosmos_bank_v1beta1_tx_pb.MsgMultiSend,
-  responseType: cosmos_bank_v1beta1_tx_pb.MsgMultiSendResponse
+  responseType: cosmos_bank_v1beta1_tx_pb.MsgMultiSendResponse,
 };
 
 exports.Msg = Msg;
@@ -39,16 +39,16 @@ MsgClient.prototype.send = function send(requestMessage, metadata, callback) {
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(Msg.Send, {
+  const client = grpc.unary(Msg.Send, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata: metadata,
+    metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd: function (response) {
+    onEnd(response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          var err = new Error(response.statusMessage);
+          const err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -56,13 +56,13 @@ MsgClient.prototype.send = function send(requestMessage, metadata, callback) {
           callback(null, response.message);
         }
       }
-    }
+    },
   });
   return {
-    cancel: function () {
+    cancel() {
       callback = null;
       client.close();
-    }
+    },
   };
 };
 
@@ -70,16 +70,16 @@ MsgClient.prototype.multiSend = function multiSend(requestMessage, metadata, cal
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(Msg.MultiSend, {
+  const client = grpc.unary(Msg.MultiSend, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata: metadata,
+    metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd: function (response) {
+    onEnd(response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          var err = new Error(response.statusMessage);
+          const err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -87,15 +87,14 @@ MsgClient.prototype.multiSend = function multiSend(requestMessage, metadata, cal
           callback(null, response.message);
         }
       }
-    }
+    },
   });
   return {
-    cancel: function () {
+    cancel() {
       callback = null;
       client.close();
-    }
+    },
   };
 };
 
 exports.MsgClient = MsgClient;
-

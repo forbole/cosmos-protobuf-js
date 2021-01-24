@@ -7,13 +7,15 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-var jspb = require('google-protobuf');
-var goog = jspb;
-var global = Function('return this')();
+const jspb = require('google-protobuf');
 
-var gogoproto_gogo_pb = require('../../../gogoproto/gogo_pb.js');
-var google_api_annotations_pb = require('../../../google/api/annotations_pb.js');
-var cosmos_mint_v1beta1_mint_pb = require('../../../cosmos/mint/v1beta1/mint_pb.js');
+const goog = jspb;
+const global = Function('return this')();
+
+const gogoproto_gogo_pb = require('../../../gogoproto/gogo_pb.js');
+const google_api_annotations_pb = require('../../../google/api/annotations_pb.js');
+const cosmos_mint_v1beta1_mint_pb = require('./mint_pb.js');
+
 goog.exportSymbol('proto.cosmos.mint.v1beta1.QueryAnnualProvisionsRequest', null, global);
 goog.exportSymbol('proto.cosmos.mint.v1beta1.QueryAnnualProvisionsResponse', null, global);
 goog.exportSymbol('proto.cosmos.mint.v1beta1.QueryInflationRequest', null, global);
@@ -31,14 +33,13 @@ goog.exportSymbol('proto.cosmos.mint.v1beta1.QueryParamsResponse', null, global)
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.mint.v1beta1.QueryParamsRequest = function(opt_data) {
+proto.cosmos.mint.v1beta1.QueryParamsRequest = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.mint.v1beta1.QueryParamsRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.mint.v1beta1.QueryParamsRequest.displayName = 'proto.cosmos.mint.v1beta1.QueryParamsRequest';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -51,12 +52,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.mint.v1beta1.QueryParamsRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.mint.v1beta1.QueryParamsRequest.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.mint.v1beta1.QueryParamsRequest.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.mint.v1beta1.QueryParamsRequest.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -65,30 +65,29 @@ proto.cosmos.mint.v1beta1.QueryParamsRequest.prototype.toObject = function(opt_i
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.mint.v1beta1.QueryParamsRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  proto.cosmos.mint.v1beta1.QueryParamsRequest.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
 
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.mint.v1beta1.QueryParamsRequest}
  */
-proto.cosmos.mint.v1beta1.QueryParamsRequest.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.mint.v1beta1.QueryParamsRequest;
+proto.cosmos.mint.v1beta1.QueryParamsRequest.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.mint.v1beta1.QueryParamsRequest();
   return proto.cosmos.mint.v1beta1.QueryParamsRequest.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -97,32 +96,30 @@ proto.cosmos.mint.v1beta1.QueryParamsRequest.deserializeBinary = function(bytes)
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.mint.v1beta1.QueryParamsRequest}
  */
-proto.cosmos.mint.v1beta1.QueryParamsRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.mint.v1beta1.QueryParamsRequest.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    default:
-      reader.skipField();
-      break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.mint.v1beta1.QueryParamsRequest.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.mint.v1beta1.QueryParamsRequest.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.mint.v1beta1.QueryParamsRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -131,11 +128,9 @@ proto.cosmos.mint.v1beta1.QueryParamsRequest.prototype.serializeBinary = functio
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.mint.v1beta1.QueryParamsRequest.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.mint.v1beta1.QueryParamsRequest.serializeBinaryToWriter = function (message, writer) {
+  const f;
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -147,14 +142,13 @@ proto.cosmos.mint.v1beta1.QueryParamsRequest.serializeBinaryToWriter = function(
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.mint.v1beta1.QueryParamsResponse = function(opt_data) {
+proto.cosmos.mint.v1beta1.QueryParamsResponse = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.mint.v1beta1.QueryParamsResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.mint.v1beta1.QueryParamsResponse.displayName = 'proto.cosmos.mint.v1beta1.QueryParamsResponse';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -167,12 +161,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.mint.v1beta1.QueryParamsResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.mint.v1beta1.QueryParamsResponse.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.mint.v1beta1.QueryParamsResponse.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.mint.v1beta1.QueryParamsResponse.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -181,30 +174,29 @@ proto.cosmos.mint.v1beta1.QueryParamsResponse.prototype.toObject = function(opt_
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.mint.v1beta1.QueryParamsResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    params: (f = msg.getParams()) && cosmos_mint_v1beta1_mint_pb.Params.toObject(includeInstance, f)
+  proto.cosmos.mint.v1beta1.QueryParamsResponse.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        params: (f = msg.getParams()) && cosmos_mint_v1beta1_mint_pb.Params.toObject(includeInstance, f),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.mint.v1beta1.QueryParamsResponse}
  */
-proto.cosmos.mint.v1beta1.QueryParamsResponse.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.mint.v1beta1.QueryParamsResponse;
+proto.cosmos.mint.v1beta1.QueryParamsResponse.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.mint.v1beta1.QueryParamsResponse();
   return proto.cosmos.mint.v1beta1.QueryParamsResponse.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -213,37 +205,35 @@ proto.cosmos.mint.v1beta1.QueryParamsResponse.deserializeBinary = function(bytes
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.mint.v1beta1.QueryParamsResponse}
  */
-proto.cosmos.mint.v1beta1.QueryParamsResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.mint.v1beta1.QueryParamsResponse.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = new cosmos_mint_v1beta1_mint_pb.Params;
-      reader.readMessage(value,cosmos_mint_v1beta1_mint_pb.Params.deserializeBinaryFromReader);
-      msg.setParams(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = new cosmos_mint_v1beta1_mint_pb.Params();
+        reader.readMessage(value, cosmos_mint_v1beta1_mint_pb.Params.deserializeBinaryFromReader);
+        msg.setParams(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.mint.v1beta1.QueryParamsResponse.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.mint.v1beta1.QueryParamsResponse.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.mint.v1beta1.QueryParamsResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -252,49 +242,43 @@ proto.cosmos.mint.v1beta1.QueryParamsResponse.prototype.serializeBinary = functi
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.mint.v1beta1.QueryParamsResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.mint.v1beta1.QueryParamsResponse.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getParams();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      cosmos_mint_v1beta1_mint_pb.Params.serializeBinaryToWriter
+      cosmos_mint_v1beta1_mint_pb.Params.serializeBinaryToWriter,
     );
   }
 };
-
 
 /**
  * optional Params params = 1;
  * @return {?proto.cosmos.mint.v1beta1.Params}
  */
-proto.cosmos.mint.v1beta1.QueryParamsResponse.prototype.getParams = function() {
+proto.cosmos.mint.v1beta1.QueryParamsResponse.prototype.getParams = function () {
   return /** @type{?proto.cosmos.mint.v1beta1.Params} */ (
     jspb.Message.getWrapperField(this, cosmos_mint_v1beta1_mint_pb.Params, 1));
 };
 
-
 /** @param {?proto.cosmos.mint.v1beta1.Params|undefined} value */
-proto.cosmos.mint.v1beta1.QueryParamsResponse.prototype.setParams = function(value) {
+proto.cosmos.mint.v1beta1.QueryParamsResponse.prototype.setParams = function (value) {
   jspb.Message.setWrapperField(this, 1, value);
 };
 
-
-proto.cosmos.mint.v1beta1.QueryParamsResponse.prototype.clearParams = function() {
+proto.cosmos.mint.v1beta1.QueryParamsResponse.prototype.clearParams = function () {
   this.setParams(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.cosmos.mint.v1beta1.QueryParamsResponse.prototype.hasParams = function() {
+proto.cosmos.mint.v1beta1.QueryParamsResponse.prototype.hasParams = function () {
   return jspb.Message.getField(this, 1) != null;
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -306,14 +290,13 @@ proto.cosmos.mint.v1beta1.QueryParamsResponse.prototype.hasParams = function() {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.mint.v1beta1.QueryInflationRequest = function(opt_data) {
+proto.cosmos.mint.v1beta1.QueryInflationRequest = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.mint.v1beta1.QueryInflationRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.mint.v1beta1.QueryInflationRequest.displayName = 'proto.cosmos.mint.v1beta1.QueryInflationRequest';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -326,12 +309,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.mint.v1beta1.QueryInflationRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.mint.v1beta1.QueryInflationRequest.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.mint.v1beta1.QueryInflationRequest.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.mint.v1beta1.QueryInflationRequest.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -340,30 +322,29 @@ proto.cosmos.mint.v1beta1.QueryInflationRequest.prototype.toObject = function(op
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.mint.v1beta1.QueryInflationRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  proto.cosmos.mint.v1beta1.QueryInflationRequest.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
 
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.mint.v1beta1.QueryInflationRequest}
  */
-proto.cosmos.mint.v1beta1.QueryInflationRequest.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.mint.v1beta1.QueryInflationRequest;
+proto.cosmos.mint.v1beta1.QueryInflationRequest.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.mint.v1beta1.QueryInflationRequest();
   return proto.cosmos.mint.v1beta1.QueryInflationRequest.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -372,32 +353,30 @@ proto.cosmos.mint.v1beta1.QueryInflationRequest.deserializeBinary = function(byt
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.mint.v1beta1.QueryInflationRequest}
  */
-proto.cosmos.mint.v1beta1.QueryInflationRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.mint.v1beta1.QueryInflationRequest.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    default:
-      reader.skipField();
-      break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.mint.v1beta1.QueryInflationRequest.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.mint.v1beta1.QueryInflationRequest.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.mint.v1beta1.QueryInflationRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -406,11 +385,9 @@ proto.cosmos.mint.v1beta1.QueryInflationRequest.prototype.serializeBinary = func
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.mint.v1beta1.QueryInflationRequest.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.mint.v1beta1.QueryInflationRequest.serializeBinaryToWriter = function (message, writer) {
+  const f;
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -422,14 +399,13 @@ proto.cosmos.mint.v1beta1.QueryInflationRequest.serializeBinaryToWriter = functi
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.mint.v1beta1.QueryInflationResponse = function(opt_data) {
+proto.cosmos.mint.v1beta1.QueryInflationResponse = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.mint.v1beta1.QueryInflationResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.mint.v1beta1.QueryInflationResponse.displayName = 'proto.cosmos.mint.v1beta1.QueryInflationResponse';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -442,12 +418,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.mint.v1beta1.QueryInflationResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.mint.v1beta1.QueryInflationResponse.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.mint.v1beta1.QueryInflationResponse.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.mint.v1beta1.QueryInflationResponse.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -456,30 +431,29 @@ proto.cosmos.mint.v1beta1.QueryInflationResponse.prototype.toObject = function(o
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.mint.v1beta1.QueryInflationResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    inflation: msg.getInflation_asB64()
+  proto.cosmos.mint.v1beta1.QueryInflationResponse.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        inflation: msg.getInflation_asB64(),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.mint.v1beta1.QueryInflationResponse}
  */
-proto.cosmos.mint.v1beta1.QueryInflationResponse.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.mint.v1beta1.QueryInflationResponse;
+proto.cosmos.mint.v1beta1.QueryInflationResponse.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.mint.v1beta1.QueryInflationResponse();
   return proto.cosmos.mint.v1beta1.QueryInflationResponse.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -488,36 +462,34 @@ proto.cosmos.mint.v1beta1.QueryInflationResponse.deserializeBinary = function(by
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.mint.v1beta1.QueryInflationResponse}
  */
-proto.cosmos.mint.v1beta1.QueryInflationResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.mint.v1beta1.QueryInflationResponse.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setInflation(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.setInflation(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.mint.v1beta1.QueryInflationResponse.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.mint.v1beta1.QueryInflationResponse.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.mint.v1beta1.QueryInflationResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -526,37 +498,35 @@ proto.cosmos.mint.v1beta1.QueryInflationResponse.prototype.serializeBinary = fun
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.mint.v1beta1.QueryInflationResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.mint.v1beta1.QueryInflationResponse.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getInflation_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       1,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional bytes inflation = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.cosmos.mint.v1beta1.QueryInflationResponse.prototype.getInflation = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.cosmos.mint.v1beta1.QueryInflationResponse.prototype.getInflation = function () {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
 };
-
 
 /**
  * optional bytes inflation = 1;
  * This is a type-conversion wrapper around `getInflation()`
  * @return {string}
  */
-proto.cosmos.mint.v1beta1.QueryInflationResponse.prototype.getInflation_asB64 = function() {
+proto.cosmos.mint.v1beta1.QueryInflationResponse.prototype.getInflation_asB64 = function () {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getInflation()));
+    this.getInflation(),
+  ));
 };
-
 
 /**
  * optional bytes inflation = 1;
@@ -565,18 +535,16 @@ proto.cosmos.mint.v1beta1.QueryInflationResponse.prototype.getInflation_asB64 = 
  * This is a type-conversion wrapper around `getInflation()`
  * @return {!Uint8Array}
  */
-proto.cosmos.mint.v1beta1.QueryInflationResponse.prototype.getInflation_asU8 = function() {
+proto.cosmos.mint.v1beta1.QueryInflationResponse.prototype.getInflation_asU8 = function () {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getInflation()));
+    this.getInflation(),
+  ));
 };
-
 
 /** @param {!(string|Uint8Array)} value */
-proto.cosmos.mint.v1beta1.QueryInflationResponse.prototype.setInflation = function(value) {
+proto.cosmos.mint.v1beta1.QueryInflationResponse.prototype.setInflation = function (value) {
   jspb.Message.setProto3BytesField(this, 1, value);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -588,14 +556,13 @@ proto.cosmos.mint.v1beta1.QueryInflationResponse.prototype.setInflation = functi
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.mint.v1beta1.QueryAnnualProvisionsRequest = function(opt_data) {
+proto.cosmos.mint.v1beta1.QueryAnnualProvisionsRequest = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.mint.v1beta1.QueryAnnualProvisionsRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.mint.v1beta1.QueryAnnualProvisionsRequest.displayName = 'proto.cosmos.mint.v1beta1.QueryAnnualProvisionsRequest';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -608,12 +575,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.mint.v1beta1.QueryAnnualProvisionsRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.mint.v1beta1.QueryAnnualProvisionsRequest.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.mint.v1beta1.QueryAnnualProvisionsRequest.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.mint.v1beta1.QueryAnnualProvisionsRequest.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -622,30 +588,29 @@ proto.cosmos.mint.v1beta1.QueryAnnualProvisionsRequest.prototype.toObject = func
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.mint.v1beta1.QueryAnnualProvisionsRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  proto.cosmos.mint.v1beta1.QueryAnnualProvisionsRequest.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
 
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.mint.v1beta1.QueryAnnualProvisionsRequest}
  */
-proto.cosmos.mint.v1beta1.QueryAnnualProvisionsRequest.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.mint.v1beta1.QueryAnnualProvisionsRequest;
+proto.cosmos.mint.v1beta1.QueryAnnualProvisionsRequest.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.mint.v1beta1.QueryAnnualProvisionsRequest();
   return proto.cosmos.mint.v1beta1.QueryAnnualProvisionsRequest.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -654,32 +619,30 @@ proto.cosmos.mint.v1beta1.QueryAnnualProvisionsRequest.deserializeBinary = funct
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.mint.v1beta1.QueryAnnualProvisionsRequest}
  */
-proto.cosmos.mint.v1beta1.QueryAnnualProvisionsRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.mint.v1beta1.QueryAnnualProvisionsRequest.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    default:
-      reader.skipField();
-      break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.mint.v1beta1.QueryAnnualProvisionsRequest.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.mint.v1beta1.QueryAnnualProvisionsRequest.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.mint.v1beta1.QueryAnnualProvisionsRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -688,11 +651,9 @@ proto.cosmos.mint.v1beta1.QueryAnnualProvisionsRequest.prototype.serializeBinary
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.mint.v1beta1.QueryAnnualProvisionsRequest.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.mint.v1beta1.QueryAnnualProvisionsRequest.serializeBinaryToWriter = function (message, writer) {
+  const f;
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -704,14 +665,13 @@ proto.cosmos.mint.v1beta1.QueryAnnualProvisionsRequest.serializeBinaryToWriter =
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.mint.v1beta1.QueryAnnualProvisionsResponse = function(opt_data) {
+proto.cosmos.mint.v1beta1.QueryAnnualProvisionsResponse = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.mint.v1beta1.QueryAnnualProvisionsResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.mint.v1beta1.QueryAnnualProvisionsResponse.displayName = 'proto.cosmos.mint.v1beta1.QueryAnnualProvisionsResponse';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -724,12 +684,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.mint.v1beta1.QueryAnnualProvisionsResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.mint.v1beta1.QueryAnnualProvisionsResponse.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.mint.v1beta1.QueryAnnualProvisionsResponse.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.mint.v1beta1.QueryAnnualProvisionsResponse.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -738,30 +697,29 @@ proto.cosmos.mint.v1beta1.QueryAnnualProvisionsResponse.prototype.toObject = fun
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.mint.v1beta1.QueryAnnualProvisionsResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    annualProvisions: msg.getAnnualProvisions_asB64()
+  proto.cosmos.mint.v1beta1.QueryAnnualProvisionsResponse.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        annualProvisions: msg.getAnnualProvisions_asB64(),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.mint.v1beta1.QueryAnnualProvisionsResponse}
  */
-proto.cosmos.mint.v1beta1.QueryAnnualProvisionsResponse.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.mint.v1beta1.QueryAnnualProvisionsResponse;
+proto.cosmos.mint.v1beta1.QueryAnnualProvisionsResponse.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.mint.v1beta1.QueryAnnualProvisionsResponse();
   return proto.cosmos.mint.v1beta1.QueryAnnualProvisionsResponse.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -770,36 +728,34 @@ proto.cosmos.mint.v1beta1.QueryAnnualProvisionsResponse.deserializeBinary = func
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.mint.v1beta1.QueryAnnualProvisionsResponse}
  */
-proto.cosmos.mint.v1beta1.QueryAnnualProvisionsResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.mint.v1beta1.QueryAnnualProvisionsResponse.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setAnnualProvisions(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.setAnnualProvisions(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.mint.v1beta1.QueryAnnualProvisionsResponse.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.mint.v1beta1.QueryAnnualProvisionsResponse.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.mint.v1beta1.QueryAnnualProvisionsResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -808,37 +764,35 @@ proto.cosmos.mint.v1beta1.QueryAnnualProvisionsResponse.prototype.serializeBinar
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.mint.v1beta1.QueryAnnualProvisionsResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.mint.v1beta1.QueryAnnualProvisionsResponse.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getAnnualProvisions_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       1,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional bytes annual_provisions = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.cosmos.mint.v1beta1.QueryAnnualProvisionsResponse.prototype.getAnnualProvisions = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.cosmos.mint.v1beta1.QueryAnnualProvisionsResponse.prototype.getAnnualProvisions = function () {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
 };
-
 
 /**
  * optional bytes annual_provisions = 1;
  * This is a type-conversion wrapper around `getAnnualProvisions()`
  * @return {string}
  */
-proto.cosmos.mint.v1beta1.QueryAnnualProvisionsResponse.prototype.getAnnualProvisions_asB64 = function() {
+proto.cosmos.mint.v1beta1.QueryAnnualProvisionsResponse.prototype.getAnnualProvisions_asB64 = function () {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getAnnualProvisions()));
+    this.getAnnualProvisions(),
+  ));
 };
-
 
 /**
  * optional bytes annual_provisions = 1;
@@ -847,16 +801,15 @@ proto.cosmos.mint.v1beta1.QueryAnnualProvisionsResponse.prototype.getAnnualProvi
  * This is a type-conversion wrapper around `getAnnualProvisions()`
  * @return {!Uint8Array}
  */
-proto.cosmos.mint.v1beta1.QueryAnnualProvisionsResponse.prototype.getAnnualProvisions_asU8 = function() {
+proto.cosmos.mint.v1beta1.QueryAnnualProvisionsResponse.prototype.getAnnualProvisions_asU8 = function () {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getAnnualProvisions()));
+    this.getAnnualProvisions(),
+  ));
 };
-
 
 /** @param {!(string|Uint8Array)} value */
-proto.cosmos.mint.v1beta1.QueryAnnualProvisionsResponse.prototype.setAnnualProvisions = function(value) {
+proto.cosmos.mint.v1beta1.QueryAnnualProvisionsResponse.prototype.setAnnualProvisions = function (value) {
   jspb.Message.setProto3BytesField(this, 1, value);
 };
-
 
 goog.object.extend(exports, proto.cosmos.mint.v1beta1);

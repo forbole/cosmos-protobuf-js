@@ -7,11 +7,13 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-var jspb = require('google-protobuf');
-var goog = jspb;
-var global = Function('return this')();
+const jspb = require('google-protobuf');
 
-var google_api_annotations_pb = require('../../../../google/api/annotations_pb.js');
+const goog = jspb;
+const global = Function('return this')();
+
+const google_api_annotations_pb = require('../../../../google/api/annotations_pb.js');
+
 goog.exportSymbol('proto.cosmos.base.reflection.v1beta1.ListAllInterfacesRequest', null, global);
 goog.exportSymbol('proto.cosmos.base.reflection.v1beta1.ListAllInterfacesResponse', null, global);
 goog.exportSymbol('proto.cosmos.base.reflection.v1beta1.ListImplementationsRequest', null, global);
@@ -27,14 +29,13 @@ goog.exportSymbol('proto.cosmos.base.reflection.v1beta1.ListImplementationsRespo
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.base.reflection.v1beta1.ListAllInterfacesRequest = function(opt_data) {
+proto.cosmos.base.reflection.v1beta1.ListAllInterfacesRequest = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.base.reflection.v1beta1.ListAllInterfacesRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.base.reflection.v1beta1.ListAllInterfacesRequest.displayName = 'proto.cosmos.base.reflection.v1beta1.ListAllInterfacesRequest';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -47,12 +48,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.base.reflection.v1beta1.ListAllInterfacesRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.base.reflection.v1beta1.ListAllInterfacesRequest.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.base.reflection.v1beta1.ListAllInterfacesRequest.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.base.reflection.v1beta1.ListAllInterfacesRequest.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -61,30 +61,29 @@ proto.cosmos.base.reflection.v1beta1.ListAllInterfacesRequest.prototype.toObject
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.reflection.v1beta1.ListAllInterfacesRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  proto.cosmos.base.reflection.v1beta1.ListAllInterfacesRequest.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
 
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.base.reflection.v1beta1.ListAllInterfacesRequest}
  */
-proto.cosmos.base.reflection.v1beta1.ListAllInterfacesRequest.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.base.reflection.v1beta1.ListAllInterfacesRequest;
+proto.cosmos.base.reflection.v1beta1.ListAllInterfacesRequest.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.base.reflection.v1beta1.ListAllInterfacesRequest();
   return proto.cosmos.base.reflection.v1beta1.ListAllInterfacesRequest.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -93,32 +92,30 @@ proto.cosmos.base.reflection.v1beta1.ListAllInterfacesRequest.deserializeBinary 
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.base.reflection.v1beta1.ListAllInterfacesRequest}
  */
-proto.cosmos.base.reflection.v1beta1.ListAllInterfacesRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.base.reflection.v1beta1.ListAllInterfacesRequest.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    default:
-      reader.skipField();
-      break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.base.reflection.v1beta1.ListAllInterfacesRequest.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.base.reflection.v1beta1.ListAllInterfacesRequest.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.base.reflection.v1beta1.ListAllInterfacesRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -127,11 +124,9 @@ proto.cosmos.base.reflection.v1beta1.ListAllInterfacesRequest.prototype.serializ
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.reflection.v1beta1.ListAllInterfacesRequest.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.base.reflection.v1beta1.ListAllInterfacesRequest.serializeBinaryToWriter = function (message, writer) {
+  const f;
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -143,7 +138,7 @@ proto.cosmos.base.reflection.v1beta1.ListAllInterfacesRequest.serializeBinaryToW
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.base.reflection.v1beta1.ListAllInterfacesResponse = function(opt_data) {
+proto.cosmos.base.reflection.v1beta1.ListAllInterfacesResponse = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.cosmos.base.reflection.v1beta1.ListAllInterfacesResponse.repeatedFields_, null);
 };
 goog.inherits(proto.cosmos.base.reflection.v1beta1.ListAllInterfacesResponse, jspb.Message);
@@ -157,8 +152,6 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.cosmos.base.reflection.v1beta1.ListAllInterfacesResponse.repeatedFields_ = [1];
 
-
-
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -170,12 +163,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.base.reflection.v1beta1.ListAllInterfacesResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.base.reflection.v1beta1.ListAllInterfacesResponse.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.base.reflection.v1beta1.ListAllInterfacesResponse.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.base.reflection.v1beta1.ListAllInterfacesResponse.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -184,30 +176,29 @@ proto.cosmos.base.reflection.v1beta1.ListAllInterfacesResponse.prototype.toObjec
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.reflection.v1beta1.ListAllInterfacesResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    interfaceNamesList: jspb.Message.getRepeatedField(msg, 1)
+  proto.cosmos.base.reflection.v1beta1.ListAllInterfacesResponse.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        interfaceNamesList: jspb.Message.getRepeatedField(msg, 1),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.base.reflection.v1beta1.ListAllInterfacesResponse}
  */
-proto.cosmos.base.reflection.v1beta1.ListAllInterfacesResponse.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.base.reflection.v1beta1.ListAllInterfacesResponse;
+proto.cosmos.base.reflection.v1beta1.ListAllInterfacesResponse.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.base.reflection.v1beta1.ListAllInterfacesResponse();
   return proto.cosmos.base.reflection.v1beta1.ListAllInterfacesResponse.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -216,36 +207,34 @@ proto.cosmos.base.reflection.v1beta1.ListAllInterfacesResponse.deserializeBinary
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.base.reflection.v1beta1.ListAllInterfacesResponse}
  */
-proto.cosmos.base.reflection.v1beta1.ListAllInterfacesResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.base.reflection.v1beta1.ListAllInterfacesResponse.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.addInterfaceNames(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {string} */ (reader.readString());
+        msg.addInterfaceNames(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.base.reflection.v1beta1.ListAllInterfacesResponse.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.base.reflection.v1beta1.ListAllInterfacesResponse.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.base.reflection.v1beta1.ListAllInterfacesResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -254,47 +243,41 @@ proto.cosmos.base.reflection.v1beta1.ListAllInterfacesResponse.prototype.seriali
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.reflection.v1beta1.ListAllInterfacesResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.base.reflection.v1beta1.ListAllInterfacesResponse.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getInterfaceNamesList();
   if (f.length > 0) {
     writer.writeRepeatedString(
       1,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * repeated string interface_names = 1;
  * @return {!Array<string>}
  */
-proto.cosmos.base.reflection.v1beta1.ListAllInterfacesResponse.prototype.getInterfaceNamesList = function() {
+proto.cosmos.base.reflection.v1beta1.ListAllInterfacesResponse.prototype.getInterfaceNamesList = function () {
   return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 1));
 };
 
-
 /** @param {!Array<string>} value */
-proto.cosmos.base.reflection.v1beta1.ListAllInterfacesResponse.prototype.setInterfaceNamesList = function(value) {
+proto.cosmos.base.reflection.v1beta1.ListAllInterfacesResponse.prototype.setInterfaceNamesList = function (value) {
   jspb.Message.setField(this, 1, value || []);
 };
-
 
 /**
  * @param {!string} value
  * @param {number=} opt_index
  */
-proto.cosmos.base.reflection.v1beta1.ListAllInterfacesResponse.prototype.addInterfaceNames = function(value, opt_index) {
+proto.cosmos.base.reflection.v1beta1.ListAllInterfacesResponse.prototype.addInterfaceNames = function (value, opt_index) {
   jspb.Message.addToRepeatedField(this, 1, value, opt_index);
 };
 
-
-proto.cosmos.base.reflection.v1beta1.ListAllInterfacesResponse.prototype.clearInterfaceNamesList = function() {
+proto.cosmos.base.reflection.v1beta1.ListAllInterfacesResponse.prototype.clearInterfaceNamesList = function () {
   this.setInterfaceNamesList([]);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -306,14 +289,13 @@ proto.cosmos.base.reflection.v1beta1.ListAllInterfacesResponse.prototype.clearIn
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.base.reflection.v1beta1.ListImplementationsRequest = function(opt_data) {
+proto.cosmos.base.reflection.v1beta1.ListImplementationsRequest = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.base.reflection.v1beta1.ListImplementationsRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.base.reflection.v1beta1.ListImplementationsRequest.displayName = 'proto.cosmos.base.reflection.v1beta1.ListImplementationsRequest';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -326,12 +308,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.base.reflection.v1beta1.ListImplementationsRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.base.reflection.v1beta1.ListImplementationsRequest.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.base.reflection.v1beta1.ListImplementationsRequest.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.base.reflection.v1beta1.ListImplementationsRequest.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -340,30 +321,29 @@ proto.cosmos.base.reflection.v1beta1.ListImplementationsRequest.prototype.toObje
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.reflection.v1beta1.ListImplementationsRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    interfaceName: jspb.Message.getFieldWithDefault(msg, 1, "")
+  proto.cosmos.base.reflection.v1beta1.ListImplementationsRequest.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        interfaceName: jspb.Message.getFieldWithDefault(msg, 1, ''),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.base.reflection.v1beta1.ListImplementationsRequest}
  */
-proto.cosmos.base.reflection.v1beta1.ListImplementationsRequest.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.base.reflection.v1beta1.ListImplementationsRequest;
+proto.cosmos.base.reflection.v1beta1.ListImplementationsRequest.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.base.reflection.v1beta1.ListImplementationsRequest();
   return proto.cosmos.base.reflection.v1beta1.ListImplementationsRequest.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -372,36 +352,34 @@ proto.cosmos.base.reflection.v1beta1.ListImplementationsRequest.deserializeBinar
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.base.reflection.v1beta1.ListImplementationsRequest}
  */
-proto.cosmos.base.reflection.v1beta1.ListImplementationsRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.base.reflection.v1beta1.ListImplementationsRequest.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setInterfaceName(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setInterfaceName(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.base.reflection.v1beta1.ListImplementationsRequest.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.base.reflection.v1beta1.ListImplementationsRequest.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.base.reflection.v1beta1.ListImplementationsRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -410,33 +388,29 @@ proto.cosmos.base.reflection.v1beta1.ListImplementationsRequest.prototype.serial
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.reflection.v1beta1.ListImplementationsRequest.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.base.reflection.v1beta1.ListImplementationsRequest.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getInterfaceName();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional string interface_name = 1;
  * @return {string}
  */
-proto.cosmos.base.reflection.v1beta1.ListImplementationsRequest.prototype.getInterfaceName = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.cosmos.base.reflection.v1beta1.ListImplementationsRequest.prototype.getInterfaceName = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
 };
-
 
 /** @param {string} value */
-proto.cosmos.base.reflection.v1beta1.ListImplementationsRequest.prototype.setInterfaceName = function(value) {
+proto.cosmos.base.reflection.v1beta1.ListImplementationsRequest.prototype.setInterfaceName = function (value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -448,7 +422,7 @@ proto.cosmos.base.reflection.v1beta1.ListImplementationsRequest.prototype.setInt
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.base.reflection.v1beta1.ListImplementationsResponse = function(opt_data) {
+proto.cosmos.base.reflection.v1beta1.ListImplementationsResponse = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.cosmos.base.reflection.v1beta1.ListImplementationsResponse.repeatedFields_, null);
 };
 goog.inherits(proto.cosmos.base.reflection.v1beta1.ListImplementationsResponse, jspb.Message);
@@ -462,8 +436,6 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.cosmos.base.reflection.v1beta1.ListImplementationsResponse.repeatedFields_ = [1];
 
-
-
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -475,12 +447,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.base.reflection.v1beta1.ListImplementationsResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.base.reflection.v1beta1.ListImplementationsResponse.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.base.reflection.v1beta1.ListImplementationsResponse.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.base.reflection.v1beta1.ListImplementationsResponse.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -489,30 +460,29 @@ proto.cosmos.base.reflection.v1beta1.ListImplementationsResponse.prototype.toObj
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.reflection.v1beta1.ListImplementationsResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    implementationMessageNamesList: jspb.Message.getRepeatedField(msg, 1)
+  proto.cosmos.base.reflection.v1beta1.ListImplementationsResponse.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        implementationMessageNamesList: jspb.Message.getRepeatedField(msg, 1),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.base.reflection.v1beta1.ListImplementationsResponse}
  */
-proto.cosmos.base.reflection.v1beta1.ListImplementationsResponse.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.base.reflection.v1beta1.ListImplementationsResponse;
+proto.cosmos.base.reflection.v1beta1.ListImplementationsResponse.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.base.reflection.v1beta1.ListImplementationsResponse();
   return proto.cosmos.base.reflection.v1beta1.ListImplementationsResponse.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -521,36 +491,34 @@ proto.cosmos.base.reflection.v1beta1.ListImplementationsResponse.deserializeBina
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.base.reflection.v1beta1.ListImplementationsResponse}
  */
-proto.cosmos.base.reflection.v1beta1.ListImplementationsResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.base.reflection.v1beta1.ListImplementationsResponse.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.addImplementationMessageNames(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {string} */ (reader.readString());
+        msg.addImplementationMessageNames(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.base.reflection.v1beta1.ListImplementationsResponse.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.base.reflection.v1beta1.ListImplementationsResponse.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.base.reflection.v1beta1.ListImplementationsResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -559,45 +527,40 @@ proto.cosmos.base.reflection.v1beta1.ListImplementationsResponse.prototype.seria
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.base.reflection.v1beta1.ListImplementationsResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.base.reflection.v1beta1.ListImplementationsResponse.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getImplementationMessageNamesList();
   if (f.length > 0) {
     writer.writeRepeatedString(
       1,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * repeated string implementation_message_names = 1;
  * @return {!Array<string>}
  */
-proto.cosmos.base.reflection.v1beta1.ListImplementationsResponse.prototype.getImplementationMessageNamesList = function() {
+proto.cosmos.base.reflection.v1beta1.ListImplementationsResponse.prototype.getImplementationMessageNamesList = function () {
   return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 1));
 };
 
-
 /** @param {!Array<string>} value */
-proto.cosmos.base.reflection.v1beta1.ListImplementationsResponse.prototype.setImplementationMessageNamesList = function(value) {
+proto.cosmos.base.reflection.v1beta1.ListImplementationsResponse.prototype.setImplementationMessageNamesList = function (value) {
   jspb.Message.setField(this, 1, value || []);
 };
-
 
 /**
  * @param {!string} value
  * @param {number=} opt_index
  */
-proto.cosmos.base.reflection.v1beta1.ListImplementationsResponse.prototype.addImplementationMessageNames = function(value, opt_index) {
+proto.cosmos.base.reflection.v1beta1.ListImplementationsResponse.prototype.addImplementationMessageNames = function (value, opt_index) {
   jspb.Message.addToRepeatedField(this, 1, value, opt_index);
 };
 
-
-proto.cosmos.base.reflection.v1beta1.ListImplementationsResponse.prototype.clearImplementationMessageNamesList = function() {
+proto.cosmos.base.reflection.v1beta1.ListImplementationsResponse.prototype.clearImplementationMessageNamesList = function () {
   this.setImplementationMessageNamesList([]);
 };
-
 
 goog.object.extend(exports, proto.cosmos.base.reflection.v1beta1);

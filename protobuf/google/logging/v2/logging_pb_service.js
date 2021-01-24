@@ -1,68 +1,68 @@
 // package: google.logging.v2
 // file: google/logging/v2/logging.proto
 
-var google_logging_v2_logging_pb = require("../../../google/logging/v2/logging_pb");
-var google_protobuf_empty_pb = require("google-protobuf/google/protobuf/empty_pb");
-var grpc = require("@improbable-eng/grpc-web").grpc;
+const google_protobuf_empty_pb = require('google-protobuf/google/protobuf/empty_pb');
+const { grpc } = require('@improbable-eng/grpc-web');
+const google_logging_v2_logging_pb = require('./logging_pb');
 
-var LoggingServiceV2 = (function () {
+const LoggingServiceV2 = (function () {
   function LoggingServiceV2() {}
-  LoggingServiceV2.serviceName = "google.logging.v2.LoggingServiceV2";
+  LoggingServiceV2.serviceName = 'google.logging.v2.LoggingServiceV2';
   return LoggingServiceV2;
 }());
 
 LoggingServiceV2.DeleteLog = {
-  methodName: "DeleteLog",
+  methodName: 'DeleteLog',
   service: LoggingServiceV2,
   requestStream: false,
   responseStream: false,
   requestType: google_logging_v2_logging_pb.DeleteLogRequest,
-  responseType: google_protobuf_empty_pb.Empty
+  responseType: google_protobuf_empty_pb.Empty,
 };
 
 LoggingServiceV2.WriteLogEntries = {
-  methodName: "WriteLogEntries",
+  methodName: 'WriteLogEntries',
   service: LoggingServiceV2,
   requestStream: false,
   responseStream: false,
   requestType: google_logging_v2_logging_pb.WriteLogEntriesRequest,
-  responseType: google_logging_v2_logging_pb.WriteLogEntriesResponse
+  responseType: google_logging_v2_logging_pb.WriteLogEntriesResponse,
 };
 
 LoggingServiceV2.ListLogEntries = {
-  methodName: "ListLogEntries",
+  methodName: 'ListLogEntries',
   service: LoggingServiceV2,
   requestStream: false,
   responseStream: false,
   requestType: google_logging_v2_logging_pb.ListLogEntriesRequest,
-  responseType: google_logging_v2_logging_pb.ListLogEntriesResponse
+  responseType: google_logging_v2_logging_pb.ListLogEntriesResponse,
 };
 
 LoggingServiceV2.ListMonitoredResourceDescriptors = {
-  methodName: "ListMonitoredResourceDescriptors",
+  methodName: 'ListMonitoredResourceDescriptors',
   service: LoggingServiceV2,
   requestStream: false,
   responseStream: false,
   requestType: google_logging_v2_logging_pb.ListMonitoredResourceDescriptorsRequest,
-  responseType: google_logging_v2_logging_pb.ListMonitoredResourceDescriptorsResponse
+  responseType: google_logging_v2_logging_pb.ListMonitoredResourceDescriptorsResponse,
 };
 
 LoggingServiceV2.ListLogs = {
-  methodName: "ListLogs",
+  methodName: 'ListLogs',
   service: LoggingServiceV2,
   requestStream: false,
   responseStream: false,
   requestType: google_logging_v2_logging_pb.ListLogsRequest,
-  responseType: google_logging_v2_logging_pb.ListLogsResponse
+  responseType: google_logging_v2_logging_pb.ListLogsResponse,
 };
 
 LoggingServiceV2.TailLogEntries = {
-  methodName: "TailLogEntries",
+  methodName: 'TailLogEntries',
   service: LoggingServiceV2,
   requestStream: true,
   responseStream: true,
   requestType: google_logging_v2_logging_pb.TailLogEntriesRequest,
-  responseType: google_logging_v2_logging_pb.TailLogEntriesResponse
+  responseType: google_logging_v2_logging_pb.TailLogEntriesResponse,
 };
 
 exports.LoggingServiceV2 = LoggingServiceV2;
@@ -76,16 +76,16 @@ LoggingServiceV2Client.prototype.deleteLog = function deleteLog(requestMessage, 
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(LoggingServiceV2.DeleteLog, {
+  const client = grpc.unary(LoggingServiceV2.DeleteLog, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata: metadata,
+    metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd: function (response) {
+    onEnd(response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          var err = new Error(response.statusMessage);
+          const err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -93,13 +93,13 @@ LoggingServiceV2Client.prototype.deleteLog = function deleteLog(requestMessage, 
           callback(null, response.message);
         }
       }
-    }
+    },
   });
   return {
-    cancel: function () {
+    cancel() {
       callback = null;
       client.close();
-    }
+    },
   };
 };
 
@@ -107,16 +107,16 @@ LoggingServiceV2Client.prototype.writeLogEntries = function writeLogEntries(requ
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(LoggingServiceV2.WriteLogEntries, {
+  const client = grpc.unary(LoggingServiceV2.WriteLogEntries, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata: metadata,
+    metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd: function (response) {
+    onEnd(response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          var err = new Error(response.statusMessage);
+          const err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -124,13 +124,13 @@ LoggingServiceV2Client.prototype.writeLogEntries = function writeLogEntries(requ
           callback(null, response.message);
         }
       }
-    }
+    },
   });
   return {
-    cancel: function () {
+    cancel() {
       callback = null;
       client.close();
-    }
+    },
   };
 };
 
@@ -138,16 +138,16 @@ LoggingServiceV2Client.prototype.listLogEntries = function listLogEntries(reques
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(LoggingServiceV2.ListLogEntries, {
+  const client = grpc.unary(LoggingServiceV2.ListLogEntries, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata: metadata,
+    metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd: function (response) {
+    onEnd(response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          var err = new Error(response.statusMessage);
+          const err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -155,13 +155,13 @@ LoggingServiceV2Client.prototype.listLogEntries = function listLogEntries(reques
           callback(null, response.message);
         }
       }
-    }
+    },
   });
   return {
-    cancel: function () {
+    cancel() {
       callback = null;
       client.close();
-    }
+    },
   };
 };
 
@@ -169,16 +169,16 @@ LoggingServiceV2Client.prototype.listMonitoredResourceDescriptors = function lis
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(LoggingServiceV2.ListMonitoredResourceDescriptors, {
+  const client = grpc.unary(LoggingServiceV2.ListMonitoredResourceDescriptors, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata: metadata,
+    metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd: function (response) {
+    onEnd(response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          var err = new Error(response.statusMessage);
+          const err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -186,13 +186,13 @@ LoggingServiceV2Client.prototype.listMonitoredResourceDescriptors = function lis
           callback(null, response.message);
         }
       }
-    }
+    },
   });
   return {
-    cancel: function () {
+    cancel() {
       callback = null;
       client.close();
-    }
+    },
   };
 };
 
@@ -200,16 +200,16 @@ LoggingServiceV2Client.prototype.listLogs = function listLogs(requestMessage, me
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(LoggingServiceV2.ListLogs, {
+  const client = grpc.unary(LoggingServiceV2.ListLogs, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata: metadata,
+    metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd: function (response) {
+    onEnd(response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          var err = new Error(response.statusMessage);
+          const err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -217,60 +217,59 @@ LoggingServiceV2Client.prototype.listLogs = function listLogs(requestMessage, me
           callback(null, response.message);
         }
       }
-    }
+    },
   });
   return {
-    cancel: function () {
+    cancel() {
       callback = null;
       client.close();
-    }
+    },
   };
 };
 
 LoggingServiceV2Client.prototype.tailLogEntries = function tailLogEntries(metadata) {
-  var listeners = {
+  let listeners = {
     data: [],
     end: [],
-    status: []
+    status: [],
   };
-  var client = grpc.client(LoggingServiceV2.TailLogEntries, {
+  const client = grpc.client(LoggingServiceV2.TailLogEntries, {
     host: this.serviceHost,
-    metadata: metadata,
-    transport: this.options.transport
+    metadata,
+    transport: this.options.transport,
   });
-  client.onEnd(function (status, statusMessage, trailers) {
-    listeners.status.forEach(function (handler) {
+  client.onEnd((status, statusMessage, trailers) => {
+    listeners.status.forEach((handler) => {
       handler({ code: status, details: statusMessage, metadata: trailers });
     });
-    listeners.end.forEach(function (handler) {
+    listeners.end.forEach((handler) => {
       handler({ code: status, details: statusMessage, metadata: trailers });
     });
     listeners = null;
   });
-  client.onMessage(function (message) {
-    listeners.data.forEach(function (handler) {
+  client.onMessage((message) => {
+    listeners.data.forEach((handler) => {
       handler(message);
-    })
+    });
   });
   client.start(metadata);
   return {
-    on: function (type, handler) {
+    on(type, handler) {
       listeners[type].push(handler);
       return this;
     },
-    write: function (requestMessage) {
+    write(requestMessage) {
       client.send(requestMessage);
       return this;
     },
-    end: function () {
+    end() {
       client.finishSend();
     },
-    cancel: function () {
+    cancel() {
       listeners = null;
       client.close();
-    }
+    },
   };
 };
 
 exports.LoggingServiceV2Client = LoggingServiceV2Client;
-

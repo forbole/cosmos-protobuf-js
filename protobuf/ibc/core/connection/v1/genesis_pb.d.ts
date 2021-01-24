@@ -2,7 +2,6 @@
 // file: ibc/core/connection/v1/genesis.proto
 
 import * as jspb from "google-protobuf";
-import * as gogoproto_gogo_pb from "../../../../gogoproto/gogo_pb";
 import * as ibc_core_connection_v1_connection_pb from "../../../../ibc/core/connection/v1/connection_pb";
 
 export class GenesisState extends jspb.Message {

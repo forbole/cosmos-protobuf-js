@@ -7,11 +7,13 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-var jspb = require('google-protobuf');
-var goog = jspb;
-var global = Function('return this')();
+const jspb = require('google-protobuf');
 
-var gogoproto_gogo_pb = require('../../gogoproto/gogo_pb.js');
+const goog = jspb;
+const global = Function('return this')();
+
+const gogoproto_gogo_pb = require('../../gogoproto/gogo_pb.js');
+
 goog.exportSymbol('proto.tendermint.crypto.DominoOp', null, global);
 goog.exportSymbol('proto.tendermint.crypto.Proof', null, global);
 goog.exportSymbol('proto.tendermint.crypto.ProofOp', null, global);
@@ -28,7 +30,7 @@ goog.exportSymbol('proto.tendermint.crypto.ValueOp', null, global);
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.crypto.Proof = function(opt_data) {
+proto.tendermint.crypto.Proof = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.tendermint.crypto.Proof.repeatedFields_, null);
 };
 goog.inherits(proto.tendermint.crypto.Proof, jspb.Message);
@@ -42,8 +44,6 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.tendermint.crypto.Proof.repeatedFields_ = [4];
 
-
-
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -55,12 +55,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.tendermint.crypto.Proof.prototype.toObject = function(opt_includeInstance) {
-  return proto.tendermint.crypto.Proof.toObject(opt_includeInstance, this);
-};
+  proto.tendermint.crypto.Proof.prototype.toObject = function (opt_includeInstance) {
+    return proto.tendermint.crypto.Proof.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -69,33 +68,32 @@ proto.tendermint.crypto.Proof.prototype.toObject = function(opt_includeInstance)
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.crypto.Proof.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    total: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    index: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    leafHash: msg.getLeafHash_asB64(),
-    auntsList: msg.getAuntsList_asB64()
+  proto.tendermint.crypto.Proof.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        total: jspb.Message.getFieldWithDefault(msg, 1, 0),
+        index: jspb.Message.getFieldWithDefault(msg, 2, 0),
+        leafHash: msg.getLeafHash_asB64(),
+        auntsList: msg.getAuntsList_asB64(),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.crypto.Proof}
  */
-proto.tendermint.crypto.Proof.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.tendermint.crypto.Proof;
+proto.tendermint.crypto.Proof.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.tendermint.crypto.Proof();
   return proto.tendermint.crypto.Proof.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -104,48 +102,46 @@ proto.tendermint.crypto.Proof.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.crypto.Proof}
  */
-proto.tendermint.crypto.Proof.deserializeBinaryFromReader = function(msg, reader) {
+proto.tendermint.crypto.Proof.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setTotal(value);
-      break;
-    case 2:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setIndex(value);
-      break;
-    case 3:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setLeafHash(value);
-      break;
-    case 4:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.addAunts(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setTotal(value);
+        break;
+      case 2:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setIndex(value);
+        break;
+      case 3:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.setLeafHash(value);
+        break;
+      case 4:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.addAunts(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.crypto.Proof.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.tendermint.crypto.Proof.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.tendermint.crypto.Proof.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -154,88 +150,82 @@ proto.tendermint.crypto.Proof.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.crypto.Proof.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.tendermint.crypto.Proof.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getTotal();
   if (f !== 0) {
     writer.writeInt64(
       1,
-      f
+      f,
     );
   }
   f = message.getIndex();
   if (f !== 0) {
     writer.writeInt64(
       2,
-      f
+      f,
     );
   }
   f = message.getLeafHash_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       3,
-      f
+      f,
     );
   }
   f = message.getAuntsList_asU8();
   if (f.length > 0) {
     writer.writeRepeatedBytes(
       4,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional int64 total = 1;
  * @return {number}
  */
-proto.tendermint.crypto.Proof.prototype.getTotal = function() {
+proto.tendermint.crypto.Proof.prototype.getTotal = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
-
 /** @param {number} value */
-proto.tendermint.crypto.Proof.prototype.setTotal = function(value) {
+proto.tendermint.crypto.Proof.prototype.setTotal = function (value) {
   jspb.Message.setProto3IntField(this, 1, value);
 };
-
 
 /**
  * optional int64 index = 2;
  * @return {number}
  */
-proto.tendermint.crypto.Proof.prototype.getIndex = function() {
+proto.tendermint.crypto.Proof.prototype.getIndex = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
-
 /** @param {number} value */
-proto.tendermint.crypto.Proof.prototype.setIndex = function(value) {
+proto.tendermint.crypto.Proof.prototype.setIndex = function (value) {
   jspb.Message.setProto3IntField(this, 2, value);
 };
-
 
 /**
  * optional bytes leaf_hash = 3;
  * @return {!(string|Uint8Array)}
  */
-proto.tendermint.crypto.Proof.prototype.getLeafHash = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+proto.tendermint.crypto.Proof.prototype.getLeafHash = function () {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 3, ''));
 };
-
 
 /**
  * optional bytes leaf_hash = 3;
  * This is a type-conversion wrapper around `getLeafHash()`
  * @return {string}
  */
-proto.tendermint.crypto.Proof.prototype.getLeafHash_asB64 = function() {
+proto.tendermint.crypto.Proof.prototype.getLeafHash_asB64 = function () {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getLeafHash()));
+    this.getLeafHash(),
+  ));
 };
-
 
 /**
  * optional bytes leaf_hash = 3;
@@ -244,37 +234,35 @@ proto.tendermint.crypto.Proof.prototype.getLeafHash_asB64 = function() {
  * This is a type-conversion wrapper around `getLeafHash()`
  * @return {!Uint8Array}
  */
-proto.tendermint.crypto.Proof.prototype.getLeafHash_asU8 = function() {
+proto.tendermint.crypto.Proof.prototype.getLeafHash_asU8 = function () {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getLeafHash()));
+    this.getLeafHash(),
+  ));
 };
-
 
 /** @param {!(string|Uint8Array)} value */
-proto.tendermint.crypto.Proof.prototype.setLeafHash = function(value) {
+proto.tendermint.crypto.Proof.prototype.setLeafHash = function (value) {
   jspb.Message.setProto3BytesField(this, 3, value);
 };
-
 
 /**
  * repeated bytes aunts = 4;
  * @return {!(Array<!Uint8Array>|Array<string>)}
  */
-proto.tendermint.crypto.Proof.prototype.getAuntsList = function() {
+proto.tendermint.crypto.Proof.prototype.getAuntsList = function () {
   return /** @type {!(Array<!Uint8Array>|Array<string>)} */ (jspb.Message.getRepeatedField(this, 4));
 };
-
 
 /**
  * repeated bytes aunts = 4;
  * This is a type-conversion wrapper around `getAuntsList()`
  * @return {!Array<string>}
  */
-proto.tendermint.crypto.Proof.prototype.getAuntsList_asB64 = function() {
+proto.tendermint.crypto.Proof.prototype.getAuntsList_asB64 = function () {
   return /** @type {!Array<string>} */ (jspb.Message.bytesListAsB64(
-      this.getAuntsList()));
+    this.getAuntsList(),
+  ));
 };
-
 
 /**
  * repeated bytes aunts = 4;
@@ -283,32 +271,28 @@ proto.tendermint.crypto.Proof.prototype.getAuntsList_asB64 = function() {
  * This is a type-conversion wrapper around `getAuntsList()`
  * @return {!Array<!Uint8Array>}
  */
-proto.tendermint.crypto.Proof.prototype.getAuntsList_asU8 = function() {
+proto.tendermint.crypto.Proof.prototype.getAuntsList_asU8 = function () {
   return /** @type {!Array<!Uint8Array>} */ (jspb.Message.bytesListAsU8(
-      this.getAuntsList()));
+    this.getAuntsList(),
+  ));
 };
-
 
 /** @param {!(Array<!Uint8Array>|Array<string>)} value */
-proto.tendermint.crypto.Proof.prototype.setAuntsList = function(value) {
+proto.tendermint.crypto.Proof.prototype.setAuntsList = function (value) {
   jspb.Message.setField(this, 4, value || []);
 };
-
 
 /**
  * @param {!(string|Uint8Array)} value
  * @param {number=} opt_index
  */
-proto.tendermint.crypto.Proof.prototype.addAunts = function(value, opt_index) {
+proto.tendermint.crypto.Proof.prototype.addAunts = function (value, opt_index) {
   jspb.Message.addToRepeatedField(this, 4, value, opt_index);
 };
 
-
-proto.tendermint.crypto.Proof.prototype.clearAuntsList = function() {
+proto.tendermint.crypto.Proof.prototype.clearAuntsList = function () {
   this.setAuntsList([]);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -320,14 +304,13 @@ proto.tendermint.crypto.Proof.prototype.clearAuntsList = function() {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.crypto.ValueOp = function(opt_data) {
+proto.tendermint.crypto.ValueOp = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.tendermint.crypto.ValueOp, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.tendermint.crypto.ValueOp.displayName = 'proto.tendermint.crypto.ValueOp';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -340,12 +323,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.tendermint.crypto.ValueOp.prototype.toObject = function(opt_includeInstance) {
-  return proto.tendermint.crypto.ValueOp.toObject(opt_includeInstance, this);
-};
+  proto.tendermint.crypto.ValueOp.prototype.toObject = function (opt_includeInstance) {
+    return proto.tendermint.crypto.ValueOp.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -354,31 +336,30 @@ proto.tendermint.crypto.ValueOp.prototype.toObject = function(opt_includeInstanc
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.crypto.ValueOp.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    key: msg.getKey_asB64(),
-    proof: (f = msg.getProof()) && proto.tendermint.crypto.Proof.toObject(includeInstance, f)
+  proto.tendermint.crypto.ValueOp.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        key: msg.getKey_asB64(),
+        proof: (f = msg.getProof()) && proto.tendermint.crypto.Proof.toObject(includeInstance, f),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.crypto.ValueOp}
  */
-proto.tendermint.crypto.ValueOp.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.tendermint.crypto.ValueOp;
+proto.tendermint.crypto.ValueOp.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.tendermint.crypto.ValueOp();
   return proto.tendermint.crypto.ValueOp.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -387,41 +368,39 @@ proto.tendermint.crypto.ValueOp.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.crypto.ValueOp}
  */
-proto.tendermint.crypto.ValueOp.deserializeBinaryFromReader = function(msg, reader) {
+proto.tendermint.crypto.ValueOp.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setKey(value);
-      break;
-    case 2:
-      var value = new proto.tendermint.crypto.Proof;
-      reader.readMessage(value,proto.tendermint.crypto.Proof.deserializeBinaryFromReader);
-      msg.setProof(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.setKey(value);
+        break;
+      case 2:
+        var value = new proto.tendermint.crypto.Proof();
+        reader.readMessage(value, proto.tendermint.crypto.Proof.deserializeBinaryFromReader);
+        msg.setProof(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.crypto.ValueOp.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.tendermint.crypto.ValueOp.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.tendermint.crypto.ValueOp.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -430,13 +409,13 @@ proto.tendermint.crypto.ValueOp.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.crypto.ValueOp.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.tendermint.crypto.ValueOp.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getKey_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       1,
-      f
+      f,
     );
   }
   f = message.getProof();
@@ -444,31 +423,29 @@ proto.tendermint.crypto.ValueOp.serializeBinaryToWriter = function(message, writ
     writer.writeMessage(
       2,
       f,
-      proto.tendermint.crypto.Proof.serializeBinaryToWriter
+      proto.tendermint.crypto.Proof.serializeBinaryToWriter,
     );
   }
 };
-
 
 /**
  * optional bytes key = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.tendermint.crypto.ValueOp.prototype.getKey = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.tendermint.crypto.ValueOp.prototype.getKey = function () {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
 };
-
 
 /**
  * optional bytes key = 1;
  * This is a type-conversion wrapper around `getKey()`
  * @return {string}
  */
-proto.tendermint.crypto.ValueOp.prototype.getKey_asB64 = function() {
+proto.tendermint.crypto.ValueOp.prototype.getKey_asB64 = function () {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getKey()));
+    this.getKey(),
+  ));
 };
-
 
 /**
  * optional bytes key = 1;
@@ -477,48 +454,42 @@ proto.tendermint.crypto.ValueOp.prototype.getKey_asB64 = function() {
  * This is a type-conversion wrapper around `getKey()`
  * @return {!Uint8Array}
  */
-proto.tendermint.crypto.ValueOp.prototype.getKey_asU8 = function() {
+proto.tendermint.crypto.ValueOp.prototype.getKey_asU8 = function () {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getKey()));
+    this.getKey(),
+  ));
 };
-
 
 /** @param {!(string|Uint8Array)} value */
-proto.tendermint.crypto.ValueOp.prototype.setKey = function(value) {
+proto.tendermint.crypto.ValueOp.prototype.setKey = function (value) {
   jspb.Message.setProto3BytesField(this, 1, value);
 };
-
 
 /**
  * optional Proof proof = 2;
  * @return {?proto.tendermint.crypto.Proof}
  */
-proto.tendermint.crypto.ValueOp.prototype.getProof = function() {
+proto.tendermint.crypto.ValueOp.prototype.getProof = function () {
   return /** @type{?proto.tendermint.crypto.Proof} */ (
     jspb.Message.getWrapperField(this, proto.tendermint.crypto.Proof, 2));
 };
 
-
 /** @param {?proto.tendermint.crypto.Proof|undefined} value */
-proto.tendermint.crypto.ValueOp.prototype.setProof = function(value) {
+proto.tendermint.crypto.ValueOp.prototype.setProof = function (value) {
   jspb.Message.setWrapperField(this, 2, value);
 };
 
-
-proto.tendermint.crypto.ValueOp.prototype.clearProof = function() {
+proto.tendermint.crypto.ValueOp.prototype.clearProof = function () {
   this.setProof(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.tendermint.crypto.ValueOp.prototype.hasProof = function() {
+proto.tendermint.crypto.ValueOp.prototype.hasProof = function () {
   return jspb.Message.getField(this, 2) != null;
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -530,14 +501,13 @@ proto.tendermint.crypto.ValueOp.prototype.hasProof = function() {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.crypto.DominoOp = function(opt_data) {
+proto.tendermint.crypto.DominoOp = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.tendermint.crypto.DominoOp, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.tendermint.crypto.DominoOp.displayName = 'proto.tendermint.crypto.DominoOp';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -550,12 +520,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.tendermint.crypto.DominoOp.prototype.toObject = function(opt_includeInstance) {
-  return proto.tendermint.crypto.DominoOp.toObject(opt_includeInstance, this);
-};
+  proto.tendermint.crypto.DominoOp.prototype.toObject = function (opt_includeInstance) {
+    return proto.tendermint.crypto.DominoOp.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -564,32 +533,31 @@ proto.tendermint.crypto.DominoOp.prototype.toObject = function(opt_includeInstan
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.crypto.DominoOp.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    key: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    input: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    output: jspb.Message.getFieldWithDefault(msg, 3, "")
+  proto.tendermint.crypto.DominoOp.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        key: jspb.Message.getFieldWithDefault(msg, 1, ''),
+        input: jspb.Message.getFieldWithDefault(msg, 2, ''),
+        output: jspb.Message.getFieldWithDefault(msg, 3, ''),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.crypto.DominoOp}
  */
-proto.tendermint.crypto.DominoOp.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.tendermint.crypto.DominoOp;
+proto.tendermint.crypto.DominoOp.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.tendermint.crypto.DominoOp();
   return proto.tendermint.crypto.DominoOp.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -598,44 +566,42 @@ proto.tendermint.crypto.DominoOp.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.crypto.DominoOp}
  */
-proto.tendermint.crypto.DominoOp.deserializeBinaryFromReader = function(msg, reader) {
+proto.tendermint.crypto.DominoOp.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setKey(value);
-      break;
-    case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setInput(value);
-      break;
-    case 3:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setOutput(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setKey(value);
+        break;
+      case 2:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setInput(value);
+        break;
+      case 3:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setOutput(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.crypto.DominoOp.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.tendermint.crypto.DominoOp.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.tendermint.crypto.DominoOp.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -644,77 +610,69 @@ proto.tendermint.crypto.DominoOp.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.crypto.DominoOp.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.tendermint.crypto.DominoOp.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getKey();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f
+      f,
     );
   }
   f = message.getInput();
   if (f.length > 0) {
     writer.writeString(
       2,
-      f
+      f,
     );
   }
   f = message.getOutput();
   if (f.length > 0) {
     writer.writeString(
       3,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional string key = 1;
  * @return {string}
  */
-proto.tendermint.crypto.DominoOp.prototype.getKey = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.tendermint.crypto.DominoOp.prototype.getKey = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
 };
-
 
 /** @param {string} value */
-proto.tendermint.crypto.DominoOp.prototype.setKey = function(value) {
+proto.tendermint.crypto.DominoOp.prototype.setKey = function (value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
-
 
 /**
  * optional string input = 2;
  * @return {string}
  */
-proto.tendermint.crypto.DominoOp.prototype.getInput = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+proto.tendermint.crypto.DominoOp.prototype.getInput = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
 };
-
 
 /** @param {string} value */
-proto.tendermint.crypto.DominoOp.prototype.setInput = function(value) {
+proto.tendermint.crypto.DominoOp.prototype.setInput = function (value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
-
 
 /**
  * optional string output = 3;
  * @return {string}
  */
-proto.tendermint.crypto.DominoOp.prototype.getOutput = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+proto.tendermint.crypto.DominoOp.prototype.getOutput = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ''));
 };
-
 
 /** @param {string} value */
-proto.tendermint.crypto.DominoOp.prototype.setOutput = function(value) {
+proto.tendermint.crypto.DominoOp.prototype.setOutput = function (value) {
   jspb.Message.setProto3StringField(this, 3, value);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -726,14 +684,13 @@ proto.tendermint.crypto.DominoOp.prototype.setOutput = function(value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.crypto.ProofOp = function(opt_data) {
+proto.tendermint.crypto.ProofOp = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.tendermint.crypto.ProofOp, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.tendermint.crypto.ProofOp.displayName = 'proto.tendermint.crypto.ProofOp';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -746,12 +703,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.tendermint.crypto.ProofOp.prototype.toObject = function(opt_includeInstance) {
-  return proto.tendermint.crypto.ProofOp.toObject(opt_includeInstance, this);
-};
+  proto.tendermint.crypto.ProofOp.prototype.toObject = function (opt_includeInstance) {
+    return proto.tendermint.crypto.ProofOp.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -760,32 +716,31 @@ proto.tendermint.crypto.ProofOp.prototype.toObject = function(opt_includeInstanc
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.crypto.ProofOp.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    type: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    key: msg.getKey_asB64(),
-    data: msg.getData_asB64()
+  proto.tendermint.crypto.ProofOp.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        type: jspb.Message.getFieldWithDefault(msg, 1, ''),
+        key: msg.getKey_asB64(),
+        data: msg.getData_asB64(),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.crypto.ProofOp}
  */
-proto.tendermint.crypto.ProofOp.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.tendermint.crypto.ProofOp;
+proto.tendermint.crypto.ProofOp.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.tendermint.crypto.ProofOp();
   return proto.tendermint.crypto.ProofOp.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -794,44 +749,42 @@ proto.tendermint.crypto.ProofOp.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.crypto.ProofOp}
  */
-proto.tendermint.crypto.ProofOp.deserializeBinaryFromReader = function(msg, reader) {
+proto.tendermint.crypto.ProofOp.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setType(value);
-      break;
-    case 2:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setKey(value);
-      break;
-    case 3:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setData(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setType(value);
+        break;
+      case 2:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.setKey(value);
+        break;
+      case 3:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.setData(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.crypto.ProofOp.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.tendermint.crypto.ProofOp.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.tendermint.crypto.ProofOp.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -840,66 +793,62 @@ proto.tendermint.crypto.ProofOp.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.crypto.ProofOp.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.tendermint.crypto.ProofOp.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getType();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f
+      f,
     );
   }
   f = message.getKey_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       2,
-      f
+      f,
     );
   }
   f = message.getData_asU8();
   if (f.length > 0) {
     writer.writeBytes(
       3,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional string type = 1;
  * @return {string}
  */
-proto.tendermint.crypto.ProofOp.prototype.getType = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.tendermint.crypto.ProofOp.prototype.getType = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
 };
 
-
 /** @param {string} value */
-proto.tendermint.crypto.ProofOp.prototype.setType = function(value) {
+proto.tendermint.crypto.ProofOp.prototype.setType = function (value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 
-
 /**
  * optional bytes key = 2;
  * @return {!(string|Uint8Array)}
  */
-proto.tendermint.crypto.ProofOp.prototype.getKey = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+proto.tendermint.crypto.ProofOp.prototype.getKey = function () {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
 };
-
 
 /**
  * optional bytes key = 2;
  * This is a type-conversion wrapper around `getKey()`
  * @return {string}
  */
-proto.tendermint.crypto.ProofOp.prototype.getKey_asB64 = function() {
+proto.tendermint.crypto.ProofOp.prototype.getKey_asB64 = function () {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getKey()));
+    this.getKey(),
+  ));
 };
-
 
 /**
  * optional bytes key = 2;
@@ -908,37 +857,35 @@ proto.tendermint.crypto.ProofOp.prototype.getKey_asB64 = function() {
  * This is a type-conversion wrapper around `getKey()`
  * @return {!Uint8Array}
  */
-proto.tendermint.crypto.ProofOp.prototype.getKey_asU8 = function() {
+proto.tendermint.crypto.ProofOp.prototype.getKey_asU8 = function () {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getKey()));
+    this.getKey(),
+  ));
 };
 
-
 /** @param {!(string|Uint8Array)} value */
-proto.tendermint.crypto.ProofOp.prototype.setKey = function(value) {
+proto.tendermint.crypto.ProofOp.prototype.setKey = function (value) {
   jspb.Message.setProto3BytesField(this, 2, value);
 };
 
-
 /**
  * optional bytes data = 3;
  * @return {!(string|Uint8Array)}
  */
-proto.tendermint.crypto.ProofOp.prototype.getData = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+proto.tendermint.crypto.ProofOp.prototype.getData = function () {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 3, ''));
 };
-
 
 /**
  * optional bytes data = 3;
  * This is a type-conversion wrapper around `getData()`
  * @return {string}
  */
-proto.tendermint.crypto.ProofOp.prototype.getData_asB64 = function() {
+proto.tendermint.crypto.ProofOp.prototype.getData_asB64 = function () {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getData()));
+    this.getData(),
+  ));
 };
-
 
 /**
  * optional bytes data = 3;
@@ -947,18 +894,16 @@ proto.tendermint.crypto.ProofOp.prototype.getData_asB64 = function() {
  * This is a type-conversion wrapper around `getData()`
  * @return {!Uint8Array}
  */
-proto.tendermint.crypto.ProofOp.prototype.getData_asU8 = function() {
+proto.tendermint.crypto.ProofOp.prototype.getData_asU8 = function () {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getData()));
+    this.getData(),
+  ));
 };
-
 
 /** @param {!(string|Uint8Array)} value */
-proto.tendermint.crypto.ProofOp.prototype.setData = function(value) {
+proto.tendermint.crypto.ProofOp.prototype.setData = function (value) {
   jspb.Message.setProto3BytesField(this, 3, value);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -970,7 +915,7 @@ proto.tendermint.crypto.ProofOp.prototype.setData = function(value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.tendermint.crypto.ProofOps = function(opt_data) {
+proto.tendermint.crypto.ProofOps = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.tendermint.crypto.ProofOps.repeatedFields_, null);
 };
 goog.inherits(proto.tendermint.crypto.ProofOps, jspb.Message);
@@ -984,8 +929,6 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.tendermint.crypto.ProofOps.repeatedFields_ = [1];
 
-
-
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -997,12 +940,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.tendermint.crypto.ProofOps.prototype.toObject = function(opt_includeInstance) {
-  return proto.tendermint.crypto.ProofOps.toObject(opt_includeInstance, this);
-};
+  proto.tendermint.crypto.ProofOps.prototype.toObject = function (opt_includeInstance) {
+    return proto.tendermint.crypto.ProofOps.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -1011,31 +953,30 @@ proto.tendermint.crypto.ProofOps.prototype.toObject = function(opt_includeInstan
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.crypto.ProofOps.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    opsList: jspb.Message.toObjectList(msg.getOpsList(),
-    proto.tendermint.crypto.ProofOp.toObject, includeInstance)
+  proto.tendermint.crypto.ProofOps.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        opsList: jspb.Message.toObjectList(msg.getOpsList(),
+          proto.tendermint.crypto.ProofOp.toObject, includeInstance),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.tendermint.crypto.ProofOps}
  */
-proto.tendermint.crypto.ProofOps.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.tendermint.crypto.ProofOps;
+proto.tendermint.crypto.ProofOps.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.tendermint.crypto.ProofOps();
   return proto.tendermint.crypto.ProofOps.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -1044,37 +985,35 @@ proto.tendermint.crypto.ProofOps.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.tendermint.crypto.ProofOps}
  */
-proto.tendermint.crypto.ProofOps.deserializeBinaryFromReader = function(msg, reader) {
+proto.tendermint.crypto.ProofOps.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = new proto.tendermint.crypto.ProofOp;
-      reader.readMessage(value,proto.tendermint.crypto.ProofOp.deserializeBinaryFromReader);
-      msg.addOps(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = new proto.tendermint.crypto.ProofOp();
+        reader.readMessage(value, proto.tendermint.crypto.ProofOp.deserializeBinaryFromReader);
+        msg.addOps(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.tendermint.crypto.ProofOps.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.tendermint.crypto.ProofOps.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.tendermint.crypto.ProofOps.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -1083,48 +1022,43 @@ proto.tendermint.crypto.ProofOps.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.tendermint.crypto.ProofOps.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.tendermint.crypto.ProofOps.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getOpsList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       1,
       f,
-      proto.tendermint.crypto.ProofOp.serializeBinaryToWriter
+      proto.tendermint.crypto.ProofOp.serializeBinaryToWriter,
     );
   }
 };
-
 
 /**
  * repeated ProofOp ops = 1;
  * @return {!Array<!proto.tendermint.crypto.ProofOp>}
  */
-proto.tendermint.crypto.ProofOps.prototype.getOpsList = function() {
+proto.tendermint.crypto.ProofOps.prototype.getOpsList = function () {
   return /** @type{!Array<!proto.tendermint.crypto.ProofOp>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.tendermint.crypto.ProofOp, 1));
 };
 
-
 /** @param {!Array<!proto.tendermint.crypto.ProofOp>} value */
-proto.tendermint.crypto.ProofOps.prototype.setOpsList = function(value) {
+proto.tendermint.crypto.ProofOps.prototype.setOpsList = function (value) {
   jspb.Message.setRepeatedWrapperField(this, 1, value);
 };
-
 
 /**
  * @param {!proto.tendermint.crypto.ProofOp=} opt_value
  * @param {number=} opt_index
  * @return {!proto.tendermint.crypto.ProofOp}
  */
-proto.tendermint.crypto.ProofOps.prototype.addOps = function(opt_value, opt_index) {
+proto.tendermint.crypto.ProofOps.prototype.addOps = function (opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.tendermint.crypto.ProofOp, opt_index);
 };
 
-
-proto.tendermint.crypto.ProofOps.prototype.clearOpsList = function() {
+proto.tendermint.crypto.ProofOps.prototype.clearOpsList = function () {
   this.setOpsList([]);
 };
-
 
 goog.object.extend(exports, proto.tendermint.crypto);

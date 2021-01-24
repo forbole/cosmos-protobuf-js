@@ -7,13 +7,15 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-var jspb = require('google-protobuf');
-var goog = jspb;
-var global = Function('return this')();
+const jspb = require('google-protobuf');
 
-var gogoproto_gogo_pb = require('../../../gogoproto/gogo_pb.js');
-var cosmos_base_v1beta1_coin_pb = require('../../../cosmos/base/v1beta1/coin_pb.js');
-var cosmos_distribution_v1beta1_distribution_pb = require('../../../cosmos/distribution/v1beta1/distribution_pb.js');
+const goog = jspb;
+const global = Function('return this')();
+
+const gogoproto_gogo_pb = require('../../../gogoproto/gogo_pb.js');
+const cosmos_base_v1beta1_coin_pb = require('../../base/v1beta1/coin_pb.js');
+const cosmos_distribution_v1beta1_distribution_pb = require('./distribution_pb.js');
+
 goog.exportSymbol('proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord', null, global);
 goog.exportSymbol('proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo', null, global);
 goog.exportSymbol('proto.cosmos.distribution.v1beta1.GenesisState', null, global);
@@ -33,14 +35,13 @@ goog.exportSymbol('proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord',
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo = function(opt_data) {
+proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo.displayName = 'proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -53,12 +54,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -67,31 +67,30 @@ proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo.prototype.toObject = fun
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    delegatorAddress: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    withdrawAddress: jspb.Message.getFieldWithDefault(msg, 2, "")
+  proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        delegatorAddress: jspb.Message.getFieldWithDefault(msg, 1, ''),
+        withdrawAddress: jspb.Message.getFieldWithDefault(msg, 2, ''),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo}
  */
-proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo;
+proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo();
   return proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -100,40 +99,38 @@ proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo.deserializeBinary = func
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo}
  */
-proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setDelegatorAddress(value);
-      break;
-    case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setWithdrawAddress(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setDelegatorAddress(value);
+        break;
+      case 2:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setWithdrawAddress(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -142,55 +139,49 @@ proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo.prototype.serializeBinar
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getDelegatorAddress();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f
+      f,
     );
   }
   f = message.getWithdrawAddress();
   if (f.length > 0) {
     writer.writeString(
       2,
-      f
+      f,
     );
   }
 };
-
 
 /**
  * optional string delegator_address = 1;
  * @return {string}
  */
-proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo.prototype.getDelegatorAddress = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo.prototype.getDelegatorAddress = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
 };
-
 
 /** @param {string} value */
-proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo.prototype.setDelegatorAddress = function(value) {
+proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo.prototype.setDelegatorAddress = function (value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
-
 
 /**
  * optional string withdraw_address = 2;
  * @return {string}
  */
-proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo.prototype.getWithdrawAddress = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo.prototype.getWithdrawAddress = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
 };
-
 
 /** @param {string} value */
-proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo.prototype.setWithdrawAddress = function(value) {
+proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo.prototype.setWithdrawAddress = function (value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -202,7 +193,7 @@ proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo.prototype.setWithdrawAdd
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord = function(opt_data) {
+proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord.repeatedFields_, null);
 };
 goog.inherits(proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord, jspb.Message);
@@ -216,8 +207,6 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord.repeatedFields_ = [2];
 
-
-
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -229,12 +218,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -243,32 +231,31 @@ proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord.prototype.to
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    validatorAddress: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    outstandingRewardsList: jspb.Message.toObjectList(msg.getOutstandingRewardsList(),
-    cosmos_base_v1beta1_coin_pb.DecCoin.toObject, includeInstance)
+  proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        validatorAddress: jspb.Message.getFieldWithDefault(msg, 1, ''),
+        outstandingRewardsList: jspb.Message.toObjectList(msg.getOutstandingRewardsList(),
+          cosmos_base_v1beta1_coin_pb.DecCoin.toObject, includeInstance),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord}
  */
-proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord;
+proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord();
   return proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -277,41 +264,39 @@ proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord.deserializeB
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord}
  */
-proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setValidatorAddress(value);
-      break;
-    case 2:
-      var value = new cosmos_base_v1beta1_coin_pb.DecCoin;
-      reader.readMessage(value,cosmos_base_v1beta1_coin_pb.DecCoin.deserializeBinaryFromReader);
-      msg.addOutstandingRewards(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setValidatorAddress(value);
+        break;
+      case 2:
+        var value = new cosmos_base_v1beta1_coin_pb.DecCoin();
+        reader.readMessage(value, cosmos_base_v1beta1_coin_pb.DecCoin.deserializeBinaryFromReader);
+        msg.addOutstandingRewards(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -320,13 +305,13 @@ proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord.prototype.se
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getValidatorAddress();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f
+      f,
     );
   }
   f = message.getOutstandingRewardsList();
@@ -334,58 +319,50 @@ proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord.serializeBin
     writer.writeRepeatedMessage(
       2,
       f,
-      cosmos_base_v1beta1_coin_pb.DecCoin.serializeBinaryToWriter
+      cosmos_base_v1beta1_coin_pb.DecCoin.serializeBinaryToWriter,
     );
   }
 };
-
 
 /**
  * optional string validator_address = 1;
  * @return {string}
  */
-proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord.prototype.getValidatorAddress = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord.prototype.getValidatorAddress = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
 };
-
 
 /** @param {string} value */
-proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord.prototype.setValidatorAddress = function(value) {
+proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord.prototype.setValidatorAddress = function (value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
-
 
 /**
  * repeated cosmos.base.v1beta1.DecCoin outstanding_rewards = 2;
  * @return {!Array<!proto.cosmos.base.v1beta1.DecCoin>}
  */
-proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord.prototype.getOutstandingRewardsList = function() {
+proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord.prototype.getOutstandingRewardsList = function () {
   return /** @type{!Array<!proto.cosmos.base.v1beta1.DecCoin>} */ (
     jspb.Message.getRepeatedWrapperField(this, cosmos_base_v1beta1_coin_pb.DecCoin, 2));
 };
 
-
 /** @param {!Array<!proto.cosmos.base.v1beta1.DecCoin>} value */
-proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord.prototype.setOutstandingRewardsList = function(value) {
+proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord.prototype.setOutstandingRewardsList = function (value) {
   jspb.Message.setRepeatedWrapperField(this, 2, value);
 };
-
 
 /**
  * @param {!proto.cosmos.base.v1beta1.DecCoin=} opt_value
  * @param {number=} opt_index
  * @return {!proto.cosmos.base.v1beta1.DecCoin}
  */
-proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord.prototype.addOutstandingRewards = function(opt_value, opt_index) {
+proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord.prototype.addOutstandingRewards = function (opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.cosmos.base.v1beta1.DecCoin, opt_index);
 };
 
-
-proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord.prototype.clearOutstandingRewardsList = function() {
+proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord.prototype.clearOutstandingRewardsList = function () {
   this.setOutstandingRewardsList([]);
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -397,14 +374,13 @@ proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord.prototype.cl
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord = function(opt_data) {
+proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord.displayName = 'proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -417,12 +393,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -431,31 +406,30 @@ proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord.prototype
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    validatorAddress: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    accumulated: (f = msg.getAccumulated()) && cosmos_distribution_v1beta1_distribution_pb.ValidatorAccumulatedCommission.toObject(includeInstance, f)
+  proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        validatorAddress: jspb.Message.getFieldWithDefault(msg, 1, ''),
+        accumulated: (f = msg.getAccumulated()) && cosmos_distribution_v1beta1_distribution_pb.ValidatorAccumulatedCommission.toObject(includeInstance, f),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord}
  */
-proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord;
+proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord();
   return proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -464,41 +438,39 @@ proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord.deseriali
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord}
  */
-proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setValidatorAddress(value);
-      break;
-    case 2:
-      var value = new cosmos_distribution_v1beta1_distribution_pb.ValidatorAccumulatedCommission;
-      reader.readMessage(value,cosmos_distribution_v1beta1_distribution_pb.ValidatorAccumulatedCommission.deserializeBinaryFromReader);
-      msg.setAccumulated(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setValidatorAddress(value);
+        break;
+      case 2:
+        var value = new cosmos_distribution_v1beta1_distribution_pb.ValidatorAccumulatedCommission();
+        reader.readMessage(value, cosmos_distribution_v1beta1_distribution_pb.ValidatorAccumulatedCommission.deserializeBinaryFromReader);
+        msg.setAccumulated(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -507,13 +479,13 @@ proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord.prototype
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getValidatorAddress();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f
+      f,
     );
   }
   f = message.getAccumulated();
@@ -521,57 +493,49 @@ proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord.serialize
     writer.writeMessage(
       2,
       f,
-      cosmos_distribution_v1beta1_distribution_pb.ValidatorAccumulatedCommission.serializeBinaryToWriter
+      cosmos_distribution_v1beta1_distribution_pb.ValidatorAccumulatedCommission.serializeBinaryToWriter,
     );
   }
 };
-
 
 /**
  * optional string validator_address = 1;
  * @return {string}
  */
-proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord.prototype.getValidatorAddress = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord.prototype.getValidatorAddress = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
 };
-
 
 /** @param {string} value */
-proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord.prototype.setValidatorAddress = function(value) {
+proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord.prototype.setValidatorAddress = function (value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
-
 
 /**
  * optional ValidatorAccumulatedCommission accumulated = 2;
  * @return {?proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommission}
  */
-proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord.prototype.getAccumulated = function() {
+proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord.prototype.getAccumulated = function () {
   return /** @type{?proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommission} */ (
     jspb.Message.getWrapperField(this, cosmos_distribution_v1beta1_distribution_pb.ValidatorAccumulatedCommission, 2));
 };
 
-
 /** @param {?proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommission|undefined} value */
-proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord.prototype.setAccumulated = function(value) {
+proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord.prototype.setAccumulated = function (value) {
   jspb.Message.setWrapperField(this, 2, value);
 };
 
-
-proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord.prototype.clearAccumulated = function() {
+proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord.prototype.clearAccumulated = function () {
   this.setAccumulated(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord.prototype.hasAccumulated = function() {
+proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord.prototype.hasAccumulated = function () {
   return jspb.Message.getField(this, 2) != null;
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -583,14 +547,13 @@ proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord.prototype
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord = function(opt_data) {
+proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord.displayName = 'proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -603,12 +566,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -617,32 +579,31 @@ proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord.prototype.toO
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    validatorAddress: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    period: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    rewards: (f = msg.getRewards()) && cosmos_distribution_v1beta1_distribution_pb.ValidatorHistoricalRewards.toObject(includeInstance, f)
+  proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        validatorAddress: jspb.Message.getFieldWithDefault(msg, 1, ''),
+        period: jspb.Message.getFieldWithDefault(msg, 2, 0),
+        rewards: (f = msg.getRewards()) && cosmos_distribution_v1beta1_distribution_pb.ValidatorHistoricalRewards.toObject(includeInstance, f),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord}
  */
-proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord;
+proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord();
   return proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -651,45 +612,43 @@ proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord.deserializeBi
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord}
  */
-proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setValidatorAddress(value);
-      break;
-    case 2:
-      var value = /** @type {number} */ (reader.readUint64());
-      msg.setPeriod(value);
-      break;
-    case 3:
-      var value = new cosmos_distribution_v1beta1_distribution_pb.ValidatorHistoricalRewards;
-      reader.readMessage(value,cosmos_distribution_v1beta1_distribution_pb.ValidatorHistoricalRewards.deserializeBinaryFromReader);
-      msg.setRewards(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setValidatorAddress(value);
+        break;
+      case 2:
+        var value = /** @type {number} */ (reader.readUint64());
+        msg.setPeriod(value);
+        break;
+      case 3:
+        var value = new cosmos_distribution_v1beta1_distribution_pb.ValidatorHistoricalRewards();
+        reader.readMessage(value, cosmos_distribution_v1beta1_distribution_pb.ValidatorHistoricalRewards.deserializeBinaryFromReader);
+        msg.setRewards(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -698,20 +657,20 @@ proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord.prototype.ser
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getValidatorAddress();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f
+      f,
     );
   }
   f = message.getPeriod();
   if (f !== 0) {
     writer.writeUint64(
       2,
-      f
+      f,
     );
   }
   f = message.getRewards();
@@ -719,72 +678,62 @@ proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord.serializeBina
     writer.writeMessage(
       3,
       f,
-      cosmos_distribution_v1beta1_distribution_pb.ValidatorHistoricalRewards.serializeBinaryToWriter
+      cosmos_distribution_v1beta1_distribution_pb.ValidatorHistoricalRewards.serializeBinaryToWriter,
     );
   }
 };
-
 
 /**
  * optional string validator_address = 1;
  * @return {string}
  */
-proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord.prototype.getValidatorAddress = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord.prototype.getValidatorAddress = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
 };
-
 
 /** @param {string} value */
-proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord.prototype.setValidatorAddress = function(value) {
+proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord.prototype.setValidatorAddress = function (value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
-
 
 /**
  * optional uint64 period = 2;
  * @return {number}
  */
-proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord.prototype.getPeriod = function() {
+proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord.prototype.getPeriod = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
-
 /** @param {number} value */
-proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord.prototype.setPeriod = function(value) {
+proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord.prototype.setPeriod = function (value) {
   jspb.Message.setProto3IntField(this, 2, value);
 };
-
 
 /**
  * optional ValidatorHistoricalRewards rewards = 3;
  * @return {?proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewards}
  */
-proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord.prototype.getRewards = function() {
+proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord.prototype.getRewards = function () {
   return /** @type{?proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewards} */ (
     jspb.Message.getWrapperField(this, cosmos_distribution_v1beta1_distribution_pb.ValidatorHistoricalRewards, 3));
 };
 
-
 /** @param {?proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewards|undefined} value */
-proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord.prototype.setRewards = function(value) {
+proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord.prototype.setRewards = function (value) {
   jspb.Message.setWrapperField(this, 3, value);
 };
 
-
-proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord.prototype.clearRewards = function() {
+proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord.prototype.clearRewards = function () {
   this.setRewards(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord.prototype.hasRewards = function() {
+proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord.prototype.hasRewards = function () {
   return jspb.Message.getField(this, 3) != null;
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -796,14 +745,13 @@ proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord.prototype.has
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord = function(opt_data) {
+proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord.displayName = 'proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -816,12 +764,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -830,31 +777,30 @@ proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord.prototype.toObje
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    validatorAddress: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    rewards: (f = msg.getRewards()) && cosmos_distribution_v1beta1_distribution_pb.ValidatorCurrentRewards.toObject(includeInstance, f)
+  proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        validatorAddress: jspb.Message.getFieldWithDefault(msg, 1, ''),
+        rewards: (f = msg.getRewards()) && cosmos_distribution_v1beta1_distribution_pb.ValidatorCurrentRewards.toObject(includeInstance, f),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord}
  */
-proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord;
+proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord();
   return proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -863,41 +809,39 @@ proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord.deserializeBinar
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord}
  */
-proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setValidatorAddress(value);
-      break;
-    case 2:
-      var value = new cosmos_distribution_v1beta1_distribution_pb.ValidatorCurrentRewards;
-      reader.readMessage(value,cosmos_distribution_v1beta1_distribution_pb.ValidatorCurrentRewards.deserializeBinaryFromReader);
-      msg.setRewards(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setValidatorAddress(value);
+        break;
+      case 2:
+        var value = new cosmos_distribution_v1beta1_distribution_pb.ValidatorCurrentRewards();
+        reader.readMessage(value, cosmos_distribution_v1beta1_distribution_pb.ValidatorCurrentRewards.deserializeBinaryFromReader);
+        msg.setRewards(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -906,13 +850,13 @@ proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord.prototype.serial
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getValidatorAddress();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f
+      f,
     );
   }
   f = message.getRewards();
@@ -920,57 +864,49 @@ proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord.serializeBinaryT
     writer.writeMessage(
       2,
       f,
-      cosmos_distribution_v1beta1_distribution_pb.ValidatorCurrentRewards.serializeBinaryToWriter
+      cosmos_distribution_v1beta1_distribution_pb.ValidatorCurrentRewards.serializeBinaryToWriter,
     );
   }
 };
-
 
 /**
  * optional string validator_address = 1;
  * @return {string}
  */
-proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord.prototype.getValidatorAddress = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord.prototype.getValidatorAddress = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
 };
-
 
 /** @param {string} value */
-proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord.prototype.setValidatorAddress = function(value) {
+proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord.prototype.setValidatorAddress = function (value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
-
 
 /**
  * optional ValidatorCurrentRewards rewards = 2;
  * @return {?proto.cosmos.distribution.v1beta1.ValidatorCurrentRewards}
  */
-proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord.prototype.getRewards = function() {
+proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord.prototype.getRewards = function () {
   return /** @type{?proto.cosmos.distribution.v1beta1.ValidatorCurrentRewards} */ (
     jspb.Message.getWrapperField(this, cosmos_distribution_v1beta1_distribution_pb.ValidatorCurrentRewards, 2));
 };
 
-
 /** @param {?proto.cosmos.distribution.v1beta1.ValidatorCurrentRewards|undefined} value */
-proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord.prototype.setRewards = function(value) {
+proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord.prototype.setRewards = function (value) {
   jspb.Message.setWrapperField(this, 2, value);
 };
 
-
-proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord.prototype.clearRewards = function() {
+proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord.prototype.clearRewards = function () {
   this.setRewards(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord.prototype.hasRewards = function() {
+proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord.prototype.hasRewards = function () {
   return jspb.Message.getField(this, 2) != null;
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -982,14 +918,13 @@ proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord.prototype.hasRew
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord = function(opt_data) {
+proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord.displayName = 'proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -1002,12 +937,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -1016,32 +950,31 @@ proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord.prototype.toObject
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    delegatorAddress: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    validatorAddress: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    startingInfo: (f = msg.getStartingInfo()) && cosmos_distribution_v1beta1_distribution_pb.DelegatorStartingInfo.toObject(includeInstance, f)
+  proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        delegatorAddress: jspb.Message.getFieldWithDefault(msg, 1, ''),
+        validatorAddress: jspb.Message.getFieldWithDefault(msg, 2, ''),
+        startingInfo: (f = msg.getStartingInfo()) && cosmos_distribution_v1beta1_distribution_pb.DelegatorStartingInfo.toObject(includeInstance, f),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord}
  */
-proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord;
+proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord();
   return proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -1050,45 +983,43 @@ proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord.deserializeBinary 
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord}
  */
-proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setDelegatorAddress(value);
-      break;
-    case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setValidatorAddress(value);
-      break;
-    case 3:
-      var value = new cosmos_distribution_v1beta1_distribution_pb.DelegatorStartingInfo;
-      reader.readMessage(value,cosmos_distribution_v1beta1_distribution_pb.DelegatorStartingInfo.deserializeBinaryFromReader);
-      msg.setStartingInfo(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setDelegatorAddress(value);
+        break;
+      case 2:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setValidatorAddress(value);
+        break;
+      case 3:
+        var value = new cosmos_distribution_v1beta1_distribution_pb.DelegatorStartingInfo();
+        reader.readMessage(value, cosmos_distribution_v1beta1_distribution_pb.DelegatorStartingInfo.deserializeBinaryFromReader);
+        msg.setStartingInfo(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -1097,20 +1028,20 @@ proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord.prototype.serializ
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getDelegatorAddress();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f
+      f,
     );
   }
   f = message.getValidatorAddress();
   if (f.length > 0) {
     writer.writeString(
       2,
-      f
+      f,
     );
   }
   f = message.getStartingInfo();
@@ -1118,72 +1049,62 @@ proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord.serializeBinaryToW
     writer.writeMessage(
       3,
       f,
-      cosmos_distribution_v1beta1_distribution_pb.DelegatorStartingInfo.serializeBinaryToWriter
+      cosmos_distribution_v1beta1_distribution_pb.DelegatorStartingInfo.serializeBinaryToWriter,
     );
   }
 };
-
 
 /**
  * optional string delegator_address = 1;
  * @return {string}
  */
-proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord.prototype.getDelegatorAddress = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord.prototype.getDelegatorAddress = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
 };
-
 
 /** @param {string} value */
-proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord.prototype.setDelegatorAddress = function(value) {
+proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord.prototype.setDelegatorAddress = function (value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
-
 
 /**
  * optional string validator_address = 2;
  * @return {string}
  */
-proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord.prototype.getValidatorAddress = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord.prototype.getValidatorAddress = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ''));
 };
-
 
 /** @param {string} value */
-proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord.prototype.setValidatorAddress = function(value) {
+proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord.prototype.setValidatorAddress = function (value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
-
 
 /**
  * optional DelegatorStartingInfo starting_info = 3;
  * @return {?proto.cosmos.distribution.v1beta1.DelegatorStartingInfo}
  */
-proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord.prototype.getStartingInfo = function() {
+proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord.prototype.getStartingInfo = function () {
   return /** @type{?proto.cosmos.distribution.v1beta1.DelegatorStartingInfo} */ (
     jspb.Message.getWrapperField(this, cosmos_distribution_v1beta1_distribution_pb.DelegatorStartingInfo, 3));
 };
 
-
 /** @param {?proto.cosmos.distribution.v1beta1.DelegatorStartingInfo|undefined} value */
-proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord.prototype.setStartingInfo = function(value) {
+proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord.prototype.setStartingInfo = function (value) {
   jspb.Message.setWrapperField(this, 3, value);
 };
 
-
-proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord.prototype.clearStartingInfo = function() {
+proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord.prototype.clearStartingInfo = function () {
   this.setStartingInfo(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord.prototype.hasStartingInfo = function() {
+proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord.prototype.hasStartingInfo = function () {
   return jspb.Message.getField(this, 3) != null;
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -1195,14 +1116,13 @@ proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord.prototype.hasStart
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord = function(opt_data) {
+proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord.displayName = 'proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord';
 }
-
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -1215,12 +1135,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -1229,33 +1148,32 @@ proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord.prototype.toObject =
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    validatorAddress: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    height: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    period: jspb.Message.getFieldWithDefault(msg, 3, 0),
-    validatorSlashEvent: (f = msg.getValidatorSlashEvent()) && cosmos_distribution_v1beta1_distribution_pb.ValidatorSlashEvent.toObject(includeInstance, f)
+  proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        validatorAddress: jspb.Message.getFieldWithDefault(msg, 1, ''),
+        height: jspb.Message.getFieldWithDefault(msg, 2, 0),
+        period: jspb.Message.getFieldWithDefault(msg, 3, 0),
+        validatorSlashEvent: (f = msg.getValidatorSlashEvent()) && cosmos_distribution_v1beta1_distribution_pb.ValidatorSlashEvent.toObject(includeInstance, f),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord}
  */
-proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord;
+proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord();
   return proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -1264,49 +1182,47 @@ proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord.deserializeBinary = 
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord}
  */
-proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setValidatorAddress(value);
-      break;
-    case 2:
-      var value = /** @type {number} */ (reader.readUint64());
-      msg.setHeight(value);
-      break;
-    case 3:
-      var value = /** @type {number} */ (reader.readUint64());
-      msg.setPeriod(value);
-      break;
-    case 4:
-      var value = new cosmos_distribution_v1beta1_distribution_pb.ValidatorSlashEvent;
-      reader.readMessage(value,cosmos_distribution_v1beta1_distribution_pb.ValidatorSlashEvent.deserializeBinaryFromReader);
-      msg.setValidatorSlashEvent(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setValidatorAddress(value);
+        break;
+      case 2:
+        var value = /** @type {number} */ (reader.readUint64());
+        msg.setHeight(value);
+        break;
+      case 3:
+        var value = /** @type {number} */ (reader.readUint64());
+        msg.setPeriod(value);
+        break;
+      case 4:
+        var value = new cosmos_distribution_v1beta1_distribution_pb.ValidatorSlashEvent();
+        reader.readMessage(value, cosmos_distribution_v1beta1_distribution_pb.ValidatorSlashEvent.deserializeBinaryFromReader);
+        msg.setValidatorSlashEvent(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -1315,27 +1231,27 @@ proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord.prototype.serializeB
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getValidatorAddress();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f
+      f,
     );
   }
   f = message.getHeight();
   if (f !== 0) {
     writer.writeUint64(
       2,
-      f
+      f,
     );
   }
   f = message.getPeriod();
   if (f !== 0) {
     writer.writeUint64(
       3,
-      f
+      f,
     );
   }
   f = message.getValidatorSlashEvent();
@@ -1343,87 +1259,75 @@ proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord.serializeBinaryToWri
     writer.writeMessage(
       4,
       f,
-      cosmos_distribution_v1beta1_distribution_pb.ValidatorSlashEvent.serializeBinaryToWriter
+      cosmos_distribution_v1beta1_distribution_pb.ValidatorSlashEvent.serializeBinaryToWriter,
     );
   }
 };
-
 
 /**
  * optional string validator_address = 1;
  * @return {string}
  */
-proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord.prototype.getValidatorAddress = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord.prototype.getValidatorAddress = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ''));
 };
-
 
 /** @param {string} value */
-proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord.prototype.setValidatorAddress = function(value) {
+proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord.prototype.setValidatorAddress = function (value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
-
 
 /**
  * optional uint64 height = 2;
  * @return {number}
  */
-proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord.prototype.getHeight = function() {
+proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord.prototype.getHeight = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
-
 /** @param {number} value */
-proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord.prototype.setHeight = function(value) {
+proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord.prototype.setHeight = function (value) {
   jspb.Message.setProto3IntField(this, 2, value);
 };
-
 
 /**
  * optional uint64 period = 3;
  * @return {number}
  */
-proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord.prototype.getPeriod = function() {
+proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord.prototype.getPeriod = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
-
 /** @param {number} value */
-proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord.prototype.setPeriod = function(value) {
+proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord.prototype.setPeriod = function (value) {
   jspb.Message.setProto3IntField(this, 3, value);
 };
-
 
 /**
  * optional ValidatorSlashEvent validator_slash_event = 4;
  * @return {?proto.cosmos.distribution.v1beta1.ValidatorSlashEvent}
  */
-proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord.prototype.getValidatorSlashEvent = function() {
+proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord.prototype.getValidatorSlashEvent = function () {
   return /** @type{?proto.cosmos.distribution.v1beta1.ValidatorSlashEvent} */ (
     jspb.Message.getWrapperField(this, cosmos_distribution_v1beta1_distribution_pb.ValidatorSlashEvent, 4));
 };
 
-
 /** @param {?proto.cosmos.distribution.v1beta1.ValidatorSlashEvent|undefined} value */
-proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord.prototype.setValidatorSlashEvent = function(value) {
+proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord.prototype.setValidatorSlashEvent = function (value) {
   jspb.Message.setWrapperField(this, 4, value);
 };
 
-
-proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord.prototype.clearValidatorSlashEvent = function() {
+proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord.prototype.clearValidatorSlashEvent = function () {
   this.setValidatorSlashEvent(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord.prototype.hasValidatorSlashEvent = function() {
+proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord.prototype.hasValidatorSlashEvent = function () {
   return jspb.Message.getField(this, 4) != null;
 };
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -1435,7 +1339,7 @@ proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord.prototype.hasValidat
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.distribution.v1beta1.GenesisState = function(opt_data) {
+proto.cosmos.distribution.v1beta1.GenesisState = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.cosmos.distribution.v1beta1.GenesisState.repeatedFields_, null);
 };
 goog.inherits(proto.cosmos.distribution.v1beta1.GenesisState, jspb.Message);
@@ -1447,9 +1351,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.cosmos.distribution.v1beta1.GenesisState.repeatedFields_ = [3,5,6,7,8,9,10];
-
-
+proto.cosmos.distribution.v1beta1.GenesisState.repeatedFields_ = [3, 5, 6, 7, 8, 9, 10];
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
@@ -1462,12 +1364,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.distribution.v1beta1.GenesisState.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.distribution.v1beta1.GenesisState.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.distribution.v1beta1.GenesisState.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.distribution.v1beta1.GenesisState.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -1476,46 +1377,45 @@ proto.cosmos.distribution.v1beta1.GenesisState.prototype.toObject = function(opt
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.distribution.v1beta1.GenesisState.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    params: (f = msg.getParams()) && cosmos_distribution_v1beta1_distribution_pb.Params.toObject(includeInstance, f),
-    feePool: (f = msg.getFeePool()) && cosmos_distribution_v1beta1_distribution_pb.FeePool.toObject(includeInstance, f),
-    delegatorWithdrawInfosList: jspb.Message.toObjectList(msg.getDelegatorWithdrawInfosList(),
-    proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo.toObject, includeInstance),
-    previousProposer: jspb.Message.getFieldWithDefault(msg, 4, ""),
-    outstandingRewardsList: jspb.Message.toObjectList(msg.getOutstandingRewardsList(),
-    proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord.toObject, includeInstance),
-    validatorAccumulatedCommissionsList: jspb.Message.toObjectList(msg.getValidatorAccumulatedCommissionsList(),
-    proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord.toObject, includeInstance),
-    validatorHistoricalRewardsList: jspb.Message.toObjectList(msg.getValidatorHistoricalRewardsList(),
-    proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord.toObject, includeInstance),
-    validatorCurrentRewardsList: jspb.Message.toObjectList(msg.getValidatorCurrentRewardsList(),
-    proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord.toObject, includeInstance),
-    delegatorStartingInfosList: jspb.Message.toObjectList(msg.getDelegatorStartingInfosList(),
-    proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord.toObject, includeInstance),
-    validatorSlashEventsList: jspb.Message.toObjectList(msg.getValidatorSlashEventsList(),
-    proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord.toObject, includeInstance)
+  proto.cosmos.distribution.v1beta1.GenesisState.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        params: (f = msg.getParams()) && cosmos_distribution_v1beta1_distribution_pb.Params.toObject(includeInstance, f),
+        feePool: (f = msg.getFeePool()) && cosmos_distribution_v1beta1_distribution_pb.FeePool.toObject(includeInstance, f),
+        delegatorWithdrawInfosList: jspb.Message.toObjectList(msg.getDelegatorWithdrawInfosList(),
+          proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo.toObject, includeInstance),
+        previousProposer: jspb.Message.getFieldWithDefault(msg, 4, ''),
+        outstandingRewardsList: jspb.Message.toObjectList(msg.getOutstandingRewardsList(),
+          proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord.toObject, includeInstance),
+        validatorAccumulatedCommissionsList: jspb.Message.toObjectList(msg.getValidatorAccumulatedCommissionsList(),
+          proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord.toObject, includeInstance),
+        validatorHistoricalRewardsList: jspb.Message.toObjectList(msg.getValidatorHistoricalRewardsList(),
+          proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord.toObject, includeInstance),
+        validatorCurrentRewardsList: jspb.Message.toObjectList(msg.getValidatorCurrentRewardsList(),
+          proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord.toObject, includeInstance),
+        delegatorStartingInfosList: jspb.Message.toObjectList(msg.getDelegatorStartingInfosList(),
+          proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord.toObject, includeInstance),
+        validatorSlashEventsList: jspb.Message.toObjectList(msg.getValidatorSlashEventsList(),
+          proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord.toObject, includeInstance),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.distribution.v1beta1.GenesisState}
  */
-proto.cosmos.distribution.v1beta1.GenesisState.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.distribution.v1beta1.GenesisState;
+proto.cosmos.distribution.v1beta1.GenesisState.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.distribution.v1beta1.GenesisState();
   return proto.cosmos.distribution.v1beta1.GenesisState.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -1524,81 +1424,79 @@ proto.cosmos.distribution.v1beta1.GenesisState.deserializeBinary = function(byte
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.distribution.v1beta1.GenesisState}
  */
-proto.cosmos.distribution.v1beta1.GenesisState.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.distribution.v1beta1.GenesisState.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = new cosmos_distribution_v1beta1_distribution_pb.Params;
-      reader.readMessage(value,cosmos_distribution_v1beta1_distribution_pb.Params.deserializeBinaryFromReader);
-      msg.setParams(value);
-      break;
-    case 2:
-      var value = new cosmos_distribution_v1beta1_distribution_pb.FeePool;
-      reader.readMessage(value,cosmos_distribution_v1beta1_distribution_pb.FeePool.deserializeBinaryFromReader);
-      msg.setFeePool(value);
-      break;
-    case 3:
-      var value = new proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo;
-      reader.readMessage(value,proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo.deserializeBinaryFromReader);
-      msg.addDelegatorWithdrawInfos(value);
-      break;
-    case 4:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setPreviousProposer(value);
-      break;
-    case 5:
-      var value = new proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord;
-      reader.readMessage(value,proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord.deserializeBinaryFromReader);
-      msg.addOutstandingRewards(value);
-      break;
-    case 6:
-      var value = new proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord;
-      reader.readMessage(value,proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord.deserializeBinaryFromReader);
-      msg.addValidatorAccumulatedCommissions(value);
-      break;
-    case 7:
-      var value = new proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord;
-      reader.readMessage(value,proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord.deserializeBinaryFromReader);
-      msg.addValidatorHistoricalRewards(value);
-      break;
-    case 8:
-      var value = new proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord;
-      reader.readMessage(value,proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord.deserializeBinaryFromReader);
-      msg.addValidatorCurrentRewards(value);
-      break;
-    case 9:
-      var value = new proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord;
-      reader.readMessage(value,proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord.deserializeBinaryFromReader);
-      msg.addDelegatorStartingInfos(value);
-      break;
-    case 10:
-      var value = new proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord;
-      reader.readMessage(value,proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord.deserializeBinaryFromReader);
-      msg.addValidatorSlashEvents(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = new cosmos_distribution_v1beta1_distribution_pb.Params();
+        reader.readMessage(value, cosmos_distribution_v1beta1_distribution_pb.Params.deserializeBinaryFromReader);
+        msg.setParams(value);
+        break;
+      case 2:
+        var value = new cosmos_distribution_v1beta1_distribution_pb.FeePool();
+        reader.readMessage(value, cosmos_distribution_v1beta1_distribution_pb.FeePool.deserializeBinaryFromReader);
+        msg.setFeePool(value);
+        break;
+      case 3:
+        var value = new proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo();
+        reader.readMessage(value, proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo.deserializeBinaryFromReader);
+        msg.addDelegatorWithdrawInfos(value);
+        break;
+      case 4:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setPreviousProposer(value);
+        break;
+      case 5:
+        var value = new proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord();
+        reader.readMessage(value, proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord.deserializeBinaryFromReader);
+        msg.addOutstandingRewards(value);
+        break;
+      case 6:
+        var value = new proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord();
+        reader.readMessage(value, proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord.deserializeBinaryFromReader);
+        msg.addValidatorAccumulatedCommissions(value);
+        break;
+      case 7:
+        var value = new proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord();
+        reader.readMessage(value, proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord.deserializeBinaryFromReader);
+        msg.addValidatorHistoricalRewards(value);
+        break;
+      case 8:
+        var value = new proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord();
+        reader.readMessage(value, proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord.deserializeBinaryFromReader);
+        msg.addValidatorCurrentRewards(value);
+        break;
+      case 9:
+        var value = new proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord();
+        reader.readMessage(value, proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord.deserializeBinaryFromReader);
+        msg.addDelegatorStartingInfos(value);
+        break;
+      case 10:
+        var value = new proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord();
+        reader.readMessage(value, proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord.deserializeBinaryFromReader);
+        msg.addValidatorSlashEvents(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.distribution.v1beta1.GenesisState.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.distribution.v1beta1.GenesisState.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.distribution.v1beta1.GenesisState.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -1607,14 +1505,14 @@ proto.cosmos.distribution.v1beta1.GenesisState.prototype.serializeBinary = funct
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.distribution.v1beta1.GenesisState.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.distribution.v1beta1.GenesisState.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getParams();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      cosmos_distribution_v1beta1_distribution_pb.Params.serializeBinaryToWriter
+      cosmos_distribution_v1beta1_distribution_pb.Params.serializeBinaryToWriter,
     );
   }
   f = message.getFeePool();
@@ -1622,7 +1520,7 @@ proto.cosmos.distribution.v1beta1.GenesisState.serializeBinaryToWriter = functio
     writer.writeMessage(
       2,
       f,
-      cosmos_distribution_v1beta1_distribution_pb.FeePool.serializeBinaryToWriter
+      cosmos_distribution_v1beta1_distribution_pb.FeePool.serializeBinaryToWriter,
     );
   }
   f = message.getDelegatorWithdrawInfosList();
@@ -1630,14 +1528,14 @@ proto.cosmos.distribution.v1beta1.GenesisState.serializeBinaryToWriter = functio
     writer.writeRepeatedMessage(
       3,
       f,
-      proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo.serializeBinaryToWriter
+      proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo.serializeBinaryToWriter,
     );
   }
   f = message.getPreviousProposer();
   if (f.length > 0) {
     writer.writeString(
       4,
-      f
+      f,
     );
   }
   f = message.getOutstandingRewardsList();
@@ -1645,7 +1543,7 @@ proto.cosmos.distribution.v1beta1.GenesisState.serializeBinaryToWriter = functio
     writer.writeRepeatedMessage(
       5,
       f,
-      proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord.serializeBinaryToWriter
+      proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord.serializeBinaryToWriter,
     );
   }
   f = message.getValidatorAccumulatedCommissionsList();
@@ -1653,7 +1551,7 @@ proto.cosmos.distribution.v1beta1.GenesisState.serializeBinaryToWriter = functio
     writer.writeRepeatedMessage(
       6,
       f,
-      proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord.serializeBinaryToWriter
+      proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord.serializeBinaryToWriter,
     );
   }
   f = message.getValidatorHistoricalRewardsList();
@@ -1661,7 +1559,7 @@ proto.cosmos.distribution.v1beta1.GenesisState.serializeBinaryToWriter = functio
     writer.writeRepeatedMessage(
       7,
       f,
-      proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord.serializeBinaryToWriter
+      proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord.serializeBinaryToWriter,
     );
   }
   f = message.getValidatorCurrentRewardsList();
@@ -1669,7 +1567,7 @@ proto.cosmos.distribution.v1beta1.GenesisState.serializeBinaryToWriter = functio
     writer.writeRepeatedMessage(
       8,
       f,
-      proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord.serializeBinaryToWriter
+      proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord.serializeBinaryToWriter,
     );
   }
   f = message.getDelegatorStartingInfosList();
@@ -1677,7 +1575,7 @@ proto.cosmos.distribution.v1beta1.GenesisState.serializeBinaryToWriter = functio
     writer.writeRepeatedMessage(
       9,
       f,
-      proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord.serializeBinaryToWriter
+      proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord.serializeBinaryToWriter,
     );
   }
   f = message.getValidatorSlashEventsList();
@@ -1685,302 +1583,263 @@ proto.cosmos.distribution.v1beta1.GenesisState.serializeBinaryToWriter = functio
     writer.writeRepeatedMessage(
       10,
       f,
-      proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord.serializeBinaryToWriter
+      proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord.serializeBinaryToWriter,
     );
   }
 };
-
 
 /**
  * optional Params params = 1;
  * @return {?proto.cosmos.distribution.v1beta1.Params}
  */
-proto.cosmos.distribution.v1beta1.GenesisState.prototype.getParams = function() {
+proto.cosmos.distribution.v1beta1.GenesisState.prototype.getParams = function () {
   return /** @type{?proto.cosmos.distribution.v1beta1.Params} */ (
     jspb.Message.getWrapperField(this, cosmos_distribution_v1beta1_distribution_pb.Params, 1));
 };
 
-
 /** @param {?proto.cosmos.distribution.v1beta1.Params|undefined} value */
-proto.cosmos.distribution.v1beta1.GenesisState.prototype.setParams = function(value) {
+proto.cosmos.distribution.v1beta1.GenesisState.prototype.setParams = function (value) {
   jspb.Message.setWrapperField(this, 1, value);
 };
 
-
-proto.cosmos.distribution.v1beta1.GenesisState.prototype.clearParams = function() {
+proto.cosmos.distribution.v1beta1.GenesisState.prototype.clearParams = function () {
   this.setParams(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.cosmos.distribution.v1beta1.GenesisState.prototype.hasParams = function() {
+proto.cosmos.distribution.v1beta1.GenesisState.prototype.hasParams = function () {
   return jspb.Message.getField(this, 1) != null;
 };
-
 
 /**
  * optional FeePool fee_pool = 2;
  * @return {?proto.cosmos.distribution.v1beta1.FeePool}
  */
-proto.cosmos.distribution.v1beta1.GenesisState.prototype.getFeePool = function() {
+proto.cosmos.distribution.v1beta1.GenesisState.prototype.getFeePool = function () {
   return /** @type{?proto.cosmos.distribution.v1beta1.FeePool} */ (
     jspb.Message.getWrapperField(this, cosmos_distribution_v1beta1_distribution_pb.FeePool, 2));
 };
 
-
 /** @param {?proto.cosmos.distribution.v1beta1.FeePool|undefined} value */
-proto.cosmos.distribution.v1beta1.GenesisState.prototype.setFeePool = function(value) {
+proto.cosmos.distribution.v1beta1.GenesisState.prototype.setFeePool = function (value) {
   jspb.Message.setWrapperField(this, 2, value);
 };
 
-
-proto.cosmos.distribution.v1beta1.GenesisState.prototype.clearFeePool = function() {
+proto.cosmos.distribution.v1beta1.GenesisState.prototype.clearFeePool = function () {
   this.setFeePool(undefined);
 };
-
 
 /**
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.cosmos.distribution.v1beta1.GenesisState.prototype.hasFeePool = function() {
+proto.cosmos.distribution.v1beta1.GenesisState.prototype.hasFeePool = function () {
   return jspb.Message.getField(this, 2) != null;
 };
-
 
 /**
  * repeated DelegatorWithdrawInfo delegator_withdraw_infos = 3;
  * @return {!Array<!proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo>}
  */
-proto.cosmos.distribution.v1beta1.GenesisState.prototype.getDelegatorWithdrawInfosList = function() {
+proto.cosmos.distribution.v1beta1.GenesisState.prototype.getDelegatorWithdrawInfosList = function () {
   return /** @type{!Array<!proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo, 3));
 };
 
-
 /** @param {!Array<!proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo>} value */
-proto.cosmos.distribution.v1beta1.GenesisState.prototype.setDelegatorWithdrawInfosList = function(value) {
+proto.cosmos.distribution.v1beta1.GenesisState.prototype.setDelegatorWithdrawInfosList = function (value) {
   jspb.Message.setRepeatedWrapperField(this, 3, value);
 };
-
 
 /**
  * @param {!proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo=} opt_value
  * @param {number=} opt_index
  * @return {!proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo}
  */
-proto.cosmos.distribution.v1beta1.GenesisState.prototype.addDelegatorWithdrawInfos = function(opt_value, opt_index) {
+proto.cosmos.distribution.v1beta1.GenesisState.prototype.addDelegatorWithdrawInfos = function (opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 3, opt_value, proto.cosmos.distribution.v1beta1.DelegatorWithdrawInfo, opt_index);
 };
 
-
-proto.cosmos.distribution.v1beta1.GenesisState.prototype.clearDelegatorWithdrawInfosList = function() {
+proto.cosmos.distribution.v1beta1.GenesisState.prototype.clearDelegatorWithdrawInfosList = function () {
   this.setDelegatorWithdrawInfosList([]);
 };
-
 
 /**
  * optional string previous_proposer = 4;
  * @return {string}
  */
-proto.cosmos.distribution.v1beta1.GenesisState.prototype.getPreviousProposer = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+proto.cosmos.distribution.v1beta1.GenesisState.prototype.getPreviousProposer = function () {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ''));
 };
-
 
 /** @param {string} value */
-proto.cosmos.distribution.v1beta1.GenesisState.prototype.setPreviousProposer = function(value) {
+proto.cosmos.distribution.v1beta1.GenesisState.prototype.setPreviousProposer = function (value) {
   jspb.Message.setProto3StringField(this, 4, value);
 };
-
 
 /**
  * repeated ValidatorOutstandingRewardsRecord outstanding_rewards = 5;
  * @return {!Array<!proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord>}
  */
-proto.cosmos.distribution.v1beta1.GenesisState.prototype.getOutstandingRewardsList = function() {
+proto.cosmos.distribution.v1beta1.GenesisState.prototype.getOutstandingRewardsList = function () {
   return /** @type{!Array<!proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord, 5));
 };
 
-
 /** @param {!Array<!proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord>} value */
-proto.cosmos.distribution.v1beta1.GenesisState.prototype.setOutstandingRewardsList = function(value) {
+proto.cosmos.distribution.v1beta1.GenesisState.prototype.setOutstandingRewardsList = function (value) {
   jspb.Message.setRepeatedWrapperField(this, 5, value);
 };
-
 
 /**
  * @param {!proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord=} opt_value
  * @param {number=} opt_index
  * @return {!proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord}
  */
-proto.cosmos.distribution.v1beta1.GenesisState.prototype.addOutstandingRewards = function(opt_value, opt_index) {
+proto.cosmos.distribution.v1beta1.GenesisState.prototype.addOutstandingRewards = function (opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 5, opt_value, proto.cosmos.distribution.v1beta1.ValidatorOutstandingRewardsRecord, opt_index);
 };
 
-
-proto.cosmos.distribution.v1beta1.GenesisState.prototype.clearOutstandingRewardsList = function() {
+proto.cosmos.distribution.v1beta1.GenesisState.prototype.clearOutstandingRewardsList = function () {
   this.setOutstandingRewardsList([]);
 };
-
 
 /**
  * repeated ValidatorAccumulatedCommissionRecord validator_accumulated_commissions = 6;
  * @return {!Array<!proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord>}
  */
-proto.cosmos.distribution.v1beta1.GenesisState.prototype.getValidatorAccumulatedCommissionsList = function() {
+proto.cosmos.distribution.v1beta1.GenesisState.prototype.getValidatorAccumulatedCommissionsList = function () {
   return /** @type{!Array<!proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord, 6));
 };
 
-
 /** @param {!Array<!proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord>} value */
-proto.cosmos.distribution.v1beta1.GenesisState.prototype.setValidatorAccumulatedCommissionsList = function(value) {
+proto.cosmos.distribution.v1beta1.GenesisState.prototype.setValidatorAccumulatedCommissionsList = function (value) {
   jspb.Message.setRepeatedWrapperField(this, 6, value);
 };
-
 
 /**
  * @param {!proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord=} opt_value
  * @param {number=} opt_index
  * @return {!proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord}
  */
-proto.cosmos.distribution.v1beta1.GenesisState.prototype.addValidatorAccumulatedCommissions = function(opt_value, opt_index) {
+proto.cosmos.distribution.v1beta1.GenesisState.prototype.addValidatorAccumulatedCommissions = function (opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 6, opt_value, proto.cosmos.distribution.v1beta1.ValidatorAccumulatedCommissionRecord, opt_index);
 };
 
-
-proto.cosmos.distribution.v1beta1.GenesisState.prototype.clearValidatorAccumulatedCommissionsList = function() {
+proto.cosmos.distribution.v1beta1.GenesisState.prototype.clearValidatorAccumulatedCommissionsList = function () {
   this.setValidatorAccumulatedCommissionsList([]);
 };
-
 
 /**
  * repeated ValidatorHistoricalRewardsRecord validator_historical_rewards = 7;
  * @return {!Array<!proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord>}
  */
-proto.cosmos.distribution.v1beta1.GenesisState.prototype.getValidatorHistoricalRewardsList = function() {
+proto.cosmos.distribution.v1beta1.GenesisState.prototype.getValidatorHistoricalRewardsList = function () {
   return /** @type{!Array<!proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord, 7));
 };
 
-
 /** @param {!Array<!proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord>} value */
-proto.cosmos.distribution.v1beta1.GenesisState.prototype.setValidatorHistoricalRewardsList = function(value) {
+proto.cosmos.distribution.v1beta1.GenesisState.prototype.setValidatorHistoricalRewardsList = function (value) {
   jspb.Message.setRepeatedWrapperField(this, 7, value);
 };
-
 
 /**
  * @param {!proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord=} opt_value
  * @param {number=} opt_index
  * @return {!proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord}
  */
-proto.cosmos.distribution.v1beta1.GenesisState.prototype.addValidatorHistoricalRewards = function(opt_value, opt_index) {
+proto.cosmos.distribution.v1beta1.GenesisState.prototype.addValidatorHistoricalRewards = function (opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 7, opt_value, proto.cosmos.distribution.v1beta1.ValidatorHistoricalRewardsRecord, opt_index);
 };
 
-
-proto.cosmos.distribution.v1beta1.GenesisState.prototype.clearValidatorHistoricalRewardsList = function() {
+proto.cosmos.distribution.v1beta1.GenesisState.prototype.clearValidatorHistoricalRewardsList = function () {
   this.setValidatorHistoricalRewardsList([]);
 };
-
 
 /**
  * repeated ValidatorCurrentRewardsRecord validator_current_rewards = 8;
  * @return {!Array<!proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord>}
  */
-proto.cosmos.distribution.v1beta1.GenesisState.prototype.getValidatorCurrentRewardsList = function() {
+proto.cosmos.distribution.v1beta1.GenesisState.prototype.getValidatorCurrentRewardsList = function () {
   return /** @type{!Array<!proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord, 8));
 };
 
-
 /** @param {!Array<!proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord>} value */
-proto.cosmos.distribution.v1beta1.GenesisState.prototype.setValidatorCurrentRewardsList = function(value) {
+proto.cosmos.distribution.v1beta1.GenesisState.prototype.setValidatorCurrentRewardsList = function (value) {
   jspb.Message.setRepeatedWrapperField(this, 8, value);
 };
-
 
 /**
  * @param {!proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord=} opt_value
  * @param {number=} opt_index
  * @return {!proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord}
  */
-proto.cosmos.distribution.v1beta1.GenesisState.prototype.addValidatorCurrentRewards = function(opt_value, opt_index) {
+proto.cosmos.distribution.v1beta1.GenesisState.prototype.addValidatorCurrentRewards = function (opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 8, opt_value, proto.cosmos.distribution.v1beta1.ValidatorCurrentRewardsRecord, opt_index);
 };
 
-
-proto.cosmos.distribution.v1beta1.GenesisState.prototype.clearValidatorCurrentRewardsList = function() {
+proto.cosmos.distribution.v1beta1.GenesisState.prototype.clearValidatorCurrentRewardsList = function () {
   this.setValidatorCurrentRewardsList([]);
 };
-
 
 /**
  * repeated DelegatorStartingInfoRecord delegator_starting_infos = 9;
  * @return {!Array<!proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord>}
  */
-proto.cosmos.distribution.v1beta1.GenesisState.prototype.getDelegatorStartingInfosList = function() {
+proto.cosmos.distribution.v1beta1.GenesisState.prototype.getDelegatorStartingInfosList = function () {
   return /** @type{!Array<!proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord, 9));
 };
 
-
 /** @param {!Array<!proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord>} value */
-proto.cosmos.distribution.v1beta1.GenesisState.prototype.setDelegatorStartingInfosList = function(value) {
+proto.cosmos.distribution.v1beta1.GenesisState.prototype.setDelegatorStartingInfosList = function (value) {
   jspb.Message.setRepeatedWrapperField(this, 9, value);
 };
-
 
 /**
  * @param {!proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord=} opt_value
  * @param {number=} opt_index
  * @return {!proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord}
  */
-proto.cosmos.distribution.v1beta1.GenesisState.prototype.addDelegatorStartingInfos = function(opt_value, opt_index) {
+proto.cosmos.distribution.v1beta1.GenesisState.prototype.addDelegatorStartingInfos = function (opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 9, opt_value, proto.cosmos.distribution.v1beta1.DelegatorStartingInfoRecord, opt_index);
 };
 
-
-proto.cosmos.distribution.v1beta1.GenesisState.prototype.clearDelegatorStartingInfosList = function() {
+proto.cosmos.distribution.v1beta1.GenesisState.prototype.clearDelegatorStartingInfosList = function () {
   this.setDelegatorStartingInfosList([]);
 };
-
 
 /**
  * repeated ValidatorSlashEventRecord validator_slash_events = 10;
  * @return {!Array<!proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord>}
  */
-proto.cosmos.distribution.v1beta1.GenesisState.prototype.getValidatorSlashEventsList = function() {
+proto.cosmos.distribution.v1beta1.GenesisState.prototype.getValidatorSlashEventsList = function () {
   return /** @type{!Array<!proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord, 10));
 };
 
-
 /** @param {!Array<!proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord>} value */
-proto.cosmos.distribution.v1beta1.GenesisState.prototype.setValidatorSlashEventsList = function(value) {
+proto.cosmos.distribution.v1beta1.GenesisState.prototype.setValidatorSlashEventsList = function (value) {
   jspb.Message.setRepeatedWrapperField(this, 10, value);
 };
-
 
 /**
  * @param {!proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord=} opt_value
  * @param {number=} opt_index
  * @return {!proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord}
  */
-proto.cosmos.distribution.v1beta1.GenesisState.prototype.addValidatorSlashEvents = function(opt_value, opt_index) {
+proto.cosmos.distribution.v1beta1.GenesisState.prototype.addValidatorSlashEvents = function (opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 10, opt_value, proto.cosmos.distribution.v1beta1.ValidatorSlashEventRecord, opt_index);
 };
 
-
-proto.cosmos.distribution.v1beta1.GenesisState.prototype.clearValidatorSlashEventsList = function() {
+proto.cosmos.distribution.v1beta1.GenesisState.prototype.clearValidatorSlashEventsList = function () {
   this.setValidatorSlashEventsList([]);
 };
-
 
 goog.object.extend(exports, proto.cosmos.distribution.v1beta1);

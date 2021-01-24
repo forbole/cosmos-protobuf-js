@@ -7,12 +7,14 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-var jspb = require('google-protobuf');
-var goog = jspb;
-var global = Function('return this')();
+const jspb = require('google-protobuf');
 
-var gogoproto_gogo_pb = require('../../../gogoproto/gogo_pb.js');
-var google_protobuf_any_pb = require('google-protobuf/google/protobuf/any_pb.js');
+const goog = jspb;
+const global = Function('return this')();
+
+const google_protobuf_any_pb = require('google-protobuf/google/protobuf/any_pb.js');
+const gogoproto_gogo_pb = require('../../../gogoproto/gogo_pb.js');
+
 goog.exportSymbol('proto.cosmos.crypto.multisig.LegacyAminoPubKey', null, global);
 
 /**
@@ -25,7 +27,7 @@ goog.exportSymbol('proto.cosmos.crypto.multisig.LegacyAminoPubKey', null, global
  * @extends {jspb.Message}
  * @constructor
  */
-proto.cosmos.crypto.multisig.LegacyAminoPubKey = function(opt_data) {
+proto.cosmos.crypto.multisig.LegacyAminoPubKey = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.cosmos.crypto.multisig.LegacyAminoPubKey.repeatedFields_, null);
 };
 goog.inherits(proto.cosmos.crypto.multisig.LegacyAminoPubKey, jspb.Message);
@@ -39,8 +41,6 @@ if (goog.DEBUG && !COMPILED) {
  */
 proto.cosmos.crypto.multisig.LegacyAminoPubKey.repeatedFields_ = [2];
 
-
-
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto suitable for use in Soy templates.
@@ -52,12 +52,11 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.cosmos.crypto.multisig.LegacyAminoPubKey.prototype.toObject = function(opt_includeInstance) {
-  return proto.cosmos.crypto.multisig.LegacyAminoPubKey.toObject(opt_includeInstance, this);
-};
+  proto.cosmos.crypto.multisig.LegacyAminoPubKey.prototype.toObject = function (opt_includeInstance) {
+    return proto.cosmos.crypto.multisig.LegacyAminoPubKey.toObject(opt_includeInstance, this);
+  };
 
-
-/**
+  /**
  * Static version of the {@see toObject} method.
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
@@ -66,32 +65,31 @@ proto.cosmos.crypto.multisig.LegacyAminoPubKey.prototype.toObject = function(opt
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.crypto.multisig.LegacyAminoPubKey.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    threshold: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    publicKeysList: jspb.Message.toObjectList(msg.getPublicKeysList(),
-    google_protobuf_any_pb.Any.toObject, includeInstance)
+  proto.cosmos.crypto.multisig.LegacyAminoPubKey.toObject = function (includeInstance, msg) {
+    let f; const
+      obj = {
+        threshold: jspb.Message.getFieldWithDefault(msg, 1, 0),
+        publicKeysList: jspb.Message.toObjectList(msg.getPublicKeysList(),
+          google_protobuf_any_pb.Any.toObject, includeInstance),
+      };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
   };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.cosmos.crypto.multisig.LegacyAminoPubKey}
  */
-proto.cosmos.crypto.multisig.LegacyAminoPubKey.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.cosmos.crypto.multisig.LegacyAminoPubKey;
+proto.cosmos.crypto.multisig.LegacyAminoPubKey.deserializeBinary = function (bytes) {
+  const reader = new jspb.BinaryReader(bytes);
+  const msg = new proto.cosmos.crypto.multisig.LegacyAminoPubKey();
   return proto.cosmos.crypto.multisig.LegacyAminoPubKey.deserializeBinaryFromReader(msg, reader);
 };
-
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
@@ -100,41 +98,39 @@ proto.cosmos.crypto.multisig.LegacyAminoPubKey.deserializeBinary = function(byte
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.cosmos.crypto.multisig.LegacyAminoPubKey}
  */
-proto.cosmos.crypto.multisig.LegacyAminoPubKey.deserializeBinaryFromReader = function(msg, reader) {
+proto.cosmos.crypto.multisig.LegacyAminoPubKey.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var field = reader.getFieldNumber();
+    const field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {number} */ (reader.readUint32());
-      msg.setThreshold(value);
-      break;
-    case 2:
-      var value = new google_protobuf_any_pb.Any;
-      reader.readMessage(value,google_protobuf_any_pb.Any.deserializeBinaryFromReader);
-      msg.addPublicKeys(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {number} */ (reader.readUint32());
+        msg.setThreshold(value);
+        break;
+      case 2:
+        var value = new google_protobuf_any_pb.Any();
+        reader.readMessage(value, google_protobuf_any_pb.Any.deserializeBinaryFromReader);
+        msg.addPublicKeys(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
 };
 
-
 /**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.cosmos.crypto.multisig.LegacyAminoPubKey.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+proto.cosmos.crypto.multisig.LegacyAminoPubKey.prototype.serializeBinary = function () {
+  const writer = new jspb.BinaryWriter();
   proto.cosmos.crypto.multisig.LegacyAminoPubKey.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
-
 
 /**
  * Serializes the given message to binary data (in protobuf wire
@@ -143,13 +139,13 @@ proto.cosmos.crypto.multisig.LegacyAminoPubKey.prototype.serializeBinary = funct
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.cosmos.crypto.multisig.LegacyAminoPubKey.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
+proto.cosmos.crypto.multisig.LegacyAminoPubKey.serializeBinaryToWriter = function (message, writer) {
+  let f;
   f = message.getThreshold();
   if (f !== 0) {
     writer.writeUint32(
       1,
-      f
+      f,
     );
   }
   f = message.getPublicKeysList();
@@ -157,56 +153,49 @@ proto.cosmos.crypto.multisig.LegacyAminoPubKey.serializeBinaryToWriter = functio
     writer.writeRepeatedMessage(
       2,
       f,
-      google_protobuf_any_pb.Any.serializeBinaryToWriter
+      google_protobuf_any_pb.Any.serializeBinaryToWriter,
     );
   }
 };
-
 
 /**
  * optional uint32 threshold = 1;
  * @return {number}
  */
-proto.cosmos.crypto.multisig.LegacyAminoPubKey.prototype.getThreshold = function() {
+proto.cosmos.crypto.multisig.LegacyAminoPubKey.prototype.getThreshold = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
-
 /** @param {number} value */
-proto.cosmos.crypto.multisig.LegacyAminoPubKey.prototype.setThreshold = function(value) {
+proto.cosmos.crypto.multisig.LegacyAminoPubKey.prototype.setThreshold = function (value) {
   jspb.Message.setProto3IntField(this, 1, value);
 };
-
 
 /**
  * repeated google.protobuf.Any public_keys = 2;
  * @return {!Array<!proto.google.protobuf.Any>}
  */
-proto.cosmos.crypto.multisig.LegacyAminoPubKey.prototype.getPublicKeysList = function() {
+proto.cosmos.crypto.multisig.LegacyAminoPubKey.prototype.getPublicKeysList = function () {
   return /** @type{!Array<!proto.google.protobuf.Any>} */ (
     jspb.Message.getRepeatedWrapperField(this, google_protobuf_any_pb.Any, 2));
 };
 
-
 /** @param {!Array<!proto.google.protobuf.Any>} value */
-proto.cosmos.crypto.multisig.LegacyAminoPubKey.prototype.setPublicKeysList = function(value) {
+proto.cosmos.crypto.multisig.LegacyAminoPubKey.prototype.setPublicKeysList = function (value) {
   jspb.Message.setRepeatedWrapperField(this, 2, value);
 };
-
 
 /**
  * @param {!proto.google.protobuf.Any=} opt_value
  * @param {number=} opt_index
  * @return {!proto.google.protobuf.Any}
  */
-proto.cosmos.crypto.multisig.LegacyAminoPubKey.prototype.addPublicKeys = function(opt_value, opt_index) {
+proto.cosmos.crypto.multisig.LegacyAminoPubKey.prototype.addPublicKeys = function (opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.google.protobuf.Any, opt_index);
 };
 
-
-proto.cosmos.crypto.multisig.LegacyAminoPubKey.prototype.clearPublicKeysList = function() {
+proto.cosmos.crypto.multisig.LegacyAminoPubKey.prototype.clearPublicKeysList = function () {
   this.setPublicKeysList([]);
 };
-
 
 goog.object.extend(exports, proto.cosmos.crypto.multisig);

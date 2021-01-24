@@ -1,94 +1,94 @@
 // package: cosmos.distribution.v1beta1
 // file: cosmos/distribution/v1beta1/query.proto
 
-var cosmos_distribution_v1beta1_query_pb = require("../../../cosmos/distribution/v1beta1/query_pb");
-var grpc = require("@improbable-eng/grpc-web").grpc;
+const { grpc } = require('@improbable-eng/grpc-web');
+const cosmos_distribution_v1beta1_query_pb = require('./query_pb');
 
-var Query = (function () {
+const Query = (function () {
   function Query() {}
-  Query.serviceName = "cosmos.distribution.v1beta1.Query";
+  Query.serviceName = 'cosmos.distribution.v1beta1.Query';
   return Query;
 }());
 
 Query.Params = {
-  methodName: "Params",
+  methodName: 'Params',
   service: Query,
   requestStream: false,
   responseStream: false,
   requestType: cosmos_distribution_v1beta1_query_pb.QueryParamsRequest,
-  responseType: cosmos_distribution_v1beta1_query_pb.QueryParamsResponse
+  responseType: cosmos_distribution_v1beta1_query_pb.QueryParamsResponse,
 };
 
 Query.ValidatorOutstandingRewards = {
-  methodName: "ValidatorOutstandingRewards",
+  methodName: 'ValidatorOutstandingRewards',
   service: Query,
   requestStream: false,
   responseStream: false,
   requestType: cosmos_distribution_v1beta1_query_pb.QueryValidatorOutstandingRewardsRequest,
-  responseType: cosmos_distribution_v1beta1_query_pb.QueryValidatorOutstandingRewardsResponse
+  responseType: cosmos_distribution_v1beta1_query_pb.QueryValidatorOutstandingRewardsResponse,
 };
 
 Query.ValidatorCommission = {
-  methodName: "ValidatorCommission",
+  methodName: 'ValidatorCommission',
   service: Query,
   requestStream: false,
   responseStream: false,
   requestType: cosmos_distribution_v1beta1_query_pb.QueryValidatorCommissionRequest,
-  responseType: cosmos_distribution_v1beta1_query_pb.QueryValidatorCommissionResponse
+  responseType: cosmos_distribution_v1beta1_query_pb.QueryValidatorCommissionResponse,
 };
 
 Query.ValidatorSlashes = {
-  methodName: "ValidatorSlashes",
+  methodName: 'ValidatorSlashes',
   service: Query,
   requestStream: false,
   responseStream: false,
   requestType: cosmos_distribution_v1beta1_query_pb.QueryValidatorSlashesRequest,
-  responseType: cosmos_distribution_v1beta1_query_pb.QueryValidatorSlashesResponse
+  responseType: cosmos_distribution_v1beta1_query_pb.QueryValidatorSlashesResponse,
 };
 
 Query.DelegationRewards = {
-  methodName: "DelegationRewards",
+  methodName: 'DelegationRewards',
   service: Query,
   requestStream: false,
   responseStream: false,
   requestType: cosmos_distribution_v1beta1_query_pb.QueryDelegationRewardsRequest,
-  responseType: cosmos_distribution_v1beta1_query_pb.QueryDelegationRewardsResponse
+  responseType: cosmos_distribution_v1beta1_query_pb.QueryDelegationRewardsResponse,
 };
 
 Query.DelegationTotalRewards = {
-  methodName: "DelegationTotalRewards",
+  methodName: 'DelegationTotalRewards',
   service: Query,
   requestStream: false,
   responseStream: false,
   requestType: cosmos_distribution_v1beta1_query_pb.QueryDelegationTotalRewardsRequest,
-  responseType: cosmos_distribution_v1beta1_query_pb.QueryDelegationTotalRewardsResponse
+  responseType: cosmos_distribution_v1beta1_query_pb.QueryDelegationTotalRewardsResponse,
 };
 
 Query.DelegatorValidators = {
-  methodName: "DelegatorValidators",
+  methodName: 'DelegatorValidators',
   service: Query,
   requestStream: false,
   responseStream: false,
   requestType: cosmos_distribution_v1beta1_query_pb.QueryDelegatorValidatorsRequest,
-  responseType: cosmos_distribution_v1beta1_query_pb.QueryDelegatorValidatorsResponse
+  responseType: cosmos_distribution_v1beta1_query_pb.QueryDelegatorValidatorsResponse,
 };
 
 Query.DelegatorWithdrawAddress = {
-  methodName: "DelegatorWithdrawAddress",
+  methodName: 'DelegatorWithdrawAddress',
   service: Query,
   requestStream: false,
   responseStream: false,
   requestType: cosmos_distribution_v1beta1_query_pb.QueryDelegatorWithdrawAddressRequest,
-  responseType: cosmos_distribution_v1beta1_query_pb.QueryDelegatorWithdrawAddressResponse
+  responseType: cosmos_distribution_v1beta1_query_pb.QueryDelegatorWithdrawAddressResponse,
 };
 
 Query.CommunityPool = {
-  methodName: "CommunityPool",
+  methodName: 'CommunityPool',
   service: Query,
   requestStream: false,
   responseStream: false,
   requestType: cosmos_distribution_v1beta1_query_pb.QueryCommunityPoolRequest,
-  responseType: cosmos_distribution_v1beta1_query_pb.QueryCommunityPoolResponse
+  responseType: cosmos_distribution_v1beta1_query_pb.QueryCommunityPoolResponse,
 };
 
 exports.Query = Query;
@@ -102,16 +102,16 @@ QueryClient.prototype.params = function params(requestMessage, metadata, callbac
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(Query.Params, {
+  const client = grpc.unary(Query.Params, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata: metadata,
+    metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd: function (response) {
+    onEnd(response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          var err = new Error(response.statusMessage);
+          const err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -119,13 +119,13 @@ QueryClient.prototype.params = function params(requestMessage, metadata, callbac
           callback(null, response.message);
         }
       }
-    }
+    },
   });
   return {
-    cancel: function () {
+    cancel() {
       callback = null;
       client.close();
-    }
+    },
   };
 };
 
@@ -133,16 +133,16 @@ QueryClient.prototype.validatorOutstandingRewards = function validatorOutstandin
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(Query.ValidatorOutstandingRewards, {
+  const client = grpc.unary(Query.ValidatorOutstandingRewards, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata: metadata,
+    metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd: function (response) {
+    onEnd(response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          var err = new Error(response.statusMessage);
+          const err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -150,13 +150,13 @@ QueryClient.prototype.validatorOutstandingRewards = function validatorOutstandin
           callback(null, response.message);
         }
       }
-    }
+    },
   });
   return {
-    cancel: function () {
+    cancel() {
       callback = null;
       client.close();
-    }
+    },
   };
 };
 
@@ -164,16 +164,16 @@ QueryClient.prototype.validatorCommission = function validatorCommission(request
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(Query.ValidatorCommission, {
+  const client = grpc.unary(Query.ValidatorCommission, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata: metadata,
+    metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd: function (response) {
+    onEnd(response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          var err = new Error(response.statusMessage);
+          const err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -181,13 +181,13 @@ QueryClient.prototype.validatorCommission = function validatorCommission(request
           callback(null, response.message);
         }
       }
-    }
+    },
   });
   return {
-    cancel: function () {
+    cancel() {
       callback = null;
       client.close();
-    }
+    },
   };
 };
 
@@ -195,16 +195,16 @@ QueryClient.prototype.validatorSlashes = function validatorSlashes(requestMessag
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(Query.ValidatorSlashes, {
+  const client = grpc.unary(Query.ValidatorSlashes, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata: metadata,
+    metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd: function (response) {
+    onEnd(response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          var err = new Error(response.statusMessage);
+          const err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -212,13 +212,13 @@ QueryClient.prototype.validatorSlashes = function validatorSlashes(requestMessag
           callback(null, response.message);
         }
       }
-    }
+    },
   });
   return {
-    cancel: function () {
+    cancel() {
       callback = null;
       client.close();
-    }
+    },
   };
 };
 
@@ -226,16 +226,16 @@ QueryClient.prototype.delegationRewards = function delegationRewards(requestMess
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(Query.DelegationRewards, {
+  const client = grpc.unary(Query.DelegationRewards, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata: metadata,
+    metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd: function (response) {
+    onEnd(response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          var err = new Error(response.statusMessage);
+          const err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -243,13 +243,13 @@ QueryClient.prototype.delegationRewards = function delegationRewards(requestMess
           callback(null, response.message);
         }
       }
-    }
+    },
   });
   return {
-    cancel: function () {
+    cancel() {
       callback = null;
       client.close();
-    }
+    },
   };
 };
 
@@ -257,16 +257,16 @@ QueryClient.prototype.delegationTotalRewards = function delegationTotalRewards(r
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(Query.DelegationTotalRewards, {
+  const client = grpc.unary(Query.DelegationTotalRewards, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata: metadata,
+    metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd: function (response) {
+    onEnd(response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          var err = new Error(response.statusMessage);
+          const err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -274,13 +274,13 @@ QueryClient.prototype.delegationTotalRewards = function delegationTotalRewards(r
           callback(null, response.message);
         }
       }
-    }
+    },
   });
   return {
-    cancel: function () {
+    cancel() {
       callback = null;
       client.close();
-    }
+    },
   };
 };
 
@@ -288,16 +288,16 @@ QueryClient.prototype.delegatorValidators = function delegatorValidators(request
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(Query.DelegatorValidators, {
+  const client = grpc.unary(Query.DelegatorValidators, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata: metadata,
+    metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd: function (response) {
+    onEnd(response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          var err = new Error(response.statusMessage);
+          const err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -305,13 +305,13 @@ QueryClient.prototype.delegatorValidators = function delegatorValidators(request
           callback(null, response.message);
         }
       }
-    }
+    },
   });
   return {
-    cancel: function () {
+    cancel() {
       callback = null;
       client.close();
-    }
+    },
   };
 };
 
@@ -319,16 +319,16 @@ QueryClient.prototype.delegatorWithdrawAddress = function delegatorWithdrawAddre
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(Query.DelegatorWithdrawAddress, {
+  const client = grpc.unary(Query.DelegatorWithdrawAddress, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata: metadata,
+    metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd: function (response) {
+    onEnd(response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          var err = new Error(response.statusMessage);
+          const err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -336,13 +336,13 @@ QueryClient.prototype.delegatorWithdrawAddress = function delegatorWithdrawAddre
           callback(null, response.message);
         }
       }
-    }
+    },
   });
   return {
-    cancel: function () {
+    cancel() {
       callback = null;
       client.close();
-    }
+    },
   };
 };
 
@@ -350,16 +350,16 @@ QueryClient.prototype.communityPool = function communityPool(requestMessage, met
   if (arguments.length === 2) {
     callback = arguments[1];
   }
-  var client = grpc.unary(Query.CommunityPool, {
+  const client = grpc.unary(Query.CommunityPool, {
     request: requestMessage,
     host: this.serviceHost,
-    metadata: metadata,
+    metadata,
     transport: this.options.transport,
     debug: this.options.debug,
-    onEnd: function (response) {
+    onEnd(response) {
       if (callback) {
         if (response.status !== grpc.Code.OK) {
-          var err = new Error(response.statusMessage);
+          const err = new Error(response.statusMessage);
           err.code = response.status;
           err.metadata = response.trailers;
           callback(err, null);
@@ -367,15 +367,14 @@ QueryClient.prototype.communityPool = function communityPool(requestMessage, met
           callback(null, response.message);
         }
       }
-    }
+    },
   });
   return {
-    cancel: function () {
+    cancel() {
       callback = null;
       client.close();
-    }
+    },
   };
 };
 
 exports.QueryClient = QueryClient;
-
