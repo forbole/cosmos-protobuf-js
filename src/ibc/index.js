@@ -1,5 +1,5 @@
-import core from './core';
-import applications from './applications';
+import * as core from './core';
+import * as applications from './applications';
 
 export default {
   applications,
