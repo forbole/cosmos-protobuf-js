@@ -1,5 +1,1 @@
-import * as service from './service'
-
-export default {
-    service
-}
+export * from './service'

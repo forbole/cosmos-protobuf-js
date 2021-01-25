@@ -1,5 +1,1 @@
-import * as abciTypes from './abci-types'
-
-export default {
-    abciTypes
-}
+export * as ABCITypes from './abci-types'

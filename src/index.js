@@ -1,33 +1,36 @@
-import base from './base'
-import tendermint from './tendermint'
-import auth from './auth'
-import bank from './bank'
-import crisis from './crisis'
-import distribution from './distribution'
-import evidence from './evidence'
-import gov from './gov'
-import mint from './mint'
-import params from './params'
-import slashing from './slashing'
-import staking from './staking'
-import upgrade from './upgrade'
-import tx from './tx'
-import ibc from './ibc'
+import * as Base from './base'
+import * as Tendermint from './tendermint'
+import * as Auth from './auth'
+import * as Bank from './bank'
+import * as Crisis from './crisis'
+import * as Distribution from './distribution'
+import * as Evidence from './evidence'
+import * as Gov from './gov'
+import * as Mint from './mint'
+import * as Params from './params'
+import * as Slashing from './slashing'
+import * as Staking from './staking'
+import * as Upgrade from './upgrade'
+import * as Tx from './tx'
+import * as IBC from './ibc'
 
-export default {
-    base,
-    tendermint,
-    auth,
-    bank,
-    crisis,
-    distribution,
-    evidence,
-    gov,
-    mint,
-    params,
-    slashing,
-    staking,
-    upgrade,
-    tx,
-    ibc
+import * as gRPC from './unary'
+
+export const Cosmos = {
+    gRPC,
+    Base,
+    Tendermint,
+    Auth,
+    Bank,
+    Crisis,
+    Distribution,
+    Evidence,
+    Gov,
+    Mint,
+    Params,
+    Slashing,
+    Staking,
+    Upgrade,
+    Tx,
+    IBC
 }

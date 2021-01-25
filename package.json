@@ -1,6 +1,6 @@
 {
   "name": "@forbole/cosmos-protobuf-js",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Cosmos SDK Protobuf of JavaScript",
   "main": "src/index.js",
   "directories": {
@@ -13,6 +13,7 @@
   "license": "MIT",
   "dependencies": {
     "@improbable-eng/grpc-web": "^0.13.0",
+    "@improbable-eng/grpc-web-node-http-transport": "^0.13.0",
     "eslint-plugin-unused-imports": "^1.0.1",
     "google-protobuf": "^3.14.0"
   },

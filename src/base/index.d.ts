@@ -1,7 +1,2 @@
-declare namespace _default {
-    export { tendermint };
-    export { reflection };
-}
-export default _default;
-import * as tendermint from "./tendermint";
-import * as reflection from "./reflection";
+export * as Tendermint from "cosmos-protobuf-js/src/base/tendermint";
+export * as Reflection from "cosmos-protobuf-js/src/base/reflection";

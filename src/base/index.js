@@ -1,7 +1,2 @@
-import * as tendermint from './tendermint'
-import * as reflection from './reflection'
-
-export default {
-    tendermint,
-    reflection
-}
+export * as Tendermint from './tendermint'
+export * as Reflection from './reflection'

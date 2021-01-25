@@ -1,5 +1,1 @@
-declare namespace _default {
-    export { tx };
-}
-export default _default;
-import * as tx from "./tx";
+export * as Tx from "cosmos-protobuf-js/src/crisis/tx";

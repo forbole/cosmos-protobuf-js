@@ -1,9 +1,3 @@
-import channel from './channel'
-import client from './client'
-import connection from './connection'
-
-export default {
-    channel,
-    client,
-    connection
-}
+export * as Channel from './channel'
+export * as Client from './client'
+export * as Connection from './connection'

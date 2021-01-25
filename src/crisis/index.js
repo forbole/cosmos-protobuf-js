@@ -1,5 +1,1 @@
-import * as tx from './tx'
-
-export default {
-    tx
-}
+export * as Tx from './tx'

@@ -1,5 +1,1 @@
-import transfer from './transfer'
-
-export default {
-    transfer
-}
+export * as Transfer from './transfer'
